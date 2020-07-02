@@ -15,7 +15,7 @@
     "site:dev": "cd site && npm run dev",
     "site:build": "cd site && npm run build",
     "site:export": "cd site && npm run export",
-    "deploy": "node deploy.js"
+    "deploy": "npm run site:export && node deploy.js"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
