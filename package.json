@@ -29,10 +29,12 @@
     "concurrently": "^5.2.0",
     "husky": "^4.2.5",
     "jest": "^25.5.4",
+    "ncp": "^2.0.0",
     "postcss": "^7.0.32",
     "rollup": "^2.18.0",
     "rollup-plugin-svelte": "^5.2.3",
     "rollup-plugin-terser": "^6.1.0",
+    "simple-git": "^2.11.0",
     "svelte-jester": "^1.0.6"
   },
   "files": [
