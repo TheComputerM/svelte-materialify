@@ -33,7 +33,7 @@ function getFiles(dir, files_) {
 
 let files = getFiles("./site/__sapper__/export");
 
-for (let file in files) {
+for (let file of files) {
   fs.copyFile(`${base}/${file}`, file, (err) => {
     if (err) throw err;
     console.log(`${file} was written`);
