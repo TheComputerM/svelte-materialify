@@ -1,0 +1,40 @@
+@use "../variables" as *;
+
+@each $suffix_raw, $value in $rounded {
+  $suffix: if($suffix_raw, "-" + $suffix_raw, "");
+
+  .rounded#{$suffix} {
+    border-radius: $value;
+  }
+
+  @each $corner_abbr,
+    $corner
+      in (
+        "tl": "top-left",
+        "tr": "top-right",
+        "bl": "bottom-left",
+        "br": "bottom-right"
+      )
+  {
+    .rounded-#{$corner_abbr}#{$suffix} {
+      border-#{$corner}-radius: $value;
+    }
+  }
+
+  .rounded-t#{$suffix} {
+    border-top-left-radius: $value;
+    border-top-right-radius: $value;
+  }
+  .rounded-b#{$suffix} {
+    border-bottom-left-radius: $value;
+    border-bottom-right-radius: $value;
+  }
+  .rounded-l#{$suffix} {
+    border-top-left-radius: $value;
+    border-bottom-left-radius: $value;
+  }
+  .rounded-r#{$suffix} {
+    border-top-right-radius: $value;
+    border-bottom-right-radius: $value;
+  }
+}

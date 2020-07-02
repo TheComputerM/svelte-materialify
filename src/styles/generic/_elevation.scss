@@ -1,0 +1,7 @@
+@use "../tools/elevation";
+
+@for $i from 0 through 24 {
+  .elevation-#{$i} {
+    @include elevation.elevation($i, $important: true);
+  }
+}

@@ -1,0 +1,56 @@
+@use "../variables" as variables;
+@use '../tools/breakpoints' as *;
+@use "../tools/functions" as *;
+
+@each $align in ("left", "center", "right") {
+  .text-#{$align} {
+    text-align: #{$align};
+  }
+  @include create_breakpoints() using ($screen_size) {
+    .text-#{$screen_size}-#{$align} {
+      text-align: #{$align};
+    }
+  }
+}
+
+@each $decoration in ("none", "overline", "underline", "line-through") {
+  .text-decoration-#{$decoration} {
+    text-decoration: #{$decoration};
+  }
+}
+
+@each $transform in ("lowercase", "uppercase", "capitalize") {
+  .text-#{$transform} {
+    text-transform: #{$transform};
+  }
+}
+
+@each $name, $value in variables.$font-weights {
+  .font-weight-#{$name} {
+    font-weight: $value;
+  }
+}
+
+.theme--light {
+  .text--primary {
+    color: map-deep-get(variables.$material-light-theme, "text", "primary");
+  }
+  .text--secondary {
+    color: map-deep-get(variables.$material-light-theme, "text", "secondary");
+  }
+  .text--disabled {
+    color: map-deep-get(variables.$material-light-theme, "text", "disabled");
+  }
+}
+
+.theme--dark {
+  .text--primary {
+    color: map-deep-get(variables.$material-dark-theme, "text", "primary");
+  }
+  .text--secondary {
+    color: map-deep-get(variables.$material-dark-theme, "text", "secondary");
+  }
+  .text--disabled {
+    color: map-deep-get(variables.$material-dark-theme, "text", "disabled");
+  }
+}

@@ -1,0 +1,282 @@
+@import "./tools/functions";
+@import "./tools/colors";
+@import "./tools/theme";
+@import "./tools/elevation";
+
+$primary-color: #6200EE !default;
+$secondary-color: #03DAC6 !default;
+$success-color: #4CAF50 !default;
+$info-color: #00BCD4 !default;
+$warning-color: #FFEB3B !default;
+$error-color: #F44336 !default;
+
+$font-size-root: 16px !default;
+$border-radius-root: 4px !default;
+$line-height-root: 1.5 !default;
+
+$rounded: () !default;
+
+$blockquote-font-size: 18px !default;
+$blockquote-font-weight: 300 !default;
+
+$code-color: #c0341d !default;
+$code-padding: 0 0.4rem !default;
+$code-background-color: #fbe5e1 !default;
+
+$kbd-color: #ffffff !default;
+$kbd-padding: 0.2rem 0.4rem !default;
+$kbd-background-color: #212529 !default;
+
+$code-kbd-font-size: 85% !default;
+$code-kbd-border-radius: 3px !default;
+$code-kbd-font-weight: 900 !default;
+
+$spacer: 4px !default;
+
+$body-font-family: "Roboto", "Segoe UI", sans-serif !default;
+
+$font-weights: () !default;
+$heading-font-family: $body-font-family !default;
+$headings: () !default;
+
+$grid-columns: 12 !default;
+$grid-gutter: $spacer * 6 !default;
+$grid-gutters: () !default;
+$grid-breakpoints: () !default;
+$display-breakpoints: () !default;
+
+$transitions: () !default;
+
+$material-light-theme: () !default;
+$material-dark-theme: () !default;
+
+// Importing user defined variables
+@import "material-theme";
+
+$rounded: map-deep-merge(
+  (
+    0: 0,
+    "sm": $border-radius-root / 2,
+    null: $border-radius-root,
+    "lg": $border-radius-root * 2,
+    "xl": $border-radius-root * 6,
+    "pill": 9999px,
+    "circle": 50%,
+  ),
+  $rounded
+);
+
+$font-weights: map-merge(
+  (
+    "thin": 100,
+    "light": 300,
+    "regular": 400,
+    "medium": 500,
+    "bold": 700,
+    "black": 900,
+  ),
+  $font-weights
+);
+
+$headings: map-deep-merge(
+  (
+    "h1": (
+      "size": 6rem,
+      "weight": 300,
+      "line-height": 6rem,
+      "letter-spacing": -0.015625em,
+      "font-family": $heading-font-family,
+      "text-transform": false,
+    ),
+    "h2": (
+      "size": 3.75rem,
+      "weight": 300,
+      "line-height": 3.75rem,
+      "letter-spacing": -0.0083333333em,
+      "font-family": $heading-font-family,
+      "text-transform": false,
+    ),
+    "h3": (
+      "size": 3rem,
+      "weight": 400,
+      "line-height": 3.125rem,
+      "letter-spacing": normal,
+      "font-family": $heading-font-family,
+      "text-transform": false,
+    ),
+    "h4": (
+      "size": 2.125rem,
+      "weight": 400,
+      "line-height": 2.5rem,
+      "letter-spacing": 0.0073529412em,
+      "font-family": $heading-font-family,
+      "text-transform": false,
+    ),
+    "h5": (
+      "size": 1.5rem,
+      "weight": 400,
+      "line-height": 2rem,
+      "letter-spacing": normal,
+      "font-family": $heading-font-family,
+      "text-transform": false,
+    ),
+    "h6": (
+      "size": 1.25rem,
+      "weight": 500,
+      "line-height": 2rem,
+      "letter-spacing": 0.0125em,
+      "font-family": $heading-font-family,
+      "text-transform": false,
+    ),
+    "subtitle-1": (
+      "size": 1rem,
+      "weight": normal,
+      "line-height": 1.75rem,
+      "letter-spacing": 0.009375em,
+      "font-family": $body-font-family,
+      "text-transform": false,
+    ),
+    "subtitle-2": (
+      "size": 0.875rem,
+      "weight": 500,
+      "line-height": 1.375rem,
+      "letter-spacing": 0.0071428571em,
+      "font-family": $body-font-family,
+      "text-transform": false,
+    ),
+    "body-1": (
+      "size": 1rem,
+      "weight": 400,
+      "line-height": 1.5rem,
+      "letter-spacing": 0.03125em,
+      "font-family": $body-font-family,
+      "text-transform": false,
+    ),
+    "body-2": (
+      "size": 0.875rem,
+      "weight": 400,
+      "line-height": 1.25rem,
+      "letter-spacing": 0.0178571429em,
+      "font-family": $body-font-family,
+      "text-transform": false,
+    ),
+    "button": (
+      "size": 0.875rem,
+      "weight": 500,
+      "line-height": 2.25rem,
+      "letter-spacing": 0.0892857143em,
+      "font-family": $body-font-family,
+      "text-transform": uppercase,
+    ),
+    "caption": (
+      "size": 0.75rem,
+      "weight": 400,
+      "line-height": 1.25rem,
+      "letter-spacing": 0.0333333333em,
+      "font-family": $body-font-family,
+      "text-transform": false,
+    ),
+    "overline": (
+      "size": 0.75rem,
+      "weight": 500,
+      "line-height": 2rem,
+      "letter-spacing": 0.1666666667em,
+      "font-family": $body-font-family,
+      "text-transform": uppercase,
+    ),
+  ),
+  $headings
+);
+
+$grid-breakpoints: map-deep-merge(
+  (
+    "xs": 0,
+    "sm": 600px,
+    "md": 960px,
+    "lg": 1280px - 16px,
+    "xl": 1920px - 16px,
+  ),
+  $grid-breakpoints
+);
+
+$grid-gutters: map-deep-merge(
+  (
+    "xs": $grid-gutter / 12,
+    "sm": $grid-gutter / 6,
+    "md": $grid-gutter / 3,
+    "lg": $grid-gutter * 2/3,
+    "xl": $grid-gutter,
+  ),
+  $grid-gutters
+);
+
+$display-breakpoints: map-deep-merge(
+  (
+    "print-only": "only print",
+    "screen-only": "only screen",
+    "xs-only": "only screen and (max-width: #{map-get($grid-breakpoints, "sm")-1})",
+    "sm-only": "only screen and (min-width: #{map-get($grid-breakpoints, "sm")}) and (max-width: #{map-get($grid-breakpoints, "md")-1})",
+    "sm-and-down": "only screen and (max-width: #{map-get($grid-breakpoints, "md")-1})",
+    "sm-and-up": "only screen and (min-width: #{map-get($grid-breakpoints, "sm")})",
+    "md-only": "only screen and (min-width: #{map-get($grid-breakpoints, "md")}) and (max-width: #{map-get($grid-breakpoints, "lg")-1})",
+    "md-and-down": "only screen and (max-width: #{map-get($grid-breakpoints, "lg")-1})",
+    "md-and-up": "only screen and (min-width: #{map-get($grid-breakpoints, "md")})",
+    "lg-only": "only screen and (min-width: #{map-get($grid-breakpoints, "lg")}) and (max-width: #{map-get($grid-breakpoints, "xl")-1})",
+    "lg-and-down": "only screen and (max-width: #{map-get($grid-breakpoints, "xl")-1})",
+    "lg-and-up": "only screen and (min-width: #{map-get($grid-breakpoints, "lg")})",
+    "xl-only": "only screen and (min-width: #{map-get($grid-breakpoints, "xl")})",
+  ),
+  $display-breakpoints
+);
+
+$transitions: map-deep-merge(
+  (
+    "fast-out-slow-in": cubic-bezier(0.4, 0, 0.2, 1),
+    "linear-out-slow-in": cubic-bezier(0, 0, 0.2, 1),
+    "fast-out-linear-in": cubic-bezier(0.4, 0, 1, 1),
+    "ease-in-out": cubic-bezier(0.4, 0, 0.6, 1),
+    "fast-in-fast-out": cubic-bezier(0.25, 0.8, 0.25, 1),
+    "swing": cubic-bezier(0.25, 0.8, 0.5, 1)
+  ),
+  $transitions
+);
+
+$material-light-theme: map-deep-merge(
+  (
+    "bgColor": #FFFFFF,
+    "text": (
+      "primary": rgba(material-color("shades", "black"), 0.87),
+      "secondary": rgba(material-color("shades", "black"), 0.6),
+      "disabled": rgba(material-color("shades", "black"), 0.38),
+    ),
+    "icons": (
+      "active": rgba(material-color("shades", "black"), 0.54),
+      "inactive": rgba(material-color("shades", "black"), 0.38)
+    ),
+    "buttons": (
+      "disabled": rgba(material-color("shades", "black"), 0.26)
+    )
+  ),
+  $material-light-theme
+);
+
+$material-dark-theme: map-deep-merge(
+  (
+    "bgColor": #212121,
+    "icons": (
+      "active": material-color("shades", "white"),
+      "inactive": rgba(material-color("shades", "white"), 0.5)
+    ),
+    "text": (
+      "primary": material-color("shades", "white"),
+      "secondary": rgba(material-color("shades", "white"), 0.7),
+      "disabled": rgba(material-color("shades", "white"), 0.5),
+    ),
+    "buttons": (
+      "disabled": rgba(material-color("shades", "white"), 0.3)
+    )
+  ),
+  $material-dark-theme
+);
+
+

@@ -1,0 +1,28 @@
+@use "../variables" as *;
+
+@for $i from 0 through 16 {
+  @each $mORp, $marginORpadding in ("m": "margin", "p": "padding") {
+    @each $type,
+      $suffix
+        in ("a": "", "l": "-left", "r": "-right", "t": "-top", "b": "-bottom")
+    {
+      .#{$mORp}#{$type}-#{$i} {
+        #{$marginORpadding}#{$suffix}: $spacer * $i;
+      }
+      .#{$mORp}#{$type}-n#{$i} {
+        #{$marginORpadding}#{$suffix}: $spacer * -$i;
+      }
+    }
+  }
+}
+
+@each $mORp, $marginORpadding in ("m": "margin", "p": "padding") {
+  @each $type,
+    $suffix
+      in ("a": "", "l": "-left", "r": "-right", "t": "-top", "b": "-bottom")
+  {
+    .#{$mORp}#{$type}-auto {
+      #{$marginORpadding}#{$suffix}: auto;
+    }
+  }
+}
