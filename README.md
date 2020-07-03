@@ -25,7 +25,7 @@ This is still in development. To contribute, please read [CONTRIBUTING.md](./CON
 
 
 ## Website
-Website is located at (https://svelte-materialify.netlify.app/)[https://svelte-materialify.netlify.app/], it is still in development.
+Website is located at [https://svelte-materialify.netlify.app/](https://svelte-materialify.netlify.app/), it is still in development.
 
 ## Thanks To:
 - __[Vuetify](https://vuetifyjs.com/)__
