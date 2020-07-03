@@ -25,14 +25,14 @@
     "@testing-library/jest-dom": "^5.11.0",
     "@testing-library/svelte": "^3.0.0",
     "autoprefixer": "^9.8.4",
-    "babel-jest": "^25.5.1",
+    "babel-jest": "^26.1.0",
     "concurrently": "^5.2.0",
     "del": "^5.1.0",
     "husky": "^4.2.5",
-    "jest": "^25.5.4",
+    "jest": "^26.1.0",
     "ncp": "^2.0.0",
     "postcss": "^7.0.32",
-    "rollup": "^2.18.0",
+    "rollup": "^2.18.2",
     "rollup-plugin-svelte": "^5.2.3",
     "rollup-plugin-terser": "^6.1.0",
     "simple-git": "^2.11.0",
@@ -45,7 +45,7 @@
   "dependencies": {
     "sass": "^1.26.9",
     "svelte": "^3.23.2",
-    "svelte-preprocess": "3.9.10"
+    "svelte-preprocess": "3.9.11"
   },
   "author": "TheComputerM",
   "license": "MIT"
