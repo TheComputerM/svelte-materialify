@@ -27,6 +27,7 @@
     "autoprefixer": "^9.8.4",
     "babel-jest": "^25.5.1",
     "concurrently": "^5.2.0",
+    "del": "^5.1.0",
     "husky": "^4.2.5",
     "jest": "^25.5.4",
     "ncp": "^2.0.0",
