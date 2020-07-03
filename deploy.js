@@ -6,11 +6,7 @@ const git = simpleGit();
 git
   .init()
   .then(() => git.checkout("docs"))
-<<<<<<< HEAD
   .then(() => del(["*", "!.gitignore", "!dist", "!node_modules", "!site"]))
-=======
-  .then(() => git.raw(["rm", "-rf", "*"]))
->>>>>>> f1aae4e926ecfe8591f30cc2a6adf9f856dfd7b8
   .then(() =>
     ncp("./site/__sapper__/export/", "./", (err) => {
       if (err) return console.error(err);
