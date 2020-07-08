@@ -7,10 +7,10 @@
         in ("a": "", "l": "-left", "r": "-right", "t": "-top", "b": "-bottom")
     {
       .#{$mORp}#{$type}-#{$i} {
-        #{$marginORpadding}#{$suffix}: $spacer * $i;
+        #{$marginORpadding}#{$suffix}: $spacer * $i !important;
       }
       .#{$mORp}#{$type}-n#{$i} {
-        #{$marginORpadding}#{$suffix}: $spacer * -$i;
+        #{$marginORpadding}#{$suffix}: $spacer * -$i !important;
       }
     }
   }
@@ -22,7 +22,7 @@
       in ("a": "", "l": "-left", "r": "-right", "t": "-top", "b": "-bottom")
   {
     .#{$mORp}#{$type}-auto {
-      #{$marginORpadding}#{$suffix}: auto;
+      #{$marginORpadding}#{$suffix}: auto !important;
     }
   }
 }
