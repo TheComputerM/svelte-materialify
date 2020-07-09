@@ -32,10 +32,10 @@
     "jest": "^26.1.0",
     "ncp": "^2.0.0",
     "postcss": "^7.0.32",
-    "rollup": "^2.18.2",
+    "rollup": "^2.21.0",
     "rollup-plugin-svelte": "^5.2.3",
     "rollup-plugin-terser": "^6.1.0",
-    "simple-git": "^2.11.0",
+    "simple-git": "^2.12.0",
     "svelte-jester": "^1.0.6"
   },
   "files": [
@@ -43,9 +43,9 @@
     "dist"
   ],
   "dependencies": {
-    "sass": "^1.26.9",
-    "svelte": "^3.23.2",
-    "svelte-preprocess": "3.9.11"
+    "sass": "^1.26.10",
+    "svelte": "^3.24.0",
+    "svelte-preprocess": "4.0.6"
   },
   "author": "TheComputerM",
   "license": "MIT"
