@@ -1,10 +1,9 @@
 <script>
-  import clsx from "../../utils/clsx";
   import Ripple from "../../actions/Ripple";
 
   let classes = "";
-  export let elevation = false;
   export let fab = false;
+  export let icon = false;
   export let block = false;
   export let size = "default";
   export let tile = false;
@@ -18,31 +17,23 @@
   export let form = undefined;
   export let name = undefined;
   export let value = undefined;
-  export {classes as class};
   export let ripple = {};
-
-  $: props = clsx(
-    {
-      "s-btn--fab": fab,
-      "s-btn--block": block,
-      "s-btn--tile": tile,
-      "s-btn--text": text,
-      "s-btn--depressed": depressed,
-      "s-btn--outlined": outlined,
-      "s-btn--rounded": rounded,
-      "s-btn--disabled": disabled
-    },
-    elevation ? `elevation-${elevation}` : "",
-    `s-btn--size-${size}`
-  );
+  export { classes as class };
 </script>
 
-<style type="scss">
-  @import "./index";
-</style>
+<style lang="scss" src="./index.scss"></style>
 
 <button
-  class="s-btn {props} {classes}"
+  class="size-{size} {classes}"
+  class:fab
+  class:icon
+  class:block
+  class:tile
+  class:text={text || icon}
+  class:depressed={depressed || text || disabled || outlined}
+  class:outlined
+  class:rounded
+  class:disabled
   {type}
   {style}
   {form}
@@ -50,9 +41,8 @@
   {value}
   {disabled}
   use:Ripple={ripple}
-  on:click
-  >
-  <span class="s-btn__content text-button">
+  on:click>
+  <span class="text-button">
     <slot />
   </span>
 </button>

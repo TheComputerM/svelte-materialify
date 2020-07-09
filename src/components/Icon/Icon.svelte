@@ -1,15 +1,12 @@
 <script>
-  let classes;
+  let classes = "";
   export let inactive = false;
-  export let size;
-  export {classes as class};
-  export let style;
+  export let size = "24px";
+  export { classes as class };
 </script>
 
-<style type="scss">
-  @import "./index";
-</style>
+<style type="scss" src="./index.scss"></style>
 
-<i class="s-icon s-icon--size-{size} {classes}" class:inactive {style}>
+<i style="--size={size}" class:inactive class={classes}>
   <slot />
 </i>

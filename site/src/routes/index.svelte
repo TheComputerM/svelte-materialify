@@ -8,4 +8,7 @@ import {Button} from "svelte-materialify/src/"
 
 <h1>Great success!</h1>
 <Button>Button</Button>
+<Button text>Button</Button>
+<Button outlined>Button</Button>
+
 

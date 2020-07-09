@@ -1,6 +1,6 @@
 @import "./variables";
 
-.s-btn {
+button {
   align-items: center;
   border-radius: $btn-border-radius;
   display: inline-flex;
@@ -16,12 +16,10 @@
   transition-duration: $btn-transition-duration;
   transition-property: box-shadow, transform, opacity;
   color: #ffffff;
-
-  &:not(.s-btn--outlined):not(.s-btn--text):not(.s-btn--disabled) {
+  @include elevation(2);
+  &:not(.outlined):not(.text):not(.disabled) {
     background-color: $primary-color;
   }
-
-  @include elevation(2);
 
   &:before {
     border-radius: inherit;
@@ -39,20 +37,20 @@
   }
 
   @each $name, $size in $btn-font-sizes {
-    &.s-btn--size-#{$name} {
+    &.size-#{$name} {
       font-size: $size;
     }
   }
 
   @each $name, $size in $btn-sizes {
-    &.s-btn--size-#{$name} {
+    &.size-#{$name} {
       height: #{$size}px;
       min-width: #{round($size * 1.777777777777778)}px; // default ratio
       padding: 0 #{$size / 2.25}px;
     }
   }
 
-  &:not(.s-btn--text):not(.s-btn--outlined):not(.s-btn--disabled) {
+  &:not(.text):not(.outlined):not(.disabled) {
     &:hover::before {
       opacity: $btn-hover-opacity;
     }
@@ -64,59 +62,66 @@
     }
   }
 
-  &:not(.s-btn--disabled):not(.s-btn--depressed) {
+  &:not(.disabled):not(.depressed) {
     will-change: box-shadow;
   }
 
-  &.s-btn--block {
+  &.block {
     display: flex;
     flex: 1 0 auto;
     min-width: 100% !important;
     max-width: auto;
   }
-  &.s-btn--tile {
+
+  &.tile {
     border-radius: 0;
   }
-  &.s-btn--text {
+
+  &.text {
     background-color: transparent;
     color: $primary-color;
+  }
+
+  &.depressed {
     box-shadow: none;
   }
-  &.s-btn--depressed {
-    box-shadow: none !important;
-  }
-  &.s-btn--outlined {
+
+  &.outlined {
     border: 1px solid $primary-color;
     color: $primary-color;
   }
-  &.s-btn--rounded {
+  &.rounded {
     border-radius: map-get($rounded, "pill");
   }
 
-  &.s-btn--disabled {
-    box-shadow: none;
+  &.disabled {
     pointer-events: none;
+    background-color: var(--theme-button-disabled);
   }
 
-  &.s-btn--fab {
+  &.icon,
+  &.fab {
     border-radius: 50%;
     min-width: 0;
     min-height: 0;
     padding: 0;
-    @each $size, $value in $fab-sizes {
-      &.s-btn--size-#{$size} {
-        height: #{$value}px;
-        width: #{$value}px;
-      }
-    }
     @each $name, $size in $fab-icon-sizes {
-      &.s-btn--size-#{$name} {
+      &.size-#{$name} {
         font-size: #{$size}px;
       }
     }
   }
 
-  .s-btn__content {
+  &.fab {
+    @each $size, $value in $fab-sizes {
+      &.size-#{$size} {
+        height: #{$value}px;
+        width: #{$value}px;
+      }
+    }
+  }
+
+  span {
     display: flex;
     align-items: center;
     flex: 1 0 auto;
@@ -125,12 +130,5 @@
     line-height: normal;
     position: relative;
     font-size: inherit;
-  }
-}
-
-@include theme(s-btn) using ($material) {
-  &.s-btn--disabled {
-    background-color: map-deep-get($material, "buttons", "disabled");
-    color: map-deep-get($material, "buttons", "disabled");
   }
 }
