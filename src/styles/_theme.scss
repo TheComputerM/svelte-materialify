@@ -1,0 +1,31 @@
+// @use "./tools/functions" as *;
+@use "./variables" as *;
+
+@each $name,
+  $material in ("light": $material-light-theme, "dark": $material-dark-theme)
+{
+  .theme--#{$name} {
+    --theme-bgColor: #{map-deep-get($material, "bgColor")};
+
+    --theme-text-primary: #{map-deep-get($material, "text", "primary")};
+    --theme-text-secondary: #{map-deep-get($material, "text", "secondary")};
+    --theme-text-disabled: #{map-deep-get($material, "text", "disabled")};
+
+    --theme-icon-active: #{map-deep-get($material, "icons", "active")};
+    --theme-icon-inactive: #{map-deep-get($material, "icons", "inactive")};
+
+    --theme-button-disabled: #{map-deep-get($material, "buttons", "disabled")};
+
+    background-color: var(--theme-bgColor);
+
+    .text--primary {
+      color: var(--theme-text-primary);
+    }
+    .text--secondary {
+      color: var(--theme-text-secondary);
+    }
+    .text--disabled {
+      color: var(--theme-text-disabled);
+    }
+  }
+}

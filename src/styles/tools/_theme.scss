@@ -1,9 +1,0 @@
-@mixin theme($component) {
-  :global(.theme--light .#{$component})  {
-    @content ($material-light-theme);
-  }
-
-  :global(.theme--dark .#{$component}) {
-    @content ($material-dark-theme);
-  }
-}

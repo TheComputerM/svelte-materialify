@@ -1,8 +1,9 @@
 @function map-deep-get($map, $keys...){
+  $result: $map;
   @each $key in $keys {
-    $map: map-get($map, $key)
+    $result: map-get($result, $key);
   }
-  @return $map;
+  @return $result;
 }
 
 // From: https://gist.github.com/pentzzsolt/4949bbd7691d43d00616dc4f1451cae9#file-non-destructive-map-merge-4-scss

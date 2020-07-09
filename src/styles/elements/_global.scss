@@ -17,10 +17,3 @@ body {
   font-family: $body-font-family;
   line-height: $line-height-root;
 }
-
-.theme--light {
-  background-color: map-deep-get($material-light-theme, "bgColor");
-}
-.theme--dark {
-  background-color: map-deep-get($material-dark-theme, "bgColor");
-}

@@ -1,4 +1,4 @@
-@use "../variables" as variables;
+@use "../variables" as vars;
 @use '../tools/breakpoints' as *;
 @use "../tools/functions" as *;
 
@@ -25,32 +25,8 @@
   }
 }
 
-@each $name, $value in variables.$font-weights {
+@each $name, $value in vars.$font-weights {
   .font-weight-#{$name} {
     font-weight: $value;
-  }
-}
-
-.theme--light {
-  .text--primary {
-    color: map-deep-get(variables.$material-light-theme, "text", "primary");
-  }
-  .text--secondary {
-    color: map-deep-get(variables.$material-light-theme, "text", "secondary");
-  }
-  .text--disabled {
-    color: map-deep-get(variables.$material-light-theme, "text", "disabled");
-  }
-}
-
-.theme--dark {
-  .text--primary {
-    color: map-deep-get(variables.$material-dark-theme, "text", "primary");
-  }
-  .text--secondary {
-    color: map-deep-get(variables.$material-dark-theme, "text", "secondary");
-  }
-  .text--disabled {
-    color: map-deep-get(variables.$material-dark-theme, "text", "disabled");
   }
 }
