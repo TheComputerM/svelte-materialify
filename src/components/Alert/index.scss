@@ -10,7 +10,7 @@
 
   :global(.s-icon),
   :global(.s-btn) {
-    color: inherit;
+    color: inherit !important;
   }
   :global(.s-icon) {
     align-self: flex-start;
