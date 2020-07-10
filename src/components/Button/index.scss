@@ -1,6 +1,6 @@
 @import "./variables";
 
-button {
+.s-btn {
   align-items: center;
   border-radius: $btn-border-radius;
   display: inline-flex;
@@ -17,6 +17,7 @@ button {
   transition-property: box-shadow, transform, opacity;
   color: #ffffff;
   @include elevation(2);
+
   &:not(.outlined):not(.text):not(.disabled) {
     background-color: $primary-color;
   }
@@ -42,11 +43,13 @@ button {
     }
   }
 
-  @each $name, $size in $btn-sizes {
-    &.size-#{$name} {
-      height: #{$size}px;
-      min-width: #{round($size * 1.777777777777778)}px; // default ratio
-      padding: 0 #{$size / 2.25}px;
+  &:not(.icon):not(.fab) {
+    @each $name, $size in $btn-sizes {
+      &.size-#{$name} {
+        height: #{$size}px;
+        min-width: #{round($size * 1.777777777777778)}px; // default ratio
+        padding: 0 #{$size / 2.25}px;
+      }
     }
   }
 
@@ -99,6 +102,15 @@ button {
     background-color: var(--theme-button-disabled);
   }
 
+  &.icon {
+    @each $name, $size in $btn-sizes {
+      &.size-#{$name} {
+        height: #{$size}px;
+        width: #{$size}px;
+      }
+    }
+  }
+
   &.icon,
   &.fab {
     border-radius: 50%;
@@ -106,7 +118,7 @@ button {
     min-height: 0;
     padding: 0;
     @each $name, $size in $fab-icon-sizes {
-      &.size-#{$name} {
+      &.size-#{$name} :global(.s-icon) {
         font-size: #{$size}px;
       }
     }

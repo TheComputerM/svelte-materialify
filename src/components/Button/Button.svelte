@@ -21,16 +21,19 @@
   export { classes as class };
 </script>
 
-<style lang="scss" src="./index.scss"></style>
+<style lang="scss" src="./index.scss">
+
+</style>
 
 <button
-  class="size-{size} {classes}"
+  class="s-btn size-{size}
+  {classes}"
   class:fab
   class:icon
   class:block
   class:tile
   class:text={text || icon}
-  class:depressed={depressed || text || disabled || outlined}
+  class:depressed={depressed || text || disabled || outlined || icon}
   class:outlined
   class:rounded
   class:disabled
