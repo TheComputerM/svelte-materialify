@@ -5,8 +5,10 @@
   export { classes as class };
 </script>
 
-<style type="scss" src="./index.scss"></style>
+<style type="scss" src="./index.scss">
 
-<i style="--size={size}" class:inactive class={classes}>
+</style>
+
+<i style="--size:{size}" class="s-icon {classes}" class:inactive>
   <slot />
 </i>

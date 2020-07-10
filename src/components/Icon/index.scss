@@ -7,15 +7,18 @@
     format("woff2");
 }
 
-i {
+.s-icon {
   font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
   font-size: var(--size, inherit);
+  color: var(--theme-icon-active);
   line-height: 1;
   letter-spacing: normal;
   text-transform: none;
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
@@ -23,4 +26,7 @@ i {
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: "liga";
+  &.inactive {
+    color: var(--theme-icon-inactive);
+  }
 }
