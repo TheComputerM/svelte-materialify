@@ -10,12 +10,13 @@ git
   .then(() =>
     ncp("./site/__sapper__/export/", "./", (err) => {
       if (err) return console.error(err);
-      console.log("Done!");
+      console.log("Completed Site Export");
     })
   )
   .then(() => git.add("."))
   .then(() => git.commit(`Deployed at ${new Date().toUTCString()}`))
+  .then(() => console.log("Commited files"))
   .then(() => git.push())
   .then(() => git.checkout("master"))
-  .then(() => console.log("Successful"))
+  .then(() => console.log("Finished Deployment"))
   .catch((e) => console.error(e));
