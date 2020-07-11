@@ -24,7 +24,7 @@
     "@rollup/plugin-node-resolve": "^8.1.0",
     "@testing-library/jest-dom": "^5.11.0",
     "@testing-library/svelte": "^3.0.0",
-    "autoprefixer": "^9.8.4",
+    "autoprefixer": "^9.8.5",
     "babel-jest": "^26.1.0",
     "concurrently": "^5.2.0",
     "del": "^5.1.0",
