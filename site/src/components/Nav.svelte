@@ -1,5 +1,11 @@
 <script>
-	export let segment;
+  export let segment;
+  export let theme = "light";
+
+  function changeTheme() {
+    if (theme === "light") theme = "dark";
+    else theme = "light";
+  }
 </script>
 
 <style>
@@ -52,5 +58,6 @@
 	<ul>
 		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
 		<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a></li>
-	</ul>
+    <li><button on:click={changeTheme}>Click Me</button></li>
+  </ul>
 </nav>

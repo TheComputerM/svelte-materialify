@@ -1,5 +1,6 @@
 <script>
   let classes = "";
+  export let style = "";
   export let inactive = false;
   export let size = "24px";
   export { classes as class };
@@ -9,6 +10,6 @@
 
 </style>
 
-<i style="--size:{size}" class="s-icon {classes}" class:inactive>
+<i style="--size:{size};{style}" class="s-icon {classes}" class:inactive>
   <slot />
 </i>

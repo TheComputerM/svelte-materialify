@@ -8,7 +8,9 @@ This is still in development. To contribute, please read [CONTRIBUTING.md](./CON
 
 - [x] Button
 - [x] Icon
-- [ ] Alerts
+- [x] Alerts
+- [x] Dividers
+- [x] Avatars
 - [ ] Cards
 - [ ] Badges
 - [ ] Banners
@@ -19,7 +21,6 @@ This is still in development. To contribute, please read [CONTRIBUTING.md](./CON
 - [ ] Breadcrumbs
 - [ ] Chips
 - [ ] Dialogs
-- [ ] Dividers
 - [ ] Footer
 - _and much more_
 

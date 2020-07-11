@@ -2,12 +2,12 @@
 @import "./tools/colors";
 @import "./tools/elevation";
 
-$primary-color: #6200EE !default;
-$secondary-color: #03DAC6 !default;
-$success-color: #4CAF50 !default;
-$info-color: #00BCD4 !default;
-$warning-color: #FFEB3B !default;
-$error-color: #F44336 !default;
+$primary-color: #6200ee !default;
+$secondary-color: #03dac6 !default;
+$success-color: #4caf50 !default;
+$info-color: #00bcd4 !default;
+$warning-color: #ffeb3b !default;
+$error-color: #f44336 !default;
 
 $font-size-root: 16px !default;
 $border-radius-root: 4px !default;
@@ -221,9 +221,9 @@ $display-breakpoints: map-deep-merge(
     "md-and-down": "only screen and (max-width: #{map-get($grid-breakpoints, "lg")-1})",
     "md-and-up": "only screen and (min-width: #{map-get($grid-breakpoints, "md")})",
     "lg-only": "only screen and (min-width: #{map-get($grid-breakpoints, "lg")}) and (max-width: #{map-get($grid-breakpoints, "xl")-1})",
-    "lg-and-down": "only screen and (max-width: #{map-get($grid-breakpoints, "xl")-1})",
-    "lg-and-up": "only screen and (min-width: #{map-get($grid-breakpoints, "lg")})",
-    "xl-only": "only screen and (min-width: #{map-get($grid-breakpoints, "xl")})",
+    "lg-and-down": "only screen and (max-width: #{map-get($grid-breakpoints,"xl")-1})",
+    "lg-and-up": "only screen and (min-width: #{map-get($grid-breakpoints,"lg")})",
+    "xl-only": "only screen and (min-width: #{map-get($grid-breakpoints,"xl")})",
   ),
   $display-breakpoints
 );
@@ -235,14 +235,14 @@ $transitions: map-deep-merge(
     "fast-out-linear-in": cubic-bezier(0.4, 0, 1, 1),
     "ease-in-out": cubic-bezier(0.4, 0, 0.6, 1),
     "fast-in-fast-out": cubic-bezier(0.25, 0.8, 0.25, 1),
-    "swing": cubic-bezier(0.25, 0.8, 0.5, 1)
+    "swing": cubic-bezier(0.25, 0.8, 0.5, 1),
   ),
   $transitions
 );
 
 $material-light-theme: map-deep-merge(
   (
-    "bgColor": #FFFFFF,
+    "bgColor": #ffffff,
     "text": (
       "primary": rgba(material-color("shades", "black"), 0.87),
       "secondary": rgba(material-color("shades", "black"), 0.6),
@@ -250,11 +250,13 @@ $material-light-theme: map-deep-merge(
     ),
     "icons": (
       "active": rgba(material-color("shades", "black"), 0.54),
-      "inactive": rgba(material-color("shades", "black"), 0.38)
+      "inactive": rgba(material-color("shades", "black"), 0.38),
     ),
     "buttons": (
-      "disabled": rgba(material-color("shades", "black"), 0.26)
-    )
+      "disabled": rgba(material-color("shades", "black"), 0.26),
+    ),
+    "dividers": rgba(material-color("shades", "black"), 0.12),
+    "chips": #e0e0e0,
   ),
   $material-light-theme
 );
@@ -264,7 +266,7 @@ $material-dark-theme: map-deep-merge(
     "bgColor": #212121,
     "icons": (
       "active": material-color("shades", "white"),
-      "inactive": rgba(material-color("shades", "white"), 0.5)
+      "inactive": rgba(material-color("shades", "white"), 0.5),
     ),
     "text": (
       "primary": material-color("shades", "white"),
@@ -272,10 +274,10 @@ $material-dark-theme: map-deep-merge(
       "disabled": rgba(material-color("shades", "white"), 0.5),
     ),
     "buttons": (
-      "disabled": rgba(material-color("shades", "white"), 0.3)
-    )
+      "disabled": rgba(material-color("shades", "white"), 0.3),
+    ),
+    "dividers": rgba(material-color("shades", "white"), 0.12),
+    "chips": #555,
   ),
   $material-dark-theme
 );
-
-

@@ -15,9 +15,10 @@
     --theme-icon-inactive: #{map-deep-get($material, "icons", "inactive")};
 
     --theme-button-disabled: #{map-deep-get($material, "buttons", "disabled")};
+    --theme-dividers: #{map-deep-get($material, "dividers")};
 
     background-color: var(--theme-bgColor);
-
+    color: var(--theme-text-primary);
     .text--primary {
       color: var(--theme-text-primary);
     }
