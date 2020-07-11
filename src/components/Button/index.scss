@@ -53,12 +53,9 @@
     }
   }
 
-  &:not(.text):not(.outlined):not(.disabled) {
+  &:not(.disabled) {
     &:hover::before {
       opacity: $btn-hover-opacity;
-    }
-    &.v-btn--active::before {
-      opacity: $btn-active-opacity;
     }
     &:focus::before {
       opacity: $btn-focus-opacity;
