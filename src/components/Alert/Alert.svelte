@@ -1,5 +1,6 @@
 <script>
-  import ripplet from "../../actions/Ripple/ripplet";
+  import { createEventDispatcher } from "svelte";
+  const dispatch = createEventDispatcher();
 
   import Button from "../Button/Button.svelte";
   import Icon from "../Icon/Icon.svelte";
@@ -19,6 +20,9 @@
 
   export function dismiss() {
     visible = false;
+    dispatch("dismiss", {
+      visible: visible,
+    });
   }
 </script>
 
