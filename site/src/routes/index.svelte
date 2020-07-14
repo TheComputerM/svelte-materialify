@@ -1,5 +1,12 @@
 <script>
-  import { Button, Icon, Divider, Alert, Avatar } from "svelte-materialify/src/";
+  import {
+    Button,
+    Icon,
+    Divider,
+    Alert,
+    Avatar,
+    AppBar
+  } from "svelte-materialify/src/";
 </script>
 
 <svelte:head>
@@ -7,14 +14,58 @@
 </svelte:head>
 
 <h1>Great success!</h1>
-<Button>Button</Button>
-<Button text>Button</Button>
-<Button outlined>Button</Button>
-<Button icon><Icon>cloud</Icon></Button>
-<br><br>
-<Divider />
+<AppBar>
+  <div slot="left">
+    <Button fab depressed>
+      <Icon>cloud</Icon>
+    </Button>
+  </div>
+  <span slot="title">
+    Svelte Materialify
+  </span>
+  <div slot="right">
+    <Button>
+      Hello
+    </Button>
+    <Button fab depressed>
+      <Icon>phone</Icon>
+    </Button>
+  </div>
+</AppBar>
 <br>
-<Alert class="info-color white-text" border="left" icon="check" dismissible>
+<Divider></Divider>
+<br>
+<AppBar prominent>
+  <div slot="left">
+    <Button fab depressed>
+      <Icon>cloud</Icon>
+    </Button>
+  </div>
+  <span slot="title">
+    Svelte Materialify
+  </span>
+  <div slot="right">
+    <Button fab depressed>
+      <Icon>phone</Icon>
+    </Button>
+  </div>
+</AppBar>
+<br><br>
+<Button>Button</Button>
+<Button class="primary-color">Button</Button>
+<Button text class="primary-text">Button</Button>
+<Button outlined class="primary-color primary-text">Button</Button>
+<Button class="red white-text">Red</Button>
+<Button class="blue lighten-4">Blue</Button>
+<Button outlined class="green-text green">Green</Button>
+<Button icon>
+  <Icon>cloud</Icon>
+</Button>
+<br />
+<br />
+<Divider />
+<br />
+<Alert class="info-text" border="left" dismissible coloredBorder>
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, rerum
   eveniet. Commodi, perferendis. Molestiae itaque quia accusantium optio iure,
   quod temporibus vel deleniti, nesciunt nemo dolor, illum perspiciatis adipisci
@@ -36,5 +87,7 @@
 </Alert>
 
 <Avatar class="blue white-text text-h6">MS</Avatar>
-<Avatar class="indigo"><Icon class="white-text">account_circle</Icon></Avatar>
+<Avatar class="indigo">
+  <Icon class="white-text">account_circle</Icon>
+</Avatar>
 <Avatar tile class="grey lighten-2 elevation-6">HS</Avatar>
