@@ -47,6 +47,7 @@ $display-breakpoints: () !default;
 $transitions: () !default;
 
 $material-light-theme: () !default;
+$material-dark-elevation-colors: () !default;
 $material-dark-theme: () !default;
 
 // Importing user defined variables
@@ -242,7 +243,7 @@ $transitions: map-deep-merge(
 
 $material-light-theme: map-deep-merge(
   (
-    "bgColor": #ffffff,
+    "surface": #ffffff,
     "text": (
       "primary": rgba(material-color("shades", "black"), 0.87),
       "secondary": rgba(material-color("shades", "black"), 0.6),
@@ -257,13 +258,30 @@ $material-light-theme: map-deep-merge(
     ),
     "dividers": rgba(material-color("shades", "black"), 0.12),
     "chips": #e0e0e0,
+    "app-bar": material-color("grey", "lighten-4")
   ),
   $material-light-theme
 );
 
+$material-dark-elevation-colors: map-merge(
+  (
+    '0': #000000,
+    '1': #1E1E1E,
+    '2': #222222,
+    '3': #252525,
+    '4': #272727,
+    '6': #2C2C2C,
+    '8': #2E2E2E,
+    '12': #333333,
+    '16': #363636,
+    '24': #373737
+  ),
+  $material-dark-elevation-colors
+);
+
 $material-dark-theme: map-deep-merge(
   (
-    "bgColor": #212121,
+    "surface": #212121,
     "icons": (
       "active": material-color("shades", "white"),
       "inactive": rgba(material-color("shades", "white"), 0.5),
@@ -278,6 +296,7 @@ $material-dark-theme: map-deep-merge(
     ),
     "dividers": rgba(material-color("shades", "white"), 0.12),
     "chips": #555,
+    "app-bar": map-get($material-dark-elevation-colors, '4')
   ),
   $material-dark-theme
 );

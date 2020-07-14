@@ -12,6 +12,7 @@
   export let outlined = false;
   export let rounded = false;
   export let disabled = false;
+  export let active = false;
   export let type = "button";
   export let style = undefined;
   export let form = undefined;
@@ -37,6 +38,7 @@
   class:outlined
   class:rounded
   class:disabled
+  class:active
   {type}
   {style}
   {form}

@@ -6,6 +6,6 @@
   @import "../../styles/global";
 </style>
 
-<div class="theme--{theme}">
+<div class="s-app theme--{theme}">
   <slot />
 </div>
