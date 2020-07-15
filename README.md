@@ -12,6 +12,7 @@ This is still in development. To contribute, please read [CONTRIBUTING.md](./CON
 - [x] Dividers
 - [x] Avatars
 - [x] ProgressLinear
+- [x] ProgressCircular
 - [ ] Cards
 - [ ] Badges
 - [ ] Banners

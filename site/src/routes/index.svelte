@@ -7,6 +7,7 @@
     Avatar,
     AppBar,
     ProgressLinear,
+    ProgressCircular,
   } from "svelte-materialify/src/";
   let test = true;
 </script>
@@ -90,7 +91,12 @@
 <Avatar tile class="grey lighten-2 elevation-6">HS</Avatar>
 <br />
 <br />
-<Button on:click={() => {test = !test}}>Click Me</Button>
+<Button
+  on:click={() => {
+    test = !test;
+  }}>
+  Click Me
+</Button>
 <ProgressLinear buffer="80" value="20" stream />
 <br />
 <ProgressLinear
@@ -101,7 +107,14 @@
   stream
   color="red"
   backgroundColor="pink"
-  backgroundOpacity=0.5
+  backgroundOpacity="0.5"
   reversed />
 <br />
 <ProgressLinear indeterminate />
+<br />
+<ProgressCircular indeterminate />
+<Button>
+  <ProgressCircular size=24 value=30 />
+</Button>
+<Divider></Divider>
+<br><br>
