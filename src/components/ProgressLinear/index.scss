@@ -1,0 +1,140 @@
+@import "./variables";
+
+.s-progress-linear {
+  background: transparent;
+  overflow: hidden;
+  position: relative;
+  transition: 0.2s map-get($transitions, "ease-in-out");
+  width: 100%;
+  color: var(--theme-text-primary);
+  &.inactive {
+    height: 0 !important;
+  }
+
+  &.rounded {
+    border-radius: $progress-linear-border-radius;
+  }
+
+  .background,
+  .determinate,
+  .indeterminate {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    transition: inherit;
+  }
+
+  .determinate {
+    &.striped {
+      background-image: $progress-linear-stripe-gradient;
+      background-size: $progress-linear-stripe-background-size;
+      background-repeat: repeat;
+    }
+  }
+
+  .indeterminate {
+    right: auto;
+    width: auto;
+    will-change: left, right;
+    background-color: inherit;
+    animation-duration: 2.2s;
+    animation-iteration-count: infinite;
+
+    &.long {
+      animation-name: indeterminate;
+    }
+
+    &.short {
+      animation-name: indeterminate-short;
+    }
+  }
+
+  .stream {
+    background: transparent !important;
+    animation: stream linear 0.25s infinite;
+    bottom: 0;
+    opacity: $progress-linear-stream-opacity;
+    pointer-events: none;
+    position: absolute;
+    border-top: $progress-linear-stream-border-width dotted;
+    top: calc(50% - #{$progress-linear-stream-border-width/2});
+    transition: inherit;
+  }
+
+  &.reversed {
+    .background,
+    .determinate,
+    .indeterminate {
+      right: 0;
+    }
+    .indeterminate {
+      animation-direction: reverse;
+    }
+    .stream {
+      right: auto;
+      animation-direction: reverse;
+    }
+  }
+
+  &:not(.reversed) {
+    .background,
+    .determinate,
+    .indeterminate {
+      left: 0;
+    }
+
+    .stream {
+      left: auto;
+      right: -$progress-linear-stream-border-width * 2;
+    }
+  }
+
+  .content {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    left: 0;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    pointer-events: none;
+  }
+}
+
+@keyframes indeterminate {
+  0% {
+    left: -90%;
+    right: 100%;
+  }
+  60% {
+    left: -90%;
+    right: 100%;
+  }
+  100% {
+    left: 100%;
+    right: -35%;
+  }
+}
+
+@keyframes indeterminate-short {
+  0% {
+    left: -200%;
+    right: 100%;
+  }
+  60% {
+    left: 107%;
+    right: -8%;
+  }
+  100% {
+    left: 107%;
+    right: -8%;
+  }
+}
+
+@keyframes stream {
+  to {
+    transform: translateX(-8px);
+  }
+}

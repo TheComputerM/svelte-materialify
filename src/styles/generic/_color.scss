@@ -11,6 +11,7 @@
         }
         .#{$color}-text {
           color: $value !important;
+          caret-color: $value !important;
         }
       }
       .#{$color}.#{$color_variant} {
@@ -19,6 +20,7 @@
       }
       .#{$color}.text-#{$color_variant} {
         color: $value !important;
+        caret-color: $value !important;
       }
     }
   } @else {
@@ -29,6 +31,7 @@
       }
       .#{$shade}-text {
         color: $value !important;
+        caret-color: $value !important;
       }
     }
   }
@@ -51,5 +54,6 @@
   }
   .#{$color}-text {
     color: $value !important;
+    caret-color: $value !important;
   }
 }

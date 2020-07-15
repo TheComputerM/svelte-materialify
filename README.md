@@ -11,6 +11,7 @@ This is still in development. To contribute, please read [CONTRIBUTING.md](./CON
 - [x] Alerts
 - [x] Dividers
 - [x] Avatars
+- [x] ProgressLinear
 - [ ] Cards
 - [ ] Badges
 - [ ] Banners

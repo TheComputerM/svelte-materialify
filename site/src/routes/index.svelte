@@ -5,8 +5,10 @@
     Divider,
     Alert,
     Avatar,
-    AppBar
+    AppBar,
+    ProgressLinear,
   } from "svelte-materialify/src/";
+  let test = true;
 </script>
 
 <svelte:head>
@@ -20,37 +22,32 @@
       <Icon>cloud</Icon>
     </Button>
   </div>
-  <span slot="title">
-    Svelte Materialify
-  </span>
+  <span slot="title">Svelte Materialify</span>
   <div slot="right">
-    <Button>
-      Hello
-    </Button>
+    <Button>Hello</Button>
     <Button fab depressed>
       <Icon>phone</Icon>
     </Button>
   </div>
 </AppBar>
-<br>
-<Divider></Divider>
-<br>
+<br />
+<Divider />
+<br />
 <AppBar prominent>
   <div slot="left">
     <Button fab depressed>
       <Icon>cloud</Icon>
     </Button>
   </div>
-  <span slot="title">
-    Svelte Materialify
-  </span>
+  <span slot="title">Svelte Materialify</span>
   <div slot="right">
     <Button fab depressed>
       <Icon>phone</Icon>
     </Button>
   </div>
 </AppBar>
-<br><br>
+<br />
+<br />
 <Button>Button</Button>
 <Button class="primary-color">Button</Button>
 <Button text class="primary-text">Button</Button>
@@ -91,3 +88,20 @@
   <Icon class="white-text">account_circle</Icon>
 </Avatar>
 <Avatar tile class="grey lighten-2 elevation-6">HS</Avatar>
+<br />
+<br />
+<Button on:click={() => {test = !test}}>Click Me</Button>
+<ProgressLinear buffer="80" value="20" stream />
+<br />
+<ProgressLinear
+  active={test}
+  height="8px"
+  buffer="80"
+  value="20"
+  stream
+  color="red"
+  backgroundColor="pink"
+  backgroundOpacity=0.5
+  reversed />
+<br />
+<ProgressLinear indeterminate />

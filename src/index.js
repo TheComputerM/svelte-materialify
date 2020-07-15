@@ -8,3 +8,4 @@ export { default as Alert } from "./components/Alert";
 export { default as Divider } from "./components/Divider";
 export { default as Avatar } from "./components/Avatar";
 export { default as AppBar } from "./components/AppBar";
+export { default as ProgressLinear } from "./components/ProgressLinear";
