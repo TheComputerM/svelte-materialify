@@ -13,6 +13,7 @@ This is still in development. To contribute, please read [CONTRIBUTING.md](./CON
 - [x] Avatars
 - [x] ProgressLinear
 - [x] ProgressCircular
+- [x] Breadcrumbs
 - [ ] Cards
 - [ ] Badges
 - [ ] Banners
@@ -20,7 +21,6 @@ This is still in development. To contribute, please read [CONTRIBUTING.md](./CON
 - [ ] Navigation
 - [ ] Modals
 - [ ] Bottom Sheets
-- [ ] Breadcrumbs
 - [ ] Chips
 - [ ] Dialogs
 - [ ] Footer

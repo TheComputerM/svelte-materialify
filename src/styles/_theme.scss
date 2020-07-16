@@ -20,6 +20,10 @@
 
     background-color: var(--theme-surface);
     color: var(--theme-text-primary);
+
+    a {
+      color: map-deep-get($material, "text", "link");
+    }
     .text--primary {
       color: var(--theme-text-primary);
     }

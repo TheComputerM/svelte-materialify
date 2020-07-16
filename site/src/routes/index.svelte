@@ -6,6 +6,7 @@
     Alert,
     Avatar,
     AppBar,
+    Breadcrumbs,
     ProgressLinear,
     ProgressCircular,
   } from "svelte-materialify/src/";
@@ -114,7 +115,11 @@
 <br />
 <ProgressCircular indeterminate />
 <Button>
-  <ProgressCircular size=24 value=30 />
+  <ProgressCircular size="24" value="30" />
 </Button>
-<Divider></Divider>
-<br><br>
+<Divider />
+<br />
+<br />
+
+<Breadcrumbs
+  items={[{ text: 'Item 1' }, { text: 'Item 2' }, { text: 'Item 3', disabled: true }]} />

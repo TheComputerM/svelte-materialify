@@ -248,6 +248,7 @@ $material-light-theme: map-deep-merge(
       "primary": rgba(material-color("shades", "black"), 0.87),
       "secondary": rgba(material-color("shades", "black"), 0.6),
       "disabled": rgba(material-color("shades", "black"), 0.38),
+      "link": material-color("blue", "darken-2")
     ),
     "icons": (
       "active": rgba(material-color("shades", "black"), 0.54),
@@ -290,6 +291,7 @@ $material-dark-theme: map-deep-merge(
       "primary": material-color("shades", "white"),
       "secondary": rgba(material-color("shades", "white"), 0.7),
       "disabled": rgba(material-color("shades", "white"), 0.5),
+      "link": material-color("blue", "accent-1")
     ),
     "buttons": (
       "disabled": rgba(material-color("shades", "white"), 0.3),
