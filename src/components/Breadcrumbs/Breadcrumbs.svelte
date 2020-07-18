@@ -1,7 +1,9 @@
 <script>
+  let classes = "";
   export let divider = "/";
   export let large = false;
   export let items = [];
+  export {classes as class};
 
   let defaults = {
     disabled: false,
@@ -19,7 +21,7 @@
 
 </style>
 
-<ul class="s-breadcrumbs" class:large>
+<ul class="s-breadcrumbs {classes}" class:large>
   {#each items as item, i}
     {#if i !== 0}
       <li class="divider">

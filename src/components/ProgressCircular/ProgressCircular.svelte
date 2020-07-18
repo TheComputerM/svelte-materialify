@@ -1,9 +1,11 @@
 <script>
+  let classes = "";
   export let indeterminate = false;
   export let rotate = 0;
   export let size = 32;
   export let value = 0;
   export let width = 4;
+  export { classes as class };
 
   let radius = 20;
   let circumference = 2 * 3.1416 * radius;
@@ -26,12 +28,12 @@
 </style>
 
 <div
-  class="s-progress-circular"
-  class:indeterminate
   role="progressbar"
   aria-valuemin="0"
   aria-valuemax="100"
   aria-valuenow={value}
+  class="s-progress-circular {classes}"
+  class:indeterminate
   style="width:{size}px;height:{size}px">
 
   <svg
@@ -53,6 +55,6 @@
   </svg>
 
   <div class="content">
-    <slot></slot>
+    <slot />
   </div>
 </div>

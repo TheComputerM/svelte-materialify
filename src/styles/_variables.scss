@@ -259,6 +259,7 @@ $material-light-theme: map-deep-merge(
     ),
     "dividers": rgba(material-color("shades", "black"), 0.12),
     "chips": #e0e0e0,
+    "cards": material-color("shades", "white"),
     "app-bar": material-color("grey", "lighten-4")
   ),
   $material-light-theme
@@ -298,6 +299,7 @@ $material-dark-theme: map-deep-merge(
     ),
     "dividers": rgba(material-color("shades", "white"), 0.12),
     "chips": #555,
+    "cards": map-get($material-dark-elevation-colors, '1'),
     "app-bar": map-get($material-dark-elevation-colors, '4')
   ),
   $material-dark-theme

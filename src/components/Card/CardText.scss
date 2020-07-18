@@ -1,0 +1,11 @@
+@import "./variables";
+
+.s-card-text {
+  width: 100%;
+  color: var(--theme-text-secondary);
+  font-size: $card-text-font-size;
+  font-weight: $card-text-font-weight;
+  line-height: $card-text-line-height;
+  letter-spacing: $card-text-letter-spacing;
+  padding: $card-subtitle-padding;
+}

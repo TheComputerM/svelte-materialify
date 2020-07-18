@@ -14,7 +14,7 @@ This is still in development. To contribute, please read [CONTRIBUTING.md](./CON
 - [x] ProgressLinear
 - [x] ProgressCircular
 - [x] Breadcrumbs
-- [ ] Cards
+- [x] Cards
 - [ ] Badges
 - [ ] Banners
 - [ ] Bars

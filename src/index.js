@@ -11,3 +11,10 @@ export { default as AppBar } from "./components/AppBar";
 export { default as Breadcrumbs } from "./components/Breadcrumbs";
 export { default as ProgressLinear } from "./components/ProgressLinear";
 export { default as ProgressCircular } from "./components/ProgressCircular";
+export {
+  default as Card,
+  CardActions,
+  CardSubtitle,
+  CardText,
+  CardTitle,
+} from "./components/Card";

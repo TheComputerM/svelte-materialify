@@ -5,7 +5,7 @@
   $material in ("light": $material-light-theme, "dark": $material-dark-theme)
 {
   .theme--#{$name} {
-    --theme-surface: #{map-deep-get($material, "surface")};
+    --theme-surface: #{map-get($material, "surface")};
 
     --theme-text-primary: #{map-deep-get($material, "text", "primary")};
     --theme-text-secondary: #{map-deep-get($material, "text", "secondary")};
@@ -15,7 +15,8 @@
     --theme-icons-inactive: #{map-deep-get($material, "icons", "inactive")};
 
     --theme-buttons-disabled: #{map-deep-get($material, "buttons", "disabled")};
-    --theme-dividers: #{map-deep-get($material, "dividers")};
+    --theme-dividers: #{map-get($material, "dividers")};
+    --theme-cards: #{map-get($material, "cards")};
     --theme-app-bar: #{map-get($material, "app-bar")};
 
     background-color: var(--theme-surface);

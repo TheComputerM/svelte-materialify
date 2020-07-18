@@ -1,0 +1,10 @@
+@import "./variables";
+
+.s-card-actions {
+  align-items: center;
+  display: flex;
+  padding: $card-actions-padding;
+  :global(.s-btn) {
+    padding: $card-btn-padding;
+  }
+}

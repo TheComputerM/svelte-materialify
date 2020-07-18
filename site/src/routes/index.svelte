@@ -1,15 +1,5 @@
 <script>
-  import {
-    Button,
-    Icon,
-    Divider,
-    Alert,
-    Avatar,
-    AppBar,
-    Breadcrumbs,
-    ProgressLinear,
-    ProgressCircular,
-  } from "svelte-materialify/src/";
+  import * as S from "svelte-materialify/src/";
   let test = true;
 </script>
 
@@ -18,89 +8,89 @@
 </svelte:head>
 
 <h1>Great success!</h1>
-<AppBar>
+<S.AppBar>
   <div slot="left">
-    <Button fab depressed>
-      <Icon>cloud</Icon>
-    </Button>
+    <S.Button fab depressed>
+      <S.Icon>cloud</S.Icon>
+    </S.Button>
   </div>
   <span slot="title">Svelte Materialify</span>
   <div slot="right">
-    <Button>Hello</Button>
-    <Button fab depressed>
-      <Icon>phone</Icon>
-    </Button>
+    <S.Button>Hello</S.Button>
+    <S.Button fab depressed>
+      <S.Icon>phone</S.Icon>
+    </S.Button>
   </div>
-</AppBar>
+</S.AppBar>
 <br />
-<Divider />
+<S.Divider />
 <br />
-<AppBar prominent>
+<S.AppBar prominent>
   <div slot="left">
-    <Button fab depressed>
-      <Icon>cloud</Icon>
-    </Button>
+    <S.Button fab depressed>
+      <S.Icon>cloud</S.Icon>
+    </S.Button>
   </div>
   <span slot="title">Svelte Materialify</span>
   <div slot="right">
-    <Button fab depressed>
-      <Icon>phone</Icon>
-    </Button>
+    <S.Button fab depressed>
+      <S.Icon>phone</S.Icon>
+    </S.Button>
   </div>
-</AppBar>
+</S.AppBar>
 <br />
 <br />
-<Button>Button</Button>
-<Button class="primary-color">Button</Button>
-<Button text class="primary-text">Button</Button>
-<Button outlined class="primary-color primary-text">Button</Button>
-<Button class="red white-text">Red</Button>
-<Button class="blue lighten-4">Blue</Button>
-<Button outlined class="green-text green">Green</Button>
-<Button icon>
-  <Icon>cloud</Icon>
-</Button>
+<S.Button>Button</S.Button>
+<S.Button class="primary-color">Button</S.Button>
+<S.Button text class="primary-text">Button</S.Button>
+<S.Button outlined class="primary-color primary-text">Button</S.Button>
+<S.Button class="red white-text">Red</S.Button>
+<S.Button class="blue lighten-4">Blue</S.Button>
+<S.Button outlined class="green-text green">Green</S.Button>
+<S.Button icon>
+  <S.Icon>cloud</S.Icon>
+</S.Button>
 <br />
 <br />
-<Divider />
+<S.Divider />
 <br />
-<Alert class="info-text" border="left" dismissible coloredBorder>
+<S.Alert class="info-text" border="left" dismissible coloredBorder>
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, rerum
   eveniet. Commodi, perferendis. Molestiae itaque quia accusantium optio iure,
   quod temporibus vel deleniti, nesciunt nemo dolor, illum perspiciatis adipisci
   exercitationem.
-</Alert>
+</S.Alert>
 
-<Alert class="error-text" coloredBorder text border="bottom" icon="error">
+<S.Alert class="error-text" coloredBorder text border="bottom" icon="error">
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, rerum
   eveniet. Commodi, perferendis. Molestiae itaque quia accusantium optio iure,
   quod temporibus vel deleniti, nesciunt nemo dolor, illum perspiciatis adipisci
   exercitationem.
-</Alert>
+</S.Alert>
 
-<Alert class="success-text" dense outlined tile border="right" dismissible>
+<S.Alert class="success-text" dense outlined tile border="right" dismissible>
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, rerum
   eveniet. Commodi, perferendis. Molestiae itaque quia accusantium optio iure,
   quod temporibus vel deleniti, nesciunt nemo dolor, illum perspiciatis adipisci
   exercitationem.
-</Alert>
+</S.Alert>
 
-<Avatar class="blue white-text text-h6">MS</Avatar>
-<Avatar class="indigo">
-  <Icon class="white-text">account_circle</Icon>
-</Avatar>
-<Avatar tile class="grey lighten-2 elevation-6">HS</Avatar>
+<S.Avatar class="blue white-text text-h6">MS</S.Avatar>
+<S.Avatar class="indigo">
+  <S.Icon class="white-text">account_circle</S.Icon>
+</S.Avatar>
+<S.Avatar tile class="grey lighten-2 elevation-6">HS</S.Avatar>
 <br />
 <br />
-<Button
+<S.Button
   on:click={() => {
     test = !test;
   }}>
   Click Me
-</Button>
-<ProgressLinear buffer="80" value="20" stream />
+</S.Button>
+<S.ProgressLinear buffer="80" value="20" stream />
 <br />
-<ProgressLinear
+<S.ProgressLinear
   active={test}
   height="8px"
   buffer="80"
@@ -111,15 +101,53 @@
   backgroundOpacity="0.5"
   reversed />
 <br />
-<ProgressLinear indeterminate />
+<S.ProgressLinear indeterminate />
 <br />
-<ProgressCircular indeterminate />
-<Button>
-  <ProgressCircular size="24" value="30" />
-</Button>
-<Divider />
+<S.ProgressCircular indeterminate />
+<S.Button>
+  <S.ProgressCircular size="24" value="30" />
+</S.Button>
+<S.Divider />
 <br />
 <br />
 
-<Breadcrumbs
+<S.Breadcrumbs
   items={[{ text: 'Item 1' }, { text: 'Item 2' }, { text: 'Item 3', disabled: true }]} />
+
+<div class="d-flex justify-space-around">
+  <S.Card style="width: 300px">
+    <S.CardTitle>Card Title</S.CardTitle>
+    <S.CardSubtitle>Card Subtitle</S.CardSubtitle>
+    <S.CardText>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima id dolor
+      eveniet, quos corporis vero.
+    </S.CardText>
+    <S.CardActions>
+      <S.Button>Hello</S.Button>
+    </S.CardActions>
+  </S.Card>
+  <S.Card style="width: 300px">
+    <S.ProgressLinear indeterminate></S.ProgressLinear>
+    <S.CardTitle>Card Title</S.CardTitle>
+    <S.CardSubtitle>Card Subtitle</S.CardSubtitle>
+    <S.CardText>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima id dolor
+      eveniet, quos corporis vero.
+    </S.CardText>
+    <S.CardActions>
+      <S.Button>Hello</S.Button>
+    </S.CardActions>
+  </S.Card>
+  <S.Card disabled style="width: 300px">
+    <S.ProgressLinear indeterminate></S.ProgressLinear>
+    <S.CardTitle>Card Title</S.CardTitle>
+    <S.CardSubtitle>Card Subtitle</S.CardSubtitle>
+    <S.CardText>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima id dolor
+      eveniet, quos corporis vero.
+    </S.CardText>
+    <S.CardActions>
+      <S.Button>Hello</S.Button>
+    </S.CardActions>
+  </S.Card>
+</div>

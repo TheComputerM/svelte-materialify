@@ -1,5 +1,7 @@
 <script>
   import { scale } from "svelte/transition";
+
+  let classes = "";
   export let value = 0;
   export let active = true;
   export let indeterminate = false;
@@ -13,6 +15,7 @@
   export let rounded = false;
   export let striped = false;
   export let style = "";
+  export {classes as class};
 </script>
 
 <style lang="scss" src="./index.scss">
@@ -24,7 +27,7 @@
   aria-valuemin="0"
   aria-valuemax="100"
   aria-valuenow={value}
-  class="s-progress-linear"
+  class="s-progress-linear {classes}"
   class:inactive={!active}
   class:reversed
   class:rounded
