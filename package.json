@@ -18,7 +18,7 @@
     "deploy": "npm run site:export && node deploy.js"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.4",
+    "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "@rollup/plugin-commonjs": "^13.0.2",
     "@rollup/plugin-node-resolve": "^8.4.0",
@@ -32,10 +32,10 @@
     "jest": "^26.1.0",
     "ncp": "^2.0.0",
     "postcss": "^7.0.32",
-    "rollup": "^2.21.0",
+    "rollup": "^2.22.0",
     "rollup-plugin-svelte": "^5.2.3",
     "rollup-plugin-terser": "^6.1.0",
-    "simple-git": "^2.12.0",
+    "simple-git": "^2.13.2",
     "svelte-jester": "^1.0.6"
   },
   "files": [
