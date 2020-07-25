@@ -1,0 +1,13 @@
+@import "./variables";
+
+.s-list-item {
+  align-items: center;
+  display: flex;
+  flex: 1 1 100%;
+  letter-spacing: normal;
+  min-height: $list-item-min-height;
+  outline: none;
+  padding: $list-item-padding;
+  position: relative;
+  text-decoration: none;
+}

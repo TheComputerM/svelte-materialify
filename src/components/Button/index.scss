@@ -155,4 +155,11 @@
     position: relative;
     font-size: inherit;
   }
+
+  :global(a), :global(.s-icon) {
+    color: inherit;
+  }
+  :global(a) {
+    text-decoration: none;
+  }
 }

@@ -1,0 +1,16 @@
+@import "./variables";
+
+.s-list {
+  background: var(--theme-cards);
+  color: var(--theme-text-primary);
+  display: block;
+  padding: $list-padding;
+  position: static;
+  &:not(.outlined) {
+    @include elevation($list-elevation);
+  }
+  &.nav {
+    padding-left: $list-nav-padding-left;
+    padding-right: $list-nav-padding-right;
+  }
+}

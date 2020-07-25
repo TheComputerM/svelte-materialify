@@ -4,10 +4,10 @@
   export { classes as class };
 </script>
 
-<style lang="scss" src="./ListItem.scss">
+<style lang="scss" src="./ListGroup.scss">
 
 </style>
 
-<div role="listitem" class="s-list-item {classes}" {style}>
+<div role="listbox" class="s-list-group {classes}" {style}>
   <slot />
 </div>

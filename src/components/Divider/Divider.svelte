@@ -3,6 +3,7 @@
   export let inset = false;
   export let vertical = false;
   export let style = undefined;
+  export {classes as class};
 </script>
 
 <style lang="scss" src="./index.scss">
