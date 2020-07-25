@@ -7,7 +7,13 @@
   <title>Svelte Materialify</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<br>
+<h1 class="text-center">In Progress</h1>
+<br>
+<S.Divider></S.Divider>
+<br>
+<h2>App Bars</h2>
+<br>
 <S.AppBar>
   <div slot="left">
     <S.Button fab depressed>
@@ -23,8 +29,6 @@
   </div>
 </S.AppBar>
 <br />
-<S.Divider />
-<br />
 <S.AppBar prominent>
   <div slot="left">
     <S.Button fab depressed>
@@ -39,6 +43,7 @@
   </div>
 </S.AppBar>
 <br />
+<h2>Buttons</h2>
 <br />
 <S.Button>Button</S.Button>
 <S.Button class="primary-color">Button</S.Button>
@@ -52,7 +57,7 @@
 </S.Button>
 <br />
 <br />
-<S.Divider />
+<h2>Alerts</h2>
 <br />
 <S.Alert class="info-text" border="left" dismissible coloredBorder>
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, rerum
@@ -74,13 +79,16 @@
   quod temporibus vel deleniti, nesciunt nemo dolor, illum perspiciatis adipisci
   exercitationem.
 </S.Alert>
-
+<br>
+<h2>Avatars</h2>
+<br>
 <S.Avatar class="blue white-text text-h6">MS</S.Avatar>
 <S.Avatar class="indigo">
   <S.Icon class="white-text">account_circle</S.Icon>
 </S.Avatar>
 <S.Avatar tile class="grey lighten-2 elevation-6">HS</S.Avatar>
 <br />
+<h2>Progress</h2>
 <br />
 <S.Button
   on:click={() => {
@@ -111,9 +119,11 @@
 <br />
 <br />
 
+<h2>Breadcrumbs</h2>
 <S.Breadcrumbs
   items={[{ text: 'Item 1' }, { text: 'Item 2' }, { text: 'Item 3', disabled: true }]} />
 
+<h2>Cards</h2>
 <div class="d-flex justify-space-around">
   <S.Card style="width: 300px">
     <S.CardTitle>Card Title</S.CardTitle>

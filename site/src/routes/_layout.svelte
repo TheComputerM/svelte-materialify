@@ -2,11 +2,10 @@
   import Nav from "../components/Nav.svelte";
   import { MaterialApp } from "svelte-materialify/src/";
 
-  export let segment;
-  let theme = "light"
+  let theme = "light";
 </script>
 
 <MaterialApp theme={theme}>
-  <Nav {segment} bind:theme={theme} />
+  <Nav bind:theme={theme} />
   <slot />
 </MaterialApp>
