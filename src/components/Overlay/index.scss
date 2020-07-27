@@ -1,0 +1,33 @@
+.s-overlay {
+  align-items: center;
+  border-radius: inherit;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: auto;
+
+  &.absolute {
+    position: absolute;
+  }
+
+  .content {
+    position: relative;
+  }
+
+  .scrim {
+    border-radius: inherit;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: inherit;
+    width: 100%;
+    will-change: opacity;
+  }
+}

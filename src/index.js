@@ -19,3 +19,4 @@ export {
   CardTitle,
 } from "./components/Card";
 export { default as List, ListGroup, ListItem } from "./components/List";
+export { default as Overlay } from "./components/Overlay";

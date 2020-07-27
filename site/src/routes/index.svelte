@@ -1,19 +1,23 @@
 <script>
   import * as S from "svelte-materialify/src/";
+  import { fade } from "svelte/transition";
   let test = true;
+  function toggle() {
+    test = !test;
+  }
 </script>
 
 <svelte:head>
   <title>Svelte Materialify</title>
 </svelte:head>
 
-<br>
+<br />
 <h1 class="text-center">In Progress</h1>
-<br>
-<S.Divider></S.Divider>
-<br>
+<br />
+<S.Divider />
+<br />
 <h2>App Bars</h2>
-<br>
+<br />
 <S.AppBar>
   <div slot="left">
     <S.Button fab depressed>
@@ -79,9 +83,9 @@
   quod temporibus vel deleniti, nesciunt nemo dolor, illum perspiciatis adipisci
   exercitationem.
 </S.Alert>
-<br>
+<br />
 <h2>Avatars</h2>
-<br>
+<br />
 <S.Avatar class="blue white-text text-h6">MS</S.Avatar>
 <S.Avatar class="indigo">
   <S.Icon class="white-text">account_circle</S.Icon>
@@ -90,12 +94,7 @@
 <br />
 <h2>Progress</h2>
 <br />
-<S.Button
-  on:click={() => {
-    test = !test;
-  }}>
-  Click Me
-</S.Button>
+<S.Button on:click={toggle}>Click Me</S.Button>
 <S.ProgressLinear buffer="80" value="20" stream />
 <br />
 <S.ProgressLinear
@@ -137,7 +136,7 @@
     </S.CardActions>
   </S.Card>
   <S.Card style="width: 300px">
-    <S.ProgressLinear indeterminate></S.ProgressLinear>
+    <S.ProgressLinear indeterminate />
     <S.CardTitle>Card Title</S.CardTitle>
     <S.CardSubtitle>Card Subtitle</S.CardSubtitle>
     <S.CardText>
@@ -149,7 +148,7 @@
     </S.CardActions>
   </S.Card>
   <S.Card disabled style="width: 300px">
-    <S.ProgressLinear indeterminate></S.ProgressLinear>
+    <S.ProgressLinear indeterminate />
     <S.CardTitle>Card Title</S.CardTitle>
     <S.CardSubtitle>Card Subtitle</S.CardSubtitle>
     <S.CardText>
@@ -161,3 +160,17 @@
     </S.CardActions>
   </S.Card>
 </div>
+
+<br />
+<h2>Overlay</h2>
+<br />
+<S.Button on:click={toggle}>Toggle</S.Button>
+{#if !test}
+  <div transition:fade>
+    <S.Overlay>
+      <S.Button fab on:click={toggle}>
+        <S.Icon>close</S.Icon>
+      </S.Button>
+    </S.Overlay>
+  </div>
+{/if}
