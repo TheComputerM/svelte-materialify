@@ -7,6 +7,10 @@
   padding: $list-padding;
   padding-top: $list-subheader-padding-top;
   position: static;
+  &.outlined {
+    box-shadow: none;
+    border: 1px solid currentColor;
+  }
   &.nav {
     padding-left: $list-nav-padding-left;
     padding-right: $list-nav-padding-right;
