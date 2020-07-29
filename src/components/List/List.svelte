@@ -1,11 +1,27 @@
 <script>
   export let outlined = false;
   export let nav = false;
+  export let rounded = false;
   export let dense = false;
+  export let flat = false;
+  export let disabled = false;
 </script>
 
-<style lang="scss" src="./List.scss"></style>
+<style lang="scss" src="./List.scss">
 
-<div role="list" class="s-list" class:outlined class:nav class:dense>
-  <slot></slot>
+</style>
+
+<div
+  role="list"
+  class="s-list"
+  class:outlined
+  class:nav
+  class:rounded
+  class:dense
+  class:flat
+  class:disabled>
+  <div class="subheader">
+    <slot name="subheader" />
+  </div>
+  <slot />
 </div>

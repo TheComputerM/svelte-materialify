@@ -2,4 +2,9 @@
   flex: 0 1 auto;
   position: relative;
   max-width: 100%;
+  :global {
+    .s-list-item.active {
+      color: inherit;
+    }
+  }
 }

@@ -174,3 +174,60 @@
     </S.Overlay>
   </div>
 {/if}
+
+<br />
+<h2>List</h2>
+<br />
+<S.List>
+  <span slot="subheader">LIST ITEMS</span>
+  <S.ListGroup class="primary-text">
+    <S.ListItem active>
+      <div slot="left">
+        <S.Icon>cloud</S.Icon>
+      </div>
+      Item 1
+    </S.ListItem>
+    <S.ListItem ripple={{ active: false }}>
+      Item 2
+      <div slot="right">
+        <S.Avatar class="red">H</S.Avatar>
+      </div>
+    </S.ListItem>
+    <S.ListItem>
+      <div slot="left">
+        <S.Icon>home</S.Icon>
+      </div>
+      Item 3
+      <p slot="subtitle">Lorem ipsum dolor sit amet.</p>
+      <div slot="right">
+        <S.Button icon>
+          <S.Icon>star</S.Icon>
+        </S.Button>
+      </div>
+    </S.ListItem>
+  </S.ListGroup>
+</S.List>
+
+<S.List dense>
+  <span slot="subheader">LIST ITEMS</span>
+  <S.ListGroup class="primary-text">
+    <S.ListItem active>
+      Item 1
+    </S.ListItem>
+    <S.ListItem ripple={{ active: false }}>
+      Item 2
+    </S.ListItem>
+    <S.ListItem>
+      <div slot="left">
+        <S.Icon>home</S.Icon>
+      </div>
+      Item 3
+      <p slot="subtitle">Lorem ipsum dolor sit amet.</p>
+      <div slot="right">
+        <S.Button icon>
+          <S.Icon>star</S.Icon>
+        </S.Button>
+      </div>
+    </S.ListItem>
+  </S.ListGroup>
+</S.List>
