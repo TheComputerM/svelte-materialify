@@ -15,7 +15,7 @@
     padding-left: $list-nav-padding-left;
     padding-right: $list-nav-padding-right;
     :global {
-      .s-list-item {
+      .s-list-group .s-list-item {
         padding: $list-nav-item-padding;
         &::before {
           border-radius: $list-nav-border-radius;
@@ -26,7 +26,7 @@
   &.rounded {
     padding: 8px;
     :global {
-      .s-list-item {
+      .s-list-group .s-list-item {
         border-radius: 32px !important;
         &::before {
           border-radius: 32px !important;
@@ -37,13 +37,13 @@
   &.nav,
   &.rounded {
     :global {
-      .s-list-item:not(:last-child):not(:only-child) {
+      .s-list-group .s-list-item:not(:last-child):not(:only-child) {
         margin-bottom: $list-nav-rounded-item-margin-bottom;
       }
     }
     &.dense {
       :global {
-        .s-list-item:not(:last-child):not(:only-child) {
+        .s-list-group .s-list-item:not(:last-child):not(:only-child) {
           margin-bottom: $list-nav-rounded-dense-item-margin-bottom;
         }
       }
@@ -57,22 +57,26 @@
     }
   }
   &.dense {
-    .subheader {
-      font-size: $list-dense-subheader-font-size;
-      height: $list-dense-subheader-height;
-      padding: $list-dense-subheader-padding;
-    }
     :global {
-      .s-list-item {
-        min-height: $list-dense-min-height ;
-        .content {
-          padding: $list-dense-content-padding !important;
+      .s-subheader {
+        font-size: $list-dense-subheader-font-size;
+        height: $list-dense-subheader-height;
+        padding: $list-dense-subheader-padding;
+      }
+      .s-list-group .s-list-item {
+        min-height: $list-dense-min-height;
+        .s-icon {
+          margin-top: 8px;
+          margin-bottom: 8px;
         }
-        .title,
-        .subtitle {
-          font-size: $list-item-dense-title-font-size !important;
-          font-weight: $list-item-dense-title-font-weight;
-          line-height: $list-item-dense-title-line-height !important;
+        .content {
+          padding: $list-dense-content-padding;
+          .title,
+          .subtitle {
+            font-size: $list-item-dense-title-font-size;
+            font-weight: $list-item-dense-title-font-weight;
+            line-height: $list-item-dense-title-line-height;
+          }
         }
       }
     }
@@ -80,15 +84,5 @@
   &.disabled {
     pointer-events: none;
     color: var(--theme-text-disabled);
-  }
-
-  .subheader {
-    align-items: center;
-    display: flex;
-    height: 48px;
-    font-size: 0.875rem;
-    font-weight: 400;
-    padding: 0 16px;
-    color: var(--theme-text-secondary);
   }
 }

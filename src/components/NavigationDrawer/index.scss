@@ -1,0 +1,61 @@
+@import "./variables";
+
+.s-navigation-drawer {
+  background-color: var(--theme-navigation-drawer);
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  pointer-events: auto;
+  top: 0;
+  transition-duration: 0.2s;
+  transition-timing-function: map-get($transitions, "fast-out-slow-in");
+  will-change: transform;
+  transition-property: transform, visibility, width;
+
+  &.fixed {
+    position: fixed;
+    z-index: 6;
+  }
+
+  &.right {
+    left: auto;
+    right: 0;
+    &:after {
+      left: 0;
+      right: initial;
+    }
+    .border {
+      right: auto;
+      left: 0;
+    }
+  }
+  &.mini {
+    overflow: hidden;
+    :global {
+      .s-list-item {
+        > *:first-child {
+          margin-left: 0;
+          margin-right: 0;
+        }
+        > *:not(:first-child) {
+          display: none;
+        }
+      }
+    }
+  }
+  .content {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .border {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: $navigation-drawer-border-width;
+  }
+}

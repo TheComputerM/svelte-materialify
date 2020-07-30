@@ -18,6 +18,7 @@
     --theme-dividers: #{map-get($material, "dividers")};
     --theme-cards: #{map-get($material, "cards")};
     --theme-app-bar: #{map-get($material, "app-bar")};
+    --theme-navigation-drawer: #{map-get($material, "navigation-drawer")};
 
     background-color: var(--theme-surface);
     color: var(--theme-text-primary);

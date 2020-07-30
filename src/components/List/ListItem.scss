@@ -11,6 +11,17 @@
   position: relative;
   text-decoration: none;
 
+  &.link {
+    cursor: pointer;
+    user-select: none;
+    &:hover::before {
+      opacity: 0.04;
+    }
+    &:focus::before {
+      opacity: 0.24;
+    }
+  }
+
   &::before {
     background-color: currentColor;
     bottom: 0;

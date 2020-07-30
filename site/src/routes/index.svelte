@@ -179,7 +179,7 @@
 <h2>List</h2>
 <br />
 <S.List>
-  <span slot="subheader">LIST ITEMS</span>
+  <S.Subheader>LIST ITEMS</S.Subheader>
   <S.ListGroup class="primary-text">
     <S.ListItem active>
       <div slot="left">
@@ -209,7 +209,7 @@
 </S.List>
 
 <S.List dense>
-  <span slot="subheader">LIST ITEMS</span>
+  <S.Subheader>LIST ITEMS</S.Subheader>
   <S.ListGroup class="primary-text">
     <S.ListItem active>
       Item 1
@@ -231,3 +231,42 @@
     </S.ListItem>
   </S.ListGroup>
 </S.List>
+
+<br>
+<h2>Navigation Drawer</h2>
+<br>
+<S.Card>
+  <S.NavigationDrawer>
+    <div slot="prepend">
+      <S.ListItem ripple={{active: false}}>
+        <h6>Application</h6>
+        <p slot="subtitle">
+          Lorem, ipsum dolor.
+        </p>
+      </S.ListItem>
+      <S.Divider></S.Divider>
+    </div>
+    <S.List nav dense link>
+      <S.ListGroup>
+        <S.ListItem>
+          <div slot="left">
+            <S.Icon>home</S.Icon>
+          </div>
+          Item 1
+        </S.ListItem>
+        <S.ListItem>
+          <div slot="left">
+            <S.Icon>cloud</S.Icon>
+          </div>
+          Item 2
+        </S.ListItem>
+        <S.ListItem>
+          <div slot="left">
+            <S.Icon>cloud</S.Icon>
+          </div>
+          Item 3
+        </S.ListItem>
+      </S.ListGroup>
+    </S.List>
+  </S.NavigationDrawer>
+</S.Card>

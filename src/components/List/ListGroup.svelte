@@ -1,4 +1,7 @@
 <script>
+  import { setContext } from 'svelte';
+  setContext("partOfList", true);
+
   let classes = "";
   export let style = undefined;
   export { classes as class };
