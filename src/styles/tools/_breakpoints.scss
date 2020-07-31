@@ -2,10 +2,9 @@
 
 @mixin create_breakpoints($screens: ('sm', 'md', 'lg', 'xl')) {
   $_breakpoints: (
-    "xs": map-get($display-breakpoints, "xs-only"),
-    "sm": map-get($display-breakpoints, "sm-only"),
-    "md": map-get($display-breakpoints, "md-only"),
-    "lg": map-get($display-breakpoints, "lg-only"),
+    "sm": map-get($display-breakpoints, "sm-and-up"),
+    "md": map-get($display-breakpoints, "md-and-up"),
+    "lg": map-get($display-breakpoints, "lg-and-up"),
     "xl": map-get($display-breakpoints, "xl-only")
   );
   @each $screen_size in $screens {
@@ -16,3 +15,10 @@
     }
   }
 }
+
+/*
+Usage:
+@include create_breakpoints() using ($screen_size) {
+  .class-#{screen_size} {property: value}
+}
+*/

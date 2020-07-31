@@ -18,6 +18,7 @@ This is still in development. To contribute, please read [CONTRIBUTING.md](./CON
 - [x] Lists
 - [x] Overlay
 - [x] Subheader
+- [x] Grid
 - [ ] Badges
 - [ ] Banners
 - [ ] Bars

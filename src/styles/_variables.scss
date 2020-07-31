@@ -40,9 +40,13 @@ $headings: () !default;
 
 $grid-columns: 12 !default;
 $grid-gutter: $spacer * 6 !default;
+$form-grid-gutter: $spacer * 2 !default;
 $grid-gutters: () !default;
 $grid-breakpoints: () !default;
 $display-breakpoints: () !default;
+
+$container-max-widths: () !default;
+$container-padding-x: $grid-gutter / 2 !default;
 
 $transitions: () !default;
 
@@ -227,6 +231,15 @@ $display-breakpoints: map-deep-merge(
     "xl-only": "only screen and (min-width: #{map-get($grid-breakpoints,"xl")})",
   ),
   $display-breakpoints
+);
+
+$container-max-widths: map-deep-merge(
+  (
+    'md': map-get($grid-breakpoints, 'md') * 0.9375,
+    'lg': map-get($grid-breakpoints, 'lg') * 0.9375,
+    'xl': map-get($grid-breakpoints, 'xl') * 0.9375
+  ),
+  $container-max-widths
 );
 
 $transitions: map-deep-merge(

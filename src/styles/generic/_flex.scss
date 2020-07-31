@@ -1,4 +1,5 @@
 @use "../tools/breakpoints" as *;
+@use "../variables" as *;
 
 .flex-row {flex-direction: row;}
 .flex-row-reverse {flex-direction: row-reverse;}
@@ -85,15 +86,15 @@
 }
 
 .order-first {order: -1;}
-.order-last {order: 13;}
-@for $i from 0 through 12 {
+.order-last {order: $grid-columns + 1;}
+@for $i from 0 through $grid-columns {
   .order-#{$i} {order: $i;}
 }
 
 @include create_breakpoints() using ($screen_size) {
   .order-#{$screen_size}-first {order: -1;}
-  .order-#{$screen_size}-last {order: 13;}
-  @for $i from 0 through 12 {
+  .order-#{$screen_size}-last {order: $grid-columns + 1;}
+  @for $i from 0 through $grid-columns {
     .order-#{$screen_size}-#{$i} {order: $i;}
   }
 }

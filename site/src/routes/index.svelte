@@ -211,12 +211,8 @@
 <S.List dense>
   <S.Subheader>LIST ITEMS</S.Subheader>
   <S.ListGroup class="primary-text">
-    <S.ListItem active>
-      Item 1
-    </S.ListItem>
-    <S.ListItem ripple={{ active: false }}>
-      Item 2
-    </S.ListItem>
+    <S.ListItem active>Item 1</S.ListItem>
+    <S.ListItem ripple={{ active: false }}>Item 2</S.ListItem>
     <S.ListItem>
       <div slot="left">
         <S.Icon>home</S.Icon>
@@ -232,19 +228,17 @@
   </S.ListGroup>
 </S.List>
 
-<br>
+<br />
 <h2>Navigation Drawer</h2>
-<br>
+<br />
 <S.Card>
   <S.NavigationDrawer>
     <div slot="prepend">
       <S.ListItem>
         <h6>Application</h6>
-        <p slot="subtitle">
-          Lorem, ipsum dolor.
-        </p>
+        <p slot="subtitle">Lorem, ipsum dolor.</p>
       </S.ListItem>
-      <S.Divider></S.Divider>
+      <S.Divider />
     </div>
     <S.List nav>
       <S.ListGroup>
@@ -270,3 +264,14 @@
     </S.List>
   </S.NavigationDrawer>
 </S.Card>
+
+<br />
+<h2>Grid</h2>
+<br />
+<S.Container>
+  <S.Row>
+    <S.Col class="red lighten-4" sm="6" md="4" cols="12">Column 1</S.Col>
+    <S.Col class="green lighten-4" sm="6" md="4" cols="12">Column 2</S.Col>
+    <S.Col class="blue lighten-4" sm="6" md="4" cols="12">Column 3</S.Col>
+  </S.Row>
+</S.Container>

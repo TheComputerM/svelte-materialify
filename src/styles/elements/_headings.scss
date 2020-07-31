@@ -1,24 +1,28 @@
 @use "../variables" as *;
 
-@each $heading in 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' {
+@each $heading in "h1", "h2", "h3", "h4", "h5", "h6" {
   $value_map: map-get($headings, $heading);
   #{$heading} {
-    font-size: map-get($value_map, 'size');
-    font-weight: map-get($value_map, 'weight');
-    line-height: map-get($value_map, 'line-height');
-    letter-spacing: map-get($value_map, 'letter-spacing');
-    font-family: map-get($value_map, 'font-family');
-    text-transform: map-get($value_map, 'text-transform');
+    font-size: map-get($value_map, "size");
+    font-weight: map-get($value_map, "weight");
+    line-height: map-get($value_map, "line-height");
+    letter-spacing: map-get($value_map, "letter-spacing");
+    font-family: map-get($value_map, "font-family");
+    @if (map-get($value_map, "text-transform")) {
+      text-transform: map-get($value_map, "text-transform");
+    }
   }
 }
 
 @each $heading, $value_map in $headings {
   .text-#{$heading} {
-    font-size: map-get($value_map, 'size');
-    font-weight: map-get($value_map, 'weight');
-    line-height: map-get($value_map, 'line-height');
-    letter-spacing: map-get($value_map, 'letter-spacing');
-    font-family: map-get($value_map, 'font-family');
-    text-transform: map-get($value_map, 'text-transform');
+    font-size: map-get($value_map, "size");
+    font-weight: map-get($value_map, "weight");
+    line-height: map-get($value_map, "line-height");
+    letter-spacing: map-get($value_map, "letter-spacing");
+    font-family: map-get($value_map, "font-family");
+    @if (map-get($value_map, "text-transform")) {
+      text-transform: map-get($value_map, "text-transform");
+    }
   }
 }
