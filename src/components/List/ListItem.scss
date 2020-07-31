@@ -18,6 +18,10 @@
       opacity: 0.04;
     }
   }
+  &.disabled {
+    pointer-events: none;
+    color: var(--theme-text-disabled);
+  }
 
   &::before {
     background-color: currentColor;

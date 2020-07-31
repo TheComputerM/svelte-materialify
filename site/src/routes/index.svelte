@@ -1,6 +1,7 @@
 <script>
   import * as S from "svelte-materialify/src/";
   import { fade } from "svelte/transition";
+import ListGroup from "../../../src/components/List/ListGroup.svelte";
   let test = true;
   function toggle() {
     test = !test;
@@ -10,7 +11,6 @@
 <svelte:head>
   <title>Svelte Materialify</title>
 </svelte:head>
-
 <br />
 <h1 class="text-center">In Progress</h1>
 <br />
@@ -225,6 +225,15 @@
         </S.Button>
       </div>
     </S.ListItem>
+  </S.ListGroup>
+</S.List>
+
+<S.List>
+  <S.ListGroup>
+    <S.ListItem>Item 1</S.ListItem>
+    <S.ListGroup>
+      <S.ListItem>Item 2</S.ListItem>
+    </S.ListGroup>
   </S.ListGroup>
 </S.List>
 

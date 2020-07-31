@@ -1,10 +1,19 @@
+@import "./variables";
+
 .s-list-group {
   flex: 0 1 auto;
   position: relative;
   max-width: 100%;
+  &.disabled {
+    pointer-events: none;
+    color: var(--theme-text-disabled);
+  }
   :global {
     .s-list-item.active {
       color: inherit;
+    }
+    .s-list-group {
+      margin-left: $list-group-sub-group-margin;
     }
   }
 }

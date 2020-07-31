@@ -1,8 +1,9 @@
 <script>
-  import { setContext } from 'svelte';
+  import { setContext } from "svelte";
   setContext("partOfList", true);
 
   let classes = "";
+  export let disabled = false;
   export let style = undefined;
   export { classes as class };
 </script>
@@ -11,6 +12,6 @@
 
 </style>
 
-<div role="listbox" class="s-list-group {classes}" {style}>
+<div role="listbox" class="s-list-group {classes}" class:disabled {style}>
   <slot />
 </div>

@@ -81,8 +81,4 @@
       }
     }
   }
-  &.disabled {
-    pointer-events: none;
-    color: var(--theme-text-disabled);
-  }
 }
