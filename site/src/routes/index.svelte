@@ -238,7 +238,7 @@
 <S.Card>
   <S.NavigationDrawer>
     <div slot="prepend">
-      <S.ListItem ripple={{active: false}}>
+      <S.ListItem>
         <h6>Application</h6>
         <p slot="subtitle">
           Lorem, ipsum dolor.
@@ -246,7 +246,7 @@
       </S.ListItem>
       <S.Divider></S.Divider>
     </div>
-    <S.List nav dense link>
+    <S.List nav>
       <S.ListGroup>
         <S.ListItem>
           <div slot="left">

@@ -14,11 +14,8 @@
   &.link {
     cursor: pointer;
     user-select: none;
-    &:hover::before {
+    &:not(.active):hover::before {
       opacity: 0.04;
-    }
-    &:focus::before {
-      opacity: 0.24;
     }
   }
 
