@@ -35,7 +35,7 @@
     "rollup": "^2.22.0",
     "rollup-plugin-svelte": "^5.2.3",
     "rollup-plugin-terser": "^6.1.0",
-    "simple-git": "^2.13.2",
+    "simple-git": "^2.15.0",
     "svelte-jester": "^1.0.6"
   },
   "files": [
@@ -45,7 +45,7 @@
   "dependencies": {
     "sass": "^1.26.10",
     "svelte": "^3.24.0",
-    "svelte-preprocess": "4.0.6"
+    "svelte-preprocess": "4.0.8"
   },
   "author": "TheComputerM",
   "license": "MIT"
