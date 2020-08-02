@@ -97,8 +97,7 @@
   }
 
   &.outlined {
-    border-width: 1px;
-    border-style: solid;
+    border: 1px solid currentColor;
     background-color: transparent !important;
   }
 

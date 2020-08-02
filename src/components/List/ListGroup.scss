@@ -8,12 +8,14 @@
     pointer-events: none;
     color: var(--theme-text-disabled);
   }
+  &.offset {
+    :global(.s-list-item) {
+      padding-left: var(--offset) !important;
+    }
+  }
   :global {
     .s-list-item.active {
       color: inherit;
-    }
-    .s-list-group {
-      margin-left: $list-group-sub-group-margin;
     }
   }
 }

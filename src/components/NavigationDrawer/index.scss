@@ -32,6 +32,9 @@
       left: 0;
     }
   }
+  &.clipped {
+    z-index: 4;
+  }
   &.mini {
     overflow: hidden;
     :global {
@@ -57,5 +60,6 @@
     top: 0;
     height: 100%;
     width: $navigation-drawer-border-width;
+    background-color: var(--theme-dividers);
   }
 }

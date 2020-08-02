@@ -46,7 +46,7 @@
         <slot />
       </div>
       {#if dismissible}
-        <Button icon ripple={{ appendTo: 'parent' }} on:click={dismiss}>
+        <Button icon on:click={dismiss}>
           <Icon>{closeIcon}</Icon>
         </Button>
       {/if}

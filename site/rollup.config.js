@@ -6,6 +6,7 @@ import babel from "@rollup/plugin-babel";
 import { terser } from "rollup-plugin-terser";
 import config from "sapper/config/rollup.js";
 import sveltePreprocess from "svelte-preprocess";
+import { mdsvex } from "mdsvex";
 import pkg from "./package.json";
 
 const mode = process.env.NODE_ENV;
@@ -17,14 +18,21 @@ const onwarn = (warning, onwarn) =>
     /[/\\]@sapper[/\\]/.test(warning.message)) ||
   onwarn(warning);
 
-const preprocess = sveltePreprocess({
-  scss: {
-    includePaths: ["theme"],
-  },
-  postcss: {
-    plugins: [require("autoprefixer")],
-  },
-});
+const preprocess = [
+  sveltePreprocess({
+    scss: {
+      includePaths: ["theme"],
+    },
+    postcss: {
+      plugins: [require("autoprefixer")],
+    },
+  }),
+  mdsvex({
+    layout: {
+      component: "./src/routes/components/_layout.svelte"
+    }
+  }),
+];
 
 export default {
   client: {
@@ -39,7 +47,8 @@ export default {
         dev,
         hydratable: true,
         emitCss: true,
-        preprocess,
+        extensions: [".svelte", ".svx"],
+        preprocess: preprocess,
       }),
       resolve({
         browser: true,
@@ -92,7 +101,8 @@ export default {
       svelte({
         generate: "ssr",
         dev,
-        preprocess,
+        extensions: [".svelte", ".svx"],
+        preprocess: preprocess,
       }),
       resolve({
         dedupe: ["svelte"],

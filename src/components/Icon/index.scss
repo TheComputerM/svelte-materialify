@@ -1,31 +1,17 @@
-/* fallback */
-@font-face {
-  font-family: "Material Icons";
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/materialicons/v53/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2)
-    format("woff2");
-}
-
 .s-icon {
-  font-family: "Material Icons";
-  font-weight: normal;
-  font-style: normal;
-  font-size: var(--size, inherit);
   color: var(--theme-icons-active);
   line-height: 1;
   letter-spacing: normal;
   text-transform: none;
   display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
   font-feature-settings: "liga";
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  text-indent: 0px;
+  vertical-align: middle;
+  user-select: none;
+  direction: ltr;
   &.inactive {
     color: var(--theme-icons-inactive);
   }
