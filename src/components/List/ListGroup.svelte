@@ -2,9 +2,10 @@
   import { setContext } from "svelte";
   setContext("partOfList", true);
 
-  let classes = "";
+  let classes = "primary-text";
+  export let offset = false;
   export let disabled = false;
-  export let style = undefined;
+  export let style = "undefined";
   export { classes as class };
 </script>
 
@@ -12,6 +13,11 @@
 
 </style>
 
-<div role="listbox" class="s-list-group {classes}" class:disabled {style}>
+<div
+  role="listbox"
+  class="s-list-group {classes}"
+  class:offset
+  class:disabled
+  style="--offset:{offset};{style}">
   <slot />
 </div>
