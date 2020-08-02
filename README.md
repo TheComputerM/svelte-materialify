@@ -37,5 +37,4 @@ Website is located at [https://svelte-materialify.netlify.app/](https://svelte-m
 ## Thanks To:
 - __[Vuetify](https://vuetifyjs.com/)__
 - __[Material Design](https://material.io/components/)__
-- __[Ripplet.js](https://github.com/luncheon/ripplet.js)__
 - __[Jump.js](https://github.com/callmecavs/jump.js)__
