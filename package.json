@@ -18,21 +18,21 @@
     "deploy": "npm run site:export && node deploy.js"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.5",
-    "@babel/preset-env": "^7.10.4",
+    "@babel/core": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
     "@rollup/plugin-commonjs": "^13.0.2",
     "@rollup/plugin-node-resolve": "^8.4.0",
-    "@testing-library/jest-dom": "^5.11.1",
+    "@testing-library/jest-dom": "^5.11.2",
     "@testing-library/svelte": "^3.0.0",
-    "autoprefixer": "^9.8.5",
-    "babel-jest": "^26.1.0",
+    "autoprefixer": "^9.8.6",
+    "babel-jest": "^26.2.2",
     "concurrently": "^5.2.0",
     "del": "^5.1.0",
     "husky": "^4.2.5",
-    "jest": "^26.1.0",
+    "jest": "^26.2.2",
     "ncp": "^2.0.0",
     "postcss": "^7.0.32",
-    "rollup": "^2.22.0",
+    "rollup": "^2.23.0",
     "rollup-plugin-svelte": "^5.2.3",
     "rollup-plugin-terser": "^6.1.0",
     "simple-git": "^2.15.0",
@@ -43,6 +43,7 @@
     "dist"
   ],
   "dependencies": {
+    "material-ripple-effect": "^1.0.3",
     "sass": "^1.26.10",
     "svelte": "^3.24.0",
     "svelte-preprocess": "4.0.8"
