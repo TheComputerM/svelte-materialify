@@ -37,3 +37,11 @@
     }
   }
 }
+
+:root {
+  --theme-bp-xs: #{map-get($grid-breakpoints, "xs")};
+  --theme-bp-sm: #{map-get($grid-breakpoints, "sm")};
+  --theme-bp-md: #{map-get($grid-breakpoints, "md")};
+  --theme-bp-lg: #{map-get($grid-breakpoints, "lg")};
+  --theme-bp-xl: #{map-get($grid-breakpoints, "xl")};
+}
