@@ -1,5 +1,4 @@
 <script>
-  export let segment;
   export let theme;
   export let navigation;
 
@@ -9,23 +8,40 @@
     Button,
     NavigationDrawer,
     List,
-    ListGroup,
-    ListItem,
     Divider,
     Overlay,
   } from "svelte-materialify/src/";
 
-  let components = ["Alerts", "Avatars", "Buttons"];
+  import LeftNavigationDrawer from "./LeftNavigationDrawer.svelte";
+  import components from "../helpers/components";
+
   let sidenav = false;
 
   function toggleTheme() {
     if (theme === "light") theme = "dark";
     else theme = "light";
+
+    window.localStorage.setItem("theme", theme);
   }
 
-  function currentPage(link) {
-    return segment === link ? true : false
-  }
+  let links = [
+    { text: "Getting Started", href: "/", icon: "speedometer" },
+    {
+      text: "Components",
+      href: "/components/",
+      icon: "view-dashboard",
+      items: (() => {
+        let out = [];
+        for (let component of components) {
+          out.push({
+            text: component,
+            href: "/components/" + component.replace(/ /g, "-").toLowerCase(),
+          });
+        }
+        return out;
+      })(),
+    },
+  ];
 </script>
 
 <style>
@@ -37,12 +53,7 @@
 <AppBar fixed style="width:100%">
   <div slot="left">
     {#if !navigation}
-      <Button
-        fab
-        depressed
-        on:click={() =>
-          sidenav = !sidenav
-        }>
+      <Button fab depressed on:click={() => (sidenav = !sidenav)}>
         <Icon class="mdi mdi-menu" />
       </Button>
     {/if}
@@ -76,30 +87,15 @@
   </div>
   <br />
   <List nav dense>
-    <ListGroup>
-      <ListItem active={currentPage(undefined)}>
-        <div slot="left">
-          <Icon class="mdi mdi-speedometer" />
-        </div>
-        Getting Started
-      </ListItem>
-      <ListItem active={currentPage('components')}>
-        <div slot="left">
-          <Icon class="mdi mdi-view-dashboard" />
-        </div>
-        Components
-        <div slot="right">
-          <Icon class="mdi mdi-chevron-down" />
-        </div>
-      </ListItem>
-      <ListGroup offset="64px">
-        {#each components as component}
-          <ListItem>{component}</ListItem>
-        {/each}
-      </ListGroup>
-    </ListGroup>
+    <LeftNavigationDrawer items={links} />
   </List>
 </NavigationDrawer>
+{#if sidenav}
+  <Overlay
+    zIndex="3"
+    on:click={() => (sidenav = false)}
+    fadeOptions={{ duration: 250 }} />
+{/if}
 
 {#if navigation}
   <NavigationDrawer style="height:100vh;" right fixed clipped>

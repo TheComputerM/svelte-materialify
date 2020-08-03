@@ -1,9 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "dev": "sapper dev",
-    "build": "sapper build --legacy",
-    "export": "sapper export --legacy",
+    "dev": "sapper dev --ext \".svelte .svx\"",
+    "build": "sapper build --legacy --ext \".svelte .svx\"",
+    "export": "sapper export --legacy --ext \".svelte .svx\"",
     "start": "node __sapper__/build"
   },
   "dependencies": {

@@ -3,26 +3,28 @@
   import SiteNavigation from "../components/SiteNavigation.svelte";
   import { MaterialApp, Container } from "svelte-materialify/src/";
 
-  export let segment;
+  export const segment = '';
 
   let breakpoints = {};
-  onMount(async () => {
-    breakpoints = await import("svelte-materialify/src/utils/breakpoints");
-    checkMobile();
-  });
-
   let theme = "light";
   let navigation = true;
 
-  async function checkMobile() {
-    navigation = !window.matchMedia(breakpoints.default["md-and-down"]).matches;
+  function checkMobile() {
+    navigation = !window.matchMedia(breakpoints["md-and-down"]).matches;
   }
+
+  onMount(async () => {
+    theme = window.localStorage.getItem('theme') || "light";
+    breakpoints = await import("svelte-materialify/src/utils/breakpoints");
+    breakpoints = breakpoints.default;
+    checkMobile();
+  });
 </script>
 
 <svelte:window on:resize={checkMobile}></svelte:window>
 
 <MaterialApp {theme}>
-  <SiteNavigation bind:theme {segment} {navigation} />
+  <SiteNavigation bind:theme {navigation} />
   <main style={navigation ? "padding:56px 256px 0 256px" : "padding-top:56px"}>
     <Container>
       <slot />

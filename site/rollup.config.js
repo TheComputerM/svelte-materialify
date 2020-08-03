@@ -19,6 +19,12 @@ const onwarn = (warning, onwarn) =>
   onwarn(warning);
 
 const preprocess = [
+  mdsvex({
+    extension: '.svx',
+    layout: {
+      component: "./src/routes/components/_ComponentLayout.svelte"
+    }
+  }),
   sveltePreprocess({
     scss: {
       includePaths: ["theme"],
@@ -26,13 +32,9 @@ const preprocess = [
     postcss: {
       plugins: [require("autoprefixer")],
     },
-  }),
-  mdsvex({
-    layout: {
-      component: "./src/routes/components/_layout.svelte"
-    }
-  }),
+  })
 ];
+const extensions = [".svelte", ".svx"];
 
 export default {
   client: {
@@ -47,8 +49,8 @@ export default {
         dev,
         hydratable: true,
         emitCss: true,
-        extensions: [".svelte", ".svx"],
-        preprocess: preprocess,
+        extensions,
+        preprocess,
       }),
       resolve({
         browser: true,
@@ -101,8 +103,8 @@ export default {
       svelte({
         generate: "ssr",
         dev,
-        extensions: [".svelte", ".svx"],
-        preprocess: preprocess,
+        extensions,
+        preprocess,
       }),
       resolve({
         dedupe: ["svelte"],
