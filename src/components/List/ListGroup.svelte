@@ -5,7 +5,7 @@
   let classes = "primary-text";
   export let offset = false;
   export let disabled = false;
-  export let style = "undefined";
+  export let style = "";
   export { classes as class };
 </script>
 

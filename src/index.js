@@ -19,6 +19,7 @@ export {
   CardTitle,
 } from "./components/Card";
 export { default as List, ListGroup, ListItem } from "./components/List";
+export {default as VirtualList} from "./components/VirtualList";
 export { default as Overlay } from "./components/Overlay";
 export { default as NavigationDrawer } from "./components/NavigationDrawer";
 export { default as Subheader } from "./components/Subheader";
