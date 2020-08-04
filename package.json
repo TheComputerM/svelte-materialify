@@ -5,16 +5,18 @@
   "module": "dist/index.mjs",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "concurrently -p \"[{name}]\" -n build,css,dev \"npm:watch:build\" \"npm:watch:css\" \"npm:site:dev\"",
-    "start": "concurrently \"npm:build\" \"npm:css\" \"npm:site:export\"",
+    "dev": "concurrently \"npm:watch:*\" -k",
+    "start": "concurrently \"npm:build\" \"npm:css\" \"npm:copy-css\" \"npm:site:export\" -k",
     "build": "rollup -c",
     "watch:build": "rollup -c -w",
     "css": "sass src/styles/_global.scss:dist/global.css -I theme -s compressed --no-source-map",
-    "watch:css": "sass src/styles/_global.scss:dist/global.css -I theme -s compressed --no-source-map --watch",
+    "watch:css": "npm run css -- --watch",
+    "copy-css": "copy-and-watch dist/global.css site/static",
+    "watch:copy-css": "npm run copy-css -- --watch",
     "test": "jest",
     "site:dev": "cd site && npm run dev",
     "site:build": "cd site && npm run build",
-    "site:export": "cd site && npm run export",
+    "site:export": "npm run copy-css && cd site && npm run export",
     "deploy": "npm run site:export && node deploy.js"
   },
   "devDependencies": {
@@ -27,6 +29,7 @@
     "autoprefixer": "^9.8.6",
     "babel-jest": "^26.2.2",
     "concurrently": "^5.2.0",
+    "copy-and-watch": "^0.1.5",
     "del": "^5.1.0",
     "husky": "^4.2.5",
     "jest": "^26.2.2",
@@ -49,5 +52,23 @@
     "svelte-preprocess": "4.0.8"
   },
   "author": "TheComputerM",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/TheComputerM/svelte-materialify",
+    "type": "git"
+  },
+  "keywords": [
+    "svelte",
+    "sveltejs",
+    "svelte-components",
+    "material-design",
+    "material",
+    "material-theme",
+    "material-components",
+    "component-library",
+    "svelte-material",
+    "ui",
+    "ui-components",
+    "ui-kit"
+  ]
 }

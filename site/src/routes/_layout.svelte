@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import SiteNavigation from "../components/SiteNavigation.svelte";
-  import { MaterialApp, Container } from "svelte-materialify/src/";
+  import { Container } from "svelte-materialify/src/";
 
   export const segment = '';
 
@@ -23,11 +23,11 @@
 
 <svelte:window on:resize={checkMobile}></svelte:window>
 
-<MaterialApp {theme}>
+<div class="s-app theme--{theme}">
   <SiteNavigation bind:theme {navigation} />
   <main style={navigation ? "padding:56px 256px 0 256px" : "padding-top:56px"}>
     <Container>
       <slot />
     </Container>
   </main>
-</MaterialApp>
+</div>
