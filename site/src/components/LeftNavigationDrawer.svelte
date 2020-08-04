@@ -10,8 +10,8 @@
 
   let active;
   const { page } = stores();
-  let childListHidden = true;
-  let childListToggle = () => childListHidden = !childListHidden
+  let isChildListHidden = true;
+  let toggleChildList = () => isChildListHidden = !isChildListHidden
 
   page.subscribe((value) => (active = value.path.replace(/\//g, "")));
   $: isItemActive = (href = "") => {
@@ -34,7 +34,7 @@
     <ListGroup {offset}>
       {#each items as item}
         {#if item.items}
-          <ListItem on:click={childListToggle}>
+          <ListItem on:click={toggleChildList}>
             <div slot="left">
               {#if item.icon}
                 <Icon class="mdi mdi-{item.icon}" />
@@ -44,14 +44,14 @@
             <div slot="right">
               <Icon
                 class="mdi mdi-chevron-down"
-                style={childListHidden ? 'transform: rotateZ(180deg)' : ''} />
+                style={isChildListHidden ? 'transform: rotateZ(180deg)' : ''} />
             </div>
           </ListItem>
 
           <svelte:self
             items={item.items}
             depth={depth + 1}
-            bind:hidden={childListHidden}
+            bind:hidden={isChildListHidden}
             offset={`${((depth + 1) / 2) * 64}px`} />
         {:else}
           <a href={item.href}>

@@ -13,7 +13,7 @@
   } from "svelte-materialify/src/";
 
   import LeftNavigationDrawer from "./LeftNavigationDrawer.svelte";
-  import components from "../helpers/components";
+  import components from "../helpers/component-routes";
 
   let sidenav = false;
 
