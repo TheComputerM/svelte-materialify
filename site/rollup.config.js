@@ -20,10 +20,10 @@ const onwarn = (warning, onwarn) =>
 
 const preprocess = [
   mdsvex({
-    extension: '.svx',
+    extension: ".svx",
     layout: {
-      component: "./src/routes/components/_ComponentLayout.svelte"
-    }
+      component: "./src/helpers/ComponentLayout.svelte",
+    },
   }),
   sveltePreprocess({
     scss: {
@@ -32,7 +32,7 @@ const preprocess = [
     postcss: {
       plugins: [require("autoprefixer")],
     },
-  })
+  }),
 ];
 const extensions = [".svelte", ".svx"];
 
@@ -112,10 +112,8 @@ export default {
       commonjs(),
     ],
     external: Object.keys(pkg.dependencies).concat(
-      require("module").builtinModules ||
-        Object.keys(process.binding("natives"))
+      require("module").builtinModules
     ),
-
     preserveEntrySignatures: "strict",
     onwarn,
   },

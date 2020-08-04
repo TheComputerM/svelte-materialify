@@ -9,7 +9,7 @@
   "dependencies": {
     "compression": "^1.7.1",
     "polka": "next",
-    "sirv": "^0.4.0",
+    "sirv": "^1.0.0",
     "svelte-materialify": "file:../"
   },
   "devDependencies": {
@@ -24,7 +24,6 @@
     "@rollup/plugin-replace": "^2.2.0",
     "autoprefixer": "^9.8.6",
     "mdsvex": "^0.8.2",
-    "npm-run-all": "^4.1.5",
     "postcss": "^7.0.32",
     "rollup": "^2.23.0",
     "rollup-plugin-svelte": "^5.0.1",

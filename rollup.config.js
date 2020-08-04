@@ -1,6 +1,6 @@
 import svelte from "rollup-plugin-svelte";
 import resolve from "@rollup/plugin-node-resolve";
-import commonjs from '@rollup/plugin-commonjs';
+import commonjs from "@rollup/plugin-commonjs";
 import { terser } from "rollup-plugin-terser";
 import sveltePreprocess from "svelte-preprocess";
 import pkg from "./package.json";
@@ -31,5 +31,5 @@ export default {
       plugins: [terser()],
     },
   ],
-  plugins: [svelte({preprocess}), resolve(), commonjs()],
+  plugins: [svelte({ preprocess }), resolve(), commonjs()],
 };
