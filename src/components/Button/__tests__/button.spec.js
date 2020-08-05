@@ -1,26 +1,13 @@
 // NOTE: original code from https://testing-library.com/docs/svelte-testing-library/example
 // NOTE: jest-dom adds handy assertions to Jest and it is recommended, but not required.
 
-import { render, fireEvent } from '@testing-library/svelte'
+import { render } from '@testing-library/svelte';
 
-import {Button} from '../src/index'
+import Button from './button.svelte';
 
-describe('Component', () => {
-  it('shows proper heading when rendered', () => {
-    const { getByText } = render(Button, { name: 'World' })
-
-    expect(getByText('Hello World!')).toBeInTheDocument()
-  });
-
-  // Note: This is as an async test as we are using `fireEvent`
-  it('changes button text on click', async () => {
-    const { getByText } = render(Button, { name: 'World' })
-    const button = getByText('Button')
-
-    // Using await when firing events is unique to the svelte testing library because
-    // we have to wait for the next `tick` so that Svelte flushes all pending state changes.
-    await fireEvent.click(button)
-
-    expect(button).toHaveTextContent('Button Clicked')
+describe('Button', () => {
+  it('exists in document', () => {
+    const { getByText } = render(Button, { text: 'Hello World' });
+    expect(getByText('Hello World')).toBeInTheDocument();
   });
 });
