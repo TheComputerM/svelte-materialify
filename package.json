@@ -84,11 +84,13 @@
     "src",
     "dist"
   ],
-  "dependencies": {
-    "material-ripple-effect": "^1.0.3",
+  "peerDependencies": {
     "sass": "^1.26.10",
     "svelte": "^3.24.0",
     "svelte-preprocess": "4.0.8"
+  },
+  "dependencies": {
+    "material-ripple-effect": "^1.0.3"
   },
   "author": "TheComputerM",
   "license": "MIT",
