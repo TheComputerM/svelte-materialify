@@ -1,5 +1,30 @@
 # Svelte Materialify
 
+
+<p align="center">
+  <a href="https://app.netlify.com/sites/svelte-materialify/deploys">
+  <img src="https://api.netlify.com/api/v1/badges/9f8add51-6a76-445d-b378-1dc3f4f9539f/deploy-status" alt="Website">
+  </a>
+  <a href="https://github.com/thecomputerm/svelte-materialify/actions?query=workflow%3ACI">
+    <img src="https://github.com/thecomputerm/svelte-materialify/workflows/CI/badge.svg" alt="CI badge">
+  </a>
+  <!-- One Day -->
+  <!-- <a href="https://www.npmjs.com/package/svelte-materialify">
+    <img src="https://img.shields.io/npm/dt/svelte-materialify.svg" alt="Downloads">
+  </a>
+  <a href="https://www.npmjs.com/package/svelte-materialify">
+    <img src="https://img.shields.io/npm/dm/svelte-materialify.svg" alt="Downloads">
+  </a>
+  <br> -->
+  <a href="https://github.com/thecomputerm/svelte-materialify/blob/master/LICENSE.md">
+    <img src="https://img.shields.io/npm/l/svelte-materialify.svg" alt="License">
+  </a>
+  <br>
+  <a href="https://www.npmjs.com/package/svelte-materialify">
+    <img src="https://img.shields.io/npm/v/svelte-materialify.svg" alt="Version">
+  </a>
+</p>
+
 A better material design framework for Svelte. _(much like [Vuetify](https://vuetifyjs.com/))_. With full support for light and dark themes and customisability.
 
 This is still in development. To contribute, please read [CONTRIBUTING.md](./CONTRIBUTING.md) and open a PR.

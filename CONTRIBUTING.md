@@ -1,15 +1,22 @@
-# This is still in development and does not have proper documentation
+# Contributing
 
-We use SCSS preprocessor and BEM-CSS naming style.
+## Commit Convention
+```
+type(category): description
+```
 
-To create a component you must:
-- Add a folder named `<your-component>` to `src/components`
-- Make sure that there are the following files:
-  - `<your-component>.svelte`
-  - `index.js`
-  - `_index.scss`
-  - `_variables.scss`
-  `index.js` exports your component, `_variables.scss` contains the variables you need to style the component and `_index.scss` contains the component styles.
-- Make a PR.
+Where `type` is one of the following
+- `chore`: updating rollup configs; no production code change
+- `docs`: changes to the documentation/website
+- `feat`: new feature for the user, not a new feature for build script
+- `fix`: bug fix for the user, not a fix to a build script
+- `refactor`: refactoring production code, eg. renaming a variable
+- `style`: changing/formatting styles in scss or svelte files
+- `test`: adding missing tests, refactoring tests; no production code change
+- `other`: other
 
-If you get stuck, you can refer to the button component.
+Where `category` is one of the following
+- `ci`
+- `site`
+- `${component_name}`
+- `${nothing}`
