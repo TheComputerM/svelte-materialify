@@ -1,0 +1,12 @@
+workspaceLocation: "."
+tasks:
+  - init: npm install && cd site && npm install
+    command: npm run site:dev
+
+ports:
+  - port: 3000
+    onOpen: open-preview
+
+vscode:
+  extensions:
+    - svelte.svelte-vscode@101.8.0:bqS+9pqxtG4yfb1Fq21D0w==
