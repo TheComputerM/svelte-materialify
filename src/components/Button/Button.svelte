@@ -27,8 +27,7 @@
 </style>
 
 <button
-  class="s-btn size-{size}
-  {classes}"
+  class="s-btn size-{size} {classes}"
   class:fab
   class:icon
   class:block

@@ -1,6 +1,7 @@
 {
   "name": "svelte-materialify",
   "version": "0.0.1",
+  "description": "A material design framework/component library for Svelte, with full support for light and dark themes and customisability.",
   "svelte": "src/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
@@ -16,8 +17,8 @@
     "test": "jest",
     "lint:css": "stylelint src/**/*.{scss,svelte} --syntax scss",
     "lint:css:fix": "stylelint src/**/*.scss --syntax scss --fix",
-    "lint:js": "eslint src/ --ext .svelte,.js",
-    "lint:js:fix": "eslint src/ --ext .svelte,.js --fix",
+    "lint:js": "eslint src __tests__ --ext .svelte,.js",
+    "lint:js:fix": "eslint src __tests__ --ext .svelte,.js --fix",
     "check": "svelte-check --workspace src/components",
     "site:dev": "cd site && npm run dev",
     "site:build": "cd site && npm run build",
@@ -72,11 +73,14 @@
     "rollup": "^2.23.0",
     "rollup-plugin-svelte": "^5.2.3",
     "rollup-plugin-terser": "^6.1.0",
+    "sass": "^1.26.10",
     "stylelint": "^13.6.1",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.18.0",
     "svelte-check": "^1.0.7",
-    "svelte-jester": "^1.0.6"
+    "svelte-htm": "^1.1.1",
+    "svelte-jester": "^1.0.6",
+    "svelte-preprocess": "^4.0.10"
   },
   "files": [
     "src",
@@ -85,7 +89,7 @@
   "peerDependencies": {
     "sass": "^1.26.10",
     "svelte": "^3.24.0",
-    "svelte-preprocess": "4.0.8"
+    "svelte-preprocess": "^4.0.10"
   },
   "dependencies": {
     "material-ripple-effect": "^1.0.3"

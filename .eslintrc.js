@@ -22,8 +22,11 @@ module.exports = {
       },
     },
     {
-      files: ['**/__tests__/*.js'],
+      files: ['__tests__/**/*.js'],
       env: { jest: true },
+      rules: {
+        'import/no-unresolved': ['error', { ignore: ['^@s/'] }],
+      },
     },
   ],
   extends: ['eslint:recommended', 'airbnb-base'],
