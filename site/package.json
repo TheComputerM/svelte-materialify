@@ -4,7 +4,8 @@
     "dev": "sapper dev --ext \".svelte .svx\"",
     "build": "sapper build --legacy --ext \".svelte .svx\"",
     "export": "sapper export --legacy --ext \".svelte .svx\"",
-    "start": "node __sapper__/build"
+    "start": "node __sapper__/build",
+    "deploy": "node deploy.js"
   },
   "dependencies": {
     "compression": "^1.7.1",
@@ -23,7 +24,9 @@
     "@rollup/plugin-node-resolve": "^8.4.0",
     "@rollup/plugin-replace": "^2.2.0",
     "autoprefixer": "^9.8.6",
+    "dotenv": "^8.2.0",
     "mdsvex": "^0.8.2",
+    "netlify": "^4.3.10",
     "postcss": "^7.0.32",
     "rollup": "^2.23.0",
     "rollup-plugin-svelte": "^5.0.1",
