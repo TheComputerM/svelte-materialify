@@ -1,6 +1,6 @@
 {
   "name": "svelte-materialify",
-  "version": "0.0.2-0",
+  "version": "0.0.1",
   "svelte": "src/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
@@ -24,7 +24,7 @@
     "site:export": "npm run copy-css && cd site && npm run export",
     "deploy": "npm run site:export && node deploy.js",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 1 && git add CHANGELOG.md",
-    "publish": "np"
+    "release": "np"
   },
   "lint-staged": {
     "src/**/*.{js,svelte}": [
@@ -43,6 +43,7 @@
     }
   },
   "np": {
+    "branch": "master",
     "cleanup": false,
     "yarn": false,
     "releaseDraft": false
