@@ -1,6 +1,6 @@
 {
   "name": "svelte-materialify",
-  "version": "0.0.1",
+  "version": "0.0.2-0",
   "svelte": "src/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
