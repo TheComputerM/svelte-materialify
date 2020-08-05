@@ -8,10 +8,11 @@
   justify-content: center;
   position: relative;
   align-items: center;
-  text-indent: 0px;
+  text-indent: 0;
   vertical-align: middle;
   user-select: none;
   direction: ltr;
+
   &.inactive {
     color: var(--theme-icons-inactive);
   }

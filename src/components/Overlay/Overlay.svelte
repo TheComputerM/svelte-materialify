@@ -1,13 +1,13 @@
 <script>
-  import { fade } from "svelte/transition";
+  import { fade } from 'svelte/transition';
 
-  let classes = "";
+  let classes = '';
   export let opacity = 0.46;
-  export let color = "rgb(33, 33, 33)";
+  export let color = 'rgb(33, 33, 33)';
   export let zIndex = 5;
   export let absolute = false;
   export let fadeOptions = {};
-  export let style = "";
+  export let style = '';
   export { classes as class };
 </script>
 

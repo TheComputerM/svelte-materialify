@@ -1,9 +1,9 @@
 <script>
-  let classes = "";
+  let classes = '';
   export let inactive = false;
-  export let size = "24px";
+  export let size = '24px';
   export let md = false;
-  export let style = "";
+  export let style = '';
   export { classes as class };
 </script>
 

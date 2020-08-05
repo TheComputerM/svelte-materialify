@@ -1,1 +1,1 @@
-export { default } from "./Subheader.svelte";
+export { default } from './Subheader.svelte';

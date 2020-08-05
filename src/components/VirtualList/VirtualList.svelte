@@ -1,12 +1,12 @@
 <script>
-  import { ListGroup, ListItem } from "../List";
+  import { ListGroup, ListItem } from '../List';
 
-  let classes = "";
-  export let items;
-  export let itemClasses = "";
+  let classes = '';
+  export let items = [];
+  export let itemClasses = '';
   export const depth = 0;
-  export let style = "";
-  export let offsetFunction = (x) => (x + 1) * 28 + "px";
+  export let style = '';
+  export let offsetFunction = (x) => `${(x + 1) * 28}px`;
   export { classes as class };
 </script>
 

@@ -6,14 +6,11 @@
 {
   .theme--#{$name} {
     --theme-surface: #{map-get($material, "surface")};
-
     --theme-text-primary: #{map-deep-get($material, "text", "primary")};
     --theme-text-secondary: #{map-deep-get($material, "text", "secondary")};
     --theme-text-disabled: #{map-deep-get($material, "text", "disabled")};
-
     --theme-icons-active: #{map-deep-get($material, "icons", "active")};
     --theme-icons-inactive: #{map-deep-get($material, "icons", "inactive")};
-
     --theme-buttons-disabled: #{map-deep-get($material, "buttons", "disabled")};
     --theme-dividers: #{map-get($material, "dividers")};
     --theme-cards: #{map-get($material, "cards")};
@@ -26,12 +23,15 @@
     a {
       color: map-deep-get($material, "text", "link");
     }
+
     .text--primary {
       color: var(--theme-text-primary);
     }
+
     .text--secondary {
       color: var(--theme-text-secondary);
     }
+
     .text--disabled {
       color: var(--theme-text-disabled);
     }

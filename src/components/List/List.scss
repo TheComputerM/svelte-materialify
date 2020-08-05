@@ -7,48 +7,12 @@
   padding: $list-padding;
   padding-top: $list-subheader-padding-top;
   position: static;
+
   &.outlined {
     box-shadow: none;
     border: 1px solid currentColor;
   }
-  &.nav {
-    padding-left: $list-nav-padding-left;
-    padding-right: $list-nav-padding-right;
-    :global {
-      .s-list-group .s-list-item {
-        padding: $list-nav-item-padding;
-        &::before {
-          border-radius: $list-nav-border-radius;
-        }
-      }
-    }
-  }
-  &.rounded {
-    padding: 8px;
-    :global {
-      .s-list-group .s-list-item {
-        border-radius: 32px !important;
-        &::before {
-          border-radius: 32px !important;
-        }
-      }
-    }
-  }
-  &.nav,
-  &.rounded {
-    :global {
-      .s-list-group .s-list-item:not(:last-child):not(:only-child) {
-        margin-bottom: $list-nav-rounded-item-margin-bottom;
-      }
-    }
-    &.dense {
-      :global {
-        .s-list-group .s-list-item:not(:last-child):not(:only-child) {
-          margin-bottom: $list-nav-rounded-dense-item-margin-bottom;
-        }
-      }
-    }
-  }
+
   &.flat {
     :global {
       .s-list-item::before {
@@ -56,6 +20,36 @@
       }
     }
   }
+
+  &.nav {
+    padding-left: $list-nav-padding-left;
+    padding-right: $list-nav-padding-right;
+
+    :global {
+      .s-list-group .s-list-item {
+        padding: $list-nav-item-padding;
+
+        &::before {
+          border-radius: $list-nav-border-radius;
+        }
+      }
+    }
+  }
+
+  &.rounded {
+    padding: 8px;
+
+    :global {
+      .s-list-group .s-list-item {
+        border-radius: 32px !important;
+
+        &::before {
+          border-radius: 32px !important;
+        }
+      }
+    }
+  }
+
   &.dense {
     :global {
       .s-subheader {
@@ -63,20 +57,41 @@
         height: $list-dense-subheader-height;
         padding: $list-dense-subheader-padding;
       }
+
       .s-list-group .s-list-item {
         min-height: $list-dense-min-height;
+
         .s-icon {
           margin-top: 8px;
           margin-bottom: 8px;
         }
+
         .content {
           padding: $list-dense-content-padding;
+
           .title,
           .subtitle {
             font-size: $list-item-dense-title-font-size;
             font-weight: $list-item-dense-title-font-weight;
             line-height: $list-item-dense-title-line-height;
           }
+        }
+      }
+    }
+  }
+
+  &.nav,
+  &.rounded {
+    :global {
+      .s-list-group .s-list-item:not(:last-child):not(:only-child) {
+        margin-bottom: $list-nav-rounded-item-margin-bottom;
+      }
+    }
+
+    &.dense {
+      :global {
+        .s-list-group .s-list-item:not(:last-child):not(:only-child) {
+          margin-bottom: $list-nav-rounded-dense-item-margin-bottom;
         }
       }
     }

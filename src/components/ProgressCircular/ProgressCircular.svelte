@@ -1,5 +1,5 @@
 <script>
-  let classes = "";
+  let classes = '';
   export let indeterminate = false;
   export let rotate = 0;
   export let size = 32;
@@ -7,19 +7,19 @@
   export let width = 4;
   export { classes as class };
 
-  let radius = 20;
-  let circumference = 2 * 3.1416 * radius;
-  let viewBoxSize = radius / (1 - Number(width) / +size);
-  let strokeWidth = (Number(width) / +size) * viewBoxSize * 2;
-  let strokeDashOffset = ((100 - value) / 100) * circumference;
+  const radius = 20;
+  const circumference = 2 * 3.1416 * radius;
+  const viewBoxSize = radius / (1 - Number(width) / +size);
+  const strokeWidth = (Number(width) / +size) * viewBoxSize * 2;
+  const strokeDashOffset = ((100 - value) / 100) * circumference;
 
-  let circleProps = {
-    fill: "transparent",
+  const circleProps = {
+    fill: 'transparent',
     cx: 2 * viewBoxSize,
     cy: 2 * viewBoxSize,
     r: radius,
-    "stroke-width": strokeWidth,
-    "stroke-dasharray": circumference,
+    'stroke-width': strokeWidth,
+    'stroke-dasharray': circumference,
   };
 </script>
 

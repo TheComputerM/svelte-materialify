@@ -1,15 +1,15 @@
 <script>
-  import { getContext } from "svelte";
-  import Ripple from "../../actions/Ripple";
+  import { getContext } from 'svelte';
+  import Ripple from '../../actions/Ripple';
 
-  let partOfList = getContext("partOfList") ?? false;
+  const partOfList = getContext('partOfList') ?? false;
 
-  let classes = "";
+  let classes = '';
   export let active = false;
-  export let activeClass = "active";
+  export let activeClass = 'active';
   export let disabled = false;
-  export let ripple = {active: partOfList};
-  export let style = undefined;
+  export let ripple = { active: partOfList };
+  export let style = null;
   export { classes as class };
 </script>
 

@@ -1,1 +1,1 @@
-export { default } from "./NavigationDrawer.svelte";
+export { default } from './NavigationDrawer.svelte';

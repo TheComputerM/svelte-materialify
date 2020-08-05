@@ -15,18 +15,23 @@
   &:not(.flat) {
     @include elevation($card-elevation);
   }
+
   &:not(.tile) {
     border-radius: $card-border-radius;
   }
+
   &.outlined {
-    border: $card-outlined-border-width solid rgba(0,0,0,.12);
+    border: $card-outlined-border-width solid rgba(0, 0, 0, 0.12);
   }
+
   &.raised {
     @include elevation($card-raised-elevation);
   }
+
   &.shaped {
     border-radius: $card-shaped-border-radius;
   }
+
   &.hover {
     cursor: pointer;
     transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -36,12 +41,11 @@
       @include elevation($card-hover-elevation);
     }
   }
+
   &.link {
     cursor: pointer;
-    &:focus:before {
-      opacity: $card-link-focus-opacity;
-    }
-    &:before {
+
+    &::before {
       background: currentColor;
       bottom: 0;
       content: "";
@@ -53,10 +57,16 @@
       top: 0;
       transition: 0.2s opacity map-get($transitions, "fast-in-slow-out");
     }
+
+    &:focus::before {
+      opacity: $card-link-focus-opacity;
+    }
   }
+
   &.disabled {
     pointer-events: none;
     user-select: none;
+
     > :global(*:not(.s-progress-linear)) {
       opacity: $card-disabled-opacity;
       transition: inherit;

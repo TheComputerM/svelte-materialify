@@ -1,1 +1,1 @@
-export { default } from "./ProgressCircular.svelte";
+export { default } from './ProgressCircular.svelte';

@@ -1,6 +1,5 @@
 @import "./variables";
 
-
 .s-subheader {
   align-items: center;
   display: flex;
@@ -9,6 +8,7 @@
   font-weight: map-deep-get($headings, 'body-2', 'weight');
   padding: 0 $subheader-right-padding 0 $subheader-left-padding;
   color: var(--theme-text-secondary);
+
   &.inset {
     margin-left: $subheader-inset-margin;
   }

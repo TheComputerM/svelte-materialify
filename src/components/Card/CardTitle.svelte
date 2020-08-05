@@ -1,7 +1,7 @@
 <script>
-  let classes = "";
-  export let style = undefined;
-  export {classes as class};
+  let classes = '';
+  export let style = null;
+  export { classes as class };
 </script>
 
 <style lang="scss" src="./CardTitle.scss"></style>

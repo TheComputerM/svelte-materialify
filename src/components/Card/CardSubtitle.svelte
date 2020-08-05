@@ -1,6 +1,6 @@
 <script>
-  let classes = "";
-  export let style = undefined;
+  let classes = '';
+  export let style = null;
   export { classes as class };
 </script>
 

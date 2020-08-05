@@ -1,0 +1,77 @@
+{
+  "extends": "stylelint-config-standard",
+  "ignoreFiles": [
+    "./src/styles/generic/_reset.scss"
+  ],
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true,
+    "scss/comment-no-empty": true,
+    "scss/at-if-no-null": true,
+    "scss/at-function-parentheses-space-before": "never",
+    "scss/at-mixin-parentheses-space-before": "never",
+    "scss/at-import-no-partial-leading-underscore": true,
+    "scss/dollar-variable-colon-space-after": "always",
+    "scss/double-slash-comment-empty-line-before": [
+      "always",
+      {
+        "except": [
+          "first-nested"
+        ],
+        "ignore": [
+          "between-comments",
+          "stylelint-commands"
+        ]
+      }
+    ],
+    "scss/declaration-nested-properties": "never",
+    "scss/no-duplicate-mixins": true,
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "except": [
+          "blockless-after-same-name-blockless"
+        ],
+        "ignore": [
+          "inside-block",
+          "after-comment"
+        ]
+      }
+    ],
+    "block-opening-brace-space-before": "always-single-line",
+    "block-closing-brace-newline-after": "always-single-line",
+    "declaration-colon-newline-after": null,
+    "color-hex-length": "long",
+    "indentation": [
+      2,
+      {
+        "ignore": [
+          "param"
+        ]
+      }
+    ],
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": [
+          "global"
+        ]
+      }
+    ],
+    "custom-property-empty-line-before": [
+      "always",
+      {
+        "except": [
+          "after-custom-property",
+          "first-nested"
+        ],
+        "ignore": [
+          "inside-single-line-block"
+        ]
+      }
+    ]
+  }
+}

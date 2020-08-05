@@ -11,52 +11,6 @@
   position: relative;
   text-decoration: none;
 
-  &.link {
-    cursor: pointer;
-    user-select: none;
-    &:not(.active):hover::before {
-      opacity: 0.04;
-    }
-  }
-  &.disabled {
-    pointer-events: none;
-    color: var(--theme-text-disabled);
-  }
-
-  &::before {
-    background-color: currentColor;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    content: "";
-    pointer-events: none;
-    position: absolute;
-    opacity: 0;
-    transition: all 0.3s map-get($transitions, "swing") 0s;
-  }
-
-  &::after {
-    content: "";
-    min-height: inherit;
-    font-size: 0;
-  }
-
-  &.active {
-    &::before {
-      opacity: 0.12;
-    }
-    :global {
-      .s-icon {
-        color: inherit;
-      }
-    }
-  }
-
-  &:not(.active) {
-    color: var(--theme-text-primary);
-  }
-
   .content {
     align-items: center;
     align-self: center;
@@ -69,6 +23,7 @@
     > * {
       line-height: 1.1;
       flex: 1 0 100%;
+
       &:not(:last-child) {
         margin-bottom: $list-item-content-children-margin-bottom;
       }
@@ -100,22 +55,75 @@
       margin-bottom: $list-item-avatar-margin-y;
       margin-top: $list-item-avatar-margin-y;
     }
+
     .s-icon {
       align-self: flex-start;
       margin: $list-item-icon-margin;
     }
+
     .s-icon,
     .s-avatar {
       display: inline-flex;
       min-width: $list-item-child-min-width;
     }
+
     [slot="left"] {
       .s-avatar {
         margin-right: $list-item-avatar-first-child-margin;
       }
+
       .s-icon {
         margin-right: $list-item-action-icon-margin;
       }
     }
+  }
+
+  &.link {
+    cursor: pointer;
+    user-select: none;
+
+    &:not(.active):hover::before {
+      opacity: 0.04;
+    }
+  }
+
+  &.disabled {
+    pointer-events: none;
+    color: var(--theme-text-disabled);
+  }
+
+  &::before {
+    background-color: currentColor;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.3s map-get($transitions, "swing") 0s;
+  }
+
+  &::after {
+    content: "";
+    min-height: inherit;
+    font-size: 0;
+  }
+
+  &.active {
+    &::before {
+      opacity: 0.12;
+    }
+
+    :global {
+      .s-icon {
+        color: inherit;
+      }
+    }
+  }
+
+  &:not(.active) {
+    color: var(--theme-text-primary);
   }
 }

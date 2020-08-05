@@ -1,6 +1,6 @@
 <script>
-  let classes = "";
-  export let height = "56px";
+  let classes = '';
+  export let height = '56px';
   export let tile = false;
   export let flat = false;
   export let dense = false;
@@ -8,11 +8,11 @@
   export let fixed = false;
   export let absolute = false;
   export let collapsed = false;
-  export let style = "";
+  export let style = '';
   export { classes as class };
 
-  if (dense) height = "48px";
-  else if (prominent) height = "128px";
+  if (dense) height = '48px';
+  else if (prominent) height = '128px';
 </script>
 
 <style lang="scss" src="./index.scss">

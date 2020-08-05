@@ -7,6 +7,7 @@
   transition: 0.2s map-get($transitions, "ease-in-out");
   width: 100%;
   color: var(--theme-text-primary);
+
   &.inactive {
     height: 0 !important;
   }
@@ -67,9 +68,11 @@
     .indeterminate {
       right: 0;
     }
+
     .indeterminate {
       animation-direction: reverse;
     }
+
     .stream {
       right: auto;
       animation-direction: reverse;
@@ -108,10 +111,12 @@
     left: -90%;
     right: 100%;
   }
+
   60% {
     left: -90%;
     right: 100%;
   }
+
   100% {
     left: 100%;
     right: -35%;
@@ -123,10 +128,12 @@
     left: -200%;
     right: 100%;
   }
+
   60% {
     left: 107%;
     right: -8%;
   }
+
   100% {
     left: 107%;
     right: -8%;

@@ -1,3 +1,4 @@
+/* eslint-disable */
 // Robert Penner's easeInOutQuad
 
 // find the rest of his easing functions here: http://robertpenner.com/easing/

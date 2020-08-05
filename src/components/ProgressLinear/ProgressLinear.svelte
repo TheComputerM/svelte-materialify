@@ -1,21 +1,19 @@
 <script>
-  import { scale } from "svelte/transition";
-
-  let classes = "";
+  let classes = '';
   export let value = 0;
   export let active = true;
   export let indeterminate = false;
-  export let height = "4px";
+  export let height = '4px';
   export let backgroundOpacity = 0.3;
-  export let backgroundColor = "primary-color";
-  export let color = "primary-color";
+  export let backgroundColor = 'primary-color';
+  export let color = 'primary-color';
   export let buffer = 100;
   export let reversed = false;
   export let stream = false;
   export let rounded = false;
   export let striped = false;
-  export let style = "";
-  export {classes as class};
+  export let style = '';
+  export { classes as class };
 </script>
 
 <style lang="scss" src="./index.scss">

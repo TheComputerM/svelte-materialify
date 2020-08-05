@@ -1,5 +1,5 @@
 <script>
-  export let theme = "light";
+  export let theme = 'light';
 </script>
 
 <style type="scss" global>

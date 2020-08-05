@@ -15,6 +15,21 @@
   will-change: transform;
   transition-property: transform, visibility, width;
 
+  .border {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: $navigation-drawer-border-width;
+    background-color: var(--theme-dividers);
+  }
+
+  .content {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
   &.fixed {
     position: fixed;
     z-index: 6;
@@ -23,43 +38,36 @@
   &.right {
     left: auto;
     right: 0;
-    &:after {
+
+    &::after {
       left: 0;
       right: initial;
     }
+
     .border {
       right: auto;
       left: 0;
     }
   }
+
   &.clipped {
     z-index: 4;
   }
+
   &.mini {
     overflow: hidden;
+
     :global {
       .s-list-item {
         > *:first-child {
           margin-left: 0;
           margin-right: 0;
         }
+
         > *:not(:first-child) {
           display: none;
         }
       }
     }
-  }
-  .content {
-    height: 100%;
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-  .border {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    width: $navigation-drawer-border-width;
-    background-color: var(--theme-dividers);
   }
 }

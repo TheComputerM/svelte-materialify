@@ -1,11 +1,12 @@
 <script>
-  import { setContext } from "svelte";
-  setContext("partOfList", true);
+  import { setContext } from 'svelte';
 
-  let classes = "primary-text";
+  setContext('partOfList', true);
+
+  let classes = 'primary-text';
   export let offset = false;
   export let disabled = false;
-  export let style = "";
+  export let style = '';
   export { classes as class };
 </script>
 

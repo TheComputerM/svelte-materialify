@@ -1,1 +1,1 @@
-export { default } from "./Breadcrumbs.svelte";
+export { default } from './Breadcrumbs.svelte';

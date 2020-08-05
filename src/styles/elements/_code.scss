@@ -6,11 +6,13 @@ kbd {
   font-size: $code-kbd-font-size;
   font-weight: $code-kbd-font-weight;
 }
+
 code {
   background-color: $code-background-color;
   color: $code-color;
   padding: $code-padding;
 }
+
 kbd {
   background: $kbd-background-color;
   color: $kbd-color;

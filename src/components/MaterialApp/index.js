@@ -1,1 +1,1 @@
-export {default} from "./MaterialApp.svelte";
+export { default } from './MaterialApp.svelte';

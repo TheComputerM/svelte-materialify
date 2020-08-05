@@ -282,12 +282,12 @@ $material-light-theme: map-deep-merge(
 $material-dark-elevation-colors: map-merge(
   (
     '0': #000000,
-    '1': #1E1E1E,
+    '1': #1e1e1e,
     '2': #222222,
     '3': #252525,
     '4': #272727,
-    '6': #2C2C2C,
-    '8': #2E2E2E,
+    '6': #2c2c2c,
+    '8': #2e2e2e,
     '12': #333333,
     '16': #363636,
     '24': #373737
@@ -312,7 +312,7 @@ $material-dark-theme: map-deep-merge(
       "disabled": rgba(material-color("shades", "white"), 0.3),
     ),
     "dividers": rgba(material-color("shades", "white"), 0.12),
-    "chips": #555,
+    "chips": #555555,
     "cards": map-get($material-dark-elevation-colors, '1'),
     "app-bar": map-get($material-dark-elevation-colors, '4'),
     "navigation-drawer": map-get($material-dark-elevation-colors, '16')

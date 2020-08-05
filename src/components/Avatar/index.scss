@@ -11,10 +11,14 @@
   vertical-align: middle;
   overflow: hidden;
 
-  :global(.s-icon), :global(img), :global(svg) {
-    border-radius: inherit;
-    display: inline-flex;
-    height: inherit;
-    width: inherit;
+  :global {
+    .s-icon,
+    img,
+    svg {
+      border-radius: inherit;
+      display: inline-flex;
+      height: inherit;
+      width: inherit;
+    }
   }
 }

@@ -1,11 +1,11 @@
 <script>
-  import Ripple from "../../actions/Ripple";
+  import Ripple from '../../actions/Ripple';
 
-  let classes = "";
+  let classes = '';
   export let fab = false;
   export let icon = false;
   export let block = false;
-  export let size = "default";
+  export let size = 'default';
   export let tile = false;
   export let text = false;
   export let depressed = false;
@@ -13,11 +13,11 @@
   export let rounded = false;
   export let disabled = false;
   export let active = false;
-  export let type = "button";
-  export let style = undefined;
-  export let form = undefined;
-  export let name = undefined;
-  export let value = undefined;
+  export let type = 'button';
+  export let style = null;
+  export let form = null;
+  export let name = null;
+  export let value = null;
   export let ripple = {};
   export { classes as class };
 </script>

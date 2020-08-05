@@ -1,7 +1,7 @@
 <script>
-  let classes = "";
+  let classes = '';
   export let fluid = false;
-  export let style = undefined;
+  export let style = null;
   export { classes as class };
 </script>
 
@@ -13,6 +13,11 @@
     padding: $container-padding-x;
     margin-right: auto;
     margin-left: auto;
+
+    &.fluid {
+      max-width: 100%;
+    }
+
     @media #{map-get($display-breakpoints, "md-and-up")} {
       max-width: map-get($container-max-widths, "md");
     }
@@ -21,9 +26,6 @@
     }
     @media #{map-get($display-breakpoints, "xl-only")} {
       max-width: map-get($container-max-widths, "xl");
-    }
-    &.fluid {
-      max-width: 100%;
     }
   }
 </style>

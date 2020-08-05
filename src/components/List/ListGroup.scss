@@ -4,18 +4,21 @@
   flex: 0 1 auto;
   position: relative;
   max-width: 100%;
+
+  :global {
+    .s-list-item.active {
+      color: inherit;
+    }
+  }
+
   &.disabled {
     pointer-events: none;
     color: var(--theme-text-disabled);
   }
+
   &.offset {
     :global(.s-list-item) {
       padding-left: var(--offset) !important;
-    }
-  }
-  :global {
-    .s-list-item.active {
-      color: inherit;
     }
   }
 }

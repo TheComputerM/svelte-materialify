@@ -1,8 +1,8 @@
 @use '../tools/breakpoints' as *;
 
 @each $display in  ('none', 'inline', 'inline-block', 'block', 'flex', 'inline-flex') {
-  .d-#{$display} {display: unquote($display);}
+  .d-#{$display} { display: unquote($display); }
   @include create_breakpoints() using ($screen_size) {
-    .d-#{$screen_size}-#{$display} {display: unquote($display);}
+    .d-#{$screen_size}-#{$display} { display: unquote($display); }
   }
 }

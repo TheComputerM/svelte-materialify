@@ -4,6 +4,6 @@ module.exports = {
     '^.+\\.js$': 'babel-jest',
   },
   moduleFileExtensions: ['js', 'svelte'],
-  rootDir: "src",
-  setupFilesAfterEnv: ["@testing-library/jest-dom/extend-expect"]
-}
+  rootDir: 'src',
+  setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
+};

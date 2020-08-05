@@ -1,4 +1,4 @@
-@function map-deep-get($map, $keys...){
+@function map-deep-get($map, $keys...) {
   $result: $map;
   @each $key in $keys {
     $result: map-get($result, $key);
@@ -8,14 +8,26 @@
 
 // From: https://gist.github.com/pentzzsolt/4949bbd7691d43d00616dc4f1451cae9#file-non-destructive-map-merge-4-scss
 @function map-deep-merge($parent-map, $child-map) {
-	$result: $parent-map;
-	@each $key, $value in $child-map {
-		@if (not map-has-key($result, $key)) or (type-of(map-get($result, $key)) != type-of($value)) or (not (type-of(map-get($result, $key)) == map and type-of($value) == map)) {
-			$result: map-merge($result, ($key: $value));
-		}
-		@else {
-			$result: map-merge($result, ($key: non-destructive-map-merge(map-get($result, $key), $value)));
-		}
-	}
-	@return $result;
+  $result: $parent-map;
+  @each $key, $value in $child-map {
+    @if (not map-has-key($result, $key)) or
+      (type-of(map-get($result, $key)) != type-of($value)) or
+      (not (type-of(map-get($result, $key)) == map and type-of($value) == map))
+    {
+      $result: map-merge(
+        $result,
+        (
+          $key: $value,
+        )
+      );
+    } @else {
+      $result: map-merge(
+        $result,
+        (
+          $key: non-destructive-map-merge(map-get($result, $key), $value),
+        )
+      );
+    }
+  }
+  @return $result;
 }

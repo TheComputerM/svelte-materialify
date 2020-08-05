@@ -1,14 +1,15 @@
 <script>
-  import { createEventDispatcher } from "svelte";
+  import { createEventDispatcher } from 'svelte';
+
   const dispatch = createEventDispatcher();
 
-  import Button from "../Button/Button.svelte";
-  import Icon from "../Icon/Icon.svelte";
+  import Button from '../Button/Button.svelte';
+  import Icon from '../Icon/Icon.svelte';
 
-  let classes = "";
+  let classes = '';
   export let visible = true;
   export let icon = false;
-  export let closeIcon = "cancel";
+  export let closeIcon = 'cancel';
   export let dense = false;
   export let outlined = false;
   export let text = false;
@@ -20,8 +21,8 @@
 
   export function dismiss() {
     visible = false;
-    dispatch("dismiss", {
-      visible: visible,
+    dispatch('dismiss', {
+      visible,
     });
   }
 </script>

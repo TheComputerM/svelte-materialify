@@ -1,20 +1,20 @@
 <script>
-  let classes = "";
-  export let divider = "/";
+  let classes = '';
+  export let divider = '/';
   export let large = false;
   export let items = [];
-  export {classes as class};
+  export { classes as class };
 
-  let defaults = {
+  const defaults = {
     disabled: false,
-    href: "",
+    href: '',
     link: true,
-    text: "",
-    class: "",
+    text: '',
+    class: '',
     props: {},
   };
 
-  items = items.map((x) => Object.assign({}, defaults, x));
+  items = items.map((x) => ({ ...defaults, ...x }));
 </script>
 
 <style lang="scss" src="./index.scss">

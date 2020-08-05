@@ -1,5 +1,5 @@
 <script>
-  let classes = "";
+  let classes = '';
   export let flat = false;
   export let tile = false;
   export let outlined = false;
@@ -8,7 +8,7 @@
   export let hover = false;
   export let link = false;
   export let disabled = false;
-  export let style = undefined;
+  export let style = null;
   export { classes as class };
 </script>
 

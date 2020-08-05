@@ -5,7 +5,7 @@
   "module": "dist/index.mjs",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "concurrently \"npm:watch:*\" -k",
+    "dev": "concurrently \"npm:watch:*\" \"npm:site:dev\" -k",
     "start": "concurrently \"npm:build\" \"npm:css\" \"npm:copy-css\" \"npm:site:export\" -k",
     "build": "rollup -c",
     "watch:build": "rollup -c -w",
@@ -14,31 +14,70 @@
     "copy-css": "copy-and-watch dist/global.css site/static",
     "watch:copy-css": "npm run copy-css -- --watch",
     "test": "jest",
+    "lint:css": "stylelint src/**/*.{scss,svelte} --syntax scss",
+    "lint:css:fix": "stylelint src/**/*.scss --syntax scss --fix",
+    "lint:js": "eslint src/ --ext .svelte,.js",
+    "lint:js:fix": "eslint src/ --ext .svelte,.js --fix",
+    "check": "svelte-check --workspace src/components",
     "site:dev": "cd site && npm run dev",
     "site:build": "cd site && npm run build",
     "site:export": "npm run copy-css && cd site && npm run export",
-    "deploy": "npm run site:export && node deploy.js"
+    "deploy": "npm run site:export && node deploy.js",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 1 && git add CHANGELOG.md",
+    "publish": "np"
+  },
+  "lint-staged": {
+    "src/**/*.{js,svelte}": [
+      "eslint --ext .svelte,.js --fix",
+      "git add"
+    ],
+    "src/**/*.scss": [
+      "stylelint --syntax scss --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "np": {
+    "cleanup": false,
+    "yarn": false,
+    "releaseDraft": false
   },
   "devDependencies": {
-    "@babel/core": "^7.11.0",
+    "@babel/core": "^7.11.1",
     "@babel/preset-env": "^7.11.0",
     "@rollup/plugin-commonjs": "^13.0.2",
     "@rollup/plugin-node-resolve": "^8.4.0",
     "@testing-library/jest-dom": "^5.11.2",
     "@testing-library/svelte": "^3.0.0",
     "autoprefixer": "^9.8.6",
+    "babel-eslint": "^10.1.0",
     "babel-jest": "^26.2.2",
     "concurrently": "^5.2.0",
+    "conventional-changelog-cli": "^2.0.34",
     "copy-and-watch": "^0.1.5",
     "del": "^5.1.0",
+    "eslint": "^7.6.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-svelte3": "^2.7.3",
     "husky": "^4.2.5",
     "jest": "^26.2.2",
+    "lint-staged": "^10.2.11",
     "ncp": "^2.0.0",
+    "np": "^6.3.2",
     "postcss": "^7.0.32",
     "rollup": "^2.23.0",
     "rollup-plugin-svelte": "^5.2.3",
     "rollup-plugin-terser": "^6.1.0",
     "simple-git": "^2.15.0",
+    "stylelint": "^13.6.1",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.18.0",
+    "svelte-check": "^1.0.7",
     "svelte-jester": "^1.0.6"
   },
   "files": [

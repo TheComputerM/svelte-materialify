@@ -1,9 +1,9 @@
 <script>
 
-  let classes = "";
-  export let size = "48px";
+  let classes = '';
+  export let size = '48px';
   export let tile = false;
-  export {classes as class};
+  export { classes as class };
 </script>
 
 <style lang="scss" src="./index.scss"></style>

@@ -9,6 +9,6 @@
   padding: $card-subtitle-padding;
 
   + :global(.s-card-text) {
-    padding-top: $card-adjacent-sibling-text-padding-top
+    padding-top: $card-adjacent-sibling-text-padding-top;
   }
 }
