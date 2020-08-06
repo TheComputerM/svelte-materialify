@@ -1,4 +1,5 @@
 @use "../variables" as *;
+@use "../tools/breakpoints" as *;
 
 @for $i from 0 through 16 {
   @each $mORp, $marginORpadding in ("m": "margin", "p": "padding") {
@@ -12,6 +13,15 @@
       .#{$mORp}#{$type}-n#{$i} {
         #{$marginORpadding}#{$suffix}: $spacer * -$i !important;
       }
+
+      @include create_breakpoints() using ($screen_size) {
+        .#{$mORp}#{$type}-#{$screen_size}-#{$i} {
+          #{$marginORpadding}#{$suffix}: $spacer * $i !important;
+        }
+        .#{$mORp}#{$type}-#{$screen_size}-n#{$i} {
+          #{$marginORpadding}#{$suffix}: $spacer * -$i !important;
+        }
+      }
     }
   }
 }
@@ -23,6 +33,12 @@
   {
     .#{$mORp}#{$type}-auto {
       #{$marginORpadding}#{$suffix}: auto !important;
+    }
+
+    @include create_breakpoints() using ($screen_size) {
+      .#{$mORp}#{$type}-#{$screen_size}-auto {
+        #{$marginORpadding}#{$suffix}: auto !important;
+      }
     }
   }
 }

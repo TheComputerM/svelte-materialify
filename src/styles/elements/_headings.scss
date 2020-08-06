@@ -1,4 +1,5 @@
 @use "../variables" as *;
+@use "../tools/breakpoints" as *;
 
 @each $heading in "h1", "h2", "h3", "h4", "h5", "h6" {
   $value_map: map-get($headings, $heading);
@@ -23,6 +24,19 @@
     font-family: map-get($value_map, "font-family");
     @if (map-get($value_map, "text-transform")) {
       text-transform: map-get($value_map, "text-transform");
+    }
+  }
+
+  @include create_breakpoints() using ($screen_size) {
+    .text-#{$screen_size}-#{$heading} {
+      font-size: map-get($value_map, "size");
+      font-weight: map-get($value_map, "weight");
+      line-height: map-get($value_map, "line-height");
+      letter-spacing: map-get($value_map, "letter-spacing");
+      font-family: map-get($value_map, "font-family");
+      @if (map-get($value_map, "text-transform")) {
+        text-transform: map-get($value_map, "text-transform");
+      }
     }
   }
 }
