@@ -5,7 +5,7 @@
     "build": "sapper build --legacy --ext \".svelte .svx\"",
     "export": "sapper export --legacy --ext \".svelte .svx\"",
     "start": "node __sapper__/build",
-    "deploy": "node deploy.js"
+    "deploy": "npm run export && node deploy.js"
   },
   "dependencies": {
     "compression": "^1.7.1",
