@@ -1,8 +1,8 @@
 {
 	"background_color": "#ffffff",
-	"theme_color": "#333333",
-	"name": "TODO",
-	"short_name": "TODO",
+	"theme_color": "#651fff",
+	"name": "Svelte Materialify",
+	"short_name": "Svelte Material",
 	"display": "minimal-ui",
 	"start_url": "/",
 	"icons": [

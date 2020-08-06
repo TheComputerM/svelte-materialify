@@ -3,20 +3,30 @@
   import { ListGroup, ListItem, Button, Icon } from "svelte-materialify/src";
   import { stores } from "@sapper/app";
 
-  export let items;
-  export let depth = 1;
-  export let hidden = false;
-  export let offset = false;
+  import routes from "../helpers/routes";
 
-  let active;
+  let activeLink;
   const { page } = stores();
-  let isChildListHidden = true;
-  let toggleChildList = () => isChildListHidden = !isChildListHidden
+  export let items = routes;
+  export let depth = 0;
+  export let visible = true;
 
-  page.subscribe((value) => (active = value.path.replace(/\//g, "")));
-  $: isItemActive = (href = "") => {
-    return href.replace(/\//g, "") === active;
-  };
+  page.subscribe((value) => {
+    activeLink = value.path.replace(/\//g, "");
+  });
+
+  if (depth === 0) {
+    function openCollapsedNavigation(parent) {
+      parent.items.find(function (child) {
+        if (child.items) openCollapsedNavigation(child, activeLink);
+        if (child.href?.replace(/\//g, "") === activeLink || child.open) {
+          parent.open = true;
+          return true;
+        }
+      });
+    }
+    items.find((i) => openCollapsedNavigation(i));
+  }
 </script>
 
 <style>
@@ -29,12 +39,12 @@
   }
 </style>
 
-{#if !hidden}
-  <div transition:slide style="padding-top:8px;">
-    <ListGroup {offset}>
+{#if visible}
+  <div transition:slide={{ duration: 500 }}>
+    <ListGroup offset={depth ? `${(depth + 1) * 32}px` : false}>
       {#each items as item}
         {#if item.items}
-          <ListItem on:click={toggleChildList}>
+          <ListItem on:click={() => (item.open = !item.open)}>
             <div slot="left">
               {#if item.icon}
                 <Icon class="mdi mdi-{item.icon}" />
@@ -44,18 +54,17 @@
             <div slot="right">
               <Icon
                 class="mdi mdi-chevron-down"
-                style={isChildListHidden ? 'transform: rotateZ(180deg)' : ''} />
+                style={item.open ? 'transform: rotateZ(180deg)' : ''} />
             </div>
           </ListItem>
 
           <svelte:self
             items={item.items}
             depth={depth + 1}
-            bind:hidden={isChildListHidden}
-            offset={`${((depth + 1) / 2) * 64}px`} />
+            bind:visible={item.open} />
         {:else}
           <a href={item.href}>
-            <ListItem active={isItemActive(item.href)}>
+            <ListItem active={item.href.replace(/\//g, '') === activeLink}>
               <div slot="left">
                 {#if item.icon}
                   <Icon class="mdi mdi-{item.icon}" />

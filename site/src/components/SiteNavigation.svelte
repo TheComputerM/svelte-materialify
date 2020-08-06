@@ -13,7 +13,7 @@
   } from "svelte-materialify/src/";
 
   import LeftNavigationDrawer from "./LeftNavigationDrawer.svelte";
-  import components from "../helpers/component-routes";
+  import RightNavigationDrawer from "./RightNavigationDrawer.svelte";
 
   let sidenav = false;
 
@@ -23,25 +23,6 @@
 
     window.localStorage.setItem("theme", theme);
   }
-
-  let links = [
-    { text: "Getting Started", href: "/", icon: "speedometer" },
-    {
-      text: "Components",
-      href: "/components/",
-      icon: "view-dashboard",
-      items: (() => {
-        let out = [];
-        for (let component of components) {
-          out.push({
-            text: component,
-            href: "/components/" + component.replace(/ /g, "-").toLowerCase(),
-          });
-        }
-        return out;
-      })(),
-    },
-  ];
 </script>
 
 <style>
@@ -60,7 +41,6 @@
   </div>
   <span slot="title">Svelte Materialify</span>
   <div slot="right">
-
     <a
       href="https://github.com/TheComputerM/svelte-materialify"
       target="_blank">
@@ -87,7 +67,7 @@
   </div>
   <br />
   <List nav dense>
-    <LeftNavigationDrawer items={links} />
+    <LeftNavigationDrawer />
   </List>
 </NavigationDrawer>
 {#if sidenav}
@@ -99,6 +79,6 @@
 
 {#if navigation}
   <NavigationDrawer style="height:100vh;" right fixed clipped>
-    <Button>Hello</Button>
+    <RightNavigationDrawer />
   </NavigationDrawer>
 {/if}
