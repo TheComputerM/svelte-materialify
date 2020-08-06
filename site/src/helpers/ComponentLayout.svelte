@@ -1,16 +1,12 @@
 <script>
   export let title;
-
-  import { Breadcrumbs } from "svelte-materialify/src";
 </script>
 
 <svelte:head>
-  {title} - Svelte Materialify
+  <title>{title} component | Svelte Materialify</title>
 </svelte:head>
 
-<Breadcrumbs
-  items={[{ text: 'Components', href: '/components/' }, { text: title, disabled: true }]} />
-
-<h1>{title}</h1>
-
-<slot />
+<section class="pa-4 pa-sm-6 pa-md-8">
+  <h1 class="text-h3 mb-3">{title}</h1>
+  <slot />
+</section>

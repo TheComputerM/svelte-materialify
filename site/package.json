@@ -9,16 +9,18 @@
   },
   "dependencies": {
     "compression": "^1.7.1",
+    "gumshoejs": "^5.1.2",
     "polka": "next",
+    "remark-autolink-headings": "^6.0.1",
     "sirv": "^1.0.0",
     "svelte-materialify": "file:../"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.0",
+    "@babel/core": "^7.11.1",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.11.0",
     "@babel/preset-env": "^7.11.0",
-    "@babel/runtime": "^7.11.0",
+    "@babel/runtime": "^7.11.2",
     "@rollup/plugin-babel": "^5.1.0",
     "@rollup/plugin-commonjs": "^13.0.2",
     "@rollup/plugin-node-resolve": "^8.4.0",
@@ -33,7 +35,7 @@
     "rollup-plugin-terser": "^6.1.0",
     "sapper": "^0.27.0",
     "sass": "^1.26.10",
-    "svelte": "^3.24.0",
-    "svelte-preprocess": "^4.0.9"
+    "svelte": "^3.24.1",
+    "svelte-preprocess": "^4.0.10"
   }
 }
