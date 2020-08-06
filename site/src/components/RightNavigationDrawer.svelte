@@ -4,7 +4,7 @@
 
   let values = ['a', 'b'];
   onMount(() => {
-    var spy = new Gumshoe('#james-the-spy li');
+    // var spy = new Gumshoe('#james-the-spy li');
   })
 </script>
 
