@@ -19,7 +19,7 @@
     function openCollapsedNavigation(parent) {
       parent.items.find(function (child) {
         if (child.items) openCollapsedNavigation(child, activeLink);
-        if (child.href?.replace(/\//g, "") === activeLink || child.open) {
+        if ((child.href || '').replace(/\//g, "") === activeLink || child.open) {
           parent.open = true;
           return true;
         }
