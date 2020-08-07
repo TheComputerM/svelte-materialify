@@ -17,6 +17,6 @@ Where `type` is one of the following
 
 Where `category` is one of the following
 - `ci`
-- `site`
+- `a11y`
 - `${component_name}`
 - `${nothing}`
