@@ -4,12 +4,9 @@
   const dispatch = createEventDispatcher();
 
   import Button from '../Button/Button.svelte';
-  import Icon from '../Icon/Icon.svelte';
 
   let classes = '';
   export let visible = true;
-  export let icon = false;
-  export let closeIcon = 'cancel';
   export let dense = false;
   export let outlined = false;
   export let text = false;
@@ -40,15 +37,13 @@
     class:text
     class:tile>
     <div class="s-alert__wrapper">
-      {#if icon}
-        <Icon class="mr-4 test">{icon}</Icon>
-      {/if}
+      <slot name="icon" />
       <div class="s-alert__content">
         <slot />
       </div>
       {#if dismissible}
         <Button icon on:click={dismiss}>
-          <Icon>{closeIcon}</Icon>
+          <slot name="closeIcon">✖</slot>
         </Button>
       {/if}
       {#if border}

@@ -38,10 +38,12 @@ describe('Button', () => {
     expect(button).toHaveStyle({ display: 'none' });
   });
 
-  test('events', async () => {
+  test('on:click when clicked', async () => {
     const mock = jest.fn();
     const { getByRole } = render(html`<${Button} on:click=${mock}>Hello World<//>`);
     const button = getByRole('button');
+
+    expect(mock).not.toBeCalled();
 
     await fireEvent.click(button);
 
