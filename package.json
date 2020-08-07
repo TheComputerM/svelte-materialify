@@ -58,7 +58,7 @@
     "autoprefixer": "^9.8.6",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.2.2",
-    "concurrently": "^5.2.0",
+    "concurrently": "^5.3.0",
     "conventional-changelog-cli": "^2.0.34",
     "copy-and-watch": "^0.1.5",
     "eslint": "^7.6.0",
@@ -77,7 +77,7 @@
     "stylelint": "^13.6.1",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.18.0",
-    "svelte-check": "^1.0.8",
+    "svelte-check": "^1.0.9",
     "svelte-htm": "^1.1.1",
     "svelte-jester": "^1.0.6",
     "svelte-preprocess": "^4.0.10"
