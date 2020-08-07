@@ -15,7 +15,7 @@
     "copy-css": "copy-and-watch dist/global.css site/static",
     "watch:copy-css": "npm run copy-css -- --watch",
     "test": "jest",
-    "lint:css": "stylelint src/**/*.{scss,svelte} --syntax scss",
+    "lint:css": "stylelint src/**/*.scss --syntax scss",
     "lint:css:fix": "stylelint src/**/*.scss --syntax scss --fix",
     "lint:js": "eslint src __tests__ --ext .svelte,.js",
     "lint:js:fix": "eslint src __tests__ --ext .svelte,.js --fix",
