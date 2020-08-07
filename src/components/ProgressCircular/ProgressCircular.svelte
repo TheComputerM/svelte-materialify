@@ -54,7 +54,7 @@
       stroke-dashoffset={strokeDashOffset} />
   </svg>
 
-  <div class="content">
+  <div class="s-progress-circular__content">
     <slot />
   </div>
 </div>

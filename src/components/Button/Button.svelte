@@ -46,7 +46,7 @@
   {disabled}
   use:Ripple={ripple}
   on:click>
-  <span class="text-button">
+  <span class="s-button__content">
     <slot />
   </span>
 </button>

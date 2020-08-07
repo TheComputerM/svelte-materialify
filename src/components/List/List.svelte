@@ -1,10 +1,14 @@
 <script>
+  import { setContext } from 'svelte';
+
   export let outlined = false;
   export let nav = false;
   export let rounded = false;
   export let dense = false;
   export let flat = false;
   export let disabled = false;
+
+  setContext('ListItemOptions', { disabled, flat, dense });
 </script>
 
 <style lang="scss" src="./List.scss">

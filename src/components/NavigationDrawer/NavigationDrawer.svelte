@@ -25,11 +25,11 @@
   class:mini
   class:clipped
   on:hover
-  style="width:{width};{clipped ? clippedStyle : ''};{style}">
+  style="width:{width};{clipped ? clippedStyle : ';'}{style}">
   <slot name="prepend" />
-  <div class="content">
+  <div class="s-navigation-drawer__content">
     <slot />
   </div>
   <slot name="append" />
-  <div class="border" />
+  <div class="s-navigation-drawer__border" />
 </aside>

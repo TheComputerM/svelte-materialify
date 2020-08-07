@@ -43,7 +43,7 @@
     <div class="determinate {color}" class:striped style="width:{value}%" />
   {/if}
 
-  <div class="content">
+  <div class="s-progress-linear__content">
     <slot />
   </div>
 

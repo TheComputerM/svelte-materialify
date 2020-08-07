@@ -1,5 +1,4 @@
 <script>
-
   let classes = '';
   export let size = '48px';
   export let tile = false;

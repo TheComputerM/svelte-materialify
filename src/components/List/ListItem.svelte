@@ -2,13 +2,23 @@
   import { getContext } from 'svelte';
   import Ripple from '../../actions/Ripple';
 
-  const partOfList = getContext('partOfList') ?? false;
+  let disabled = false;
+  let flat = false;
+  let dense = false;
+  const ListItemOptions = getContext('ListItemOptions');
+  const hasParentList = ListItemOptions !== undefined;
+  if (hasParentList) {
+    disabled = ListItemOptions.disabled;
+    flat = ListItemOptions.flat;
+    dense = ListItemOptions.dense;
+  }
 
   let classes = '';
   export let active = false;
   export let activeClass = 'active';
-  export let disabled = false;
-  export let ripple = { active: partOfList };
+  export { disabled, flat, dense };
+  export let link = hasParentList;
+  export let ripple = { active: hasParentList };
   export let style = null;
   export { classes as class };
 </script>
@@ -19,20 +29,20 @@
 
 <div
   role="listitem"
-  tabindex={partOfList ? 0 : -1}
+  tabindex={hasParentList ? 0 : -1}
   class="s-list-item {classes} {active ? activeClass : ''}"
-  class:link={partOfList}
+  class:link
   class:disabled
   aria-selected={active}
   {style}
   on:click
   use:Ripple={ripple}>
   <slot name="left" />
-  <div class="content">
-    <div class="title">
+  <div class="s-list-item__content">
+    <div class="s-list-item__title">
       <slot />
     </div>
-    <div class="subtitle">
+    <div class="s-list-item__subtitle">
       <slot name="subtitle" />
     </div>
   </div>

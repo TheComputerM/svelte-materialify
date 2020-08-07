@@ -2,6 +2,7 @@
   import { ListGroup, ListItem } from '../List';
 
   let classes = '';
+  export let active = true;
   export let items = [];
   export let itemClasses = '';
   export const depth = 0;
@@ -10,7 +11,7 @@
   export { classes as class };
 </script>
 
-<ListGroup class={classes} {style} offset={offsetFunction(depth)}>
+<ListGroup class={classes} {active} {style} offset={offsetFunction(depth)}>
   {#each items as item}
     <slot {item}>
       <ListItem class={itemClasses}>
@@ -19,7 +20,7 @@
       </ListItem>
     </slot>
     {#if item.items}
-      <svelte:self items={item.items} depth={depth + 1} />
+      <svelte:self items={item.items} depth={depth + 1} active={item.active} />
     {/if}
   {/each}
 </ListGroup>

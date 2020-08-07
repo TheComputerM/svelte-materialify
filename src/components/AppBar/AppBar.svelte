@@ -29,10 +29,10 @@
   class:fixed
   class:absolute
   class:collapsed>
-  <div class="wrapper">
+  <div class="s-app-bar__wrapper">
     <slot name="left" />
     {#if !collapsed}
-      <div class="title">
+      <div class="s-app-bar__title">
         <slot name="title" />
       </div>
     {/if}

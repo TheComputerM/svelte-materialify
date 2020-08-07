@@ -11,13 +11,15 @@
   word-break: $card-title-word-break;
   padding: $card-subtitle-padding;
 
-  + :global(.s-card-subtitle),
-  + :global(.s-card-title) {
-    padding-top: $card-adjacent-sibling-text-padding-top;
-    margin-top: $card-title-adjacent-sibling-subtitle-margin-top;
-  }
+  :global {
+    + .s-card-subtitle,
+    + .s-card-title {
+      padding-top: $card-adjacent-sibling-text-padding-top;
+      margin-top: $card-title-adjacent-sibling-subtitle-margin-top;
+    }
 
-  + :global(.s-card-subtitle) {
-    margin-top: $card-title-adjacent-sibling-subtitle-margin-top;
+    + .s-card-subtitle {
+      margin-top: $card-title-adjacent-sibling-subtitle-margin-top;
+    }
   }
 }

@@ -15,7 +15,7 @@
   will-change: transform;
   transition-property: transform, visibility, width;
 
-  .border {
+  .s-navigation-drawer__border {
     position: absolute;
     right: 0;
     top: 0;
@@ -24,7 +24,7 @@
     background-color: var(--theme-dividers);
   }
 
-  .content {
+  .s-navigation-drawer__content {
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
@@ -44,7 +44,7 @@
       right: initial;
     }
 
-    .border {
+    .s-navigation-drawer__border {
       right: auto;
       left: 0;
     }

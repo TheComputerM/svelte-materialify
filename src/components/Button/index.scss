@@ -17,6 +17,27 @@
   transition-property: box-shadow, transform, opacity;
   background-color: var(--theme-app-bar);
 
+  :global {
+    a,
+    .s-icon {
+      color: inherit;
+    }
+  }
+
+  .s-btn__content {
+    display: flex;
+    align-items: center;
+    flex: 1 0 auto;
+    color: inherit;
+    justify-content: inherit;
+    line-height: normal;
+    position: relative;
+    font-size: inherit;
+    font-weight: map-deep-get($headings, 'button', 'font-weight');
+    letter-spacing: map-deep-get($headings, 'button', 'letter-spacing');
+    text-transform: map-deep-get($headings, 'button', 'text-transform');
+  }
+
   &:not(.outlined) {
     &.primary-color,
     &.secondary-color,
@@ -145,25 +166,5 @@
         width: #{$value}px;
       }
     }
-  }
-
-  span {
-    display: flex;
-    align-items: center;
-    flex: 1 0 auto;
-    color: inherit;
-    justify-content: inherit;
-    line-height: normal;
-    position: relative;
-    font-size: inherit;
-  }
-
-  :global(a) {
-    text-decoration: none;
-  }
-
-  :global(a),
-  :global(.s-icon) {
-    color: inherit;
   }
 }

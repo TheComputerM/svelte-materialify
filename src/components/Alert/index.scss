@@ -8,13 +8,72 @@
   position: relative;
   color: var(--theme-text-primary);
 
-  :global(.s-icon),
-  :global(.s-btn) {
-    color: inherit !important;
+  :global {
+    .s-icon,
+    .s-btn {
+      color: inherit !important;
+    }
+
+    .s-icon {
+      align-self: flex-start;
+    }
   }
 
-  :global(.s-icon) {
-    align-self: flex-start;
+  .s-alert__wrapper {
+    align-items: center;
+    border-radius: inherit;
+    display: flex;
+  }
+
+  .s-alert__content {
+    flex: 1 1 auto;
+  }
+
+  .s-alert__border {
+    border-style: solid;
+    border-width: $alert-border-width;
+    content: "";
+    position: absolute;
+
+    &:not(.colored) {
+      opacity: $alert-border-opacity;
+    }
+
+    &.border-left,
+    &.border-right {
+      bottom: 0;
+      top: 0;
+    }
+
+    &.border-bottom,
+    &.border-top {
+      left: 0;
+      right: 0;
+    }
+
+    &.border-left {
+      border-top-left-radius: inherit;
+      border-bottom-left-radius: inherit;
+      left: 0;
+    }
+
+    &.border-right {
+      border-top-right-radius: inherit;
+      border-bottom-right-radius: inherit;
+      right: 0;
+    }
+
+    &.border-top {
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
+      top: 0;
+    }
+
+    &.border-bottom {
+      border-bottom-left-radius: inherit;
+      border-bottom-right-radius: inherit;
+      bottom: 0;
+    }
   }
 
   &:not(.tile) {
@@ -25,7 +84,7 @@
     padding-top: $alert-padding / 2;
     padding-bottom: $alert-padding / 2;
 
-    .alert-border {
+    .s-alert__border {
       border-width: $alert-dense-border-width;
     }
   }
@@ -49,63 +108,6 @@
       pointer-events: none;
       right: 0;
       top: 0;
-    }
-  }
-
-  .wrapper {
-    align-items: center;
-    border-radius: inherit;
-    display: flex;
-
-    .content {
-      flex: 1 1 auto;
-    }
-
-    .alert-border {
-      border-style: solid;
-      border-width: $alert-border-width;
-      content: "";
-      position: absolute;
-
-      &:not(.colored) {
-        opacity: $alert-border-opacity;
-      }
-
-      &.border-left,
-      &.border-right {
-        bottom: 0;
-        top: 0;
-      }
-
-      &.border-bottom,
-      &.border-top {
-        left: 0;
-        right: 0;
-      }
-
-      &.border-left {
-        border-top-left-radius: inherit;
-        border-bottom-left-radius: inherit;
-        left: 0;
-      }
-
-      &.border-right {
-        border-top-right-radius: inherit;
-        border-bottom-right-radius: inherit;
-        right: 0;
-      }
-
-      &.border-top {
-        border-top-left-radius: inherit;
-        border-top-right-radius: inherit;
-        top: 0;
-      }
-
-      &.border-bottom {
-        border-bottom-left-radius: inherit;
-        border-bottom-right-radius: inherit;
-        bottom: 0;
-      }
     }
   }
 }

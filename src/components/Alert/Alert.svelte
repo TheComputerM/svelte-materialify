@@ -39,11 +39,11 @@
     class:outlined
     class:text
     class:tile>
-    <div class="wrapper">
+    <div class="s-alert__wrapper">
       {#if icon}
         <Icon class="mr-4 test">{icon}</Icon>
       {/if}
-      <div class="content">
+      <div class="s-alert__content">
         <slot />
       </div>
       {#if dismissible}
@@ -53,7 +53,7 @@
       {/if}
       {#if border}
         <div
-          class="alert-border border-{border}"
+          class="s-alert__border border-{border}"
           class:colored={coloredBorder} />
       {/if}
     </div>

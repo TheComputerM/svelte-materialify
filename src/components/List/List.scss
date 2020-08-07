@@ -13,14 +13,6 @@
     border: 1px solid currentColor;
   }
 
-  &.flat {
-    :global {
-      .s-list-item::before {
-        display: none;
-      }
-    }
-  }
-
   &.nav {
     padding-left: $list-nav-padding-left;
     padding-right: $list-nav-padding-right;
@@ -50,36 +42,6 @@
     }
   }
 
-  &.dense {
-    :global {
-      .s-subheader {
-        font-size: $list-dense-subheader-font-size;
-        height: $list-dense-subheader-height;
-        padding: $list-dense-subheader-padding;
-      }
-
-      .s-list-group .s-list-item {
-        min-height: $list-dense-min-height;
-
-        .s-icon {
-          margin-top: 8px;
-          margin-bottom: 8px;
-        }
-
-        .content {
-          padding: $list-dense-content-padding;
-
-          .title,
-          .subtitle {
-            font-size: $list-item-dense-title-font-size;
-            font-weight: $list-item-dense-title-font-weight;
-            line-height: $list-item-dense-title-line-height;
-          }
-        }
-      }
-    }
-  }
-
   &.nav,
   &.rounded {
     :global {
@@ -94,6 +56,14 @@
           margin-bottom: $list-nav-rounded-dense-item-margin-bottom;
         }
       }
+    }
+  }
+
+  &.dense {
+    :global(.s-subheader) {
+      font-size: $list-dense-subheader-font-size;
+      height: $list-dense-subheader-height;
+      padding: $list-dense-subheader-padding;
     }
   }
 }

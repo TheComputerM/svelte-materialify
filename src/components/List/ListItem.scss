@@ -11,7 +11,7 @@
   position: relative;
   text-decoration: none;
 
-  .content {
+  .s-list-item__content {
     align-items: center;
     align-self: center;
     display: flex;
@@ -30,8 +30,8 @@
     }
   }
 
-  .title,
-  .subtitle {
+  .s-list-item__title,
+  .s-list-item__subtitle {
     flex: 1 1 100%;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -39,12 +39,12 @@
     line-height: $list-item-title-subtitle-line-height;
   }
 
-  .title {
+  .s-list-item__title {
     align-self: center;
     font-size: $list-item-title-font-size;
   }
 
-  .subtitle {
+  .s-list-item__subtitle {
     font-size: $list-item-subtitle-font-size;
     color: var(--theme-text-secondary);
   }
@@ -90,6 +90,34 @@
   &.disabled {
     pointer-events: none;
     color: var(--theme-text-disabled);
+  }
+
+  &.flat {
+    &::before {
+      display: none;
+    }
+  }
+
+  &.dense {
+    min-height: $list-dense-min-height;
+
+    :global {
+      .s-icon {
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
+    }
+
+    .s-list-item__content {
+      padding: $list-dense-content-padding;
+    }
+
+    .s-list-item__title,
+    .s-list-item__subtitle {
+      font-size: $list-item-dense-title-font-size;
+      font-weight: $list-item-dense-title-font-weight;
+      line-height: $list-item-dense-title-line-height;
+    }
   }
 
   &::before {

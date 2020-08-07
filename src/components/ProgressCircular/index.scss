@@ -24,12 +24,6 @@
     z-index: 1;
   }
 
-  .content {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-  }
-
   .overlay {
     stroke: currentColor;
     z-index: 2;
@@ -50,6 +44,12 @@
       stroke-dashoffset: 0;
     }
   }
+}
+
+.s-progress-circular__content {
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 @keyframes progress-circular-dash {

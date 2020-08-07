@@ -13,21 +13,21 @@
   &.absolute {
     position: absolute;
   }
+}
 
-  .content {
-    position: relative;
-  }
+.s-overlay__scrim {
+  border-radius: inherit;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: inherit;
+  width: 100%;
+  will-change: opacity;
+}
 
-  .scrim {
-    border-radius: inherit;
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: inherit;
-    width: 100%;
-    will-change: opacity;
-  }
+.s-overlay__content {
+  position: relative;
 }

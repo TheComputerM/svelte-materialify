@@ -8,7 +8,6 @@
   const defaults = {
     disabled: false,
     href: '',
-    link: true,
     text: '',
     class: '',
     props: {},
@@ -31,7 +30,7 @@
     {/if}
     <li>
       <slot {item}>
-        {#if item.link}
+        {#if item.href}
           <a
             href={item.href}
             class="breadcrumb-item {item.class}"

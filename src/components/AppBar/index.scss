@@ -8,7 +8,7 @@
   max-width: 100%;
   transition: $app-bar-transition;
 
-  .wrapper {
+  .s-app-bar__wrapper {
     align-items: center;
     display: flex;
     position: relative;
@@ -20,15 +20,15 @@
       width: 48px;
       height: 48px;
     }
+  }
 
-    .title {
-      padding-left: 16px;
-      font-size: 1.25rem;
-      line-height: 1.5;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
+  .s-app-bar__title {
+    padding-left: 16px;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   &:not(.tile) {
@@ -40,19 +40,19 @@
     @include elevation($app-bar-elevation);
   }
 
-  &.dense .wrapper {
+  &.dense .s-app-bar__wrapper {
     padding: 0;
   }
 
   &.prominent {
-    .wrapper {
+    .s-app-bar__wrapper {
       align-items: flex-start;
+    }
 
-      .title {
-        align-self: flex-end;
-        padding-bottom: 6px;
-        padding-top: 0;
-      }
+    .s-app-bar__title {
+      align-self: flex-end;
+      padding-bottom: 6px;
+      padding-top: 0;
     }
   }
 

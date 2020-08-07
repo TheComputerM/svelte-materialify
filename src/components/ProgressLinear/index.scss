@@ -91,19 +91,19 @@
       right: -$progress-linear-stream-border-width * 2;
     }
   }
+}
 
-  .content {
-    align-items: center;
-    display: flex;
-    height: 100%;
-    left: 0;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 2;
-    pointer-events: none;
-  }
+.s-progress-linear__content {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  left: 0;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  pointer-events: none;
 }
 
 @keyframes indeterminate {
