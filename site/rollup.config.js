@@ -4,29 +4,25 @@ import commonjs from '@rollup/plugin-commonjs';
 import svelte from 'rollup-plugin-svelte';
 import babel from '@rollup/plugin-babel';
 import { terser } from 'rollup-plugin-terser';
-import config from 'sapper/config/rollup.js';
+import config from 'sapper/config/rollup';
 import sveltePreprocess from 'svelte-preprocess';
 import { mdsvex } from 'mdsvex';
-import remark_autolink_headings from 'remark-autolink-headings';
+import remarkAutolinkHeadings from 'remark-autolink-headings';
 import pkg from './package.json';
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 
-const onwarn = (warning, onwarn) => (warning.code === 'CIRCULAR_DEPENDENCY'
-    && /[/\\]@sapper[/\\]/.test(warning.message))
-  || onwarn(warning);
+const onwarn = (warning, onwarn) => (warning.code === 'MISSING_EXPORT' && /'preload'/.test(warning.message))
+	|| (warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message))
+	|| onwarn(warning);
 
 const preprocess = [
   mdsvex({
     extension: '.svx',
-    layout: {
-      component: './src/helpers/ComponentLayout.svelte',
-    },
-    remarkPlugins: [
-      remark_autolink_headings,
-    ],
+    layout: './src/helpers/MDXLayout.svelte',
+    remarkPlugins: [remarkAutolinkHeadings],
   }),
   sveltePreprocess({
     scss: {
@@ -105,6 +101,7 @@ export default {
       }),
       svelte({
         generate: 'ssr',
+        hydratable: true,
         dev,
         extensions,
         preprocess,
@@ -114,9 +111,7 @@ export default {
       }),
       commonjs(),
     ],
-    external: Object.keys(pkg.dependencies).concat(
-      require('module').builtinModules,
-    ),
+    external: Object.keys(pkg.dependencies).concat(require('module').builtinModules),
     preserveEntrySignatures: 'strict',
     onwarn,
   },
