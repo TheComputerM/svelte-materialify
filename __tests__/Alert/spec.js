@@ -1,4 +1,4 @@
-import { render, fireEvent } from '@testing-library/svelte';
+import { render, fireEvent, waitFor } from '@testing-library/svelte';
 import Alert from '@s/components/Alert';
 import html from 'svelte-htm';
 
@@ -32,7 +32,8 @@ describe('Alert', () => {
     expect(mock).not.toBeCalled();
 
     await fireEvent.click(dismissBtn);
+    await waitFor(() => expect(alert).not.toBeInTheDocument());
 
-    expect(alert).not.toBeInTheDocument();
+    expect(mock).toHaveBeenCalledTimes(1);
   });
 });

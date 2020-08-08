@@ -1,5 +1,6 @@
 <script>
   import { createEventDispatcher } from 'svelte';
+  import { fade } from 'svelte/transition';
 
   const dispatch = createEventDispatcher();
 
@@ -7,6 +8,8 @@
 
   let classes = '';
   export let visible = true;
+  export let transition = fade;
+  export let transitionOpts = {};
   export let dense = false;
   export let outlined = false;
   export let text = false;
@@ -32,6 +35,7 @@
   <div
     role="alert"
     class="s-alert {classes}"
+    transition:transition={transitionOpts}
     class:dense
     class:outlined
     class:text
@@ -43,7 +47,7 @@
       </div>
       {#if dismissible}
         <Button icon on:click={dismiss}>
-          <slot name="closeIcon">✖</slot>
+          <slot name="close">✖</slot>
         </Button>
       {/if}
       {#if border}
