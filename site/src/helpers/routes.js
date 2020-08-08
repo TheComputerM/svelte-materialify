@@ -4,7 +4,7 @@ export default [
     icon: 'speedometer',
     open: false,
     items: [
-      { text: 'Quick Start', href: '/getting-started/quick-start/' },
+      { text: 'Installation', href: '/getting-started/installation/' },
       { text: 'Contributing', href: '/getting-started/contributing/' },
     ],
   },
