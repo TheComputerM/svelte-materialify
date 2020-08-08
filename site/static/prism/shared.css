@@ -6,8 +6,8 @@ pre[class*="language-"] {
   word-break: normal;
   word-wrap: normal;
   font-family: Fira Code, monospace;
-  font-size: 1em;
-  line-height: 1.5em;
+  font-size: 1rem;
+  line-height: 1.5rem;
 
   -moz-tab-size: 4;
   -o-tab-size: 4;
@@ -32,6 +32,10 @@ pre[class*="language-"] {
   padding: 1.25em 1em;
 }
 
+code[class*="language-"] {
+  padding: 0;
+}
+
 [class*="language-"] .namespace {
   opacity: 0.7;
 }
@@ -39,5 +43,6 @@ pre[class*="language-"] {
 .token,
 code[class*="language-"],
 pre[class*="language-"] {
+  font-weight: 500;
   transition: 200ms ease;
 }
