@@ -33,7 +33,7 @@
     line-height: normal;
     position: relative;
     font-size: inherit;
-    font-weight: map-deep-get($headings, 'button', 'font-weight');
+    font-weight: map-deep-get($headings, 'button', 'weight');
     letter-spacing: map-deep-get($headings, 'button', 'letter-spacing');
     text-transform: map-deep-get($headings, 'button', 'text-transform');
   }
