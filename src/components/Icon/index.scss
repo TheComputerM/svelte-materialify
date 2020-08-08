@@ -17,3 +17,8 @@
     color: var(--theme-icons-inactive);
   }
 }
+
+svg {
+  fill: currentColor;
+  transform: inherit;
+}
