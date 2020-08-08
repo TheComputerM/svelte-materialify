@@ -35,6 +35,16 @@ const preprocess = [
 ];
 const extensions = ['.svelte', '.svx'];
 
+function getCurrentDateAndTime() {
+  const d = new Date;
+  return d.toLocaleDateString() + ' ' + d.toLocaleTimeString().toUpperCase();
+}
+
+const replaced = {
+  'process.env.NODE_ENV': JSON.stringify(mode),
+  '__CurrentDateAndTime__':  getCurrentDateAndTime(),
+}
+
 export default {
   client: {
     input: config.client.input(),
@@ -42,7 +52,7 @@ export default {
     plugins: [
       replace({
         'process.browser': true,
-        'process.env.NODE_ENV': JSON.stringify(mode),
+        ...replaced
       }),
       svelte({
         dev,
@@ -97,7 +107,7 @@ export default {
     plugins: [
       replace({
         'process.browser': false,
-        'process.env.NODE_ENV': JSON.stringify(mode),
+        ...replaced
       }),
       svelte({
         generate: 'ssr',
@@ -123,7 +133,7 @@ export default {
       resolve(),
       replace({
         'process.browser': true,
-        'process.env.NODE_ENV': JSON.stringify(mode),
+        ...replaced
       }),
       commonjs(),
       !dev && terser(),
