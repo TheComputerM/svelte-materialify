@@ -1,4 +1,9 @@
 ---
 name: Installation
 title: Getting Started with Svelte Materialify
+related:
+  - Alerts: /components/alerts
+  - Buttons: /components/buttons
 ---
+
+## Heading 2
