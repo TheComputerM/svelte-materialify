@@ -11,7 +11,7 @@
   export let style = '';
   export { classes as class };
 
-  if (dense) height = '48px';
+  $: if (dense) height = '48px';
   else if (prominent) height = '128px';
 </script>
 
@@ -30,15 +30,13 @@
   class:absolute
   class:collapsed>
   <div class="s-app-bar__wrapper">
-    <slot name="left" />
+    <slot name="icon" />
     {#if !collapsed}
       <div class="s-app-bar__title">
         <slot name="title" />
       </div>
     {/if}
     <slot />
-    <div style="flex-grow:1" />
-    <slot name="right" />
   </div>
   <slot name="extension" />
 </header>
