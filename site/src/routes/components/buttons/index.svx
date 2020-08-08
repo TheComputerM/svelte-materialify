@@ -1,13 +1,22 @@
 ---
-title: Buttons
-layout: component
+name: Buttons
+title: Button Component
 ---
+
+<script>
+  import {Alert} from "svelte-materialify/src";
+</script>
 
 Work in Progress
 
-## Hello
+<Alert border='left' class='red-text' coloredBorder>
+  Hello There
+</Alert>
 
 ```js
 console.log('hello there');
-console.log('general kenobi');
+
+function lolz() {
+  alert('lol');
+}
 ```

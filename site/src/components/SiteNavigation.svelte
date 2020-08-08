@@ -25,34 +25,25 @@
   }
 </script>
 
-<style>
-  a {
-    text-decoration: none;
-  }
-</style>
-
 <AppBar fixed style="width:100%">
-  <div slot="left">
+  <div slot="icon">
     {#if !navigation}
       <Button fab depressed on:click={() => (sidenav = !sidenav)}>
         <Icon class="mdi mdi-menu" />
       </Button>
     {/if}
   </div>
-  <span slot="title">Svelte Materialify</span>
-  <div slot="right">
-    <a
-      href="https://github.com/TheComputerM/svelte-materialify"
-      target="_blank">
-      <Button class="white-text grey darken-3">
-        <Icon class="mdi mdi-github mr-3" />
-        GitHub
-      </Button>
-    </a>
-    <Button fab depressed on:click={toggleTheme} ripple={{ active: 'false' }}>
-      <Icon class="mdi mdi-weather-{theme === 'light' ? 'night' : 'sunny'}" />
+  <a href="/" slot="title" class="text--primary">Svelte Materialify</a>
+  <div style="flex-grow:1" />
+  <a href="https://github.com/TheComputerM/svelte-materialify" target="_blank">
+    <Button class="white-text grey darken-3">
+      <Icon class="mdi mdi-github mr-3" />
+      GitHub
     </Button>
-  </div>
+  </a>
+  <Button fab depressed on:click={toggleTheme} ripple={{ active: 'false' }}>
+    <Icon class="mdi mdi-weather-{theme === 'light' ? 'night' : 'sunny'}" />
+  </Button>
 </AppBar>
 
 <NavigationDrawer
@@ -70,12 +61,11 @@
     <LeftNavigationDrawer />
   </List>
 </NavigationDrawer>
-{#if sidenav}
-  <Overlay
-    zIndex="3"
-    on:click={() => (sidenav = false)}
-    fadeOptions={{ duration: 250 }} />
-{/if}
+<Overlay
+  zIndex="3"
+  active={!navigation && sidenav}
+  on:click={() => (sidenav = false)}
+  fadeOptions={{ duration: 250 }} />
 
 {#if navigation}
   <NavigationDrawer style="height:100vh;" right fixed clipped>

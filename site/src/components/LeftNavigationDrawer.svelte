@@ -19,7 +19,10 @@
     function openCollapsedNavigation(parent) {
       parent.items.find(function (child) {
         if (child.items) openCollapsedNavigation(child, activeLink);
-        if ((child.href || '').replace(/\//g, "") === activeLink || child.open) {
+        if (
+          (child.href || "").replace(/\//g, "") === activeLink ||
+          child.open
+        ) {
           parent.open = true;
           return true;
         }
@@ -39,42 +42,38 @@
   }
 </style>
 
-{#if visible}
-  <div transition:slide={{ duration: 500 }}>
-    <ListGroup offset={depth ? `${(depth + 1) * 32}px` : false}>
-      {#each items as item}
-        {#if item.items}
-          <ListItem on:click={() => (item.open = !item.open)}>
-            <div slot="left">
-              {#if item.icon}
-                <Icon class="mdi mdi-{item.icon}" />
-              {/if}
-            </div>
-            {item.text}
-            <div slot="right">
-              <Icon
-                class="mdi mdi-chevron-down"
-                style={item.open ? 'transform: rotateZ(180deg)' : ''} />
-            </div>
-          </ListItem>
+<ListGroup active={visible} offset={depth ? `${(depth + 1) * 32}px` : false}>
+  {#each items as item}
+    {#if item.items}
+      <ListItem dense on:click={() => (item.open = !item.open)}>
+        <div slot="left">
+          {#if item.icon}
+            <Icon class="mdi mdi-{item.icon}" />
+          {/if}
+        </div>
+        {item.text}
+        <div slot="right">
+          <Icon
+            class="mdi mdi-chevron-down"
+            style={item.open ? 'transform: rotateZ(180deg)' : ''} />
+        </div>
+      </ListItem>
 
-          <svelte:self
-            items={item.items}
-            depth={depth + 1}
-            bind:visible={item.open} />
-        {:else}
-          <a href={item.href}>
-            <ListItem active={item.href.replace(/\//g, '') === activeLink}>
-              <div slot="left">
-                {#if item.icon}
-                  <Icon class="mdi mdi-{item.icon}" />
-                {/if}
-              </div>
-              {item.text}
-            </ListItem>
-          </a>
-        {/if}
-      {/each}
-    </ListGroup>
-  </div>
-{/if}
+      <svelte:self
+        items={item.items}
+        depth={depth + 1}
+        bind:visible={item.open} />
+    {:else}
+      <a href={item.href}>
+        <ListItem active={item.href.replace(/\//g, '') === activeLink}>
+          <div slot="left">
+            {#if item.icon}
+              <Icon class="mdi mdi-{item.icon}" />
+            {/if}
+          </div>
+          {item.text}
+        </ListItem>
+      </a>
+    {/if}
+  {/each}
+</ListGroup>

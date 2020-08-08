@@ -11,14 +11,15 @@
     Svelte Materialify
     <small class="text-h5 d-block text--secondary">🔨 Under Construction</small>
   </h1>
-  <br /><br>
-  <a href="/getting-started/quick-start/">
+  <br />
+  <br />
+  <a href="https://github.com/TheComputerM/svelte-materialify" target="_blank">
     <Button class="white-text grey darken-4" size="large">
       <Icon class="mdi mdi-github mr-2" />
       GitHub
     </Button>
   </a>
-  <a href="/getting-started/quick-start/">
+  <a href="/getting-started/installation/">
     <Button size="large">
       Go To Documentation
       <Icon class="mdi mdi-open-in-new ml-2" />
