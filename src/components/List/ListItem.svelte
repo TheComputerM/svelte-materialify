@@ -33,6 +33,8 @@
   class="s-list-item {classes} {active ? activeClass : ''}"
   class:link
   class:disabled
+  class:flat
+  class:dense
   aria-selected={active}
   {style}
   on:click

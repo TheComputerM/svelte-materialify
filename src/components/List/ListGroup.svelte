@@ -1,6 +1,6 @@
 <script>
   import { slide as slideTransition } from 'svelte/transition';
-  import { setContext } from 'svelte';
+  import { setContext, getContext } from 'svelte';
 
   let classes = 'primary-text';
   export let active = true;
@@ -12,7 +12,9 @@
   export let style = '';
   export { classes as class };
 
-  setContext('ListItemOptions', { disabled, flat, dense });
+  if (getContext('ListItemOptions') === undefined) {
+    setContext('ListItemOptions', { disabled, flat, dense });
+  }
 </script>
 
 <style lang="scss" src="./ListGroup.scss">
