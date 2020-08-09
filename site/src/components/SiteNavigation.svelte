@@ -2,6 +2,7 @@
   export let theme;
   export let navigation;
 
+  import { theme as themeStore } from '../helpers/stores';
   import {
     AppBar,
     Icon,
@@ -10,18 +11,17 @@
     List,
     Divider,
     Overlay,
-  } from "svelte-materialify/src/";
+  } from 'svelte-materialify/src/';
 
-  import LeftNavigationDrawer from "./LeftNavigationDrawer.svelte";
-  import RightNavigationDrawer from "./RightNavigationDrawer.svelte";
+  import LeftNavigationDrawer from './LeftNavigationDrawer.svelte';
+  import RightNavigationDrawer from './RightNavigationDrawer.svelte';
 
   let sidenav = false;
 
   function toggleTheme() {
-    if (theme === "light") theme = "dark";
-    else theme = "light";
-
-    window.localStorage.setItem("theme", theme);
+    if (theme === 'light') theme = 'dark';
+    else theme = 'light';
+    $themeStore = theme;
   }
 </script>
 
