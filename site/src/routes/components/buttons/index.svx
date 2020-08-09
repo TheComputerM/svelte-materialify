@@ -1,5 +1,4 @@
 ---
-name: Buttons
 title: Button Component
 ---
 

@@ -1,9 +1,18 @@
 ---
-name: Installation
 title: Getting Started with Svelte Materialify
 related:
   - Alerts: /components/alerts
   - Buttons: /components/buttons
 ---
+# Installation
 
-## Heading 2
+Get Started with Svelte Materialify, the best material UI component library for Svelte
+
+## Manual Installation
+
+If you do not want to use SSR components then only installing `svelte-materialify` should be
+fine.
+
+```shell
+$ npm i -D svelte-materialify
+```
