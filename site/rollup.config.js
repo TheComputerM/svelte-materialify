@@ -7,22 +7,69 @@ import { terser } from 'rollup-plugin-terser';
 import config from 'sapper/config/rollup';
 import sveltePreprocess from 'svelte-preprocess';
 import { mdsvex } from 'mdsvex';
-import remarkAutolinkHeadings from 'remark-autolink-headings';
+import Prism from 'prismjs';
+import loadLanguages from 'prismjs/components/';
 import pkg from './package.json';
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 
-const onwarn = (warning, onwarn) => (warning.code === 'MISSING_EXPORT' && /'preload'/.test(warning.message))
-	|| (warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message))
-	|| onwarn(warning);
+const onwarn = (warning, onwarn) =>
+  (warning.code === 'MISSING_EXPORT' && /'preload'/.test(warning.message)) ||
+  (warning.code === 'CIRCULAR_DEPENDENCY' &&
+    /[/\\]@sapper[/\\]/.test(warning.message)) ||
+  onwarn(warning);
 
+loadLanguages(['bash', 'scss']);
 const preprocess = [
   mdsvex({
     extension: '.svx',
     layout: './src/helpers/MDXLayout.svelte',
-    remarkPlugins: [remarkAutolinkHeadings],
+    remarkPlugins: [
+      require('remark-sectionize'),
+      [
+        require('remark-class-names'),
+        {
+          classMap: {
+            'heading[depth=1]': 'heading text-h3 mb-4',
+            'heading[depth=2]': 'heading text-h4 mb-3',
+            'heading[depth=3]': 'heading text-h5 mb-2',
+            'link': 'app-link'
+          },
+        },
+      ],
+      require('remark-external-links'),
+      require('remark-slug'),
+      [
+        require('remark-autolink-headings'),
+        {
+          content: {
+            type: 'element',
+            tagName: 'i',
+            properties: { className: ['mdi', 'mdi-pound'] },
+          },
+        },
+      ],
+    ],
+    highlight: {
+      highlighter: (code, lang) => {
+        if (lang && Prism.languages[lang]) {
+          const parsed = Prism.highlight(code, Prism.languages[lang]);
+          const escaped = parsed
+            .replace(/{/g, '&#123;')
+            .replace(/}/g, '&#125;');
+          const langTag = 'language-' + lang;
+          const codeTag = `<code class=${langTag}>${escaped}</code>`;
+          const pre = `<pre class=${langTag}>${codeTag}</pre>`;
+          return `<Components.CodeBlock lang='${lang}'>${pre}</Components.CodeBlock>`;
+        } else {
+          const escaped = code.replace(/{/g, '&#123;').replace(/}/g, '&#125;');
+          const pre = `<pre><code>${escaped}</code></pre>`;
+          return `<Components.CodeBlock>${pre}</Components.CodeBlock>`;
+        }
+      },
+    },
   }),
   sveltePreprocess({
     scss: {
@@ -36,14 +83,14 @@ const preprocess = [
 const extensions = ['.svelte', '.svx'];
 
 function getCurrentDateAndTime() {
-  const d = new Date;
-  return d.toLocaleDateString() + ' ' + d.toLocaleTimeString().toUpperCase();
+  const d = new Date();
+  return `${d.toLocaleDateString()} ${d.toLocaleTimeString().toUpperCase()}`;
 }
 
 const replaced = {
   'process.env.NODE_ENV': JSON.stringify(mode),
-  '__CurrentDateAndTime__':  getCurrentDateAndTime(),
-}
+  __CurrentDateAndTime__: getCurrentDateAndTime(),
+};
 
 export default {
   client: {
@@ -52,7 +99,7 @@ export default {
     plugins: [
       replace({
         'process.browser': true,
-        ...replaced
+        ...replaced,
       }),
       svelte({
         dev,
@@ -67,8 +114,8 @@ export default {
       }),
       commonjs(),
 
-      legacy
-        && babel({
+      legacy &&
+        babel({
           extensions: ['.js', '.mjs', '.html', '.svelte'],
           babelHelpers: 'runtime',
           exclude: ['node_modules/@babel/**'],
@@ -91,8 +138,8 @@ export default {
           ],
         }),
 
-      !dev
-        && terser({
+      !dev &&
+        terser({
           module: true,
         }),
     ],
@@ -107,7 +154,7 @@ export default {
     plugins: [
       replace({
         'process.browser': false,
-        ...replaced
+        ...replaced,
       }),
       svelte({
         generate: 'ssr',
@@ -121,7 +168,9 @@ export default {
       }),
       commonjs(),
     ],
-    external: Object.keys(pkg.dependencies).concat(require('module').builtinModules),
+    external: Object.keys(pkg.dependencies).concat(
+      require('module').builtinModules
+    ),
     preserveEntrySignatures: 'strict',
     onwarn,
   },
@@ -133,7 +182,7 @@ export default {
       resolve(),
       replace({
         'process.browser': true,
-        ...replaced
+        ...replaced,
       }),
       commonjs(),
       !dev && terser(),
