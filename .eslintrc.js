@@ -35,5 +35,6 @@ module.exports = {
   },
   rules: {
     camelcase: ['error', { allow: ['[_][a-z]{1,5}$'] }],
+    'no-nested-ternary': 'off',
   },
 };
