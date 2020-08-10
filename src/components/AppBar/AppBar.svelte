@@ -1,6 +1,6 @@
 <script>
   let classes = '';
-  export let height = '56px';
+  let defaultHeight = '56px';
   export let tile = false;
   export let flat = false;
   export let dense = false;
@@ -9,10 +9,16 @@
   export let absolute = false;
   export let collapsed = false;
   export let style = '';
+  export { defaultHeight as height };
   export { classes as class };
 
-  $: if (dense) height = '48px';
-  else if (prominent) height = '128px';
+  let height = defaultHeight;
+
+  $: {
+    if (dense) height = '48px';
+    else if (prominent) height = '128px';
+    else height = defaultHeight;
+  }
 </script>
 
 <style lang="scss" src="./index.scss">
