@@ -28,7 +28,11 @@
 <AppBar fixed style="width:100%">
   <div slot="icon">
     {#if !navigation}
-      <Button fab depressed on:click={() => (sidenav = !sidenav)}>
+      <Button
+        fab
+        depressed
+        on:click={() => (sidenav = !sidenav)}
+        aria-label="Open Menu">
         <Icon class="mdi mdi-menu" />
       </Button>
     {/if}
@@ -41,7 +45,12 @@
       GitHub
     </Button>
   </a>
-  <Button fab depressed on:click={toggleTheme} ripple={{ active: 'false' }}>
+  <Button
+    fab
+    depressed
+    on:click={toggleTheme}
+    ripple={{ active: 'false' }}
+    aria-label="Toggle Theme">
     <Icon class="mdi mdi-weather-{theme === 'light' ? 'night' : 'sunny'}" />
   </Button>
 </AppBar>

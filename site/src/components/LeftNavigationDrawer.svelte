@@ -10,12 +10,14 @@
   export let items = routes;
   export let depth = 0;
   export let visible = true;
+  let offset = `${(depth + 1) * 32}px`;
 
   page.subscribe((value) => {
     activeLink = value.path.replace(/\//g, "");
   });
 
   if (depth === 0) {
+    offset = false;
     function openCollapsedNavigation(parent) {
       parent.items.find(function (child) {
         if (child.items) openCollapsedNavigation(child, activeLink);
@@ -42,7 +44,7 @@
   }
 </style>
 
-<ListGroup active={visible} offset={depth ? `${(depth + 1) * 32}px` : false}>
+<ListGroup active={visible} {offset}>
   {#each items as item}
     {#if item.items}
       <ListItem dense on:click={() => (item.open = !item.open)}>

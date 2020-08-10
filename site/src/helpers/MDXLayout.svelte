@@ -12,7 +12,9 @@
   onMount(() => {
     document.querySelectorAll('a').forEach((a) => {
       if (!a.hash || !document.querySelectorAll(a.hash).length) return;
-      a.href = window.location + a.hash;
+      a.href = a.href = window.location.origin + window.location.pathname + a.hash
+      a.setAttribute('aria-hidden', true);
+      a.setAttribute('tabindex', -1);
     });
   });
 
@@ -62,11 +64,10 @@
 </svelte:head>
 
 <section class="markdown-container pa-4 pa-sm-6 pa-md-8">
-
   <slot />
   {#if related}
     <h2 id="ready-for-more" class="heading text-h4 mb-3">
-      <a href="#ready-for-more">
+      <a href="#ready-for-more" aria-hidden="true">
         <i class="mdi mdi-pound" />
       </a>
       Ready For More?

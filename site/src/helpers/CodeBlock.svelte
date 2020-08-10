@@ -57,8 +57,8 @@
 
 <div class="code-block" use:copy>
   <slot />
-  <Button fab depressed size="small" style="position:absolute">
+  <Button fab depressed size="small" style="position:absolute" aria-label="Copy">
     <Icon size="20px" class="mdi mdi-content-copy" />
   </Button>
-  <span>{lang}</span>
+  <span aria-hidden="true">{lang}</span>
 </div>
