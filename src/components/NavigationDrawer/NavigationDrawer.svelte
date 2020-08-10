@@ -5,6 +5,7 @@
   export let right = false;
   export let mini = false;
   export let clipped = false;
+  export let noBorder = false;
   export let miniWidth = '56px';
   export let clippedHeight = '56px';
   export let style = '';
@@ -31,5 +32,7 @@
     <slot />
   </div>
   <slot name="append" />
-  <div class="s-navigation-drawer__border" />
+  {#if !noBorder}
+    <div class="s-navigation-drawer__border" />
+  {/if}
 </aside>
