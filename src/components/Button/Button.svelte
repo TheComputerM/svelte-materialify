@@ -11,13 +11,10 @@
   export let depressed = false;
   export let outlined = false;
   export let rounded = false;
-  export let disabled = false;
+  export let disabled = null;
   export let active = false;
   export let type = 'button';
   export let style = null;
-  export let form = null;
-  export let name = null;
-  export let value = null;
   export let ripple = {};
   export { classes as class };
 </script>
@@ -28,6 +25,7 @@
 
 <button
   class="s-btn size-{size} {classes}"
+  {...$$restProps}
   class:fab
   class:icon
   class:block
@@ -40,10 +38,8 @@
   class:active
   {type}
   {style}
-  {form}
-  {name}
-  {value}
   {disabled}
+  aria-disabled={disabled}
   use:Ripple={ripple}
   on:click>
   <span class="s-btn__content">
