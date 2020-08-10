@@ -1,20 +1,25 @@
 <script>
-  import { slide as slideTransition } from 'svelte/transition';
-  import { setContext, getContext } from 'svelte';
+  import { slide } from 'svelte/transition';
+  import { getContext, setContext } from 'svelte';
 
-  let classes = 'primary-text';
-  export let active = true;
-  export let slide = {};
-  export let offset = false;
-  export let disabled = false;
-  export let flat = false;
-  export let dense = false;
+  const hasParentList = getContext('hasParentList');
+  const ListItemOptions = getContext('ListItemOptions');
+
+  let classes = '';
+  export let activeClass = 'primary-text';
+  export let active = false;
+  export let transition = slide;
+  export let transitionOpts = {};
+  export let offset = null;
+  export let disabled = null;
   export let style = '';
   export { classes as class };
 
-  if (getContext('ListItemOptions') === undefined) {
-    setContext('ListItemOptions', { disabled, flat, dense });
+  if (hasParentList) {
+    $ListItemOptions.disabled = disabled ?? $ListItemOptions.disabled;
   }
+
+  setContext('hasParentListGroup', true);
 </script>
 
 <style lang="scss" src="./ListGroup.scss">
@@ -23,12 +28,12 @@
 
 {#if active}
   <div
-    role="listbox"
-    class="s-list-group {classes}"
+    transition:transition={transitionOpts}
+    role={hasParentList ? 'group' : 'listbox'}
+    aria-disabled={disabled}
+    class="s-list-group {[classes, active ? activeClass : ''].join(' ')}"
     class:offset
-    class:disabled
-    transition:slideTransition={slide}
-    style="--offset:{offset};{style}">
+    style="--offset: {offset};{style}">
     <slot />
   </div>
 {/if}

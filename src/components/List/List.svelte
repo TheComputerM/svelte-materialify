@@ -1,14 +1,20 @@
 <script>
   import { setContext } from 'svelte';
+  import { writable } from 'svelte/store';
 
-  export let outlined = false;
+  let classes = '';
+  export let dense = null;
+  export let disabled = null;
+  export let flat = null;
   export let nav = false;
+  export let outlined = false;
   export let rounded = false;
-  export let dense = false;
-  export let flat = false;
-  export let disabled = false;
+  export let style = null;
+  export { classes as class };
 
-  setContext('ListItemOptions', { disabled, flat, dense });
+  const ListItemOptions = writable({ dense, disabled, flat });
+  setContext('ListItemOptions', ListItemOptions);
+  setContext('hasParentList', true);
 </script>
 
 <style lang="scss" src="./List.scss">
@@ -17,12 +23,12 @@
 
 <div
   role="list"
-  class="s-list"
-  class:outlined
-  class:nav
-  class:rounded
+  class="s-list {classes}"
   class:dense
-  class:flat
-  class:disabled>
+  class:disabled
+  class:nav
+  class:outlined
+  class:rounded
+  {style}>
   <slot />
 </div>

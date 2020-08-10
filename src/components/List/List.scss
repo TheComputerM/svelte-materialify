@@ -8,9 +8,18 @@
   padding-top: $list-subheader-padding-top;
   position: static;
 
-  &.outlined {
-    box-shadow: none;
-    border: 1px solid currentColor;
+  &.disabled {
+    pointer-events: none;
+  }
+
+  &.dense {
+    :global {
+      .s-subheader {
+        font-size: $list-dense-subheader-font-size;
+        height: $list-dense-subheader-height;
+        padding: $list-dense-subheader-padding;
+      }
+    }
   }
 
   &.nav {
@@ -18,8 +27,9 @@
     padding-right: $list-nav-padding-right;
 
     :global {
-      .s-list-group .s-list-item {
+      .s-list-item {
         padding: $list-nav-item-padding;
+        border-radius: $list-nav-border-radius;
 
         &::before {
           border-radius: $list-nav-border-radius;
@@ -28,42 +38,20 @@
     }
   }
 
-  &.rounded {
-    padding: 8px;
-
-    :global {
-      .s-list-group .s-list-item {
-        border-radius: 32px !important;
-
-        &::before {
-          border-radius: 32px !important;
-        }
-      }
-    }
-  }
-
   &.nav,
   &.rounded {
     :global {
-      .s-list-group .s-list-item:not(:last-child):not(:only-child) {
+      .s-list-item:not(:last-child):not(:only-child) {
         margin-bottom: $list-nav-rounded-item-margin-bottom;
       }
-    }
 
-    &.dense {
-      :global {
-        .s-list-group .s-list-item:not(:last-child):not(:only-child) {
-          margin-bottom: $list-nav-rounded-dense-item-margin-bottom;
-        }
+      .s-list-item.dense:not(:last-child):not(:only-child) {
+        margin-bottom: $list-nav-rounded-dense-item-margin-bottom;
       }
     }
   }
 
-  &.dense {
-    :global(.s-subheader) {
-      font-size: $list-dense-subheader-font-size;
-      height: $list-dense-subheader-height;
-      padding: $list-dense-subheader-padding;
-    }
+  &.rounded {
+    padding: 8px;
   }
 }

@@ -1,4 +1,4 @@
-@import "./variables";
+@import './variables';
 
 .s-list-item {
   align-items: center;
@@ -67,7 +67,7 @@
       min-width: $list-item-child-min-width;
     }
 
-    [slot="left"] {
+    [slot='left'] {
       .s-avatar {
         margin-right: $list-item-avatar-first-child-margin;
       }
@@ -82,9 +82,26 @@
     cursor: pointer;
     user-select: none;
 
+    &::before {
+      background-color: currentColor;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      content: '';
+      pointer-events: none;
+      position: absolute;
+      opacity: 0;
+      transition: all 0.3s map-get($transitions, 'swing') 0s;
+    }
+
     &:not(.active):hover::before {
       opacity: 0.04;
     }
+  }
+
+  &.selectable {
+    user-select: auto;
   }
 
   &.disabled {
@@ -120,21 +137,8 @@
     }
   }
 
-  &::before {
-    background-color: currentColor;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    content: "";
-    pointer-events: none;
-    position: absolute;
-    opacity: 0;
-    transition: all 0.3s map-get($transitions, "swing") 0s;
-  }
-
   &::after {
-    content: "";
+    content: '';
     min-height: inherit;
     font-size: 0;
   }
