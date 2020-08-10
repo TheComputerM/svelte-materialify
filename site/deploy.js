@@ -12,6 +12,7 @@ const client = new NetlifyAPI(process.env.NETLIFY_ACCESS_TOKEN);
     {
       branch: 'docs',
       message: `Deployed at ${new Date().toUTCString()}`,
+      configPath: './netlify.toml',
     },
   );
   console.log(deploy);
