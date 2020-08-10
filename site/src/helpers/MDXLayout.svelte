@@ -10,9 +10,9 @@
   import { onMount } from 'svelte';
 
   onMount(() => {
-    document.querySelectorAll('a').forEach((a) => {
+    document.querySelectorAll('.markdown-container a').forEach((a) => {
       if (!a.hash || !document.querySelectorAll(a.hash).length) return;
-      a.href = a.href = window.location.origin + window.location.pathname + a.hash
+      a.href = window.location.origin + window.location.pathname + a.hash;
       a.setAttribute('aria-hidden', true);
       a.setAttribute('tabindex', -1);
     });
@@ -57,6 +57,9 @@
     margin-left: 4px;
     font-size: inherit;
   }
+  .markdown-container > section section {
+    margin-bottom: 3rem;
+  }
 </style>
 
 <svelte:head>
@@ -66,24 +69,26 @@
 <section class="markdown-container pa-4 pa-sm-6 pa-md-8">
   <slot />
   {#if related}
-    <h2 id="ready-for-more" class="heading text-h4 mb-3">
-      <a href="#ready-for-more" aria-hidden="true">
-        <i class="mdi mdi-pound" />
-      </a>
-      Ready For More?
-    </h2>
-    <Row class="justify-space-between">
-      {#each related as item}
-        <ReadyForMore
-          href={Object.values(item)[0]}
-          name={Object.keys(item)[0]} />
-      {/each}
-    </Row>
+    <section>
+      <h2 id="ready-for-more" class="heading text-h4 mb-3">
+        <a href="#ready-for-more" aria-hidden="true">
+          <i class="mdi mdi-pound" />
+        </a>
+        Ready For More?
+      </h2>
+      <Row class="justify-space-between">
+        {#each related as item}
+          <ReadyForMore href={Object.values(item)[0]} name={Object.keys(item)[0]} />
+        {/each}
+      </Row>
+    </section>
   {/if}
   <div class="mt-16 d-flex justify-space-between blue-grey-text text-darken-1">
     <span>
       <b>Edit This Page on</b>
       <a
+        class="app-link"
+        rel="noopener"
         href="https://github.com/TheComputerM/svelte-materialify/tree/master/site/src/routes{$page.path}">
         GitHub
       </a>

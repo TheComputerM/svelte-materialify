@@ -4,15 +4,80 @@ related:
   - Alerts: /components/alerts
   - Buttons: /components/buttons
 ---
+
 # Installation
 
 Get Started with Svelte Materialify, the best material UI component library for Svelte
 
-## Manual Installation
+## Minimal Install
 
 If you do not want to use SSR components then only installing `svelte-materialify` should be
 fine.
 
 ```shell
-$ npm i -D svelte-materialify
+$ npm i svelte-materialify
 ```
+
+## Advanced Install
+
+If you want finer control over Svelte Materialify and installation you want to install all its peer dependencies.
+
+```shell
+$ npm i -D svelte-materialify svelte-preprocess sass
+```
+
+Then create a **\_material-theme.scss** file and place it in any folder, lets put it in a
+folder called theme. Then include the path in the preprocess function in your __rollup.config.js__ (likewise follow the same in webpack but for svelte-loader).
+
+### Svelte
+
+```js
+import sveltePreprocess from "svelte-preprocess";
+
+const preprocess = sveltePreprocess({
+  scss: {
+    includePaths: ["theme"],
+  }
+});
+
+export default {
+  // ...,
+  plugins: [
+    svelte({ preprocess }),
+    // ...
+  ]
+}
+```
+
+### Sapper Integration
+```js
+import sveltePreprocess from "svelte-preprocess";
+
+const preprocess = sveltePreprocess({
+  scss: {
+    includePaths: ["theme"],
+  }
+});
+
+export default {
+  client: {
+    plugins: [
+      svelte({
+        preprocess,
+        // ...
+      }),
+  },
+  server: {
+    plugins: [
+      svelte({
+        preprocess,
+        // ...
+      }),
+    ],
+  },
+};
+```
+
+Now _you_ can also use scss styles in your own components. Learn more about
+[svelte-preprocess](https://github.com/sveltejs/svelte-preprocess/blob/master/docs/usage.md).
+

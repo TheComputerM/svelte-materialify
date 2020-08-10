@@ -74,7 +74,12 @@
   fadeOptions={{ duration: 250 }} />
 
 {#if navigation}
-  <NavigationDrawer style="height:100vh;" right fixed clipped>
+  <NavigationDrawer
+    style="height:100vh;background:var(--theme-surface)"
+    right
+    fixed
+    clipped
+    noBorder>
     <RightNavigationDrawer />
   </NavigationDrawer>
 {/if}
