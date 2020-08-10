@@ -18,7 +18,7 @@
         background-color: $value !important;
         border-color: $value !important;
       }
-      .#{$color}.text-#{$color_variant} {
+      .#{$color}-text.text-#{$color_variant} {
         color: $value !important;
         caret-color: $value !important;
       }
