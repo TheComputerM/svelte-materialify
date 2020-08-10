@@ -28,18 +28,17 @@
 <AppBar fixed style="width:100%">
   <div slot="icon">
     {#if !navigation}
-      <Button
-        fab
-        depressed
-        on:click={() => (sidenav = !sidenav)}
-        aria-label="Open Menu">
+      <Button fab depressed on:click={() => (sidenav = !sidenav)} aria-label="Open Menu">
         <Icon class="mdi mdi-menu" />
       </Button>
     {/if}
   </div>
   <a href="/" slot="title" class="text--primary">Svelte Materialify</a>
   <div style="flex-grow:1" />
-  <a href="https://github.com/TheComputerM/svelte-materialify" target="_blank">
+  <a
+    href="https://github.com/TheComputerM/svelte-materialify"
+    target="_blank"
+    rel="noopener">
     <Button class="white-text grey darken-3">
       <Icon class="mdi mdi-github mr-3" />
       GitHub
@@ -61,9 +60,7 @@
   clipped>
   <br />
   <div class="d-flex justify-center">
-    <Button outlined rounded class="blue-text" size="small">
-      Become A Sponsor
-    </Button>
+    <Button outlined rounded class="blue-text" size="small">Become A Sponsor</Button>
   </div>
   <br />
   <List nav dense>

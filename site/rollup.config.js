@@ -17,8 +17,7 @@ const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 
 const onwarn = (warning, onwarn) =>
   (warning.code === 'MISSING_EXPORT' && /'preload'/.test(warning.message)) ||
-  (warning.code === 'CIRCULAR_DEPENDENCY' &&
-    /[/\\]@sapper[/\\]/.test(warning.message)) ||
+  (warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message)) ||
   onwarn(warning);
 
 loadLanguages(['bash', 'scss']);
@@ -35,11 +34,16 @@ const preprocess = [
             'heading[depth=1]': 'heading text-h3 mb-4',
             'heading[depth=2]': 'heading text-h4 mb-3',
             'heading[depth=3]': 'heading text-h5 mb-2',
-            'link': 'app-link'
+            link: 'app-link',
           },
         },
       ],
-      require('remark-external-links'),
+      [
+        require('remark-external-links'),
+        {
+          rel: ['noopener', 'noreferrer'],
+        },
+      ],
       require('remark-slug'),
       [
         require('remark-autolink-headings'),
@@ -56,9 +60,7 @@ const preprocess = [
       highlighter: (code, lang) => {
         if (lang && Prism.languages[lang]) {
           const parsed = Prism.highlight(code, Prism.languages[lang]);
-          const escaped = parsed
-            .replace(/{/g, '&#123;')
-            .replace(/}/g, '&#125;');
+          const escaped = parsed.replace(/{/g, '&#123;').replace(/}/g, '&#125;');
           const langTag = 'language-' + lang;
           const codeTag = `<code class=${langTag}>${escaped}</code>`;
           const pre = `<pre class=${langTag}>${codeTag}</pre>`;
@@ -168,9 +170,7 @@ export default {
       }),
       commonjs(),
     ],
-    external: Object.keys(pkg.dependencies).concat(
-      require('module').builtinModules
-    ),
+    external: Object.keys(pkg.dependencies).concat(require('module').builtinModules),
     preserveEntrySignatures: 'strict',
     onwarn,
   },
