@@ -17,6 +17,10 @@
     .s-icon {
       align-self: flex-start;
     }
+
+    [slot='icon'] {
+      margin-right: $spacer * 4;
+    }
   }
 
   .s-alert__wrapper {
