@@ -29,6 +29,8 @@
     list-style-type: none;
   }
 
+  li a {color: inherit}
+
   li {
     color: var(--theme-text-disabled);
     border-left: 2px solid rgba(160, 160, 160, 0.5);
@@ -38,14 +40,10 @@
     color: #1867c0;
     border-left-color: inherit;
   }
-
-  a {
-    color: inherit;
-  }
 </style>
 
 <h5 class="mb-3 mt-6">Contents</h5>
-<ul id="toc" class="pl-4">
+<ul id="toc" class="pl-4" aria-hidden="true">
   {#each links as link}
     <li class="{link.padding} pt-1 pb-1 text-body-2">
       <a href={link.href}>{link.text}</a>
