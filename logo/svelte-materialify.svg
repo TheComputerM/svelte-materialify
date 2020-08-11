@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:export-ydpi="70.945862"
+   inkscape:export-xdpi="70.945862"
+   inkscape:export-filename="C:\Users\mudit\Desktop\svelte-materialify\logo-512.png"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="svelte-materialify.svg"
+   version="1.1"
+   viewBox="0 0 692.81 665.03"
+   data-name="Layer 1"
+   id="Layer_1">
+  <metadata
+     id="metadata13">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:current-layer="Layer_1"
+     inkscape:window-maximized="1"
+     inkscape:window-y="-8"
+     inkscape:window-x="-8"
+     inkscape:cy="298.3747"
+     inkscape:cx="-80.376072"
+     inkscape:zoom="0.70710678"
+     showgrid="false"
+     id="namedview11"
+     inkscape:window-height="705"
+     inkscape:window-width="1366"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <defs
+     id="defs4">
+    <style
+       id="style2">.cls-1{fill:#23b5b5;}.cls-2{fill:#fe3e00;}</style>
+  </defs>
+  <path
+     style="fill:#600dff;fill-opacity:1"
+     id="path8"
+     d="m 692.81,187.59274 c -1.08,29.81 -2.1,59.63 -3.25,89.45 -0.78,20.34 -1.81,40.68 -2.6,61 q -2.48,62.93 -4.82,125.86 c -0.84,21.57 -1.8,43.14 -2.67,64.72 -1.52,37.46 -2.81,74.93 -4.59,112.38 -0.83,17.44 -21.16,31.72 -39.95,19.4 q -45.6,-29.86 -91.22,-59.65 -130.67,-84.99 -261.38,-169.89 c -12.36,-8 -24.47,-16.48 -37.14,-24 -23.36,-13.83 -15.49,-38.81 3,-48 61,-30.26 121.4,-61.59 182,-92.53 30.75,-15.69 61.45,-31.51 92.26,-47.1 q 66.54,-33.68 133.24,-67.06 c 14.6,-7.3 32.68,0.13 36.35,15.36 1.53,6.34 0.25,13.34 0.25,20 z"
+     class="cls-2" />
+  <path
+     style="fill:#ff3c00;fill-opacity:1"
+     id="path6"
+     d="m 462.08628,38.229246 c -1.08,29.82 -2.1,59.64 -3.25,89.460004 -0.78,20.34 -1.81,40.68 -2.61,61 q -2.46,62.93 -4.82,125.85 c -0.83,21.58 -1.79,43.15 -2.66,64.73 -1.52,37.46 -2.81,74.93 -4.59,112.38 -0.83,17.43 -21.16,31.72 -40,19.4 q -45.58,-29.88 -91.23,-59.67 -130.63,-84.97 -261.330004,-169.87 c -12.36,-8 -24.47,-16.48 -37.14,-24 -23.36,-13.83 -15.5,-38.81 3,-48 61,-30.26 121.400004,-61.6 182.000004,-92.53 30.76,-15.69 61.45,-31.510004 92.26,-47.100004 q 66.58,-33.66 133.31,-67.0500002 c 14.6,-7.3 32.68,0.13 36.35,15.3600002 1.52,6.33 0.25,13.34 0.25,20 z"
+     class="cls-1" />
+</svg>

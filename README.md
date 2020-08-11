@@ -1,5 +1,8 @@
-# Svelte Materialify
-
+<p align="center">
+  <a href="https://svelte-materialify.netlify.app/" target="_blank">
+    <img alt="Vuetify Logo" width="100" src="logo/logo.svg">
+  </a>
+</p>
 
 <p align="center">
   <a href="https://app.netlify.com/sites/svelte-materialify/deploys">
@@ -60,6 +63,7 @@ This is still in development. To contribute, please read [CONTRIBUTING.md](./CON
 Website is located at [https://svelte-materialify.netlify.app/](https://svelte-materialify.netlify.app/), it is still in development.
 
 ## Thanks To:
+- __[Shriji](https://github.com/peopledrivemecrazy)__ for the logos
 - __[Vuetify](https://vuetifyjs.com/)__
 - __[Material Design](https://material.io/components/)__
 - __[Jump.js](https://github.com/callmecavs/jump.js)__
