@@ -1,7 +1,6 @@
 <script>
   import { onMount } from 'svelte';
   import SiteNavigation from '../components/SiteNavigation.svelte';
-  import { Container } from 'svelte-materialify/src/';
   import { theme as themeStore } from '../helpers/stores';
 
   export let segment;
@@ -17,6 +16,7 @@
     $themeStore = window.localStorage.getItem('theme') || 'light';
     const unsubscribe = themeStore.subscribe((value) => {
       window.localStorage.setItem('theme', value);
+      checkMobile();
     });
 
     breakpoints = await import('svelte-materialify/src/utils/breakpoints');

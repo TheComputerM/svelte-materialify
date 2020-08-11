@@ -1,26 +1,32 @@
 <script>
   import Gumshoe from 'gumshoejs';
-  import { onMount, tick } from 'svelte';
+  import { onMount, afterUpdate, tick } from 'svelte';
+  import { markdownLoaded } from '../helpers/stores';
 
   let links = [];
-  onMount(async () => {
-    if (document.querySelector('.markdown-container')) {
-      let basepath = window.location.origin + window.location.pathname + '#';
-      document.querySelectorAll('.markdown-container h2,h3').forEach((heading) => {
-        links.push({
-          text: heading.textContent,
-          href: basepath + heading.id,
-          padding: heading.tagName === 'H2' ? 'pl-3' : 'pl-6',
+  let depths = { H2: 3, H3: 6, H4: 8 };
+  onMount(() => {
+    let spy = new Gumshoe('#toc a', {
+      navClass: 'active',
+      offset: 128,
+      events: false,
+    });
+    markdownLoaded.subscribe(async (loaded) => {
+      if (loaded) {
+        links = [];
+        let basepath = window.location.origin + window.location.pathname + '#';
+        document.querySelectorAll('.markdown-container h2,h3').forEach((heading) => {
+          links.push({
+            text: heading.textContent,
+            href: basepath + heading.id,
+            padding: `pl-${depths[heading.tagName]}`
+          });
         });
-      });
-      links = links;
-      await tick();
-      let spy = new Gumshoe('#toc a', {
-        navClass: 'active',
-        offset: 128,
-        events: false,
-      });
-    }
+        links = links;
+        await tick();
+        spy.setup();
+      }
+    });
   });
 </script>
 
@@ -29,7 +35,9 @@
     list-style-type: none;
   }
 
-  li a {color: inherit}
+  li a {
+    color: inherit;
+  }
 
   li {
     color: var(--theme-text-disabled);

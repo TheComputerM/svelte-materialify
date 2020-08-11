@@ -1,6 +1,7 @@
 require('dotenv').config();
 
 const NetlifyAPI = require('netlify');
+const path = require('path');
 
 const client = new NetlifyAPI(process.env.NETLIFY_ACCESS_TOKEN);
 
@@ -12,7 +13,7 @@ const client = new NetlifyAPI(process.env.NETLIFY_ACCESS_TOKEN);
     {
       branch: 'docs',
       message: `Deployed at ${new Date().toUTCString()}`,
-      configPath: './netlify.toml',
+      configPath: path.join(process.cwd(), './netlify.toml'),
     },
   );
   console.log(deploy);

@@ -73,7 +73,7 @@
   on:click={() => (sidenav = false)}
   fadeOptions={{ duration: 250 }} />
 
-{#if navigation}
+{#if true}
   <NavigationDrawer
     style="height:100vh;background:var(--theme-surface)"
     right

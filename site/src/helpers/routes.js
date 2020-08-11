@@ -5,7 +5,22 @@ export default [
     open: false,
     items: [
       { text: 'Installation', href: '/getting-started/installation/' },
-      { text: 'Contributing', href: '/getting-started/contributing/' },
+      { text: 'Usage', href: '/getting-started/usage/' },
+    ],
+  },
+  {
+    text: 'Styles',
+    icon: 'palette',
+    open: false,
+    items: [
+      { text: 'CSS Reset', href: '/styles/reset/' },
+      { text: 'Content', href: '/styles/content/' },
+      { text: 'Colors', href: '/styles/colors/' },
+      { text: 'Display Helpers', href: '/styles/display-helpers/' },
+      { text: 'Elevation', href: '/styles/elevation/' },
+      { text: 'Flex', href: '/styles/flex/' },
+      { text: 'Float', href: '/styles/float/' },
+      { text: 'Typography', href: '/styles/typography/' },
     ],
   },
   {

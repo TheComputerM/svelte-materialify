@@ -5,17 +5,36 @@ related:
   - Buttons: /components/buttons
 ---
 
+<script>
+  import Alert from '../../components/Alert.svelte';
+</script>
+
 # Installation
 
 Get Started with Svelte Materialify, the best material UI component library for Svelte
 
 ## Minimal Install
 
-If you do not want to use SSR components then only installing `svelte-materialify` should be
-fine.
+If you want to try out svelte materialify and tinker with it, visit the [playground repl](https://svelte.dev/repl/2c55788d8ffd4458bfe9bcb5f58956db);
+
+
+If want a fast and basic setup then only installing `svelte-materialify` should be fine.
 
 ```shell
 $ npm i svelte-materialify
+```
+
+And then in your svelte files, import the compiled module for svelte materialify
+
+```html
+<script>
+  // In a svelte file
+  // Import Everything
+  import * as S from "svelte-materialify/dist/index.mjs";
+  // OR
+  import { Button } from "svelte-materialify/dist/index.mjs";
+  // Import a single component
+</script>
 ```
 
 ## Advanced Install
@@ -25,6 +44,10 @@ If you want finer control over Svelte Materialify and installation you want to i
 ```shell
 $ npm i -D svelte-materialify svelte-preprocess sass
 ```
+
+<Alert type='info'>
+  Now you can use SCSS and SASS in your styles.
+</Alert>
 
 Then create a **\_material-theme.scss** file and place it in any folder, lets put it in a
 folder called theme. Then include the path in the preprocess function in your __rollup.config.js__ (likewise follow the same in webpack but for svelte-loader).
