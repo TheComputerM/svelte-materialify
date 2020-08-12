@@ -19,4 +19,4 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    cache-control = "max-age: 1800
+    cache-control = "max-age: 1800"
