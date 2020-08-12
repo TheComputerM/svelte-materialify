@@ -1,9 +1,14 @@
 {
   "name": "root",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "husky"
+    ]
+  },
   "scripts": {
     "docs": "yarn workspace docs export",
     "dev": "yarn workspace docs dev",
@@ -13,9 +18,6 @@
     "start": "yarn workspaces start",
     "precommit": "yarn workspaces run precommit"
   },
-  "devDependencies": {
-    "husky": "^4.2.5"
-  },
   "husky": {
     "hooks": {
       "pre-commit": "yarn precommit"
@@ -23,5 +25,8 @@
   },
   "engines": {
     "node": "14.x"
+  },
+  "dependencies": {
+    "husky": "^4.2.5"
   }
 }
