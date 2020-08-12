@@ -15,10 +15,10 @@ const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 
-const onwarn = (warning, onwarn) =>
-  (warning.code === 'MISSING_EXPORT' && /'preload'/.test(warning.message)) ||
-  (warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message)) ||
-  onwarn(warning);
+const onwarn = (warning, onwarn) => (warning.code === 'MISSING_EXPORT' && /'preload'/.test(warning.message))
+  || (warning.code === 'CIRCULAR_DEPENDENCY'
+    && /[/\\]@sapper[/\\]/.test(warning.message))
+  || onwarn(warning);
 
 loadLanguages(['bash', 'scss']);
 const preprocess = [
@@ -34,6 +34,7 @@ const preprocess = [
             'heading[depth=1]': 'heading text-h3 mb-4',
             'heading[depth=2]': 'heading text-h4 mb-3',
             'heading[depth=3]': 'heading text-h5 mb-2',
+            'heading[depth=4]': 'heading text-h6 mb-2',
             link: 'app-link',
           },
         },
@@ -58,18 +59,21 @@ const preprocess = [
     ],
     highlight: {
       highlighter: (code, lang) => {
+        function escape(text) {
+          return `{@html \`${text.replace(/`/g, '&#96;')}\`}`;
+        }
+
         if (lang && Prism.languages[lang]) {
           const parsed = Prism.highlight(code, Prism.languages[lang]);
-          const escaped = parsed.replace(/{/g, '&#123;').replace(/}/g, '&#125;');
-          const langTag = 'language-' + lang;
+          const escaped = escape(parsed);
+          const langTag = `language-${lang}`;
           const codeTag = `<code class=${langTag}>${escaped}</code>`;
           const pre = `<pre class=${langTag}>${codeTag}</pre>`;
           return `<Components.CodeBlock lang='${lang}'>${pre}</Components.CodeBlock>`;
-        } else {
-          const escaped = code.replace(/{/g, '&#123;').replace(/}/g, '&#125;');
-          const pre = `<pre><code>${escaped}</code></pre>`;
-          return `<Components.CodeBlock>${pre}</Components.CodeBlock>`;
         }
+        const escaped = escape(code);
+        const pre = `<pre><code>${escaped}</code></pre>`;
+        return `<Components.CodeBlock>${pre}</Components.CodeBlock>`;
       },
     },
   }),
@@ -116,8 +120,8 @@ export default {
       }),
       commonjs(),
 
-      legacy &&
-        babel({
+      legacy
+        && babel({
           extensions: ['.js', '.mjs', '.html', '.svelte'],
           babelHelpers: 'runtime',
           exclude: ['node_modules/@babel/**'],
@@ -140,8 +144,8 @@ export default {
           ],
         }),
 
-      !dev &&
-        terser({
+      !dev
+        && terser({
           module: true,
         }),
     ],
@@ -170,7 +174,9 @@ export default {
       }),
       commonjs(),
     ],
-    external: Object.keys(pkg.dependencies).concat(require('module').builtinModules),
+    external: Object.keys(pkg.dependencies).concat(
+      require('module').builtinModules,
+    ),
     preserveEntrySignatures: 'strict',
     onwarn,
   },
