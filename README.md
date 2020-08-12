@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://app.netlify.com/sites/svelte-materialify/deploys">
-  <img src="https://api.netlify.com/api/v1/badges/9f8add51-6a76-445d-b378-1dc3f4f9539f/deploy-status" alt="Website">
+  <img src="https://api.netlify.com/api/v1/badges/6a8094b5-107e-4512-a47d-1afd03069dbb/deploy-status" alt="Website">
   </a>
   <a href="https://github.com/thecomputerm/svelte-materialify/actions?query=workflow%3ACI">
     <img src="https://github.com/thecomputerm/svelte-materialify/workflows/CI/badge.svg" alt="CI badge">
