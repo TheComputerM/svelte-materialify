@@ -1,0 +1,59 @@
+---
+title: Usage
+related:
+  - Installation: /getting-started/installation/
+  - App: /components/material-app/
+---
+
+<script>
+  import Alert from '../../components/Alert.svelte';
+</script>
+
+# Usage
+Once you have installed Svelte Materialify and other dependencies, it is time to learn how to use it.
+
+## Layout
+All components should be children of `MaterialApp` which has all the global styles and
+enables theming.
+
+```html
+<script>
+  import { MaterialApp } from 'svelte-materialify';
+  let theme = 'light';
+</script>
+
+<MaterialApp theme={theme}>
+  <slot />
+</MaterialApp>
+```
+
+## Theming
+What to customise some SCSS variables, worry not, just put them in the **_material-theme.scss** you had created.
+
+```scss
+$body-font-family: "Poppins", "Segoe UI", sans-serif;
+
+$spacer: 6px !default;
+...
+```
+
+To access these variables in your own components just import the variable file from svelte materialify.
+
+```scss
+@import "svelte-materialify/src/styles/variables";
+```
+
+## Components
+Just import them one by one or all at once from svelte materialify.
+
+```html
+<script>
+  import * as S from 'svelte-materialify';
+
+  import { Button } from 'svelte-materialify';
+</script>
+
+<S.Button>These Are</S.Button>
+
+<Button>The Same Thing</Button>
+```
