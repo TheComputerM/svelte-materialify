@@ -18,7 +18,10 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "echo lol"
+      "pre-commit": "yarn precommit"
     }
+  },
+  "engines": {
+    "node": "14.x"
   }
 }

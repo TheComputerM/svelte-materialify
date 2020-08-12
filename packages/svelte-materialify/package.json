@@ -111,5 +111,8 @@
     "ui",
     "ui-components",
     "ui-kit"
-  ]
+  ],
+  "engines": {
+    "node": "14.x"
+  }
 }
