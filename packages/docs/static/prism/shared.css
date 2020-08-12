@@ -44,6 +44,6 @@ code[class*="language-"] {
 .token,
 code[class*="language-"],
 pre[class*="language-"] {
-  font-weight: 400;
-  transition: 200ms ease;
+  font-weight: 500;
+  transition: 150ms ease;
 }

@@ -45,7 +45,7 @@
   span {
     position: absolute;
     right: 1.15rem;
-    bottom: 0.5rem;
+    bottom: 0.75rem;
     text-transform: uppercase;
     color: var(--theme-text-secondary);
     font-size: 0.7rem;

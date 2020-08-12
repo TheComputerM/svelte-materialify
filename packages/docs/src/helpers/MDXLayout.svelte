@@ -14,7 +14,7 @@
   const { page } = stores();
 
   onMount(() => {
-    document.querySelectorAll('.markdown-container a').forEach((a) => {
+    document.querySelectorAll('.markdown-container .heading a').forEach((a) => {
       if (!a.hash || !document.querySelectorAll(a.hash).length) return;
       a.href = window.location.origin + window.location.pathname + a.hash;
       a.setAttribute('aria-hidden', true);
