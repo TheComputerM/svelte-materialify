@@ -1,4 +1,13 @@
 .DS_Store
-.vscode
-node_modules
-/dist/
+node_modules/
+.env
+
+# IDE user config
+.vscode/
+.idea/
+.vs/
+
+# Logs
+yarn-error.log
+npm-debug.log
+lerna-debug.log

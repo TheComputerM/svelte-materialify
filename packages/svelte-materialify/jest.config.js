@@ -3,6 +3,7 @@ module.exports = {
     '^.+\\.svelte$': 'svelte-jester',
     '^.+\\.js$': 'babel-jest',
   },
+  testMatch: ['**/tests/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
   moduleFileExtensions: ['js', 'svelte'],
   setupFilesAfterEnv: ['@testing-library/jest-dom'],
   moduleNameMapper: {
