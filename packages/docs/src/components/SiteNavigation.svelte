@@ -2,16 +2,16 @@
   export let theme;
   export let navigation;
 
-  import { theme as themeStore } from '../helpers/stores';
-  import {
-    AppBar,
-    Icon,
-    Button,
-    NavigationDrawer,
-    List,
-    Divider,
-    Overlay,
-  } from 'svelte-materialify/src/';
+  import { t
+  AppBar,
+  Icon,
+  Button,
+  NavigationDrawer,
+  List,
+  Divider,
+  Overlay,
+} from 'svelte-materialify/src/';
+import { theme as themeStore } from '../helpers/storesmaterialify/src/';
 
   import LeftNavigationDrawer from './LeftNavigationDrawer.svelte';
   import RightNavigationDrawer from './RightNavigationDrawer.svelte';

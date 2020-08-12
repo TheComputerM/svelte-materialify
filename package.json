@@ -1,12 +1,24 @@
 {
   "name": "root",
   "private": true,
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "docs": "yarn workspace docs export",
     "dev": "yarn workspace docs dev",
+    "lint": "yarn workspaces run lint",
+    "lint:fix": "yarn workspaces run lint:fix",
     "release": "yarn workspace svelte-materialify release",
     "start": "yarn workspaces start",
-    "lint": "yarn workspaces run lint"
+    "precommit": "yarn workspaces run precommit"
+  },
+  "devDependencies": {
+    "husky": "^4.2.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "echo lol"
+    }
   }
 }

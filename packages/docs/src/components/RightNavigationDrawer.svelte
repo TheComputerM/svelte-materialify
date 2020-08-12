@@ -4,9 +4,9 @@
   import { markdownLoaded } from '../helpers/stores';
 
   let links = [];
-  let depths = { H2: 3, H3: 6, H4: 8 };
+  const depths = { H2: 3, H3: 6, H4: 8 };
   onMount(() => {
-    let spy = new Gumshoe('#toc a', {
+    const spy = new Gumshoe('#toc a', {
       navClass: 'active',
       offset: 128,
       events: false,
@@ -14,12 +14,12 @@
     markdownLoaded.subscribe(async (loaded) => {
       if (loaded) {
         links = [];
-        let basepath = window.location.origin + window.location.pathname + '#';
+        const basepath = `${window.location.origin + window.location.pathname}#`;
         document.querySelectorAll('.markdown-container h2,h3').forEach((heading) => {
           links.push({
             text: heading.textContent,
             href: basepath + heading.id,
-            padding: `pl-${depths[heading.tagName]}`
+            padding: `pl-${depths[heading.tagName]}`,
           });
         });
         links = links;

@@ -3,14 +3,14 @@
 
   export let lang = '';
 
-  let aliases = { js: ['javascript'], sh: ['bash', 'shell'] };
-  for (let alias of Object.keys(aliases)) {
+  const aliases = { js: ['javascript'], sh: ['bash', 'shell'] };
+  for (const alias of Object.keys(aliases)) {
     if (aliases[alias].includes(lang)) lang = alias;
   }
 
   function copy(node) {
     const toCopy = node.querySelector('pre').textContent;
-    let clipboard = new ClipboardJS(node.querySelector('.s-btn'), {
+    const clipboard = new ClipboardJS(node.querySelector('.s-btn'), {
       text: () => toCopy,
     });
     return {

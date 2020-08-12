@@ -1,9 +1,11 @@
 <script>
-  import { slide } from "svelte/transition";
-  import { ListGroup, ListItem, Button, Icon } from "svelte-materialify/src";
-  import { stores } from "@sapper/app";
+  import { slide } from 'svelte/transition';
+  import {
+    ListGroup, ListItem, Button, Icon,
+} from 'svelte-materialify/src';
+  import { stores } from '@sapper/app';
 
-  import routes from "../helpers/routes";
+  import routes from '../helpers/routes';
 
   let activeLink;
   const { page } = stores();
@@ -13,17 +15,17 @@
   let offset = `${(depth + 1) * 32}px`;
 
   page.subscribe((value) => {
-    activeLink = value.path.replace(/\//g, "");
+    activeLink = value.path.replace(/\//g, '');
   });
 
   if (depth === 0) {
     offset = false;
     function openCollapsedNavigation(parent) {
-      parent.items.find(function (child) {
+      parent.items.find((child) => {
         if (child.items) openCollapsedNavigation(child, activeLink);
         if (
-          (child.href || "").replace(/\//g, "") === activeLink ||
-          child.open
+          (child.href || '').replace(/\//g, '') === activeLink
+        || child.open
         ) {
           parent.open = true;
           return true;

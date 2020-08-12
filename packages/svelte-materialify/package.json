@@ -13,10 +13,11 @@
     "css": "sass src/styles/_global.scss:dist/global.css -I theme -s compressed --no-source-map",
     "watch:css": "npm run css -- --watch",
     "test": "jest",
+    "precommit": "lint-staged",
     "lint": "concurrently \"npm:lint:css\" \"npm:lint:js\"",
     "lint:css": "stylelint src/**/*.scss --syntax scss",
     "lint:css:fix": "stylelint src/**/*.scss --syntax scss --fix",
-    "lint:js": "eslint src __tests__ --ext .svelte,.js",
+    "lint:js": "eslint . --ext .svelte,.js",
     "lint:js:fix": "eslint . --ext .svelte,.js --fix",
     "check": "svelte-check --workspace src/components",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 1 && git add CHANGELOG.md",
@@ -31,11 +32,6 @@
       "stylelint --syntax scss --fix",
       "git add"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "np": {
     "branch": "master",
@@ -59,7 +55,6 @@
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-svelte3": "^2.7.3",
-    "husky": "^4.2.5",
     "jest": "^26.2.2",
     "lint-staged": "^10.2.11",
     "np": "^6.3.2",
@@ -83,7 +78,6 @@
   ],
   "peerDependencies": {
     "sass": "^1.26.10",
-    "svelte": "^3.24.1",
     "svelte-preprocess": "^4.0.10"
   },
   "peerDependenciesMeta": {

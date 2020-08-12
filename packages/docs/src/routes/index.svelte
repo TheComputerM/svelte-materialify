@@ -1,5 +1,5 @@
 <script>
-  import { Container, Button, Icon } from "svelte-materialify/src/";
+  import { Container, Button, Icon } from 'svelte-materialify/src/';
 </script>
 
 <svelte:head>

@@ -1,13 +1,14 @@
 <script context="module">
   import CodeBlock from './CodeBlock.svelte';
+
   export { CodeBlock };
 </script>
 
 <script>
   import { stores } from '@sapper/app';
   import { Row } from 'svelte-materialify/src';
-  import ReadyForMore from './ReadyForMore.svelte';
-  import { onMount, beforeUpdate } from 'svelte';
+  import Re{ onMount, beforeUpdate } from 'svelte';
+import ReadyForMore from './ReadyForMore.svelte';
   import { markdownLoaded } from './stores';
 
   const { page } = stores();
