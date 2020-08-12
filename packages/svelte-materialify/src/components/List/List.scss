@@ -5,7 +5,7 @@
   color: var(--theme-text-primary);
   display: block;
   padding: $list-padding;
-  padding-top: $list-subheader-padding-top;
+  padding-top: $list-padding-top;
   position: static;
 
   &.disabled {
