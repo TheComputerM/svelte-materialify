@@ -1,5 +1,6 @@
 @use "../variables" as *;
 
-ul, ol {
+ul,
+ol {
   padding-left: $spacer * 6;
 }
