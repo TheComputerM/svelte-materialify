@@ -1,9 +1,7 @@
 <script>
-  import { slide } from 'svelte/transition';
-  import {
-    ListGroup, ListItem, Button, Icon,
-} from 'svelte-materialify/src';
+  import { ListGroup, ListItem, Icon } from 'svelte-materialify/src';
   import { stores } from '@sapper/app';
+  import { onDestroy } from 'svelte';
 
   import routes from '../helpers/routes';
 
@@ -14,25 +12,23 @@
   export let visible = true;
   let offset = `${(depth + 1) * 32}px`;
 
-  page.subscribe((value) => {
-    activeLink = value.path.replace(/\//g, '');
-  });
+  const unsubscribe = page.subscribe((value) => (activeLink = value));
+  onDestroy(unsubscribe);
+
+  function openCollapsedNavigation(parent) {
+    parent.items.find((child) => {
+      if (child.items) openCollapsedNavigation(child);
+      if ((child.href || '') === activeLink || child.open) {
+        parent.open = true;
+        return true;
+      }
+      return false;
+    });
+  }
 
   if (depth === 0) {
     offset = false;
-    function openCollapsedNavigation(parent) {
-      parent.items.find((child) => {
-        if (child.items) openCollapsedNavigation(child, activeLink);
-        if (
-          (child.href || '').replace(/\//g, '') === activeLink
-        || child.open
-        ) {
-          parent.open = true;
-          return true;
-        }
-      });
-    }
-    items.find((i) => openCollapsedNavigation(i));
+    items.forEach((i) => openCollapsedNavigation(i));
   }
 </script>
 

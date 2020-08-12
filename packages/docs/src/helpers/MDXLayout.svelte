@@ -7,8 +7,8 @@
 <script>
   import { stores } from '@sapper/app';
   import { Row } from 'svelte-materialify/src';
-  import Re{ onMount, beforeUpdate } from 'svelte';
-import ReadyForMore from './ReadyForMore.svelte';
+  import { onMount, beforeUpdate } from 'svelte';
+  import ReadyForMore from './ReadyForMore.svelte';
   import { markdownLoaded } from './stores';
 
   const { page } = stores();
@@ -60,8 +60,8 @@ import ReadyForMore from './ReadyForMore.svelte';
     font-weight: 500;
   }
   .markdown-container .app-link::after {
-    content: '\F03CC';
-    font: normal normal normal 24px/1 'Material Design Icons';
+    content: "\F03CC";
+    font: normal normal normal 24px/1 "Material Design Icons";
     margin-left: 4px;
     font-size: inherit;
   }
@@ -86,7 +86,9 @@ import ReadyForMore from './ReadyForMore.svelte';
       </h2>
       <Row class="justify-space-between">
         {#each related as item}
-          <ReadyForMore href={Object.values(item)[0]} name={Object.keys(item)[0]} />
+          <ReadyForMore
+            href={Object.values(item)[0]}
+            name={Object.keys(item)[0]} />
         {/each}
       </Row>
     </section>

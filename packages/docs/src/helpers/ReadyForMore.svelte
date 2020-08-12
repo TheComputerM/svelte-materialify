@@ -1,6 +1,6 @@
 <script>
-  import { thCol, ListItem, Icon } from 'svelte-materialify/src';
-import { theme } from './stores';
+  import { Col, ListItem, Icon } from 'svelte-materialify/src';
+  import { theme } from './stores';
 
   export let href;
   export let name;

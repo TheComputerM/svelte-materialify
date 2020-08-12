@@ -22,7 +22,6 @@
     "gumshoejs": "^5.1.2",
     "polka": "next",
     "sirv": "^1.0.0",
-    "svelte": "^3.24.1",
     "svelte-materialify": "^0.0.1"
   },
   "devDependencies": {
@@ -56,6 +55,7 @@
     "rollup-plugin-terser": "^6.1.0",
     "sapper": "^0.28.0",
     "sass": "^1.26.10",
+    "svelte": "^3.24.1",
     "svelte-preprocess": "^4.0.10"
   }
 }

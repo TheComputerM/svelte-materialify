@@ -15,6 +15,7 @@
     "test": "jest",
     "precommit": "lint-staged",
     "lint": "concurrently \"npm:lint:css\" \"npm:lint:js\"",
+    "lint:fix": "concurrently \"npm:lint:css:fix\" \"npm:lint:js:fix\"",
     "lint:css": "stylelint src/**/*.scss --syntax scss",
     "lint:css:fix": "stylelint src/**/*.scss --syntax scss --fix",
     "lint:js": "eslint . --ext .svelte,.js",

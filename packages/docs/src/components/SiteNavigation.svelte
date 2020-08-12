@@ -2,16 +2,15 @@
   export let theme;
   export let navigation;
 
-  import { t
-  AppBar,
-  Icon,
-  Button,
-  NavigationDrawer,
-  List,
-  Divider,
-  Overlay,
-} from 'svelte-materialify/src/';
-import { theme as themeStore } from '../helpers/storesmaterialify/src/';
+  import {
+    AppBar,
+    Icon,
+    Button,
+    NavigationDrawer,
+    List,
+    Overlay,
+  } from 'svelte-materialify/src/';
+  import { theme as themeStore } from '../helpers/stores';
 
   import LeftNavigationDrawer from './LeftNavigationDrawer.svelte';
   import RightNavigationDrawer from './RightNavigationDrawer.svelte';
@@ -21,14 +20,18 @@ import { theme as themeStore } from '../helpers/storesmaterialify/src/';
   function toggleTheme() {
     if (theme === 'light') theme = 'dark';
     else theme = 'light';
-    $themeStore = theme;
+    themeStore.set(theme);
   }
 </script>
 
 <AppBar fixed style="width:100%">
   <div slot="icon">
     {#if !navigation}
-      <Button fab depressed on:click={() => (sidenav = !sidenav)} aria-label="Open Menu">
+      <Button
+        fab
+        depressed
+        on:click={() => (sidenav = !sidenav)}
+        aria-label="Open Menu">
         <Icon class="mdi mdi-menu" />
       </Button>
     {/if}
@@ -60,7 +63,9 @@ import { theme as themeStore } from '../helpers/storesmaterialify/src/';
   clipped>
   <br />
   <div class="d-flex justify-center">
-    <Button outlined rounded class="blue-text" size="small">Become A Sponsor</Button>
+    <Button outlined rounded class="blue-text" size="small">
+      Become A Sponsor
+    </Button>
   </div>
   <br />
   <List nav dense>

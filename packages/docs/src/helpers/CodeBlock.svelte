@@ -4,9 +4,9 @@
   export let lang = '';
 
   const aliases = { js: ['javascript'], sh: ['bash', 'shell'] };
-  for (const alias of Object.keys(aliases)) {
+  Object.keys(aliases).forEach((alias) => {
     if (aliases[alias].includes(lang)) lang = alias;
-  }
+  });
 
   function copy(node) {
     const toCopy = node.querySelector('pre').textContent;

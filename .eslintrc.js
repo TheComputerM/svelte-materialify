@@ -19,6 +19,7 @@ module.exports = {
         'import/no-duplicates': 'off',
         'import/no-mutable-exports': 'off',
         'import/prefer-default-export': 'off',
+        'import/order': 'off',
       },
     },
     {
@@ -36,5 +37,7 @@ module.exports = {
   rules: {
     camelcase: ['error', { allow: ['[_][a-z]{1,5}$'] }],
     'no-nested-ternary': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'global-require': 'off',
   },
 };
