@@ -11,24 +11,29 @@
   export let depth = 0;
   export let visible = true;
   let offset = `${(depth + 1) * 32}px`;
+  const escaped = (text = '') => text.replace(/\//g, '');
 
-  const unsubscribe = page.subscribe((value) => (activeLink = value));
+  const unsubscribe = page.subscribe(({ path }) => {
+    activeLink = escaped(path);
+  });
+
   onDestroy(unsubscribe);
 
   function openCollapsedNavigation(parent) {
-    parent.items.find((child) => {
+    const activeParent = parent.items.find((child) => {
       if (child.items) openCollapsedNavigation(child);
-      if ((child.href || '') === activeLink || child.open) {
+      if (escaped(child.href) === activeLink || child.open) {
         parent.open = true;
         return true;
       }
       return false;
     });
+    return !!activeParent;
   }
 
   if (depth === 0) {
     offset = false;
-    items.forEach((i) => openCollapsedNavigation(i));
+    items.find((i) => openCollapsedNavigation(i));
   }
 </script>
 

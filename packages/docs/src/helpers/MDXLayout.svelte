@@ -7,15 +7,11 @@
 <script>
   import { stores } from '@sapper/app';
   import { Row } from 'svelte-materialify/src';
-  import { onMount, beforeUpdate } from 'svelte';
+  import { onMount, onDestroy, tick } from 'svelte';
   import ReadyForMore from './ReadyForMore.svelte';
-  import { markdownLoaded } from './stores';
+  import { markdown } from './stores';
 
   const { page } = stores();
-
-  beforeUpdate(() => {
-    markdownLoaded.set(false);
-  });
 
   onMount(() => {
     document.querySelectorAll('.markdown-container a').forEach((a) => {
@@ -24,7 +20,11 @@
       a.setAttribute('aria-hidden', true);
       a.setAttribute('tabindex', -1);
     });
-    markdownLoaded.set(true);
+  });
+
+  onDestroy(async () => {
+    await tick();
+    markdown.update((x) => !x);
   });
 
   export let title = '';

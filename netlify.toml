@@ -15,8 +15,3 @@
   pretty_urls = true
 [build.processing.images]
   compress = true
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    cache-control = "max-age: 0"
