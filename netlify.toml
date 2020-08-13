@@ -20,5 +20,5 @@
 package = "@netlify/plugin-sitemap"
   [plugins.inputs]
   exclude = [
-    './service-worker-index.html',
+    './packages/docs/__sapper__/export/service-worker-index.html',
   ]
