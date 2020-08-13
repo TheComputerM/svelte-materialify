@@ -1,3 +1,12 @@
+<script context="module">
+  function parseSettings(objects) {
+    return Object.keys(objects)
+      .map((i) => (objects[i] ? `${i}-${objects[i]}` : ''))
+      .filter((i) => i !== '')
+      .join(' ');
+  }
+</script>
+
 <script>
   let classes = '';
   export let cols = false;
@@ -13,14 +22,8 @@
   export let style = null;
   export { classes as class };
 
-  function classnames(objects) {
-    return Object.keys(objects)
-      .map((i) => `${i}-${objects[i]}`)
-      .join(' ');
-  }
-
-  $: settings = classnames({
-    cols,
+  $: settings = parseSettings({
+    col: cols,
     sm,
     md,
     lg,
