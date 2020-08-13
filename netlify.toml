@@ -18,7 +18,7 @@
 
 [[plugins]]
 package = "@netlify/plugin-sitemap"
-  [plugins.input]
+  [plugins.inputs]
   exclude = [
     './service-worker-index.html',
   ]
