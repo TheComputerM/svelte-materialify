@@ -1,9 +1,11 @@
+<script context="module">
+  const aliases = { js: ['javascript'], sh: ['bash', 'shell'] };
+</script>
+
 <script>
   import { Button, Icon } from 'svelte-materialify/src';
 
   export let lang = '';
-
-  const aliases = { js: ['javascript'], sh: ['bash', 'shell'] };
   Object.keys(aliases).forEach((alias) => {
     if (aliases[alias].includes(lang)) lang = alias;
   });
