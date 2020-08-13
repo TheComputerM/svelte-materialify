@@ -7,6 +7,7 @@ related:
 
 <script>
   import Alert from '../../components/Alert.svelte';
+  console.log(Alert)
 </script>
 
 # Installation

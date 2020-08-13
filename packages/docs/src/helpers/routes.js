@@ -6,6 +6,7 @@ export default [
     items: [
       { text: 'Installation', href: '/getting-started/installation/' },
       { text: 'Usage', href: '/getting-started/usage/' },
+      { text: 'Contributing', href: '/getting-started/contributing/' },
     ],
   },
   {

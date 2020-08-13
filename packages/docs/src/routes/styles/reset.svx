@@ -7,7 +7,7 @@ title: CSS Reset
 Base reset styles for Svelte Materialify
 
 Svelte Materialify uses [ress](https://github.com/filipelinhares/ress) because it is more
-modern and built on top of normalize.css
+modern and is built on top of normalize.css
 
 ## Reset features
 
@@ -27,5 +27,4 @@ modern and built on top of normalize.css
 14. Style `cursor` by aria attributes.
 15. Hide content from screens but not screenreaders.
 
-## Test
-Test
+More information can be found over at [ress.css](https://github.com/filipelinhares/ress)

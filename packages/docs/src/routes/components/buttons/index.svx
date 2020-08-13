@@ -1,21 +1,5 @@
 ---
 title: Button Component
+related:
+  - Alert: /components/alert/
 ---
-
-<script>
-  import {Alert} from "svelte-materialify/src";
-</script>
-
-Work in Progress
-
-<Alert border='left' class='red-text' coloredBorder>
-  Hello There
-</Alert>
-
-```js
-console.log('hello there');
-
-function lolz() {
-  alert('lol');
-}
-```

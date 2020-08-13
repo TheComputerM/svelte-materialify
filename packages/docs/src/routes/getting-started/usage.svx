@@ -51,6 +51,10 @@ Just import them one by one or all at once from svelte materialify.
   import * as S from 'svelte-materialify';
 
   import { Button } from 'svelte-materialify';
+  // OR import from source
+  import { Button } from 'svelte-materialify/src';
+  // OR directly import the button component
+  import Button from 'svelte-materialify/src/components/Button/index.js';
 </script>
 
 <S.Button>These Are</S.Button>
