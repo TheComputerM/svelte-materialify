@@ -54,4 +54,14 @@ export default [
       { text: 'Subheader', href: '/components/subheader/' },
     ],
   },
+  {
+    text: 'Actions',
+    icon: 'function',
+    open: false,
+    items: [
+      { text: 'Ripple', href: '/actions/ripple/' },
+      { text: 'Intersection observer', href: '/actions/intersect/' },
+      { text: 'Jump', href: '/actions/jump/' },
+    ],
+  },
 ];
