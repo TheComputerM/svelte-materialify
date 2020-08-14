@@ -1,4 +1,5 @@
 export { default as Ripple } from './actions/Ripple';
+export { default as Intersect } from './actions/Intersect';
 export { default as Jump } from './actions/Jump';
 
 export { default as MaterialApp } from './components/MaterialApp';
@@ -24,3 +25,4 @@ export { default as Overlay } from './components/Overlay';
 export { default as NavigationDrawer } from './components/NavigationDrawer';
 export { default as Subheader } from './components/Subheader';
 export { Container, Row, Col } from './components/Grid';
+export { default as Lazy } from './components/Lazy';
