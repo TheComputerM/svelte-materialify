@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte';
-  import SiteNavigation from '../components/SiteNavigation.svelte';
+  import SiteNavigation from '../helpers/Navigation/SiteNavigation.svelte';
   import { theme as themeStore } from '../helpers/stores';
 
   export let segment;

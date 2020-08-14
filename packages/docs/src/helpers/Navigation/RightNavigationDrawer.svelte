@@ -1,7 +1,7 @@
 <script>
   import Gumshoe from 'gumshoejs';
   import { onMount, tick } from 'svelte';
-  import { markdown } from '../helpers/stores';
+  import { markdown } from '../stores';
 
   let items = [];
   const depths = { H2: 'pl-3', H3: 'pl-6', H4: 'pl-8' };

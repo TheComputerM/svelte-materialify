@@ -24,7 +24,7 @@ loadLanguages(['bash', 'scss']);
 const preprocess = [
   mdsvex({
     extension: '.svx',
-    layout: './src/helpers/MDXLayout.svelte',
+    layout: './src/helpers/Markdown/MDXLayout.svelte',
     remarkPlugins: [
       require('remark-sectionize'),
       [

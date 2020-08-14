@@ -1,0 +1,76 @@
+---
+title: Button Component
+related:
+  - Alert: /components/alert/
+---
+
+<script context="module">
+  export async function preload() {
+    let examples = await this.fetch('examples/components/buttons.json');
+    examples = await examples.json();
+    return { examples }
+  }
+</script>
+
+<script>
+  import Example from '../../components/Example.svelte';
+  import * as E from '../../examples/components/buttons';
+  export let examples;
+</script>
+
+# Button
+The `Button` component replaces the standard html button with a material deisgn theme and
+a multitude of options
+
+## Props
+__TODO__
+
+## Events
+__TODO__
+
+## Slots
+__TODO__
+
+## Examples
+
+### Raised
+This is the default one
+<Example content={examples.raised} component={E.raised} />
+
+### Depressed
+These are just buttons with no box shadow
+<Example content={examples.depressed} component={E.depressed} />
+
+### Block
+Big bois
+<Example content={examples.block} component={E.block} />
+
+### Floating Action Buttons
+Floating buttons are rounded and usually contain an icon.
+<Example content={examples.fab} component={E.fab} />
+
+### Icon
+Icons can be used for the primary content of a button.
+<Example content={examples.icon} component={E.icon} />
+
+### Outlined
+Outlined buttons inherit their borders from the current color applied.
+<Example content={examples.outlined} component={E.outlined} />
+
+### Rounded
+Rounded buttons behave the same as regular buttons but have rounded edges.
+<Example content={examples.rounded} component={E.rounded} />
+
+### Text
+Text buttons have no box shadow and no background. Only on hover is the container for
+the button shown.
+<Example content={examples.text} component={E.text} />
+
+### Tile
+Tile buttons behave the same as regular buttons but have no border radius.
+<Example content={examples.tile} component={E.tile} />
+
+### Sizing
+Buttons can be given different sizing options to fit a multitude of scenarios. We do not
+set font sizes for icons as different icon packs look differently
+<Example content={examples.sizing} component={E.sizing} />

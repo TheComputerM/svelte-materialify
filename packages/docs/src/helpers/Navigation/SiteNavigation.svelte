@@ -10,7 +10,7 @@
     List,
     Overlay,
   } from 'svelte-materialify/src/';
-  import { theme as themeStore } from '../helpers/stores';
+  import { theme as themeStore } from '../stores';
 
   import LeftNavigationDrawer from './LeftNavigationDrawer.svelte';
   import RightNavigationDrawer from './RightNavigationDrawer.svelte';
@@ -78,7 +78,7 @@
   on:click={() => (sidenav = false)}
   fadeOptions={{ duration: 250 }} />
 
-{#if navigation}
+{#if false}
   <NavigationDrawer
     style="height:100vh;background:var(--theme-surface)"
     right

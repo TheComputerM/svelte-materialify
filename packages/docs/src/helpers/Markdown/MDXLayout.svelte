@@ -9,7 +9,7 @@
   import { Row } from 'svelte-materialify/src';
   import { onMount, onDestroy, tick } from 'svelte';
   import ReadyForMore from './ReadyForMore.svelte';
-  import { markdown } from './stores';
+  import { markdown } from '../stores';
 
   const { page } = stores();
 
@@ -46,9 +46,9 @@
     top: 0;
     right: 0;
     display: inline-block;
-    margin-left: -1.75rem;
+    margin-left: -1.5rem;
     position: absolute;
-    font-size: 1.5rem;
+    font-size: 60%;
     vertical-align: middle;
     opacity: 0;
   }

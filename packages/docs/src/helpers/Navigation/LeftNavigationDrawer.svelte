@@ -3,7 +3,7 @@
   import { stores } from '@sapper/app';
   import { onDestroy } from 'svelte';
 
-  import routes from '../helpers/routes';
+  import routes from '../routes';
 
   let activeLink;
   const { page } = stores();
