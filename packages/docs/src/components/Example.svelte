@@ -1,7 +1,9 @@
 <script>
   import { onDestroy } from 'svelte';
   import { slide } from 'svelte/transition';
-  import { Icon, Button, Divider } from 'svelte-materialify/src';
+  import {
+    Icon, Button, Divider, Lazy,
+} from 'svelte-materialify/src';
   import { theme } from '../helpers/stores';
 
   export let content;
@@ -27,32 +29,34 @@
   }
 </style>
 
-<div class="example">
-  <div class="text-right pa-1">
-    {#if colorInvertable}
-      <Button fab icon size="small" on:click={() => (dark = !dark)}>
-        <Icon class="mdi mdi-invert-colors" />
+<Lazy>
+  <div class="example">
+    <div class="text-right pa-1">
+      {#if colorInvertable}
+        <Button fab icon size="small" on:click={() => (dark = !dark)}>
+          <Icon class="mdi mdi-invert-colors" />
+        </Button>
+      {/if}
+      <a
+        href="https://github.com/TheComputerM/svelte-materialify/tree/master/packages/docs/{content.path}"
+        rel="noopener noreferrer"
+        target="_blank">
+        <Button fab icon size="small" class="text--primary">
+          <Icon class="mdi mdi-github" />
+        </Button>
+      </a>
+      <Button fab icon size="small" on:click={() => (code = !code)}>
+        <Icon class="mdi mdi-code-tags" />
       </Button>
-    {/if}
-    <a
-      href="https://github.com/TheComputerM/svelte-materialify/tree/master/packages/docs/{content.path}"
-      rel="noopener noreferrer"
-      target="_blank">
-      <Button fab icon size="small" class="text--primary">
-        <Icon class="mdi mdi-github" />
-      </Button>
-    </a>
-    <Button fab icon size="small" on:click={() => (code = !code)}>
-      <Icon class="mdi mdi-code-tags" />
-    </Button>
-  </div>
-  {#if code}
-    <div transition:slide={{ duration: 250 }}>
-      {@html codeContent}
     </div>
-  {/if}
-  <Divider />
-  <div class="pa-2 {dark ? 'theme--dark' : ''}">
-    <svelte:component this={component} />
+    {#if code}
+      <div transition:slide={{ duration: 250 }}>
+        {@html codeContent}
+      </div>
+    {/if}
+    <Divider />
+    <div class="pa-2 {dark ? 'theme--dark' : ''}">
+      <svelte:component this={component} />
+    </div>
   </div>
-</div>
+</Lazy>
