@@ -116,6 +116,18 @@
     }
   }
 
+  &.active {
+    &::before {
+      opacity: 0.12;
+    }
+
+    :global {
+      .s-icon {
+        color: inherit;
+      }
+    }
+  }
+
   &.dense {
     min-height: $list-dense-min-height;
 
@@ -124,6 +136,7 @@
         margin-top: $list-item-icon-margin-y/2;
         margin-bottom: $list-item-icon-margin-y/2;
       }
+
       [slot="left"] {
         .s-icon {
           margin-right: $list-item-dense-action-icon-margin;
@@ -147,18 +160,6 @@
     content: "";
     min-height: inherit;
     font-size: 0;
-  }
-
-  &.active {
-    &::before {
-      opacity: 0.12;
-    }
-
-    :global {
-      .s-icon {
-        color: inherit;
-      }
-    }
   }
 
   &:not(.active) {
