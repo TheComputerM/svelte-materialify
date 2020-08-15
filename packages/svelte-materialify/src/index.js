@@ -26,3 +26,4 @@ export { default as NavigationDrawer } from './components/NavigationDrawer';
 export { default as Subheader } from './components/Subheader';
 export { Container, Row, Col } from './components/Grid';
 export { default as Lazy } from './components/Lazy';
+export { default as Table } from './components/Table';

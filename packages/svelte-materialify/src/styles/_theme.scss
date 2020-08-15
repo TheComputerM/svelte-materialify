@@ -12,6 +12,9 @@
     --theme-icons-active: #{map-deep-get($material, "icons", "active")};
     --theme-icons-inactive: #{map-deep-get($material, "icons", "inactive")};
     --theme-buttons-disabled: #{map-deep-get($material, "buttons", "disabled")};
+    --theme-tables-active: #{map-deep-get($material, "tables", "active")};
+    --theme-tables-hover: #{map-deep-get($material, "tables", "hover")};
+    --theme-tables-group: #{map-deep-get($material, "tables", "group")};
     --theme-dividers: #{map-get($material, "dividers")};
     --theme-cards: #{map-get($material, "cards")};
     --theme-app-bar: #{map-get($material, "app-bar")};
