@@ -1,0 +1,186 @@
+{
+  "version": 3,
+  "name": "col",
+  "data": [
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "cols",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "sm",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "md",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "lg",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "xl",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "offset",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "offset_sm",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "offset_md",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "offset_lg",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "offset_xl",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "style",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "object",
+        "type": "object"
+      },
+      "defaultValue": null
+    }
+  ],
+  "computed": [],
+  "methods": [],
+  "components": [],
+  "description": null,
+  "keywords": [],
+  "events": [],
+  "slots": [
+    {
+      "name": "default",
+      "description": null,
+      "visibility": "public",
+      "parameters": []
+    }
+  ],
+  "refs": []
+}

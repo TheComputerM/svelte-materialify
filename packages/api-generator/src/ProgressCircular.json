@@ -1,0 +1,96 @@
+{
+  "version": 3,
+  "name": "progress-circular",
+  "data": [
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "indeterminate",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "rotate",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "number",
+        "type": "number"
+      },
+      "defaultValue": 0
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "size",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "number",
+        "type": "number"
+      },
+      "defaultValue": 32
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "value",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "number",
+        "type": "number"
+      },
+      "defaultValue": 0
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "width",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "number",
+        "type": "number"
+      },
+      "defaultValue": 4
+    }
+  ],
+  "computed": [],
+  "methods": [],
+  "components": [],
+  "description": null,
+  "keywords": [],
+  "events": [],
+  "slots": [
+    {
+      "name": "default",
+      "description": null,
+      "visibility": "public",
+      "parameters": []
+    }
+  ],
+  "refs": []
+}

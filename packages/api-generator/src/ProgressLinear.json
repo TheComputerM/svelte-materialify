@@ -1,0 +1,216 @@
+{
+  "version": 3,
+  "name": "progress-linear",
+  "data": [
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "value",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "number",
+        "type": "number"
+      },
+      "defaultValue": 0
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "active",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": true
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "indeterminate",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "height",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "defaultValue": "4px"
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "backgroundOpacity",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "number",
+        "type": "number"
+      },
+      "defaultValue": 0.3
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "backgroundColor",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "defaultValue": "primary-color"
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "color",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "defaultValue": "primary-color"
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "buffer",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "number",
+        "type": "number"
+      },
+      "defaultValue": 100
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "reversed",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "stream",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "rounded",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "striped",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "style",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "defaultValue": ""
+    }
+  ],
+  "computed": [],
+  "methods": [],
+  "components": [],
+  "description": null,
+  "keywords": [],
+  "events": [],
+  "slots": [
+    {
+      "name": "default",
+      "description": null,
+      "visibility": "public",
+      "parameters": []
+    }
+  ],
+  "refs": []
+}

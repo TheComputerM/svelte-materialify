@@ -1,0 +1,136 @@
+{
+  "version": 3,
+  "name": "overlay",
+  "data": [
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "active",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": true
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "opacity",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "number",
+        "type": "number"
+      },
+      "defaultValue": 0.46
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "color",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "defaultValue": "rgb(33, 33, 33)"
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "zIndex",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "number",
+        "type": "number"
+      },
+      "defaultValue": 5
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "absolute",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "fadeOptions",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "style",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "defaultValue": ""
+    }
+  ],
+  "computed": [],
+  "methods": [],
+  "components": [],
+  "description": null,
+  "keywords": [],
+  "events": [
+    {
+      "name": "click",
+      "parent": "div",
+      "modificators": [],
+      "locations": null,
+      "loc": null,
+      "visibility": "public",
+      "description": "",
+      "keywords": []
+    }
+  ],
+  "slots": [
+    {
+      "name": "default",
+      "description": null,
+      "visibility": "public",
+      "parameters": []
+    }
+  ],
+  "refs": []
+}

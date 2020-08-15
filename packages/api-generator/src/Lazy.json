@@ -1,0 +1,53 @@
+{
+  "version": 3,
+  "name": "lazy",
+  "data": [
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "observer",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
+    }
+  ],
+  "computed": [],
+  "methods": [],
+  "components": [],
+  "description": null,
+  "keywords": [],
+  "events": [
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "visible"
+    }
+  ],
+  "slots": [
+    {
+      "name": "default",
+      "description": null,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "{visible}",
+          "visibility": "public"
+        }
+      ]
+    },
+    {
+      "name": "placeholder",
+      "description": null,
+      "visibility": "public",
+      "parameters": []
+    }
+  ],
+  "refs": []
+}

@@ -1,0 +1,76 @@
+{
+  "version": 3,
+  "name": "breadcrumbs",
+  "data": [
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "divider",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "defaultValue": "/"
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "large",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "items",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
+    }
+  ],
+  "computed": [],
+  "methods": [],
+  "components": [],
+  "description": null,
+  "keywords": [],
+  "events": [],
+  "slots": [
+    {
+      "name": "divider",
+      "description": null,
+      "visibility": "public",
+      "parameters": []
+    },
+    {
+      "name": "default",
+      "description": null,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "{item}",
+          "visibility": "public"
+        }
+      ]
+    }
+  ],
+  "refs": []
+}

@@ -1,0 +1,114 @@
+{
+  "version": 3,
+  "name": "virtual-list",
+  "data": [
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "active",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": true
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "items",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "itemClasses",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "defaultValue": ""
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "depth",
+      "kind": "const",
+      "static": false,
+      "readonly": true,
+      "type": {
+        "kind": "type",
+        "text": "number",
+        "type": "number"
+      },
+      "defaultValue": 0
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "style",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "defaultValue": ""
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "offsetFunction",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
+    }
+  ],
+  "computed": [],
+  "methods": [],
+  "components": [],
+  "description": null,
+  "keywords": [],
+  "events": [],
+  "slots": [
+    {
+      "name": "default",
+      "description": null,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "{item}",
+          "visibility": "public"
+        }
+      ]
+    }
+  ],
+  "refs": []
+}

@@ -1,0 +1,167 @@
+{
+  "version": 3,
+  "name": "list-item",
+  "data": [
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "activeClass",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "defaultValue": ""
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "active",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "dense",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "object",
+        "type": "object"
+      },
+      "defaultValue": null
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "disabled",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "object",
+        "type": "object"
+      },
+      "defaultValue": null
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "flat",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "object",
+        "type": "object"
+      },
+      "defaultValue": null
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "link",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "selectable",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "ripple",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
+    }
+  ],
+  "computed": [],
+  "methods": [],
+  "components": [],
+  "description": null,
+  "keywords": [],
+  "events": [
+    {
+      "name": "click",
+      "parent": "div",
+      "modificators": [],
+      "locations": null,
+      "loc": null,
+      "visibility": "public",
+      "description": "",
+      "keywords": []
+    }
+  ],
+  "slots": [
+    {
+      "name": "left",
+      "description": null,
+      "visibility": "public",
+      "parameters": []
+    },
+    {
+      "name": "default",
+      "description": null,
+      "visibility": "public",
+      "parameters": []
+    },
+    {
+      "name": "subtitle",
+      "description": null,
+      "visibility": "public",
+      "parameters": []
+    },
+    {
+      "name": "right",
+      "description": null,
+      "visibility": "public",
+      "parameters": []
+    }
+  ],
+  "refs": []
+}

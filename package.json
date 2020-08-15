@@ -16,6 +16,7 @@
     "lint:fix": "yarn workspaces run lint:fix",
     "release": "yarn workspace svelte-materialify release",
     "start": "yarn workspaces start",
+    "api": "yarn workspace svelte-materialify-api start",
     "precommit": "yarn workspaces run precommit"
   },
   "husky": {
