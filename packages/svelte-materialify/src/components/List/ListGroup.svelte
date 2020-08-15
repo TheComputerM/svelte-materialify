@@ -16,7 +16,7 @@
   export { classes as class };
 
   if (hasParentList) {
-    $ListItemOptions.disabled = disabled ?? $ListItemOptions.disabled;
+    $ListItemOptions.disabled = disabled == null ? $ListItemOptions.disabled : disabled;
   }
 
   setContext('hasParentListGroup', true);

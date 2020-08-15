@@ -19,9 +19,9 @@
 
   if (hasParentList || hasParentListGroup) {
     const unsubscribe = ListItemOptions.subscribe((value) => {
-      dense = dense ?? value.dense;
-      disabled = disabled ?? value.disabled;
-      flat = flat ?? value.flat;
+      dense = dense == null ? value.dense : dense;
+      disabled = disabled == null ? value.disabled : disabled;
+      flat = flat == null ? value.flat : flat;
     });
     onDestroy(unsubscribe);
   }
