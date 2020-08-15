@@ -1,7 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import SiteNavigation from '../helpers/Navigation/SiteNavigation.svelte';
-  import { theme as themeStore } from '../helpers/stores';
+  import { theme } from '../helpers/stores';
 
   export let segment;
 
@@ -13,10 +13,9 @@
   }
 
   onMount(async () => {
-    $themeStore = window.localStorage.getItem('theme') || 'light';
-    const unsubscribe = themeStore.subscribe((value) => {
+    theme.set(window.localStorage.getItem('theme') || 'light');
+    const unsubscribe = theme.subscribe((value) => {
       window.localStorage.setItem('theme', value);
-      checkMobile();
     });
 
     breakpoints = await import('svelte-materialify/src/utils/breakpoints');
@@ -44,16 +43,16 @@
 <svelte:window on:resize={checkMobile} />
 
 <svelte:head>
-  {#if $themeStore === 'light'}
+  {#if $theme === 'light'}
     <link rel="stylesheet" href="prism/material-light.css" />
   {:else}
     <link rel="stylesheet" href="prism/material-dark.css" />
   {/if}
 </svelte:head>
 
-<div class="s-app theme--{$themeStore}">
+<div class="s-app theme--{$theme}">
   {#if segment !== undefined}
-    <SiteNavigation bind:theme={$themeStore} {navigation} />
+    <SiteNavigation bind:theme={$theme} {navigation} />
   {/if}
   <main
     class:navigation-enabled={navigation}

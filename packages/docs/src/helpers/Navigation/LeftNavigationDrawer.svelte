@@ -28,7 +28,7 @@
       }
       return false;
     });
-    return !!activeParent;
+    return activeParent;
   }
 
   if (depth === 0) {
@@ -69,7 +69,7 @@
         depth={depth + 1}
         bind:visible={item.open} />
     {:else}
-      <a href={item.href}>
+      <a href={item.href} rel="prefetch">
         <ListItem active={item.href.replace(/\//g, '') === activeLink}>
           <div slot="left">
             {#if item.icon}
