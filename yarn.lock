@@ -5737,9 +5737,9 @@ mdast-util-to-string@^1.0.0:
   integrity sha512-jVU0Nr2B9X3MU4tSK7JP1CMkSvOj7X5l/GboG1tKRw52lLF1x2Ju92Ms9tNetCcbfX3hzlM73zYo2NKkWSfF/A==
 
 mdsvex@^0.8.3:
-  version "0.8.3"
-  resolved "https://registry.yarnpkg.com/mdsvex/-/mdsvex-0.8.3.tgz#1179ba4d05c71674861421091cddad615c80fa7f"
-  integrity sha512-Rdfp7WkE+I+KkkdGCgerO2+3pRDYtVNXNEyq1+ORhx0c8Dq7b7AfSXwkcJXpMXr98kKnmCeH29UbbxZdGglIXw==
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/mdsvex/-/mdsvex-0.8.4.tgz#352bd6fcdf6a9ee82f3b4e1b5316e3d0c9cba96f"
+  integrity sha512-1SVDSBqOb0EBYhmLdlhIM7R6xinfiBGa3TTPv0OWXasVWGjocGUJAqKIDTpsu8crtrbFeLPzHvUbNjkaq0VKHA==
   dependencies:
     prismjs "^1.17.1"
 
@@ -7435,9 +7435,9 @@ rollup-pluginutils@^2.8.2:
     estree-walker "^0.6.1"
 
 rollup@^2.23.1, rollup@^2.26.0:
-  version "2.26.0"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.26.0.tgz#736ffa773fe0cefdfd0b9669abdce444d6a68f07"
-  integrity sha512-1kwpBuxQERz+ymjPLepaXqf3NMRDwSumuEfW/fsTtflmyyhI6ev7nLy5Vdadvn01zd0WWAojRuvA2+0coPGCGQ==
+  version "2.26.2"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.26.2.tgz#de32c2c28a0b5fb843d120e2b3a252a18e7740e9"
+  integrity sha512-dQOms6XRPGHS5Chq7JkkkGXeO72hzWuftB4Rba0rMIT5lThvcEXLTgjrp6+ehhUlsFraOfvcF0Q8dRoQ/X68WQ==
   optionalDependencies:
     fsevents "~2.1.2"
 
@@ -8200,9 +8200,9 @@ supports-hyperlinks@^2.0.0:
     supports-color "^7.0.0"
 
 svelte-check@^1.0.10:
-  version "1.0.16"
-  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-1.0.16.tgz#b4341da0ccbcbb65af609bfa0be0a546a6885f38"
-  integrity sha512-8C5tSNzjFAuafwWpXgr07MVX0hgvWfQJwNRtTiJDiiBCbspVlfh7moFwz9GTo81uU6TdQPB0qWDAVotdk5Ir0A==
+  version "1.0.17"
+  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-1.0.17.tgz#2f97717120de0252446bbc988546073e399d9217"
+  integrity sha512-8PtLehtSjcziotSimhK2b0VxmzicBIZdHboMhGJBTAmwKaUIGsg4JQv/TpRf9iSFAGcsyD4JooMpDiHaC+s9OQ==
   dependencies:
     chalk "^4.0.0"
     chokidar "^3.4.1"
@@ -8239,16 +8239,16 @@ svelte-hyperscript@^1.1.1:
     core-js "^3.6.5"
 
 svelte-jester@^1.0.6:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/svelte-jester/-/svelte-jester-1.1.0.tgz#337540ba11d9e0529708bc5cb2910fab060f0c2e"
-  integrity sha512-jGmaciksDuJLpUE2NcpJDC0LABbLkTznPg7EdkGnu75LNFre0/9G50YPRZaO0L9Fcn72fJSA1rm72caTobYnWQ==
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/svelte-jester/-/svelte-jester-1.1.2.tgz#1b49cacbc97042284278318aabbf9ec89932a960"
+  integrity sha512-wdm2S+1L09t+ckATaGjlLa+yp+EJsKbwDkaUHEfeKTJ91ddq6f4DJShH+Bh2PqATDX8lhn+SW2yEvRG/x/cnqg==
   dependencies:
     cosmiconfig "^6.0.0"
 
 svelte-language-server@*:
-  version "0.10.95"
-  resolved "https://registry.yarnpkg.com/svelte-language-server/-/svelte-language-server-0.10.95.tgz#8321aa70b4d45cb58e4c6dd434902eb62bbb48e3"
-  integrity sha512-DbVffCz/En9MiQG0BC5Aa6VokrJPtn1o5MVMZwxWp2QvBxw69Ba+unB+lXJwh2zQp44f+7Bqtk1abSEfvqnvHA==
+  version "0.10.96"
+  resolved "https://registry.yarnpkg.com/svelte-language-server/-/svelte-language-server-0.10.96.tgz#d1a6dbd6374d3ffc8206a0d89005172996a2c112"
+  integrity sha512-OjdetvFX/2pl1oNLmGMX4DCgRc8T8bam3eZOpHRajR/XN9gaPmArAk+d8qKj5mIUhJhM6c+SwHWdw76bnkqLpg==
   dependencies:
     cosmiconfig "^6.0.0"
     estree-walker "^2.0.1"
@@ -8289,9 +8289,9 @@ svelte-preprocess@~3.9.11:
     strip-indent "^3.0.0"
 
 svelte2tsx@*:
-  version "0.1.82"
-  resolved "https://registry.yarnpkg.com/svelte2tsx/-/svelte2tsx-0.1.82.tgz#8972a6f502090210698293e68ca32423c35441fd"
-  integrity sha512-7yubOZlE7Id/usl6ERO9RLeLCQ6R+OoIJBum6IJTzUZMocFoNyA9HcZqt91XOmTBEhTkc85AdChfYQbI3EvqYg==
+  version "0.1.83"
+  resolved "https://registry.yarnpkg.com/svelte2tsx/-/svelte2tsx-0.1.83.tgz#825eca0a173325ab33a6cce01f4963fbf3256eae"
+  integrity sha512-WzTt7NRUT9Sg62nJLqYgJXt1YxzQBMQICHfD3UePFPDyxNnbrtFArKZVt6nFRUDUCeg0eLrkmMfONQV8piUO4Q==
   dependencies:
     dedent-js "^1.0.1"
     pascal-case "^3.1.1"
@@ -8809,9 +8809,9 @@ unset-value@^1.0.0:
     isobject "^3.0.0"
 
 update-notifier@^4.0.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/update-notifier/-/update-notifier-4.1.0.tgz#4866b98c3bc5b5473c020b1250583628f9a328f3"
-  integrity sha512-w3doE1qtI0/ZmgeoDoARmI5fjDoT93IfKgEGqm26dGUOh8oNpaSTsGNdYRN/SjOuo10jcJGwkEL3mroKzktkew==
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/update-notifier/-/update-notifier-4.1.1.tgz#895fc8562bbe666179500f9f2cebac4f26323746"
+  integrity sha512-9y+Kds0+LoLG6yN802wVXoIfxYEwh3FlZwzMwpCZp62S2i1/Jzeqb9Eeeju3NSHccGGasfGlK5/vEHbAifYRDg==
   dependencies:
     boxen "^4.2.0"
     chalk "^3.0.0"
