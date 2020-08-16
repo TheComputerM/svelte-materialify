@@ -2,6 +2,7 @@
   import Ripple from '../../actions/Ripple';
 
   let classes = '';
+
   // Designates the button as a floating-action-button
   export let fab = false;
 
@@ -47,10 +48,9 @@
   // Options for the ripple directive
   export let ripple = {};
 
-  // Styles
+  // Styles for component
   export let style = null;
 
-  // boi
   export { classes as class };
 </script>
 
