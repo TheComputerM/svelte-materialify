@@ -1,3 +1,4 @@
 ﻿a {text-decoration: none;}
 p {margin-bottom: 16px;}
 html {scroll-behavior: smooth;}
+.text-mono {font-family: 'Fira Code', 'Segoe UI', monospace;}

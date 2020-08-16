@@ -36,9 +36,9 @@ function createIndex(acc, val, i) {
 async function build() {
   const bundle = await rollup.rollup({
     input: './src/index.js',
-    plugins: [json(), terser()],
+    plugins: [json()],
   });
-  await bundle.write({ file: './dist/index.js' });
+  await bundle.write({ file: './dist/index.js', format: 'es' });
 }
 
 (async () => {

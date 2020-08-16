@@ -13,6 +13,8 @@ related:
 </script>
 
 <script>
+  import { Button as doc } from 'svelte-materialify-api/dist';
+  import Properties from '../../components/Properties.svelte';
   import Example from '../../components/Example.svelte';
   import * as E from '../../examples/components/buttons';
   export let examples;
@@ -22,14 +24,7 @@ related:
 The `Button` component replaces the standard html button with a material deisgn theme and
 a multitude of options
 
-## Props
-__TODO__
-
-## Events
-__TODO__
-
-## Slots
-__TODO__
+<Properties {doc} />
 
 ## Examples
 

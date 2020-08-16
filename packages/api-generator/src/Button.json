@@ -51,7 +51,7 @@
       "keywords": [
         {
           "name": "type",
-          "description": "{s-small|small|default|large|x-large}"
+          "description": "{x-small|small|default|large|x-large}"
         }
       ],
       "visibility": "public",
@@ -62,12 +62,12 @@
       "readonly": false,
       "type": {
         "kind": "union",
-        "text": "s-small|small|default|large|x-large",
+        "text": "x-small|small|default|large|x-large",
         "type": [
           {
             "kind": "type",
-            "text": "s-small",
-            "type": "s-small"
+            "text": "x-small",
+            "type": "x-small"
           },
           {
             "kind": "type",
@@ -178,10 +178,10 @@
       "readonly": false,
       "type": {
         "kind": "type",
-        "text": "object",
-        "type": "object"
+        "text": "boolean",
+        "type": "boolean"
       },
-      "defaultValue": null
+      "defaultValue": false
     },
     {
       "keywords": [],
@@ -235,21 +235,6 @@
       "defaultValue": "button"
     },
     {
-      "visibility": "public",
-      "description": null,
-      "keywords": [],
-      "name": "style",
-      "kind": "let",
-      "static": false,
-      "readonly": false,
-      "type": {
-        "kind": "type",
-        "text": "object",
-        "type": "object"
-      },
-      "defaultValue": null
-    },
-    {
       "keywords": [],
       "visibility": "public",
       "description": "Options for the ripple directive",
@@ -262,6 +247,21 @@
         "text": "any",
         "type": "any"
       }
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Styles",
+      "name": "style",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "object",
+        "type": "object"
+      },
+      "defaultValue": null
     }
   ],
   "computed": [],

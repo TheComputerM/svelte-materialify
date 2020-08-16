@@ -4,37 +4,53 @@
   let classes = '';
   // Designates the button as a floating-action-button
   export let fab = false;
+
   // Designates the button as icon
   export let icon = false;
+
   // Makes button take 100% of the space
   export let block = false;
+
   /**
    * Determines the size of the button
-   * @type {'x-small'|'small'|'default'|'large'|'x-large'}
+   * @type {x-small|small|default|large|x-large}
   */
   export let size = 'default';
+
   // Removed the border radius if true.
   export let tile = false;
+
   // Makes the background transparent.
   export let text = false;
+
   // Removes the button box shadow.
   export let depressed = false;
+
   // Makes the background transparent and applies a thin border.
   export let outlined = false;
+
   // Applies a large border radius on the button.
   export let rounded = false;
+
   // Removes the ability to click or target the component.
   export let disabled = null;
+
   // Make the button active
   export let active = false;
+
   /**
    * Specifies the type of button
-   * @type {'button'|'reset'|'submit'}
+   * @type {button|reset|submit}
   */
   export let type = 'button';
+
   // Options for the ripple directive
   export let ripple = {};
+
+  // Styles
   export let style = null;
+
+  // boi
   export { classes as class };
 </script>
 
