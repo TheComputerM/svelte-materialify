@@ -1,20 +1,18 @@
 <script>
-  import { onDestroy } from 'svelte';
-  import { slide } from 'svelte/transition';
-  import {
-    Icon, Button, Divider, Lazy,
-} from 'svelte-materialify/src';
-  import { theme } from '../helpers/stores';
+  import { onDestroy } from "svelte";
+  import { slide } from "svelte/transition";
+  import { Icon, Button, Lazy } from "svelte-materialify/src";
+  import { theme } from "../helpers/stores";
 
   export let content;
   export let component;
 
-  let code = false;
+  let codeVisible = false;
   let colorInvertable = false;
-  let dark = false;
+  let isComponentDark = false;
   const unsubscribe = theme.subscribe((value) => {
-    colorInvertable = value === 'light';
-    dark = colorInvertable ? dark : false;
+    colorInvertable = value === "light";
+    isComponentDark = colorInvertable ? isComponentDark : false;
   });
   onDestroy(unsubscribe);
 
@@ -22,18 +20,26 @@
 </script>
 
 <style>
-  .example {
+  .component-example {
     margin-bottom: 36px;
     border-radius: 4px;
     border: thin solid var(--theme-dividers);
   }
+
+  .component-example :first-child {
+    background-color: var(--theme-app-bar);
+  }
 </style>
 
 <Lazy>
-  <div class="example">
+  <div class="component-example">
     <div class="text-right pa-1">
       {#if colorInvertable}
-        <Button fab icon size="small" on:click={() => (dark = !dark)}>
+        <Button
+          fab
+          icon
+          size="small"
+          on:click={() => (isComponentDark = !isComponentDark)}>
           <Icon class="mdi mdi-invert-colors" />
         </Button>
       {/if}
@@ -45,17 +51,20 @@
           <Icon class="mdi mdi-github" />
         </Button>
       </a>
-      <Button fab icon size="small" on:click={() => (code = !code)}>
+      <Button
+        fab
+        icon
+        size="small"
+        on:click={() => (codeVisible = !codeVisible)}>
         <Icon class="mdi mdi-code-tags" />
       </Button>
     </div>
-    {#if code}
+    {#if codeVisible}
       <div transition:slide={{ duration: 250 }}>
         {@html codeContent}
       </div>
     {/if}
-    <Divider />
-    <div class="pa-2 {dark ? 'theme--dark' : ''}">
+    <div class="pa-2 {isComponentDark ? 'theme--dark' : ''}">
       <svelte:component this={component} />
     </div>
   </div>

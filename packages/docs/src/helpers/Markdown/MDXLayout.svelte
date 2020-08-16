@@ -1,15 +1,15 @@
 <script context="module">
   import CodeBlock from './CodeBlock.svelte';
+  import { Row } from 'svelte-materialify/src';
+  import ReadyForMore from './ReadyForMore.svelte';
+  import { markdown } from '../stores';
 
   export { CodeBlock };
 </script>
 
 <script>
   import { stores } from '@sapper/app';
-  import { Row } from 'svelte-materialify/src';
   import { onMount, onDestroy, tick } from 'svelte';
-  import ReadyForMore from './ReadyForMore.svelte';
-  import { markdown } from '../stores';
 
   const { page } = stores();
 
@@ -24,6 +24,7 @@
 
   onDestroy(async () => {
     await tick();
+    // Using stores as an alternative to events
     markdown.update((x) => !x);
   });
 
