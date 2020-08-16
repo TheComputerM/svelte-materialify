@@ -1,3 +1,5 @@
+import { all as API } from 'svelte-materialify-api/dist';
+
 export default [
   {
     text: 'Getting Started',
@@ -63,5 +65,11 @@ export default [
       { text: 'Intersection observer', href: '/actions/intersect/' },
       { text: 'Jump', href: '/actions/jump/' },
     ],
+  },
+  {
+    text: 'API',
+    icon: 'beaker',
+    open: false,
+    items: API.names.map((i) => ({ text: i, href: `/api/${i}/` })),
   },
 ];

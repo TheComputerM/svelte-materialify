@@ -1,5 +1,5 @@
 <script>
-  import { Table } from 'svelte-materialify/src';
+  import { Table } from "svelte-materialify/src";
 
   export let doc;
   export let noclass = false;
@@ -76,6 +76,10 @@
             <td class="font-weight-bold text-mono">{event.name}</td>
             <td>{event.description || 'DOM Event'}</td>
           </tr>
+        {:else}
+          <td colspan="2" class="text-center text-overline">
+            There are no Events.
+          </td>
         {/each}
       </tbody>
     </Table>
@@ -105,10 +109,10 @@
             </td>
             <td>{slot.description || 'Missing Description'}</td>
           </tr>
-          {:else}
-          <div>
+        {:else}
+          <td colspan="2" class="text-center text-overline">
             There are no Slots.
-          </div>
+          </td>
         {/each}
       </tbody>
     </Table>

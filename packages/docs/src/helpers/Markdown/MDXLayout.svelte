@@ -42,15 +42,10 @@
     scroll-margin-top: 64px;
   }
   .markdown-container .heading > a {
-    bottom: 0;
-    left: 0;
-    top: 0;
-    right: 0;
-    display: inline-block;
-    margin-left: -1.5rem;
     position: absolute;
-    font-size: 60%;
-    vertical-align: middle;
+    top: 0;
+    left: -1em;
+    font-size: .75em;
     opacity: 0;
   }
   .markdown-container .heading:hover > a {

@@ -17,6 +17,9 @@
   } else if (checkIfHrefContains('/styles/')) {
     icon = 'palette deep-purple-text';
     subtitle = 'Styles';
+  } else if (checkIfHrefContains('/api/')) {
+    icon = 'beaker amber-text';
+    subtitle = 'API';
   }
 </script>
 

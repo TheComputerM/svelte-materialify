@@ -178,10 +178,10 @@
       "readonly": false,
       "type": {
         "kind": "type",
-        "text": "boolean",
-        "type": "boolean"
+        "text": "object",
+        "type": "object"
       },
-      "defaultValue": false
+      "defaultValue": null
     },
     {
       "keywords": [],
@@ -251,7 +251,7 @@
     {
       "keywords": [],
       "visibility": "public",
-      "description": "Styles",
+      "description": "Styles for component",
       "name": "style",
       "kind": "let",
       "static": false,
