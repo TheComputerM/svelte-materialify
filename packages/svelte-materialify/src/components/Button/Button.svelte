@@ -1,6 +1,7 @@
 <script>
   import Ripple from '../../actions/Ripple';
 
+  // Classes to add to the button
   let classes = '';
 
   // Designates the button as a floating-action-button

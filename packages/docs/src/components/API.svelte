@@ -1,8 +1,7 @@
 <script>
-  import { Table } from "svelte-materialify/src";
+  import { Table } from 'svelte-materialify/src';
 
   export let doc;
-  export let noclass = false;
 </script>
 
 <section>
@@ -29,29 +28,19 @@
       </thead>
       <tbody>
         {#each doc.data as prop}
-          <tr>
-            <td>
-              <span class="font-weight-bold text-mono">{prop.name}</span>
-              <span class="d-block text--secondary">{prop.type.text}</span>
-            </td>
-            <td>
-              <code>{prop.defaultValue}</code>
-            </td>
-            <td>{prop.description || 'Missing Description'}</td>
-          </tr>
+          {#if prop.visibility === 'public'}
+            <tr>
+              <td>
+                <span class="font-weight-bold text-mono">{prop.name}</span>
+                <span class="d-block text--secondary">{prop.type.text}</span>
+              </td>
+              <td>
+                <code>{prop.defaultValue}</code>
+              </td>
+              <td>{prop.description || 'Missing Description'}</td>
+            </tr>
+          {/if}
         {/each}
-        {#if !noclass}
-          <tr>
-            <td>
-              <span class="font-weight-bold text-mono">class</span>
-              <span class="d-block text--secondary">string</span>
-            </td>
-            <td>
-              <code>''</code>
-            </td>
-            <td>Classes to add to the component</td>
-          </tr>
-        {/if}
       </tbody>
     </Table>
   </section>

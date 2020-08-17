@@ -76,6 +76,21 @@
         "type": "number"
       },
       "defaultValue": 4
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "class",
+      "kind": "const",
+      "static": false,
+      "readonly": true,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "localName": "classes"
     }
   ],
   "computed": [],

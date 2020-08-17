@@ -262,6 +262,21 @@
         "type": "object"
       },
       "defaultValue": null
+    },
+    {
+      "visibility": "public",
+      "description": "Designates the button as a floating-action-button",
+      "keywords": [],
+      "name": "class",
+      "kind": "const",
+      "static": false,
+      "readonly": true,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "localName": "classes"
     }
   ],
   "computed": [],
