@@ -14,10 +14,9 @@ related:
 </script>
 
 <script>
+  import { Alert, API, Example} from '../../components';
   import { Button as doc } from 'svelte-materialify-api/dist';
-  import API from '../../components/API.svelte';
-  import Example from '../../components/Example.svelte';
-  import * as E from '../../examples/components/buttons';
+  import * as Examples from '../../examples/components/buttons';
   export let examples;
 </script>
 
@@ -25,48 +24,54 @@ related:
 The `Button` component replaces the standard html button with a material deisgn theme and
 a multitude of options
 
+<Alert type='info'>
+You can add any props including `aria-*` and other attributes which are not present in the props
+list below
+</Alert>
+
 <API {doc} />
 
 ## Examples
+Here are some examples
 
 ### Raised
 This is the default one
-<Example content={examples.raised} component={E.raised} />
+<Example content={examples.raised} component={Examples.raised} />
 
 ### Depressed
 These are just buttons with no box shadow
-<Example content={examples.depressed} component={E.depressed} />
+<Example content={examples.depressed} component={Examples.depressed} />
 
 ### Block
 Big bois
-<Example content={examples.block} component={E.block} />
+<Example content={examples.block} component={Examples.block} />
 
 ### Floating Action Buttons
 Floating buttons are rounded and usually contain an icon.
-<Example content={examples.fab} component={E.fab} />
+<Example content={examples.fab} component={Examples.fab} />
 
 ### Icon
 Icons can be used for the primary content of a button.
-<Example content={examples.icon} component={E.icon} />
+<Example content={examples.icon} component={Examples.icon} />
 
 ### Outlined
 Outlined buttons inherit their borders from the current color applied.
-<Example content={examples.outlined} component={E.outlined} />
+<Example content={examples.outlined} component={Examples.outlined} />
 
 ### Rounded
 Rounded buttons behave the same as regular buttons but have rounded edges.
-<Example content={examples.rounded} component={E.rounded} />
+<Example content={examples.rounded} component={Examples.rounded} />
 
 ### Text
 Text buttons have no box shadow and no background. Only on hover is the container for
 the button shown.
-<Example content={examples.text} component={E.text} />
+<Example content={examples.text} component={Examples.text} />
 
 ### Tile
 Tile buttons behave the same as regular buttons but have no border radius.
-<Example content={examples.tile} component={E.tile} />
+<Example content={examples.tile} component={Examples.tile} />
 
 ### Sizing
 Buttons can be given different sizing options to fit a multitude of scenarios. We do not
 set font sizes for icons as different icon packs look differently
-<Example content={examples.sizing} component={E.sizing} />
+<Example content={examples.sizing} component={Examples.sizing} />
