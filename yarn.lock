@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4", "@babel/code-frame@^7.8.3":
+"@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4":
   version "7.10.4"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.10.4.tgz#168da1a36e90da68ae8d49c0f1b48c7c6249213a"
   integrity sha512-vG6SvB6oYEhvgisZNFRmRCUkLz11c7rp+tbNTynGqc6mS1d5ATd/sGyV6W0KZZnXRKMTzZDRgQT3Ou9jhpAfUg==
@@ -1131,15 +1131,14 @@
   dependencies:
     "@rollup/pluginutils" "^3.0.8"
 
-"@rollup/plugin-node-resolve@^8.4.0":
-  version "8.4.0"
-  resolved "https://registry.yarnpkg.com/@rollup/plugin-node-resolve/-/plugin-node-resolve-8.4.0.tgz#261d79a680e9dc3d86761c14462f24126ba83575"
-  integrity sha512-LFqKdRLn0ShtQyf6SBYO69bGE1upV6wUhBX0vFOUnLAyzx5cwp8svA0eHUnu8+YU57XOkrMtfG63QOpQx25pHQ==
+"@rollup/plugin-node-resolve@^9.0.0":
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/@rollup/plugin-node-resolve/-/plugin-node-resolve-9.0.0.tgz#39bd0034ce9126b39c1699695f440b4b7d2b62e6"
+  integrity sha512-gPz+utFHLRrd41WMP13Jq5mqqzHL3OXrfj3/MkSyB6UBIcuNt9j60GCbarzMzdf1VHFpOxfQh/ez7wyadLMqkg==
   dependencies:
     "@rollup/pluginutils" "^3.1.0"
     "@types/resolve" "1.17.1"
     builtin-modules "^3.1.0"
-    deep-freeze "^0.0.1"
     deepmerge "^4.2.2"
     is-module "^1.0.0"
     resolve "^1.17.0"
@@ -2845,11 +2844,6 @@ deep-extend@^0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/deep-extend/-/deep-extend-0.6.0.tgz#c4fa7c95404a17a9c3e8ca7e1537312b736330ac"
   integrity sha512-LOHxIOaPYdHlJRtCQfDIVZtfw/ufM8+rVj649RIHzcm/vGwQRXFt6OPqIFWsm2XEMrNIEtWR64sY1LEKD2vAOA==
-
-deep-freeze@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/deep-freeze/-/deep-freeze-0.0.1.tgz#3a0b0005de18672819dfd38cd31f91179c893e84"
-  integrity sha1-OgsABd4YZygZ39OM0x+RF5yJPoQ=
 
 deep-is@^0.1.3, deep-is@~0.1.3:
   version "0.1.3"
@@ -5121,7 +5115,7 @@ jest-watcher@^26.3.0:
     jest-util "^26.3.0"
     string-length "^4.0.1"
 
-jest-worker@^26.0.0, jest-worker@^26.2.1, jest-worker@^26.3.0:
+jest-worker@^26.2.1, jest-worker@^26.3.0:
   version "26.3.0"
   resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-26.3.0.tgz#7c8a97e4f4364b4f05ed8bca8ca0c24de091871f"
   integrity sha512-Vmpn2F6IASefL+DVBhPzI2J9/GJUsqzomdeN+P+dK8/jKxbh8R3BtFnx3FIta7wYlPU62cpJMJQo4kuOowcMnw==
@@ -5422,9 +5416,9 @@ listr-verbose-renderer@^0.5.0:
     figures "^2.0.0"
 
 listr2@^2.1.0:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/listr2/-/listr2-2.5.1.tgz#f265dddf916c8a9b475437b34ae85a7d8f495c7a"
-  integrity sha512-qkNRW70SwfwWLD/eiaTf2tfgWT/ZvjmMsnEFJOCzac0cjcc8rYHDBr1eQhRxopj6lZO7Oa5sS/pZzS6q+BsX+w==
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/listr2/-/listr2-2.6.0.tgz#788a3d202978a1b8582062952cbc49272c8e206a"
+  integrity sha512-nwmqTJYQQ+AsKb4fCXH/6/UmLCEDL1jkRAdSn9M6cEUzoRGrs33YD/3N86gAZQnGZ6hxV18XSdlBcJ1GTmetJA==
   dependencies:
     chalk "^4.1.0"
     cli-truncate "^2.1.0"
@@ -7407,16 +7401,6 @@ rollup-plugin-svelte@^5.0.1, rollup-plugin-svelte@^5.2.3:
     rollup-pluginutils "^2.8.2"
     sourcemap-codec "^1.4.8"
 
-rollup-plugin-terser@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-terser/-/rollup-plugin-terser-6.1.0.tgz#071866585aea104bfbb9dd1019ac523e63c81e45"
-  integrity sha512-4fB3M9nuoWxrwm39habpd4hvrbrde2W2GG4zEGPQg1YITNkM3Tqur5jSuXlWNzbv/2aMLJ+dZJaySc3GCD8oDw==
-  dependencies:
-    "@babel/code-frame" "^7.8.3"
-    jest-worker "^26.0.0"
-    serialize-javascript "^3.0.0"
-    terser "^4.7.0"
-
 rollup-plugin-terser@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/rollup-plugin-terser/-/rollup-plugin-terser-7.0.0.tgz#26b38ada4f0b351cd7cd872ca04c0f8532d4864f"
@@ -7435,9 +7419,9 @@ rollup-pluginutils@^2.8.2:
     estree-walker "^0.6.1"
 
 rollup@^2.23.1, rollup@^2.26.0:
-  version "2.26.2"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.26.2.tgz#de32c2c28a0b5fb843d120e2b3a252a18e7740e9"
-  integrity sha512-dQOms6XRPGHS5Chq7JkkkGXeO72hzWuftB4Rba0rMIT5lThvcEXLTgjrp6+ehhUlsFraOfvcF0Q8dRoQ/X68WQ==
+  version "2.26.3"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.26.3.tgz#502c755872a4590937cfa4e8f7eb99d3bc3c4025"
+  integrity sha512-Mlt39/kL2rA9egcbQbaZV1SNVplGqYYhDDMcGgHPPE0tvM3R4GrB+IEdYy2QtTrdzMQx57ZcqDFf/KWWm8F+uw==
   optionalDependencies:
     fsevents "~2.1.2"
 
@@ -7571,13 +7555,6 @@ semver@^7.1.1, semver@^7.2.1, semver@^7.3.2:
   version "7.3.2"
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.3.2.tgz#604962b052b81ed0786aae84389ffba70ffd3938"
   integrity sha512-OrOb32TeeambH6UrhtShmF7CRDqhL6/5XpPNp2DuRH6+9QLw/orhp72j87v8Qa1ScDkvrrBNpZcDejAirJmfXQ==
-
-serialize-javascript@^3.0.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/serialize-javascript/-/serialize-javascript-3.1.0.tgz#8bf3a9170712664ef2561b44b691eafe399214ea"
-  integrity sha512-JIJT1DGiWmIKhzRsG91aS6Ze4sFUrYbltlkg2onR5OrnNM02Kl/hnY/T4FN2omvyeBbQmMJv+K4cPOpGzOTFBg==
-  dependencies:
-    randombytes "^2.1.0"
 
 serialize-javascript@^4.0.0:
   version "4.0.0"
@@ -8200,9 +8177,9 @@ supports-hyperlinks@^2.0.0:
     supports-color "^7.0.0"
 
 svelte-check@^1.0.10:
-  version "1.0.17"
-  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-1.0.17.tgz#2f97717120de0252446bbc988546073e399d9217"
-  integrity sha512-8PtLehtSjcziotSimhK2b0VxmzicBIZdHboMhGJBTAmwKaUIGsg4JQv/TpRf9iSFAGcsyD4JooMpDiHaC+s9OQ==
+  version "1.0.18"
+  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-1.0.18.tgz#fbfc6b8994b2ead2af2d6893266422b8da6dc78e"
+  integrity sha512-ARdHaZX8k5ieDqlcRbfkJOZu8onWhH+lC7sLppTkeT0soaOWq3YYcklBWpLe1aBGLhoCOMGLM2lAx9JjHwLXjg==
   dependencies:
     chalk "^4.0.0"
     chokidar "^3.4.1"
@@ -8246,9 +8223,9 @@ svelte-jester@^1.0.6:
     cosmiconfig "^6.0.0"
 
 svelte-language-server@*:
-  version "0.10.96"
-  resolved "https://registry.yarnpkg.com/svelte-language-server/-/svelte-language-server-0.10.96.tgz#d1a6dbd6374d3ffc8206a0d89005172996a2c112"
-  integrity sha512-OjdetvFX/2pl1oNLmGMX4DCgRc8T8bam3eZOpHRajR/XN9gaPmArAk+d8qKj5mIUhJhM6c+SwHWdw76bnkqLpg==
+  version "0.10.97"
+  resolved "https://registry.yarnpkg.com/svelte-language-server/-/svelte-language-server-0.10.97.tgz#fe577a04220a9ad21f1d0eedd2af64d810f1c176"
+  integrity sha512-RJ/GgdIDOI1jf3evVm3IUMd4HYaOGqL7PRca9pDxmV7qVfX3TM1Kkk0OrZ8dOYykf7rTE2+e9CeYKfIBYuCq1w==
   dependencies:
     cosmiconfig "^6.0.0"
     estree-walker "^2.0.1"
@@ -8289,9 +8266,9 @@ svelte-preprocess@~3.9.11:
     strip-indent "^3.0.0"
 
 svelte2tsx@*:
-  version "0.1.83"
-  resolved "https://registry.yarnpkg.com/svelte2tsx/-/svelte2tsx-0.1.83.tgz#825eca0a173325ab33a6cce01f4963fbf3256eae"
-  integrity sha512-WzTt7NRUT9Sg62nJLqYgJXt1YxzQBMQICHfD3UePFPDyxNnbrtFArKZVt6nFRUDUCeg0eLrkmMfONQV8piUO4Q==
+  version "0.1.84"
+  resolved "https://registry.yarnpkg.com/svelte2tsx/-/svelte2tsx-0.1.84.tgz#6c4621c795ae2234572c309d79b8328c28bd5c91"
+  integrity sha512-DJEIdbQOptzY3Z2fcF9mwhEOq2QrFhvzL+gbnYbbaz4OZ487j/KlIitJB4TrSZFz30uZirY4DJA9cPAKbXPZ9A==
   dependencies:
     dedent-js "^1.0.1"
     pascal-case "^3.1.1"
@@ -8306,10 +8283,10 @@ svelte@^3.24.1:
   resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.24.1.tgz#aca364937dd1df27fe131e2a4c234acb6061db4b"
   integrity sha512-OX/IBVUJSFo1rnznXdwf9rv6LReJ3qQ0PwRjj76vfUWyTfbHbR9OXqJBnUrpjyis2dwYcbT2Zm1DFjOOF1ZbbQ==
 
-sveltedoc-parser@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/sveltedoc-parser/-/sveltedoc-parser-3.0.0.tgz#cf26bf50edd4744cbfe2dbdef4f4233c989fc1f1"
-  integrity sha512-4UjtXTe88KnrIEjdrCHnYNFOu8s+eEsUPVJoO8CMhQLhVWTCbHi7ctsQ3Q3bZUz09fb66rA9PiolEyVXh7IDFw==
+sveltedoc-parser@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/sveltedoc-parser/-/sveltedoc-parser-3.0.1.tgz#33fa814ca641c20c8e651beef7e4a514f7f3284a"
+  integrity sha512-Uyb9/Uh++s//wl4fAN8fBqoo4h3XxVq5zCGAyn75f1Glnjnn1OA5QV7VqfqIDWh+UjQRUcoR5z9nD+l2OZsN2w==
   dependencies:
     eslint "7.6.0"
     espree "7.2.0"
@@ -8365,15 +8342,6 @@ terminal-link@^2.0.0:
   dependencies:
     ansi-escapes "^4.2.1"
     supports-hyperlinks "^2.0.0"
-
-terser@^4.7.0:
-  version "4.8.0"
-  resolved "https://registry.yarnpkg.com/terser/-/terser-4.8.0.tgz#63056343d7c70bb29f3af665865a46fe03a0df17"
-  integrity sha512-EAPipTNeWsb/3wLPeup1tVPaXfIaU68xMnVdPafIL1TV05OhASArYyIfFvnvJCNrR2NIOvDVNNTFRa+Re2MWyw==
-  dependencies:
-    commander "^2.20.0"
-    source-map "~0.6.1"
-    source-map-support "~0.5.12"
 
 terser@^5.0.0:
   version "5.1.0"
