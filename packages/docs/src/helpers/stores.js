@@ -4,6 +4,6 @@ const theme = writable('light');
 
 export { theme };
 
-const markdown = writable(true);
+const markdown = writable(false);
 
 export { markdown };

@@ -30,8 +30,9 @@
       spy.setup();
     }
 
-    // Using stores as an alternative to events
-    const unsubscribe = markdown.subscribe(refresh);
+    const unsubscribe = markdown.subscribe((loaded) => {
+      if (loaded) refresh();
+    });
 
     return () => {
       spy.destroy();

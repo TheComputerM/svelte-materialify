@@ -20,12 +20,13 @@
       a.setAttribute('aria-hidden', true);
       a.setAttribute('tabindex', -1);
     });
+    // Cheap trick to set true on initial load
+    markdown.update((x) => !x);
   });
 
   onDestroy(async () => {
     await tick();
-    // Using stores as an alternative to events
-    markdown.update((x) => !x);
+    markdown.set(true);
   });
 
   export let title = '';

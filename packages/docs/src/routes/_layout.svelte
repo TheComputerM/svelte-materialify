@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import SiteNavigation from '../helpers/Navigation/SiteNavigation.svelte';
+  import Loading from '../helpers/Navigation/Loading.svelte';
   import { theme } from '../helpers/stores';
 
   export let segment;
@@ -57,6 +58,9 @@
   <main
     class:navigation-enabled={navigation}
     class:index-page={segment === undefined}>
+    {#if segment !== undefined}
+      <Loading />
+    {/if}
     <slot />
   </main>
 </div>
