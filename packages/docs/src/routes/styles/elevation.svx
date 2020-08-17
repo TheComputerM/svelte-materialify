@@ -1,0 +1,46 @@
+---
+title: Elevation
+related:
+  - Usage: /getting-started/usage/
+  - Text and Typography: /styles/text-and-typography/
+---
+
+<script context="module">
+  export async function preload() {
+    let examples = await this.fetch('examples/styles/elevation.json');
+    examples = await examples.json();
+    return { examples }
+  }
+</script>
+
+<script>
+  import Example from '../../components/Example.svelte';
+  import * as Examples from '../../examples/styles/elevation';
+
+  export let examples;
+</script>
+
+# Elevation
+
+The elevation helpers allow you to control relative depth, or distance, between two surfaces along
+the z-axis. There is a total of 25 elevation levels. You can set an element’s elevation by using
+the class `elevation-{n}`, where `n` is a integer between 0-24 corresponding to the desired
+elevation.
+
+## Usage
+The `elevation` helper classes allow you to assign a custom **z-depth** to any element.
+
+<Example code={examples.elevations} component={Examples.elevations} />
+
+## SCSS
+You can also access the elevation helpers through SCSS mixins by including the elevation tool
+
+```scss
+@import 'svelte-materialify/src/styles/tools/elevation';
+
+div {
+  // $n is the depth
+  $n: 2;
+  @include elevation($n);
+}
+```

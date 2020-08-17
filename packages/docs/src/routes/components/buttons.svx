@@ -36,42 +36,42 @@ Here are some examples
 
 ### Raised
 This is the default one
-<Example content={examples.raised} component={Examples.raised} />
+<Example code={examples.raised} component={Examples.raised} />
 
 ### Depressed
 These are just buttons with no box shadow
-<Example content={examples.depressed} component={Examples.depressed} />
+<Example code={examples.depressed} component={Examples.depressed} />
 
 ### Block
 Big bois
-<Example content={examples.block} component={Examples.block} />
+<Example code={examples.block} component={Examples.block} />
 
 ### Floating Action Buttons
 Floating buttons are rounded and usually contain an icon.
-<Example content={examples.fab} component={Examples.fab} />
+<Example code={examples.fab} component={Examples.fab} />
 
 ### Icon
 Icons can be used for the primary content of a button.
-<Example content={examples.icon} component={Examples.icon} />
+<Example code={examples.icon} component={Examples.icon} />
 
 ### Outlined
 Outlined buttons inherit their borders from the current color applied.
-<Example content={examples.outlined} component={Examples.outlined} />
+<Example code={examples.outlined} component={Examples.outlined} />
 
 ### Rounded
 Rounded buttons behave the same as regular buttons but have rounded edges.
-<Example content={examples.rounded} component={Examples.rounded} />
+<Example code={examples.rounded} component={Examples.rounded} />
 
 ### Text
 Text buttons have no box shadow and no background. Only on hover is the container for
 the button shown.
-<Example content={examples.text} component={Examples.text} />
+<Example code={examples.text} component={Examples.text} />
 
 ### Tile
 Tile buttons behave the same as regular buttons but have no border radius.
-<Example content={examples.tile} component={Examples.tile} />
+<Example code={examples.tile} component={Examples.tile} />
 
 ### Sizing
 Buttons can be given different sizing options to fit a multitude of scenarios. We do not
 set font sizes for icons as different icon packs look differently
-<Example content={examples.sizing} component={Examples.sizing} />
+<Example code={examples.sizing} component={Examples.sizing} />

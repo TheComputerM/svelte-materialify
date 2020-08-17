@@ -4,7 +4,7 @@
   import { Icon, Button, Lazy } from "svelte-materialify/src";
   import { theme } from "../helpers/stores";
 
-  export let content;
+  export let code;
   export let component;
 
   let codeVisible = false;
@@ -16,7 +16,7 @@
   });
   onDestroy(unsubscribe);
 
-  const codeContent = `<pre class=language-html><code class=language-html>${content.code}</code></pre>`;
+  const codeContent = `<pre class=language-html><code class=language-html>${code.code}</code></pre>`;
 </script>
 
 <style>
@@ -44,7 +44,7 @@
         </Button>
       {/if}
       <a
-        href="https://github.com/TheComputerM/svelte-materialify/tree/master/packages/docs/{content.path}"
+        href="https://github.com/TheComputerM/svelte-materialify/tree/master/packages/docs/{code.path}"
         rel="noopener noreferrer"
         target="_blank">
         <Button fab icon size="small" class="text--primary">

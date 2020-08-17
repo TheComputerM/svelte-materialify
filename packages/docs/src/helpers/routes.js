@@ -20,6 +20,7 @@ export default [
       { text: 'Content', href: '/styles/content/' },
       { text: 'Colors', href: '/styles/colors/' },
       { text: 'Display Helpers', href: '/styles/display-helpers/' },
+      { text: 'Border Radius', href: '/styles/border-radius/' },
       { text: 'Elevation', href: '/styles/elevation/' },
       { text: 'Flex', href: '/styles/flex/' },
       { text: 'Float', href: '/styles/float/' },
