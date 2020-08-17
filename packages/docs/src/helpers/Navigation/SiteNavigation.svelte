@@ -9,17 +9,17 @@
     NavigationDrawer,
     List,
     Overlay,
-  } from "svelte-materialify/src/";
-  import { theme as themeStore } from "../stores";
+  } from 'svelte-materialify/src/';
+  import { theme as themeStore } from '../stores';
 
-  import LeftNavigationDrawer from "./LeftNavigationDrawer.svelte";
-  import RightNavigationDrawer from "./RightNavigationDrawer.svelte";
+  import LeftNavigationDrawer from './LeftNavigationDrawer.svelte';
+  import RightNavigationDrawer from './RightNavigationDrawer.svelte';
 
   let sidenav = false;
 
   function toggleTheme() {
-    if (theme === "light") theme = "dark";
-    else theme = "light";
+    if (theme === 'light') theme = 'dark';
+    else theme = 'light';
     themeStore.set(theme);
   }
 </script>
@@ -44,9 +44,9 @@
     href="https://github.com/TheComputerM/svelte-materialify"
     target="_blank"
     rel="noopener">
-    <Button class="white-text grey darken-3">
-      <Icon class="mdi mdi-github mr-3" />
-      GitHub
+    <Button class="white-text grey darken-3" fab={!navigation}>
+      <Icon class="mdi mdi-github {navigation ? 'mr-3' : ''}" />
+      {#if navigation}GitHub{/if}
     </Button>
   </a>
   <Button
