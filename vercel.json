@@ -4,11 +4,11 @@
   "trailingSlash": true,
   "headers": [
     {
-      "source": "/fonts/(.*)",
+      "source": "/(fonts|prism)/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=3600, must-revalidate"
+          "value": "public, max-age=3600, immutable"
         }
       ]
     }
