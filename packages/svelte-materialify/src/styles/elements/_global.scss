@@ -18,3 +18,7 @@ body {
   font-family: $body-font-family;
   line-height: $line-height-root;
 }
+
+p {
+  margin-bottom: $spacer * 4;
+}
