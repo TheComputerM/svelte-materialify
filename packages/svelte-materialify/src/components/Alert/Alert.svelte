@@ -9,7 +9,7 @@
   let classes = '';
   export let visible = true;
   export let transition = fade;
-  export let transitionOpts = {};
+  export let transitionOpts = { duration: 0 };
   export let dense = false;
   export let outlined = false;
   export let text = false;
@@ -39,7 +39,8 @@
     class:dense
     class:outlined
     class:text
-    class:tile>
+    class:tile
+    class:coloredBorder>
     <div class="s-alert__wrapper">
       <slot name="icon" />
       <div class="s-alert__content">
@@ -51,9 +52,7 @@
         </Button>
       {/if}
       {#if border}
-        <div
-          class="s-alert__border border-{border}"
-          class:colored={coloredBorder} />
+        <div class="s-alert__border border-{border}" />
       {/if}
     </div>
   </div>

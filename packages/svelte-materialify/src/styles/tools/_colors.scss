@@ -314,3 +314,14 @@ $colors: (
   @warn "Unknown `#{$color}` - `#{$type}` in $colors.";
   @return null;
 }
+
+@mixin has-theme-bg {
+  &.primary-color,
+  &.secondary-color,
+  &.success-color,
+  &.error-color,
+  &.warning-color,
+  &.info-color {
+    @content;
+  }
+}

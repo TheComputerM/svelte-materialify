@@ -38,17 +38,6 @@
     text-transform: map-deep-get($headings, 'button', 'text-transform');
   }
 
-  &:not(.outlined) {
-    &.primary-color,
-    &.secondary-color,
-    &.success-color,
-    &.error-color,
-    &.warning-color,
-    &.info-color {
-      color: #ffffff;
-    }
-  }
-
   @include elevation(2);
 
   &::before {
@@ -83,6 +72,12 @@
 
     &:focus::before {
       opacity: $btn-focus-opacity;
+    }
+  }
+
+  &:not(.outlined) {
+    @include has-theme-bg {
+      color: map-deep-get($material-dark-theme, 'text', 'primary');
     }
   }
 
