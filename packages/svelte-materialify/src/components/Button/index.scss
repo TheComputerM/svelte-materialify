@@ -70,7 +70,7 @@
       opacity: $btn-hover-opacity;
     }
 
-    &:focus::before {
+    &.focus-visible::before {
       opacity: $btn-focus-opacity;
     }
   }

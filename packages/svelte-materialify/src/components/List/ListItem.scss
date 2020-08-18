@@ -105,6 +105,14 @@
     user-select: auto;
   }
 
+  &:not(.disabled) {
+    &.focus-visible {
+      &::before {
+        opacity: 0.12;
+      }
+    }
+  }
+
   &.disabled {
     pointer-events: none;
     color: var(--theme-text-disabled);
