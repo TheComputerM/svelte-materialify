@@ -4,7 +4,7 @@
   "trailingSlash": true,
   "headers": [
     {
-      "source": "/static/(.*)",
+      "source": "/fonts/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
