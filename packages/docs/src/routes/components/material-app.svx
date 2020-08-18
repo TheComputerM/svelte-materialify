@@ -1,0 +1,54 @@
+---
+title: Material App
+related:
+  - Installation: /getting-started/installation/
+  - Usage: /getting-started/usage/
+  - Buttons: /components/buttons/
+---
+
+<script>
+  import API from '../../components/API.svelte';
+  import { MaterialApp as doc } from 'svelte-materialify-api/dist';
+</script>
+
+# Material App
+
+This component is the base for Svelte Materialify and helps you to bootstrap your app. All other svelte materialify components are required to be inside of this component in order for them to properly inherit styles and helpers. `MaterialApp` should ideally only be used once inside your app.
+
+<API {doc} />
+
+## Usage
+
+The default theme is the light theme, this is how ideally your base layout should look. It is also recommended that you store the theme variable in a store and can access it in any component you want and also if you want your user selected theme to be saved, use [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+
+```html
+<script>
+  import { MaterialApp } from 'svelte-materialify';
+  let theme = 'light';
+
+  function toggleTheme() {
+    if (theme === 'light') theme = 'dark';
+    else theme = 'light';
+  }
+</script>
+
+<MaterialApp {theme}>
+  <Button on:click={toggleTheme}>Toggle Theme</Button>
+  ...
+</MaterialApp>
+```
+
+
+## Manually set themes
+
+Suppose if you want your `div` to be dark themed no matter what the theme of the app is then add the class `theme--dark` to the `div` or `theme--light` if you want it to be light themed.
+
+
+```html
+<MaterialApp {theme}>
+  <!-- this div will have dark theme no matter the value of {theme} -->
+  <div class='theme--dark'>
+    ...
+  </div>
+</MaterialApp>
+```

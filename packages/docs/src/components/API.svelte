@@ -66,7 +66,7 @@
             <td>{event.description || 'DOM Event'}</td>
           </tr>
         {:else}
-          <td colspan="2" class="text-center text-overline">
+          <td colspan="2" class="text-center text-overline pt-2">
             There are no Events.
           </td>
         {/each}
@@ -96,7 +96,7 @@
             <td>
               {#each slot.parameters as slotParam}TODO{:else}None{/each}
             </td>
-            <td>{slot.description || 'Missing Description'}</td>
+            <td>{slot.description || 'No Description'}</td>
           </tr>
         {:else}
           <td colspan="2" class="text-center text-overline">

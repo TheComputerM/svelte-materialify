@@ -1,8 +1,8 @@
 <script>
-  import { onDestroy } from "svelte";
-  import { slide } from "svelte/transition";
-  import { Icon, Button, Lazy } from "svelte-materialify/src";
-  import { theme } from "../helpers/stores";
+  import { onDestroy } from 'svelte';
+  import { slide } from 'svelte/transition';
+  import { Icon, Button, Lazy } from 'svelte-materialify/src';
+  import { theme } from '../helpers/stores';
 
   export let code;
   export let component;
@@ -11,7 +11,7 @@
   let colorInvertable = false;
   let isComponentDark = false;
   const unsubscribe = theme.subscribe((value) => {
-    colorInvertable = value === "light";
+    colorInvertable = value === 'light';
     isComponentDark = colorInvertable ? isComponentDark : false;
   });
   onDestroy(unsubscribe);

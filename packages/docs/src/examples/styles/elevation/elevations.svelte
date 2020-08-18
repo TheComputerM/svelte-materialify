@@ -1,5 +1,5 @@
 <script>
-  import { Row, Col } from "svelte-materialify/src";
+  import { Row, Col } from 'svelte-materialify/src';
 </script>
 
 <Row class='pa-4'>
