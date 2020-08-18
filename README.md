@@ -5,9 +5,6 @@
 </p>
 
 <p align="center">
-  <a href="https://app.netlify.com/sites/svelte-materialify/deploys">
-  <img src="https://api.netlify.com/api/v1/badges/6a8094b5-107e-4512-a47d-1afd03069dbb/deploy-status" alt="Website">
-  </a>
   <a href="https://github.com/thecomputerm/svelte-materialify/actions?query=workflow%3ACI">
     <img src="https://github.com/thecomputerm/svelte-materialify/workflows/CI/badge.svg" alt="CI badge">
   </a>
@@ -60,7 +57,7 @@ This is still in development. To contribute, please read [CONTRIBUTING.md](./CON
 
 
 ## Website
-Website is located at [https://svelte-materialify.netlify.app/](https://svelte-materialify.netlify.app/), it is still in development.
+Website is located at [https://svelte-materialify.vercel.app/](https://svelte-materialify.vercel.app/), it is still in development.
 
 ## Thanks To:
 - __[Shriji](https://github.com/peopledrivemecrazy)__ for the logos
