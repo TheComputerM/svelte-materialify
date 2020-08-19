@@ -38,6 +38,12 @@ And then in your svelte files, import the compiled module for svelte materialify
 </script>
 ```
 
+We also need **[focus-visible](https://github.com/WICG/focus-visible)** if you want keyboard focused styles.
+
+```html
+<script src="https://unpkg.com/focus-visible@latest/dist/focus-visible.min.js"></script>
+```
+
 ## Advanced Install
 
 If you want finer control over Svelte Materialify and installation you want to install all its peer dependencies.
@@ -50,8 +56,7 @@ $ npm i -D svelte-materialify svelte-preprocess sass
   Now you can use SCSS and SASS in your styles.
 </Alert>
 
-Then create a **\_material-theme.scss** file and place it in any folder, lets put it in a
-folder called theme. Then include the path in the preprocess function in your __rollup.config.js__ (likewise follow the same in webpack but for svelte-loader).
+Then create a **\_material-theme.scss** file and place it in any folder, lets put it in a folder called theme. Then include the path in the preprocess function in your __rollup.config.js__ (likewise follow the same in webpack but for svelte-loader).
 
 ### Svelte
 
