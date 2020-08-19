@@ -42,7 +42,7 @@ export default [
       { text: 'Material App', href: '/components/material-app/' },
       { text: 'Alerts', href: '/components/alerts/' },
       { text: 'App Bar', href: '/components/app-bar/' },
-      { text: 'Avatar', href: '/components/avatar/' },
+      { text: 'Avatars', href: '/components/avatars/' },
       { text: 'Breadcrumbs', href: '/components/breadcrumbs/' },
       { text: 'Buttons', href: '/components/buttons/' },
       { text: 'Cards', href: 'cards/' },
