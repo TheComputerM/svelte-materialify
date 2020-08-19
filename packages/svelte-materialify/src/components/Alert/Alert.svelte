@@ -40,7 +40,7 @@
     class:outlined
     class:text
     class:tile
-    class:coloredBorder>
+    class:colored-border={coloredBorder}>
     <div class="s-alert__wrapper">
       <slot name="icon" />
       <div class="s-alert__content">

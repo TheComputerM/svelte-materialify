@@ -105,11 +105,11 @@
     border-radius: $alert-border-radius;
   }
 
-  &.coloredBorder {
+  &.colored-border {
     @include elevation(2);
   }
 
-  &:not(.coloredBorder) {
+  &:not(.colored-border) {
     .s-alert__border {
       opacity: $alert-border-opacity;
     }
