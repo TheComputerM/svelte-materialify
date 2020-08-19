@@ -3,6 +3,7 @@
 
   // Classes to add to the button
   let classes = '';
+  export { classes as class };
 
   // Designates the button as a floating-action-button
   export let fab = false;
@@ -51,8 +52,6 @@
 
   // Styles for component
   export let style = null;
-
-  export { classes as class };
 </script>
 
 <style lang="scss" src="./index.scss">
@@ -61,7 +60,6 @@
 
 <button
   class="s-btn size-{size} {classes}"
-  {...$$restProps}
   class:fab
   class:icon
   class:block
@@ -77,7 +75,8 @@
   {disabled}
   aria-disabled={disabled}
   use:Ripple={ripple}
-  on:click>
+  on:click
+  {...$$restProps}>
   <span class="s-btn__content">
     <slot />
   </span>
