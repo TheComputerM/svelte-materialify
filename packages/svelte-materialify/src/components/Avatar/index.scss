@@ -2,7 +2,6 @@
 
 .s-avatar {
   align-items: center;
-  border-radius: $avatar-border-radius;
   display: inline-flex;
   justify-content: center;
   line-height: normal;
@@ -11,14 +10,23 @@
   vertical-align: middle;
   overflow: hidden;
 
+  @include has-theme-bg {
+    color: map-deep-get($material-dark-theme, 'text', 'primary');
+  }
+
   :global {
     .s-icon,
     img,
     svg {
+      color: inherit;
       border-radius: inherit;
       display: inline-flex;
       height: inherit;
       width: inherit;
     }
+  }
+
+  &:not(.tile) {
+    border-radius: $avatar-border-radius;
   }
 }
