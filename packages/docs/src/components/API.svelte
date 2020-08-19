@@ -1,7 +1,17 @@
 <script>
-  import { Table } from 'svelte-materialify/src';
+  import { Table } from "svelte-materialify/src";
 
   export let doc;
+
+  function getKeyword(obj, keyword, _default) {
+    if (obj.keywords.length !== 0) {
+      let output = obj.keywords.first((x) => x.name === keyword);
+      if (output) {
+        return output.description;
+      }
+    }
+    return _default;
+  }
 </script>
 
 <section>
@@ -18,7 +28,7 @@
       </a>
       Props
     </h3>
-    <Table style='border: thin solid var(--theme-dividers)'>
+    <Table style="border: thin solid var(--theme-dividers)">
       <thead>
         <tr>
           <th>Prop</th>
@@ -32,7 +42,9 @@
             <tr>
               <td>
                 <span class="font-weight-bold text-mono">{prop.name}</span>
-                <span class="d-block text-caption text--secondary">{prop.type.text}</span>
+                <span class="d-block text-caption text--secondary">
+                  {prop.type.text}
+                </span>
               </td>
               <td>
                 <code>{prop.defaultValue}</code>
@@ -52,10 +64,11 @@
       </a>
       Events
     </h3>
-    <Table style='border: thin solid var(--theme-dividers)'>
+    <Table style="border: thin solid var(--theme-dividers)">
       <thead>
         <tr>
           <th>Event</th>
+          <th>Returns</th>
           <th>Description</th>
         </tr>
       </thead>
@@ -63,10 +76,11 @@
         {#each doc.events as event}
           <tr>
             <td class="font-weight-bold text-mono">{event.name}</td>
+            <td>{getKeyword(event, 'returns', 'DOMEvent')}</td>
             <td>{event.description || 'DOM Event'}</td>
           </tr>
         {:else}
-          <td colspan="2" class="text-center text-overline pt-2 pb-2">
+          <td colspan="3" class="text-center text-overline pt-2 pb-2">
             There are no Events.
           </td>
         {/each}
@@ -81,7 +95,7 @@
       </a>
       Slots
     </h3>
-    <Table style='border: thin solid var(--theme-dividers)'>
+    <Table style="border: thin solid var(--theme-dividers)">
       <thead>
         <tr>
           <th>Slot</th>
