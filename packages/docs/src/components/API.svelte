@@ -18,7 +18,7 @@
       </a>
       Props
     </h3>
-    <Table dense>
+    <Table style='border: thin solid var(--theme-dividers)'>
       <thead>
         <tr>
           <th>Prop</th>
@@ -32,7 +32,7 @@
             <tr>
               <td>
                 <span class="font-weight-bold text-mono">{prop.name}</span>
-                <span class="d-block text--secondary">{prop.type.text}</span>
+                <span class="d-block text-caption text--secondary">{prop.type.text}</span>
               </td>
               <td>
                 <code>{prop.defaultValue}</code>
@@ -52,7 +52,7 @@
       </a>
       Events
     </h3>
-    <Table dense>
+    <Table style='border: thin solid var(--theme-dividers)'>
       <thead>
         <tr>
           <th>Event</th>
@@ -66,7 +66,7 @@
             <td>{event.description || 'DOM Event'}</td>
           </tr>
         {:else}
-          <td colspan="2" class="text-center text-overline pt-2">
+          <td colspan="2" class="text-center text-overline pt-2 pb-2">
             There are no Events.
           </td>
         {/each}
@@ -81,7 +81,7 @@
       </a>
       Slots
     </h3>
-    <Table dense>
+    <Table style='border: thin solid var(--theme-dividers)'>
       <thead>
         <tr>
           <th>Slot</th>
@@ -99,7 +99,7 @@
             <td>{slot.description || 'No Description'}</td>
           </tr>
         {:else}
-          <td colspan="2" class="text-center text-overline">
+          <td colspan="2" class="text-center text-overline pt-2 pb-2">
             There are no Slots.
           </td>
         {/each}

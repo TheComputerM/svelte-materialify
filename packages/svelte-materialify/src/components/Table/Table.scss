@@ -4,7 +4,7 @@
   overflow: auto;
 }
 
-.s-table {
+table {
   background-color: var(--theme-cards);
   color: var(--theme-text-primary);
   width: 100%;
@@ -25,6 +25,7 @@
           user-select: none;
           font-size: $table-regular-header-font-size;
           height: $table-regular-header-height;
+          letter-spacing: map-deep-get($headings, 'subtitle-2', 'letter-spacing');
           text-align: left;
         }
 

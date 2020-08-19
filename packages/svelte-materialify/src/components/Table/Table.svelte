@@ -10,8 +10,8 @@
 
 </style>
 
-<div class="s-table-wrapper {classes}" {style}>
-  <table class="s-table " class:dense class:fixed-header={fixedHeader}>
+<div class="s-table {classes}" {style}>
+  <table class:dense class:fixed-header={fixedHeader}>
     <slot />
   </table>
 </div>
