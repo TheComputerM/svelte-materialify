@@ -5,10 +5,8 @@
 
   function getKeyword(obj, keyword, _default) {
     if (obj.keywords.length !== 0) {
-      let output = obj.keywords.first((x) => x.name === keyword);
-      if (output) {
-        return output.description;
-      }
+      const output = obj.keywords.find((x) => x.name === keyword);
+      if (output) return output.description;
     }
     return _default;
   }
