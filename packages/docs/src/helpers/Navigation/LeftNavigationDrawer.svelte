@@ -1,4 +1,5 @@
 <script>
+  import { mdiChevronDown } from '@mdi/js';
   import { ListGroup, ListItem, Icon } from 'svelte-materialify/src';
   import { stores } from '@sapper/app';
   import { onDestroy } from 'svelte';
@@ -41,7 +42,7 @@
   a {
     text-decoration: none;
   }
-  :global(.s-icon.mdi-chevron-down) {
+  :global(.s-list-item .s-icon.chevron) {
     will-change: transform;
     transition: transform 250ms ease-in-out;
   }
@@ -59,8 +60,9 @@
         {item.text}
         <div slot="right">
           <Icon
-            class="mdi mdi-chevron-down"
-            style={item.open ? 'transform: rotateZ(180deg)' : ''} />
+            path={mdiChevronDown}
+            rotate={item.open ? '180deg' : ''}
+            class="chevron" />
         </div>
       </ListItem>
 

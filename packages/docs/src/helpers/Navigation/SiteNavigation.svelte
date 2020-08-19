@@ -2,7 +2,12 @@
   export let theme;
   export let navigation;
 
-  import { mdiGithub, mdiWeatherSunny, mdiWeatherNight } from "@mdi/js";
+  import {
+    mdiGithub,
+    mdiWeatherSunny,
+    mdiWeatherNight,
+    mdiMenu,
+  } from '@mdi/js';
   import {
     AppBar,
     Icon,
@@ -10,17 +15,17 @@
     NavigationDrawer,
     List,
     Overlay,
-  } from "svelte-materialify/src/";
-  import { theme as themeStore } from "../stores";
+  } from 'svelte-materialify/src/';
+  import { theme as themeStore } from '../stores';
 
-  import LeftNavigationDrawer from "./LeftNavigationDrawer.svelte";
-  import RightNavigationDrawer from "./RightNavigationDrawer.svelte";
+  import LeftNavigationDrawer from './LeftNavigationDrawer.svelte';
+  import RightNavigationDrawer from './RightNavigationDrawer.svelte';
 
   let sidenav = false;
 
   function toggleTheme() {
-    if (theme === "light") theme = "dark";
-    else theme = "light";
+    if (theme === 'light') theme = 'dark';
+    else theme = 'light';
     themeStore.set(theme);
   }
 </script>
@@ -33,7 +38,7 @@
         depressed
         on:click={() => (sidenav = !sidenav)}
         aria-label="Open Menu">
-        <Icon class="mdi mdi-menu" />
+        <Icon path={mdiMenu} />
       </Button>
     {/if}
   </div>
@@ -45,7 +50,10 @@
     href="https://github.com/TheComputerM/svelte-materialify"
     target="_blank"
     rel="noopener">
-    <Button class="white-text grey darken-3" fab={!navigation}>
+    <Button
+      class="white-text grey darken-3"
+      aria-label="GitHub"
+      fab={!navigation}>
       <Icon path={mdiGithub} class={navigation ? 'mr-3' : ''} />
       {#if navigation}GitHub{/if}
     </Button>
