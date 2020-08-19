@@ -75,6 +75,7 @@ The `outlined` prop inverts the style of an alert, inheriting the currently appl
 
 ### Transition
 
+Use the `transition` prop to set the type of transition and use the `transitionOpts` prop to specify the options for the transition
 <Example code={examples.transition} component={Examples.transition} />
 
 
