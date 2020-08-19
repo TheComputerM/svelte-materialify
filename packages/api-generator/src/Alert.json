@@ -4,8 +4,23 @@
   "data": [
     {
       "visibility": "public",
-      "description": null,
+      "description": "Classes to add to alert.",
       "keywords": [],
+      "name": "class",
+      "kind": "const",
+      "static": false,
+      "readonly": true,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "localName": "classes"
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Is the alert active/dismissed.",
       "name": "visible",
       "kind": "let",
       "static": false,
@@ -18,9 +33,9 @@
       "defaultValue": true
     },
     {
-      "visibility": "public",
-      "description": null,
       "keywords": [],
+      "visibility": "public",
+      "description": "Alert transition function.",
       "name": "transition",
       "kind": "let",
       "static": false,
@@ -32,9 +47,9 @@
       }
     },
     {
-      "visibility": "public",
-      "description": null,
       "keywords": [],
+      "visibility": "public",
+      "description": "Alert transition function options.",
       "name": "transitionOpts",
       "kind": "let",
       "static": false,
@@ -46,9 +61,9 @@
       }
     },
     {
-      "visibility": "public",
-      "description": null,
       "keywords": [],
+      "visibility": "public",
+      "description": "Makes alert dense.",
       "name": "dense",
       "kind": "let",
       "static": false,
@@ -61,9 +76,9 @@
       "defaultValue": false
     },
     {
-      "visibility": "public",
-      "description": null,
       "keywords": [],
+      "visibility": "public",
+      "description": "Adds a thin border to alert.",
       "name": "outlined",
       "kind": "let",
       "static": false,
@@ -76,9 +91,9 @@
       "defaultValue": false
     },
     {
-      "visibility": "public",
-      "description": null,
       "keywords": [],
+      "visibility": "public",
+      "description": "Applies the defined color to text and a low opacity background of the same.",
       "name": "text",
       "kind": "let",
       "static": false,
@@ -91,9 +106,9 @@
       "defaultValue": false
     },
     {
-      "visibility": "public",
-      "description": null,
       "keywords": [],
+      "visibility": "public",
+      "description": "Removes the component's border-radius.",
       "name": "tile",
       "kind": "let",
       "static": false,
@@ -106,9 +121,9 @@
       "defaultValue": false
     },
     {
-      "visibility": "public",
-      "description": null,
       "keywords": [],
+      "visibility": "public",
+      "description": "Adds a close icon that can hide the alert.",
       "name": "dismissible",
       "kind": "let",
       "static": false,
@@ -121,24 +136,55 @@
       "defaultValue": false
     },
     {
+      "keywords": [
+        {
+          "name": "type",
+          "description": "{left|right|top|bottom|false}"
+        }
+      ],
       "visibility": "public",
-      "description": null,
-      "keywords": [],
+      "description": "The location of the border",
       "name": "border",
       "kind": "let",
       "static": false,
       "readonly": false,
       "type": {
-        "kind": "type",
-        "text": "boolean",
-        "type": "boolean"
+        "kind": "union",
+        "text": "left|right|top|bottom|false",
+        "type": [
+          {
+            "kind": "type",
+            "text": "left",
+            "type": "left"
+          },
+          {
+            "kind": "type",
+            "text": "right",
+            "type": "right"
+          },
+          {
+            "kind": "type",
+            "text": "top",
+            "type": "top"
+          },
+          {
+            "kind": "type",
+            "text": "bottom",
+            "type": "bottom"
+          },
+          {
+            "kind": "type",
+            "text": "false",
+            "type": "false"
+          }
+        ]
       },
       "defaultValue": false
     },
     {
-      "visibility": "public",
-      "description": null,
       "keywords": [],
+      "visibility": "public",
+      "description": "Applies the defined color to the alert's border.",
       "name": "coloredBorder",
       "kind": "let",
       "static": false,
@@ -149,42 +195,30 @@
         "type": "boolean"
       },
       "defaultValue": false
-    },
-    {
-      "visibility": "public",
-      "description": null,
-      "keywords": [],
-      "name": "class",
-      "kind": "const",
-      "static": false,
-      "readonly": true,
-      "type": {
-        "kind": "type",
-        "text": "string",
-        "type": "string"
-      },
-      "localName": "classes"
     }
   ],
   "computed": [],
-  "methods": [
-    {
-      "visibility": "public",
-      "description": null,
-      "keywords": [],
-      "name": "dismiss",
-      "args": [],
-      "static": false
-    }
-  ],
+  "methods": [],
   "components": [],
   "description": null,
   "keywords": [],
-  "events": [],
+  "events": [
+    {
+      "keywords": [
+        {
+          "name": "returns",
+          "description": "Nothing"
+        }
+      ],
+      "visibility": "public",
+      "description": "Triggered when alert is dismissed.",
+      "name": "dismiss"
+    }
+  ],
   "slots": [
     {
       "name": "icon",
-      "description": null,
+      "description": "Slot for icon at beginning of alert.",
       "visibility": "public",
       "parameters": []
     },
@@ -196,7 +230,7 @@
     },
     {
       "name": "close",
-      "description": null,
+      "description": "Slot for close button icon.",
       "visibility": "public",
       "parameters": []
     }
