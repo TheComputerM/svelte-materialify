@@ -1,7 +1,7 @@
 <script>
-  import Alert from "svelte-materialify/src/components/Alert";
-  import Icon from "svelte-materialify/src/components/Icon";
-  import Button from "svelte-materialify/src/components/Button";
+  import Alert from 'svelte-materialify/src/components/Alert';
+  import Icon from 'svelte-materialify/src/components/Icon';
+  import Button from 'svelte-materialify/src/components/Button';
 
   let timesDismissed = 0;
   let alert = true;
