@@ -53,7 +53,7 @@
       <ListItem dense on:click={() => (item.open = !item.open)}>
         <div slot="left">
           {#if item.icon}
-            <Icon class="mdi mdi-{item.icon}" />
+            <Icon path={item.icon} />
           {/if}
         </div>
         {item.text}

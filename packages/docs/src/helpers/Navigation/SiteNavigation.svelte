@@ -2,6 +2,7 @@
   export let theme;
   export let navigation;
 
+  import { mdiGithub, mdiWeatherSunny, mdiWeatherNight } from "@mdi/js";
   import {
     AppBar,
     Icon,
@@ -9,17 +10,17 @@
     NavigationDrawer,
     List,
     Overlay,
-  } from 'svelte-materialify/src/';
-  import { theme as themeStore } from '../stores';
+  } from "svelte-materialify/src/";
+  import { theme as themeStore } from "../stores";
 
-  import LeftNavigationDrawer from './LeftNavigationDrawer.svelte';
-  import RightNavigationDrawer from './RightNavigationDrawer.svelte';
+  import LeftNavigationDrawer from "./LeftNavigationDrawer.svelte";
+  import RightNavigationDrawer from "./RightNavigationDrawer.svelte";
 
   let sidenav = false;
 
   function toggleTheme() {
-    if (theme === 'light') theme = 'dark';
-    else theme = 'light';
+    if (theme === "light") theme = "dark";
+    else theme = "light";
     themeStore.set(theme);
   }
 </script>
@@ -45,17 +46,12 @@
     target="_blank"
     rel="noopener">
     <Button class="white-text grey darken-3" fab={!navigation}>
-      <Icon class="mdi mdi-github {navigation ? 'mr-3' : ''}" />
+      <Icon path={mdiGithub} class={navigation ? 'mr-3' : ''} />
       {#if navigation}GitHub{/if}
     </Button>
   </a>
-  <Button
-    fab
-    depressed
-    on:click={toggleTheme}
-    ripple={{ active: 'false' }}
-    aria-label="Toggle Theme">
-    <Icon class="mdi mdi-weather-{theme === 'light' ? 'night' : 'sunny'}" />
+  <Button fab depressed on:click={toggleTheme} aria-label="Toggle Theme">
+    <Icon path={theme === 'light' ? mdiWeatherNight : mdiWeatherSunny} />
   </Button>
 </AppBar>
 

@@ -62,7 +62,7 @@
 </style>
 
 <h5 class="mb-3 mt-6">Contents</h5>
-<ul id="toc" class="pl-4" aria-hidden="true">
+<ul id="toc" class="pl-4">
   {#each items as item}
     <li class="{item.class} pt-1 pb-1 text-body-2">
       <a href={item.href}>{item.text}</a>

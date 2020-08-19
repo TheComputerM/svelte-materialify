@@ -18,6 +18,7 @@
     ]
   },
   "dependencies": {
+    "@mdi/js": "^5.5.55",
     "compression": "^1.7.1",
     "gumshoejs": "^5.1.2",
     "polka": "next",

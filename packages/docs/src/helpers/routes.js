@@ -1,9 +1,16 @@
 import { all as API } from 'svelte-materialify-api/dist';
+import {
+  mdiSpeedometer,
+  mdiPalette,
+  mdiViewDashboard,
+  mdiFunction,
+  mdiBeaker,
+} from '@mdi/js';
 
 export default [
   {
     text: 'Getting Started',
-    icon: 'speedometer',
+    icon: mdiSpeedometer,
     open: false,
     items: [
       { text: 'Installation', href: '/getting-started/installation/' },
@@ -13,7 +20,7 @@ export default [
   },
   {
     text: 'Styles',
-    icon: 'palette',
+    icon: mdiPalette,
     open: false,
     items: [
       { text: 'CSS Reset', href: '/styles/reset/' },
@@ -29,7 +36,7 @@ export default [
   },
   {
     text: 'Components',
-    icon: 'view-dashboard',
+    icon: mdiViewDashboard,
     open: false,
     items: [
       { text: 'Material App', href: '/components/material-app/' },
@@ -59,7 +66,7 @@ export default [
   },
   {
     text: 'Actions',
-    icon: 'function',
+    icon: mdiFunction,
     open: false,
     items: [
       { text: 'Ripple', href: '/actions/ripple/' },
@@ -69,7 +76,7 @@ export default [
   },
   {
     text: 'API',
-    icon: 'beaker',
+    icon: mdiBeaker,
     open: false,
     items: API.names.map((i) => ({ text: i, href: `/api/${i}/` })),
   },
