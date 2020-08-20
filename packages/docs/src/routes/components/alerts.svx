@@ -1,7 +1,8 @@
 ---
-title: Alerts
+title: Alert Component
 related:
   - Buttons: /components/buttons/
+  - Alert API: /api/Alert/
 ---
 
 <script context="module">

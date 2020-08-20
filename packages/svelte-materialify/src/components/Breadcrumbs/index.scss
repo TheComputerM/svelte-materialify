@@ -9,6 +9,19 @@
   margin: $breadcrumbs-margin;
   padding: $breadcrumbs-padding;
 
+  :global {
+    .s-breadcrumb-item {
+      align-items: center;
+      display: inline-flex;
+      text-decoration: none;
+
+      &.disabled {
+        color: var(--theme-text-disabled);
+        pointer-events: none;
+      }
+    }
+  }
+
   li {
     align-items: center;
     display: inline-flex;
@@ -24,17 +37,6 @@
 
     &.divider {
       color: var(--theme-text-disabled);
-    }
-  }
-
-  .breadcrumb-item {
-    align-items: center;
-    display: inline-flex;
-    text-decoration: none;
-
-    &.disabled {
-      color: var(--theme-text-disabled);
-      pointer-events: none;
     }
   }
 

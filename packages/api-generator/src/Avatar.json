@@ -50,7 +50,7 @@
     {
       "keywords": [],
       "visibility": "public",
-      "description": "Avatar styles",
+      "description": "Styles for avatar",
       "name": "style",
       "kind": "let",
       "static": false,

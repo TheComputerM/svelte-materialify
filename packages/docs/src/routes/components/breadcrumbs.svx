@@ -1,0 +1,60 @@
+---
+title: Breadcrumbs Component
+related:
+  - Breadcrumbs API: /api/Breadcrumbs/
+---
+
+<script context="module">
+  export async function preload() {
+    let examples = await this.fetch('examples/components/breadcrumbs.json');
+    examples = await examples.json();
+    return { examples }
+  }
+</script>
+
+<script>
+  import { API, Example } from '../../components';
+  import { Breadcrumbs as doc } from 'svelte-materialify-api/dist';
+  import * as Examples from '../../examples/components/breadcrumbs';
+  export let examples;
+</script>
+
+# Breadcrumbs
+
+<API {doc} />
+
+The array of item in the `items` prop.
+
+```ts
+type items = Array<item>;
+type item = {
+  disabled?: false,
+  href?: '',
+  text: '',
+  class?: '',
+  props?: {},
+};
+```
+
+## Examples
+
+Below is a collection of simple to complex examples.
+
+
+### Basic
+
+Basic examples for breadcrumbs.
+<Example code={examples.basic} component={Examples.basic} />
+
+
+### Custom Divider
+
+Breadcrumbs separator can be set using `divider` slot. You can also use material icons as dividers.
+<Example code={examples.customDivider} component={Examples.customDivider} />
+
+
+### Slots
+
+You can use the default slot to customize each breadcrumb item. Remember to add class `s-breadcrumb-item` to each item to add the default styles.
+<Example code={examples.slots} component={Examples.slots} />
+

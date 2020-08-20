@@ -4,23 +4,23 @@
   "data": [
     {
       "visibility": "public",
-      "description": null,
+      "description": "Classes to add to breadcrumb.",
       "keywords": [],
-      "name": "divider",
-      "kind": "let",
+      "name": "class",
+      "kind": "const",
       "static": false,
-      "readonly": false,
+      "readonly": true,
       "type": {
         "kind": "type",
         "text": "string",
         "type": "string"
       },
-      "defaultValue": "/"
+      "localName": "classes"
     },
     {
-      "visibility": "public",
-      "description": null,
       "keywords": [],
+      "visibility": "public",
+      "description": "Make the breadcrumb large",
       "name": "large",
       "kind": "let",
       "static": false,
@@ -33,9 +33,9 @@
       "defaultValue": false
     },
     {
-      "visibility": "public",
-      "description": null,
       "keywords": [],
+      "visibility": "public",
+      "description": "Array of objects for each breadcrumb",
       "name": "items",
       "kind": "let",
       "static": false,
@@ -45,21 +45,6 @@
         "text": "any",
         "type": "any"
       }
-    },
-    {
-      "visibility": "public",
-      "description": null,
-      "keywords": [],
-      "name": "class",
-      "kind": "const",
-      "static": false,
-      "readonly": true,
-      "type": {
-        "kind": "type",
-        "text": "string",
-        "type": "string"
-      },
-      "localName": "classes"
     }
   ],
   "computed": [],
