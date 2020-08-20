@@ -15,7 +15,7 @@
   const clippedStyle = `top:${clippedHeight};max-height:calc(100% - ${clippedHeight});`;
 </script>
 
-<style lang="scss" src="./index.scss">
+<style lang="scss" src="./NavigationDrawer.scss">
 
 </style>
 

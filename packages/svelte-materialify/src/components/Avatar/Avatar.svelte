@@ -13,7 +13,7 @@
   export let style = "";
 </script>
 
-<style lang="scss" src="./index.scss">
+<style lang="scss" src="./Avatar.scss">
 
 </style>
 

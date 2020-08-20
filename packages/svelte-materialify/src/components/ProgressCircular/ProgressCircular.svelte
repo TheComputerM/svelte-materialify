@@ -23,7 +23,7 @@
   };
 </script>
 
-<style lang="scss" src="./index.scss">
+<style lang="scss" src="./ProgressCircular.scss">
 
 </style>
 

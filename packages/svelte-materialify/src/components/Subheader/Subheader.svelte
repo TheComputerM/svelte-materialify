@@ -5,7 +5,7 @@
   export { classes as class };
 </script>
 
-<style lang="scss" src="./index.scss"></style>
+<style lang="scss" src="./Subheader.scss"></style>
 
 <div class="s-subheader {classes}" class:inset {style}>
   <slot></slot>

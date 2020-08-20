@@ -53,7 +53,7 @@
   }
 </script>
 
-<style lang="scss" src="./index.scss">
+<style lang="scss" src="./Alert.scss">
 
 </style>
 

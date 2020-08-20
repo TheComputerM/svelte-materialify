@@ -54,7 +54,7 @@
   export let style = null;
 </script>
 
-<style lang="scss" src="./index.scss">
+<style lang="scss" src="./Button.scss">
 
 </style>
 

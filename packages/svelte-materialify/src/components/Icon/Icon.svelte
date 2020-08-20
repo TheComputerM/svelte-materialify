@@ -9,7 +9,7 @@
   export { classes as class };
 </script>
 
-<style type="scss" src="./index.scss">
+<style type="scss" src="./Icon.scss">
 
 </style>
 
