@@ -21,57 +21,73 @@ related:
 </script>
 
 # Button
-The `Button` component replaces the standard html button with a material deisgn theme and
-a multitude of options
+
+The `Button` component replaces the standard html button with a material deisgn theme and a multitude of options
 
 <Alert type='info'>
-You can add any props including `aria-*` and other attributes which are not present in the props
-list below
+You can add any props including `aria-*` and other attributes which are not present in the props list below
 </Alert>
 
 <API {doc} />
 
+
 ## Examples
+
 Here are some examples
 
 ### Raised
+
 This is the default one
 <Example code={examples.raised} component={Examples.raised} />
 
 ### Depressed
+
 These are just buttons with no box shadow
 <Example code={examples.depressed} component={Examples.depressed} />
 
 ### Block
+
 Big bois
 <Example code={examples.block} component={Examples.block} />
 
+
 ### Floating Action Buttons
+
 Floating buttons are rounded and usually contain an icon.
 <Example code={examples.fab} component={Examples.fab} />
 
+
 ### Icon
+
 Icons can be used for the primary content of a button.
 <Example code={examples.icon} component={Examples.icon} />
 
+
 ### Outlined
+
 Outlined buttons inherit their borders from the current color applied.
 <Example code={examples.outlined} component={Examples.outlined} />
 
+
 ### Rounded
+
 Rounded buttons behave the same as regular buttons but have rounded edges.
 <Example code={examples.rounded} component={Examples.rounded} />
 
+
 ### Text
-Text buttons have no box shadow and no background. Only on hover is the container for
-the button shown.
+
+Text buttons have no box shadow and no background. Only on hover is the container for the button shown.
 <Example code={examples.text} component={Examples.text} />
 
+
 ### Tile
+
 Tile buttons behave the same as regular buttons but have no border radius.
 <Example code={examples.tile} component={Examples.tile} />
 
+
 ### Sizing
-Buttons can be given different sizing options to fit a multitude of scenarios. We do not
-set font sizes for icons as different icon packs look differently
+
+Buttons can be given different sizing options to fit a multitude of scenarios. We do not set font sizes for icons as different icon packs look differently
 <Example code={examples.sizing} component={Examples.sizing} />
