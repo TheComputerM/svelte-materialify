@@ -4,6 +4,7 @@ export { default as AppBar } from './AppBar.json';
 export { default as Avatar } from './Avatar.json';
 export { default as Breadcrumbs } from './Breadcrumbs.json';
 export { default as Button } from './Button.json';
+export { default as ButtonGroup } from './ButtonGroup.json';
 export { default as Card } from './Card.json';
 export { default as CardActions } from './CardActions.json';
 export { default as CardSubtitle } from './CardSubtitle.json';

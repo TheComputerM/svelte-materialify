@@ -1,0 +1,199 @@
+{
+  "version": 3,
+  "name": "button-group",
+  "data": [
+    {
+      "visibility": "public",
+      "description": "Classes to add to button group.",
+      "keywords": [],
+      "name": "class",
+      "kind": "const",
+      "static": false,
+      "readonly": true,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "localName": "classes"
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Does not remove box shadow.",
+      "name": "elevated",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Remove border.",
+      "name": "borderless",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Remove border radius.",
+      "name": "tile",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Add border radius to the first and last button.",
+      "name": "rounded",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Identifies buttons as active with this class.",
+      "name": "activeClass",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "defaultValue": "active"
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Array or string with the active button(s) value.",
+      "name": "value",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Allows you to select buttons.",
+      "name": "selectable",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Forces a value to always be selected (if available).",
+      "name": "mandatory",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Allow multiple selections, makes the value prop an array.",
+      "name": "multiple",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Maximun number of selections.",
+      "name": "max",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Styles to apply to button group.",
+      "name": "style",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "object",
+        "type": "object"
+      },
+      "defaultValue": null
+    }
+  ],
+  "computed": [],
+  "methods": [],
+  "components": [],
+  "description": null,
+  "keywords": [],
+  "events": [],
+  "slots": [
+    {
+      "name": "default",
+      "description": null,
+      "visibility": "public",
+      "parameters": []
+    }
+  ],
+  "refs": []
+}

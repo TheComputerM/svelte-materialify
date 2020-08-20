@@ -62,12 +62,12 @@
   }
 
   &:not(.disabled) {
-    &.active::before {
-      opacity: $btn-active-opacity;
-    }
-
     &:hover::before {
       opacity: $btn-hover-opacity;
+    }
+
+    &.active::before {
+      opacity: $btn-active-opacity;
     }
 
     &.focus-visible::before {

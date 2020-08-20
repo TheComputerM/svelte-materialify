@@ -56,7 +56,7 @@
   "slots": [
     {
       "name": "divider",
-      "description": null,
+      "description": "The slot used for divider",
       "visibility": "public",
       "parameters": []
     },

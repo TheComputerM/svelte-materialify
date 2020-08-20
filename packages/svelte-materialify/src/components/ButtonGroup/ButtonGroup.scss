@@ -1,0 +1,57 @@
+@import "./variables";
+
+.s-btn-group {
+  border-radius: $btn-group-border-radius;
+  display: inline-flex;
+  max-width: 100%;
+  flex: 0 1 auto;
+  position: relative;
+  transition: 0.3s map-get($transitions, "swing");
+  :global {
+    > .s-btn.s-btn {
+      border-radius: 0;
+      border-style: solid;
+      border-width: thin;
+      opacity: $btn-group-btn-opacity;
+      padding: $btn-group-btn-padding;
+
+      &:first-child {
+        border-top-left-radius: inherit;
+        border-bottom-left-radius: inherit;
+      }
+
+      &:last-child {
+        border-top-right-radius: inherit;
+        border-bottom-right-radius: inherit;
+      }
+
+      &:not(:first-child) {
+        border-left-width: 0;
+      }
+    }
+  }
+
+  &:not(.elevated) {
+    :global {
+      > .s-btn.s-btn {
+        box-shadow: none;
+      }
+    }
+  }
+
+  &.borderless {
+    :global {
+      > .s-btn.s-btn {
+        border-width: 0;
+      }
+    }
+  }
+
+  &.tile {
+    border-radius: 0;
+  }
+
+  &.rounded {
+    border-radius: $btn-group-round-border-radius;
+  }
+}

@@ -1,0 +1,55 @@
+---
+title: Button group Component
+related:
+  - Alert: /components/alert/
+  - Button Toggle API: /api/ButtonGroup/
+---
+
+<script context="module">
+  export async function preload() {
+    let examples = await this.fetch('examples/components/buttonGroups.json');
+    examples = await examples.json();
+    return { examples }
+  }
+</script>
+
+<script>
+  import { Alert, API, Example} from '../../components';
+  import { ButtonGroup as doc } from 'svelte-materialify-api/dist';
+  import * as Examples from '../../examples/components/buttonGroups';
+  export let examples;
+</script>
+
+# Button Groups
+
+Use `ButtonGroup` to group a series of buttons on a single line.
+
+<API {doc} />
+
+## Examples
+
+Below is a collection of simple to complex examples.
+
+
+### Basic
+
+Here are some examples of different props.
+<Example code={examples.basic} component={Examples.basic} />
+
+
+### Selectable
+
+Add ability to select a button.
+<Example code={examples.selectable} component={Examples.selectable} />
+
+
+### Multiple
+
+Add ability to select multiple buttons.
+<Example code={examples.multiple} component={Examples.multiple} />
+
+
+### Mandatory
+
+Make is necessary for at least one button to be selected.
+<Example code={examples.mandatory} component={Examples.mandatory} />
