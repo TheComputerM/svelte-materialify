@@ -1457,7 +1457,7 @@
   dependencies:
     "@types/jest" "*"
 
-"@types/unist@^2.0.0", "@types/unist@^2.0.2":
+"@types/unist@^2.0.0", "@types/unist@^2.0.2", "@types/unist@^2.0.3":
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/@types/unist/-/unist-2.0.3.tgz#9c088679876f374eb5983f150d4787aa6fb32d7e"
   integrity sha512-FvUupuM3rlRsRtCN+fDudtmytGO6iHJuuRKS1Ss0pG5z8oX0diNEw94UEL7hgDbpN94rgaK5R7sWm6RrSkZuAQ==
@@ -5735,12 +5735,14 @@ mdast-util-to-string@^1.0.0:
   resolved "https://registry.yarnpkg.com/mdast-util-to-string/-/mdast-util-to-string-1.1.0.tgz#27055500103f51637bd07d01da01eb1967a43527"
   integrity sha512-jVU0Nr2B9X3MU4tSK7JP1CMkSvOj7X5l/GboG1tKRw52lLF1x2Ju92Ms9tNetCcbfX3hzlM73zYo2NKkWSfF/A==
 
-mdsvex@^0.8.3:
-  version "0.8.4"
-  resolved "https://registry.yarnpkg.com/mdsvex/-/mdsvex-0.8.4.tgz#352bd6fcdf6a9ee82f3b4e1b5316e3d0c9cba96f"
-  integrity sha512-1SVDSBqOb0EBYhmLdlhIM7R6xinfiBGa3TTPv0OWXasVWGjocGUJAqKIDTpsu8crtrbFeLPzHvUbNjkaq0VKHA==
+mdsvex@^0.8.5:
+  version "0.8.5"
+  resolved "https://registry.yarnpkg.com/mdsvex/-/mdsvex-0.8.5.tgz#69c8901decef5346d3030584113eb3e443335d48"
+  integrity sha512-u9LTVvY/b+sL8CXpklKxwu0StcgPmcA7fSD3ofbdF2q3b9DZt0Ol9zRybXKgaggDrSOMtDco7UNv40rno1/iIw==
   dependencies:
+    "@types/unist" "^2.0.3"
     prismjs "^1.17.1"
+    vfile-message "^2.0.4"
 
 mem@^4.3.0:
   version "4.3.0"
@@ -7423,10 +7425,10 @@ rollup-pluginutils@^2.8.2:
   dependencies:
     estree-walker "^0.6.1"
 
-rollup@^2.23.1, rollup@^2.26.0:
-  version "2.26.3"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.26.3.tgz#502c755872a4590937cfa4e8f7eb99d3bc3c4025"
-  integrity sha512-Mlt39/kL2rA9egcbQbaZV1SNVplGqYYhDDMcGgHPPE0tvM3R4GrB+IEdYy2QtTrdzMQx57ZcqDFf/KWWm8F+uw==
+rollup@^2.26.4:
+  version "2.26.4"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.26.4.tgz#a8350fd6bd56fce9873a7db2bd9547d40de3992b"
+  integrity sha512-6+qsGuP0MXGd7vlYmk72utm1MrgZj5GfXibGL+cRkKQ9+ZL/BnFThDl0D5bcl7AqlzMjAQXRAwZX1HVm22M/4Q==
   optionalDependencies:
     fsevents "~2.1.2"
 
@@ -8181,10 +8183,10 @@ supports-hyperlinks@^2.0.0:
     has-flag "^4.0.0"
     supports-color "^7.0.0"
 
-svelte-check@^1.0.10:
-  version "1.0.18"
-  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-1.0.18.tgz#fbfc6b8994b2ead2af2d6893266422b8da6dc78e"
-  integrity sha512-ARdHaZX8k5ieDqlcRbfkJOZu8onWhH+lC7sLppTkeT0soaOWq3YYcklBWpLe1aBGLhoCOMGLM2lAx9JjHwLXjg==
+svelte-check@^1.0.20:
+  version "1.0.20"
+  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-1.0.20.tgz#23a6912e6dbd896e3d32b1f12167ad930e525aa4"
+  integrity sha512-MRpsl3g2Qu3po8YUzKKVlZL/wfmiHTqlv6DrDyMzindKl0DKCMobYysHJW1XKdCetbpvQhQnLBUsZw/CsXAxOQ==
   dependencies:
     chalk "^4.0.0"
     chokidar "^3.4.1"
@@ -8250,10 +8252,10 @@ svelte-language-server@*:
     vscode-languageserver-types "3.15.1"
     vscode-uri "2.1.1"
 
-svelte-preprocess@^4.0.10:
-  version "4.0.12"
-  resolved "https://registry.yarnpkg.com/svelte-preprocess/-/svelte-preprocess-4.0.12.tgz#39d1d179258288f496ac06e3db7afcd94d17b4d2"
-  integrity sha512-nAzVj5M98YzxdoDh9F9NuIaGMn8kjf8SnjRB2IduZIRYjrS5qkrGeHR2ba+CnOUOlMTZ/rQ2jpGeCwnyjgqr5Q==
+svelte-preprocess@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/svelte-preprocess/-/svelte-preprocess-4.1.1.tgz#25e22b2acf45a82f66d480c57b8bacf1aeaaffda"
+  integrity sha512-fCnq15SY0MYd70as0z0IcdtU6a6m0RTFdWViWSdV7styI/yp6SVkMinpFR7GbQJR3StzZ/9FEmroSiYYzc3VZA==
   dependencies:
     "@types/pug" "^2.0.4"
     "@types/sass" "^1.16.0"
@@ -8892,7 +8894,7 @@ vfile-location@^3.0.0:
   resolved "https://registry.yarnpkg.com/vfile-location/-/vfile-location-3.0.1.tgz#d78677c3546de0f7cd977544c367266764d31bb3"
   integrity sha512-yYBO06eeN/Ki6Kh1QAkgzYpWT1d3Qln+ZCtSbJqFExPl1S3y2qqotJQXoh6qEvl/jDlgpUJolBn3PItVnnZRqQ==
 
-vfile-message@^2.0.0:
+vfile-message@^2.0.0, vfile-message@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/vfile-message/-/vfile-message-2.0.4.tgz#5b43b88171d409eae58477d13f23dd41d52c371a"
   integrity sha512-DjssxRGkMvifUOJre00juHoP9DPWuzjxKuMDrhNbk2TdaYYBNMStsNhEOt3idrtI12VQYM/1+iM0KOzXi4pxwQ==
