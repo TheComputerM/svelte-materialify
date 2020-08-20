@@ -46,7 +46,7 @@ export default [
       { text: 'Breadcrumbs', href: '/components/breadcrumbs/' },
       { text: 'Buttons', href: '/components/buttons/' },
       { text: 'Button Groups', href: '/components/button-groups/' },
-      { text: 'Cards', href: 'cards/' },
+      { text: 'Cards', href: '/components/cards/' },
       { text: 'Divider', href: '/components/divider/' },
       { text: 'Grid', href: '/components/grid/' },
       { text: 'Icons', href: '/components/icons/' },
