@@ -20,7 +20,7 @@ const onwarn = (warning, onwarn) => (warning.code === 'MISSING_EXPORT' && /'prel
     && /[/\\]@sapper[/\\]/.test(warning.message))
   || onwarn(warning);
 
-loadLanguages(['bash', 'scss']);
+loadLanguages(['bash', 'scss', 'typescript']);
 const preprocess = [
   mdsvex({
     extension: '.svx',
