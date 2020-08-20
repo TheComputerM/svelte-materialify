@@ -1,5 +1,5 @@
 <script>
-  let classes = "";
+  let classes = '';
   export let inset = false;
   export let style = null;
   export { classes as class };
