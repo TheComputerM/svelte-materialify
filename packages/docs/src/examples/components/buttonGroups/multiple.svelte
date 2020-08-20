@@ -1,5 +1,6 @@
 <script>
-  import { ButtonGroup, Button } from "svelte-materialify/src";
+  import { ButtonGroup, Button } from 'svelte-materialify/src';
+
   let value;
 </script>
 

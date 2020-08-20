@@ -1,6 +1,5 @@
 <script>
   import { onMount } from 'svelte';
-import Alert from '../Alert';
 
   // Classes to add to button group.
   let classes = '';

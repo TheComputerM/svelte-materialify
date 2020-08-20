@@ -1,5 +1,5 @@
 <script>
-  import { ButtonGroup, Button, Icon } from "svelte-materialify/src";
+  import { ButtonGroup, Button, Icon } from 'svelte-materialify/src';
 </script>
 
 <div class="d-flex justify-space-between">
