@@ -1,3 +1,9 @@
+<script context="module">
+  export function preload() {
+    return this.fetch("sitemap.xml");
+  }
+</script>
+
 <script>
   import { Container, Button, Icon } from 'svelte-materialify/src/';
 </script>
