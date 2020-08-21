@@ -41,7 +41,7 @@
     "releaseDraft": false
   },
   "devDependencies": {
-    "@babel/core": "^7.11.1",
+    "@babel/core": "^7.11.4",
     "@babel/preset-env": "^7.11.0",
     "@rollup/plugin-commonjs": "^13.0.2",
     "@rollup/plugin-node-resolve": "^9.0.0",
@@ -56,7 +56,7 @@
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-svelte3": "^2.7.3",
-    "jest": "^26.2.2",
+    "jest": "^26.4.1",
     "lint-staged": "^10.2.11",
     "np": "^6.3.2",
     "postcss": "^7.0.32",
