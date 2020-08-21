@@ -75,7 +75,8 @@
       {id}
       {disabled}
       {value}
-      on:change={groupUpdate} />
+      on:change={groupUpdate}
+      on:change />
     <div class="s-checkbox__background">
       {#if checked || indeterminate}
         <svg
