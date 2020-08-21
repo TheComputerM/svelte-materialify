@@ -2,6 +2,7 @@
 title: Button Component
 related:
   - Alert: /components/alert/
+  - Checkbox: /components/checkboxes/
   - Button API: /api/Button/
 ---
 
@@ -14,7 +15,7 @@ related:
 </script>
 
 <script>
-  import { Alert, API, Example} from '../../components';
+  import { Alert, API, Example } from '../../components';
   import { Button as doc } from 'svelte-materialify-api/dist';
   import * as Examples from '../../examples/components/buttons';
   export let examples;
