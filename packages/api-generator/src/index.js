@@ -10,6 +10,7 @@ export { default as CardActions } from './CardActions.json';
 export { default as CardSubtitle } from './CardSubtitle.json';
 export { default as CardText } from './CardText.json';
 export { default as CardTitle } from './CardTitle.json';
+export { default as Checkbox } from './Checkbox.json';
 export { default as Divider } from './Divider.json';
 export { default as Col } from './Col.json';
 export { default as Container } from './Container.json';

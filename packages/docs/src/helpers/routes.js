@@ -50,6 +50,14 @@ export default [
       { text: 'Divider', href: '/components/divider/' },
       { text: 'Grid', href: '/components/grid/' },
       { text: 'Icons', href: '/components/icons/' },
+      {
+        text: 'Forms',
+        open: false,
+        items: [
+          { text: 'Inputs', href: '/components/inputs/' },
+          { text: 'Checkboxes', href: '/components/checkboxes/' },
+        ],
+      },
       { text: 'List', href: '/components/list/' },
       { text: 'Virtual Lists', href: '/components/virtual-lists/' },
       { text: 'Navigation Drawer', href: '/components/navigation-drawer/' },

@@ -270,6 +270,9 @@ $material-light-theme: map-deep-merge(
     "buttons": (
       "disabled": rgba(material-color("shades", "black"), 0.26),
     ),
+    "controls": (
+      "disabled": rgba(material-color("shades", "black"), 0.26),
+    ),
     "tables": (
       "active": material-color("grey", "lighten-4"),
       "hover": material-color("grey", "lighten-3"),
@@ -314,6 +317,9 @@ $material-dark-theme: map-deep-merge(
       "link": material-color("blue", "accent-1")
     ),
     "buttons": (
+      "disabled": rgba(material-color("shades", "white"), 0.3),
+    ),
+    "controls": (
       "disabled": rgba(material-color("shades", "white"), 0.3),
     ),
     "tables": (

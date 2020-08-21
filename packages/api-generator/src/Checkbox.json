@@ -1,0 +1,168 @@
+{
+  "version": 3,
+  "name": "checkbox",
+  "data": [
+    {
+      "visibility": "public",
+      "description": "Add class to checkbox wrapper.",
+      "keywords": [],
+      "name": "class",
+      "kind": "const",
+      "static": false,
+      "readonly": true,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "localName": "classes"
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Class to add to checkbox when it is checked or indeterminate.",
+      "name": "activeClass",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "defaultValue": "primary-text"
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Get/Set checked state.",
+      "name": "checked",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false,
+      "bind": [
+        {
+          "source": "input",
+          "property": "checked"
+        }
+      ]
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Get/Set indeterminate state.",
+      "name": "indeterminate",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false,
+      "bind": [
+        {
+          "source": "input",
+          "property": "indeterminate"
+        }
+      ]
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Make the checkbox disabled.",
+      "name": "disabled",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "The value for the checkbox.",
+      "name": "value",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "object",
+        "type": "object"
+      },
+      "defaultValue": null
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Combines components into a single group.",
+      "name": "group",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "object",
+        "type": "object"
+      },
+      "defaultValue": null
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Id for the checkbox, defaults to a random uuid.",
+      "name": "id",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "object",
+        "type": "object"
+      },
+      "defaultValue": null
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Styles to add to checkbox wrapper.",
+      "name": "style",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "object",
+        "type": "object"
+      },
+      "defaultValue": null
+    }
+  ],
+  "computed": [],
+  "methods": [],
+  "components": [],
+  "description": null,
+  "keywords": [],
+  "events": [],
+  "slots": [
+    {
+      "name": "default",
+      "description": null,
+      "visibility": "public",
+      "parameters": []
+    }
+  ],
+  "refs": []
+}

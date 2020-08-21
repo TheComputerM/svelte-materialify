@@ -12,6 +12,7 @@
     --theme-icons-active: #{map-deep-get($material, "icons", "active")};
     --theme-icons-inactive: #{map-deep-get($material, "icons", "inactive")};
     --theme-buttons-disabled: #{map-deep-get($material, "buttons", "disabled")};
+    --theme-controls-disabled: #{map-deep-get($material, "controls", "disabled")};
     --theme-tables-active: #{map-deep-get($material, "tables", "active")};
     --theme-tables-hover: #{map-deep-get($material, "tables", "hover")};
     --theme-tables-group: #{map-deep-get($material, "tables", "group")};
