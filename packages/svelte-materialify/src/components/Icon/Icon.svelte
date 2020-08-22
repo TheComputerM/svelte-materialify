@@ -1,6 +1,6 @@
 <script>
   let classes = '';
-  export let inactive = false;
+  export let disabled = false;
   export let size = '24px';
   export let path = null;
   export let title = null;
@@ -18,7 +18,7 @@
   style="font-size: {size};transform: rotate({rotate});{style}"
   class="s-icon {classes}"
   {title}
-  class:inactive>
+  class:disabled>
   {#if path}
     <svg
       xmlns="http://www.w3.org/2000/svg"

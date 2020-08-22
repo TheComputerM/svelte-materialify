@@ -6,7 +6,7 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
-      "name": "inactive",
+      "name": "disabled",
       "kind": "let",
       "static": false,
       "readonly": false,
