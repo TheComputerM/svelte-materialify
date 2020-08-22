@@ -19,7 +19,13 @@
   export let name;
 </script>
 
+<style global>
+  section {
+    margin-bottom: 48px;
+  }
+</style>
+
 <Layout title={`${name} API`}>
-  <h1 class='text-h3 mb-6'>{name}</h1>
+  <h1 class='text-h3 mb-6'>{name} API</h1>
   <API {doc} />
 </Layout>
