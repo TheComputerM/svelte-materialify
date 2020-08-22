@@ -86,15 +86,20 @@
   "slots": [
     {
       "name": "header",
-      "description": null,
+      "description": "Slot for the title of panel.",
       "visibility": "public",
       "parameters": []
     },
     {
       "name": "icon",
-      "description": null,
+      "description": "Slot for the icon at the right of the header.",
       "visibility": "public",
-      "parameters": []
+      "parameters": [
+        {
+          "name": "{active}",
+          "visibility": "public"
+        }
+      ]
     },
     {
       "name": "default",

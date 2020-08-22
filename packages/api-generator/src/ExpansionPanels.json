@@ -4,8 +4,23 @@
   "data": [
     {
       "visibility": "public",
-      "description": null,
+      "description": "Classes to add to panel container.",
       "keywords": [],
+      "name": "class",
+      "kind": "const",
+      "static": false,
+      "readonly": true,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "localName": "classes"
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "0 based indices of the active panels.",
       "name": "value",
       "kind": "let",
       "static": false,
@@ -17,9 +32,9 @@
       }
     },
     {
-      "visibility": "public",
-      "description": null,
       "keywords": [],
+      "visibility": "public",
+      "description": "Make multiple panels active at the same time.",
       "name": "multiple",
       "kind": "let",
       "static": false,
@@ -32,9 +47,9 @@
       "defaultValue": false
     },
     {
-      "visibility": "public",
-      "description": null,
       "keywords": [],
+      "visibility": "public",
+      "description": "Make is necessary for at least one panel to be selected.",
       "name": "mandatory",
       "kind": "let",
       "static": false,
@@ -47,9 +62,9 @@
       "defaultValue": false
     },
     {
-      "visibility": "public",
-      "description": null,
       "keywords": [],
+      "visibility": "public",
+      "description": "Accordion style panels.",
       "name": "accordion",
       "kind": "let",
       "static": false,
@@ -62,9 +77,9 @@
       "defaultValue": false
     },
     {
-      "visibility": "public",
-      "description": null,
       "keywords": [],
+      "visibility": "public",
+      "description": "Make panels popout when active.",
       "name": "popout",
       "kind": "let",
       "static": false,
@@ -77,9 +92,9 @@
       "defaultValue": false
     },
     {
-      "visibility": "public",
-      "description": null,
       "keywords": [],
+      "visibility": "public",
+      "description": "Make panels inset when active.",
       "name": "inset",
       "kind": "let",
       "static": false,
@@ -92,9 +107,9 @@
       "defaultValue": false
     },
     {
-      "visibility": "public",
-      "description": null,
       "keywords": [],
+      "visibility": "public",
+      "description": "Remove shadow from panels.",
       "name": "flat",
       "kind": "let",
       "static": false,
@@ -107,9 +122,9 @@
       "defaultValue": false
     },
     {
-      "visibility": "public",
-      "description": null,
       "keywords": [],
+      "visibility": "public",
+      "description": "Remove border radius from panels.",
       "name": "tile",
       "kind": "let",
       "static": false,
@@ -122,10 +137,25 @@
       "defaultValue": false
     },
     {
-      "visibility": "public",
-      "description": null,
       "keywords": [],
+      "visibility": "public",
+      "description": "Disable all the panels.",
       "name": "disabled",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "object",
+        "type": "object"
+      },
+      "defaultValue": null
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Styles to add to the panel container.",
+      "name": "style",
       "kind": "let",
       "static": false,
       "readonly": false,
