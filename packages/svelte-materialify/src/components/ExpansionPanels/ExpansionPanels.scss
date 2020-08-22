@@ -1,0 +1,103 @@
+@import "./variables";
+
+.s-expansion-panels {
+  border-radius: $expansion-panel-border-radius;
+  display: flex;
+  flex: 0 1 auto;
+  position: relative;
+  max-width: 100%;
+  transition: 0.3s map-get($transitions, "swing");
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  z-index: 1;
+
+  :global {
+    > *:first-child {
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
+    }
+
+    > *:last-child {
+      border-bottom-left-radius: inherit;
+      border-bottom-right-radius: inherit;
+    }
+  }
+
+  &.accordion {
+    :global {
+      > .s-expansion-panel {
+        margin-top: 0 !important;
+
+        &::after {
+          opacity: 1 !important;
+        }
+      }
+    }
+  }
+
+  &.popout {
+    :global {
+      > .s-expansion-panel {
+        max-width: $expansion-panel-popout-max-width;
+
+        &.active {
+          max-width: $expansion-panel-popout-active-max-width;
+        }
+      }
+    }
+  }
+
+  &.inset {
+    :global {
+      > .s-expansion-panel {
+        max-width: $expansion-panel-inset-max-width;
+
+        &.active {
+          max-width: $expansion-panel-inset-active-max-width;
+        }
+      }
+    }
+  }
+
+  &.flat {
+    :global {
+      > .s-expansion-panel {
+        &::after {
+          border-top: none;
+        }
+
+        &::before {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  &.tile {
+    border-radius: 0;
+
+    :global {
+      > .s-expansion-panel::before {
+        border-radius: 0;
+      }
+    }
+  }
+
+  &:not(.accordion):not(.tile) {
+    :global {
+      > .s-expansion-panel {
+        &.active {
+          border-radius: $expansion-panel-border-radius;
+
+          + .s-expansion-panel {
+            border-top-left-radius: $expansion-panel-border-radius;
+            border-top-right-radius: $expansion-panel-border-radius;
+          }
+        }
+      }
+    }
+  }
+}

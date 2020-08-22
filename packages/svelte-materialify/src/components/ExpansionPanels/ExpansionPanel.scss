@@ -1,0 +1,113 @@
+@import "./variables";
+
+.s-expansion-panel__header {
+  align-items: center;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  display: flex;
+  font-size: $expansion-panel-header-font-size;
+  line-height: 1;
+  min-height: $expansion-panel-header-min-height;
+  outline: none;
+  padding: $expansion-panel-header-padding;
+  position: relative;
+  transition: 0.3s min-height map-get($transitions, "swing");
+  width: 100%;
+  text-align: left;
+
+  &::before {
+    background-color: currentColor;
+    border-radius: inherit;
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.3s opacity map-get($transitions, "swing");
+  }
+
+  &:hover::before {
+    opacity: 0.04;
+  }
+
+  &.focus-visible::before {
+    opacity: 0.12;
+  }
+}
+
+.s-expansion-panel {
+  background-color: var(--theme-cards);
+  color: var(--theme-text-primary);
+  flex: 1 0 100%;
+  max-width: 100%;
+  position: relative;
+  transition: 0.3s map-get($transitions, "swing");
+
+  &:not(:first-child)::after {
+    border-top: thin solid;
+    border-color: var(--theme-dividers);
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.2s border-color map-get($transitions, "fast-out-slow-in"),
+      0.2s opacity map-get($transitions, "fast-out-slow-in");
+  }
+
+  &::before {
+    border-radius: inherit;
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    @include elevation(2);
+  }
+
+  &.disabled {
+    color: var(--theme-text-disabled);
+  }
+
+  &.disabled,
+  &.readonly {
+    .s-expansion-panel__header {
+      pointer-events: none;
+    }
+  }
+
+  &.active {
+    &:not(:first-child),
+    + .s-expansion-panel {
+      margin-top: $expansion-panel-active-margin;
+
+      &::after {
+        opacity: 0;
+      }
+    }
+
+    > .s-expansion-panel__header {
+      min-height: $expansion-panel-active-header-min-height;
+    }
+  }
+}
+
+.s-expansion-panel__icon {
+  margin-left: auto;
+  display: inline-flex;
+  margin-bottom: -4px;
+  margin-top: -4px;
+  user-select: none;
+}
+
+.s-expansion-panel__content {
+  display: flex;
+  padding: $expansion-panel-content-padding;
+  flex: 1 1 auto;
+  max-width: 100%;
+}

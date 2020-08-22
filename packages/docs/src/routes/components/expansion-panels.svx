@@ -1,0 +1,82 @@
+---
+title: Expansion Panel Component
+related:
+  - ExpansionPanels API: /api/ExpansionPanels/
+  - ExpansionPanel API: /api/ExpansionPanel/
+---
+
+<script context="module">
+  export async function preload() {
+    let examples = await this.fetch('examples/components/expansionPanels.json');
+    examples = await examples.json();
+    return { examples }
+  }
+</script>
+
+<script>
+  import { API, Example } from '../../components';
+  import { ExpansionPanels as doc1, ExpansionPanel as doc2 } from 'svelte-materialify-api/dist';
+  import * as Examples from '../../examples/components/expansionPanels';
+  export let examples;
+</script>
+
+# Expansion Panels
+
+The `ExpansionPanel` component is useful for reducing vertical space with large amounts of information. The default functionality of the component is to only display one expansion panel body at a time; however, with the `multiple` property, the expansion panel can remain open until explicitly closed.
+
+## API
+
+- [ExpansionPanels API](/api/ExpansionPanels/)
+- [ExpansionPanel API](/api/ExpansionPanel/)
+
+## Usage
+
+Whenever using `<ExpansionPanel>` make sure that it is a child of `<ExpansionPanels>` as it provides basic settings and functionality using setContext.
+<Example code={examples.basic} component={Examples.basic} />
+
+
+## Examples
+
+Below is a collection of simple to complex examples.
+
+
+### Disabled
+
+Both the expansion panel and its content can be disabled using the `disabled` prop. You can disable a single panel or all the panels.
+<Example code={examples.disabled} component={Examples.disabled} />
+
+
+### Multiple
+
+You can allow multiple panels to be open at the same time using the `multiple` prop.
+<Example code={examples.multiple} component={Examples.multiple} />
+
+
+### Popout
+
+The expansion-panel also has **popout** design. With it, expansion-panel is enlargened when activated.
+<Example code={examples.popout} component={Examples.popout} />
+
+
+### Inset
+
+**inset** expansion-panel becomes smaller when activated.
+<Example code={examples.inset} component={Examples.inset} />
+
+
+### Accordion
+
+**accordion** expansion-panel hasn't got margins around active panel.
+<Example code={examples.accordion} component={Examples.accordion} />
+
+
+### Custom Icons
+
+Expand action icon can be customized with `icon` slot.
+<Example code={examples.customIcon} component={Examples.customIcon} />
+
+
+### External Control
+
+Expansion panels can be controlled externally by modifying the `value` prop. Its value corresponds to a zero-based index of the currently opened expansion panel content. It is an array containing the indices of the open items, even if the multiple prop is not used.
+<Example code={examples.externalControl} component={Examples.externalControl} />

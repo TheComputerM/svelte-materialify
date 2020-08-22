@@ -9,6 +9,10 @@ export { default as ButtonGroup } from './components/ButtonGroup';
 export { default as Checkbox } from './components/Checkbox';
 export { default as Alert } from './components/Alert';
 export { default as Divider } from './components/Divider';
+export {
+  default as ExpansionPanels,
+  ExpansionPanel,
+} from './components/ExpansionPanels';
 export { default as Avatar } from './components/Avatar';
 export { default as AppBar } from './components/AppBar';
 export { default as Breadcrumbs } from './components/Breadcrumbs';

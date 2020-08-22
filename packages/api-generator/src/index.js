@@ -12,6 +12,8 @@ export { default as CardText } from './CardText.json';
 export { default as CardTitle } from './CardTitle.json';
 export { default as Checkbox } from './Checkbox.json';
 export { default as Divider } from './Divider.json';
+export { default as ExpansionPanel } from './ExpansionPanel.json';
+export { default as ExpansionPanels } from './ExpansionPanels.json';
 export { default as Col } from './Col.json';
 export { default as Container } from './Container.json';
 export { default as Row } from './Row.json';

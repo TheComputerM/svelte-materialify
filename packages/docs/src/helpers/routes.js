@@ -50,6 +50,7 @@ export default [
       { text: 'Divider', href: '/components/divider/' },
       { text: 'Grid', href: '/components/grid/' },
       { text: 'Icons', href: '/components/icons/' },
+      { text: 'Expansion Panels', href: '/components/expansion-panels/' },
       {
         text: 'Forms',
         open: false,

@@ -13,6 +13,8 @@
     "CardTitle",
     "Checkbox",
     "Divider",
+    "ExpansionPanel",
+    "ExpansionPanels",
     "Col",
     "Container",
     "Row",
