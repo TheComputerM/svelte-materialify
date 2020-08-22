@@ -21,6 +21,8 @@ related:
 
 # Breadcrumbs
 
+## API
+
 <API {doc} />
 
 The array of item in the `items` prop.

@@ -29,6 +29,9 @@ The `Button` component replaces the standard html button with a material deisgn 
 You can add any props including `aria-*` and other attributes which are not present in the props list below
 </Alert>
 
+
+## API
+
 <API {doc} />
 
 

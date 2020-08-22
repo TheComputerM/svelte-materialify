@@ -14,7 +14,7 @@ related:
 </script>
 
 <script>
-  import { Alert, API, Example} from '../../components';
+  import { API, Example } from '../../components';
   import { ButtonGroup as doc } from 'svelte-materialify-api/dist';
   import * as Examples from '../../examples/components/buttonGroups';
   export let examples;
@@ -24,7 +24,11 @@ related:
 
 Use `ButtonGroup` to group a series of buttons on a single line.
 
+
+## API
+
 <API {doc} />
+
 
 ## Examples
 

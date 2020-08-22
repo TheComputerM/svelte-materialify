@@ -15,7 +15,11 @@ related:
 
 This component is the base for Svelte Materialify and helps you to bootstrap your app. All other svelte materialify components are required to be inside of this component in order for them to properly inherit styles and helpers. `MaterialApp` should ideally only be used once inside your app.
 
+
+## API
+
 <API {doc} />
+
 
 ## Usage
 

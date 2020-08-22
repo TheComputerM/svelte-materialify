@@ -25,6 +25,9 @@ related:
 
 The `<Alert>` component is used to convey important information to the user through the use contextual types icons and color. Many parts of an alert such as `border`, `icon`, and `color` can also be customized to fit almost any situation.
 
+
+## API
+
 <API {doc} />
 
 ## Examples

@@ -23,7 +23,11 @@ related:
 
 Use `Checkbox` as a simple wrapper over checkbox, used to select multiple values, that also has the same features like `bind:group` and an indeterminate state.
 
+
+## API
+
 <API {doc} />
+
 
 ## Examples
 
