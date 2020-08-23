@@ -8,6 +8,12 @@
   padding-top: $list-padding-top;
   position: static;
 
+  :global {
+    .s-subheader {
+      padding-top: $list-subheader-padding-top;
+    }
+  }
+
   &.disabled {
     pointer-events: none;
   }
@@ -18,6 +24,16 @@
         font-size: $list-dense-subheader-font-size;
         height: $list-dense-subheader-height;
         padding: $list-dense-subheader-padding;
+      }
+    }
+  }
+
+  &.rounded {
+    padding: 8px;
+
+    :global {
+      .s-list-item {
+        border-radius: 32px !important;
       }
     }
   }
@@ -51,7 +67,15 @@
     }
   }
 
-  &.rounded {
-    padding: 8px;
+  &.outlined {
+    border: thin solid var(--theme-dividers);
+  }
+
+  &.flat {
+    :global {
+      .s-list-item::before {
+        display: none;
+      }
+    }
   }
 }

@@ -2,35 +2,35 @@
   import { getContext, onDestroy } from 'svelte';
   import Ripple from '../../actions/Ripple';
 
-  const hasParentList = getContext('hasParentList');
-  const hasParentListGroup = getContext('hasParentListGroup');
-  const ListItemOptions = getContext('ListItemOptions');
-
   let classes = '';
+  export { classes as class };
   export let activeClass = '';
   export let active = false;
   export let dense = null;
   export let disabled = null;
-  export let flat = null;
-  export let link = hasParentListGroup;
-  export let selectable = !hasParentListGroup;
-  export let ripple = { active: hasParentListGroup };
-  export { classes as class };
+  export let selectable = false;
+  export let ripple = false;
+  const role = getContext('S_ListItemRole');
 
-  if (hasParentList || hasParentListGroup) {
-    const unsubscribe = ListItemOptions.subscribe((value) => {
-      dense = dense == null ? value.dense : dense;
-      disabled = disabled == null ? value.disabled : disabled;
-      flat = flat == null ? value.flat : flat;
-    });
-    onDestroy(unsubscribe);
+  const ListItemRipple = getContext('S_ListItemRipple');
+  const ListItemDense = getContext('S_ListDense');
+
+  ripple = ListItemRipple == null ? ripple : ListItemRipple;
+  dense = ListItemDense == null ? dense : ListItemDense;
+
+  const ListOptions = getContext('S_ListOptions');
+
+  let ListOptionsUnsub = () => {};
+  if (ListOptions) {
+    ListOptionsUnsub = ListOptions.subscribe(
+      ({ disabled: parentDisabled, dense: parentDense }) => {
+        disabled = parentDisabled == null ? disabled : parentDisabled;
+        dense = parentDense == null ? dense : parentDense;
+      },
+    );
   }
 
-  const role = hasParentList
-    ? 'listitem'
-    : hasParentListGroup
-      ? 'option'
-      : null;
+  onDestroy(ListOptionsUnsub);
 </script>
 
 <style lang="scss" src="./ListItem.scss">
@@ -38,17 +38,18 @@
 </style>
 
 <div
+  class="s-list-item {classes}
+  {active ? activeClass : ''}"
   {role}
   aria-selected={role === 'option' ? active : null}
-  class="s-list-item {[classes, active ? activeClass : ''].join(' ')}"
   class:active
   class:dense
   class:disabled
-  class:flat
-  class:link
   class:selectable
+  class:link={!!ripple}
   use:Ripple={ripple}
-  on:click>
+  on:click
+  {...$$restProps}>
   <slot name="left" />
   <div class="s-list-item__content">
     <div class="s-list-item__title">

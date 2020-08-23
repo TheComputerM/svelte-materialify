@@ -1,25 +1,43 @@
 <script>
   import { slide } from 'svelte/transition';
-  import { getContext, setContext } from 'svelte';
+  import { getContext, setContext, onDestroy } from 'svelte';
+  import { writable } from 'svelte/store';
 
-  const hasParentList = getContext('hasParentList');
-  const ListItemOptions = getContext('ListItemOptions');
-
-  let classes = '';
-  export let activeClass = 'primary-text';
-  export let active = false;
+  let classes = 'primary-text';
+  export { classes as class };
+  export let activeClass = '';
+  export let active = true;
   export let transition = slide;
   export let transitionOpts = {};
   export let offset = null;
   export let disabled = null;
+  export let ripple = true;
   export let style = '';
-  export { classes as class };
 
-  if (hasParentList) {
-    $ListItemOptions.disabled = disabled == null ? $ListItemOptions.disabled : disabled;
+  setContext('S_ListItemRipple', ripple);
+
+  const ListOptions = writable({ disabled });
+  $: ListOptions.set({ disabled });
+
+  let role = null;
+  const ListItemRole = getContext('S_ListItemRole');
+  if (ListItemRole == null) {
+    role = 'listbox';
+    setContext('S_ListItemRole', 'option');
+  } else if (ListItemRole === 'listitem') role = 'group';
+
+  const InheritListOptions = getContext('S_ListOptions');
+  let ListOptionsUnsub = () => {};
+  if (InheritListOptions == null) setContext('S_ListOptions', { ListOptions });
+  else {
+    ListOptionsUnsub = InheritListOptions.subscribe(
+      ({ disabled: parentDisabled }) => {
+        disabled = parentDisabled == null ? disabled : parentDisabled;
+      },
+    );
   }
 
-  setContext('hasParentListGroup', true);
+  onDestroy(ListOptionsUnsub);
 </script>
 
 <style lang="scss" src="./ListGroup.scss">
@@ -29,9 +47,10 @@
 {#if active}
   <div
     transition:transition={transitionOpts}
-    role={hasParentList ? 'group' : 'listbox'}
+    {role}
     aria-disabled={disabled}
-    class="s-list-group {[classes, active ? activeClass : ''].join(' ')}"
+    class="s-list-group {classes}
+    {active ? activeClass : ''}"
     class:offset
     style="--offset: {offset};{style}">
     <slot />

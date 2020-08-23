@@ -55,7 +55,7 @@
     Disabled: disabled,
   });
 
-  setContext('PanelOptions', {
+  setContext('S_PanelOptions', {
     PanelContainer,
     ActivePanels,
     Settings,

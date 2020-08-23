@@ -32,7 +32,7 @@
   let ActivePanels;
   let Settings;
 
-  ({ PanelContainer, ActivePanels, Settings } = getContext('PanelOptions'));
+  ({ PanelContainer, ActivePanels, Settings } = getContext('S_PanelOptions'));
 
   const dispatch = createEventDispatcher();
 

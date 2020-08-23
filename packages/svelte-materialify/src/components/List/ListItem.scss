@@ -1,5 +1,43 @@
 @import "./variables";
 
+.s-list-item__content {
+  align-items: center;
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1;
+  overflow: hidden;
+  padding: $list-item-content-padding;
+
+  > * {
+    line-height: 1.1;
+    flex: 1 0 100%;
+
+    &:not(:last-child) {
+      margin-bottom: $list-item-content-children-margin-bottom;
+    }
+  }
+}
+
+.s-list-item__title,
+.s-list-item__subtitle {
+  flex: 1 1 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: $list-item-title-subtitle-line-height;
+}
+
+.s-list-item__title {
+  align-self: center;
+  font-size: $list-item-title-font-size;
+}
+
+.s-list-item__subtitle {
+  font-size: $list-item-subtitle-font-size;
+  color: var(--theme-text-secondary);
+}
+
 .s-list-item {
   align-items: center;
   display: flex;
@@ -10,44 +48,6 @@
   padding: $list-item-padding;
   position: relative;
   text-decoration: none;
-
-  .s-list-item__content {
-    align-items: center;
-    align-self: center;
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1 1;
-    overflow: hidden;
-    padding: $list-item-content-padding;
-
-    > * {
-      line-height: 1.1;
-      flex: 1 0 100%;
-
-      &:not(:last-child) {
-        margin-bottom: $list-item-content-children-margin-bottom;
-      }
-    }
-  }
-
-  .s-list-item__title,
-  .s-list-item__subtitle {
-    flex: 1 1 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    line-height: $list-item-title-subtitle-line-height;
-  }
-
-  .s-list-item__title {
-    align-self: center;
-    font-size: $list-item-title-font-size;
-  }
-
-  .s-list-item__subtitle {
-    font-size: $list-item-subtitle-font-size;
-    color: var(--theme-text-secondary);
-  }
 
   :global {
     .s-avatar {
