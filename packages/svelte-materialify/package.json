@@ -56,7 +56,7 @@
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-svelte3": "^2.7.3",
-    "jest": "^26.4.1",
+    "jest": "^26.4.2",
     "lint-staged": "^10.2.11",
     "np": "^6.3.2",
     "postcss": "^7.0.32",
@@ -68,7 +68,7 @@
     "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.18.0",
     "svelte": "^3.24.1",
-    "svelte-check": "^1.0.21",
+    "svelte-check": "^1.0.22",
     "svelte-htm": "^1.1.1",
     "svelte-jester": "^1.0.6",
     "svelte-preprocess": "^4.1.1"
