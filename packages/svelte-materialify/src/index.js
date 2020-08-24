@@ -1,3 +1,4 @@
+export { default as ClickOutside } from './actions/ClickOutside';
 export { default as Ripple } from './actions/Ripple';
 export { default as Intersect } from './actions/Intersect';
 export { default as Jump } from './actions/Jump';
@@ -27,6 +28,7 @@ export {
 } from './components/Card';
 export { default as List, ListGroup, ListItem } from './components/List';
 export { default as VirtualList } from './components/VirtualList';
+export { default as Menu } from './components/Menu';
 export { default as Overlay } from './components/Overlay';
 export { default as NavigationDrawer } from './components/NavigationDrawer';
 export { default as Subheader } from './components/Subheader';
