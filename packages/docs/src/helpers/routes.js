@@ -61,6 +61,7 @@ export default [
       },
       { text: 'List', href: '/components/list/' },
       { text: 'Virtual Lists', href: '/components/virtual-lists/' },
+      { text: 'Menus', href: '/components/menus/' },
       { text: 'Navigation Drawer', href: '/components/navigation-drawer/' },
       { text: 'Overlay', href: '/components/overlay/' },
       {

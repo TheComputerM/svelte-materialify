@@ -1,0 +1,347 @@
+{
+  "version": 3,
+  "name": "menu",
+  "data": [
+    {
+      "visibility": "public",
+      "description": "Classes to add to menu.",
+      "keywords": [],
+      "name": "class",
+      "kind": "const",
+      "static": false,
+      "readonly": true,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "localName": "classes"
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "The menu's active state.",
+      "name": "active",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Makes the menu appear where the mouse was clicked.",
+      "name": "absolute",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "The transition function for the menu.",
+      "name": "transition",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Options for the transition when menu opens.",
+      "name": "inOpts",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Options for the transition when menu closes.",
+      "name": "outOpts",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Offsets the menu on x-axis when true.",
+      "name": "offsetX",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Offsets the menu on y-axis when true.",
+      "name": "offsetY",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": true
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Offsets the menu on x-axis by some value.",
+      "name": "nudgeX",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "number",
+        "type": "number"
+      },
+      "defaultValue": 0
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Offsets the menu on y-axis by some value.",
+      "name": "nudgeY",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "number",
+        "type": "number"
+      },
+      "defaultValue": 0
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Designates whether menu should open on activator click.",
+      "name": "openOnClick",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": true
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Designates whether menu should open and close on activator hover.",
+      "name": "hover",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Designates if menu should close on outside-activator click.",
+      "name": "closeOnClickOutside",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": true
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Designates if menu should close when its content is clicked.",
+      "name": "closeOnClick",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": true
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Aligns the component with respect to its bottom.",
+      "name": "bottom",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Aligns the component with respect to its right.",
+      "name": "right",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Removed the border radius.",
+      "name": "tile",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Disables the menu.",
+      "name": "disabled",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "The z-index of the menu",
+      "name": "zIndex",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "number",
+        "type": "number"
+      },
+      "defaultValue": 8
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Styles for the menu.",
+      "name": "style",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "defaultValue": ""
+    }
+  ],
+  "computed": [],
+  "methods": [],
+  "components": [],
+  "description": null,
+  "keywords": [],
+  "events": [
+    {
+      "keywords": [
+        {
+          "name": "returns",
+          "description": "Nothing"
+        }
+      ],
+      "visibility": "public",
+      "description": "Event when menu is opened.",
+      "name": "open"
+    },
+    {
+      "keywords": [
+        {
+          "name": "returns",
+          "description": "Nothing"
+        }
+      ],
+      "visibility": "public",
+      "description": "Event when menu is closed.",
+      "name": "close"
+    }
+  ],
+  "slots": [
+    {
+      "name": "activator",
+      "description": "Slot for the trigger/activator.",
+      "visibility": "public",
+      "parameters": []
+    },
+    {
+      "name": "default",
+      "description": null,
+      "visibility": "public",
+      "parameters": []
+    }
+  ],
+  "refs": []
+}

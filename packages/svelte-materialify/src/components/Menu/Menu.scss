@@ -1,0 +1,18 @@
+@import "./variables";
+
+.s-menu-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.s-menu {
+  backface-visibility: hidden;
+  position: absolute;
+  contain: content;
+  overflow: auto;
+  @include elevation($menu-content-elevation);
+
+  &:not(.tile) {
+    border-radius: $menu-content-border-radius;
+  }
+}
