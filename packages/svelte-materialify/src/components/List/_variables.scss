@@ -14,7 +14,7 @@ $list-item-title-font-size: map-deep-get($headings, 'subtitle-1', 'size') !defau
 $list-item-subtitle-font-size: map-deep-get($headings, 'subtitle-2', 'size') !default;
 
 $list-padding: 8px 0 !default;
-$list-padding-top: 0 !default;
+$list-padding-top: 8px !default;
 $list-subheader-padding-top: 0 !default;
 
 $list-dense-subheader-padding: 0 8px !default;

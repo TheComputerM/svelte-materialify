@@ -46,7 +46,7 @@
   class:dense
   class:disabled
   class:selectable
-  class:link={!!ripple}
+  class:link={ripple}
   use:Ripple={ripple}
   on:click
   {...$$restProps}>

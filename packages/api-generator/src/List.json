@@ -6,6 +6,21 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
+      "name": "class",
+      "kind": "const",
+      "static": false,
+      "readonly": true,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "localName": "classes"
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "dense",
       "kind": "let",
       "static": false,
@@ -42,10 +57,25 @@
       "readonly": false,
       "type": {
         "kind": "type",
-        "text": "object",
-        "type": "object"
+        "text": "boolean",
+        "type": "boolean"
       },
-      "defaultValue": null
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "rounded",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
     },
     {
       "visibility": "public",
@@ -81,21 +111,6 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
-      "name": "rounded",
-      "kind": "let",
-      "static": false,
-      "readonly": false,
-      "type": {
-        "kind": "type",
-        "text": "boolean",
-        "type": "boolean"
-      },
-      "defaultValue": false
-    },
-    {
-      "visibility": "public",
-      "description": null,
-      "keywords": [],
       "name": "style",
       "kind": "let",
       "static": false,
@@ -106,21 +121,6 @@
         "type": "object"
       },
       "defaultValue": null
-    },
-    {
-      "visibility": "public",
-      "description": null,
-      "keywords": [],
-      "name": "class",
-      "kind": "const",
-      "static": false,
-      "readonly": true,
-      "type": {
-        "kind": "type",
-        "text": "string",
-        "type": "string"
-      },
-      "localName": "classes"
     }
   ],
   "computed": [],

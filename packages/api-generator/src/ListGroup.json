@@ -6,6 +6,21 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
+      "name": "class",
+      "kind": "const",
+      "static": false,
+      "readonly": true,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "localName": "classes"
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "activeClass",
       "kind": "let",
       "static": false,
@@ -15,7 +30,7 @@
         "text": "string",
         "type": "string"
       },
-      "defaultValue": "primary-text"
+      "defaultValue": ""
     },
     {
       "visibility": "public",
@@ -30,7 +45,7 @@
         "text": "boolean",
         "type": "boolean"
       },
-      "defaultValue": false
+      "defaultValue": true
     },
     {
       "visibility": "public",
@@ -94,6 +109,21 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
+      "name": "ripple",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": true
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "style",
       "kind": "let",
       "static": false,
@@ -104,21 +134,6 @@
         "type": "string"
       },
       "defaultValue": ""
-    },
-    {
-      "visibility": "public",
-      "description": null,
-      "keywords": [],
-      "name": "class",
-      "kind": "const",
-      "static": false,
-      "readonly": true,
-      "type": {
-        "kind": "type",
-        "text": "string",
-        "type": "string"
-      },
-      "localName": "classes"
     }
   ],
   "computed": [],

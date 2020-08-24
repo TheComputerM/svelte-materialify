@@ -6,6 +6,21 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
+      "name": "class",
+      "kind": "const",
+      "static": false,
+      "readonly": true,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "localName": "classes"
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "activeClass",
       "kind": "let",
       "static": false,
@@ -66,44 +81,16 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
-      "name": "flat",
-      "kind": "let",
-      "static": false,
-      "readonly": false,
-      "type": {
-        "kind": "type",
-        "text": "object",
-        "type": "object"
-      },
-      "defaultValue": null
-    },
-    {
-      "visibility": "public",
-      "description": null,
-      "keywords": [],
-      "name": "link",
-      "kind": "let",
-      "static": false,
-      "readonly": false,
-      "type": {
-        "kind": "type",
-        "text": "any",
-        "type": "any"
-      }
-    },
-    {
-      "visibility": "public",
-      "description": null,
-      "keywords": [],
       "name": "selectable",
       "kind": "let",
       "static": false,
       "readonly": false,
       "type": {
         "kind": "type",
-        "text": "any",
-        "type": "any"
-      }
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
     },
     {
       "visibility": "public",
@@ -115,24 +102,10 @@
       "readonly": false,
       "type": {
         "kind": "type",
-        "text": "any",
-        "type": "any"
-      }
-    },
-    {
-      "visibility": "public",
-      "description": null,
-      "keywords": [],
-      "name": "class",
-      "kind": "const",
-      "static": false,
-      "readonly": true,
-      "type": {
-        "kind": "type",
-        "text": "string",
-        "type": "string"
+        "text": "boolean",
+        "type": "boolean"
       },
-      "localName": "classes"
+      "defaultValue": false
     }
   ],
   "computed": [],
