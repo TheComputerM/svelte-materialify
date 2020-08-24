@@ -4,12 +4,11 @@
   display: flex;
   align-items: center;
   position: relative;
-  color: var(--theme-text-secondary);
 }
 
 .s-checkbox__wrapper {
   overflow: unset !important;
-  color: inherit;
+  color: var(--theme-text-secondary);
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -18,7 +17,6 @@
   width: $checkbox-size;
   position: relative;
   user-select: none;
-  cursor: pointer;
   border-radius: 100%;
 
   &::before {
@@ -37,8 +35,17 @@
     opacity: 0;
   }
 
-  &:hover::before {
-    opacity: 0.15;
+  &:not(.disabled) {
+    cursor: pointer;
+
+    &:hover::before {
+      opacity: 0.16;
+    }
+  }
+
+  &.disabled {
+    opacity: $checkbox-disabled-opacity;
+    color: var(--theme-controls-disabled) !important;
   }
 }
 
@@ -51,7 +58,7 @@
   border-radius: 2px;
   color: inherit;
   background-color: transparent;
-  transition: 0.3s map-get($transitions, "swing");
+  transition: background-color 0.3s map-get($transitions, "swing");
   pointer-events: none;
 }
 
@@ -80,16 +87,13 @@ input {
   margin: 0;
   padding: 0;
 
-  &:disabled ~ .s-checkbox__background {
-    color: var(--theme-controls-disabled) !important;
-  }
-
   &:checked ~ .s-checkbox__background,
   &:indeterminate ~ .s-checkbox__background {
     background-color: currentColor;
+    border: none;
   }
 }
 
 label {
-  padding-left: 8px;
+  padding-left: 12px;
 }
