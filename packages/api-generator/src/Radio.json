@@ -1,0 +1,131 @@
+{
+  "version": 3,
+  "name": "radio",
+  "data": [
+    {
+      "visibility": "public",
+      "description": "Add class to radio wrapper.",
+      "keywords": [],
+      "name": "class",
+      "kind": "const",
+      "static": false,
+      "readonly": true,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "localName": "classes"
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Class to add to radio when it is checked.",
+      "name": "activeClass",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "defaultValue": "primary-text"
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Disables the radio.",
+      "name": "disabled",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Bind radio to a group.",
+      "name": "group",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      },
+      "bind": [
+        {
+          "source": "input",
+          "property": "group"
+        }
+      ]
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Value for the radio.",
+      "name": "value",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "object",
+        "type": "object"
+      },
+      "defaultValue": null
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Id for the checkbox.",
+      "name": "id",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "object",
+        "type": "object"
+      },
+      "defaultValue": null
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Styles for the radio wrapper.",
+      "name": "style",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "object",
+        "type": "object"
+      },
+      "defaultValue": null
+    }
+  ],
+  "computed": [],
+  "methods": [],
+  "components": [],
+  "description": null,
+  "keywords": [],
+  "events": [],
+  "slots": [
+    {
+      "name": "default",
+      "description": null,
+      "visibility": "public",
+      "parameters": []
+    }
+  ],
+  "refs": []
+}

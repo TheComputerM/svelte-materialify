@@ -29,6 +29,7 @@
     "Overlay",
     "ProgressCircular",
     "ProgressLinear",
+    "Radio",
     "Subheader",
     "Table",
     "VirtualList"

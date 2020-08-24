@@ -1,0 +1,54 @@
+---
+title: Radio Component
+related:
+  - Checkbox: /components/checkboxes/
+  - Radio API: /api/Radio/
+---
+
+<script context="module">
+  export async function preload() {
+    let examples = await this.fetch('examples/components/radio.json');
+    examples = await examples.json();
+    return { examples }
+  }
+</script>
+
+<script>
+  import { API, Example } from '../../components';
+  import { Checkbox as doc } from 'svelte-materialify-api/dist';
+  import * as Examples from '../../examples/components/radio';
+  export let examples;
+</script>
+
+# Radio Button
+
+Radio component allows a user to select one option from a predefined set of mutually exclusive options.
+
+
+## API
+
+<API {doc} />
+
+
+## Examples
+
+Below are some simple and complex examples.
+
+
+### Groups
+
+You can combine radio buttons into groups.
+<Example code={examples.groups} component={Examples.groups} />
+
+
+### Colors
+
+You can change the colors of the radio and the labels.
+<Example code={examples.colors} component={Examples.colors} />
+
+
+### States
+
+Here are some different states the radio can be in.
+<Example code={examples.states} component={Examples.states} />
+

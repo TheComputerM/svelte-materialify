@@ -57,6 +57,7 @@ export default [
         items: [
           { text: 'Inputs', href: '/components/inputs/' },
           { text: 'Checkboxes', href: '/components/checkboxes/' },
+          { text: 'Radio', href: '/components/radio/' },
         ],
       },
       { text: 'List', href: '/components/list/' },

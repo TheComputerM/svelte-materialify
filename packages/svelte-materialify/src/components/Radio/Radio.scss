@@ -1,0 +1,90 @@
+@import "./variables";
+
+.s-radio {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.s-radio__wrapper {
+  overflow: unset !important;
+  color: var(--theme-text-secondary);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  height: $radio-size;
+  width: $radio-size;
+  position: relative;
+  user-select: none;
+  border-radius: 100%;
+
+  &::before {
+    border-radius: inherit;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: inherit;
+    background-color: currentColor;
+    transform: scale(2);
+    opacity: 0;
+  }
+
+  &:not(.disabled) {
+    cursor: pointer;
+
+    &:hover::before {
+      opacity: 0.16;
+    }
+  }
+
+  &.disabled {
+    color: var(--theme-controls-disabled) !important;
+  }
+}
+
+.s-radio__background {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  border: 2px solid currentColor;
+  border-radius: 100%;
+  color: inherit;
+  background-color: transparent;
+  pointer-events: none;
+
+  &::before {
+    transition: 120ms 0ms map-get($transitions, 'swing');
+    width: $radio-size - 8;
+    height: $radio-size - 8;
+    border-radius: 100%;
+    content: "";
+    background-color: currentColor;
+    transform: scale(0);
+  }
+}
+
+input {
+  position: absolute;
+  width: $radio-size * 2;
+  height: $radio-size * 2;
+  cursor: inherit;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+
+  &:checked ~ .s-radio__background::before {
+    transform: scale(1);
+  }
+}
+
+label {
+  padding-left: 12px;
+}

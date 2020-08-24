@@ -28,6 +28,7 @@ export { default as NavigationDrawer } from './NavigationDrawer.json';
 export { default as Overlay } from './Overlay.json';
 export { default as ProgressCircular } from './ProgressCircular.json';
 export { default as ProgressLinear } from './ProgressLinear.json';
+export { default as Radio } from './Radio.json';
 export { default as Subheader } from './Subheader.json';
 export { default as Table } from './Table.json';
 export { default as VirtualList } from './VirtualList.json';
