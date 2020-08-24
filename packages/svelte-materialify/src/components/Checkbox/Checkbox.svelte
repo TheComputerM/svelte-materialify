@@ -1,5 +1,5 @@
 <script context="module">
-  const uuidv4 = () => {
+  const uuid = () => {
     const output = Math.round(Math.random() * 4999 + 1000);
     return output;
   };
@@ -39,7 +39,7 @@
   // Styles to add to checkbox wrapper.
   export let style = null;
 
-  id = id || `s-checkbox-${uuidv4()}`;
+  id = id || `s-checkbox-${uuid()}`;
 
   const hasValidGroup = Array.isArray(group);
   if (hasValidGroup && value) {
