@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "name": "alert",
+  "name": "Alert",
   "data": [
     {
       "visibility": "public",
@@ -224,7 +224,7 @@
     },
     {
       "name": "default",
-      "description": null,
+      "description": "Slot for icon at beginning of alert.",
       "visibility": "public",
       "parameters": []
     },

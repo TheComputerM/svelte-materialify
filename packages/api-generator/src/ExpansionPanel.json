@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "name": "expansion-panel",
+  "name": "ExpansionPanel",
   "data": [
     {
       "visibility": "public",
@@ -82,7 +82,19 @@
   "components": [],
   "description": null,
   "keywords": [],
-  "events": [],
+  "events": [
+    {
+      "keywords": [
+        {
+          "name": "returns",
+          "description": "{active,index}"
+        }
+      ],
+      "visibility": "public",
+      "description": "Event triggered when the state of the panel has changed.",
+      "name": "change"
+    }
+  ],
   "slots": [
     {
       "name": "header",

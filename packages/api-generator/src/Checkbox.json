@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "name": "checkbox",
+  "name": "Checkbox",
   "data": [
     {
       "visibility": "public",
@@ -155,7 +155,18 @@
   "components": [],
   "description": null,
   "keywords": [],
-  "events": [],
+  "events": [
+    {
+      "name": "change",
+      "parent": "input",
+      "modificators": [],
+      "locations": null,
+      "loc": null,
+      "visibility": "public",
+      "description": "",
+      "keywords": []
+    }
+  ],
   "slots": [
     {
       "name": "default",

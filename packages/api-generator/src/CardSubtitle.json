@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "name": "card-subtitle",
+  "name": "CardSubtitle",
   "data": [
     {
       "visibility": "public",

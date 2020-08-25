@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "name": "list-group",
+  "name": "ListGroup",
   "data": [
     {
       "visibility": "public",

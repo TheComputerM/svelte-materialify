@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "name": "card-text",
+  "name": "CardText",
   "data": [
     {
       "visibility": "public",

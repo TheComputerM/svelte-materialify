@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "name": "list-item",
+  "name": "ListItem",
   "data": [
     {
       "visibility": "public",

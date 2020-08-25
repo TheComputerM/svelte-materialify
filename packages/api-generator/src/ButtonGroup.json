@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "name": "button-group",
+  "name": "ButtonGroup",
   "data": [
     {
       "visibility": "public",
