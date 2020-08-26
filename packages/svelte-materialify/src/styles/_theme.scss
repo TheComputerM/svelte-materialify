@@ -1,25 +1,24 @@
-// @use "./tools/functions" as *;
 @use "./variables" as *;
+
+@function -flatten($map, $prefix: "") {
+  $output: ();
+  @each $x, $y in $map {
+    @if type-of($y) == 'map' {
+      $output: map-merge($output, -flatten($y, '-' + $x));
+    } @else {
+      $output: map-merge($output, ("--theme#{$prefix}-#{$x}": $y));
+    }
+  }
+  @return $output;
+}
 
 @each $name,
   $material in ("light": $material-light-theme, "dark": $material-dark-theme)
 {
   .theme--#{$name} {
-    --theme-surface: #{map-get($material, "surface")};
-    --theme-text-primary: #{map-deep-get($material, "text", "primary")};
-    --theme-text-secondary: #{map-deep-get($material, "text", "secondary")};
-    --theme-text-disabled: #{map-deep-get($material, "text", "disabled")};
-    --theme-icons-active: #{map-deep-get($material, "icons", "active")};
-    --theme-icons-inactive: #{map-deep-get($material, "icons", "inactive")};
-    --theme-buttons-disabled: #{map-deep-get($material, "buttons", "disabled")};
-    --theme-controls-disabled: #{map-deep-get($material, "controls", "disabled")};
-    --theme-tables-active: #{map-deep-get($material, "tables", "active")};
-    --theme-tables-hover: #{map-deep-get($material, "tables", "hover")};
-    --theme-tables-group: #{map-deep-get($material, "tables", "group")};
-    --theme-dividers: #{map-get($material, "dividers")};
-    --theme-cards: #{map-get($material, "cards")};
-    --theme-app-bar: #{map-get($material, "app-bar")};
-    --theme-navigation-drawer: #{map-get($material, "navigation-drawer")};
+    @each $x, $y in -flatten($material) {
+      #{$x}: #{$y};
+    }
 
     background-color: var(--theme-surface);
     color: var(--theme-text-primary);
