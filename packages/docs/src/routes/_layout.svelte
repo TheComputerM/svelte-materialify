@@ -1,5 +1,6 @@
 <script>
   import { onMount } from 'svelte';
+  import { MaterialApp } from 'svelte-materialify/src';
   import SiteNavigation from '../helpers/Navigation/SiteNavigation.svelte';
   import Loading from '../helpers/Navigation/Loading.svelte';
   import { theme } from '../helpers/stores';
@@ -51,7 +52,7 @@
   {/if}
 </svelte:head>
 
-<div class="s-app theme--{$theme}">
+<MaterialApp theme={$theme}>
   {#if segment !== undefined}
     <SiteNavigation bind:theme={$theme} {navigation} />
   {/if}
@@ -63,4 +64,4 @@
     {/if}
     <slot />
   </main>
-</div>
+</MaterialApp>

@@ -1,0 +1,31 @@
+@import "../../styles/variables";
+
+$text-field-line-height: 20px !default;
+$text-field-label-top: 6px !default;
+$text-field-label-active-transform: translateY(-18px) scale(0.75) !default;
+$text-field-padding: 8px 0 8px !default;
+$text-field-dense-padding: 4px 0 2px !default;
+$text-field-border-radius: $border-radius-root !default;
+
+$text-field-wrapper-padding: 0 12px;
+$text-field-filled-outlined-min-height: 56px !default;
+$text-field-filled-outlined-dense-min-height: 40px !default;
+
+// Outlined
+$text-field-outlined-label-top: 18px !default;
+$text-field-outlined-label-active-transform: translateY(-24px) scale(0.75) !default;
+$text-field-outlined-dense-label-top: 10px !default;
+$text-field-outlined-dense-label-active-transform: translateY(-16px) scale(0.75) !default;
+
+// Solo
+$text-field-solo-depth: 2 !default;
+$text-field-solo-min-height: 48px !default;
+$text-field-solo-dense-min-height: 40px !default;
+
+// Filled
+$text-field-filled-label-top: 18px !default;
+$text-field-filled-label-active-transform: translateY(-6px) scale(0.75) !default;
+$text-field-filled-dense-label-top: 12px !default;
+$text-field-filled-dense-label-active-transform: translateY(-8px) scale(0.75) !default;
+$text-field-filled-border-radius: $text-field-border-radius $text-field-border-radius 0 0 !default;
+$text-field-filled-margin-top: 22px !default;

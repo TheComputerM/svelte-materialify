@@ -267,8 +267,18 @@ $material-light-theme: map-deep-merge(
       "active": rgba(material-color("shades", "black"), 0.54),
       "inactive": rgba(material-color("shades", "black"), 0.38),
     ),
+    "inputs": (
+      "box": rgba(material-color("shades", "black"), 0.04),
+    ),
     "buttons": (
       "disabled": rgba(material-color("shades", "black"), 0.26),
+    ),
+    "text-fields": (
+      "filled": rgba(material-color("shades", "black"), 0.06),
+      "filled-hover": rgba(material-color("shades", "black"), 0.12),
+      "outlined": rgba(material-color("shades", "black"), 0.38),
+      "outlined-disabled": rgba(material-color("shades", "black"), 0.26),
+      "border": rgba(material-color("shades", "black"), 0.42)
     ),
     "controls": (
       "disabled": rgba(material-color("shades", "black"), 0.26),
@@ -316,8 +326,18 @@ $material-dark-theme: map-deep-merge(
       "disabled": rgba(material-color("shades", "white"), 0.5),
       "link": material-color("blue", "accent-1")
     ),
+    "inputs": (
+      "box": material-color("shades", "white"),
+    ),
     "buttons": (
       "disabled": rgba(material-color("shades", "white"), 0.3),
+    ),
+    "text-fields": (
+      "filled": rgba(material-color("shades", "white"), 0.08),
+      "filled-hover": rgba(material-color("shades", "white"), 0.16),
+      "outlined": rgba(material-color("shades", "white"), 0.24),
+      "outlined-disabled": rgba(material-color("shades", "white"), 0.16),
+      "border": rgba(material-color("shades", "white"), 0.7)
     ),
     "controls": (
       "disabled": rgba(material-color("shades", "white"), 0.3),

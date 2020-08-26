@@ -1,0 +1,34 @@
+---
+title: Text Field Component
+related:
+  - TextField API: /api/TextField/
+---
+
+<script context="module">
+  export async function preload() {
+    let examples = await this.fetch('examples/components/textField.json');
+    examples = await examples.json();
+    return { examples }
+  }
+</script>
+
+<script>
+  import { API, Example } from '../../components';
+  import { Checkbox as doc } from 'svelte-materialify-api/dist';
+  import * as Examples from '../../examples/components/textField';
+  export let examples;
+</script>
+
+# Text Fields
+
+Text fields components are used for collecting user provided information.
+
+
+## Usage
+
+<Example code={examples.variants} component={Examples.variants} />
+
+## Examples
+
+### Dense
+<Example code={examples.dense} component={Examples.dense} />

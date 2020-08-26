@@ -55,7 +55,7 @@ export default [
         text: 'Forms',
         open: false,
         items: [
-          { text: 'Inputs', href: '/components/inputs/' },
+          { text: 'Text Field', href: '/components/text-field/' },
           { text: 'Checkboxes', href: '/components/checkboxes/' },
           { text: 'Radio', href: '/components/radio/' },
         ],

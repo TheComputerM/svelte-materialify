@@ -1,0 +1,159 @@
+{
+  "version": 3,
+  "name": "TextField",
+  "data": [
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "value",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "defaultValue": "",
+      "bind": [
+        {
+          "source": "input",
+          "property": "value"
+        }
+      ]
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "filled",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "solo",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "outlined",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "flat",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "rounded",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "placeholder",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "object",
+        "type": "object"
+      },
+      "defaultValue": null
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "export let helper = \"\";",
+      "name": "id",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "object",
+        "type": "object"
+      },
+      "defaultValue": null
+    }
+  ],
+  "computed": [],
+  "methods": [],
+  "components": [],
+  "description": null,
+  "keywords": [],
+  "events": [],
+  "slots": [
+    {
+      "name": "prepend-outer",
+      "description": null,
+      "visibility": "public",
+      "parameters": []
+    },
+    {
+      "name": "default",
+      "description": null,
+      "visibility": "public",
+      "parameters": []
+    },
+    {
+      "name": "append-outer",
+      "description": null,
+      "visibility": "public",
+      "parameters": []
+    }
+  ],
+  "refs": []
+}

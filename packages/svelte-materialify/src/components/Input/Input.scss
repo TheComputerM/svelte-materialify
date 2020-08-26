@@ -1,0 +1,108 @@
+@import "./variables";
+
+.s-input__control {
+  border-radius: inherit;
+  align-items: center;
+  color: inherit;
+  display: flex;
+  margin-bottom: $input-slot-margin-bottom;
+  min-height: inherit;
+  position: relative;
+  transition: 0.3s map-get($transitions, "swing");
+  width: 100%;
+  height: inherit;
+}
+
+.s-input {
+  color: var(--theme-text-primary);
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  font-size: $input-font-size;
+  letter-spacing: $input-letter-spacing;
+  max-width: 100%;
+  text-align: $input-text-align;
+
+  :global {
+    input {
+      max-height: $input-max-height;
+    }
+
+    input,
+    textarea {
+      color: var(--theme-text-primary);
+
+      &:invalid {
+        box-shadow: none;
+      }
+
+      &:focus,
+      &:active {
+        outline: none;
+      }
+
+      &::placeholder {
+        color: var(--theme-text-disabled);
+      }
+    }
+
+    [slot="prepend"],
+    [slot="append"] {
+      display: inline-flex;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      line-height: 1;
+
+      .s-icon {
+        user-select: none;
+        align-items: center;
+        display: inline-flex;
+        height: $input-icon-height;
+        flex: 1 0 auto;
+        justify-content: center;
+        min-width: $input-icon-min-width;
+        width: $input-icon-width;
+      }
+    }
+
+    [slot="prepend"] {
+      margin-right: $input-prepend-append-outer-margin;
+    }
+
+    [slot="append"] {
+      margin-left: $input-prepend-append-outer-margin;
+    }
+
+    label {
+      position: absolute;
+      height: $input-label-height;
+      line-height: $input-label-letter-spacing;
+      color: var(--theme-text-secondary);
+      white-space: nowrap;
+      transition: 0.3s map-get($transitions, "swing");
+    }
+  }
+
+  &.readonly,
+  &.disabled {
+    pointer-events: none;
+  }
+
+  &.disabled {
+    color: var(--theme-text-disabled);
+
+    :global {
+      input,
+      textarea {
+        color: var(--theme-text-disabled);
+      }
+    }
+  }
+
+  &.dense {
+    .s-input__control {
+      margin-bottom: $input-dense-slot-margin-bottom;
+    }
+  }
+}

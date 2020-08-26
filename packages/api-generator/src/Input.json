@@ -1,0 +1,77 @@
+{
+  "version": 3,
+  "name": "Input",
+  "data": [
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "class",
+      "kind": "const",
+      "static": false,
+      "readonly": true,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "localName": "classes"
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "disabled",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "messages",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
+    }
+  ],
+  "computed": [],
+  "methods": [],
+  "components": [],
+  "description": null,
+  "keywords": [],
+  "events": [],
+  "slots": [
+    {
+      "name": "prepend",
+      "description": null,
+      "visibility": "public",
+      "parameters": []
+    },
+    {
+      "name": "default",
+      "description": null,
+      "visibility": "public",
+      "parameters": []
+    },
+    {
+      "name": "append",
+      "description": null,
+      "visibility": "public",
+      "parameters": []
+    }
+  ],
+  "refs": []
+}

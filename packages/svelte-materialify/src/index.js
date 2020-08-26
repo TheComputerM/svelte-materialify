@@ -7,6 +7,8 @@ export { default as MaterialApp } from './components/MaterialApp';
 export { default as Icon } from './components/Icon';
 export { default as Button } from './components/Button';
 export { default as ButtonGroup } from './components/ButtonGroup';
+export { default as Input } from './components/Input';
+export { default as TextField } from './components/TextField';
 export { default as Checkbox } from './components/Checkbox';
 export { default as Radio } from './components/Radio';
 export { default as Alert } from './components/Alert';
