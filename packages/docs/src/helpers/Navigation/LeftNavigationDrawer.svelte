@@ -11,7 +11,7 @@
   export let items = routes;
   export let depth = 0;
   export let visible = true;
-  let offset = `${(depth + 1) * 32}px`;
+  let offset = `${(depth + 1) * 28}px`;
   const escaped = (text = '') => text.replace(/\//g, '');
 
   const unsubscribe = page.subscribe(({ path }) => {
