@@ -2354,7 +2354,7 @@ code-point-at@^1.0.0:
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
   integrity sha1-DQcLTQQ6W+ozovGkDi7bPZpMz3c=
 
-collapse-white-space@^1.0.2:
+collapse-white-space@^1.0.2, collapse-white-space@^1.0.5:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/collapse-white-space/-/collapse-white-space-1.0.6.tgz#e63629c0016665792060dbbeb79c42239d2c5287"
   integrity sha512-jEovNnrhMuqyCcjfEJA56v0Xq8SkIoPKDyaHahwo3POf4qcSXqMYuwNcOTzp74vTsR9Tn08z4MxWqAhcekogkQ==
@@ -7195,6 +7195,14 @@ remark-autolink-headings@^6.0.1:
   integrity sha512-LTV5G5NMjypHEr14tMNJ36yrP+xwT7mejJelZOPXKiF5WvRH9o36zXnr2QGqfms2yVASNpDaC9NBOwKlJJKuQw==
   dependencies:
     extend "^3.0.0"
+    unist-util-visit "^2.0.0"
+
+remark-bookmarks@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/remark-bookmarks/-/remark-bookmarks-3.0.0.tgz#b785c364862430097021715a2080e75b7436a373"
+  integrity sha512-unouG6sMZEslIWzD2YPsDtpCvDJ9E4bggmxqT3peFQJsXGTov5mknV99yY1XJOFIy8DJSvvRj20WHvEEBsTz8g==
+  dependencies:
+    collapse-white-space "^1.0.5"
     unist-util-visit "^2.0.0"
 
 remark-class-names@^0.1.0:

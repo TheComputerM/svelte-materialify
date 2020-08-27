@@ -48,6 +48,7 @@
     "postcss": "^7.0.32",
     "prismjs": "^1.21.0",
     "remark-autolink-headings": "^6.0.1",
+    "remark-bookmarks": "^3.0.0",
     "remark-class-names": "^0.1.0",
     "remark-external-links": "^7.0.0",
     "remark-sectionize": "^1.1.1",

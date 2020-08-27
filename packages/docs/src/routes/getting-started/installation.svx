@@ -16,7 +16,7 @@ Get Started with Svelte Materialify, the best material UI component library for 
 
 ## Minimal Install
 
-If you want to try out svelte materialify and tinker with it, visit the [playground repl](https://svelte.dev/repl/2c55788d8ffd4458bfe9bcb5f58956db);
+If you want to try out svelte materialify and tinker with it, visit the [repl playground][];
 
 
 If want a fast and basic setup then only installing `svelte-materialify` should be fine.

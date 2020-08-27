@@ -28,6 +28,14 @@ const preprocess = [
     extension: '.svx',
     layout: './src/helpers/Markdown/MDXLayout.svelte',
     remarkPlugins: [
+      [
+        require('remark-bookmarks'),
+        {
+          bookmarks: {
+            'repl playground': 'https://svelte.dev/repl/2c55788d8ffd4458bfe9bcb5f58956db'
+          }
+        }
+      ],
       require('remark-sectionize'),
       [
         require('remark-class-names'),
