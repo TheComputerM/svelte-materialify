@@ -1,8 +1,5 @@
 <script context="module">
-  const uuid = () => {
-    const output = Math.round(Math.random() * 4999 + 1000);
-    return output;
-  };
+  import uid from 'uid';
 </script>
 
 <script>
@@ -30,7 +27,7 @@
   // Styles for the radio wrapper.
   export let style = null;
 
-  id = id || `s-radio-${uuid()}`;
+  id = id || `s-radio-${uid(5)}`;
   $: active = group === value;
 </script>
 

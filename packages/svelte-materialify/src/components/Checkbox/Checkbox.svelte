@@ -1,8 +1,5 @@
 <script context="module">
-  const uuid = () => {
-    const output = Math.round(Math.random() * 4999 + 1000);
-    return output;
-  };
+  import uid from 'uid';
 
   const check = 'M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z';
   const dash = 'M4,11L4,13L20,13L20,11L4,11Z';
@@ -33,13 +30,13 @@
   // Combines components into a single group.
   export let group = null;
 
-  // Id for the checkbox, defaults to a random uuid.
+  // Id for the checkbox, defaults to a random uid.
   export let id = null;
 
   // Styles to add to checkbox wrapper.
   export let style = null;
 
-  id = id || `s-checkbox-${uuid()}`;
+  id = id || `s-checkbox-${uid(5)}`;
 
   const hasValidGroup = Array.isArray(group);
   if (hasValidGroup && value) {

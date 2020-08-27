@@ -1,8 +1,5 @@
 <script context="module">
-  const uuid = () => {
-    const output = Math.round(Math.random() * 4999 + 1000);
-    return output;
-  };
+  import uid from 'uid';
   const clearIcon = 'M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z';
 </script>
 
@@ -25,7 +22,7 @@
   // export let helper = "";
   export let id = null;
 
-  id = id || `s-input-${uuid()}`;
+  id = id || `s-input-${uid(5)}`;
   let labelActive = !!placeholder || value;
 
   function onFocus() {
