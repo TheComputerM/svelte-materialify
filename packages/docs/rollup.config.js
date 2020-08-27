@@ -11,6 +11,8 @@ import Prism from 'prismjs';
 import loadLanguages from 'prismjs/components/';
 import pkg from './package.json';
 
+const tinydate = require('tinydate');
+
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
@@ -88,14 +90,9 @@ const preprocess = [
 ];
 const extensions = ['.svelte', '.svx'];
 
-function getCurrentDateAndTime() {
-  const d = new Date();
-  return `${d.toLocaleDateString()} ${d.toLocaleTimeString().toUpperCase()}`;
-}
-
 const replaced = {
   'process.env.NODE_ENV': JSON.stringify(mode),
-  __CurrentDateAndTime__: getCurrentDateAndTime(),
+  CURRENT_DATE: tinydate("{DD}/{MM}/{YYYY}")(),
 };
 
 export default {

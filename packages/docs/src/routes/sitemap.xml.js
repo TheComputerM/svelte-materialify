@@ -1,8 +1,9 @@
 import routes from '../helpers/routes';
 
+const tinydate = require('tinydate');
+
 const BASE = 'https://svelte-materialify.vercel.app';
-const DATE = new Date();
-const TIME = DATE.toISOString().split('T')[0];
+const TIME = tinydate('{YYYY}-{MM}-{DD}')();
 function generateURLs(items) {
   let output = '';
   items.forEach((item) => {

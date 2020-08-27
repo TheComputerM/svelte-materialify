@@ -46,7 +46,7 @@
     position: absolute;
     top: 0;
     left: -1em;
-    font-size: .75em;
+    font-size: 0.75em;
     opacity: 0;
   }
   .markdown-container .heading:hover > a {
@@ -102,7 +102,7 @@
     </span>
     <span class="text-body-2">
       <b>Last Updated:</b>
-      __CurrentDateAndTime__
+      CURRENT_DATE
     </span>
   </div>
 </section>
