@@ -34,9 +34,15 @@ Text fields components are used for collecting user provided information.
 <Example code={examples.dense} component={Examples.dense} />
 
 
+### Disabled and Readonly
+
+<Example code={examples.disabled} component={Examples.disabled} />
+
+
 ### Icons
 
 <Example code={examples.icons} component={Examples.icons} />
+
 
 ### Clearable
 

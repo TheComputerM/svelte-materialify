@@ -1,7 +1,8 @@
 <script>
-  let classes = '';
+  let classes = "";
   export { classes as class };
   export let color = null;
+  export let readonly = false;
   export let disabled = false;
   export let messages = [];
 </script>
@@ -10,7 +11,11 @@
 
 </style>
 
-<div class="s-input {classes}" class:disabled style="--input-active-color:{color}">
+<div
+  class="s-input {classes}"
+  class:readonly
+  class:disabled
+  style="--input-active-color:{color}">
   <slot name="prepend" />
   <div class="s-input__control">
     <slot />

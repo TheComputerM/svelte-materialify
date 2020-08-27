@@ -1,13 +1,15 @@
 <script context="module">
-  import uid from 'uid';
-  const clearIcon = 'M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z';
+  import uid from "uid";
+
+  const clearIcon =
+    "M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z";
 </script>
 
 <script>
-  import Input from '../Input';
-  import Icon from '../Icon';
+  import Input from "../Input";
+  import Icon from "../Icon";
 
-  export let value = '';
+  export let value = "";
   export let color = null;
   export let filled = false;
   export let solo = false;
@@ -16,8 +18,8 @@
   export let dense = false;
   export let rounded = false;
   export let clearable = false;
-  // export let disabled = false;
-  // export let readonly = false;
+  export let readonly = false;
+  export let disabled = false;
   export let placeholder = null;
   // export let helper = "";
   export let id = null;
@@ -34,7 +36,7 @@
   }
 
   function clear() {
-    value = '';
+    value = "";
     if (!placeholder) labelActive = false;
   }
 </script>
@@ -43,7 +45,7 @@
 
 </style>
 
-<Input class="s-text-field" {color}>
+<Input class="s-text-field" {color} {readonly} {disabled}>
   <div slot="prepend">
     <slot name="prepend-outer" />
   </div>
@@ -65,6 +67,7 @@
         bind:value
         {placeholder}
         {id}
+        {disabled}
         on:focus={onFocus}
         on:blur={onBlur} />
     </div>
