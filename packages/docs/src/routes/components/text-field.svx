@@ -32,3 +32,12 @@ Text fields components are used for collecting user provided information.
 
 ### Dense
 <Example code={examples.dense} component={Examples.dense} />
+
+
+### Icons
+
+<Example code={examples.icons} component={Examples.icons} />
+
+### Clearable
+
+<Example code={examples.clearable} component={Examples.clearable} />

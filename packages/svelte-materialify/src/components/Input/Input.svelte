@@ -1,17 +1,7 @@
-<script context="module">
-  function classnames(obj) {
-    let out = '';
-    Object.keys(obj).forEach((element) => {
-      if (obj[element]) out += `${element} `;
-    });
-    return out;
-  }
-</script>
-
 <script>
-  let klass = '';
-  export { klass as class };
-  export let classes = {};
+  let classes = '';
+  export { classes as class };
+  export let color = null;
   export let disabled = false;
   export let messages = [];
 </script>
@@ -20,7 +10,7 @@
 
 </style>
 
-<div class="s-input {klass} {classnames(classes)}" class:disabled>
+<div class="s-input {classes}" class:disabled style="--input-active-color:{color}">
   <slot name="prepend" />
   <div class="s-input__control">
     <slot />

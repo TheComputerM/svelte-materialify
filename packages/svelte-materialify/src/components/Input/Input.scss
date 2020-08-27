@@ -14,10 +14,10 @@
 }
 
 .s-input {
-  color: var(--theme-text-primary);
-  align-items: flex-start;
+  color: var(--input-active-color, $primary-color);
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  flex-direction: row;
   flex: 1 1 auto;
   font-size: $input-font-size;
   letter-spacing: $input-letter-spacing;
@@ -53,17 +53,6 @@
       margin-bottom: 4px;
       margin-top: 4px;
       line-height: 1;
-
-      .s-icon {
-        user-select: none;
-        align-items: center;
-        display: inline-flex;
-        height: $input-icon-height;
-        flex: 1 0 auto;
-        justify-content: center;
-        min-width: $input-icon-min-width;
-        width: $input-icon-width;
-      }
     }
 
     [slot="prepend"] {
@@ -74,6 +63,17 @@
       margin-left: $input-prepend-append-outer-margin;
     }
 
+    .s-icon {
+      user-select: none;
+      align-items: center;
+      display: inline-flex;
+      height: $input-icon-height;
+      flex: 1 0 auto;
+      justify-content: center;
+      min-width: $input-icon-min-width;
+      width: $input-icon-width;
+    }
+
     label {
       position: absolute;
       height: $input-label-height;
@@ -81,6 +81,14 @@
       color: var(--theme-text-secondary);
       white-space: nowrap;
       transition: 0.3s map-get($transitions, "swing");
+    }
+  }
+
+  &:focus-within {
+    :global {
+      .s-icon {
+        color: inherit;
+      }
     }
   }
 
