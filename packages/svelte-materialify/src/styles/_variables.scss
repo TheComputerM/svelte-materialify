@@ -235,9 +235,9 @@ $display-breakpoints: map-deep-merge(
 
 $container-max-widths: map-deep-merge(
   (
-    'md': map-get($grid-breakpoints, 'md') * 0.9375,
-    'lg': map-get($grid-breakpoints, 'lg') * 0.9375,
-    'xl': map-get($grid-breakpoints, 'xl') * 0.9375
+    "md": map-get($grid-breakpoints, "md") * 0.9375,
+    "lg": map-get($grid-breakpoints, "lg") * 0.9375,
+    "xl": map-get($grid-breakpoints, "xl") * 0.9375
   ),
   $container-max-widths
 );
@@ -282,11 +282,11 @@ $material-light-theme: map-deep-merge(
     ),
     "controls": (
       "disabled": rgba(material-color("shades", "black"), 0.26),
-      'thumb': (
-        'inactive': material-color('shades', 'white'),
-        'disabled': material-color('grey', 'lighten-5')
+      "thumb": (
+        "inactive": material-color("shades", "white"),
+        "disabled": material-color("grey", "lighten-5")
       ),
-      'track': (
+      "track": (
         "inactive": rgba(material-color("shades", "black"), 0.38),
         "disabled": rgba(material-color("shades", "black"), 0.12)
       )
@@ -307,16 +307,16 @@ $material-light-theme: map-deep-merge(
 
 $material-dark-elevation-colors: map-merge(
   (
-    '0': #000000,
-    '1': #1e1e1e,
-    '2': #222222,
-    '3': #252525,
-    '4': #272727,
-    '6': #2c2c2c,
-    '8': #2e2e2e,
-    '12': #333333,
-    '16': #363636,
-    '24': #373737
+    "0": #000000,
+    "1": #1e1e1e,
+    "2": #222222,
+    "3": #252525,
+    "4": #272727,
+    "6": #2c2c2c,
+    "8": #2e2e2e,
+    "12": #333333,
+    "16": #363636,
+    "24": #373737
   ),
   $material-dark-elevation-colors
 );
@@ -349,11 +349,11 @@ $material-dark-theme: map-deep-merge(
     ),
     "controls": (
       "disabled": rgba(material-color("shades", "white"), 0.3),
-      'thumb': (
-        'inactive': material-color('grey', 'lighten-1'),
-        'disabled': material-color('grey', 'darken-3')
+      "thumb": (
+        "inactive": material-color("grey", "lighten-1"),
+        "disabled": material-color("grey", "darken-3")
       ),
-      'track': (
+      "track": (
         "inactive": rgba(material-color("shades", "white"), 0.3),
         "disabled": rgba(material-color("shades", "white"), 0.1)
       )
@@ -365,9 +365,9 @@ $material-dark-theme: map-deep-merge(
     ),
     "dividers": rgba(material-color("shades", "white"), 0.12),
     "chips": #555555,
-    "cards": map-get($material-dark-elevation-colors, '1'),
-    "app-bar": map-get($material-dark-elevation-colors, '4'),
-    "navigation-drawer": map-get($material-dark-elevation-colors, '16')
+    "cards": map-get($material-dark-elevation-colors, "1"),
+    "app-bar": map-get($material-dark-elevation-colors, "4"),
+    "navigation-drawer": map-get($material-dark-elevation-colors, "16")
   ),
   $material-dark-theme
 );

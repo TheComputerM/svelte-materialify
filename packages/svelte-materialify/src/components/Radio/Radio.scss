@@ -61,7 +61,7 @@
   pointer-events: none;
 
   &::before {
-    transition: 120ms 0ms map-get($transitions, 'swing');
+    transition: 120ms 0ms map-get($transitions, "swing");
     width: $radio-size - 8;
     height: $radio-size - 8;
     border-radius: 100%;

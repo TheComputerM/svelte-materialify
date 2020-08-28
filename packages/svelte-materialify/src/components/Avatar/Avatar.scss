@@ -11,7 +11,7 @@
   overflow: hidden;
 
   @include has-theme-bg {
-    color: map-deep-get($material-dark-theme, 'text', 'primary');
+    color: map-deep-get($material-dark-theme, "text", "primary");
   }
 
   :global {

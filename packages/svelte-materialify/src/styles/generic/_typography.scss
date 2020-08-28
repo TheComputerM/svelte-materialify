@@ -1,5 +1,5 @@
 @use "../variables" as vars;
-@use '../tools/breakpoints' as *;
+@use "../tools/breakpoints" as *;
 @use "../tools/functions" as *;
 
 @each $align in ("left", "center", "right") {

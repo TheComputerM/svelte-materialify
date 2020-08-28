@@ -53,6 +53,7 @@
         ]
       }
     ],
+    "string-quotes": "double",
     "selector-pseudo-class-no-unknown": [
       true,
       {

@@ -25,7 +25,7 @@ table {
           user-select: none;
           font-size: $table-regular-header-font-size;
           height: $table-regular-header-height;
-          letter-spacing: map-deep-get($headings, 'subtitle-2', 'letter-spacing');
+          letter-spacing: map-deep-get($headings, "subtitle-2", "letter-spacing");
           text-align: left;
         }
 

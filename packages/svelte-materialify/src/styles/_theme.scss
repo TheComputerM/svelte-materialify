@@ -3,8 +3,8 @@
 @function -flatten($map, $prefix: "") {
   $output: ();
   @each $x, $y in $map {
-    @if type-of($y) == 'map' {
-      $output: map-merge($output, -flatten($y, $prefix + '-' + $x));
+    @if type-of($y) == "map" {
+      $output: map-merge($output, -flatten($y, $prefix + "-" + $x));
     } @else {
       $output: map-merge($output, ("--theme#{$prefix}-#{$x}": $y));
     }

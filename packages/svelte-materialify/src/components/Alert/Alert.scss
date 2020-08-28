@@ -9,7 +9,7 @@
   color: var(--theme-text-primary);
 
   @include has-theme-bg {
-    color: map-deep-get($material-dark-theme, 'text', 'primary');
+    color: map-deep-get($material-dark-theme, "text", "primary");
   }
 
   :global {
@@ -22,7 +22,7 @@
       align-self: flex-start;
     }
 
-    [slot='icon'] {
+    [slot="icon"] {
       margin-right: $spacer * 4;
     }
   }
