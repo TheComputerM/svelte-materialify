@@ -122,7 +122,7 @@
     {
       "keywords": [],
       "visibility": "public",
-      "description": "Id for the checkbox, defaults to a random uuid.",
+      "description": "Id for the checkbox, defaults to a random uid.",
       "name": "id",
       "kind": "let",
       "static": false,

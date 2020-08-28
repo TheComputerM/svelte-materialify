@@ -1,16 +1,37 @@
 @import "./variables";
 
-.s-input__control {
+.s-input__slot {
   border-radius: inherit;
   align-items: center;
   color: inherit;
   display: flex;
   margin-bottom: $input-slot-margin-bottom;
-  min-height: inherit;
   position: relative;
   transition: 0.3s map-get($transitions, "swing");
   width: 100%;
   height: inherit;
+}
+
+.s-input__control {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.s-input__details {
+  color: var(--theme-text-secondary);
+  display: flex;
+  flex: 1 0 auto;
+  max-width: 100%;
+  min-height: 14px;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+.s-input__messages {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .s-input {
@@ -92,12 +113,8 @@
     }
   }
 
-  &.readonly,
   &.disabled {
     pointer-events: none;
-  }
-
-  &.disabled {
     color: var(--theme-text-disabled);
 
     :global {
@@ -116,9 +133,30 @@
     }
   }
 
-  &.dense {
-    .s-input__control {
-      margin-bottom: $input-dense-slot-margin-bottom;
+  &.error,
+  &.success {
+    .s-input__details {
+      color: inherit;
     }
+
+    :global {
+      label {
+        color: inherit;
+      }
+    }
+  }
+}
+
+.error {
+  color: $error-color;
+}
+
+.success {
+  color: $success-color;
+}
+
+.dense {
+  .s-input__slot {
+    margin-bottom: $input-dense-slot-margin-bottom;
   }
 }

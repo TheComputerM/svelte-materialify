@@ -6,3 +6,4 @@ export { default as icons } from './icons.svelte';
 export { default as clearable } from './clearable.svelte';
 export { default as counter } from './counter.svelte';
 export { default as password } from './password.svelte';
+export { default as validation } from './validation.svelte';
