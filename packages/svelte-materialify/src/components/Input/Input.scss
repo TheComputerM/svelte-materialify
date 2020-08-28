@@ -7,7 +7,7 @@
   display: flex;
   margin-bottom: $input-slot-margin-bottom;
   position: relative;
-  transition: 0.3s map-get($transitions, "swing");
+  transition: $primary-transition;
   width: 100%;
   height: inherit;
 }
@@ -101,7 +101,7 @@
       line-height: $input-label-letter-spacing;
       color: var(--theme-text-secondary);
       white-space: nowrap;
-      transition: 0.3s map-get($transitions, "swing");
+      transition: $primary-transition;
     }
   }
 

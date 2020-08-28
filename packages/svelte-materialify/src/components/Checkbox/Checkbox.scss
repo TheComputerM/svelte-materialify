@@ -58,7 +58,7 @@
   border-radius: 2px;
   color: inherit;
   background-color: transparent;
-  transition: background-color 0.3s map-get($transitions, "swing");
+  transition: background-color $primary-transition;
   pointer-events: none;
 }
 

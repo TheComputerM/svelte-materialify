@@ -6,7 +6,7 @@
   max-width: 100%;
   flex: 0 1 auto;
   position: relative;
-  transition: 0.3s map-get($transitions, "swing");
+  transition: $primary-transition;
 
   :global {
     > .s-btn.s-btn {

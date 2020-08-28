@@ -11,7 +11,7 @@
   outline: none;
   padding: $expansion-panel-header-padding;
   position: relative;
-  transition: 0.3s min-height map-get($transitions, "swing");
+  transition: min-height $primary-transition;
   width: 100%;
   text-align: left;
 
@@ -26,7 +26,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    transition: 0.3s opacity map-get($transitions, "swing");
+    transition: opacity $primary-transition;
   }
 
   &:hover::before {
@@ -44,7 +44,7 @@
   flex: 1 0 100%;
   max-width: 100%;
   position: relative;
-  transition: 0.3s map-get($transitions, "swing");
+  transition: $primary-transition;
 
   &:not(:first-child)::after {
     border-top: thin solid;

@@ -36,7 +36,7 @@ input {
   display: flex;
   align-items: center;
 
-  // transition: 0.3s map-get($transitions, "swing");
+  // transition: $primary-transition;
 
   &::before,
   &::after {
@@ -46,7 +46,7 @@ input {
     content: "";
     left: 0;
     position: absolute;
-    transition: 0.3s map-get($transitions, "swing");
+    transition: $primary-transition;
     pointer-events: none;
   }
 

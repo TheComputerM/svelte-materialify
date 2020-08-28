@@ -371,3 +371,5 @@ $material-dark-theme: map-deep-merge(
   ),
   $material-dark-theme
 );
+
+$primary-transition: 0.3s map-get($transitions, "swing") !default;

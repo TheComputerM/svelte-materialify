@@ -6,7 +6,7 @@
   flex: 0 1 auto;
   position: relative;
   max-width: 100%;
-  transition: 0.3s map-get($transitions, "swing");
+  transition: $primary-transition;
   flex-wrap: wrap;
   justify-content: center;
   list-style-type: none;
