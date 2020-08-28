@@ -1,0 +1,49 @@
+---
+title: Switch Component
+related:
+  - Switch API: /api/Switch/
+---
+
+<script context="module">
+  export async function preload() {
+    let examples = await this.fetch('examples/components/switches.json');
+    examples = await examples.json();
+    return { examples }
+  }
+</script>
+
+<script>
+  import { API, Example } from '../../components';
+  import { Switch as doc } from 'svelte-materialify-api/dist';
+  import * as Examples from '../../examples/components/switches';
+  export let examples;
+</script>
+
+# Switches
+
+## API
+
+<API {doc} />
+
+
+## Examples
+
+Below are some simple and complex examples.
+
+
+### Groups
+
+You can combine switches into groups.
+<Example code={examples.groups} component={Examples.groups} />
+
+
+### Colors
+
+You can change the colors of the switch and the labels.
+<Example code={examples.colors} component={Examples.colors} />
+
+
+### States
+
+Here are some different states the switch can be in.
+<Example code={examples.states} component={Examples.states} />

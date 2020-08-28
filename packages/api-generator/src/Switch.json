@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "name": "Checkbox",
+  "name": "Switch",
   "data": [
     {
       "visibility": "public",
-      "description": "Add class to checkbox wrapper.",
+      "description": "Add class to switch wrapper.",
       "keywords": [],
       "name": "class",
       "kind": "const",
@@ -20,7 +20,7 @@
     {
       "keywords": [],
       "visibility": "public",
-      "description": "Class to add to checkbox when it is checked or indeterminate.",
+      "description": "Classes to add to switch when checked.",
       "name": "activeClass",
       "kind": "let",
       "static": false,
@@ -31,6 +31,35 @@
         "type": "string"
       },
       "defaultValue": "primary-text"
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "The value for the switch.",
+      "name": "value",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "object",
+        "type": "object"
+      },
+      "defaultValue": null
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Combines components into a single group.",
+      "name": "group",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
     },
     {
       "keywords": [],
@@ -56,8 +85,8 @@
     {
       "keywords": [],
       "visibility": "public",
-      "description": "Get/Set indeterminate state.",
-      "name": "indeterminate",
+      "description": "Makes the switch dense.",
+      "name": "dense",
       "kind": "let",
       "static": false,
       "readonly": false,
@@ -66,18 +95,12 @@
         "text": "boolean",
         "type": "boolean"
       },
-      "defaultValue": false,
-      "bind": [
-        {
-          "source": "input",
-          "property": "indeterminate"
-        }
-      ]
+      "defaultValue": false
     },
     {
       "keywords": [],
       "visibility": "public",
-      "description": "Make the checkbox disabled.",
+      "description": "Disables the switch.",
       "name": "disabled",
       "kind": "let",
       "static": false,
@@ -92,37 +115,7 @@
     {
       "keywords": [],
       "visibility": "public",
-      "description": "The value for the checkbox.",
-      "name": "value",
-      "kind": "let",
-      "static": false,
-      "readonly": false,
-      "type": {
-        "kind": "type",
-        "text": "object",
-        "type": "object"
-      },
-      "defaultValue": null
-    },
-    {
-      "keywords": [],
-      "visibility": "public",
-      "description": "Combines components into a single group.",
-      "name": "group",
-      "kind": "let",
-      "static": false,
-      "readonly": false,
-      "type": {
-        "kind": "type",
-        "text": "object",
-        "type": "object"
-      },
-      "defaultValue": null
-    },
-    {
-      "keywords": [],
-      "visibility": "public",
-      "description": "Id for the checkbox, defaults to a random uid.",
+      "description": "Id for switch.",
       "name": "id",
       "kind": "let",
       "static": false,
@@ -137,7 +130,7 @@
     {
       "keywords": [],
       "visibility": "public",
-      "description": "Styles to add to checkbox.",
+      "description": "Styles to add to switch.",
       "name": "style",
       "kind": "let",
       "static": false,

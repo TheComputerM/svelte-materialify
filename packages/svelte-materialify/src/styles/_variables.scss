@@ -282,6 +282,14 @@ $material-light-theme: map-deep-merge(
     ),
     "controls": (
       "disabled": rgba(material-color("shades", "black"), 0.26),
+      'thumb': (
+        'inactive': material-color('shades', 'white'),
+        'disabled': material-color('grey', 'lighten-5')
+      ),
+      'track': (
+        "inactive": rgba(material-color("shades", "black"), 0.38),
+        "disabled": rgba(material-color("shades", "black"), 0.12)
+      )
     ),
     "tables": (
       "active": material-color("grey", "lighten-4"),
@@ -341,6 +349,14 @@ $material-dark-theme: map-deep-merge(
     ),
     "controls": (
       "disabled": rgba(material-color("shades", "white"), 0.3),
+      'thumb': (
+        'inactive': material-color('grey', 'lighten-1'),
+        'disabled': material-color('grey', 'darken-3')
+      ),
+      'track': (
+        "inactive": rgba(material-color("shades", "white"), 0.3),
+        "disabled": rgba(material-color("shades", "white"), 0.1)
+      )
     ),
     "tables": (
       "active": #505050,

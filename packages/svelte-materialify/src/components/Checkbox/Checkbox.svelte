@@ -33,7 +33,7 @@
   // Id for the checkbox, defaults to a random uid.
   export let id = null;
 
-  // Styles to add to checkbox wrapper.
+  // Styles to add to checkbox.
   export let style = null;
 
   id = id || `s-checkbox-${uid(5)}`;
@@ -68,6 +68,7 @@
     <input
       type="checkbox"
       role="checkbox"
+      aria-checked={checked}
       bind:checked
       bind:indeterminate
       {id}

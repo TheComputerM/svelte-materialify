@@ -10,6 +10,7 @@ export { default as ButtonGroup } from './components/ButtonGroup';
 export { default as Input } from './components/Input';
 export { default as TextField } from './components/TextField';
 export { default as Checkbox } from './components/Checkbox';
+export { default as Switch } from './components/Switch';
 export { default as Radio } from './components/Radio';
 export { default as Alert } from './components/Alert';
 export { default as Divider } from './components/Divider';

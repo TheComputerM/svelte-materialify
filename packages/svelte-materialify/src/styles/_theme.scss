@@ -4,7 +4,7 @@
   $output: ();
   @each $x, $y in $map {
     @if type-of($y) == 'map' {
-      $output: map-merge($output, -flatten($y, '-' + $x));
+      $output: map-merge($output, -flatten($y, $prefix + '-' + $x));
     } @else {
       $output: map-merge($output, ("--theme#{$prefix}-#{$x}": $y));
     }

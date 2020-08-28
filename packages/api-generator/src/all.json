@@ -32,6 +32,7 @@
     "ProgressLinear",
     "Radio",
     "Subheader",
+    "Switch",
     "Table",
     "TextField",
     "VirtualList"
