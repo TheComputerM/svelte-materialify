@@ -1,0 +1,210 @@
+{
+  "version": 3,
+  "name": "Chip",
+  "data": [
+    {
+      "visibility": "public",
+      "description": "Classes to add to chip.",
+      "keywords": [],
+      "name": "class",
+      "kind": "const",
+      "static": false,
+      "readonly": true,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "localName": "classes"
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Determines whether the chip is visible or not.",
+      "name": "active",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": true
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Selected state",
+      "name": "selected",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [
+        {
+          "name": "type",
+          "description": "{x-small|small|default|large|x-large}"
+        }
+      ],
+      "visibility": "public",
+      "description": "Specifies the size of chip.",
+      "name": "size",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "union",
+        "text": "x-small|small|default|large|x-large",
+        "type": [
+          {
+            "kind": "type",
+            "text": "x-small",
+            "type": "x-small"
+          },
+          {
+            "kind": "type",
+            "text": "small",
+            "type": "small"
+          },
+          {
+            "kind": "type",
+            "text": "default",
+            "type": "default"
+          },
+          {
+            "kind": "type",
+            "text": "large",
+            "type": "large"
+          },
+          {
+            "kind": "type",
+            "text": "x-large",
+            "type": "x-large"
+          }
+        ]
+      },
+      "defaultValue": "default"
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "outlined",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "pill",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "link",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "label",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "close",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    }
+  ],
+  "computed": [],
+  "methods": [],
+  "components": [],
+  "description": null,
+  "keywords": [],
+  "events": [
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "close"
+    },
+    {
+      "name": "click",
+      "parent": "span",
+      "modificators": [],
+      "locations": null,
+      "loc": null,
+      "visibility": "public",
+      "description": "",
+      "keywords": []
+    }
+  ],
+  "slots": [
+    {
+      "name": "default",
+      "description": null,
+      "visibility": "public",
+      "parameters": []
+    },
+    {
+      "name": "close-icon",
+      "description": null,
+      "visibility": "public",
+      "parameters": []
+    }
+  ],
+  "refs": []
+}

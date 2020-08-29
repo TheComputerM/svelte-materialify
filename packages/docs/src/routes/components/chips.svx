@@ -1,0 +1,69 @@
+---
+title: Chip Component
+---
+
+<script context="module">
+  export async function preload() {
+    let examples = await this.fetch('examples/components/chips.json');
+    examples = await examples.json();
+    return { examples }
+  }
+</script>
+
+<script>
+  import { API, Example } from '../../components';
+  import { Chip as doc } from 'svelte-materialify-api/dist';
+  import * as Examples from '../../examples/components/chips';
+  export let examples;
+</script>
+
+# Chips
+
+The `Chip` component is used to convey small pieces of information. Using the close property, the chip becomes interactive, allowing user interaction.
+
+
+## API
+
+<API {doc} />
+
+
+## Examples
+
+Below is a collection of simple to complex examples.
+
+
+### Colored
+
+Any color from the Material Design palette can be used to change a chips color.
+<Example code={examples.colored} component={Examples.colored} />
+
+
+### Icon
+
+Chips can use text or any icon available in any font library.
+<Example code={examples.icon} component={Examples.icon} />
+
+
+### Outlined
+
+Outlined chips inherit their border color from the current text color.
+<Example code={examples.outlined} component={Examples.outlined} />
+
+
+### Label
+
+Label chips have reduced border-radius.
+<Example code={examples.label} component={Examples.label} />
+
+
+### Sizes
+
+Chip component can have various sizes from `x-small` to `x-large`.
+<Example code={examples.sizes} component={Examples.sizes} />
+
+
+### Closable
+
+Closable chips can be controlled by the active prop. You can also listen to the `on:close` event if you want to know when a chip has been closed.
+
+<Example code={examples.closable} component={Examples.closable} />

@@ -12,6 +12,7 @@
     "CardText",
     "CardTitle",
     "Checkbox",
+    "Chip",
     "Divider",
     "ExpansionPanel",
     "ExpansionPanels",

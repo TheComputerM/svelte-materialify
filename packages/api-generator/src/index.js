@@ -11,6 +11,7 @@ export { default as CardSubtitle } from './CardSubtitle.json';
 export { default as CardText } from './CardText.json';
 export { default as CardTitle } from './CardTitle.json';
 export { default as Checkbox } from './Checkbox.json';
+export { default as Chip } from './Chip.json';
 export { default as Divider } from './Divider.json';
 export { default as ExpansionPanel } from './ExpansionPanel.json';
 export { default as ExpansionPanels } from './ExpansionPanels.json';
