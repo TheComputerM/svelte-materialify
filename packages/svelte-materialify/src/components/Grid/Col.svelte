@@ -1,13 +1,6 @@
-<script context="module">
-  function parseSettings(objects) {
-    return Object.keys(objects)
-      .map((i) => (objects[i] ? `${i}-${objects[i]}` : ''))
-      .filter((i) => i !== '')
-      .join(' ');
-  }
-</script>
-
 <script>
+  import clsx from 'clsx';
+
   let classes = '';
   export let cols = false;
   export let sm = false;
@@ -22,18 +15,19 @@
   export let style = null;
   export { classes as class };
 
-  $: settings = parseSettings({
-    col: cols,
-    sm,
-    md,
-    lg,
-    xl,
-    offset,
-    'offset-sm': offset_sm,
-    'offset-md': offset_md,
-    'offset-lg': offset_lg,
-    'offset-xl': offset_xl,
-  });
+
+  $:settings = clsx([
+    cols && `col-${cols}`,
+    sm && `sm-${sm}`,
+    md && `md-${md}`,
+    lg && `lg-${lg}`,
+    xl && `xl-${xl}`,
+    offset && `offset-${offset}`,
+    offset_sm && `offset-sm-${offset_sm}`,
+    offset_md && `offset-md-${offset_md}`,
+    offset_lg && `offset-lg-${offset_lg}`,
+    offset_xl && `offset-xl-${offset_xl}`
+  ]);
 </script>
 
 <style lang="scss">
