@@ -1,5 +1,6 @@
 <script>
   let classes = '';
+  export { classes as class };
   let defaultHeight = '56px';
   export let tile = false;
   export let flat = false;
@@ -10,7 +11,6 @@
   export let collapsed = false;
   export let style = '';
   export { defaultHeight as height };
-  export { classes as class };
 
   let height = defaultHeight;
 

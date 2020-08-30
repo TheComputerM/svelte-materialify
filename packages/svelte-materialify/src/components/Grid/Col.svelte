@@ -15,7 +15,6 @@
   export let style = null;
   export { classes as class };
 
-
   $:settings = clsx([
     cols && `col-${cols}`,
     sm && `sm-${sm}`,
@@ -26,7 +25,7 @@
     offset_sm && `offset-sm-${offset_sm}`,
     offset_md && `offset-md-${offset_md}`,
     offset_lg && `offset-lg-${offset_lg}`,
-    offset_xl && `offset-xl-${offset_xl}`
+    offset_xl && `offset-xl-${offset_xl}`,
   ]);
 </script>
 

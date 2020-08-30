@@ -1,0 +1,59 @@
+---
+title: App Bar Component
+related:
+  - Buttons: /components/buttons/
+  - Alert API: /api/Alert/
+---
+
+<script context="module">
+  export async function preload() {
+    let examples = await this.fetch('examples/components/appBar.json');
+    examples = await examples.json();
+    return { examples }
+  }
+</script>
+
+<script>
+  import Example from '../../components/Example.svelte';
+  import API from '../../components/API.svelte';
+  import { AppBar as doc } from 'svelte-materialify-api/dist';
+  import * as Examples from '../../examples/components/appBar';
+  export let examples;
+</script>
+
+# App Bar
+
+The AppBar component is pivotal to any graphical user interface (GUI), as it generally is the primary source of site navigation. The app-bar component works great in conjunction with a NavigationDrawer for providing site navigation in your application.
+
+
+## API
+
+<API {doc} />
+
+## Usage
+
+Here is a basic example on how to use the AppBar.
+<Example code={examples.basic} component={Examples.basic} />
+
+
+## Examples
+
+Below is a collection of simple to complex examples.
+
+
+### Dense
+
+You can make app-bar dense. A dense app bar has lower height than regular one.
+<Example code={examples.dense} component={Examples.dense} />
+
+
+### Collapsing Bars
+
+With the collapse prop you can easily control the state of toolbar that the user interacts with.
+<Example code={examples.collapse} component={Examples.collapse} />
+
+
+### Navigation Drawers
+
+It is very easy to integrate navigation drawers with app bars.
+<Example code={examples.drawer} component={Examples.drawer} />
