@@ -1,11 +1,13 @@
 <script>
+  import Style from '../../internal/Style';
+
   let classes = '';
-  export let disabled = false;
   export let size = '24px';
+  export let rotate = 0;
+  export let disabled = false;
   export let path = null;
   export let title = null;
-  export let rotate = '0deg';
-  export let style = '';
+  export let style = null;
   export { classes as class };
 </script>
 
@@ -15,10 +17,11 @@
 
 <i
   aria-hidden="true"
-  style="font-size: {size};transform: rotate({rotate});{style}"
   class="s-icon {classes}"
   {title}
-  class:disabled>
+  class:disabled
+  use:Style={{ 'icon-size': size, 'icon-rotate': `${rotate}deg` }}
+  {style}>
   {#if path}
     <svg
       xmlns="http://www.w3.org/2000/svg"

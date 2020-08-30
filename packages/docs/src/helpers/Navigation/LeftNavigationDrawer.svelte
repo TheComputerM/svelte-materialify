@@ -61,7 +61,7 @@
         <div slot="right">
           <Icon
             path={mdiChevronDown}
-            rotate={item.open ? '180deg' : ''}
+            rotate={item.open ? 180 : 0}
             class="chevron" />
         </div>
       </ListItem>

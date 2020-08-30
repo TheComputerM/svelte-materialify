@@ -1,5 +1,7 @@
 .s-icon {
   color: var(--theme-icons-active);
+  font-size: var(--s-icon-size);
+  transform: rotate(var(--s-icon-rotate));
   line-height: 1;
   letter-spacing: normal;
   text-transform: none;

@@ -103,7 +103,7 @@
     <div class="s-expansion-panel__icon">
       <!-- Slot for the icon at the right of the header. -->
       <slot name="icon" {active}>
-        <Icon {disabled} path={down} rotate={active ? '180deg' : '0deg'} />
+        <Icon {disabled} path={down} rotate={active ? 180 : 0} />
       </slot>
     </div>
   </button>
