@@ -90,7 +90,6 @@
     }
   },
   "dependencies": {
-    "clsx": "^1.1.1",
     "material-ripple-effect": "^1.0.3",
     "uid": "^1.0.0"
   },

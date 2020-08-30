@@ -1,5 +1,5 @@
 <script>
-  import clsx from 'clsx';
+  import Class from '../../internal/Class';
 
   let classes = '';
   export let cols = false;
@@ -14,19 +14,6 @@
   export let offset_xl = false;
   export let style = null;
   export { classes as class };
-
-  $:settings = clsx([
-    cols && `col-${cols}`,
-    sm && `sm-${sm}`,
-    md && `md-${md}`,
-    lg && `lg-${lg}`,
-    xl && `xl-${xl}`,
-    offset && `offset-${offset}`,
-    offset_sm && `offset-sm-${offset_sm}`,
-    offset_md && `offset-md-${offset_md}`,
-    offset_lg && `offset-lg-${offset_lg}`,
-    offset_xl && `offset-xl-${offset_xl}`,
-  ]);
 </script>
 
 <style lang="scss">
@@ -89,6 +76,9 @@
   }
 </style>
 
-<div class="s-col {settings} {classes}" {style}>
+<div
+  class="s-col {classes}"
+  use:Class={[cols && `col-${cols}`, sm && `sm-${sm}`, md && `md-${md}`, lg && `lg-${lg}`, xl && `xl-${xl}`, offset && `offset-${offset}`, offset_sm && `offset-sm-${offset_sm}`, offset_md && `offset-md-${offset_md}`, offset_lg && `offset-lg-${offset_lg}`, offset_xl && `offset-xl-${offset_xl}`]}
+  {style}>
   <slot />
 </div>
