@@ -1,8 +1,8 @@
 <script>
-  let classes = '';
+  let klass = '';
   export let dense = false;
   export let noGutters = false;
-  export { classes as class };
+  export { klass as class };
 </script>
 
 <style lang="scss">
@@ -39,6 +39,6 @@
   }
 </style>
 
-<div class="s-row {classes}" class:dense class:no-gutters={noGutters}>
+<div class="s-row {klass}" class:dense class:no-gutters={noGutters}>
   <slot />
 </div>

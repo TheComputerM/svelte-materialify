@@ -4,8 +4,8 @@
 
 <script>
   // Add class to switch wrapper.
-  let classes = '';
-  export { classes as class };
+  let klass = '';
+  export { klass as class };
 
   // Classes to add to switch when checked.
   export let activeClass = 'primary-text';
@@ -55,7 +55,7 @@
 
 </style>
 
-<div class="s-switch {classes}" class:dense class:disabled {style}>
+<div class="s-switch {klass}" class:dense class:disabled {style}>
   <div class="s-switch__wrapper">
     <div class="s-switch__track {checked ? activeClass : ''}" />
     <input

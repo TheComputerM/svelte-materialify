@@ -1,5 +1,7 @@
 <script>
-  let classes = '';
+  import Style from '../../internal/Style';
+
+  let klass = '';
   export let width = '256px';
   export let fixed = false;
   export let absolute = false;
@@ -10,10 +12,9 @@
   export let miniWidth = '56px';
   export let clippedHeight = '56px';
   export let style = '';
-  export { classes as class };
+  export { klass as class };
 
   if (mini) width = miniWidth;
-  const clippedStyle = `top:${clippedHeight};max-height:calc(100% - ${clippedHeight})`;
 </script>
 
 <style lang="scss" src="./NavigationDrawer.scss">
@@ -21,14 +22,15 @@
 </style>
 
 <aside
-  class="s-navigation-drawer {classes}"
+  class="s-navigation-drawer {klass}"
   class:fixed
   class:absolute
   class:right
   class:mini
   class:clipped
   on:hover
-  style="width:{width};{clipped ? clippedStyle : ''};{style}">
+  use:Style={{ 'nav-width': width, 'nav-clipped-height': clippedHeight }}
+  {style}>
   <slot name="prepend" />
   <div class="s-navigation-drawer__content">
     <slot />

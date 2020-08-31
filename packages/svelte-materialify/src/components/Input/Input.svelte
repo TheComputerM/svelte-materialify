@@ -1,6 +1,6 @@
 <script>
-  let classes = '';
-  export { classes as class };
+  let klass = '';
+  export { klass as class };
   export let value = null;
   export let color = null;
   export let dense = false;
@@ -18,7 +18,7 @@
 </style>
 
 <div
-  class="s-input {classes}"
+  class="s-input {klass}"
   class:dense
   class:error
   class:readonly

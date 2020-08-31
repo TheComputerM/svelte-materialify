@@ -6,8 +6,8 @@
   import Ripple from '../../actions/Ripple';
 
   // Add class to radio wrapper.
-  let classes = '';
-  export { classes as class };
+  let klass = '';
+  export { klass as class };
 
   // Class to add to radio when it is checked.
   export let activeClass = 'primary-text';
@@ -37,7 +37,7 @@
 
 <div class="s-radio" {style}>
   <div
-    class="s-radio__wrapper {classes}
+    class="s-radio__wrapper {klass}
     {active ? activeClass : ''}"
     class:disabled
     use:Ripple={{ centered: true }}>

@@ -1,16 +1,16 @@
 <script>
-  let classes = '';
+  let klass = '';
   export let dense = false;
   export let fixedHeader = false;
   export let style = null;
-  export { classes as class };
+  export { klass as class };
 </script>
 
 <style lang="scss" src="./Table.scss">
 
 </style>
 
-<div class="s-table {classes}" {style}>
+<div class="s-table {klass}" {style}>
   <table class:dense class:fixed-header={fixedHeader}>
     <slot />
   </table>

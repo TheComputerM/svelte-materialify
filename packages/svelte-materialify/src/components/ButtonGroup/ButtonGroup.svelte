@@ -2,8 +2,8 @@
   import { onMount } from 'svelte';
 
   // Classes to add to button group.
-  let classes = '';
-  export { classes as class };
+  let klass = '';
+  export { klass as class };
 
   // Does not remove box shadow.
   export let elevated = false;
@@ -99,7 +99,7 @@
 </style>
 
 <div
-  class="s-btn-group {classes}"
+  class="s-btn-group {klass}"
   class:elevated
   class:borderless
   class:tile

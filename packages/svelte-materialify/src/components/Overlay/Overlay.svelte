@@ -1,7 +1,7 @@
 <script>
   import { fade } from 'svelte/transition';
 
-  let classes = '';
+  let klass = '';
   export let active = true;
   export let opacity = 0.46;
   export let color = 'rgb(33, 33, 33)';
@@ -9,7 +9,7 @@
   export let absolute = false;
   export let fadeOptions = {};
   export let style = '';
-  export { classes as class };
+  export { klass as class };
 </script>
 
 <style lang="scss" src="./Overlay.scss">
@@ -18,7 +18,7 @@
 
 {#if active}
   <div
-    class="s-overlay {classes}"
+    class="s-overlay {klass}"
     style="z-index:{zIndex};{style}"
     class:absolute
     transition:fade={fadeOptions}

@@ -3,8 +3,8 @@
   import { writable } from 'svelte/store';
 
   // Classes to add to panel container.
-  let classes = '';
-  export { classes as class };
+  let klass = '';
+  export { klass as class };
 
   // 0 based indices of the active panels.
   export let value = [];
@@ -74,7 +74,7 @@
 
 <div
   bind:this={panelContainer}
-  class="s-expansion-panels {classes}"
+  class="s-expansion-panels {klass}"
   class:accordion
   class:popout
   class:inset

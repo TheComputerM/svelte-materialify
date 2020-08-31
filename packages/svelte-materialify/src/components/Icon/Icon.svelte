@@ -1,14 +1,14 @@
 <script>
   import Style from '../../internal/Style';
 
-  let classes = '';
+  let klass = '';
   export let size = '24px';
   export let rotate = 0;
   export let disabled = false;
   export let path = null;
   export let title = null;
   export let style = null;
-  export { classes as class };
+  export { klass as class };
 </script>
 
 <style type="scss" src="./Icon.scss">
@@ -17,7 +17,7 @@
 
 <i
   aria-hidden="true"
-  class="s-icon {classes}"
+  class="s-icon {klass}"
   {title}
   class:disabled
   use:Style={{ 'icon-size': size, 'icon-rotate': `${rotate}deg` }}

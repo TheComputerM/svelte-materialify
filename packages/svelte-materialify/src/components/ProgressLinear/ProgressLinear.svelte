@@ -1,5 +1,5 @@
 <script>
-  let classes = '';
+  let klass = '';
   export let value = 0;
   export let active = true;
   export let indeterminate = false;
@@ -13,7 +13,7 @@
   export let rounded = false;
   export let striped = false;
   export let style = '';
-  export { classes as class };
+  export { klass as class };
 </script>
 
 <style lang="scss" src="./ProgressLinear.scss">
@@ -25,7 +25,7 @@
   aria-valuemin="0"
   aria-valuemax="100"
   aria-valuenow={value}
-  class="s-progress-linear {classes}"
+  class="s-progress-linear {klass}"
   class:inactive={!active}
   class:reversed
   class:rounded

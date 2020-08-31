@@ -4,8 +4,8 @@
   import { fade } from 'svelte/transition';
 
   // Classes to add to menu.
-  let classes = '';
-  export { classes as class };
+  let klass = '';
+  export { klass as class };
 
   // The menu's active state.
   export let active = false;
@@ -161,7 +161,7 @@
 
   {#if active && !disabled}
     <div
-      class="s-menu {classes}"
+      class="s-menu {klass}"
       role="menu"
       class:tile
       on:click={menuClick}

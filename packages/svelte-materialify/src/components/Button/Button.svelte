@@ -2,8 +2,8 @@
   import Ripple from '../../actions/Ripple';
 
   // Classes to add to the button
-  let classes = '';
-  export { classes as class };
+  let klass = '';
+  export { klass as class };
 
   // Designates the button as a floating-action-button
   export let fab = false;
@@ -59,7 +59,7 @@
 </style>
 
 <button
-  class="s-btn size-{size} {classes}"
+  class="s-btn size-{size} {klass}"
   class:fab
   class:icon
   class:block

@@ -3,8 +3,8 @@
   import { getContext, setContext, onDestroy } from 'svelte';
   import { writable } from 'svelte/store';
 
-  let classes = 'primary-text';
-  export { classes as class };
+  let klass = 'primary-text';
+  export { klass as class };
   export let activeClass = '';
   export let active = true;
   export let transition = slide;
@@ -49,7 +49,7 @@
     transition:transition={transitionOpts}
     {role}
     aria-disabled={disabled}
-    class="s-list-group {classes}
+    class="s-list-group {klass}
     {active ? activeClass : ''}"
     class:offset
     style="--offset: {offset};{style}">

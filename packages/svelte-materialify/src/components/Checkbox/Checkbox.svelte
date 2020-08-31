@@ -9,8 +9,8 @@
   import Ripple from '../../actions/Ripple';
 
   // Add class to checkbox wrapper.
-  let classes = '';
-  export { classes as class };
+  let klass = '';
+  export { klass as class };
 
   // Class to add to checkbox when it is checked or indeterminate.
   export let activeClass = 'primary-text';
@@ -62,7 +62,7 @@
 
 <div class="s-checkbox" {style}>
   <div
-    class="s-checkbox__wrapper {classes} {checked || indeterminate ? activeClass : ''}"
+    class="s-checkbox__wrapper {klass} {checked || indeterminate ? activeClass : ''}"
     class:disabled
     use:Ripple={{ centered: true }}>
     <input

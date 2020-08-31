@@ -1,13 +1,13 @@
 <script>
-  let classes = '';
+  let klass = '';
   export let style = null;
-  export { classes as class };
+  export { klass as class };
 </script>
 
 <style lang="scss" src="./CardSubtitle.scss">
 
 </style>
 
-<div class="s-card-subtitle {classes}" {style}>
+<div class="s-card-subtitle {klass}" {style}>
   <slot />
 </div>

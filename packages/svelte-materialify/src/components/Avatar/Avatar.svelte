@@ -1,7 +1,7 @@
 <script>
   // Classes to add to avatar.
-  let classes = '';
-  export { classes as class };
+  let klass = '';
+  export { klass as class };
 
   // Height and width of the avatar.
   export let size = '48px';
@@ -19,7 +19,7 @@
 
 <div
   style="height:{size};width:{size};{style}"
-  class="s-avatar {classes}"
+  class="s-avatar {klass}"
   class:tile>
   <slot />
 </div>

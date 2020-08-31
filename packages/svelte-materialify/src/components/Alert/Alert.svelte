@@ -7,8 +7,8 @@
   import Button from '../Button/Button.svelte';
 
   // Classes to add to alert.
-  let classes = '';
-  export { classes as class };
+  let klass = '';
+  export { klass as class };
 
   // Is the alert active/dismissed.
   export let visible = true;
@@ -60,7 +60,7 @@
 {#if visible}
   <div
     role="alert"
-    class="s-alert {classes}"
+    class="s-alert {klass}"
     transition:transition={transitionOpts}
     class:dense
     class:outlined

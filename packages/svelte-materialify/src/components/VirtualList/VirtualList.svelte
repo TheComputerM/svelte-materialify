@@ -1,17 +1,17 @@
 <script>
   import { ListGroup, ListItem } from '../List';
 
-  let classes = '';
+  let klass = '';
   export let active = true;
   export let items = [];
   export let itemClasses = '';
   export const depth = 0;
   export let style = '';
   export let offsetFunction = (x) => `${(x + 1) * 28}px`;
-  export { classes as class };
+  export { klass as class };
 </script>
 
-<ListGroup class={classes} {active} {style} offset={offsetFunction(depth)}>
+<ListGroup class={klass} {active} {style} offset={offsetFunction(depth)}>
   {#each items as item}
     <slot {item}>
       <ListItem class={itemClasses}>

@@ -8,8 +8,8 @@
   import Icon from '../Icon';
 
   // Classes to add to the panel.
-  let classes = '';
-  export { classes as class };
+  let klass = '';
+  export { klass as class };
 
   // Options for the slide transition.
   export let slideOpts = {};
@@ -87,7 +87,7 @@
 
 <div
   bind:this={panel}
-  class="s-expansion-panel {classes}"
+  class="s-expansion-panel {klass}"
   aria-expanded={active}
   class:active
   class:readonly

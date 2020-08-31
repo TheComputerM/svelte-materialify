@@ -7,6 +7,7 @@
   flex-direction: column;
   left: 0;
   max-width: 100%;
+  width: var(--s-nav-width);
   height: 100%;
   overflow: hidden;
   pointer-events: auto;
@@ -58,6 +59,8 @@
 
   &.clipped {
     z-index: 4;
+    top: var(--s-nav-clipped-height);
+    max-height: calc(100% - var(--s-nav-clipped-height));
   }
 
   &.mini {

@@ -2,6 +2,7 @@
 
 .s-app-bar {
   background-color: var(--theme-app-bar);
+  height: var(--s-app-bar-height);
   contain: layout;
   display: block;
   flex: 1 1 auto;
@@ -40,11 +41,17 @@
     @include elevation($app-bar-elevation);
   }
 
-  &.dense .s-app-bar__wrapper {
-    padding: 0;
+  &.dense {
+    height: 48px;
+
+    .s-app-bar__wrapper {
+      padding: 0;
+    }
   }
 
   &.prominent {
+    height: 128px;
+
     .s-app-bar__wrapper {
       align-items: flex-start;
     }

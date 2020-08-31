@@ -8,8 +8,8 @@
   import { createEventDispatcher } from 'svelte';
 
   // Classes to add to chip.
-  let classes = '';
-  export { classes as class };
+  let klass = '';
+  export { klass as class };
 
   // Determines whether the chip is visible or not.
   export let active = true;
@@ -42,7 +42,7 @@
 
 {#if active}
   <span
-    class="s-chip {classes} size-{size}"
+    class="s-chip {klass} size-{size}"
     use:Ripple={link}
     class:outlined
     class:pill

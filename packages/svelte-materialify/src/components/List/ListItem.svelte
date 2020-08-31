@@ -2,8 +2,8 @@
   import { getContext, onDestroy } from 'svelte';
   import Ripple from '../../actions/Ripple';
 
-  let classes = '';
-  export { classes as class };
+  let klass = '';
+  export { klass as class };
   export let activeClass = '';
   export let active = false;
   export let dense = null;
@@ -38,7 +38,7 @@
 </style>
 
 <div
-  class="s-list-item {classes}
+  class="s-list-item {klass}
   {active ? activeClass : ''}"
   {role}
   aria-selected={role === 'option' ? active : null}

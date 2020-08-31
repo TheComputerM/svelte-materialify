@@ -2,8 +2,8 @@
   import { setContext, getContext } from 'svelte';
   import { writable } from 'svelte/store';
 
-  let classes = '';
-  export { classes as class };
+  let klass = '';
+  export { klass as class };
   export let dense = null;
   export let disabled = null;
   export let flat = false;
@@ -31,7 +31,7 @@
 
 <div
   {role}
-  class="s-list {classes}"
+  class="s-list {klass}"
   class:dense
   class:disabled
   class:flat

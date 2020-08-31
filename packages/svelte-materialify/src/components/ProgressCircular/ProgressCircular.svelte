@@ -1,11 +1,11 @@
 <script>
-  let classes = '';
+  let klass = '';
   export let indeterminate = false;
   export let rotate = 0;
   export let size = 32;
   export let value = 0;
   export let width = 4;
-  export { classes as class };
+  export { klass as class };
 
   const radius = 20;
   const circumference = 2 * 3.1416 * radius;
@@ -32,7 +32,7 @@
   aria-valuemin="0"
   aria-valuemax="100"
   aria-valuenow={value}
-  class="s-progress-circular {classes}"
+  class="s-progress-circular {klass}"
   class:indeterminate
   style="width:{size}px;height:{size}px">
 

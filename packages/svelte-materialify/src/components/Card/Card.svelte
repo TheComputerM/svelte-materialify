@@ -1,5 +1,5 @@
 <script>
-  let classes = '';
+  let klass = '';
   export let flat = false;
   export let tile = false;
   export let outlined = false;
@@ -9,7 +9,7 @@
   export let link = false;
   export let disabled = false;
   export let style = null;
-  export { classes as class };
+  export { klass as class };
 </script>
 
 <style lang="scss" src="./Card.scss">
@@ -17,7 +17,7 @@
 </style>
 
 <div
-  class="s-card {classes}"
+  class="s-card {klass}"
   class:flat
   class:tile
   class:outlined

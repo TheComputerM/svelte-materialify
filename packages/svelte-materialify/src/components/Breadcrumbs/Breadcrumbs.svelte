@@ -1,7 +1,7 @@
 <script>
   // Classes to add to breadcrumb.
-  let classes = '';
-  export { classes as class };
+  let klass = '';
+  export { klass as class };
 
   // Make the breadcrumb large
   export let large = false;
@@ -24,7 +24,7 @@
 
 </style>
 
-<ul class="s-breadcrumbs {classes}" class:large>
+<ul class="s-breadcrumbs {klass}" class:large>
   {#each items as item, i}
     {#if i !== 0}
       <li class="divider">

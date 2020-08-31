@@ -1,8 +1,8 @@
 <script>
-  let classes = '';
+  let klass = '';
   export let fluid = false;
   export let style = null;
-  export { classes as class };
+  export { klass as class };
 </script>
 
 <style lang="scss">
@@ -30,6 +30,6 @@
   }
 </style>
 
-<div class="s-container {classes}" class:fluid {style}>
+<div class="s-container {klass}" class:fluid {style}>
   <slot />
 </div>
