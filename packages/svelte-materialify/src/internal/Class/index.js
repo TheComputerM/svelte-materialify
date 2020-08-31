@@ -1,6 +1,6 @@
 /**
  * @param node {Element}
- * @param classes {Array}
+ * @param classes {Array<string>}
  */
 export default (node, classes) => {
   classes.forEach((klass) => {
