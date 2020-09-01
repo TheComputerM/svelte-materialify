@@ -1,5 +1,5 @@
 <script>
-  import { onMount, onDestroy, setContext } from 'svelte';
+  import { createEventDispatcher, setContext } from 'svelte';
   import { writable } from 'svelte/store';
 
   // Classes to add to panel container.
@@ -36,36 +36,38 @@
   // Styles to add to the panel container.
   export let style = null;
 
-  let panelContainer;
-  const PanelContainer = writable();
-  const ActivePanels = writable(value);
-  const Settings = writable({
-    Multiple: multiple,
-    Mandatory: mandatory,
-    Disabled: disabled,
-  });
+  const dispatch = createEventDispatcher();
+  const Value = writable(value);
+  const Disabled = writable(disabled);
 
-  const unsubscribe = ActivePanels.subscribe((x) => {
-    value = x;
-  });
-  $: ActivePanels.set(value);
-  $: Settings.set({
-    Multiple: multiple,
-    Mandatory: mandatory,
-    Disabled: disabled,
-  });
+  $: Value.set(value);
+  $: Disabled.set(disabled);
 
-  setContext('S_PanelOptions', {
-    PanelContainer,
-    ActivePanels,
-    Settings,
+  setContext('S_ExpansionPanel', {
+    Value,
+    Disabled,
+    selectPanel: (index) => {
+      if (value.includes(index)) {
+        if (!(mandatory && value.length === 1)) {
+          value.splice(value.indexOf(index), 1);
+          value = value;
+          dispatch('change', { index, active: false });
+        }
+      } else {
+        if (multiple) {
+          value.push(index);
+          value = value;
+        } else {
+          value = [index];
+        }
+        dispatch('change', { index, active: true });
+      }
+    },
+    checkIfActive: (index) => {
+      if (value.includes(index)) return true;
+      return false;
+    },
   });
-
-  onMount(() => {
-    PanelContainer.set(panelContainer);
-  });
-
-  onDestroy(unsubscribe);
 </script>
 
 <style lang="scss" src="./ExpansionPanels.scss">
@@ -73,7 +75,6 @@
 </style>
 
 <div
-  bind:this={panelContainer}
   class="s-expansion-panels {klass}"
   class:accordion
   class:popout

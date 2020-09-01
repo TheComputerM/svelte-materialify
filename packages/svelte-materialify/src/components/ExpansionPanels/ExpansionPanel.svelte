@@ -3,7 +3,7 @@
 </script>
 
 <script>
-  import { getContext, createEventDispatcher, onDestroy } from 'svelte';
+  import { getContext, onDestroy, onMount } from 'svelte';
   import { slide } from 'svelte/transition';
   import Icon from '../Icon';
 
@@ -23,61 +23,38 @@
   // Styles to add to the panel.
   export let style = null;
 
-  let active = false;
-  let mandatory;
-  let multiple;
   let panel;
   let index;
-  let PanelContainer;
-  let ActivePanels;
-  let Settings;
+  let active = false;
 
-  ({ PanelContainer, ActivePanels, Settings } = getContext('S_PanelOptions'));
-
-  const dispatch = createEventDispatcher();
-
-  const SettingsUnsub = Settings.subscribe(
-    ({ Multiple, Mandatory, Disabled }) => {
-      if (Disabled != null) disabled = Disabled;
-      mandatory = Mandatory;
-      multiple = Multiple;
-    },
-  );
-
-  const PanelContainerUnsub = PanelContainer.subscribe((x) => {
-    if (x) {
-      const panels = x.querySelectorAll('.s-expansion-panel');
-      index = Array.from(panels).indexOf(panel);
-      if ($ActivePanels.includes(index)) active = true;
-      PanelContainerUnsub();
-    }
-  });
-
-  const ActivePanelsUnsub = ActivePanels.subscribe((x) => {
-    if (x.includes(index)) active = true;
-    else active = false;
-    /**
-     * Event triggered when the state of the panel has changed.
-     * @returns {active,index}
-    */
-    dispatch('change', { active, index });
-  });
+  const {
+    Value,
+    Disabled,
+    selectPanel,
+    checkIfActive,
+  } = getContext('S_ExpansionPanel');
 
   function toggle() {
-    if ($ActivePanels.includes(index)) {
-      if (!(mandatory && $ActivePanels.length === 1)) {
-        ActivePanels.update((x) => x.filter((i) => i !== index));
-      }
-    } else if (multiple) {
-      ActivePanels.update((x) => [...x, index]);
-    } else {
-      ActivePanels.set([index]);
-    }
+    selectPanel(index);
   }
 
+  // Inheriting the disabled value from parent.
+  const unsub1 = Disabled.subscribe((x) => {
+    disabled = x == null ? disabled : x;
+  });
+
+  // Checking if panel is active everytime the value has changed.
+  const unsub2 = Value.subscribe(() => {
+    active = checkIfActive(index);
+  });
+
+  onMount(() => {
+    index = Array.from(panel.parentNode.children).indexOf(panel);
+  });
+
   onDestroy(() => {
-    SettingsUnsub();
-    ActivePanelsUnsub();
+    unsub1();
+    unsub2();
   });
 </script>
 
