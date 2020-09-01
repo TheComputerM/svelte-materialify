@@ -36,6 +36,21 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
+      "name": "absolute",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "right",
       "kind": "let",
       "static": false,
@@ -150,7 +165,7 @@
         "text": "string",
         "type": "string"
       },
-      "localName": "classes"
+      "localName": "klass"
     }
   ],
   "computed": [],

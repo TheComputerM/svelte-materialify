@@ -6,6 +6,36 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
+      "name": "class",
+      "kind": "const",
+      "static": false,
+      "readonly": true,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "localName": "klass"
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "height",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "defaultValue": "56px"
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "tile",
       "kind": "let",
       "static": false,
@@ -121,36 +151,6 @@
         "type": "string"
       },
       "defaultValue": ""
-    },
-    {
-      "visibility": "public",
-      "description": null,
-      "keywords": [],
-      "name": "height",
-      "kind": "const",
-      "static": false,
-      "readonly": true,
-      "type": {
-        "kind": "type",
-        "text": "string",
-        "type": "string"
-      },
-      "localName": "defaultHeight"
-    },
-    {
-      "visibility": "public",
-      "description": null,
-      "keywords": [],
-      "name": "class",
-      "kind": "const",
-      "static": false,
-      "readonly": true,
-      "type": {
-        "kind": "type",
-        "text": "string",
-        "type": "string"
-      },
-      "localName": "classes"
     }
   ],
   "computed": [],

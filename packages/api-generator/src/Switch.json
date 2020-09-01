@@ -15,7 +15,7 @@
         "text": "string",
         "type": "string"
       },
-      "localName": "classes"
+      "localName": "klass"
     },
     {
       "keywords": [],

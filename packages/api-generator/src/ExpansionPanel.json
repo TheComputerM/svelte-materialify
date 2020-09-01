@@ -15,7 +15,7 @@
         "text": "string",
         "type": "string"
       },
-      "localName": "classes"
+      "localName": "klass"
     },
     {
       "keywords": [],
@@ -82,19 +82,7 @@
   "components": [],
   "description": null,
   "keywords": [],
-  "events": [
-    {
-      "keywords": [
-        {
-          "name": "returns",
-          "description": "{active,index}"
-        }
-      ],
-      "visibility": "public",
-      "description": "Event triggered when the state of the panel has changed.",
-      "name": "change"
-    }
-  ],
+  "events": [],
   "slots": [
     {
       "name": "header",

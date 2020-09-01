@@ -6,21 +6,6 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
-      "name": "disabled",
-      "kind": "let",
-      "static": false,
-      "readonly": false,
-      "type": {
-        "kind": "type",
-        "text": "boolean",
-        "type": "boolean"
-      },
-      "defaultValue": false
-    },
-    {
-      "visibility": "public",
-      "description": null,
-      "keywords": [],
       "name": "size",
       "kind": "let",
       "static": false,
@@ -31,6 +16,36 @@
         "type": "string"
       },
       "defaultValue": "24px"
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "rotate",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "number",
+        "type": "number"
+      },
+      "defaultValue": 0
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "disabled",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
     },
     {
       "visibility": "public",
@@ -66,31 +81,16 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
-      "name": "rotate",
-      "kind": "let",
-      "static": false,
-      "readonly": false,
-      "type": {
-        "kind": "type",
-        "text": "string",
-        "type": "string"
-      },
-      "defaultValue": "0deg"
-    },
-    {
-      "visibility": "public",
-      "description": null,
-      "keywords": [],
       "name": "style",
       "kind": "let",
       "static": false,
       "readonly": false,
       "type": {
         "kind": "type",
-        "text": "string",
-        "type": "string"
+        "text": "object",
+        "type": "object"
       },
-      "defaultValue": ""
+      "defaultValue": null
     },
     {
       "visibility": "public",
@@ -105,7 +105,7 @@
         "text": "string",
         "type": "string"
       },
-      "localName": "classes"
+      "localName": "klass"
     }
   ],
   "computed": [],
