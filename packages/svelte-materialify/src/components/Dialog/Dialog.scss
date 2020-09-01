@@ -1,0 +1,80 @@
+@import "./variables";
+
+.s-dialog {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  transition: 0.2s map-get($transitions, "fast-in-fast-out"), z-index 1ms;
+  width: 100%;
+  z-index: 6;
+  outline: none;
+}
+
+.s-dialog__content {
+  background-color: var(--theme-surface);
+  border-radius: $dialog-border-radius;
+  margin: $dialog-margin;
+  overflow-y: auto;
+  pointer-events: auto;
+  z-index: inherit;
+  @include elevation($dialog-elevation);
+
+  &:not(.fullscreen) {
+    max-height: $dialog-max-height;
+    width: var(--s-dialog-width);
+  }
+
+  &.fullscreen {
+    border-radius: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow-y: auto;
+    top: 0;
+    left: 0;
+  }
+
+  :global {
+    > .s-card {
+      > .s-card-title {
+        font-size: $dialog-card-title-font-size;
+        font-weight: $dialog-card-title-font-weight;
+        letter-spacing: $dialog-card-title-letter-spacing;
+        padding: $dialog-card-title-padding;
+      }
+
+      > .s-card-text {
+        padding: $dialog-card-text-padding;
+      }
+
+      > .s-card-subtitle {
+        padding: $dialog-card-subtitle-padding;
+      }
+    }
+  }
+}
+
+.fullscreen {
+  border-radius: 0;
+  margin: 0;
+  height: 100%;
+  position: fixed;
+  overflow-y: auto;
+  top: 0;
+  left: 0;
+
+  :global {
+    > .s-card {
+      min-height: 100%;
+      min-width: 100%;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+  }
+}

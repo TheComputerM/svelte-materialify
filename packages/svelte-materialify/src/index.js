@@ -14,6 +14,7 @@ export { default as Switch } from './components/Switch';
 export { default as Radio } from './components/Radio';
 export { default as Alert } from './components/Alert';
 export { default as Chip } from './components/Chip';
+export { default as Dialog } from './components/Dialog';
 export { default as Divider } from './components/Divider';
 export {
   default as ExpansionPanels,
