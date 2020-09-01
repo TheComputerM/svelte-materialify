@@ -1,5 +1,4 @@
 <script context="module">
-  // eslint disable consistent-return
   export async function preload({ params }) {
     const res = await this.fetch(`api/${params.slug}.json`);
     const doc = await res.json();
@@ -12,7 +11,8 @@
 </script>
 
 <script>
-  import API from '../../components/API.svelte';
+  /* eslint import/no-unresolved: 0 */
+  import API from '@shared/API.svelte';
   import Layout from '../../helpers/Markdown/MDXLayout.svelte';
 
   export let doc;

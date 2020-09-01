@@ -11,9 +11,9 @@ title: Avatar Component
 </script>
 
 <script>
-  import { API, Example } from '../../components';
+  import { API, Example } from '@shared';
   import { Avatar as doc } from 'svelte-materialify-api/dist';
-  import * as Examples from '../../examples/components/avatars';
+  import * as Examples from '@examples/components/avatars';
   export let examples;
 </script>
 

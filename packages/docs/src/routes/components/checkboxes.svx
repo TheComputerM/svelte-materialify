@@ -13,9 +13,9 @@ related:
 </script>
 
 <script>
-  import { API, Example } from '../../components';
+  import { API, Example } from '@shared';
   import { Checkbox as doc } from 'svelte-materialify-api/dist';
-  import * as Examples from '../../examples/components/checkboxes';
+  import * as Examples from '@examples/components/checkboxes';
   export let examples;
 </script>
 

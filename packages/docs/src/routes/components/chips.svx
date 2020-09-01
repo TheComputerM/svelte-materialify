@@ -11,9 +11,9 @@ title: Chip Component
 </script>
 
 <script>
-  import { API, Example } from '../../components';
+  import { API, Example } from '@shared';
   import { Chip as doc } from 'svelte-materialify-api/dist';
-  import * as Examples from '../../examples/components/chips';
+  import * as Examples from '@examples/components/chips';
   export let examples;
 </script>
 

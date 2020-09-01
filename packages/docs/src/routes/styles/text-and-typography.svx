@@ -1,0 +1,57 @@
+---
+title: Text and Typography
+related:
+  - Usage: /getting-started/usage/
+---
+
+<script context="module">
+  export async function preload() {
+    let examples = await this.fetch('examples/styles/typography.json');
+    examples = await examples.json();
+    return { examples }
+  }
+</script>
+
+<script>
+  import Example from '@shared/Example.svelte';
+  import * as Examples from '@examples/styles/typography';
+  export let examples;
+</script>
+
+# Text and Typography
+
+Control text size, alignment, wrapping, overflow, transforms and more.
+
+## Typography
+
+<Example code={examples.typography} component={Examples.typography} />
+
+## Text Alignment
+
+Alignment helper classes allow you to easily re-align text. There are also available alignment classes that support responsive displays.
+
+<Example code={examples.alignment} component={Examples.alignment} />
+
+## Text Decoration
+
+Remove text decoration with the `.text-decoration-none` class or add an overline, underline or line-through by using `.text-decoration-overline`, `.text-decoration-underline`, and `.text-decoration-line-through`.
+
+<Example code={examples.decoration} component={Examples.decoration} />
+
+## Text Transform
+
+Text can be transformed with text capitalization classes.
+
+<Example code={examples.transform} component={Examples.transform} />
+
+## Font Weights
+
+Material design, by default, supports **100**, **300**, **400**, **500**, **700**, **900** font weights and *italicized text*.
+
+<Example code={examples.weight} component={Examples.weight} />
+
+## Text Opacity
+
+Opacity helper classes allow you to easily adjust the emphasis of text. `.text--primary` has the same opacity as default text. `.text--secondary` is used for hints and helper text. De-emphasise text with `.text--disabled`. The opacities change with the theme.
+
+<Example code={examples.opacity} component={Examples.opacity} />

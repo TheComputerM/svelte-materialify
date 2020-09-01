@@ -15,9 +15,9 @@ related:
 </script>
 
 <script>
-  import { Alert, API, Example } from '../../components';
+  import { Alert, API, Example } from '@shared';
   import { Button as doc } from 'svelte-materialify-api/dist';
-  import * as Examples from '../../examples/components/buttons';
+  import * as Examples from '@examples/components/buttons';
   export let examples;
 </script>
 

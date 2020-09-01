@@ -13,9 +13,9 @@ related:
 </script>
 
 <script>
-  import { API, Example } from '../../components';
+  import { API, Example } from '@shared';
   import { Breadcrumbs as doc } from 'svelte-materialify-api/dist';
-  import * as Examples from '../../examples/components/breadcrumbs';
+  import * as Examples from '@examples/components/breadcrumbs';
   export let examples;
 </script>
 

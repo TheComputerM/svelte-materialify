@@ -7,7 +7,7 @@ related:
 ---
 
 <script>
-  import API from '../../components/API.svelte';
+  import API from '@shared/API.svelte';
   import { MaterialApp as doc } from 'svelte-materialify-api/dist';
 </script>
 

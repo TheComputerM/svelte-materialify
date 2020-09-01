@@ -14,10 +14,9 @@ related:
 </script>
 
 <script>
-  import Example from '../../components/Example.svelte';
-  import API from '../../components/API.svelte';
+  import { API, Example } from '@shared';
   import { AppBar as doc } from 'svelte-materialify-api/dist';
-  import * as Examples from '../../examples/components/appBar';
+  import * as Examples from '@examples/components/appBar';
   export let examples;
 </script>
 

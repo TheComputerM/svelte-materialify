@@ -14,9 +14,9 @@ related:
 </script>
 
 <script>
-  import { API, Example } from '../../components';
+  import { API, Example } from '@shared';
   import { ButtonGroup as doc } from 'svelte-materialify-api/dist';
-  import * as Examples from '../../examples/components/buttonGroups';
+  import * as Examples from '@examples/components/buttonGroups';
   export let examples;
 </script>
 

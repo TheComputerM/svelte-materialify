@@ -7,7 +7,7 @@ related:
 ---
 
 <script>
-  import Alert from '../../components/Alert.svelte';
+  import Alert from '@shared/Alert.svelte';
 </script>
 
 # Installation

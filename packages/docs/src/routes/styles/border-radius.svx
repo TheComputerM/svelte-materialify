@@ -14,28 +14,27 @@ related:
 </script>
 
 <script>
-  import Example from '../../components/Example.svelte';
-  import Alert from '../../components/Alert.svelte';
-  import * as Examples from '../../examples/styles/border-radius';
+  import { Alert, Example } from '@shared';
+  import * as Examples from '@examples/styles/border-radius';
 
   export let examples;
 </script>
 
-
 # Border Radius
+
 Use border utilities to quickly style the border-radius of any element.
 
 ## Usage
-The helper classes are of format: `rounded-{side|corner}-{size}`, for more details see the examples
-below.
+
+The helper classes are of format: `rounded-{side|corner}-{size}`, for more details see the examples below.
 
 <Alert type='info'>
 The sizes sm, lg, and xl correlate to the border radius size and are not affected by breakpoints.
 </Alert>
 
 ## Customizing
-You can configure the border radius helper classes by overriding the `$rounded` variable in the
-_material-theme.scss file. By default `$border-radius-root` will have a default value of 0.25rem.
+
+You can configure the border radius helper classes by overriding the `$rounded` variable in the \_material-theme.scss file. By default `$border-radius-root` will have a default value of 0.25rem.
 
 ```scss
 $rounded: map-deep-merge(
@@ -55,15 +54,16 @@ $rounded: map-deep-merge(
 ## Examples
 
 ### Different sizes and types
-The rounded helper classes allow you to modify the border radius of an element. Use the
-`.rounded-sm`, `.rounded`, `.rounded-lg`, and `.rounded-xl` to add a border radius of varying size.
 
+The rounded helper classes allow you to modify the border radius of an element. Use the `.rounded-sm`, `.rounded`, `.rounded-lg`, and `.rounded-xl` to add a border radius of varying size.
 <Example code={examples.sizes} component={Examples.sizes} />
 
 ### Sides
+
 Use these helper classes to add border radius to specific sides.
 <Example code={examples.side} component={Examples.side} />
 
 ### Corners
+
 Use these helper classes to add border radius to specific corners.
 <Example code={examples.corner} component={Examples.corner} />

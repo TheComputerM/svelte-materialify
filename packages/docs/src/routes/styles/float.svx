@@ -11,8 +11,8 @@ title: Float
 </script>
 
 <script>
-  import Example from '../../components/Example.svelte';
-  import * as Examples from '../../examples/styles/float';
+  import Example from '@shared/Example.svelte';
+  import * as Examples from '@examples/styles/float';
   export let examples;
 </script>
 

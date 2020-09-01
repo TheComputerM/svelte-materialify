@@ -31,7 +31,7 @@ export default [
       { text: 'Elevation', href: '/styles/elevation/' },
       { text: 'Flex', href: '/styles/flex/' },
       { text: 'Float', href: '/styles/float/' },
-      { text: 'Typography', href: '/styles/typography/' },
+      { text: 'Typography', href: '/styles/text-and-typography/' },
     ],
   },
   {

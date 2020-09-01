@@ -14,18 +14,16 @@ related:
 </script>
 
 <script>
-  import Example from '../../components/Example.svelte';
-  import Alert from '../../components/Alert.svelte';
-  import * as Examples from '../../examples/styles/flex';
+  import { Example, Alert } from '@shared';
+  import * as Examples from '@examples/styles/flex';
 
   export let examples;
   let breakpoints = ['-', '-sm-', '-md-', '-lg-', '-xl-'];
 </script>
 
-
 # Flex
-Control the layout of flex containers with alignment, justification and more with responsive flexbox utilities.
 
+Control the layout of flex containers with alignment, justification and more with responsive flexbox utilities.
 
 ## Enable Flexbox
 
@@ -37,7 +35,6 @@ Display helpers enable you to turn any element into a flexbox container using cl
     <li>.d{bp}inline-flex</li>
   {/each}
 </ul>
-
 
 ## Flex Direction
 
@@ -54,10 +51,9 @@ By default the flex direction is set to `row`, using these helpers can help you 
   {/each}
 </ul>
 
-
 ## Flex Justify
 
-The `justify-content` flex setting can be changed using the flex justify classes. This by default will modify the flexbox items on the **x-axis** but is reversed when using `flex-direction: column`, modifying the **y-axis**. Choose from *start* (browser default), *end*, *center*, *between*, or *around*.
+The `justify-content` flex setting can be changed using the flex justify classes. This by default will modify the flexbox items on the **x-axis** but is reversed when using `flex-direction: column`, modifying the **y-axis**. Choose from _start_ (browser default), _end_, _center_, _between_, or _around_.
 
 <Example code={examples.justify} component={Examples.justify} />
 
@@ -71,10 +67,9 @@ The `justify-content` flex setting can be changed using the flex justify classes
   {/each}
 </ul>
 
-
 ## Flex Align
 
-The `align-items` flex setting can be changed using the flex align classes. This by default will modify the flexbox items on the **y-axis** but is reversed when using `flex-direction: column`, modifying the **x-axis**. Choose from *start*, *end*, *center*, *baseline*, or *stretch* (browser default).
+The `align-items` flex setting can be changed using the flex align classes. This by default will modify the flexbox items on the **y-axis** but is reversed when using `flex-direction: column`, modifying the **x-axis**. Choose from _start_, _end_, _center_, _baseline_, or _stretch_ (browser default).
 
 <Example code={examples.align} component={Examples.align} />
 
@@ -88,10 +83,9 @@ The `align-items` flex setting can be changed using the flex align classes. This
   {/each}
 </ul>
 
-
 ## Flex Align (Self)
 
-The `align-self` flex setting can be changed using the flex align-self classes. This by default will modify the flexbox items on the **x-axis** but is reversed when using `flex-direction: column`, modifying the **y-axis**. Choose from *start*, *end*, *center*, *baseline*, *auto*, or *stretch* (browser default).
+The `align-self` flex setting can be changed using the flex align-self classes. This by default will modify the flexbox items on the **x-axis** but is reversed when using `flex-direction: column`, modifying the **y-axis**. Choose from _start_, _end_, _center_, _baseline_, _auto_, or _stretch_ (browser default).
 
 <Example code={examples.alignSelf} component={Examples.alignSelf} />
 
@@ -105,7 +99,6 @@ The `align-self` flex setting can be changed using the flex align-self classes. 
     <li>.align-self{bp}stretch</li>
   {/each}
 </ul>
-
 
 ## Flex Align (Content)
 
@@ -124,8 +117,6 @@ The align-content flex setting can be changed using the flex align-content class
   {/each}
 </ul>
 
-
-
 ## Flex Wrap
 
 By default `.d-flex` does not provide any wrapping (behaves similarly to flex-wrap: nowrap). This can be modified by applying flex-wrap helper classes in the format `flex-{condition}` where condition can be **nowrap**, **wrap**, or **wrap-reverse**.
@@ -137,7 +128,6 @@ By default `.d-flex` does not provide any wrapping (behaves similarly to flex-wr
     <li>.flex{bp}wrap-reverse</li>
   {/each}
 </ul>
-
 
 ## Order
 
@@ -163,11 +153,9 @@ You can change the visual order of flex items with the `order` utilities.
   {/each}
 </ul>
 
-
 ## Flex Grow and Shrink
 
 Svelte Materialify has helper classes for applying grow and shrink manually. These can be applied by adding the helper class in the format `flex-{condition}-{value}`, where condition can be either grow or shrink and value can be either 0 or 1. The condition grow will permit an element to grow to fill available space, whereas shrink will permit an element to shrink down to only the space needs for its contents. However, this will only happen if the element must shrink to fit their container such as a container resize or being effected by a flex-grow-1. The value 0 will prevent the condition from occurring whereas 1 will permit the condition. The following classes are available:
-
 
 <ul class='font-weight-bold'>
   {#each breakpoints as bp}

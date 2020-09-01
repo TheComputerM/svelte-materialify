@@ -14,9 +14,8 @@ related:
 </script>
 
 <script>
-  import Example from '../../components/Example.svelte';
-  import { ExpansionPanels as doc1, ExpansionPanel as doc2 } from 'svelte-materialify-api/dist';
-  import * as Examples from '../../examples/components/expansionPanels';
+  import Example from '@shared/Example.svelte';
+  import * as Examples from '@examples/components/expansionPanels';
   export let examples;
 </script>
 

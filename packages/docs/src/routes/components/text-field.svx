@@ -13,9 +13,9 @@ related:
 </script>
 
 <script>
-  import { Alert, API, Example } from '../../components';
+  import { Alert, API, Example } from '@shared';
   import { TextField as doc } from 'svelte-materialify-api/dist';
-  import * as Examples from '../../examples/components/textField';
+  import * as Examples from '@examples/components/textField';
   export let examples;
 </script>
 
