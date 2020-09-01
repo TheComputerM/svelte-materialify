@@ -64,7 +64,8 @@
 </AppBar>
 
 <NavigationDrawer
-  style="height:100vh;{!(navigation || sidenav) ? 'transform:translateX(-100%)' : ''}"
+  active={navigation || sidenav}
+  style="height:100vh;"
   fixed
   clipped>
   <br />

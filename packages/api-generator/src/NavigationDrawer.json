@@ -21,6 +21,21 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
+      "name": "active",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": true
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "fixed",
       "kind": "let",
       "static": false,

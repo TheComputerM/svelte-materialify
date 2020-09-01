@@ -1,5 +1,20 @@
 @import "./variables";
 
+.s-navigation-drawer__border {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: $navigation-drawer-border-width;
+  background-color: var(--theme-dividers);
+}
+
+.s-navigation-drawer__content {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 .s-navigation-drawer {
   background-color: var(--theme-navigation-drawer);
   -webkit-overflow-scrolling: touch;
@@ -17,19 +32,8 @@
   will-change: transform;
   transition-property: transform, visibility, width;
 
-  .s-navigation-drawer__border {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    width: $navigation-drawer-border-width;
-    background-color: var(--theme-dividers);
-  }
-
-  .s-navigation-drawer__content {
-    height: 100%;
-    overflow-y: auto;
-    overflow-x: hidden;
+  &:not(.active) {
+    transform: translateX(-100%);
   }
 
   &.fixed {
@@ -49,6 +53,10 @@
     &::after {
       left: 0;
       right: initial;
+    }
+
+    &:not(.active) {
+      transform: translate(100%);
     }
 
     .s-navigation-drawer__border {

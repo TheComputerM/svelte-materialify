@@ -3,6 +3,7 @@
 
   let klass = '';
   export let width = '256px';
+  export let active = true;
   export let fixed = false;
   export let absolute = false;
   export let right = false;
@@ -11,7 +12,7 @@
   export let noBorder = false;
   export let miniWidth = '56px';
   export let clippedHeight = '56px';
-  export let style = '';
+  export let style = null;
   export { klass as class };
 
   if (mini) width = miniWidth;
@@ -23,6 +24,7 @@
 
 <aside
   class="s-navigation-drawer {klass}"
+  class:active
   class:fixed
   class:absolute
   class:right
