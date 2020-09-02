@@ -6,16 +6,7 @@
     "dev": "sapper dev --ext \".svelte .svx\"",
     "build": "sapper build --legacy --ext \".svelte .svx\"",
     "export": "sapper export --legacy --ext \".svelte .svx\"",
-    "start": "node __sapper__/build",
-    "precommit": "lint-staged",
-    "lint": "eslint . --ext .svelte,.js",
-    "lint:fix": "eslint . --ext .svelte,.js --fix"
-  },
-  "lint-staged": {
-    "src/**/*.{js,svelte}": [
-      "eslint --ext .svelte,.js --fix",
-      "git add"
-    ]
+    "start": "node __sapper__/build"
   },
   "dependencies": {
     "@mdi/js": "^5.5.55",
@@ -38,13 +29,6 @@
     "@rollup/plugin-node-resolve": "^9.0.0",
     "@rollup/plugin-replace": "^2.2.0",
     "autoprefixer": "^9.8.6",
-    "babel-eslint": "^10.1.0",
-    "deepmerge": "^4.2.2",
-    "eslint": "^7.6.0",
-    "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-svelte3": "^2.7.3",
-    "lint-staged": "^10.2.13",
     "mdsvex": "^0.8.6",
     "postcss": "^7.0.32",
     "prismjs": "^1.21.0",

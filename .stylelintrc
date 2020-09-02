@@ -1,8 +1,5 @@
 {
   "extends": "stylelint-config-standard",
-  "ignoreFiles": [
-    "./src/styles/generic/_reset.scss"
-  ],
   "plugins": [
     "stylelint-scss"
   ],

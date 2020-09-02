@@ -12,22 +12,56 @@
   "scripts": {
     "docs": "yarn workspace docs export",
     "dev": "yarn workspace docs dev",
-    "lint": "yarn workspaces run lint",
-    "lint:fix": "yarn workspaces run lint:fix",
     "release": "yarn workspace svelte-materialify release",
     "start": "yarn workspaces run start",
     "api": "yarn workspace svelte-materialify-api start",
-    "precommit": "yarn workspaces run precommit"
+    "test": "yarn workspace svelte-materialify test",
+    "lint": "concurrently \"npm:lint:js\" \"npm:lint:css\"",
+    "lint:fix": "concurrently \"npm:lint:js:fix\" \"npm:lint:css:fix\"",
+    "lint:js": "eslint . --ext .svelte,.js",
+    "lint:js:fix": "eslint . --ext .svelte,.js --fix",
+    "lint:css": "stylelint **/*.scss --syntax scss",
+    "lint:css:fix": "stylelint **/*.scss --syntax scss --fix",
+    "fmt": "prettier . -c --plugin-search-dir=.",
+    "fmt:fix": "prettier . -w --plugin-search-dir=."
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn precommit"
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.{js,svelte,scss,md}": [
+      "prettier -w --plugin-search-dir=.",
+      "git add"
+    ],
+    "*.{js,svelte}": [
+      "eslint --ext .svelte,.js --fix",
+      "git add"
+    ],
+    "*.scss": [
+      "stylelint --syntax scss --fix",
+      "git add"
+    ]
   },
   "engines": {
     "node": ">=12.x"
   },
   "dependencies": {
-    "husky": "^4.2.5"
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.13"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "concurrently": "^5.3.0",
+    "eslint": "^7.6.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-svelte3": "^2.7.3",
+    "prettier": "^2.1.1",
+    "prettier-plugin-svelte": "^1.2.0",
+    "stylelint": "^13.6.1",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.18.0"
   }
 }

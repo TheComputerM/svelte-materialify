@@ -23,10 +23,22 @@ module.exports = {
       },
     },
     {
-      files: ['tests/**/*.js'],
+      files: ['**/tests/**/*.js'],
       env: { jest: true },
       rules: {
         'import/no-unresolved': ['error', { ignore: ['^@s/'] }],
+      },
+    },
+    {
+      files: ['packages/docs/**/*.{js,svelte}'],
+      rules: {
+        'import/no-extraneous-dependencies': 'off',
+        'import/prefer-default-export': 'off',
+        'no-return-assign': ['error', 'except-parens'],
+        'no-param-reassign': ['error', { props: false }],
+      },
+      globals: {
+        ClipboardJS: 'readonly',
       },
     },
   ],
@@ -35,7 +47,7 @@ module.exports = {
     'svelte3/ignore-styles': () => true,
   },
   rules: {
-    camelcase: ['error', { allow: ['[_][a-z]{1,5}$'] }],
+    camelcase: 'off',
     'no-nested-ternary': 'off',
     'import/no-extraneous-dependencies': 'off',
     'global-require': 'off',

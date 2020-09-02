@@ -1,0 +1,5 @@
+__sapper__
+dist
+packages/api-generator/src/*.json
+packages/docs/src/*.js
+static

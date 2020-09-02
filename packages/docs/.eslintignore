@@ -1,4 +1,0 @@
-*.config.js
-__sapper__
-static
-src/*.js
