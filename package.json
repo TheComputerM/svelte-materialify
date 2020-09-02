@@ -31,18 +31,9 @@
     }
   },
   "lint-staged": {
-    "*.{js,svelte,scss,md,svx}": [
-      "prettier -w --plugin-search-dir=.",
-      "git add"
-    ],
-    "*.{js,svelte}": [
-      "eslint --ext .svelte,.js --fix",
-      "git add"
-    ],
-    "*.scss": [
-      "stylelint --syntax scss --fix",
-      "git add"
-    ]
+    "*.{js,svelte,scss,md,svx}": "prettier -w --plugin-search-dir=.",
+    "*.{js,svelte}": "eslint --ext .svelte,.js --fix",
+    "*.scss": "stylelint --syntax scss --fix"
   },
   "engines": {
     "node": ">=12.x"
