@@ -1,11 +1,12 @@
 <script>
   import { fade } from 'svelte/transition';
+  import Style from '../../internal/Style';
 
   let klass = '';
   export let active = true;
   export let opacity = 0.46;
   export let color = 'rgb(33, 33, 33)';
-  export let zIndex = 5;
+  export let index = 5;
   export let absolute = false;
   export let fadeOptions = {};
   export let style = '';
@@ -18,11 +19,12 @@
 
 {#if active}
   <div
-    class="s-overlay {klass}"
-    style="z-index:{zIndex};{style}"
-    class:absolute
     transition:fade={fadeOptions}
-    on:click>
+    class="s-overlay {klass}"
+    class:absolute
+    on:click
+    use:Style={{ 'overlay-index': index }}
+    {style}>
     <div
       class="s-overlay__scrim"
       style="opacity:{opacity};background-color:{color};border-color:{color}" />

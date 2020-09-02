@@ -6,6 +6,21 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
+      "name": "class",
+      "kind": "const",
+      "static": false,
+      "readonly": true,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "localName": "klass"
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "width",
       "kind": "let",
       "static": false,
@@ -156,6 +171,34 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
+      "name": "transition",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "transitionOpts",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "style",
       "kind": "let",
       "static": false,
@@ -166,21 +209,6 @@
         "type": "object"
       },
       "defaultValue": null
-    },
-    {
-      "visibility": "public",
-      "description": null,
-      "keywords": [],
-      "name": "class",
-      "kind": "const",
-      "static": false,
-      "readonly": true,
-      "type": {
-        "kind": "type",
-        "text": "string",
-        "type": "string"
-      },
-      "localName": "klass"
     }
   ],
   "computed": [],

@@ -24,9 +24,9 @@
     "releaseDraft": false
   },
   "devDependencies": {
-    "@babel/core": "^7.11.4",
-    "@babel/preset-env": "^7.11.0",
-    "@rollup/plugin-commonjs": "^13.0.2",
+    "@babel/core": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "@rollup/plugin-commonjs": "^15.0.0",
     "@rollup/plugin-node-resolve": "^9.0.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/svelte": "^3.0.0",
@@ -37,15 +37,15 @@
     "jest": "^26.4.2",
     "np": "^6.5.0",
     "postcss": "^7.0.32",
-    "rollup": "^2.26.8",
+    "rollup": "^2.26.9",
     "rollup-plugin-svelte": "^6.0.0",
     "rollup-plugin-terser": "^7.0.1",
     "sass": "^1.26.10",
     "svelte": "^3.24.1",
-    "svelte-check": "^1.0.30",
+    "svelte-check": "^1.0.33",
     "svelte-htm": "^1.1.1",
-    "svelte-jester": "^1.0.6",
-    "svelte-preprocess": "^4.2.0"
+    "svelte-jester": "^1.1.5",
+    "svelte-preprocess": "^4.2.1"
   },
   "files": [
     "src",

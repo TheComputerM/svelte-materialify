@@ -51,7 +51,7 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
-      "name": "zIndex",
+      "name": "index",
       "kind": "let",
       "static": false,
       "readonly": false,

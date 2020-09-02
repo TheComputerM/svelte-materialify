@@ -50,7 +50,7 @@
   </List>
 </NavigationDrawer>
 <Overlay
-  zIndex="3"
+  index="3"
   active={!navigation && sidenav}
   on:click={() => (sidenav = false)}
   fadeOptions={{ duration: 250 }} />

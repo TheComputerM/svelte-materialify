@@ -1,7 +1,9 @@
 <script>
+  import { fade } from 'svelte/transition';
   import Style from '../../internal/Style';
 
   let klass = '';
+  export { klass as class };
   export let width = '256px';
   export let active = true;
   export let fixed = false;
@@ -12,8 +14,9 @@
   export let noBorder = false;
   export let miniWidth = '56px';
   export let clippedHeight = '56px';
+  export let transition = fade;
+  export let transitionOpts = {};
   export let style = null;
-  export { klass as class };
 
   if (mini) width = miniWidth;
 </script>
@@ -24,6 +27,7 @@
 
 <aside
   class="s-navigation-drawer {klass}"
+  transition:transition={transitionOpts}
   class:active
   class:fixed
   class:absolute

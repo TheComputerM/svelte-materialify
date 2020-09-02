@@ -238,6 +238,8 @@ $_shadow-key-ambient: (
 );
 
 @mixin elevation($z, $important: false) {
-  box-shadow: map-get($_shadow-key-umbra, $z), map-get($_shadow-key-penumbra, $z),
+  /* prettier-ignore */
+  box-shadow: map-get($_shadow-key-umbra, $z),
+    map-get($_shadow-key-penumbra, $z),
     map-get($_shadow-key-ambient, $z) if($important, !important, null);
 }

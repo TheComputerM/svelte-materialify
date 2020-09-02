@@ -1,34 +1,34 @@
 @import './variables';
 
+.underlay {
+  stroke: $progress-circular-underlay-stroke;
+  z-index: 1;
+}
+
+.overlay {
+  stroke: currentColor;
+  z-index: 2;
+  transition: $progress-circular-overlay-transition;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+
 .s-progress-circular {
   position: relative;
   display: inline-flex;
   vertical-align: middle;
   justify-content: center;
   align-items: center;
-
-  svg {
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 0;
-  }
-
-  .underlay {
-    stroke: $progress-circular-underlay-stroke;
-    z-index: 1;
-  }
-
-  .overlay {
-    stroke: currentColor;
-    z-index: 2;
-    transition: $progress-circular-overlay-transition;
-  }
 
   &.indeterminate {
     svg {

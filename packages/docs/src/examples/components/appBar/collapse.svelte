@@ -4,9 +4,9 @@
   let collapsed = false;
 </script>
 
-<AppBar {collapsed}>
+<AppBar {collapsed} class="primary-color theme--dark">
   <div slot="icon">
-    <Button depressed fab>
+    <Button depressed fab text>
       <Icon class="mdi mdi-menu" />
     </Button>
   </div>

@@ -35,12 +35,12 @@ describe('AppBar', () => {
   test('check heights', async () => {
     const { component, container } = render(AppBar);
     const appbar = container.querySelector('.s-app-bar');
-    expect(appbar).toHaveStyle({ height: '56px' });
+    expect(appbar).toHaveStyle({ '--s-app-bar-height': '56px' });
 
     await component.$set({ dense: true, prominent: false });
-    expect(appbar).toHaveStyle({ height: '48px' });
+    expect(appbar).toHaveStyle({ '--s-app-bar-height': '48px' });
 
     await component.$set({ dense: false, prominent: true });
-    expect(appbar).toHaveStyle({ height: '128px' });
+    expect(appbar).toHaveStyle({ '--s-app-bar-height': '128px' });
   });
 });

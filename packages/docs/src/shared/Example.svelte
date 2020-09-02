@@ -24,6 +24,7 @@
     margin-bottom: 36px;
     border-radius: 4px;
     border: thin solid var(--theme-dividers);
+    overflow-x: hidden;
   }
 
   .component-example :first-child {
