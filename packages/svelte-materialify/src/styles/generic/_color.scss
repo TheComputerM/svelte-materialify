@@ -1,10 +1,10 @@
-@use "../tools/colors";
-@use "../variables" as *;
+@use '../tools/colors';
+@use '../variables' as *;
 
 @each $color, $color_values in colors.$colors {
-  @if $color != "shades" {
+  @if $color != 'shades' {
     @each $color_variant, $value in $color_values {
-      @if $color_variant == "base" {
+      @if $color_variant == 'base' {
         .#{$color} {
           background-color: $value !important;
           border-color: $value !important;
@@ -40,12 +40,12 @@
 @each $color,
   $value
     in (
-      "primary": $primary-color,
-      "secondary": $secondary-color,
-      "success": $success-color,
-      "info": $info-color,
-      "warning": $warning-color,
-      "error": $error-color
+      'primary': $primary-color,
+      'secondary': $secondary-color,
+      'success': $success-color,
+      'info': $info-color,
+      'warning': $warning-color,
+      'error': $error-color
     )
 {
   .#{$color}-color {

@@ -1,99 +1,251 @@
-@use "../tools/breakpoints" as *;
-@use "../variables" as *;
+@use '../tools/breakpoints' as *;
+@use '../variables' as *;
 
-.flex-row { flex-direction: row; }
-.flex-row-reverse { flex-direction: row-reverse; }
-.flex-column { flex-direction: column; }
-.flex-column-reverse { flex-direction: column-reverse; }
-
-@include create_breakpoints() using ($screen_size) {
-  .flex-#{$screen_size}-row { flex-direction: row; }
-  .flex-#{$screen_size}-row-reverse { flex-direction: row-reverse; }
-  .flex-#{$screen_size}-column { flex-direction: column; }
-  .flex-#{$screen_size}-column-reverse { flex-direction: column-reverse; }
+.flex-row {
+  flex-direction: row;
 }
 
-.justify-start { justify-content: flex-start; }
-.justify-end { justify-content: flex-end; }
-.justify-center { justify-content: center; }
-.justify-space-between { justify-content: space-between; }
-.justify-space-around { justify-content: space-around; }
-
-@include create_breakpoints() using ($screen_size) {
-  .justify-#{$screen_size}-start { justify-content: flex-start; }
-  .justify-#{$screen_size}-end { justify-content: flex-end; }
-  .justify-#{$screen_size}-center { justify-content: center; }
-  .justify-#{$screen_size}-space-between { justify-content: space-between; }
-  .justify-#{$screen_size}-space-around { justify-content: space-around; }
+.flex-row-reverse {
+  flex-direction: row-reverse;
 }
 
-.align-content-start { align-content: flex-start; }
-.align-content-end { align-content: flex-end; }
-.align-content-center { align-content: center; }
-.align-content-space-between { align-content: space-between; }
-.align-content-space-around { align-content: space-around; }
-.align-content-stretch { align-content: stretch; }
-
-@include create_breakpoints() using ($screen_size) {
-  .align-#{$screen_size}-content-start { align-content: flex-start; }
-  .align-#{$screen_size}-content-end { align-content: flex-end; }
-  .align-#{$screen_size}-content-center { align-content: center; }
-  .align-#{$screen_size}-content-space-between { align-content: space-between; }
-  .align-#{$screen_size}-content-space-around { align-content: space-around; }
-  .align-#{$screen_size}-content-stretch { align-content: stretch; }
+.flex-column {
+  flex-direction: column;
 }
 
-.align-start { align-items: flex-start; }
-.align-end { align-items: flex-end; }
-.align-center { align-items: center; }
-.align-baseline { align-items: baseline; }
-.align-stretch { align-items: stretch; }
-
-@include create_breakpoints() using ($screen_size) {
-  .align-#{$screen_size}-start { align-items: flex-start; }
-  .align-#{$screen_size}-end { align-items: flex-end; }
-  .align-#{$screen_size}-center { align-items: center; }
-  .align-#{$screen_size}-baseline { align-items: baseline; }
-  .align-#{$screen_size}-stretch { align-items: stretch; }
+.flex-column-reverse {
+  flex-direction: column-reverse;
 }
 
-.align-self-start { align-self: flex-start; }
-.align-self-end { align-self: flex-end; }
-.align-self-center { align-self: center; }
-.align-self-baseline { align-self: baseline; }
-.align-self-stretch { align-self: stretch; }
-.align-self-auto { align-self: auto; }
-
 @include create_breakpoints() using ($screen_size) {
-  .align-self-#{$screen_size}-start { align-self: flex-start; }
-  .align-self-#{$screen_size}-end { align-self: flex-end; }
-  .align-self-#{$screen_size}-center { align-self: center; }
-  .align-self-#{$screen_size}-baseline { align-self: baseline; }
-  .align-self-#{$screen_size}-stretch { align-self: stretch; }
-  .align-self-#{$screen_size}-auto { align-self: auto; }
+  .flex-#{$screen_size}-row {
+    flex-direction: row;
+  }
+  .flex-#{$screen_size}-row-reverse {
+    flex-direction: row-reverse;
+  }
+  .flex-#{$screen_size}-column {
+    flex-direction: column;
+  }
+  .flex-#{$screen_size}-column-reverse {
+    flex-direction: column-reverse;
+  }
 }
 
-.flex-nowrap { flex-wrap: nowrap; }
-.flex-wrap { flex-wrap: wrap; }
-.flex-wrap-reverse { flex-wrap: wrap-reverse; }
-
-@include create_breakpoints() using ($screen_size) {
-  .flex-#{$screen_size}-nowrap { flex-wrap: nowrap; }
-  .flex-#{$screen_size}-wrap { flex-wrap: wrap; }
-  .flex-#{$screen_size}-wrap-reverse { flex-wrap: wrap-reverse; }
+.justify-start {
+  justify-content: flex-start;
 }
 
-.order-first { order: -1; }
-.order-last { order: $grid-columns + 1; }
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.justify-space-around {
+  justify-content: space-around;
+}
+
+@include create_breakpoints() using ($screen_size) {
+  .justify-#{$screen_size}-start {
+    justify-content: flex-start;
+  }
+  .justify-#{$screen_size}-end {
+    justify-content: flex-end;
+  }
+  .justify-#{$screen_size}-center {
+    justify-content: center;
+  }
+  .justify-#{$screen_size}-space-between {
+    justify-content: space-between;
+  }
+  .justify-#{$screen_size}-space-around {
+    justify-content: space-around;
+  }
+}
+
+.align-content-start {
+  align-content: flex-start;
+}
+
+.align-content-end {
+  align-content: flex-end;
+}
+
+.align-content-center {
+  align-content: center;
+}
+
+.align-content-space-between {
+  align-content: space-between;
+}
+
+.align-content-space-around {
+  align-content: space-around;
+}
+
+.align-content-stretch {
+  align-content: stretch;
+}
+
+@include create_breakpoints() using ($screen_size) {
+  .align-#{$screen_size}-content-start {
+    align-content: flex-start;
+  }
+  .align-#{$screen_size}-content-end {
+    align-content: flex-end;
+  }
+  .align-#{$screen_size}-content-center {
+    align-content: center;
+  }
+  .align-#{$screen_size}-content-space-between {
+    align-content: space-between;
+  }
+  .align-#{$screen_size}-content-space-around {
+    align-content: space-around;
+  }
+  .align-#{$screen_size}-content-stretch {
+    align-content: stretch;
+  }
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-baseline {
+  align-items: baseline;
+}
+
+.align-stretch {
+  align-items: stretch;
+}
+
+@include create_breakpoints() using ($screen_size) {
+  .align-#{$screen_size}-start {
+    align-items: flex-start;
+  }
+  .align-#{$screen_size}-end {
+    align-items: flex-end;
+  }
+  .align-#{$screen_size}-center {
+    align-items: center;
+  }
+  .align-#{$screen_size}-baseline {
+    align-items: baseline;
+  }
+  .align-#{$screen_size}-stretch {
+    align-items: stretch;
+  }
+}
+
+.align-self-start {
+  align-self: flex-start;
+}
+
+.align-self-end {
+  align-self: flex-end;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+.align-self-baseline {
+  align-self: baseline;
+}
+
+.align-self-stretch {
+  align-self: stretch;
+}
+
+.align-self-auto {
+  align-self: auto;
+}
+
+@include create_breakpoints() using ($screen_size) {
+  .align-self-#{$screen_size}-start {
+    align-self: flex-start;
+  }
+  .align-self-#{$screen_size}-end {
+    align-self: flex-end;
+  }
+  .align-self-#{$screen_size}-center {
+    align-self: center;
+  }
+  .align-self-#{$screen_size}-baseline {
+    align-self: baseline;
+  }
+  .align-self-#{$screen_size}-stretch {
+    align-self: stretch;
+  }
+  .align-self-#{$screen_size}-auto {
+    align-self: auto;
+  }
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+@include create_breakpoints() using ($screen_size) {
+  .flex-#{$screen_size}-nowrap {
+    flex-wrap: nowrap;
+  }
+  .flex-#{$screen_size}-wrap {
+    flex-wrap: wrap;
+  }
+  .flex-#{$screen_size}-wrap-reverse {
+    flex-wrap: wrap-reverse;
+  }
+}
+
+.order-first {
+  order: -1;
+}
+
+.order-last {
+  order: $grid-columns + 1;
+}
 
 @for $i from 0 through $grid-columns {
-  .order-#{$i} { order: $i; }
+  .order-#{$i} {
+    order: $i;
+  }
 }
 
 @include create_breakpoints() using ($screen_size) {
-  .order-#{$screen_size}-first { order: -1; }
-  .order-#{$screen_size}-last { order: $grid-columns + 1; }
+  .order-#{$screen_size}-first {
+    order: -1;
+  }
+  .order-#{$screen_size}-last {
+    order: $grid-columns + 1;
+  }
   @for $i from 0 through $grid-columns {
-    .order-#{$screen_size}-#{$i} { order: $i; }
+    .order-#{$screen_size}-#{$i} {
+      order: $i;
+    }
   }
 }

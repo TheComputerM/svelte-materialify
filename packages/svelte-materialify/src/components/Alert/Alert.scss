@@ -1,4 +1,4 @@
-@import "./variables";
+@import './variables';
 
 .s-alert {
   display: block;
@@ -9,7 +9,7 @@
   color: var(--theme-text-primary);
 
   @include has-theme-bg {
-    color: map-deep-get($material-dark-theme, "text", "primary");
+    color: map-deep-get($material-dark-theme, 'text', 'primary');
   }
 
   :global {
@@ -22,7 +22,7 @@
       align-self: flex-start;
     }
 
-    [slot="icon"] {
+    [slot='icon'] {
       margin-right: $spacer * 4;
     }
   }
@@ -30,7 +30,7 @@
   .s-alert__border {
     border-style: solid;
     border-width: $alert-border-width;
-    content: "";
+    content: '';
     position: absolute;
 
     &.border-left,
@@ -91,7 +91,7 @@
       background-color: currentColor;
       border-radius: inherit;
       bottom: 0;
-      content: "";
+      content: '';
       left: 0;
       opacity: 0.12;
       position: absolute;

@@ -1,4 +1,4 @@
-@import "./variables";
+@import './variables';
 
 .s-expansion-panel__header {
   align-items: center;
@@ -19,7 +19,7 @@
     background-color: currentColor;
     border-radius: inherit;
     bottom: 0;
-    content: "";
+    content: '';
     left: 0;
     opacity: 0;
     pointer-events: none;
@@ -49,19 +49,19 @@
   &:not(:first-child)::after {
     border-top: thin solid;
     border-color: var(--theme-dividers);
-    content: "";
+    content: '';
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
-    transition: 0.2s border-color map-get($transitions, "fast-out-slow-in"),
-      0.2s opacity map-get($transitions, "fast-out-slow-in");
+    transition: 0.2s border-color map-get($transitions, 'fast-out-slow-in'),
+      0.2s opacity map-get($transitions, 'fast-out-slow-in');
   }
 
   &::before {
     border-radius: inherit;
     bottom: 0;
-    content: "";
+    content: '';
     left: 0;
     position: absolute;
     right: 0;

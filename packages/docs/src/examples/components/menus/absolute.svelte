@@ -1,7 +1,5 @@
 <script>
-  import {
-    Menu, List, ListItem, Ripple,
-  } from 'svelte-materialify/src';
+  import { Menu, List, ListItem, Ripple } from 'svelte-materialify/src';
 </script>
 
 <div class="d-flex justify-center">

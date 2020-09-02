@@ -22,8 +22,8 @@
     "lint:js:fix": "eslint . --ext .svelte,.js --fix",
     "lint:css": "stylelint **/*.scss --syntax scss",
     "lint:css:fix": "stylelint **/*.scss --syntax scss --fix",
-    "fmt": "prettier . -c --plugin-search-dir=.",
-    "fmt:fix": "prettier . -w --plugin-search-dir=."
+    "fmt:check": "prettier . -c --plugin-search-dir=.",
+    "fmt": "prettier . -w --plugin-search-dir=."
   },
   "husky": {
     "hooks": {
@@ -31,7 +31,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,svelte,scss,md}": [
+    "*.{js,svelte,scss,md,svx}": [
       "prettier -w --plugin-search-dir=.",
       "git add"
     ],

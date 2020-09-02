@@ -14,8 +14,7 @@
 
 <Container class="text-center">
   <h1>
-    Svelte Materialify
-    <small class="text-h5 d-block text--secondary">🔨 Under Construction</small>
+    Svelte Materialify <small class="text-h5 d-block text--secondary">🔨 Under Construction</small>
   </h1>
   <br />
   <br />

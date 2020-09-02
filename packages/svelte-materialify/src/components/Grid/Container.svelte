@@ -6,7 +6,7 @@
 </script>
 
 <style lang="scss">
-  @import "../../styles/variables";
+  @import '../../styles/variables';
 
   .s-container {
     width: 100%;
@@ -19,13 +19,13 @@
     }
 
     @media #{map-get($display-breakpoints, "md-and-up")} {
-      max-width: map-get($container-max-widths, "md");
+      max-width: map-get($container-max-widths, 'md');
     }
     @media #{map-get($display-breakpoints, "lg-and-up")} {
-      max-width: map-get($container-max-widths, "lg");
+      max-width: map-get($container-max-widths, 'lg');
     }
     @media #{map-get($display-breakpoints, "xl-only")} {
-      max-width: map-get($container-max-widths, "xl");
+      max-width: map-get($container-max-widths, 'xl');
     }
   }
 </style>

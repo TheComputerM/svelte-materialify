@@ -11,6 +11,5 @@
     <Button>Right</Button>
     <Button>Justify</Button>
   </ButtonGroup>
-  <br>
-  Value: {value}
+  <br /> Value: {value}
 </div>

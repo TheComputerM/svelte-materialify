@@ -13,8 +13,10 @@ export function get(req, res) {
       'Content-Type': 'application/json',
     });
 
-    res.end(JSON.stringify({
-      message: 'Not found',
-    }));
+    res.end(
+      JSON.stringify({
+        message: 'Not found',
+      }),
+    );
   }
 }

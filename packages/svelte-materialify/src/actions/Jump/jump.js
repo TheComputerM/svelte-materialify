@@ -6,16 +6,24 @@
 
 var easeInOutQuad = function easeInOutQuad(t, b, c, d) {
   t /= d / 2;
-  if (t < 1) return c / 2 * t * t + b;
+  if (t < 1) return (c / 2) * t * t + b;
   t--;
-  return -c / 2 * (t * (t - 2) - 1) + b;
+  return (-c / 2) * (t * (t - 2) - 1) + b;
 };
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
-  return typeof obj;
-} : function (obj) {
-  return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-};
+var _typeof =
+  typeof Symbol === 'function' && typeof Symbol.iterator === 'symbol'
+    ? function (obj) {
+        return typeof obj;
+      }
+    : function (obj) {
+        return obj &&
+          typeof Symbol === 'function' &&
+          obj.constructor === Symbol &&
+          obj !== Symbol.prototype
+          ? 'symbol'
+          : typeof obj;
+      };
 
 var jumper = function jumper() {
   // private variable cache
@@ -70,8 +78,9 @@ var jumper = function jumper() {
     window.scrollTo(0, next);
 
     // check progress
-    timeElapsed < duration ? window.requestAnimationFrame(loop) // continue scroll loop
-    : done(); // scrolling is done
+    timeElapsed < duration
+      ? window.requestAnimationFrame(loop) // continue scroll loop
+      : done(); // scrolling is done
   }
 
   // scroll finished helper

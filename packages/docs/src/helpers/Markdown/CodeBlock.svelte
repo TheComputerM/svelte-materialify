@@ -1,5 +1,9 @@
 <script context="module">
-  const aliases = { js: ['javascript'], sh: ['bash', 'shell'], ts: ['typescript'] };
+  const aliases = {
+    js: ['javascript'],
+    sh: ['bash', 'shell'],
+    ts: ['typescript'],
+  };
 </script>
 
 <script>

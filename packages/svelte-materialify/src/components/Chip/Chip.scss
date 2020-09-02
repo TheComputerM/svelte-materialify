@@ -1,4 +1,4 @@
-@import "./variables";
+@import './variables';
 
 .s-chip__close {
   cursor: pointer;
@@ -42,7 +42,7 @@
     background-color: currentColor;
     bottom: 0;
     border-radius: inherit;
-    content: "";
+    content: '';
     left: 0;
     opacity: 0;
     position: absolute;
@@ -80,15 +80,15 @@
 
   @each $name, $size in $icon-sizes {
     &.size-#{$name} {
-      border-radius: #{map-get($size, "height") / 2}px;
-      font-size: #{map-get($size, "font-size")}px;
-      height: #{map-get($size, "height")}px;
+      border-radius: #{map-get($size, 'height') / 2}px;
+      font-size: #{map-get($size, 'font-size')}px;
+      height: #{map-get($size, 'height')}px;
     }
   }
 
   &:not(.outlined) {
     @include has-theme-bg {
-      color: map-deep-get($material-dark-theme, "text", "primary");
+      color: map-deep-get($material-dark-theme, 'text', 'primary');
     }
   }
 

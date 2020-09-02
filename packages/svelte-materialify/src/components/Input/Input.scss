@@ -1,4 +1,4 @@
-@import "./variables";
+@import './variables';
 
 .s-input__slot {
   border-radius: inherit;
@@ -68,19 +68,19 @@
       }
     }
 
-    [slot="prepend"],
-    [slot="append"] {
+    [slot='prepend'],
+    [slot='append'] {
       display: inline-flex;
       margin-bottom: 4px;
       margin-top: 4px;
       line-height: 1;
     }
 
-    [slot="prepend"] {
+    [slot='prepend'] {
       margin-right: $input-prepend-append-outer-margin;
     }
 
-    [slot="append"] {
+    [slot='append'] {
       margin-left: $input-prepend-append-outer-margin;
     }
 

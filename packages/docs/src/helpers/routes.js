@@ -1,11 +1,5 @@
 import { all as API } from 'svelte-materialify-api/dist';
-import {
-  mdiSpeedometer,
-  mdiPalette,
-  mdiViewDashboard,
-  mdiFunction,
-  mdiBeaker,
-} from '@mdi/js';
+import { mdiSpeedometer, mdiPalette, mdiViewDashboard, mdiFunction, mdiBeaker } from '@mdi/js';
 
 export default [
   {

@@ -34,11 +34,7 @@
 <div class="component-example">
   <div class="text-right pa-1">
     {#if colorInvertable}
-      <Button
-        fab
-        icon
-        size="small"
-        on:click={() => (isComponentDark = !isComponentDark)}>
+      <Button fab icon size="small" on:click={() => (isComponentDark = !isComponentDark)}>
         <Icon class="mdi mdi-invert-colors" />
       </Button>
     {/if}

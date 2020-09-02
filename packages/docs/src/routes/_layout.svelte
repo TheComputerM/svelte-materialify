@@ -56,9 +56,7 @@
   {#if segment !== undefined}
     <SiteNavigation bind:theme={$theme} {navigation} />
   {/if}
-  <main
-    class:navigation-enabled={navigation}
-    class:index-page={segment === undefined}>
+  <main class:navigation-enabled={navigation} class:index-page={segment === undefined}>
     {#if segment !== undefined}
       <Loading />
     {/if}

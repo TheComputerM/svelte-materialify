@@ -10,10 +10,7 @@
 
 <Breadcrumbs {items} let:item>
   {#if item.href}
-    <a
-      class="s-breadcrumb-item"
-      href={item.href}
-      class:disabled={item.disabled}>
+    <a class="s-breadcrumb-item" href={item.href} class:disabled={item.disabled}>
       {item.text.toUpperCase()}
     </a>
   {:else}

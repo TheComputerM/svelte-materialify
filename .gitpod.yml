@@ -1,4 +1,4 @@
-workspaceLocation: "."
+workspaceLocation: '.'
 tasks:
   - init: npm install && cd site && npm install
     command: npm run site:dev

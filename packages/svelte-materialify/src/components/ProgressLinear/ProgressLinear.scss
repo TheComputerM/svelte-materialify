@@ -1,10 +1,10 @@
-@import "./variables";
+@import './variables';
 
 .s-progress-linear {
   background: transparent;
   overflow: hidden;
   position: relative;
-  transition: 0.2s map-get($transitions, "ease-in-out");
+  transition: 0.2s map-get($transitions, 'ease-in-out');
   width: 100%;
   color: var(--theme-text-primary);
 

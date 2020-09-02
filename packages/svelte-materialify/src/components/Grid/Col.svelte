@@ -17,8 +17,8 @@
 </script>
 
 <style lang="scss">
-  @import "../../styles/tools/breakpoints";
-  @import "../../styles/variables";
+  @import '../../styles/tools/breakpoints';
+  @import '../../styles/variables';
 
   @mixin make-col($size) {
     flex: 0 0 percentage($size / $grid-columns);

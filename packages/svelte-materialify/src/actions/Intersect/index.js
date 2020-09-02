@@ -4,15 +4,16 @@ export default (node, options) => {
     const entry = entries[0];
     const intersecting = entry.isIntersecting;
     if (intersecting) {
-      node.dispatchEvent(new CustomEvent('intersect', {
-        detail: entry,
-      }));
+      node.dispatchEvent(
+        new CustomEvent('intersect', {
+          detail: entry,
+        }),
+      );
       if (settings.once) {
         observer.unobserve(node);
       }
     }
-  },
-  settings.observer);
+  }, settings.observer);
   observer.observe(node);
   return {
     destroy() {

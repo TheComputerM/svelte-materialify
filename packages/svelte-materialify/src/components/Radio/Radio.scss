@@ -1,4 +1,4 @@
-@import "./variables";
+@import './variables';
 
 .s-radio {
   display: flex;
@@ -21,7 +21,7 @@
 
   &::before {
     border-radius: inherit;
-    content: "";
+    content: '';
     top: 0;
     bottom: 0;
     left: 0;
@@ -61,11 +61,11 @@
   pointer-events: none;
 
   &::before {
-    transition: 120ms 0ms map-get($transitions, "swing");
+    transition: 120ms 0ms map-get($transitions, 'swing');
     width: $radio-size - 8;
     height: $radio-size - 8;
     border-radius: 100%;
-    content: "";
+    content: '';
     background-color: currentColor;
     transform: scale(0);
   }

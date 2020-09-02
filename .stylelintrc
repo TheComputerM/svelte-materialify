@@ -50,7 +50,7 @@
         ]
       }
     ],
-    "string-quotes": "double",
+    "string-quotes": "single",
     "selector-pseudo-class-no-unknown": [
       true,
       {

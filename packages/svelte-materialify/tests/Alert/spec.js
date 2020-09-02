@@ -14,7 +14,7 @@ describe('Alert', () => {
   });
 
   test('border renders', () => {
-    const { getByRole } = render(html`<${Alert} border='top'>Border<//>`);
+    const { getByRole } = render(html`<${Alert} border="top">Border<//>`);
     const alert = getByRole('alert');
     const border = alert.querySelector('.s-alert__border');
 

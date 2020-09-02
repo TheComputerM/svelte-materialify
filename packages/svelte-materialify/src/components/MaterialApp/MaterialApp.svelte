@@ -3,7 +3,7 @@
 </script>
 
 <style type="scss" global>
-  @import "../../styles/global";
+  @import '../../styles/global';
 </style>
 
 <div class="s-app theme--{theme}">

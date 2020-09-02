@@ -37,7 +37,7 @@
   /**
    * The location of the border
    * @type {left|right|top|bottom|false}
-  */
+   */
   export let border = false;
 
   // Applies the defined color to the alert's border.
@@ -48,7 +48,7 @@
     /**
      * Triggered when alert is dismissed.
      * @returns Nothing
-    */
+     */
     dispatch('dismiss');
   }
 </script>

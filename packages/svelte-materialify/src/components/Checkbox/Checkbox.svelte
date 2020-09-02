@@ -78,11 +78,7 @@
       on:change />
     <div class="s-checkbox__background" aria-hidden="true">
       {#if checked || indeterminate}
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
           <path d={checked ? check : dash} />
         </svg>
       {/if}

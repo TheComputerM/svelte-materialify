@@ -1,9 +1,11 @@
 {
-  "svelteSortOrder" : "scripts-styles-markup",
+  "svelteSortOrder": "scripts-styles-markup",
   "svelteStrictMode": false,
   "svelteBracketNewLine": false,
   "svelteAllowShorthand": true,
   "svelteIndentScriptAndStyle": true,
   "singleQuote": true,
-  "semi": true
+  "semi": true,
+  "trailingComma": "all",
+  "printWidth": 100
 }

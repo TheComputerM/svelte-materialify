@@ -25,9 +25,7 @@ module.exports = {
     {
       files: ['**/tests/**/*.js'],
       env: { jest: true },
-      rules: {
-        'import/no-unresolved': ['error', { ignore: ['^@s/'] }],
-      },
+      rules: { 'import/no-unresolved': ['error', { ignore: ['^@s/'] }] },
     },
     {
       files: ['packages/docs/**/*.{js,svelte}'],
@@ -37,17 +35,21 @@ module.exports = {
         'no-return-assign': ['error', 'except-parens'],
         'no-param-reassign': ['error', { props: false }],
       },
-      globals: {
-        ClipboardJS: 'readonly',
-      },
+      globals: { ClipboardJS: 'readonly' },
     },
   ],
   extends: ['eslint:recommended', 'airbnb-base'],
-  settings: {
-    'svelte3/ignore-styles': () => true,
-  },
+  settings: { 'svelte3/ignore-styles': () => true },
   rules: {
     camelcase: 'off',
+    'object-curly-newline': [
+      'error',
+      {
+        ImportDeclaration: { consistent: true },
+        ExportDeclaration: { consistent: true },
+      },
+    ],
+    'operator-linebreak': ['error', 'none', { overrides: { '=': 'after' } }],
     'no-nested-ternary': 'off',
     'import/no-extraneous-dependencies': 'off',
     'global-require': 'off',

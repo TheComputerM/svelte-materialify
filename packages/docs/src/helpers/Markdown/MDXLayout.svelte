@@ -57,8 +57,8 @@
     font-weight: 500;
   }
   .markdown-container .app-link::after {
-    content: "\F03CC";
-    font: normal normal normal 24px/1 "Material Design Icons";
+    content: '\F03CC';
+    font: normal normal normal 24px/1 'Material Design Icons';
     margin-left: 4px;
     font-size: inherit;
   }
@@ -76,16 +76,11 @@
   {#if related}
     <section>
       <h2 id="ready-for-more" class="heading text-h4 mb-3">
-        <a href="#ready-for-more" aria-hidden="true">
-          <i class="mdi mdi-pound" />
-        </a>
-        Ready For More?
+        <a href="#ready-for-more" aria-hidden="true"> <i class="mdi mdi-pound" /> </a> Ready For More?
       </h2>
       <Row class="justify-space-between">
         {#each related as item}
-          <ReadyForMore
-            href={Object.values(item)[0]}
-            name={Object.keys(item)[0]} />
+          <ReadyForMore href={Object.values(item)[0]} name={Object.keys(item)[0]} />
         {/each}
       </Row>
     </section>
@@ -100,9 +95,6 @@
         GitHub
       </a>
     </span>
-    <span class="text-body-2">
-      <b>Last Updated:</b>
-      CURRENT_DATE
-    </span>
+    <span class="text-body-2"> <b>Last Updated:</b> CURRENT_DATE </span>
   </div>
 </section>

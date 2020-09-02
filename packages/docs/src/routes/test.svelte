@@ -3,7 +3,7 @@
   import { Table } from 'svelte-materialify/src';
 </script>
 
-<Layout title='lo'>
+<Layout title="lo">
   <Table dense style="border: thin solid var(--theme-dividers)">
     <thead>
       <tr>

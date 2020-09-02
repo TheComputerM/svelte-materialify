@@ -1,4 +1,4 @@
-@import "./variables";
+@import './variables';
 
 label {
   max-width: 90%;
@@ -43,7 +43,7 @@ input {
     border-radius: inherit;
     width: inherit;
     bottom: -1px;
-    content: "";
+    content: '';
     left: 0;
     position: absolute;
     transition: $primary-transition;

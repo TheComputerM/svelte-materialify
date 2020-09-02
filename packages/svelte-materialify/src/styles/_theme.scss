@@ -1,20 +1,23 @@
-@use "./variables" as *;
+@use './variables' as *;
 
-@function -flatten($map, $prefix: "") {
+@function -flatten($map, $prefix: '') {
   $output: ();
   @each $x, $y in $map {
-    @if type-of($y) == "map" {
-      $output: map-merge($output, -flatten($y, $prefix + "-" + $x));
+    @if type-of($y) == 'map' {
+      $output: map-merge($output, -flatten($y, $prefix + '-' + $x));
     } @else {
-      $output: map-merge($output, ("--theme#{$prefix}-#{$x}": $y));
+      $output: map-merge(
+        $output,
+        (
+          '--theme#{$prefix}-#{$x}': $y,
+        )
+      );
     }
   }
   @return $output;
 }
 
-@each $name,
-  $material in ("light": $material-light-theme, "dark": $material-dark-theme)
-{
+@each $name, $material in ('light': $material-light-theme, 'dark': $material-dark-theme) {
   .theme--#{$name} {
     @each $x, $y in -flatten($material) {
       #{$x}: #{$y};
@@ -24,7 +27,7 @@
     color: var(--theme-text-primary);
 
     a {
-      color: map-deep-get($material, "text", "link");
+      color: map-deep-get($material, 'text', 'link');
     }
 
     .text--primary {
@@ -42,9 +45,9 @@
 }
 
 :root {
-  --theme-bp-xs: #{map-get($grid-breakpoints, "xs")};
-  --theme-bp-sm: #{map-get($grid-breakpoints, "sm")};
-  --theme-bp-md: #{map-get($grid-breakpoints, "md")};
-  --theme-bp-lg: #{map-get($grid-breakpoints, "lg")};
-  --theme-bp-xl: #{map-get($grid-breakpoints, "xl")};
+  --theme-bp-xs: #{map-get($grid-breakpoints, 'xs')};
+  --theme-bp-sm: #{map-get($grid-breakpoints, 'sm')};
+  --theme-bp-md: #{map-get($grid-breakpoints, 'md')};
+  --theme-bp-lg: #{map-get($grid-breakpoints, 'lg')};
+  --theme-bp-xl: #{map-get($grid-breakpoints, 'xl')};
 }

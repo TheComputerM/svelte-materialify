@@ -11,6 +11,5 @@
     <Button class="primary-color" value="right">Right</Button>
     <Button value="justify">Justify</Button>
   </ButtonGroup>
-  <br />
-  Value: {value}
+  <br /> Value: {value}
 </div>

@@ -26,6 +26,6 @@
 </style>
 
 <Layout title={`${name} API`}>
-  <h1 class='text-h3 mb-6'>{name} API</h1>
+  <h1 class="text-h3 mb-6">{name} API</h1>
   <API {doc} />
 </Layout>

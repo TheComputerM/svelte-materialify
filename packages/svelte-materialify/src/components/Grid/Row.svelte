@@ -6,7 +6,7 @@
 </script>
 
 <style lang="scss">
-  @import "../../styles/variables";
+  @import '../../styles/variables';
 
   .s-row {
     display: flex;

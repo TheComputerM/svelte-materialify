@@ -19,10 +19,6 @@
 
 </style>
 
-<div
-  class="s-avatar {klass}"
-  class:tile
-  use:Style={{ 'avatar-size': size }}
-  {style}>
+<div class="s-avatar {klass}" class:tile use:Style={{ 'avatar-size': size }} {style}>
   <slot />
 </div>

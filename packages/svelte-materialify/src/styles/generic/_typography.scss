@@ -1,8 +1,8 @@
-@use "../variables" as vars;
-@use "../tools/breakpoints" as *;
-@use "../tools/functions" as *;
+@use '../variables' as vars;
+@use '../tools/breakpoints' as *;
+@use '../tools/functions' as *;
 
-@each $align in ("left", "center", "right") {
+@each $align in ('left', 'center', 'right') {
   .text-#{$align} {
     text-align: #{$align};
   }
@@ -13,13 +13,13 @@
   }
 }
 
-@each $decoration in ("none", "overline", "underline", "line-through") {
+@each $decoration in ('none', 'overline', 'underline', 'line-through') {
   .text-decoration-#{$decoration} {
     text-decoration: #{$decoration};
   }
 }
 
-@each $transform in ("lowercase", "uppercase", "capitalize") {
+@each $transform in ('lowercase', 'uppercase', 'capitalize') {
   .text-#{$transform} {
     text-transform: #{$transform};
   }

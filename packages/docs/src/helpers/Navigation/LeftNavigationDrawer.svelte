@@ -59,17 +59,11 @@
         </div>
         {item.text}
         <div slot="right">
-          <Icon
-            path={mdiChevronDown}
-            rotate={item.open ? 180 : 0}
-            class="chevron" />
+          <Icon path={mdiChevronDown} rotate={item.open ? 180 : 0} class="chevron" />
         </div>
       </ListItem>
 
-      <svelte:self
-        items={item.items}
-        depth={depth + 1}
-        bind:visible={item.open} />
+      <svelte:self items={item.items} depth={depth + 1} bind:visible={item.open} />
     {:else}
       <a href={item.href} rel="prefetch">
         <ListItem active={item.href.replace(/\//g, '') === activeLink}>

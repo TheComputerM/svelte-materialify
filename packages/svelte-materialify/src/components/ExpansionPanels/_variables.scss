@@ -1,4 +1,4 @@
-@import "../../styles/variables";
+@import '../../styles/variables';
 
 $expansion-panel-border-radius: $border-radius-root !default;
 $expansion-panel-active-margin: 16px !default;
@@ -10,4 +10,6 @@ $expansion-panel-content-padding: 0 24px 16px !default;
 $expansion-panel-popout-max-width: calc(100% - #{$expansion-panel-active-margin * 2}) !default;
 $expansion-panel-popout-active-max-width: calc(100% + #{$expansion-panel-active-margin}) !default;
 $expansion-panel-inset-max-width: 100% !default;
-$expansion-panel-inset-active-max-width: calc(100% - #{$expansion-panel-active-margin * 2}) !default;
+$expansion-panel-inset-active-max-width: calc(
+  100% - #{$expansion-panel-active-margin * 2}
+) !default;

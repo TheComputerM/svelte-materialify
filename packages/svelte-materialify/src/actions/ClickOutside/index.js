@@ -3,11 +3,11 @@
  * @param {Node} node
  */
 export default (node, options = {}) => {
-  const settings = { exclude: [], ...options };
+  const { exclude } = { exclude: [], ...options };
 
   function checkIfNotClickedOnNode(target) {
     for (let el = target; el && el !== document; el = el.parentNode) {
-      if (node.isSameNode(el) || settings.exclude.some((x) => x.isSameNode(el))) return false;
+      if (node.isSameNode(el) || exclude.some((x) => x.isSameNode(el))) return false;
     }
     return true;
   }

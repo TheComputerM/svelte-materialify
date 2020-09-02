@@ -1,4 +1,4 @@
-@import "./variables";
+@import './variables';
 
 .s-navigation-drawer__border {
   position: absolute;
@@ -28,7 +28,7 @@
   pointer-events: auto;
   top: 0;
   transition-duration: 0.2s;
-  transition-timing-function: map-get($transitions, "fast-out-slow-in");
+  transition-timing-function: map-get($transitions, 'fast-out-slow-in');
   will-change: transform;
   transition-property: transform, visibility, width;
 

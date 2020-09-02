@@ -7,9 +7,7 @@
 </script>
 
 <div class="d-flex justify-center">
-  <Button class="primary-color" on:click={() => (alert = !alert)}>
-    Toggle
-  </Button>
+  <Button class="primary-color" on:click={() => (alert = !alert)}>Toggle</Button>
 </div>
 <br />
 {#if alert}
@@ -18,7 +16,7 @@
     transition={scale}
     transitionOpts={{ duration: 500 }}
     bind:visible={alert}>
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem molestiae
-    voluptates et quae rem autem quasi officia odit suscipit dolor.
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem molestiae voluptates et quae
+    rem autem quasi officia odit suscipit dolor.
   </Alert>
 {/if}

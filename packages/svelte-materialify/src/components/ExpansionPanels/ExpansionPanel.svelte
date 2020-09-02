@@ -27,12 +27,7 @@
   let index;
   let active = false;
 
-  const {
-    Value,
-    Disabled,
-    selectPanel,
-    checkIfActive,
-  } = getContext('S_ExpansionPanel');
+  const { Value, Disabled, selectPanel, checkIfActive } = getContext('S_ExpansionPanel');
 
   function toggle() {
     selectPanel(index);

@@ -30,11 +30,9 @@
   let ListOptionsUnsub = () => {};
   if (InheritListOptions == null) setContext('S_ListOptions', { ListOptions });
   else {
-    ListOptionsUnsub = InheritListOptions.subscribe(
-      ({ disabled: parentDisabled }) => {
-        disabled = parentDisabled == null ? disabled : parentDisabled;
-      },
-    );
+    ListOptionsUnsub = InheritListOptions.subscribe(({ disabled: parentDisabled }) => {
+      disabled = parentDisabled == null ? disabled : parentDisabled;
+    });
   }
 
   onDestroy(ListOptionsUnsub);
@@ -49,8 +47,7 @@
     transition:transition={transitionOpts}
     {role}
     aria-disabled={disabled}
-    class="s-list-group {klass}
-    {active ? activeClass : ''}"
+    class="s-list-group {klass} {active ? activeClass : ''}"
     class:offset
     style="--offset: {offset};{style}">
     <slot />

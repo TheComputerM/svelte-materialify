@@ -8,14 +8,18 @@ const rollup = require('rollup');
 const json = require('@rollup/plugin-json');
 const { terser } = require('rollup-plugin-terser');
 
-const defaults = {
-  defaultVersion: 3,
+const defaults = { defaultVersion: 3 };
+
+const format = {
+  type: 'space',
+  size: 2,
 };
 
-const format = { type: 'space', size: 2 };
-
 async function generateJSON(filename) {
-  const doc = await sveltedoc.parse({ filename, ...defaults });
+  const doc = await sveltedoc.parse({
+    filename,
+    ...defaults,
+  });
   const name = path.basename(filename, '.svelte');
   await fs.writeFile(`./src/${name}.json`, jsonFormat(doc, format), (err) => {
     if (err) throw err;
@@ -37,17 +41,17 @@ async function build() {
     input: './src/index.js',
     plugins: [json(), terser()],
   });
-  await bundle.write({ file: './dist/index.js', format: 'es' });
+  await bundle.write({
+    file: './dist/index.js',
+    format: 'es',
+  });
 }
 
 (async () => {
   const paths = await globby('../svelte-materialify/src/**/*.svelte');
   await fs.writeFile(
     './src/all.json',
-    jsonFormat(
-      { names: paths.map((filename) => path.basename(filename, '.svelte')) },
-      format,
-    ),
+    jsonFormat({ names: paths.map((filename) => path.basename(filename, '.svelte')) }, format),
     (err) => {
       if (err) throw err;
       console.log('all.json has been saved');

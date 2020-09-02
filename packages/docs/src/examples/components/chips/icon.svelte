@@ -16,9 +16,7 @@
     <span>Messages</span>
     <Icon class="mdi mdi-android-messages" />
   </Chip>
-  <Chip class="ma-2 teal white-text" close>
-    <span>Confirmed</span>
-  </Chip>
+  <Chip class="ma-2 teal white-text" close><span>Confirmed</span></Chip>
   <Chip class="ma-2 teal white-text" close>
     <div slot="close-icon">
       <Icon class="mdi mdi-delete" />

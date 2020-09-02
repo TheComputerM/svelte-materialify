@@ -22,12 +22,10 @@
 
   let ListOptionsUnsub = () => {};
   if (ListOptions) {
-    ListOptionsUnsub = ListOptions.subscribe(
-      ({ disabled: parentDisabled, dense: parentDense }) => {
-        disabled = parentDisabled == null ? disabled : parentDisabled;
-        dense = parentDense == null ? dense : parentDense;
-      },
-    );
+    ListOptionsUnsub = ListOptions.subscribe(({ disabled: parentDisabled, dense: parentDense }) => {
+      disabled = parentDisabled == null ? disabled : parentDisabled;
+      dense = parentDense == null ? dense : parentDense;
+    });
   }
 
   onDestroy(ListOptionsUnsub);
@@ -38,8 +36,7 @@
 </style>
 
 <div
-  class="s-list-item {klass}
-  {active ? activeClass : ''}"
+  class="s-list-item {klass} {active ? activeClass : ''}"
   {role}
   aria-selected={role === 'option' ? active : null}
   class:active

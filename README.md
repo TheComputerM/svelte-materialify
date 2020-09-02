@@ -57,9 +57,9 @@ And then in your svelte files, import the compiled module for svelte materialify
 <script>
   // In a svelte file
   // Import Everything
-  import * as S from "svelte-materialify";
+  import * as S from 'svelte-materialify';
   // OR
-  import { Button } from "svelte-materialify";
+  import { Button } from 'svelte-materialify';
   // Import a single component
 </script>
 ```
@@ -83,11 +83,11 @@ Then create a **\_material-theme.scss** file and place it in any folder, lets pu
 ### Svelte
 
 ```js
-import sveltePreprocess from "svelte-preprocess";
+import sveltePreprocess from 'svelte-preprocess';
 
 const preprocess = sveltePreprocess({
   scss: {
-    includePaths: ["theme"],
+    includePaths: ['theme'],
   },
 });
 

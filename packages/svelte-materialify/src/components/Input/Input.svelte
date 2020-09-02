@@ -33,9 +33,7 @@
       <div class="s-input__messages">
         {hint}
         {#each messages as message, i}
-          {#if i < messagesCount}
-          <span>{message}</span>
-          {/if}
+          {#if i < messagesCount}<span>{message}</span>{/if}
         {/each}
       </div>
       {#if counter}

@@ -1,4 +1,4 @@
-@import "./variables";
+@import './variables';
 
 .s-table-wrapper {
   overflow: auto;
@@ -18,14 +18,14 @@ table {
         > td,
         > th {
           padding: 0 16px;
-          transition: height map-get($transitions, "ease-in-out");
+          transition: height map-get($transitions, 'ease-in-out');
         }
 
         > th {
           user-select: none;
           font-size: $table-regular-header-font-size;
           height: $table-regular-header-height;
-          letter-spacing: map-deep-get($headings, "subtitle-2", "letter-spacing");
+          letter-spacing: map-deep-get($headings, 'subtitle-2', 'letter-spacing');
           text-align: left;
         }
 

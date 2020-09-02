@@ -11,10 +11,7 @@
   }
 </script>
 
-<div
-  class="s-lazy"
-  use:Intersect={{ once: true, observer }}
-  on:intersect={intersect}>
+<div class="s-lazy" use:Intersect={{ once: true, observer }} on:intersect={intersect}>
   {#if visible}
     <slot {visible} />
   {:else}

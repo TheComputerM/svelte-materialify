@@ -1,6 +1,6 @@
-@import "./tools/functions";
-@import "./tools/colors";
-@import "./tools/elevation";
+@import './tools/functions';
+@import './tools/colors';
+@import './tools/elevation';
 
 $primary-color: #6200ee !default;
 $secondary-color: #03dac6 !default;
@@ -32,7 +32,7 @@ $code-kbd-font-weight: 900 !default;
 
 $spacer: 4px !default;
 
-$body-font-family: "Roboto", "Segoe UI", sans-serif !default;
+$body-font-family: 'Roboto', 'Segoe UI', sans-serif !default;
 
 $font-weights: () !default;
 $heading-font-family: $body-font-family !default;
@@ -55,138 +55,138 @@ $material-dark-elevation-colors: () !default;
 $material-dark-theme: () !default;
 
 // Importing user defined variables
-@import "material-theme";
+@import 'material-theme';
 
 $rounded: map-deep-merge(
   (
     0: 0,
-    "sm": $border-radius-root / 2,
+    'sm': $border-radius-root / 2,
     null: $border-radius-root,
-    "lg": $border-radius-root * 2,
-    "xl": $border-radius-root * 6,
-    "pill": 9999px,
-    "circle": 50%,
+    'lg': $border-radius-root * 2,
+    'xl': $border-radius-root * 6,
+    'pill': 9999px,
+    'circle': 50%,
   ),
   $rounded
 );
 
 $font-weights: map-merge(
   (
-    "thin": 100,
-    "light": 300,
-    "regular": 400,
-    "medium": 500,
-    "bold": 700,
-    "black": 900,
+    'thin': 100,
+    'light': 300,
+    'regular': 400,
+    'medium': 500,
+    'bold': 700,
+    'black': 900,
   ),
   $font-weights
 );
 
 $headings: map-deep-merge(
   (
-    "h1": (
-      "size": 6rem,
-      "weight": 300,
-      "line-height": 6rem,
-      "letter-spacing": -0.015625em,
-      "font-family": $heading-font-family,
-      "text-transform": false,
+    'h1': (
+      'size': 6rem,
+      'weight': 300,
+      'line-height': 6rem,
+      'letter-spacing': -0.015625em,
+      'font-family': $heading-font-family,
+      'text-transform': false,
     ),
-    "h2": (
-      "size": 3.75rem,
-      "weight": 300,
-      "line-height": 3.75rem,
-      "letter-spacing": -0.0083333333em,
-      "font-family": $heading-font-family,
-      "text-transform": false,
+    'h2': (
+      'size': 3.75rem,
+      'weight': 300,
+      'line-height': 3.75rem,
+      'letter-spacing': -0.0083333333em,
+      'font-family': $heading-font-family,
+      'text-transform': false,
     ),
-    "h3": (
-      "size": 3rem,
-      "weight": 400,
-      "line-height": 3.125rem,
-      "letter-spacing": normal,
-      "font-family": $heading-font-family,
-      "text-transform": false,
+    'h3': (
+      'size': 3rem,
+      'weight': 400,
+      'line-height': 3.125rem,
+      'letter-spacing': normal,
+      'font-family': $heading-font-family,
+      'text-transform': false,
     ),
-    "h4": (
-      "size": 2.125rem,
-      "weight": 400,
-      "line-height": 2.5rem,
-      "letter-spacing": 0.0073529412em,
-      "font-family": $heading-font-family,
-      "text-transform": false,
+    'h4': (
+      'size': 2.125rem,
+      'weight': 400,
+      'line-height': 2.5rem,
+      'letter-spacing': 0.0073529412em,
+      'font-family': $heading-font-family,
+      'text-transform': false,
     ),
-    "h5": (
-      "size": 1.5rem,
-      "weight": 400,
-      "line-height": 2rem,
-      "letter-spacing": normal,
-      "font-family": $heading-font-family,
-      "text-transform": false,
+    'h5': (
+      'size': 1.5rem,
+      'weight': 400,
+      'line-height': 2rem,
+      'letter-spacing': normal,
+      'font-family': $heading-font-family,
+      'text-transform': false,
     ),
-    "h6": (
-      "size": 1.25rem,
-      "weight": 500,
-      "line-height": 2rem,
-      "letter-spacing": 0.0125em,
-      "font-family": $heading-font-family,
-      "text-transform": false,
+    'h6': (
+      'size': 1.25rem,
+      'weight': 500,
+      'line-height': 2rem,
+      'letter-spacing': 0.0125em,
+      'font-family': $heading-font-family,
+      'text-transform': false,
     ),
-    "subtitle-1": (
-      "size": 1rem,
-      "weight": normal,
-      "line-height": 1.75rem,
-      "letter-spacing": 0.009375em,
-      "font-family": $body-font-family,
-      "text-transform": false,
+    'subtitle-1': (
+      'size': 1rem,
+      'weight': normal,
+      'line-height': 1.75rem,
+      'letter-spacing': 0.009375em,
+      'font-family': $body-font-family,
+      'text-transform': false,
     ),
-    "subtitle-2": (
-      "size": 0.875rem,
-      "weight": 500,
-      "line-height": 1.375rem,
-      "letter-spacing": 0.0071428571em,
-      "font-family": $body-font-family,
-      "text-transform": false,
+    'subtitle-2': (
+      'size': 0.875rem,
+      'weight': 500,
+      'line-height': 1.375rem,
+      'letter-spacing': 0.0071428571em,
+      'font-family': $body-font-family,
+      'text-transform': false,
     ),
-    "body-1": (
-      "size": 1rem,
-      "weight": 400,
-      "line-height": 1.5rem,
-      "letter-spacing": 0.03125em,
-      "font-family": $body-font-family,
-      "text-transform": false,
+    'body-1': (
+      'size': 1rem,
+      'weight': 400,
+      'line-height': 1.5rem,
+      'letter-spacing': 0.03125em,
+      'font-family': $body-font-family,
+      'text-transform': false,
     ),
-    "body-2": (
-      "size": 0.875rem,
-      "weight": 400,
-      "line-height": 1.25rem,
-      "letter-spacing": 0.0178571429em,
-      "font-family": $body-font-family,
-      "text-transform": false,
+    'body-2': (
+      'size': 0.875rem,
+      'weight': 400,
+      'line-height': 1.25rem,
+      'letter-spacing': 0.0178571429em,
+      'font-family': $body-font-family,
+      'text-transform': false,
     ),
-    "button": (
-      "size": 0.875rem,
-      "weight": 500,
-      "line-height": 2.25rem,
-      "letter-spacing": 0.0892857143em,
-      "font-family": $body-font-family,
-      "text-transform": uppercase,
+    'button': (
+      'size': 0.875rem,
+      'weight': 500,
+      'line-height': 2.25rem,
+      'letter-spacing': 0.0892857143em,
+      'font-family': $body-font-family,
+      'text-transform': uppercase,
     ),
-    "caption": (
-      "size": 0.75rem,
-      "weight": 400,
-      "line-height": 1.25rem,
-      "letter-spacing": 0.0333333333em,
-      "font-family": $body-font-family,
-      "text-transform": false,
+    'caption': (
+      'size': 0.75rem,
+      'weight': 400,
+      'line-height': 1.25rem,
+      'letter-spacing': 0.0333333333em,
+      'font-family': $body-font-family,
+      'text-transform': false,
     ),
-    "overline": (
-      "size": 0.75rem,
-      "weight": 500,
-      "line-height": 2rem,
-      "letter-spacing": 0.1666666667em,
-      "font-family": $body-font-family,
-      "text-transform": uppercase,
+    'overline': (
+      'size': 0.75rem,
+      'weight': 500,
+      'line-height': 2rem,
+      'letter-spacing': 0.1666666667em,
+      'font-family': $body-font-family,
+      'text-transform': uppercase,
     ),
   ),
   $headings
@@ -194,182 +194,183 @@ $headings: map-deep-merge(
 
 $grid-breakpoints: map-deep-merge(
   (
-    "xs": 0,
-    "sm": 600px,
-    "md": 960px,
-    "lg": 1280px - 16px,
-    "xl": 1920px - 16px,
+    'xs': 0,
+    'sm': 600px,
+    'md': 960px,
+    'lg': 1280px - 16px,
+    'xl': 1920px - 16px,
   ),
   $grid-breakpoints
 );
 
 $grid-gutters: map-deep-merge(
   (
-    "xs": $grid-gutter / 12,
-    "sm": $grid-gutter / 6,
-    "md": $grid-gutter / 3,
-    "lg": $grid-gutter * 2/3,
-    "xl": $grid-gutter,
+    'xs': $grid-gutter / 12,
+    'sm': $grid-gutter / 6,
+    'md': $grid-gutter / 3,
+    'lg': $grid-gutter * 2/3,
+    'xl': $grid-gutter,
   ),
   $grid-gutters
 );
 
+/* prettier-ignore */
 $display-breakpoints: map-deep-merge(
   (
-    "print-only": "only print",
-    "screen-only": "only screen",
-    "xs-only": "only screen and (max-width: #{map-get($grid-breakpoints, "sm")-1})",
-    "sm-only": "only screen and (min-width: #{map-get($grid-breakpoints, "sm")}) and (max-width: #{map-get($grid-breakpoints, "md")-1})",
-    "sm-and-down": "only screen and (max-width: #{map-get($grid-breakpoints, "md")-1})",
-    "sm-and-up": "only screen and (min-width: #{map-get($grid-breakpoints, "sm")})",
-    "md-only": "only screen and (min-width: #{map-get($grid-breakpoints, "md")}) and (max-width: #{map-get($grid-breakpoints, "lg")-1})",
-    "md-and-down": "only screen and (max-width: #{map-get($grid-breakpoints, "lg")-1})",
-    "md-and-up": "only screen and (min-width: #{map-get($grid-breakpoints, "md")})",
-    "lg-only": "only screen and (min-width: #{map-get($grid-breakpoints, "lg")}) and (max-width: #{map-get($grid-breakpoints, "xl")-1})",
-    "lg-and-down": "only screen and (max-width: #{map-get($grid-breakpoints,"xl")-1})",
-    "lg-and-up": "only screen and (min-width: #{map-get($grid-breakpoints,"lg")})",
-    "xl-only": "only screen and (min-width: #{map-get($grid-breakpoints,"xl")})",
+    'print-only': 'only print',
+    'screen-only': 'only screen',
+    'xs-only': 'only screen and (max-width: #{map-get($grid-breakpoints, 'sm')-1})',
+    'sm-only': 'only screen and (min-width: #{map-get($grid-breakpoints, 'sm')}) and (max-width: #{map-get($grid-breakpoints, 'md')-1})',
+    'sm-and-down': 'only screen and (max-width: #{map-get($grid-breakpoints, 'md')-1})',
+    'sm-and-up': 'only screen and (min-width: #{map-get($grid-breakpoints, 'sm')})',
+    'md-only': 'only screen and (min-width: #{map-get($grid-breakpoints, 'md')}) and (max-width: #{map-get($grid-breakpoints, 'lg')-1})',
+    'md-and-down': 'only screen and (max-width: #{map-get($grid-breakpoints, 'lg')-1})',
+    'md-and-up': 'only screen and (min-width: #{map-get($grid-breakpoints, 'md')})',
+    'lg-only': 'only screen and (min-width: #{map-get($grid-breakpoints, 'lg')}) and (max-width: #{map-get($grid-breakpoints, 'xl')-1})',
+    'lg-and-down': 'only screen and (max-width: #{map-get($grid-breakpoints,'xl')-1})',
+    'lg-and-up': 'only screen and (min-width: #{map-get($grid-breakpoints,'lg')})',
+    'xl-only': 'only screen and (min-width: #{map-get($grid-breakpoints,'xl')})',
   ),
   $display-breakpoints
 );
 
 $container-max-widths: map-deep-merge(
   (
-    "md": map-get($grid-breakpoints, "md") * 0.9375,
-    "lg": map-get($grid-breakpoints, "lg") * 0.9375,
-    "xl": map-get($grid-breakpoints, "xl") * 0.9375
+    'md': map-get($grid-breakpoints, 'md') * 0.9375,
+    'lg': map-get($grid-breakpoints, 'lg') * 0.9375,
+    'xl': map-get($grid-breakpoints, 'xl') * 0.9375,
   ),
   $container-max-widths
 );
 
 $transitions: map-deep-merge(
   (
-    "fast-out-slow-in": cubic-bezier(0.4, 0, 0.2, 1),
-    "linear-out-slow-in": cubic-bezier(0, 0, 0.2, 1),
-    "fast-out-linear-in": cubic-bezier(0.4, 0, 1, 1),
-    "ease-in-out": cubic-bezier(0.4, 0, 0.6, 1),
-    "fast-in-fast-out": cubic-bezier(0.25, 0.8, 0.25, 1),
-    "swing": cubic-bezier(0.25, 0.8, 0.5, 1),
+    'fast-out-slow-in': cubic-bezier(0.4, 0, 0.2, 1),
+    'linear-out-slow-in': cubic-bezier(0, 0, 0.2, 1),
+    'fast-out-linear-in': cubic-bezier(0.4, 0, 1, 1),
+    'ease-in-out': cubic-bezier(0.4, 0, 0.6, 1),
+    'fast-in-fast-out': cubic-bezier(0.25, 0.8, 0.25, 1),
+    'swing': cubic-bezier(0.25, 0.8, 0.5, 1),
   ),
   $transitions
 );
 
 $material-light-theme: map-deep-merge(
   (
-    "surface": #ffffff,
-    "text": (
-      "primary": rgba(material-color("shades", "black"), 0.87),
-      "secondary": rgba(material-color("shades", "black"), 0.6),
-      "disabled": rgba(material-color("shades", "black"), 0.38),
-      "link": material-color("blue", "darken-2")
+    'surface': #ffffff,
+    'text': (
+      'primary': rgba(material-color('shades', 'black'), 0.87),
+      'secondary': rgba(material-color('shades', 'black'), 0.6),
+      'disabled': rgba(material-color('shades', 'black'), 0.38),
+      'link': material-color('blue', 'darken-2'),
     ),
-    "icons": (
-      "active": rgba(material-color("shades", "black"), 0.54),
-      "inactive": rgba(material-color("shades", "black"), 0.38),
+    'icons': (
+      'active': rgba(material-color('shades', 'black'), 0.54),
+      'inactive': rgba(material-color('shades', 'black'), 0.38),
     ),
-    "inputs": (
-      "box": rgba(material-color("shades", "black"), 0.04),
+    'inputs': (
+      'box': rgba(material-color('shades', 'black'), 0.04),
     ),
-    "buttons": (
-      "disabled": rgba(material-color("shades", "black"), 0.26),
+    'buttons': (
+      'disabled': rgba(material-color('shades', 'black'), 0.26),
     ),
-    "text-fields": (
-      "filled": rgba(material-color("shades", "black"), 0.06),
-      "filled-hover": rgba(material-color("shades", "black"), 0.12),
-      "outlined": rgba(material-color("shades", "black"), 0.38),
-      "outlined-disabled": rgba(material-color("shades", "black"), 0.26),
-      "border": rgba(material-color("shades", "black"), 0.42)
+    'text-fields': (
+      'filled': rgba(material-color('shades', 'black'), 0.06),
+      'filled-hover': rgba(material-color('shades', 'black'), 0.12),
+      'outlined': rgba(material-color('shades', 'black'), 0.38),
+      'outlined-disabled': rgba(material-color('shades', 'black'), 0.26),
+      'border': rgba(material-color('shades', 'black'), 0.42),
     ),
-    "controls": (
-      "disabled": rgba(material-color("shades", "black"), 0.26),
-      "thumb": (
-        "inactive": material-color("shades", "white"),
-        "disabled": material-color("grey", "lighten-5")
+    'controls': (
+      'disabled': rgba(material-color('shades', 'black'), 0.26),
+      'thumb': (
+        'inactive': material-color('shades', 'white'),
+        'disabled': material-color('grey', 'lighten-5'),
       ),
-      "track": (
-        "inactive": rgba(material-color("shades", "black"), 0.38),
-        "disabled": rgba(material-color("shades", "black"), 0.12)
-      )
+      'track': (
+        'inactive': rgba(material-color('shades', 'black'), 0.38),
+        'disabled': rgba(material-color('shades', 'black'), 0.12),
+      ),
     ),
-    "tables": (
-      "active": material-color("grey", "lighten-4"),
-      "hover": material-color("grey", "lighten-3"),
-      "group": material-color("grey", "lighten-3"),
+    'tables': (
+      'active': material-color('grey', 'lighten-4'),
+      'hover': material-color('grey', 'lighten-3'),
+      'group': material-color('grey', 'lighten-3'),
     ),
-    "dividers": rgba(material-color("shades", "black"), 0.12),
-    "chips": #e0e0e0,
-    "cards": material-color("shades", "white"),
-    "app-bar": material-color("grey", "lighten-4"),
-    "navigation-drawer": material-color("shades", "white")
+    'dividers': rgba(material-color('shades', 'black'), 0.12),
+    'chips': #e0e0e0,
+    'cards': material-color('shades', 'white'),
+    'app-bar': material-color('grey', 'lighten-4'),
+    'navigation-drawer': material-color('shades', 'white'),
   ),
   $material-light-theme
 );
 
 $material-dark-elevation-colors: map-merge(
   (
-    "0": #000000,
-    "1": #1e1e1e,
-    "2": #222222,
-    "3": #252525,
-    "4": #272727,
-    "6": #2c2c2c,
-    "8": #2e2e2e,
-    "12": #333333,
-    "16": #363636,
-    "24": #373737
+    '0': #000000,
+    '1': #1e1e1e,
+    '2': #222222,
+    '3': #252525,
+    '4': #272727,
+    '6': #2c2c2c,
+    '8': #2e2e2e,
+    '12': #333333,
+    '16': #363636,
+    '24': #373737,
   ),
   $material-dark-elevation-colors
 );
 
 $material-dark-theme: map-deep-merge(
   (
-    "surface": #212121,
-    "icons": (
-      "active": material-color("shades", "white"),
-      "inactive": rgba(material-color("shades", "white"), 0.5),
+    'surface': #212121,
+    'icons': (
+      'active': material-color('shades', 'white'),
+      'inactive': rgba(material-color('shades', 'white'), 0.5),
     ),
-    "text": (
-      "primary": material-color("shades", "white"),
-      "secondary": rgba(material-color("shades", "white"), 0.7),
-      "disabled": rgba(material-color("shades", "white"), 0.5),
-      "link": material-color("blue", "accent-1")
+    'text': (
+      'primary': material-color('shades', 'white'),
+      'secondary': rgba(material-color('shades', 'white'), 0.7),
+      'disabled': rgba(material-color('shades', 'white'), 0.5),
+      'link': material-color('blue', 'accent-1'),
     ),
-    "inputs": (
-      "box": material-color("shades", "white"),
+    'inputs': (
+      'box': material-color('shades', 'white'),
     ),
-    "buttons": (
-      "disabled": rgba(material-color("shades", "white"), 0.3),
+    'buttons': (
+      'disabled': rgba(material-color('shades', 'white'), 0.3),
     ),
-    "text-fields": (
-      "filled": rgba(material-color("shades", "white"), 0.08),
-      "filled-hover": rgba(material-color("shades", "white"), 0.16),
-      "outlined": rgba(material-color("shades", "white"), 0.24),
-      "outlined-disabled": rgba(material-color("shades", "white"), 0.16),
-      "border": rgba(material-color("shades", "white"), 0.7)
+    'text-fields': (
+      'filled': rgba(material-color('shades', 'white'), 0.08),
+      'filled-hover': rgba(material-color('shades', 'white'), 0.16),
+      'outlined': rgba(material-color('shades', 'white'), 0.24),
+      'outlined-disabled': rgba(material-color('shades', 'white'), 0.16),
+      'border': rgba(material-color('shades', 'white'), 0.7),
     ),
-    "controls": (
-      "disabled": rgba(material-color("shades", "white"), 0.3),
-      "thumb": (
-        "inactive": material-color("grey", "lighten-1"),
-        "disabled": material-color("grey", "darken-3")
+    'controls': (
+      'disabled': rgba(material-color('shades', 'white'), 0.3),
+      'thumb': (
+        'inactive': material-color('grey', 'lighten-1'),
+        'disabled': material-color('grey', 'darken-3'),
       ),
-      "track": (
-        "inactive": rgba(material-color("shades", "white"), 0.3),
-        "disabled": rgba(material-color("shades", "white"), 0.1)
-      )
+      'track': (
+        'inactive': rgba(material-color('shades', 'white'), 0.3),
+        'disabled': rgba(material-color('shades', 'white'), 0.1),
+      ),
     ),
-    "tables": (
-      "active": #505050,
-      "hover": material-color("grey", "darken-2"),
-      "group": material-color("grey", "darken-2"),
+    'tables': (
+      'active': #505050,
+      'hover': material-color('grey', 'darken-2'),
+      'group': material-color('grey', 'darken-2'),
     ),
-    "dividers": rgba(material-color("shades", "white"), 0.12),
-    "chips": #555555,
-    "cards": map-get($material-dark-elevation-colors, "1"),
-    "app-bar": map-get($material-dark-elevation-colors, "4"),
-    "navigation-drawer": map-get($material-dark-elevation-colors, "16")
+    'dividers': rgba(material-color('shades', 'white'), 0.12),
+    'chips': #555555,
+    'cards': map-get($material-dark-elevation-colors, '1'),
+    'app-bar': map-get($material-dark-elevation-colors, '4'),
+    'navigation-drawer': map-get($material-dark-elevation-colors, '16'),
   ),
   $material-dark-theme
 );
 
-$primary-transition: 0.3s map-get($transitions, "swing") !default;
+$primary-transition: 0.3s map-get($transitions, 'swing') !default;

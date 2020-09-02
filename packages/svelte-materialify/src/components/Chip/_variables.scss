@@ -1,4 +1,4 @@
-@import "../../styles/variables";
+@import '../../styles/variables';
 
 $chip-avatar-size: 24px !default;
 $chip-close-size: 18px !default;
@@ -14,7 +14,7 @@ $chip-pill-avatar-margin-before: -12px !default;
 $chip-pill-avatar-size: 32px !default;
 $chip-pill-filter-margin: 0 16px 0 0 !default;
 $chip-transition-duration: 0.28s !default;
-$chip-transition-fn: map-get($transitions, "fast-out-slow-in") !default;
+$chip-transition-fn: map-get($transitions, 'fast-out-slow-in') !default;
 $icon-outlined-border-width: thin !default;
 $chip-line-height: 20px !default;
 $chip-padding: 0 12px !default;
@@ -26,26 +26,26 @@ $chip-selected-opacity: 0.28 !default;
 $icon-sizes: () !default;
 $icon-sizes: map-deep-merge(
   (
-    "x-small": (
-      "font-size": 10,
-      "height": 16
+    'x-small': (
+      'font-size': 10,
+      'height': 16,
     ),
-    "small": (
-      "font-size": 12,
-      "height": 24
+    'small': (
+      'font-size': 12,
+      'height': 24,
     ),
-    "default": (
-      "font-size": 14,
-      "height": 32
+    'default': (
+      'font-size': 14,
+      'height': 32,
     ),
-    "large": (
-      "font-size": 16,
-      "height": 54
+    'large': (
+      'font-size': 16,
+      'height': 54,
     ),
-    "x-large": (
-      "font-size": 18,
-      "height": 66
-    )
+    'x-large': (
+      'font-size': 18,
+      'height': 66,
+    ),
   ),
   $icon-sizes
 );

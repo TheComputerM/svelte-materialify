@@ -37,18 +37,10 @@
 
 <div class="s-radio" {style}>
   <div
-    class="s-radio__wrapper {klass}
-    {active ? activeClass : ''}"
+    class="s-radio__wrapper {klass} {active ? activeClass : ''}"
     class:disabled
     use:Ripple={{ centered: true }}>
-    <input
-      type="radio"
-      role="radio"
-      aria-selected={active}
-      bind:group
-      {id}
-      {value}
-      {disabled} />
+    <input type="radio" role="radio" aria-selected={active} bind:group {id} {value} {disabled} />
     <div class="s-radio__background" />
   </div>
   <label for={id}>

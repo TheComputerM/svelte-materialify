@@ -1,11 +1,25 @@
-@use "../tools/breakpoints" as *;
+@use '../tools/breakpoints' as *;
 
-.float-left { float: left; }
-.float-right { float: right; }
-.float-none { float: none; }
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-none {
+  float: none;
+}
 
 @include create_breakpoints() using ($screen_size) {
-  .float-#{$screen_size}-left { float: left; }
-  .float-#{$screen_size}-right { float: right; }
-  .float-#{$screen_size}-none { float: none; }
+  .float-#{$screen_size}-left {
+    float: left;
+  }
+  .float-#{$screen_size}-right {
+    float: right;
+  }
+  .float-#{$screen_size}-none {
+    float: none;
+  }
 }

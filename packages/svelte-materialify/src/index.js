@@ -16,22 +16,13 @@ export { default as Alert } from './components/Alert';
 export { default as Chip } from './components/Chip';
 export { default as Dialog } from './components/Dialog';
 export { default as Divider } from './components/Divider';
-export {
-  default as ExpansionPanels,
-  ExpansionPanel,
-} from './components/ExpansionPanels';
+export { default as ExpansionPanels, ExpansionPanel } from './components/ExpansionPanels';
 export { default as Avatar } from './components/Avatar';
 export { default as AppBar } from './components/AppBar';
 export { default as Breadcrumbs } from './components/Breadcrumbs';
 export { default as ProgressLinear } from './components/ProgressLinear';
 export { default as ProgressCircular } from './components/ProgressCircular';
-export {
-  default as Card,
-  CardActions,
-  CardSubtitle,
-  CardText,
-  CardTitle,
-} from './components/Card';
+export { default as Card, CardActions, CardSubtitle, CardText, CardTitle } from './components/Card';
 export { default as List, ListGroup, ListItem } from './components/List';
 export { default as VirtualList } from './components/VirtualList';
 export { default as Menu } from './components/Menu';

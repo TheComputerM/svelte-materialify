@@ -24,10 +24,7 @@
 </style>
 
 {#if visible}
-  <div
-    role="document"
-    class="s-dialog"
-    use:Style={{ 'dialog-width': width }}>
+  <div role="document" class="s-dialog" use:Style={{ 'dialog-width': width }}>
     <div
       class="s-dialog__content {klass}"
       class:fullscreen

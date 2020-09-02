@@ -92,7 +92,7 @@
     /**
      * Event when menu is opened.
      * @returns Nothing
-    */
+     */
     dispatch('open');
   }
 
@@ -102,7 +102,7 @@
     /**
      * Event when menu is closed.
      * @returns Nothing
-    */
+     */
     dispatch('close');
   }
 
@@ -150,12 +150,7 @@
 
 </style>
 
-<div
-  class="s-menu-wrapper"
-  bind:this={wrapper}
-  use:ClickOutside
-  on:clickOutside={clickOutsideMenu}>
-
+<div class="s-menu-wrapper" bind:this={wrapper} use:ClickOutside on:clickOutside={clickOutsideMenu}>
   <!-- Slot for the trigger/activator. -->
   <slot name="activator" />
 

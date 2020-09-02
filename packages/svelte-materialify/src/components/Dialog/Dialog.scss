@@ -1,4 +1,4 @@
-@import "./variables";
+@import './variables';
 
 .s-dialog {
   align-items: center;
@@ -9,7 +9,7 @@
   pointer-events: none;
   position: fixed;
   top: 0;
-  transition: 0.2s map-get($transitions, "fast-in-fast-out"), z-index 1ms;
+  transition: 0.2s map-get($transitions, 'fast-in-fast-out'), z-index 1ms;
   width: 100%;
   z-index: 6;
   outline: none;

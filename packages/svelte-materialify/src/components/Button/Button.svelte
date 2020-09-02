@@ -17,7 +17,7 @@
   /**
    * Determines the size of the button
    * @type {x-small|small|default|large|x-large}
-  */
+   */
   export let size = 'default';
 
   // Removed the border radius if true.
@@ -44,7 +44,7 @@
   /**
    * Specifies the type of button
    * @type {button|reset|submit}
-  */
+   */
   export let type = 'button';
 
   // Options for the ripple directive

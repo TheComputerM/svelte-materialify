@@ -1,4 +1,4 @@
-@import "./variables";
+@import './variables';
 
 .s-card {
   background-color: var(--theme-cards);
@@ -48,14 +48,14 @@
     &::before {
       background: currentColor;
       bottom: 0;
-      content: "";
+      content: '';
       left: 0;
       opacity: 0;
       pointer-events: none;
       position: absolute;
       right: 0;
       top: 0;
-      transition: 0.2s opacity map-get($transitions, "fast-in-slow-out");
+      transition: 0.2s opacity map-get($transitions, 'fast-in-slow-out');
     }
 
     &:focus::before {

@@ -1,4 +1,4 @@
-@import "./variables";
+@import './variables';
 
 .s-list-item__content {
   align-items: center;
@@ -68,7 +68,7 @@
       min-width: $list-item-child-min-width;
     }
 
-    [slot="left"] {
+    [slot='left'] {
       .s-avatar {
         margin-right: $list-item-avatar-first-child-margin;
       }
@@ -89,7 +89,7 @@
       top: 0;
       left: 0;
       right: 0;
-      content: "";
+      content: '';
       pointer-events: none;
       position: absolute;
       opacity: 0;
@@ -145,7 +145,7 @@
         margin-bottom: $list-item-icon-margin-y/2;
       }
 
-      [slot="left"] {
+      [slot='left'] {
         .s-icon {
           margin-right: $list-item-dense-action-icon-margin;
         }
@@ -165,7 +165,7 @@
   }
 
   &::after {
-    content: "";
+    content: '';
     min-height: inherit;
     font-size: 0;
   }

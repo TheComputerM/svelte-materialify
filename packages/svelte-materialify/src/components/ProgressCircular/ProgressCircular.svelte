@@ -35,7 +35,6 @@
   class="s-progress-circular {klass}"
   class:indeterminate
   style="width:{size}px;height:{size}px">
-
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="{viewBoxSize}
@@ -43,15 +42,11 @@
     {2 * viewBoxSize}
     {2 * viewBoxSize}"
     style="transform: rotate({rotate}deg)">
-
     {#if !indeterminate}
       <circle class="underlay" {...circleProps} stroke-dashoffset="0" />
     {/if}
 
-    <circle
-      class="overlay"
-      {...circleProps}
-      stroke-dashoffset={strokeDashOffset} />
+    <circle class="overlay" {...circleProps} stroke-dashoffset={strokeDashOffset} />
   </svg>
 
   <div class="s-progress-circular__content">

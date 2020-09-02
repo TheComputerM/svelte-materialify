@@ -12,8 +12,7 @@
     <Button>Right</Button>
     <Button>Justify</Button>
   </ButtonGroup>
-  <br />
-  Value: {value1}
+  <br /> Value: {value1}
 </div>
 <br />
 <div class="text-center">
@@ -23,6 +22,5 @@
     <Button>Right</Button>
     <Button>Justify</Button>
   </ButtonGroup>
-  <br />
-  Value: {value2}
+  <br /> Value: {value2}
 </div>

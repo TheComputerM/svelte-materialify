@@ -1,6 +1,4 @@
-import {
-  render, fireEvent, waitFor,
-} from '@testing-library/svelte';
+import { render, fireEvent, waitFor } from '@testing-library/svelte';
 import Button from '@s/components/Button';
 import html from 'svelte-htm';
 

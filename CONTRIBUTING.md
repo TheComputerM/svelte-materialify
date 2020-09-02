@@ -1,11 +1,13 @@
 # Contributing
 
 ## Commit Convention
+
 ```
 type(category): description
 ```
 
 Where `type` is one of the following
+
 - `chore`: updating rollup configs; no production code change
 - `docs`: changes to the documentation/website
 - `feat`: new feature for the user, not a new feature for build script
@@ -16,6 +18,7 @@ Where `type` is one of the following
 - `other`: other
 
 Where `category` is one of the following
+
 - `ci`
 - `a11y`
 - `${component_name}`

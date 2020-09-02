@@ -6,7 +6,11 @@ const lg = parseInt(vars.getPropertyValue('--theme-bp-lg'), 10);
 const xl = parseInt(vars.getPropertyValue('--theme-bp-xl'), 10);
 
 export const breakpoints = {
-  xs, sm, md, lg, xl,
+  xs,
+  sm,
+  md,
+  lg,
+  xl,
 };
 
 const displayBreakpoints = {
