@@ -1,4 +1,6 @@
 <script>
+  import Style from '../../internal/Style';
+
   // Classes to add to avatar.
   let klass = '';
   export { klass as class };
@@ -18,8 +20,9 @@
 </style>
 
 <div
-  style="height:{size};width:{size};{style}"
   class="s-avatar {klass}"
-  class:tile>
+  class:tile
+  use:Style={{ 'avatar-size': size }}
+  {style}>
   <slot />
 </div>

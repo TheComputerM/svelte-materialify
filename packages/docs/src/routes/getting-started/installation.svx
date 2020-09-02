@@ -16,7 +16,7 @@ Get Started with Svelte Materialify, the best material UI component library for 
 
 ## Minimal Install
 
-If you want to try out svelte materialify and tinker with it, visit the [repl playground][];
+If you want to try out svelte materialify and tinker with it, visit the [repl playground](https://svelte.dev/repl/2c55788d8ffd4458bfe9bcb5f58956db).
 
 
 If want a fast and basic setup then only installing `svelte-materialify` should be fine.
@@ -31,14 +31,14 @@ And then in your svelte files, import the compiled module for svelte materialify
 <script>
   // In a svelte file
   // Import Everything
-  import * as S from "svelte-materialify/dist/index.mjs";
+  import * as S from "svelte-materialify";
   // OR
-  import { Button } from "svelte-materialify/dist/index.mjs";
+  import { Button } from "svelte-materialify";
   // Import a single component
 </script>
 ```
 
-We also need **[focus-visible](https://github.com/WICG/focus-visible)** if you want keyboard focused styles.
+We can also **optionally** add [focus-visible](https://github.com/WICG/focus-visible), if you want keyboard focused styles.
 
 ```html
 <script src="https://unpkg.com/focus-visible@latest/dist/focus-visible.min.js"></script>
@@ -46,7 +46,7 @@ We also need **[focus-visible](https://github.com/WICG/focus-visible)** if you w
 
 ## Advanced Install
 
-If you want finer control over Svelte Materialify and installation you want to install all its peer dependencies.
+If you want finer control over Svelte Materialify and installation you want to install all its peer dependencies. Follow this guide for SSR.
 
 ```shell
 $ npm i -D svelte-materialify svelte-preprocess sass
@@ -56,7 +56,7 @@ $ npm i -D svelte-materialify svelte-preprocess sass
   Now you can use SCSS and SASS in your styles.
 </Alert>
 
-Then create a **\_material-theme.scss** file and place it in any folder, lets put it in a folder called theme. Then include the path in the preprocess function in your __rollup.config.js__ (likewise follow the same in webpack but for svelte-loader).
+Then create a **\_material-theme.scss** file and place it in any folder, lets put it in a folder called **theme**. Then include the path in the preprocess function in your __rollup.config.js__ (likewise follow the same in webpack but for svelte-loader).
 
 ### Svelte
 

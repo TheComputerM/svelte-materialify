@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://svelte-materialify.netlify.app/" target="_blank">
+  <a href="https://svelte-materialify.vercel.app/" target="_blank">
     <img alt="Vuetify Logo" width="100" src="logo/logo.svg">
   </a>
 </p>
@@ -25,42 +25,116 @@
   </a>
 </p>
 
+**Currently In Active Development**
+
 A better material design framework for Svelte. _(much like [Vuetify](https://vuetifyjs.com/))_. With full support for light and dark themes and customisability.
 
 This is still in development. To contribute, please read [CONTRIBUTING.md](./CONTRIBUTING.md) and open a PR.
 
-## Things to add
-
-- [x] Button
-- [x] Icon
-- [x] Alerts
-- [x] Dividers
-- [x] Avatars
-- [x] ProgressLinear
-- [x] ProgressCircular
-- [x] Breadcrumbs
-- [x] Cards
-- [x] Lists
-- [x] Overlay
-- [x] Subheader
-- [x] Grid
-- [ ] Badges
-- [ ] Banners
-- [ ] Bars
-- [x] Navigation
-- [ ] Modals
-- [ ] Bottom Sheets
-- [ ] Chips
-- [ ] Dialogs
-- [ ] Footer
-- _and much more_
-
+There are currently more than **35** different components are more are planned to arrive soon.
 
 ## Website
+
 Website is located at [https://svelte-materialify.vercel.app/](https://svelte-materialify.vercel.app/), it is still in development.
 
-## Thanks To:
-- __[Shriji](https://github.com/peopledrivemecrazy)__ for the logos
-- __[Vuetify](https://vuetifyjs.com/)__
-- __[Material Design](https://material.io/components/)__
-- __[Jump.js](https://github.com/callmecavs/jump.js)__
+# Installation
+
+Get Started with Svelte Materialify, the best material UI component library for Svelte
+
+## Minimal Install
+
+If you want to try out svelte materialify and tinker with it, visit the [repl playground](https://svelte.dev/repl/2c55788d8ffd4458bfe9bcb5f58956db).
+
+If want a fast and basic setup then only installing `svelte-materialify` should be fine.
+
+```shell
+$ npm i svelte-materialify
+```
+
+And then in your svelte files, import the compiled module for svelte materialify
+
+```html
+<script>
+  // In a svelte file
+  // Import Everything
+  import * as S from "svelte-materialify";
+  // OR
+  import { Button } from "svelte-materialify";
+  // Import a single component
+</script>
+```
+
+We can also **optionally** add [focus-visible](https://github.com/WICG/focus-visible), if you want keyboard focused styles.
+
+```html
+<script src="https://unpkg.com/focus-visible@latest/dist/focus-visible.min.js"></script>
+```
+
+## Advanced Install
+
+If you want finer control over Svelte Materialify and installation you want to install all its peer dependencies. Follow this guide for SSR.
+
+```shell
+$ npm i -D svelte-materialify svelte-preprocess sass
+```
+
+Then create a **\_material-theme.scss** file and place it in any folder, lets put it in a folder called **theme**. Then include the path in the preprocess function in your **rollup.config.js** (likewise follow the same in webpack but for svelte-loader).
+
+### Svelte
+
+```js
+import sveltePreprocess from "svelte-preprocess";
+
+const preprocess = sveltePreprocess({
+  scss: {
+    includePaths: ["theme"],
+  },
+});
+
+export default {
+  // ...,
+  plugins: [
+    svelte({ preprocess }),
+    // ...
+  ],
+};
+```
+
+### Sapper Integration
+
+```js
+import sveltePreprocess from "svelte-preprocess";
+
+const preprocess = sveltePreprocess({
+  scss: {
+    includePaths: ["theme"],
+  }
+});
+
+export default {
+  client: {
+    plugins: [
+      svelte({
+        preprocess,
+        // ...
+      }),
+  },
+  server: {
+    plugins: [
+      svelte({
+        preprocess,
+        // ...
+      }),
+    ],
+  },
+};
+```
+
+## Thanks:
+
+- **[Shriji](https://github.com/peopledrivemecrazy)** for the logos.
+- **[MDsveX](https://github.com/pngwn/MDsveX)**
+- **[sveltedoc-parser](https://github.com/alexprey/sveltedoc-parser)**
+- **[Vuetify](https://vuetifyjs.com/)**
+- **[Material Design](https://material.io/components/)**
+- **[Jump.js](https://github.com/callmecavs/jump.js)**
