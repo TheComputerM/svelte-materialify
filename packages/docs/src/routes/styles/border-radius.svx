@@ -7,17 +7,18 @@ related:
 
 <script context="module">
   export async function preload() {
-    let examples = await this.fetch('examples/styles/border-radius.json');
-    examples = await examples.json();
-    return { examples }
+    let sources = await this.fetch('examples/styles/border-radius.json');
+    sources = await sources.json();
+    return { sources }
   }
 </script>
 
 <script>
-  import { Alert, Example } from '@shared';
+  import { Alert, Example, setExamples } from '@shared';
   import * as Examples from '@examples/styles/border-radius';
 
-  export let examples;
+  export let sources;
+  setExamples([sources, Examples]);
 </script>
 
 # Border Radius
@@ -56,14 +57,14 @@ $rounded: map-deep-merge(
 ### Different sizes and types
 
 The rounded helper classes allow you to modify the border radius of an element. Use the `.rounded-sm`, `.rounded`, `.rounded-lg`, and `.rounded-xl` to add a border radius of varying size.
-<Example code={examples.sizes} component={Examples.sizes} />
+<Example name="sizes" />
 
 ### Sides
 
 Use these helper classes to add border radius to specific sides.
-<Example code={examples.side} component={Examples.side} />
+<Example name="side" />
 
 ### Corners
 
 Use these helper classes to add border radius to specific corners.
-<Example code={examples.corner} component={Examples.corner} />
+<Example name="corner" />

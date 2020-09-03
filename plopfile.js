@@ -1,5 +1,50 @@
+const templates = {
+  component: {
+    index: "export { default } from './{{name}}.svelte';\n",
+    variables: "@import '../../styles/variables';",
+    scss: "@import './variables';",
+    svelte: "<style lang='scss' src='./{{name}}.scss'></style>",
+  },
+  doc: {
+    index: "{{#each examples}}export { default as {{this}} } from './{{this}}.svelte';\n{{/each}}",
+    svx: `---
+title: {{name}}
+---
+
+{{#if examples.length}}
+<script context="module">
+  export async function preload() {
+    let sources = await this.fetch('examples/{{folder}}/{{camelCase name}}.json');
+    sources = await sources.json();
+    return { sources };
+  }
+</script>
+{{/if}}
+
+<script>
+{{#if examples.length}}
+  import { API, Example, setExamples } from '@shared';
+  import * as Examples from '@examples/{{folder}}/{{camelCase name}}';
+  export let sources;
+  setExamples([sources, Examples]);
+{{/if}}
+</script>
+
+# {{name}}
+
+{{#each examples}}
+<Example name="{{this}}" />
+{{/each}}`,
+  },
+};
+
+const paths = {
+  materialify: 'packages/svelte-materialify/src',
+  docs: 'packages/docs/src/routes',
+  examples: 'packages/docs/src/examples',
+};
+
 module.exports = (plop) => {
-  const components = 'packages/svelte-materialify/src';
   plop.setGenerator('component', {
     description: 'create a new component',
     prompts: [
@@ -12,33 +57,32 @@ module.exports = (plop) => {
     actions: [
       {
         type: 'add',
-        path: `${components}/components/{{name}}/_variables.scss`,
-        template: "@import '../../styles/variables';",
+        path: `${paths.materialify}/components/{{name}}/_variables.scss`,
+        template: templates.component.variables,
       },
       {
         type: 'add',
-        path: `${components}/components/{{name}}/{{name}}.scss`,
-        template: "@import './variables';",
+        path: `${paths.materialify}/components/{{name}}/{{name}}.scss`,
+        template: templates.component.scss,
       },
       {
         type: 'add',
-        path: `${components}/components/{{name}}/{{name}}.svelte`,
-        template: "<style lang='scss' src='./{{name}}.scss'></style>",
+        path: `${paths.materialify}/components/{{name}}/{{name}}.svelte`,
+        template: templates.component.svelte,
       },
       {
         type: 'add',
-        path: `${components}/components/{{name}}/index.js`,
-        template: "export { default } from './{{name}}.svelte';\n",
+        path: `${paths.materialify}/components/{{name}}/index.js`,
+        template: templates.component.index,
       },
       {
         type: 'append',
-        path: `${components}/index.js`,
-        template: "export { default as {{name}} } from './components/{{name}}/';",
+        path: `${paths.materialify}/index.js`,
+        template: "export { default as {{name}} } from './components/{{name}}';",
       },
     ],
   });
 
-  const docs = 'packages/docs/src/routes';
   plop.setGenerator('doc', {
     description: 'create a new doc',
     prompts: [
@@ -51,84 +95,36 @@ module.exports = (plop) => {
       {
         type: 'input',
         name: 'name',
-        message: 'title of page',
-      },
-      {
-        type: 'confirm',
-        name: 'example',
-        message: 'are there examples?',
-      },
-    ],
-    actions: [
-      {
-        type: 'add',
-        path: `${docs}/{{folder}}/{{dashCase name}}.svx`,
-        template: `---
-title: {{name}}
----
-
-{{#if example}}
-<script context="module">
-export async function preload() {
-  let examples = await this.fetch('examples/{{folder}}/{{camelCase name}}.json');
-  examples = await examples.json();
-  return { examples }
-}
-</script>
-{{/if}}
-
-<script>
-  {{#if example}}
-  import { Example, API } from '@shared';
-  import * as Examples from '@examples/styles/{{camelCase name}}';
-  export let examples;
-  {{/if}}
-</script>
-
-# {{name}}`,
-      },
-    ],
-  });
-
-  const examples = 'packages/docs/src/examples';
-  plop.setGenerator('examples', {
-    description: 'create new examples',
-    prompts: [
-      {
-        type: 'list',
-        name: 'folder',
-        message: 'type',
-        choices: ['components', 'actions', 'styles', 'getting-started'],
-      },
-      {
-        type: 'input',
-        name: 'name of folder',
-        message: 'name',
+        message: 'title',
       },
       {
         type: 'input',
         name: 'examples',
-        message: 'examples (separated by ,)',
-        filter: (value) => value.replace(/ /g, '').split(','),
+        message: 'examples (separate with ,)',
+        filter: (v) => v.split(',').filter((x) => !!x),
       },
     ],
-    actions: (data) => {
+    actions: ({ examples }) => {
       const actions = [
         {
           type: 'add',
-          path: `${examples}/{{folder}}/{{camelCase name}}/index.js`,
-          template:
-            "{{#each examples}}export { default as {{this}} } from './{{this}}.svelte';\n{{/each}}",
+          path: `${paths.docs}/{{folder}}/{{dashCase name}}.svx`,
+          template: templates.doc.svx,
         },
       ];
-
-      data.examples.forEach((example) => {
+      if (examples.length) {
         actions.push({
           type: 'add',
-          path: `${examples}/{{folder}}/{{camelCase name}}/${example}.svelte`,
+          path: `${paths.examples}/{{folder}}/{{camelCase name}}/index.js`,
+          template: templates.doc.index,
         });
-      });
-
+        examples.forEach((example) => {
+          actions.push({
+            type: 'add',
+            path: `${paths.examples}/{{folder}}/{{camelCase name}}/${example}.svelte`,
+          });
+        });
+      }
       return actions;
     },
   });

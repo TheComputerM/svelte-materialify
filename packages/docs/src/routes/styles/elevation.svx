@@ -7,9 +7,9 @@ related:
 
 <script context="module">
   export async function preload() {
-    let examples = await this.fetch('examples/styles/elevation.json');
-    examples = await examples.json();
-    return { examples }
+    let sources = await this.fetch('examples/styles/elevation.json');
+    sources = await sources.json();
+    return { sources }
   }
 </script>
 
@@ -17,7 +17,8 @@ related:
   import Example from '@shared/Example.svelte';
   import * as Examples from '@examples/styles/elevation';
 
-  export let examples;
+  export let sources;
+  setExamples([sources, Examples]);
 </script>
 
 # Elevation
@@ -30,7 +31,7 @@ elevation.
 ## Usage
 The `elevation` helper classes allow you to assign a custom **z-depth** to any element.
 
-<Example code={examples.elevations} component={Examples.elevations} />
+<Example name="elevations" />
 
 ## SCSS
 You can also access the elevation helpers through SCSS mixins by including the elevation tool

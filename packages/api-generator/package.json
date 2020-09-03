@@ -3,12 +3,10 @@
   "private": true,
   "version": "0.0.1",
   "module": "dist/index.js",
+  "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node helpers/generate.js",
-    "lint": "echo TODO",
-    "lint:fix": "echo TODO",
-    "precommit": "echo TODO"
+    "start": "node helpers/generate.js"
   },
   "devDependencies": {
     "@rollup/plugin-json": "^4.1.0",

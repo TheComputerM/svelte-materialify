@@ -1,11 +1,20 @@
+<script context="module">
+  let sources;
+  let components;
+  export function setExamples(examples) {
+    [sources, components] = examples;
+  }
+</script>
+
 <script>
   import { onDestroy } from 'svelte';
   import { slide } from 'svelte/transition';
   import { Icon, Button } from 'svelte-materialify/src';
   import { theme } from '../helpers/stores';
 
-  export let code;
-  export let component;
+  export let name = '';
+  const { code, path } = sources[name];
+  const component = components[name];
 
   let codeVisible = false;
   let colorInvertable = false;
@@ -16,7 +25,7 @@
   });
   onDestroy(unsubscribe);
 
-  const codeContent = `<pre class=language-html><code class=language-html>${code.code}</code></pre>`;
+  const codeContent = `<pre class=language-html><code class=language-html>${code}</code></pre>`;
 </script>
 
 <style>
@@ -40,7 +49,7 @@
       </Button>
     {/if}
     <a
-      href="https://github.com/TheComputerM/svelte-materialify/tree/master/packages/docs/{code.path}"
+      href="https://github.com/TheComputerM/svelte-materialify/tree/master/packages/docs/{path}"
       rel="noopener noreferrer"
       target="_blank">
       <Button fab icon size="small" class="text--primary">

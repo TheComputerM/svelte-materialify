@@ -4,16 +4,17 @@ title: Float
 
 <script context="module">
   export async function preload() {
-    let examples = await this.fetch('examples/styles/float.json');
-    examples = await examples.json();
-    return { examples }
+    let sources = await this.fetch('examples/styles/float.json');
+    sources = await sources.json();
+    return { sources }
   }
 </script>
 
 <script>
   import Example from '@shared/Example.svelte';
   import * as Examples from '@examples/styles/float';
-  export let examples;
+  export let sources;
+  setExamples([sources, Examples]);
 </script>
 
 # Float
@@ -24,7 +25,7 @@ Applies a custom float across any breakpoint with responsive float utilities.
 
 Floats can also be applied on a per breakpoint (viewport) basis. Here is a list of all the available support classes:
 
-<Example code={examples.float} component={Examples.float} />
+<Example name="float" />
 
 <ul class='font-weight-bold'>
   {#each ['-', '-sm-', '-md-', '-lg-', '-xl-'] as bp}

@@ -8,17 +8,18 @@ related:
 
 <script context="module">
   export async function preload() {
-    let examples = await this.fetch('examples/components/menus.json');
-    examples = await examples.json();
-    return { examples }
+    let sources = await this.fetch('examples/components/menus.json');
+    sources = await sources.json();
+    return { sources }
   }
 </script>
 
 <script>
-  import { API, Example } from '@shared';
-  import { Menu as doc } from 'svelte-materialify-api/dist';
+  import { API, Example, setExamples } from '@shared';
+  import { Menu as doc } from 'svelte-materialify-api';
   import * as Examples from '@examples/components/menus';
-  export let examples;
+  export let sources;
+  setExamples([sources, Examples]);
 </script>
 
 # Menus
@@ -34,7 +35,7 @@ The `Menu` component shows a menu at the position of the element used to activat
 ## Usage
 
 Remember to put the element that activates the menu in the activator slot.
-<Example code={examples.basic} component={Examples.basic} />
+<Example name="basic" />
 
 
 ## Examples
@@ -45,27 +46,27 @@ Below is a collection of simple to complex examples.
 ### Absolute Position
 
 Menus can also be placed absolutely on top of the activator element using the `absolute` prop. Try clicking anywhere on the image.
-<Example code={examples.absolute} component={Examples.absolute} />
+<Example name="absolute" />
 
 
 ### Hover
 
 Menus can be accessed using hover instead of clicking with the `hover` prop.
-<Example code={examples.hover} component={Examples.hover} />
+<Example name="hover" />
 
 ### Offsets
 
 Menu can be offset by the **X** and **Y** axis to make the activator visible.
-<Example code={examples.offsets} component={Examples.offsets} />
+<Example name="offsets" />
 
 
 ### Close on content click
 
 You can choose the close or not close the menu when the content inside it has been clicked.
-<Example code={examples.contentClick} component={Examples.contentClick} />
+<Example name="contentClick" />
 
 
 ### Transitions
 
 You can use different transitions for when the menu is opening and closing using the inbuilt svelte transitions and easing functions.
-<Example code={examples.transitions} component={Examples.transitions} />
+<Example name="transitions" />

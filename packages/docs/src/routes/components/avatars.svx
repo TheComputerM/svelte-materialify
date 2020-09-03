@@ -4,17 +4,18 @@ title: Avatar Component
 
 <script context="module">
   export async function preload() {
-    let examples = await this.fetch('examples/components/avatars.json');
-    examples = await examples.json();
-    return { examples }
+    let sources = await this.fetch('examples/components/avatars.json');
+    sources = await sources.json();
+    return { sources };
   }
 </script>
 
 <script>
-  import { API, Example } from '@shared';
-  import { Avatar as doc } from 'svelte-materialify-api/dist';
+  import { API, Example, setExamples } from '@shared';
+  import { Avatar as doc } from 'svelte-materialify-api';
   import * as Examples from '@examples/components/avatars';
-  export let examples;
+  export let sources;
+  setExamples([sources, Examples]);
 </script>
 
 # Avatars
@@ -25,28 +26,24 @@ The `v-avatar` component is typically used to display circular user profile pict
 
 <API {doc} />
 
-
 ## Examples
 
 Below is a collection of simple to complex examples.
-
 
 ### Size
 
 The `size` prop allows you to define the height and width of avatar. This prop scales both evenly with an aspect ratio of 1. height and width props will override this prop.
 
-<Example code={examples.size} component={Examples.size} />
-
+<Example name="size" />
 
 ### Tile
 
 The `tile` prop removes the border radius from v-avatar leaving you with a simple square avatar.
 
-<Example code={examples.tile} component={Examples.tile} />
-
+<Example name="tile" />
 
 ### Types
 
 You can add text, images and icons to the avatar.
 
-<Example code={examples.types} component={Examples.types} />
+<Example name="types" />

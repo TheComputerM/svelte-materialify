@@ -7,9 +7,9 @@ related:
 
 <script context="module">
   export async function preload() {
-    let examples = await this.fetch('examples/styles/flex.json');
-    examples = await examples.json();
-    return { examples }
+    let sources = await this.fetch('examples/styles/flex.json');
+    sources = await sources.json();
+    return { sources }
   }
 </script>
 
@@ -17,7 +17,8 @@ related:
   import { Example, Alert } from '@shared';
   import * as Examples from '@examples/styles/flex';
 
-  export let examples;
+  export let sources;
+  setExamples([sources, Examples]);
   let breakpoints = ['-', '-sm-', '-md-', '-lg-', '-xl-'];
 </script>
 
@@ -40,7 +41,7 @@ Display helpers enable you to turn any element into a flexbox container using cl
 
 By default the flex direction is set to `row`, using these helpers can help you change it. You can also change the flex direction at certain breakpoints.
 
-<Example code={examples.direction} component={Examples.direction} />
+<Example name="direction" />
 
 <ul class='font-weight-bold'>
   {#each breakpoints as bp}
@@ -55,7 +56,7 @@ By default the flex direction is set to `row`, using these helpers can help you 
 
 The `justify-content` flex setting can be changed using the flex justify classes. This by default will modify the flexbox items on the **x-axis** but is reversed when using `flex-direction: column`, modifying the **y-axis**. Choose from _start_ (browser default), _end_, _center_, _between_, or _around_.
 
-<Example code={examples.justify} component={Examples.justify} />
+<Example name="justify" />
 
 <ul class='font-weight-bold'>
   {#each breakpoints as bp}
@@ -71,7 +72,7 @@ The `justify-content` flex setting can be changed using the flex justify classes
 
 The `align-items` flex setting can be changed using the flex align classes. This by default will modify the flexbox items on the **y-axis** but is reversed when using `flex-direction: column`, modifying the **x-axis**. Choose from _start_, _end_, _center_, _baseline_, or _stretch_ (browser default).
 
-<Example code={examples.align} component={Examples.align} />
+<Example name="align" />
 
 <ul class='font-weight-bold'>
   {#each breakpoints as bp}
@@ -87,7 +88,7 @@ The `align-items` flex setting can be changed using the flex align classes. This
 
 The `align-self` flex setting can be changed using the flex align-self classes. This by default will modify the flexbox items on the **x-axis** but is reversed when using `flex-direction: column`, modifying the **y-axis**. Choose from _start_, _end_, _center_, _baseline_, _auto_, or _stretch_ (browser default).
 
-<Example code={examples.alignSelf} component={Examples.alignSelf} />
+<Example name="alignSelf" />
 
 <ul class='font-weight-bold'>
   {#each breakpoints as bp}
@@ -104,7 +105,7 @@ The `align-self` flex setting can be changed using the flex align-self classes. 
 
 The align-content flex setting can be changed using the flex align-content classes. This by default will modify the flexbox items on the x-axis but is reversed when using flex-direction: column, modifying the y-axis. Choose from start (browser default), end, center, between, around or stretch.
 
-<Example code={examples.alignContent} component={Examples.alignContent} />
+<Example name="alignContent" />
 
 <ul class='font-weight-bold'>
   {#each breakpoints as bp}

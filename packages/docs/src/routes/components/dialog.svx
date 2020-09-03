@@ -4,17 +4,18 @@ title: Dialog Component
 
 <script context="module">
   export async function preload() {
-    let examples = await this.fetch('examples/components/dialog.json');
-    examples = await examples.json();
-    return { examples }
+    let sources = await this.fetch('examples/components/dialog.json');
+    sources = await sources.json();
+    return { sources }
   }
 </script>
 
 <script>
-  import { API, Example } from '@shared';
-  import { Dialog as doc } from 'svelte-materialify-api/dist';
+  import { API, Example, setExamples } from '@shared';
+  import { Dialog as doc } from 'svelte-materialify-api';
   import * as Examples from '@examples/components/dialog';
-  export let examples;
+  export let sources;
+  setExamples([sources, Examples]);
 </script>
 
 # Dialog
@@ -33,22 +34,22 @@ Below is a collection of simple to complex examples.
 
 This is a simple dialog with just basic logic.
 
-<Example code={examples.basic} component={Examples.basic} />
+<Example name="basic" />
 
 ## Modal
 
 Using the `persistent` prop will not close the dialog the overlay is clicked.
 
-<Example code={examples.modal} component={Examples.modal} />
+<Example name="modal" />
 
 ## Fullscreen
 
 Due to limited space, full-screen dialogs may be more appropriate for mobile devices than dialogs used on devices with larger screens.
 
-<Example code={examples.fullscreen} component={Examples.fullscreen} />
+<Example name="fullscreen" />
 
 ## Nested
 
 Dialogs can be nested: you can open one dialog from another.
 
-<Example code={examples.nested} component={Examples.nested} />
+<Example name="nested" />

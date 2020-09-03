@@ -6,47 +6,43 @@ related:
 
 <script context="module">
   export async function preload() {
-    let examples = await this.fetch('examples/components/checkboxes.json');
-    examples = await examples.json();
-    return { examples }
+    let sources = await this.fetch('examples/components/checkboxes.json');
+    sources = await sources.json();
+    return { sources };
   }
 </script>
 
 <script>
-  import { API, Example } from '@shared';
-  import { Checkbox as doc } from 'svelte-materialify-api/dist';
+  import { API, Example, setExamples } from '@shared';
+  import { Checkbox as doc } from 'svelte-materialify-api';
   import * as Examples from '@examples/components/checkboxes';
-  export let examples;
+  export let sources;
+  setExamples([sources, Examples]);
 </script>
 
 # Checkboxes
 
 Use `Checkbox` as a simple wrapper over checkbox, used to select multiple values, that also has the same features like `bind:group` and an indeterminate state.
 
-
 ## API
 
 <API {doc} />
-
 
 ## Examples
 
 Below are some simple and complex examples.
 
-
 ### Groups
 
 You can combine checkboxes into groups.
-<Example code={examples.groups} component={Examples.groups} />
-
+<Example name="groups" />
 
 ### Colors
 
 You can change the colors of the checkbox and the labels.
-<Example code={examples.colors} component={Examples.colors} />
-
+<Example name="colors" />
 
 ### States
 
 Here are some different states the checkbox can be in.
-<Example code={examples.states} component={Examples.states} />
+<Example name="states" />

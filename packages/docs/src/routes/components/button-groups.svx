@@ -7,17 +7,18 @@ related:
 
 <script context="module">
   export async function preload() {
-    let examples = await this.fetch('examples/components/buttonGroups.json');
-    examples = await examples.json();
-    return { examples }
+    let sources = await this.fetch('examples/components/buttonGroups.json');
+    sources = await sources.json();
+    return { sources };
   }
 </script>
 
 <script>
-  import { API, Example } from '@shared';
-  import { ButtonGroup as doc } from 'svelte-materialify-api/dist';
+  import { API, Example, setExamples } from '@shared';
+  import { ButtonGroup as doc } from 'svelte-materialify-api';
   import * as Examples from '@examples/components/buttonGroups';
-  export let examples;
+  export let sources;
+  setExamples([sources, Examples]);
 </script>
 
 # Button Groups
@@ -38,22 +39,22 @@ Below is a collection of simple to complex examples.
 ### Basic
 
 Here are some examples of different props.
-<Example code={examples.basic} component={Examples.basic} />
+<Example name="basic" />
 
 
 ### Selectable
 
 Add ability to select a button.
-<Example code={examples.selectable} component={Examples.selectable} />
+<Example name="selectable" />
 
 
 ### Multiple
 
 Add ability to select multiple buttons.
-<Example code={examples.multiple} component={Examples.multiple} />
+<Example name="multiple" />
 
 
 ### Mandatory
 
 Make is necessary for at least one button to be selected.
-<Example code={examples.mandatory} component={Examples.mandatory} />
+<Example name="mandatory" />

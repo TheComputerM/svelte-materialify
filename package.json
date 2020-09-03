@@ -33,7 +33,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,svelte,scss,md,svx}": "prettier -w --plugin-search-dir=.",
+    "*.{js,svelte,scss,md}": "prettier -w --plugin-search-dir=.",
     "*.{js,svelte}": "eslint --ext .svelte,.js --fix",
     "*.scss": "stylelint --syntax scss --fix"
   },
@@ -53,6 +53,7 @@
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-svelte3": "^2.7.3",
+    "plop": "^2.7.4",
     "prettier": "^2.1.1",
     "prettier-plugin-svelte": "^1.2.0",
     "stylelint": "^13.6.1",
