@@ -1,0 +1,58 @@
+{
+  "folders": [
+    {
+      "name": "Svelte Materialify",
+      "path": "packages/svelte-materialify"
+    },
+    {
+      "name": "Documentation",
+      "path": "packages/docs"
+    },
+    {
+      "name": "API",
+      "path": "packages/api-generator"
+    },
+    {
+      "name": "Root",
+      "path": "."
+    }
+  ],
+  "extensions": {
+    "recommendations": [
+      "svelte.svelte-vscode",
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode"
+    ]
+  },
+  "settings": {
+    "files.exclude": {
+      "**/packages": true
+    },
+    "[markdown]": {
+      "editor.wordWrap": "on"
+    },
+    "files.associations": {
+      "*.svx": "markdown"
+    }
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Run Tests",
+        "type": "shell",
+        "command": "yarn test"
+      },
+      {
+        "label": "Development",
+        "type": "shell",
+        "command": "yarn dev"
+      },
+      {
+        "label": "Build",
+        "type": "shell",
+        "command": "yarn start"
+      }
+    ]
+  }
+}

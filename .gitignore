@@ -3,7 +3,6 @@ node_modules/
 .env
 
 # IDE user config
-*.code-workspace
 .vscode/
 .idea/
 .vs/

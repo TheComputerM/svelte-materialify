@@ -13,7 +13,7 @@
     "docs": "yarn workspace docs export",
     "dev": "yarn workspace docs dev",
     "release": "yarn workspace svelte-materialify release",
-    "start": "yarn workspaces run start",
+    "start": "yarn workspace svelte-materialify start",
     "api": "yarn workspace svelte-materialify-api start",
     "test": "yarn workspace svelte-materialify test",
     "generate": "plop",
@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^9.1.2",
-    "@commitlint/config-angular": "^9.1.2",
+    "@commitlint/config-conventional": "^9.1.2",
     "babel-eslint": "^10.1.0",
     "concurrently": "^5.3.0",
     "eslint": "^7.6.0",
