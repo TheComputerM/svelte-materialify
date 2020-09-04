@@ -1,3 +1,7 @@
+<script context="module">
+  export const EXPANSION_PANELS = {};
+</script>
+
 <script>
   import { createEventDispatcher, setContext } from 'svelte';
   import { writable } from 'svelte/store';
@@ -43,7 +47,7 @@
   $: Value.set(value);
   $: Disabled.set(disabled);
 
-  setContext('S_ExpansionPanel', {
+  setContext(EXPANSION_PANELS, {
     Value,
     Disabled,
     selectPanel: (index) => {
@@ -62,10 +66,6 @@
         }
         dispatch('change', { index, active: true });
       }
-    },
-    checkIfActive: (index) => {
-      if (value.includes(index)) return true;
-      return false;
     },
   });
 </script>

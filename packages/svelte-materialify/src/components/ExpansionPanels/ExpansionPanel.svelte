@@ -3,7 +3,8 @@
 </script>
 
 <script>
-  import { getContext, onDestroy, onMount } from 'svelte';
+  import { getContext, onMount } from 'svelte';
+  import { EXPANSION_PANELS } from './ExpansionPanels.svelte';
   import { slide } from 'svelte/transition';
   import Icon from '../Icon';
 
@@ -27,29 +28,20 @@
   let index;
   let active = false;
 
-  const { Value, Disabled, selectPanel, checkIfActive } = getContext('S_ExpansionPanel');
+  const { Value, Disabled, selectPanel } = getContext(EXPANSION_PANELS);
 
   function toggle() {
     selectPanel(index);
   }
 
   // Inheriting the disabled value from parent.
-  const unsub1 = Disabled.subscribe((x) => {
-    disabled = x == null ? disabled : x;
-  });
+  $: disabled = $Disabled == null ? disabled : $Disabled;
 
   // Checking if panel is active everytime the value has changed.
-  const unsub2 = Value.subscribe(() => {
-    active = checkIfActive(index);
-  });
+  $: active = $Value.includes(index);
 
   onMount(() => {
     index = Array.from(panel.parentNode.children).indexOf(panel);
-  });
-
-  onDestroy(() => {
-    unsub1();
-    unsub2();
   });
 </script>
 
