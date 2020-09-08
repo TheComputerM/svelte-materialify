@@ -41,8 +41,8 @@
     "node": ">=12.x"
   },
   "dependencies": {
-    "husky": "^4.2.5",
-    "lint-staged": "^10.2.13"
+    "husky": "^4.3.0",
+    "lint-staged": "^10.3.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^9.1.2",
@@ -55,7 +55,7 @@
     "eslint-plugin-svelte3": "^2.7.3",
     "plop": "^2.7.4",
     "prettier": "^2.1.1",
-    "prettier-plugin-svelte": "^1.2.0",
+    "prettier-plugin-svelte": "^1.2.1",
     "stylelint": "^13.6.1",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.18.0",
