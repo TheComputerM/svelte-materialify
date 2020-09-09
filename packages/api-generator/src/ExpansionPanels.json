@@ -4,6 +4,20 @@
   "data": [
     {
       "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "EXPANSION_PANELS",
+      "kind": "const",
+      "static": false,
+      "readonly": true,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
+    },
+    {
+      "visibility": "public",
       "description": "Classes to add to panel container.",
       "keywords": [],
       "name": "class",

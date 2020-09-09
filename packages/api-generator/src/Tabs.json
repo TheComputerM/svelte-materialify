@@ -1,24 +1,10 @@
 {
   "version": 3,
-  "name": "ButtonGroup",
+  "name": "Tabs",
   "data": [
     {
       "visibility": "public",
       "description": null,
-      "keywords": [],
-      "name": "BUTTON_GROUP",
-      "kind": "const",
-      "static": false,
-      "readonly": true,
-      "type": {
-        "kind": "type",
-        "text": "any",
-        "type": "any"
-      }
-    },
-    {
-      "visibility": "public",
-      "description": "Classes to add to button group.",
       "keywords": [],
       "name": "class",
       "kind": "const",
@@ -32,84 +18,9 @@
       "localName": "klass"
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Does not remove box shadow.",
-      "name": "elevated",
-      "kind": "let",
-      "static": false,
-      "readonly": false,
-      "type": {
-        "kind": "type",
-        "text": "boolean",
-        "type": "boolean"
-      },
-      "defaultValue": false
-    },
-    {
+      "description": null,
       "keywords": [],
-      "visibility": "public",
-      "description": "Remove border.",
-      "name": "borderless",
-      "kind": "let",
-      "static": false,
-      "readonly": false,
-      "type": {
-        "kind": "type",
-        "text": "boolean",
-        "type": "boolean"
-      },
-      "defaultValue": false
-    },
-    {
-      "keywords": [],
-      "visibility": "public",
-      "description": "Remove border radius.",
-      "name": "tile",
-      "kind": "let",
-      "static": false,
-      "readonly": false,
-      "type": {
-        "kind": "type",
-        "text": "boolean",
-        "type": "boolean"
-      },
-      "defaultValue": false
-    },
-    {
-      "keywords": [],
-      "visibility": "public",
-      "description": "Add border radius to the first and last button.",
-      "name": "rounded",
-      "kind": "let",
-      "static": false,
-      "readonly": false,
-      "type": {
-        "kind": "type",
-        "text": "boolean",
-        "type": "boolean"
-      },
-      "defaultValue": false
-    },
-    {
-      "keywords": [],
-      "visibility": "public",
-      "description": "Identifies buttons as active with this class.",
-      "name": "activeClass",
-      "kind": "let",
-      "static": false,
-      "readonly": false,
-      "type": {
-        "kind": "type",
-        "text": "string",
-        "type": "string"
-      },
-      "defaultValue": "active"
-    },
-    {
-      "keywords": [],
-      "visibility": "public",
-      "description": "Array or string with the active button(s) value.",
       "name": "value",
       "kind": "let",
       "static": false,
@@ -121,16 +32,16 @@
       },
       "bind": [
         {
-          "source": "ItemGroup",
+          "source": "SlideGroup",
           "property": "value"
         }
       ]
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Forces a value to always be selected (if available).",
-      "name": "mandatory",
+      "description": null,
+      "keywords": [],
+      "name": "centerActive",
       "kind": "let",
       "static": false,
       "readonly": false,
@@ -142,10 +53,25 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Allow multiple selections, makes the value prop an array.",
-      "name": "multiple",
+      "description": null,
+      "keywords": [],
+      "name": "showArrows",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": true
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "fixedTabs",
       "kind": "let",
       "static": false,
       "readonly": false,
@@ -157,33 +83,109 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Maximun number of selections.",
-      "name": "max",
+      "description": null,
+      "keywords": [],
+      "name": "grow",
       "kind": "let",
       "static": false,
       "readonly": false,
       "type": {
         "kind": "type",
-        "text": "any",
-        "type": "any"
-      }
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Styles to apply to button group.",
-      "name": "style",
+      "description": null,
+      "keywords": [],
+      "name": "centered",
       "kind": "let",
       "static": false,
       "readonly": false,
       "type": {
         "kind": "type",
-        "text": "object",
-        "type": "object"
+        "text": "boolean",
+        "type": "boolean"
       },
-      "defaultValue": null
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "right",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "icons",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "slider",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": true
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "sliderClass",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "defaultValue": ""
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "vertical",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
     }
   ],
   "computed": [],
@@ -194,7 +196,7 @@
   "events": [
     {
       "name": "change",
-      "parent": "ItemGroup",
+      "parent": "SlideGroup",
       "modificators": [],
       "locations": null,
       "loc": null,
@@ -204,6 +206,12 @@
     }
   ],
   "slots": [
+    {
+      "name": "tabs",
+      "description": null,
+      "visibility": "public",
+      "parameters": []
+    },
     {
       "name": "default",
       "description": null,

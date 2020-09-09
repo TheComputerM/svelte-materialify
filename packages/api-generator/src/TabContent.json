@@ -1,20 +1,36 @@
 {
   "version": 3,
-  "name": "Lazy",
+  "name": "TabContent",
   "data": [
     {
       "visibility": "public",
       "description": null,
       "keywords": [],
-      "name": "observer",
+      "name": "class",
+      "kind": "const",
+      "static": false,
+      "readonly": true,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "localName": "klass"
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "style",
       "kind": "let",
       "static": false,
       "readonly": false,
       "type": {
         "kind": "type",
-        "text": "any",
-        "type": "any"
-      }
+        "text": "object",
+        "type": "object"
+      },
+      "defaultValue": null
     }
   ],
   "computed": [],
@@ -22,23 +38,10 @@
   "components": [],
   "description": null,
   "keywords": [],
-  "events": [
-    {
-      "visibility": "public",
-      "description": null,
-      "keywords": [],
-      "name": "visible"
-    }
-  ],
+  "events": [],
   "slots": [
     {
       "name": "default",
-      "description": null,
-      "visibility": "public",
-      "parameters": []
-    },
-    {
-      "name": "placeholder",
       "description": null,
       "visibility": "public",
       "parameters": []

@@ -6,6 +6,7 @@
     "Breadcrumbs",
     "Button",
     "ButtonGroup",
+    "ButtonGroupItem",
     "Card",
     "CardActions",
     "CardSubtitle",
@@ -22,6 +23,7 @@
     "Row",
     "Icon",
     "Input",
+    "ItemGroup",
     "Lazy",
     "List",
     "ListGroup",
@@ -33,10 +35,17 @@
     "ProgressCircular",
     "ProgressLinear",
     "Radio",
+    "SlideGroup",
+    "SlideItem",
     "Subheader",
     "Switch",
     "Table",
+    "Tab",
+    "TabContent",
+    "Tabs",
     "TextField",
-    "VirtualList"
+    "VirtualList",
+    "Window",
+    "WindowItem"
   ]
 }

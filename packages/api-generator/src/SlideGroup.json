@@ -1,12 +1,12 @@
 {
   "version": 3,
-  "name": "ButtonGroup",
+  "name": "SlideGroup",
   "data": [
     {
       "visibility": "public",
       "description": null,
       "keywords": [],
-      "name": "BUTTON_GROUP",
+      "name": "SLIDE_GROUP",
       "kind": "const",
       "static": false,
       "readonly": true,
@@ -18,7 +18,7 @@
     },
     {
       "visibility": "public",
-      "description": "Classes to add to button group.",
+      "description": null,
       "keywords": [],
       "name": "class",
       "kind": "const",
@@ -32,10 +32,25 @@
       "localName": "klass"
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Does not remove box shadow.",
-      "name": "elevated",
+      "description": null,
+      "keywords": [],
+      "name": "showArrows",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": true
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "hideDisabledArrows",
       "kind": "let",
       "static": false,
       "readonly": false,
@@ -47,10 +62,10 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Remove border.",
-      "name": "borderless",
+      "description": null,
+      "keywords": [],
+      "name": "centerActive",
       "kind": "let",
       "static": false,
       "readonly": false,
@@ -62,39 +77,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Remove border radius.",
-      "name": "tile",
-      "kind": "let",
-      "static": false,
-      "readonly": false,
-      "type": {
-        "kind": "type",
-        "text": "boolean",
-        "type": "boolean"
-      },
-      "defaultValue": false
-    },
-    {
+      "description": null,
       "keywords": [],
-      "visibility": "public",
-      "description": "Add border radius to the first and last button.",
-      "name": "rounded",
-      "kind": "let",
-      "static": false,
-      "readonly": false,
-      "type": {
-        "kind": "type",
-        "text": "boolean",
-        "type": "boolean"
-      },
-      "defaultValue": false
-    },
-    {
-      "keywords": [],
-      "visibility": "public",
-      "description": "Identifies buttons as active with this class.",
       "name": "activeClass",
       "kind": "let",
       "static": false,
@@ -104,12 +89,12 @@
         "text": "string",
         "type": "string"
       },
-      "defaultValue": "active"
+      "defaultValue": ""
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Array or string with the active button(s) value.",
+      "description": null,
+      "keywords": [],
       "name": "value",
       "kind": "let",
       "static": false,
@@ -127,24 +112,9 @@
       ]
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Forces a value to always be selected (if available).",
-      "name": "mandatory",
-      "kind": "let",
-      "static": false,
-      "readonly": false,
-      "type": {
-        "kind": "type",
-        "text": "boolean",
-        "type": "boolean"
-      },
-      "defaultValue": false
-    },
-    {
+      "description": null,
       "keywords": [],
-      "visibility": "public",
-      "description": "Allow multiple selections, makes the value prop an array.",
       "name": "multiple",
       "kind": "let",
       "static": false,
@@ -157,9 +127,24 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Maximun number of selections.",
+      "description": null,
+      "keywords": [],
+      "name": "mandatory",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "max",
       "kind": "let",
       "static": false,
@@ -169,21 +154,6 @@
         "text": "any",
         "type": "any"
       }
-    },
-    {
-      "keywords": [],
-      "visibility": "public",
-      "description": "Styles to apply to button group.",
-      "name": "style",
-      "kind": "let",
-      "static": false,
-      "readonly": false,
-      "type": {
-        "kind": "type",
-        "text": "object",
-        "type": "object"
-      },
-      "defaultValue": null
     }
   ],
   "computed": [],
@@ -205,7 +175,19 @@
   ],
   "slots": [
     {
+      "name": "previous",
+      "description": null,
+      "visibility": "public",
+      "parameters": []
+    },
+    {
       "name": "default",
+      "description": null,
+      "visibility": "public",
+      "parameters": []
+    },
+    {
+      "name": "next",
       "description": null,
       "visibility": "public",
       "parameters": []
