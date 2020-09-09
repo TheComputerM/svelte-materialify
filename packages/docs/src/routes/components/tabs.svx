@@ -58,5 +58,5 @@ Tabs can contain icons as well as text. This increases their height to 72px.
 
 ### Extension
 
-You can use them inside [AppBar](/components/app-bars/)'s extension slot.
+You can use them inside [AppBar](/components/app-bar/)'s extension slot.
 <Example name="extension" />

@@ -99,6 +99,18 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
+      "name": "set",
+      "args": [
+        {
+          "name": "index"
+        }
+      ],
+      "static": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "next",
       "args": [],
       "static": false

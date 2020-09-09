@@ -41,12 +41,12 @@ You can configure the border radius helper classes by overriding the `$rounded` 
 $rounded: map-deep-merge(
   (
     0: 0,
-    "sm": $border-radius-root / 2,
+    'sm': $border-radius-root / 2,
     null: $border-radius-root,
-    "lg": $border-radius-root * 2,
-    "xl": $border-radius-root * 6,
-    "pill": 9999px,
-    "circle": 50%,
+    'lg': $border-radius-root * 2,
+    'xl': $border-radius-root * 6,
+    'pill': 9999px,
+    'circle': 50%,
   ),
   $rounded
 );

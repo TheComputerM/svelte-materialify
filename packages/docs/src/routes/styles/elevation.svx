@@ -14,7 +14,7 @@ related:
 </script>
 
 <script>
-  import Example from '@shared/Example.svelte';
+  import { Example, setExamples } from '@shared';
   import * as Examples from '@examples/styles/elevation';
 
   export let sources;

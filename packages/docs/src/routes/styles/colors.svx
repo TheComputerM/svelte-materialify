@@ -59,11 +59,11 @@ You can also do the same for theme colors such as `primary-color` for background
 To add material colors in your own styles, just include the scss file.
 
 ```scss
-@import "svelte-materialify/src/styles/tools/colors";
+@import 'svelte-materialify/src/styles/tools/colors';
 
 h1 {
-  color: material-color("red", "base");
-  background-color: material-color("green", "lighten-5");
+  color: material-color('red', 'base');
+  background-color: material-color('green', 'lighten-5');
 }
 ```
 
@@ -72,11 +72,11 @@ h1 {
 You can also import colors from the included [utility](https://github.com/TheComputerM/svelte-materialify/blob/master/packages/svelte-materialify/src/utils/colors.js) in javascript if you wish to do so.
 
 ```js
-import colors from "svelte-materialify/src/utils/colors";
+import colors from 'svelte-materialify/src/utils/colors';
 let red = colors.red.base;
-let lightRed = colors.red["lighten-1"];
+let lightRed = colors.red['lighten-1'];
 
-import { deepPurple } from "svelte-materialify/src/utils/colors";
+import { deepPurple } from 'svelte-materialify/src/utils/colors';
 let purple = deepPurple.base;
 ```
 

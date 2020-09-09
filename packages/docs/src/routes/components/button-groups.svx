@@ -1,8 +1,8 @@
 ---
 title: Button group Component
 related:
-  - Alert: /components/alert/
-  - Button Toggle API: /api/ButtonGroup/
+  - Alert: /components/alerts/
+  - ButtonGroup API: /api/ButtonGroup/
 ---
 
 <script context="module">

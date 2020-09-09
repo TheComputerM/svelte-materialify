@@ -14,7 +14,7 @@ related:
 </script>
 
 <script>
-  import { Example, Alert } from '@shared';
+  import { Example, Alert, setExamples } from '@shared';
   import * as Examples from '@examples/styles/flex';
 
   export let sources;
