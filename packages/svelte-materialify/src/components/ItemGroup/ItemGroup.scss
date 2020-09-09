@@ -1,0 +1,8 @@
+@import './variables';
+
+.s-item-group {
+  flex: 0 1 auto;
+  position: relative;
+  max-width: 100%;
+  transition: $item-group-transition;
+}
