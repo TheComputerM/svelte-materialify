@@ -1,0 +1,51 @@
+---
+title: Slide Group
+---
+
+<script context="module">
+  export async function preload() {
+    let sources = await this.fetch('examples/components/slideGroup.json');
+    sources = await sources.json();
+    return { sources };
+  }
+</script>
+
+<script>
+  import { API, Example, setExamples } from '@shared';
+  import * as Examples from '@examples/components/slideGroup';
+  export let sources;
+  setExamples([sources, Examples]);
+</script>
+
+# Slide Group
+
+The SlideGroup component is used to display pseudo paginated information. It uses [ItemGroup](/components/item-groups/) at its core and provides a baseline for components such as v-tabs.
+
+## API
+
+- [SlideGroup](/api/SlideGroup/)
+- [SlideItem](/api/SlideItem/)
+
+## Examples
+
+Below is a collection of simple to complex examples.
+
+### Active Class
+
+Active class can be customized.
+<Example name="activeClass" />
+
+### Multiple
+
+You can select multiple items.
+<Example name="multiple" />
+
+### Mandatory
+
+At least 1 item must be selected.
+<Example name="mandatory" />
+
+### Center Active
+
+Active item is always centered.
+<Example name="centerActive" />

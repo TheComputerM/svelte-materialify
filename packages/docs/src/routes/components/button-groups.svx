@@ -15,7 +15,6 @@ related:
 
 <script>
   import { API, Example, setExamples } from '@shared';
-  import { ButtonGroup as doc } from 'svelte-materialify-api';
   import * as Examples from '@examples/components/buttonGroups';
   export let sources;
   setExamples([sources, Examples]);
@@ -25,34 +24,29 @@ related:
 
 Use `ButtonGroup` to group a series of buttons on a single line.
 
-
 ## API
 
-<API {doc} />
-
+- [ButtonGroup](/api/ButtonGroup/)
+- [ButtonGroupItem](/api/ButtonGroupItem/)
 
 ## Examples
 
 Below is a collection of simple to complex examples.
-
 
 ### Basic
 
 Here are some examples of different props.
 <Example name="basic" />
 
-
 ### Selectable
 
 Add ability to select a button.
 <Example name="selectable" />
 
-
 ### Multiple
 
 Add ability to select multiple buttons.
 <Example name="multiple" />
-
 
 ### Mandatory
 

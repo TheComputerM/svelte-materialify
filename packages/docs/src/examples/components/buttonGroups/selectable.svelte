@@ -1,15 +1,15 @@
 <script>
-  import { ButtonGroup, Button } from 'svelte-materialify/src';
+  import { ButtonGroup, ButtonGroupItem } from 'svelte-materialify/src';
 
-  let value;
+  let value = [1];
 </script>
 
 <div class="text-center">
-  <ButtonGroup selectable bind:value>
-    <Button>Left</Button>
-    <Button active>Center</Button>
-    <Button>Right</Button>
-    <Button>Justify</Button>
+  <ButtonGroup activeClass="primary-color" bind:value>
+    <ButtonGroupItem>Left</ButtonGroupItem>
+    <ButtonGroupItem>Center</ButtonGroupItem>
+    <ButtonGroupItem>Right</ButtonGroupItem>
+    <ButtonGroupItem>Justify</ButtonGroupItem>
   </ButtonGroup>
   <br /> Value: {value}
 </div>

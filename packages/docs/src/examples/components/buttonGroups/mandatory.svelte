@@ -1,26 +1,25 @@
 <script>
-  import { ButtonGroup, Button } from 'svelte-materialify/src';
+  import { ButtonGroup, ButtonGroupItem } from 'svelte-materialify/src';
 
-  let value1;
-  let value2;
+  const values = [];
 </script>
 
 <div class="text-center">
-  <ButtonGroup selectable mandatory bind:value={value1}>
-    <Button>Left</Button>
-    <Button>Center</Button>
-    <Button>Right</Button>
-    <Button>Justify</Button>
+  <ButtonGroup mandatory activeClass="red white-text" bind:value={values[0]}>
+    <ButtonGroupItem>Left</ButtonGroupItem>
+    <ButtonGroupItem>Center</ButtonGroupItem>
+    <ButtonGroupItem>Right</ButtonGroupItem>
+    <ButtonGroupItem>Justify</ButtonGroupItem>
   </ButtonGroup>
-  <br /> Value: {value1}
+  <br /> Value: {values[0]}
 </div>
 <br />
 <div class="text-center">
-  <ButtonGroup selectable multiple mandatory bind:value={value2}>
-    <Button>Left</Button>
-    <Button>Center</Button>
-    <Button>Right</Button>
-    <Button>Justify</Button>
+  <ButtonGroup multiple mandatory activeClass="blue white-text" bind:value={values[1]}>
+    <ButtonGroupItem>Left</ButtonGroupItem>
+    <ButtonGroupItem>Center</ButtonGroupItem>
+    <ButtonGroupItem>Right</ButtonGroupItem>
+    <ButtonGroupItem>Justify</ButtonGroupItem>
   </ButtonGroup>
-  <br /> Value: {value2}
+  <br /> Value: {values[1]}
 </div>
