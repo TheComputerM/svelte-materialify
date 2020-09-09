@@ -1,0 +1,18 @@
+@import './variables';
+
+.s-window-item {
+  position: relative;
+  display: none;
+  align-items: center;
+  width: 100%;
+  float: left;
+  margin-right: -100%;
+  backface-visibility: hidden;
+  transition: 0.3s $window-transition-function;
+
+  &.active,
+  &.next,
+  &.prev {
+    display: block;
+  }
+}

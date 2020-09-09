@@ -1,0 +1,66 @@
+@import './variables';
+
+.s-window {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  transition: 0.3s $window-transition-function;
+
+  &.horizontal {
+    .s-window-item {
+      &.next:not(.left),
+      &.active.right {
+        transform: translateX(100%);
+      }
+
+      &.prev:not(.right),
+      &.active.left {
+        transform: translateX(-100%);
+      }
+    }
+  }
+
+  &.vertical {
+    .s-window-item {
+      &.next:not(.left),
+      &.active.right {
+        transform: translateY(100%);
+      }
+
+      &.prev:not(.right),
+      &.active.left {
+        transform: translateY(-100%);
+      }
+    }
+  }
+
+  &.reverse {
+    &.horizontal {
+      .s-window-item {
+        &.next:not(.left),
+        &.active.right {
+          transform: translateX(-100%);
+        }
+
+        &.prev:not(.right),
+        &.active.left {
+          transform: translateX(100%);
+        }
+      }
+    }
+
+    &.vertical {
+      .s-window-item {
+        &.next:not(.left),
+        &.active.right {
+          transform: translateY(-100%);
+        }
+
+        &.prev:not(.right),
+        &.active.left {
+          transform: translateY(100%);
+        }
+      }
+    }
+  }
+}
