@@ -75,7 +75,8 @@
 
   onMount(() => {
     windowItems = Array.from(container.querySelectorAll('.s-window-item'));
-    windowItems[value]?.classList.add(activeClass);
+    const activeItem = windowItems[value];
+    if (activeItem) activeItem.classList.add(activeClass);
   });
 </script>
 
