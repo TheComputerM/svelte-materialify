@@ -147,10 +147,13 @@
 </script>
 
 <style lang="scss" src="./Menu.scss">
-
 </style>
 
-<div class="s-menu-wrapper" bind:this={wrapper} use:ClickOutside on:clickOutside={clickOutsideMenu}>
+<div
+  class="s-menu-wrapper"
+  bind:this={wrapper}
+  use:ClickOutside
+  on:clickOutside={clickOutsideMenu}>
   <!-- Slot for the trigger/activator. -->
   <slot name="activator" />
 

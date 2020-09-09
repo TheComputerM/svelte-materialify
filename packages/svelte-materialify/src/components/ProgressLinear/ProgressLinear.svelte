@@ -17,7 +17,6 @@
 </script>
 
 <style lang="scss" src="./ProgressLinear.scss">
-
 </style>
 
 <div

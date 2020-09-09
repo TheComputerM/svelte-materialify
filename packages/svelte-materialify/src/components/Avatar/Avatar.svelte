@@ -16,7 +16,6 @@
 </script>
 
 <style lang="scss" src="./Avatar.scss">
-
 </style>
 
 <div class="s-avatar {klass}" class:tile use:Style={{ 'avatar-size': size }} {style}>

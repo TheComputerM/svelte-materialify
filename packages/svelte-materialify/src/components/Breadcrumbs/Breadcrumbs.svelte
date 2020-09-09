@@ -21,7 +21,6 @@
 </script>
 
 <style lang="scss" src="./Breadcrumbs.scss">
-
 </style>
 
 <ul class="s-breadcrumbs {klass}" class:large>

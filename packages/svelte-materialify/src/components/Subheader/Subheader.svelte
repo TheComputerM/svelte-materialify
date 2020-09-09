@@ -6,7 +6,6 @@
 </script>
 
 <style lang="scss" src="./Subheader.scss">
-
 </style>
 
 <div class="s-subheader {klass}" class:inset {style}>

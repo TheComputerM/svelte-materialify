@@ -38,7 +38,6 @@
 </script>
 
 <style lang="scss" src="./Chip.scss">
-
 </style>
 
 {#if active}

@@ -22,7 +22,6 @@
 </script>
 
 <style lang="scss" src="./NavigationDrawer.scss">
-
 </style>
 
 <aside

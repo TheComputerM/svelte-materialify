@@ -15,7 +15,6 @@
 </script>
 
 <style lang="scss" src="./AppBar.scss">
-
 </style>
 
 <header

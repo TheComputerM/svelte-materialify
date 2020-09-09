@@ -52,7 +52,6 @@
 </script>
 
 <style lang="scss" src="./Switch.scss">
-
 </style>
 
 <div class="s-switch {klass}" class:dense class:disabled {style}>

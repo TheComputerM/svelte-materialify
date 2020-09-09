@@ -46,7 +46,6 @@
 </script>
 
 <style lang="scss" src="./ExpansionPanel.scss">
-
 </style>
 
 <div

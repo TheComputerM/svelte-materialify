@@ -22,17 +22,18 @@
 
   let ListOptionsUnsub = () => {};
   if (ListOptions) {
-    ListOptionsUnsub = ListOptions.subscribe(({ disabled: parentDisabled, dense: parentDense }) => {
-      disabled = parentDisabled == null ? disabled : parentDisabled;
-      dense = parentDense == null ? dense : parentDense;
-    });
+    ListOptionsUnsub = ListOptions.subscribe(
+      ({ disabled: parentDisabled, dense: parentDense }) => {
+        disabled = parentDisabled == null ? disabled : parentDisabled;
+        dense = parentDense == null ? dense : parentDense;
+      },
+    );
   }
 
   onDestroy(ListOptionsUnsub);
 </script>
 
 <style lang="scss" src="./ListItem.scss">
-
 </style>
 
 <div

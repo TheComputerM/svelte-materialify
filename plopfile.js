@@ -6,7 +6,8 @@ const templates = {
     svelte: "<style lang='scss' src='./{{name}}.scss'></style>",
   },
   doc: {
-    index: "{{#each examples}}export { default as {{this}} } from './{{this}}.svelte';\n{{/each}}",
+    index:
+      "{{#each examples}}export { default as {{this}} } from './{{this}}.svelte';\n{{/each}}",
     svx: `---
 title: {{name}}
 ---
@@ -33,6 +34,8 @@ title: {{name}}
 # {{name}}
 
 {{#each examples}}
+### {{titleCase this}}
+
 <Example name="{{this}}" />
 {{/each}}`,
   },

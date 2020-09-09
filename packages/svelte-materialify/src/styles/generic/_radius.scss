@@ -8,7 +8,8 @@
   }
 
   @each $corner_abbr,
-    $corner in ('tl': 'top-left', 'tr': 'top-right', 'bl': 'bottom-left', 'br': 'bottom-right')
+    $corner
+      in ('tl': 'top-left', 'tr': 'top-right', 'bl': 'bottom-left', 'br': 'bottom-right')
   {
     .rounded-#{$corner_abbr}#{$suffix} {
       border-#{$corner}-radius: $value;

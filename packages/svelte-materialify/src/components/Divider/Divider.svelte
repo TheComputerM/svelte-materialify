@@ -7,7 +7,6 @@
 </script>
 
 <style lang="scss" src="./Divider.scss">
-
 </style>
 
 <hr

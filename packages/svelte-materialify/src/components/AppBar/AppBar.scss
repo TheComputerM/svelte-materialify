@@ -2,7 +2,6 @@
 
 .s-app-bar {
   background-color: var(--theme-app-bar);
-  height: var(--s-app-bar-height);
   contain: layout;
   display: block;
   flex: 1 1 auto;
@@ -10,12 +9,12 @@
   transition: $app-bar-transition;
 
   .s-app-bar__wrapper {
+    height: var(--s-app-bar-height);
     align-items: center;
     display: flex;
     position: relative;
     z-index: 0;
     padding: 4px;
-    height: inherit;
 
     :global(.s-btn.fab) {
       width: 48px;

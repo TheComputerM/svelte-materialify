@@ -7,7 +7,6 @@
 </script>
 
 <style lang="scss" src="./Table.scss">
-
 </style>
 
 <div class="s-table {klass}" {style}>

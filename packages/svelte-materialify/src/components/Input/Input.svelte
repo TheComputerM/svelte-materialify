@@ -14,7 +14,6 @@
 </script>
 
 <style lang="scss" src="./Input.scss">
-
 </style>
 
 <div

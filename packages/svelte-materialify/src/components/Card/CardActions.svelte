@@ -5,7 +5,6 @@
 </script>
 
 <style lang="scss" src="./CardActions.scss">
-
 </style>
 
 <div class="s-card-actions {klass}" {style}>

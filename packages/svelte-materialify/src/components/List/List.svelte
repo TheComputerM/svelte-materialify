@@ -26,7 +26,6 @@
 </script>
 
 <style lang="scss" src="./List.scss">
-
 </style>
 
 <div

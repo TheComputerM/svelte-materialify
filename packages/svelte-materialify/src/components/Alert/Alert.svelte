@@ -54,7 +54,6 @@
 </script>
 
 <style lang="scss" src="./Alert.scss">
-
 </style>
 
 {#if visible}

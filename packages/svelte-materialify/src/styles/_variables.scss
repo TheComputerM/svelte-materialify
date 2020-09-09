@@ -274,6 +274,7 @@ $material-light-theme: map-deep-merge(
     'buttons': (
       'disabled': rgba(material-color('shades', 'black'), 0.26),
     ),
+    'tabs': rgba(0, 0, 0, 0.54),
     'text-fields': (
       'filled': rgba(material-color('shades', 'black'), 0.06),
       'filled-hover': rgba(material-color('shades', 'black'), 0.12),
@@ -341,6 +342,7 @@ $material-dark-theme: map-deep-merge(
     'buttons': (
       'disabled': rgba(material-color('shades', 'white'), 0.3),
     ),
+    'tabs': rgba(material-color('shades', 'white'), 0.6),
     'text-fields': (
       'filled': rgba(material-color('shades', 'white'), 0.08),
       'filled-hover': rgba(material-color('shades', 'white'), 0.16),

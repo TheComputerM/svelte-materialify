@@ -39,7 +39,6 @@
 </script>
 
 <style lang="scss" src="./ListGroup.scss">
-
 </style>
 
 {#if active}

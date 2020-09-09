@@ -14,7 +14,6 @@
 </script>
 
 <style lang="scss" src="./Overlay.scss">
-
 </style>
 
 {#if active}

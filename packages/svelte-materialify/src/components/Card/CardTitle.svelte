@@ -5,7 +5,6 @@
 </script>
 
 <style lang="scss" src="./CardTitle.scss">
-
 </style>
 
 <div class="s-card-title {klass}" {style}>

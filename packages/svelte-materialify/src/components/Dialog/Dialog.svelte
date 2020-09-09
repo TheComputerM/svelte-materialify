@@ -20,7 +20,6 @@
 </script>
 
 <style lang="scss" src="./Dialog.scss">
-
 </style>
 
 {#if visible}

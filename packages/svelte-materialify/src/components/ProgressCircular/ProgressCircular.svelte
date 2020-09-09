@@ -24,7 +24,6 @@
 </script>
 
 <style lang="scss" src="./ProgressCircular.scss">
-
 </style>
 
 <div

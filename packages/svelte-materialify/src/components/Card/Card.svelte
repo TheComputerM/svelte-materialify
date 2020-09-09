@@ -13,7 +13,6 @@
 </script>
 
 <style lang="scss" src="./Card.scss">
-
 </style>
 
 <div

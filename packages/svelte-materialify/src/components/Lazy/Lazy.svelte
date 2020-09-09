@@ -13,7 +13,7 @@
 
 <div class="s-lazy" use:Intersect={{ once: true, observer }} on:intersect={intersect}>
   {#if visible}
-    <slot {visible} />
+    <slot />
   {:else}
     <slot name="placeholder" />
   {/if}
