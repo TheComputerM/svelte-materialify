@@ -57,4 +57,4 @@ With the collapse prop you can easily control the state of toolbar that the user
 ### Navigation Drawers
 
 It is very easy to integrate navigation drawers with app bars.
-<Example name="drawer" />
+<Example name="drawer" style="overflow-x:hidden;" />

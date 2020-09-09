@@ -13,6 +13,7 @@
   import { theme } from '../helpers/stores';
 
   export let name = '';
+  export let style = null;
   const { code, path } = sources[name];
   const component = components[name];
 
@@ -64,7 +65,7 @@
       {@html codeContent}
     </div>
   {/if}
-  <div class="pa-2 example-content {isComponentDark ? 'theme--dark' : ''}">
+  <div class="pa-2 example-content {isComponentDark ? 'theme--dark' : ''}" {style}>
     <svelte:component this={component} />
   </div>
 </div>
