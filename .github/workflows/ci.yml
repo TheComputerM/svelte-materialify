@@ -1,0 +1,30 @@
+name: CI
+on: [push, pull_request]
+
+jobs: 
+  test:
+    name: Tests
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        node-version: [12, 14]
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - uses: actions/cache@v2
+        with:
+          path: |
+            node_modules
+            **/node_modules
+          key: ${{ runner.os }}-${{ hashFiles('./yarn.lock') }}
+      - run: yarn --frozen-lockfile --non-interactive
+      - run: yarn lint
+        name: Lint
+      - run: yarn test
+        name: Test
+        env:
+          CI: true
