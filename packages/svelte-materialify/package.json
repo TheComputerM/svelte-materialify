@@ -87,8 +87,5 @@
     "ui",
     "ui-components",
     "ui-kit"
-  ],
-  "engines": {
-    "node": ">=12.x"
-  }
+  ]
 }

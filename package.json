@@ -37,9 +37,6 @@
     "*.{js,svelte}": "eslint --ext .svelte,.js --fix",
     "*.scss": "stylelint --syntax scss --fix"
   },
-  "engines": {
-    "node": ">=12.x"
-  },
   "dependencies": {
     "husky": "^4.3.0",
     "lint-staged": "^10.3.0"
