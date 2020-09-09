@@ -1,5 +1,11 @@
 import { all as API } from 'svelte-materialify-api';
-import { mdiSpeedometer, mdiPalette, mdiViewDashboard, mdiFunction, mdiBeaker } from '@mdi/js';
+import {
+  mdiSpeedometer,
+  mdiPalette,
+  mdiViewDashboard,
+  mdiFunction,
+  mdiBeaker,
+} from '@mdi/js';
 
 export default [
   {
@@ -39,7 +45,16 @@ export default [
       { text: 'Avatars', href: '/components/avatars/' },
       { text: 'Breadcrumbs', href: '/components/breadcrumbs/' },
       { text: 'Buttons', href: '/components/buttons/' },
-      { text: 'Button Groups', href: '/components/button-groups/' },
+      {
+        text: 'Groups',
+        open: false,
+        items: [
+          { text: 'Button Groups', href: '/components/button-groups/' },
+          { text: 'Slide Groups', href: '/components/slide-groups/' },
+          { text: 'Windows', href: '/components/windows/' },
+        ],
+      },
+      { text: 'Tabs', href: '/components/tabs/' },
       { text: 'Cards', href: '/components/cards/' },
       { text: 'Chips', href: '/components/chips/' },
       { text: 'Dialog', href: '/components/dialog/' },

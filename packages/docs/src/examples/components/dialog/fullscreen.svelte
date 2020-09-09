@@ -40,11 +40,11 @@
         </Col>
         <Col cols="12">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta excepturi obcaecati
-            adipisci doloribus eius fugiat. Optio porro totam nemo aspernatur possimus? Sapiente
-            adipisci perspiciatis rerum illum laboriosam reprehenderit ea tenetur fuga? Aut eaque
-            possimus nostrum nihil rerum ea illum qui quae. Animi veritatis culpa enim alias ad
-            soluta et libero.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta excepturi
+            obcaecati adipisci doloribus eius fugiat. Optio porro totam nemo aspernatur
+            possimus? Sapiente adipisci perspiciatis rerum illum laboriosam reprehenderit
+            ea tenetur fuga? Aut eaque possimus nostrum nihil rerum ea illum qui quae.
+            Animi veritatis culpa enim alias ad soluta et libero.
           </p>
         </Col>
         <Col cols="4">

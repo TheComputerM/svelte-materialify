@@ -44,7 +44,8 @@
 {#if doc.events.length !== 0}
   <section>
     <h3 class="heading text-h5 mb-2" id="events">
-      <a href="#events" tabindex="-1" aria-hidden="true"> <i class="mdi mdi-pound" /> </a> Events
+      <a href="#events" tabindex="-1" aria-hidden="true"> <i class="mdi mdi-pound" /> </a>
+      Events
     </h3>
     <Table style="border: thin solid var(--theme-dividers)">
       <thead>
@@ -85,7 +86,9 @@
           <tr>
             <td class="font-weight-bold text-mono">{slot.name}</td>
             <td>
-              {#each slot.parameters as slotParam}<code>{slotParam.name}</code> ;{:else}None{/each}
+              {#each slot.parameters as slotParam}
+                <code>{slotParam.name}</code> ;
+              {:else}None{/each}
             </td>
             <td>{slot.description || 'No Description'}</td>
           </tr>

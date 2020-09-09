@@ -76,7 +76,8 @@
   {#if related}
     <section>
       <h2 id="ready-for-more" class="heading text-h4 mb-3">
-        <a href="#ready-for-more" aria-hidden="true"> <i class="mdi mdi-pound" /> </a> Ready For More?
+        <a href="#ready-for-more" aria-hidden="true"> <i class="mdi mdi-pound" /> </a> Ready
+        For More?
       </h2>
       <Row class="justify-space-between">
         {#each related as item}

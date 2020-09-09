@@ -16,13 +16,15 @@
     async function refresh() {
       const basename = `${window.location.origin + window.location.pathname}#`;
       items = [];
-      document.querySelectorAll('.markdown-container .heading:not(h1)').forEach((node) => {
-        items.push({
-          text: node.textContent,
-          class: depths[node.tagName],
-          href: basename + node.id,
+      document
+        .querySelectorAll('.markdown-container .heading:not(h1)')
+        .forEach((node) => {
+          items.push({
+            text: node.textContent,
+            class: depths[node.tagName],
+            href: basename + node.id,
+          });
         });
-      });
       items = items;
       await tick();
       spy.setup();
@@ -62,6 +64,8 @@
 <h5 class="mb-3 mt-6">Contents</h5>
 <ul id="toc" class="pl-4">
   {#each items as item}
-    <li class="{item.class} pt-1 pb-1 text-body-2"><a href={item.href}>{item.text}</a></li>
+    <li class="{item.class} pt-1 pb-1 text-body-2">
+      <a href={item.href}>{item.text}</a>
+    </li>
   {/each}
 </ul>

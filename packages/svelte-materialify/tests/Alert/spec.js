@@ -24,7 +24,9 @@ describe('Alert', () => {
 
   test('closes when close button clicked', async () => {
     const mock = jest.fn();
-    const { getByRole } = render(html`<${Alert} on:dismiss=${mock} dismissible>Bye Bye<//>`);
+    const { getByRole } = render(
+      html`<${Alert} on:dismiss=${mock} dismissible>Bye Bye<//>`,
+    );
     const alert = getByRole('alert');
     const dismissBtn = getByRole('button');
 

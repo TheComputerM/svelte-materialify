@@ -19,7 +19,7 @@
 <Dialog class="pa-4 text-center" bind:active={active2}>
   <p>This is Dialog 2</p>
   <p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste quia possimus tempore maxime vel,
-    fugiat neque ab accusamus numquam incidunt?
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste quia possimus tempore
+    maxime vel, fugiat neque ab accusamus numquam incidunt?
   </p>
 </Dialog>

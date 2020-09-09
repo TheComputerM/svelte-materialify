@@ -29,19 +29,18 @@
 </script>
 
 <style>
-  .component-example {
+  .example {
     margin-bottom: 36px;
     border-radius: 4px;
     border: thin solid var(--theme-dividers);
-    overflow-x: hidden;
   }
 
-  .component-example :first-child {
+  .example :first-child {
     background-color: var(--theme-app-bar);
   }
 </style>
 
-<div class="component-example">
+<div class="example">
   <div class="text-right pa-1">
     {#if colorInvertable}
       <Button fab icon size="small" on:click={() => (isComponentDark = !isComponentDark)}>
@@ -65,7 +64,7 @@
       {@html codeContent}
     </div>
   {/if}
-  <div class="pa-2 {isComponentDark ? 'theme--dark' : ''}">
+  <div class="pa-2 example-content {isComponentDark ? 'theme--dark' : ''}">
     <svelte:component this={component} />
   </div>
 </div>

@@ -3,7 +3,14 @@
   export let navigation;
 
   import { mdiGithub, mdiWeatherSunny, mdiWeatherNight, mdiMenu } from '@mdi/js';
-  import { AppBar, Icon, Button, NavigationDrawer, List, Overlay } from 'svelte-materialify/src/';
+  import {
+    AppBar,
+    Icon,
+    Button,
+    NavigationDrawer,
+    List,
+    Overlay,
+  } from 'svelte-materialify/src/';
   import { theme as themeStore } from '../stores';
 
   import LeftNavigationDrawer from './LeftNavigationDrawer.svelte';
@@ -28,7 +35,10 @@
   </div>
   <a href="/" slot="title" rel="external" class="text--primary"> Svelte Materialify </a>
   <div style="flex-grow:1" />
-  <a href="https://github.com/TheComputerM/svelte-materialify" target="_blank" rel="noopener">
+  <a
+    href="https://github.com/TheComputerM/svelte-materialify"
+    target="_blank"
+    rel="noopener">
     <Button class="white-text grey darken-3" aria-label="GitHub" fab={!navigation}>
       <Icon path={mdiGithub} class={navigation ? 'mr-3' : ''} />
       {#if navigation}GitHub{/if}

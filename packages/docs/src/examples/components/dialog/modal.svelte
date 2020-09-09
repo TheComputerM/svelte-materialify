@@ -1,5 +1,12 @@
 <script>
-  import { Button, Dialog, Card, CardTitle, CardText, CardActions } from 'svelte-materialify/src';
+  import {
+    Button,
+    Dialog,
+    Card,
+    CardTitle,
+    CardText,
+    CardActions,
+  } from 'svelte-materialify/src';
 
   let active = false;
 
@@ -19,8 +26,8 @@
   <Card>
     <CardTitle>Do you Agree?</CardTitle>
     <CardText>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia deleniti natus dolore,
-      rerum hic beatae officiis at ea sequi labore.
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia deleniti natus
+      dolore, rerum hic beatae officiis at ea sequi labore.
     </CardText>
     <CardActions>
       <Button on:click={close} text>Yes</Button>

@@ -16,7 +16,7 @@
     transition={scale}
     transitionOpts={{ duration: 500 }}
     bind:visible={alert}>
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem molestiae voluptates et quae
-    rem autem quasi officia odit suscipit dolor.
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem molestiae voluptates
+    et quae rem autem quasi officia odit suscipit dolor.
   </Alert>
 {/if}

@@ -17,16 +17,16 @@
 
 {#if alert}
   <Alert class="primary-color" dismissible bind:visible={alert} on:dismiss={onDismiss}>
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem molestiae voluptates et quae
-    rem autem quasi officia odit suscipit dolor.
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem molestiae voluptates
+    et quae rem autem quasi officia odit suscipit dolor.
   </Alert>
 
   <Alert class="primary-color" dismissible bind:visible={alert} on:dismiss={onDismiss}>
     <div slot="close">
       <Icon class="mdi mdi-alert-circle" />
     </div>
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem molestiae voluptates et quae
-    rem autem quasi officia odit suscipit dolor.
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem molestiae voluptates
+    et quae rem autem quasi officia odit suscipit dolor.
   </Alert>
 {:else}
   <div class="text-center">

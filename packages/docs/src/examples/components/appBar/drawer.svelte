@@ -1,5 +1,11 @@
 <script>
-  import { AppBar, Button, Icon, NavigationDrawer, Overlay } from 'svelte-materialify/src';
+  import {
+    AppBar,
+    Button,
+    Icon,
+    NavigationDrawer,
+    Overlay,
+  } from 'svelte-materialify/src';
 
   let active = false;
   function toggleNavigation() {
