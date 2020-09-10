@@ -64,7 +64,6 @@
     }
   },
   "dependencies": {
-    "material-ripple-effect": "^1.0.3",
     "uid": "^1.0.0"
   },
   "author": "TheComputerM",

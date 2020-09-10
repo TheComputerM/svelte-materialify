@@ -22,3 +22,8 @@ body {
 p {
   margin-bottom: $spacer * 4;
 }
+
+.s-ripple-container {
+  position: relative;
+  overflow: hidden;
+}
