@@ -27,8 +27,9 @@ export function RippleStart(e, options = {}) {
   e.stopImmediatePropagation();
   const opts = { ...defaults, ...options };
 
+  const isTouchEvent = e.touches ? !!e.touches[0] : false;
   // Parent element
-  const target = e.touches ? e.touches[0].currentTarget : e.currentTarget;
+  const target = isTouchEvent ? e.touches[0].currentTarget : e.currentTarget;
 
   // Create ripple
   const ripple = document.createElement('div');
@@ -56,8 +57,8 @@ export function RippleStart(e, options = {}) {
     rippleStyle.top = `${targetRect.height / 2}px`;
     rippleStyle.left = `${targetRect.width / 2}px`;
   } else {
-    const distY = e.clientY || e.touches[0].clientY;
-    const distX = e.clientX || e.touches[0].clientX;
+    const distY = isTouchEvent ? e.touches[0].clientY : e.clientY;
+    const distX = isTouchEvent ? e.touches[0].clientX : e.clientX;
     rippleStyle.top = `${distY - targetRect.top}px`;
     rippleStyle.left = `${distX - targetRect.left}px`;
   }
