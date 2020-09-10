@@ -1,0 +1,64 @@
+@import './variables';
+
+.s-textarea {
+  textarea {
+    align-self: stretch;
+    flex: 1 1 auto;
+    line-height: $textarea-line-height;
+    max-width: 100%;
+    min-height: $textarea-min-height;
+    outline: none;
+    padding: $textarea-padding;
+    width: 100%;
+    margin-top: 4px;
+  }
+
+  [slot='prepend'],
+  [slot='append'] {
+    align-self: flex-start;
+    margin-top: $textarea-icon-margin-top;
+  }
+
+  .s-text-field__wrapper {
+    &.filled {
+      [slot='prepend'],
+      [slot='append'] {
+        margin-top: $textarea-filled-icon-margin-top;
+      }
+    }
+
+    &.outlined {
+      [slot='prepend'],
+      [slot='append'] {
+        margin-top: $textarea-outlined-icon-margin-top + 2;
+      }
+
+      textarea {
+        margin-top: $textarea-outlined-icon-margin-top;
+      }
+    }
+
+    &.solo {
+      [slot='prepend'],
+      [slot='append'] {
+        margin-top: $textarea-solo-icon-margin-top;
+      }
+
+      textarea {
+        margin-top: $textarea-solo-icon-margin-top;
+      }
+    }
+
+    &.autogrow {
+      textarea {
+        overflow: hidden;
+      }
+    }
+
+    &.no-resize {
+      textarea {
+        resize: none;
+      }
+    }
+  }
+}

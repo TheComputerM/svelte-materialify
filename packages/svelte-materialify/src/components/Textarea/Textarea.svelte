@@ -27,9 +27,6 @@
   // Removes any shadow from the input.
   export let flat = false;
 
-  // Reduces the input height.
-  export let dense = false;
-
   // Adds a border radius to the input.
   export let rounded = false;
 
@@ -38,6 +35,15 @@
 
   // Puts input in readonly state.
   export let readonly = false;
+
+  // Default row count.
+  export let rows = 5;
+
+  // Automatically grow the textarea depending on amount of text.
+  export let autogrow = false;
+
+  // Remove resize handle.
+  export let noResize = false;
 
   // Disable the input.
   export let disabled = false;
@@ -71,6 +77,7 @@
 
   id = id || `s-input-${uid(5)}`;
   let labelActive = !!placeholder || value;
+  let textarea;
   let messages = [];
 
   function checkRules() {
@@ -97,15 +104,18 @@
 
   function onInput() {
     if (!validateOnBlur) checkRules();
+    if (autogrow) {
+      textarea.style.height = 0;
+      textarea.style.height = `${textarea.scrollHeight}px`;
+    }
   }
 </script>
 
 <Input
-  class="s-text-field"
+  class="s-text-field s-textarea"
   {color}
   {readonly}
   {disabled}
-  {dense}
   {value}
   {hint}
   {counter}
@@ -121,7 +131,9 @@
     class:solo
     class:outlined
     class:flat
-    class:rounded>
+    class:rounded
+    class:autogrow
+    class:no-resize={noResize || autogrow}>
     <!-- Slot for prepend inside the input. -->
     <slot name="prepend" />
 
@@ -129,9 +141,11 @@
       <label for={id} class:active={labelActive}>
         <slot />
       </label>
-      <input
+      <textarea
+        bind:this={textarea}
         type="text"
         bind:value
+        {rows}
         {placeholder}
         {id}
         {readonly}

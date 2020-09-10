@@ -1,32 +1,32 @@
 @import './variables';
 
-label {
-  max-width: 90%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  top: $text-field-label-top;
-  pointer-events: none;
-  transform-origin: top left;
-
-  &.active {
-    max-width: 133%;
-    transform: $text-field-label-active-transform;
-  }
-}
-
-input {
-  caret-color: inherit;
-  flex: 1 1 auto;
-  line-height: $text-field-line-height;
-  padding: $text-field-padding;
-  max-width: 100%;
-  min-width: 0;
-  width: 100%;
-}
-
 .s-text-field__input {
   display: flex;
   flex-grow: 1;
+
+  label {
+    max-width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    top: $text-field-label-top;
+    pointer-events: none;
+    transform-origin: top left;
+
+    &.active {
+      max-width: 133%;
+      transform: $text-field-label-active-transform;
+    }
+  }
+
+  input {
+    caret-color: inherit;
+    flex: 1 1 auto;
+    line-height: $text-field-line-height;
+    padding: $text-field-padding;
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+  }
 }
 
 .s-text-field__wrapper {
@@ -80,6 +80,16 @@ input {
   }
 
   &.outlined {
+    &::before {
+      top: 0;
+      border-width: thin;
+    }
+
+    &:focus-within::before {
+      border-color: currentColor;
+      border-width: 2px;
+    }
+
     label {
       top: $text-field-outlined-label-top;
 
@@ -91,7 +101,30 @@ input {
     }
   }
 
+  &.outlined,
+  &.solo,
   &.filled {
+    padding: $text-field-wrapper-padding;
+  }
+
+  &.filled,
+  &.outlined {
+    min-height: $text-field-filled-outlined-min-height;
+  }
+
+  &.filled {
+    border-radius: $text-field-filled-border-radius;
+    background-color: var(--theme-text-fields-filled);
+
+    &:hover {
+      background-color: var(--theme-text-fields-filled-hover);
+    }
+
+    input,
+    textarea {
+      padding-top: $text-field-filled-margin-top;
+    }
+
     label {
       top: $text-field-filled-label-top;
 
@@ -100,126 +133,91 @@ input {
       }
     }
   }
-}
 
-.outlined,
-.solo,
-.filled {
-  padding: $text-field-wrapper-padding;
-}
-
-.filled,
-.outlined {
-  min-height: $text-field-filled-outlined-min-height;
-}
-
-.outlined,
-.solo,
-.rounded {
-  &::after {
-    display: none;
-  }
-}
-
-.outlined,
-.solo {
-  border-radius: $text-field-border-radius;
-}
-
-.outlined {
-  &::before {
-    top: 0;
-    border-width: thin;
-  }
-
-  &:focus-within::before {
-    border-color: currentColor;
-    border-width: 2px;
-  }
-}
-
-.solo {
-  min-height: $text-field-solo-min-height;
-  @include elevation($text-field-solo-depth);
-
-  &::before {
-    display: none;
-  }
-}
-
-.filled {
-  border-radius: $text-field-filled-border-radius;
-  background-color: var(--theme-text-fields-filled);
-
-  &:hover {
-    background-color: var(--theme-text-fields-filled-hover);
-  }
-
-  input {
-    padding-top: $text-field-filled-margin-top;
-  }
-}
-
-.rounded {
-  border-radius: $text-field-rounded-border-radius;
-
-  &.filled::before {
-    border: none;
-  }
-
-  &.outlined {
-    padding: $text-field-outlined-rounded-padding;
-  }
-}
-
-.dense {
-  input {
-    padding: $text-field-dense-padding;
+  &.outlined,
+  &.solo,
+  &.rounded {
+    &::after {
+      display: none;
+    }
   }
 
   &.outlined,
-  &.filled {
-    min-height: $text-field-filled-outlined-dense-min-height;
-  }
-
-  &.outlined {
-    label {
-      top: $text-field-outlined-dense-label-top;
-
-      &.active {
-        transform: $text-field-outlined-dense-label-active-transform;
-      }
-    }
+  &.solo {
+    border-radius: $text-field-border-radius;
   }
 
   &.solo {
-    min-height: $text-field-solo-dense-min-height;
+    min-height: $text-field-solo-min-height;
+    @include elevation($text-field-solo-depth);
+
+    &::before {
+      display: none;
+    }
   }
 
-  &.filled {
-    input {
-      margin-top: $text-field-filled-margin-top / 2;
+  &.rounded {
+    border-radius: $text-field-rounded-border-radius;
+
+    &.filled::before {
+      border: none;
     }
 
-    label {
-      top: $text-field-filled-dense-label-top;
-
-      &.active {
-        transform: $text-field-filled-dense-label-active-transform;
-      }
+    &.outlined {
+      padding: $text-field-outlined-rounded-padding;
     }
   }
 }
 
-:global {
-  .s-text-field {
-    margin-top: 4px;
-    padding-top: $text-field-label-top * 2;
+.s-text-field {
+  margin-top: 4px;
+  padding-top: $text-field-label-top * 2;
 
-    &.error,
-    &.success {
-      .s-text-field__wrapper::before {
-        border-color: currentColor !important;
+  &.error,
+  &.success {
+    .s-text-field__wrapper::before {
+      border-color: currentColor !important;
+    }
+  }
+
+  &.dense {
+    input {
+      padding: $text-field-dense-padding;
+    }
+
+    .s-text-field__wrapper {
+      &.outlined,
+      &.filled {
+        min-height: $text-field-filled-outlined-dense-min-height;
+      }
+
+      &.outlined {
+        label {
+          top: $text-field-outlined-dense-label-top;
+
+          &.active {
+            transform: $text-field-outlined-dense-label-active-transform;
+          }
+        }
+      }
+
+      &.solo {
+        min-height: $text-field-solo-dense-min-height;
+      }
+
+      &.filled {
+        input,
+        textarea {
+          margin-top: $text-field-filled-margin-top / 2;
+        }
+
+        label {
+          top: $text-field-filled-dense-label-top;
+
+          &.active {
+            transform: $text-field-filled-dense-label-active-transform;
+          }
+        }
       }
     }
   }

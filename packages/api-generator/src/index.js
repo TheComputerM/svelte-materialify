@@ -42,6 +42,7 @@ export { default as Table } from './Table.json';
 export { default as Tab } from './Tab.json';
 export { default as TabContent } from './TabContent.json';
 export { default as Tabs } from './Tabs.json';
+export { default as Textarea } from './Textarea.json';
 export { default as TextField } from './TextField.json';
 export { default as VirtualList } from './VirtualList.json';
 export { default as Window } from './Window.json';

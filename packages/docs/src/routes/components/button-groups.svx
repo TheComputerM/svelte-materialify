@@ -1,7 +1,7 @@
 ---
 title: Button group Component
 related:
-  - Alert: /components/alerts/
+  - Textfield: /components/text-field/
   - ButtonGroup API: /api/ButtonGroup/
 ---
 

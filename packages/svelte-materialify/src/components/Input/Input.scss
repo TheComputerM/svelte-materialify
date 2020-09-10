@@ -1,3 +1,6 @@
+@use '../TextField/TextField.scss';
+@use '../Textarea/Textarea.scss';
+
 @import './variables';
 
 .s-input__slot {
@@ -45,71 +48,67 @@
   max-width: 100%;
   text-align: $input-text-align;
 
-  :global {
-    input {
-      max-height: $input-max-height;
+  input {
+    max-height: $input-max-height;
+  }
+
+  input,
+  textarea {
+    color: var(--theme-text-primary);
+
+    &:invalid {
+      box-shadow: none;
     }
 
-    input,
-    textarea {
-      color: var(--theme-text-primary);
-
-      &:invalid {
-        box-shadow: none;
-      }
-
-      &:focus,
-      &:active {
-        outline: none;
-      }
-
-      &::placeholder {
-        color: var(--theme-text-disabled);
-      }
+    &:focus,
+    &:active {
+      outline: none;
     }
 
-    [slot='prepend'],
-    [slot='append'] {
-      display: inline-flex;
-      margin-bottom: 4px;
-      margin-top: 4px;
-      line-height: 1;
-    }
-
-    [slot='prepend'] {
-      margin-right: $input-prepend-append-outer-margin;
-    }
-
-    [slot='append'] {
-      margin-left: $input-prepend-append-outer-margin;
-    }
-
-    .s-icon {
-      user-select: none;
-      align-items: center;
-      display: inline-flex;
-      height: $input-icon-height;
-      flex: 1 0 auto;
-      justify-content: center;
-      min-width: $input-icon-min-width;
-      width: $input-icon-width;
-    }
-
-    label {
-      position: absolute;
-      height: $input-label-height;
-      line-height: $input-label-letter-spacing;
-      color: var(--theme-text-secondary);
-      white-space: nowrap;
-      transition: $primary-transition;
+    &::placeholder {
+      color: var(--theme-text-disabled);
     }
   }
 
+  [slot='prepend'],
+  [slot='append'] {
+    display: inline-flex;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    line-height: 1;
+  }
+
+  [slot='prepend'] {
+    margin-right: $input-prepend-append-outer-margin;
+  }
+
+  [slot='append'] {
+    margin-left: $input-prepend-append-outer-margin;
+  }
+
+  .s-icon {
+    user-select: none;
+    align-items: center;
+    display: inline-flex;
+    height: $input-icon-height;
+    flex: 1 0 auto;
+    justify-content: center;
+    min-width: $input-icon-min-width;
+    width: $input-icon-width;
+  }
+
+  label {
+    position: absolute;
+    height: $input-label-height;
+    line-height: $input-label-letter-spacing;
+    color: var(--theme-text-secondary);
+    white-space: nowrap;
+    transition: $primary-transition;
+  }
+
   &:focus-within {
-    :global {
-      .s-icon {
-        color: inherit;
-      }
+    .s-icon {
+      color: inherit;
     }
   }
 
@@ -117,19 +116,17 @@
     pointer-events: none;
     color: var(--theme-text-disabled);
 
-    :global {
-      input,
-      textarea {
-        color: var(--theme-text-disabled);
-      }
+    input,
+    textarea {
+      color: var(--theme-text-disabled);
+    }
 
-      .s-icon {
-        color: var(--theme-icons-inactive);
-      }
+    .s-icon {
+      color: var(--theme-icons-inactive);
+    }
 
-      label {
-        color: var(--theme-text-disabled);
-      }
+    label {
+      color: var(--theme-text-disabled);
     }
   }
 
@@ -139,24 +136,22 @@
       color: inherit;
     }
 
-    :global {
-      label {
-        color: inherit;
-      }
+    label {
+      color: inherit;
     }
   }
-}
 
-.error {
-  color: $error-color;
-}
+  &.error {
+    color: $error-color;
+  }
 
-.success {
-  color: $success-color;
-}
+  &.success {
+    color: $success-color;
+  }
 
-.dense {
-  .s-input__slot {
-    margin-bottom: $input-dense-slot-margin-bottom;
+  &.dense {
+    .s-input__slot {
+      margin-bottom: $input-dense-slot-margin-bottom;
+    }
   }
 }

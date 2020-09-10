@@ -67,6 +67,7 @@ export default [
         open: false,
         items: [
           { text: 'Text Field', href: '/components/text-field/' },
+          { text: 'Textarea', href: '/components/textarea/' },
           { text: 'Checkboxes', href: '/components/checkboxes/' },
           { text: 'Switches', href: '/components/switches/' },
           { text: 'Radio', href: '/components/radio/' },

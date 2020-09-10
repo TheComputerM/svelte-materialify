@@ -13,7 +13,8 @@
   export let error = false;
 </script>
 
-<style lang="scss" src="./Input.scss">
+<style lang="scss" global>
+  @use "./Input.scss";
 </style>
 
 <div

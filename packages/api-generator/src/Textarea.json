@@ -1,0 +1,397 @@
+{
+  "version": 3,
+  "name": "Textarea",
+  "data": [
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Value of the text input.",
+      "name": "value",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "defaultValue": "",
+      "bind": [
+        {
+          "source": "textarea",
+          "property": "value"
+        }
+      ]
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "The color of the input when active.",
+      "name": "color",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "object",
+        "type": "object"
+      },
+      "defaultValue": null
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Changes the variant of the input to filled.",
+      "name": "filled",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Changes the variant of the input to solo.",
+      "name": "solo",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Changes the variant of the input to outlined.",
+      "name": "outlined",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Removes any shadow from the input.",
+      "name": "flat",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Adds a border radius to the input.",
+      "name": "rounded",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Add input clear functionality.",
+      "name": "clearable",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Puts input in readonly state.",
+      "name": "readonly",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Default row count.",
+      "name": "rows",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "number",
+        "type": "number"
+      },
+      "defaultValue": 5
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Automatically grow the textarea depending on amount of text.",
+      "name": "autogrow",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Remove resize handle.",
+      "name": "noResize",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Disable the input.",
+      "name": "disabled",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "The input placeholder content.",
+      "name": "placeholder",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "object",
+        "type": "object"
+      },
+      "defaultValue": null
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Hint text.",
+      "name": "hint",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "defaultValue": ""
+    },
+    {
+      "keywords": [
+        {
+          "name": "type",
+          "description": "{number}"
+        }
+      ],
+      "visibility": "public",
+      "description": "Creates counter for input length.",
+      "name": "counter",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "number",
+        "type": "number"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [
+        {
+          "name": "type",
+          "description": "{Array}"
+        }
+      ],
+      "visibility": "public",
+      "description": "An array of functions which take input value as arguement and return error message.",
+      "name": "rules",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "Array",
+        "type": "Array"
+      }
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Delays validation till blur.",
+      "name": "validateOnBlur",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Error state of the input.",
+      "name": "error",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Id of the text input.",
+      "name": "id",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "object",
+        "type": "object"
+      },
+      "defaultValue": null
+    }
+  ],
+  "computed": [],
+  "methods": [],
+  "components": [],
+  "description": null,
+  "keywords": [],
+  "events": [
+    {
+      "name": "focus",
+      "parent": "textarea",
+      "modificators": [],
+      "locations": null,
+      "loc": null,
+      "visibility": "public",
+      "description": "Slot for prepend inside the input.",
+      "keywords": []
+    },
+    {
+      "name": "blur",
+      "parent": "textarea",
+      "modificators": [],
+      "locations": null,
+      "loc": null,
+      "visibility": "public",
+      "description": "",
+      "keywords": []
+    },
+    {
+      "name": "input",
+      "parent": "textarea",
+      "modificators": [],
+      "locations": null,
+      "loc": null,
+      "visibility": "public",
+      "description": "",
+      "keywords": []
+    }
+  ],
+  "slots": [
+    {
+      "name": "prepend-outer",
+      "description": "Slot for prepend outside the input.",
+      "visibility": "public",
+      "parameters": []
+    },
+    {
+      "name": "prepend",
+      "description": "Slot for prepend inside the input.",
+      "visibility": "public",
+      "parameters": []
+    },
+    {
+      "name": "default",
+      "description": "Slot for prepend inside the input.",
+      "visibility": "public",
+      "parameters": []
+    },
+    {
+      "name": "clear-icon",
+      "description": "Slot for the icon when `clearable` is true.",
+      "visibility": "public",
+      "parameters": []
+    },
+    {
+      "name": "append",
+      "description": "Slot for append inside the input.",
+      "visibility": "public",
+      "parameters": []
+    },
+    {
+      "name": "append-outer",
+      "description": "Slot for append outside the input.",
+      "visibility": "public",
+      "parameters": []
+    }
+  ],
+  "refs": []
+}

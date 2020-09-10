@@ -9,6 +9,7 @@ export { default as Button } from './components/Button';
 export { default as ButtonGroup, ButtonGroupItem } from './components/ButtonGroup';
 export { default as Input } from './components/Input';
 export { default as TextField } from './components/TextField';
+export { default as Textarea } from './components/Textarea';
 export { default as Checkbox } from './components/Checkbox';
 export { default as Switch } from './components/Switch';
 export { default as Radio } from './components/Radio';
