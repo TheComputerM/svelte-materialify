@@ -1,5 +1,8 @@
 {
   "version": 2,
   "cleanUrls": true,
-  "trailingSlash": true
+  "trailingSlash": true,
+  "github": {
+    "enabled": false
+  }
 }
