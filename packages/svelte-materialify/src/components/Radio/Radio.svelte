@@ -3,14 +3,15 @@
 </script>
 
 <script>
+  import TextColor from '../../internal/TextColor';
   import Ripple from '../../actions/Ripple';
 
   // Add class to radio wrapper.
   let klass = '';
   export { klass as class };
 
-  // Class to add to radio when it is checked.
-  export let activeClass = 'primary-text';
+  // Color of the radio when active.
+  export let color = 'primary';
 
   // Disables the radio.
   export let disabled = false;
@@ -31,13 +32,14 @@
   $: active = group === value;
 </script>
 
-<style lang="scss" src="./Radio.scss">
+<style lang="scss" src="./Radio.scss" global>
 </style>
 
 <div class="s-radio" {style}>
   <div
-    class="s-radio__wrapper {klass} {active ? activeClass : ''}"
+    class="s-radio__wrapper {klass}"
     class:disabled
+    use:TextColor={!disabled && active && color}
     use:Ripple={{ centered: true }}>
     <input
       type="radio"

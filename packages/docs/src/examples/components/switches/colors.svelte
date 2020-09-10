@@ -2,11 +2,11 @@
   import Switch from 'svelte-materialify/src/components/Switch';
 </script>
 
-<Switch activeClass="red-text">Red when active.</Switch>
-<Switch class="blue-text" activeClass="blue-text">Always blue.</Switch>
+<Switch color="red">red</Switch>
+<Switch color="blue">blue</Switch>
 <br />
 <div class="d-flex justify-space-between">
-  <Switch checked activeClass="secondary-text">secondary</Switch>
-  <Switch checked activeClass="error-text">error</Switch>
-  <Switch checked activeClass="success-text">success</Switch>
+  <Switch color="secondary">secondary</Switch>
+  <Switch color="error">error</Switch>
+  <Switch color="success">success</Switch>
 </div>

@@ -4,7 +4,6 @@
 .s-switch__thumb {
   background-color: currentColor;
   pointer-events: none;
-  transition: inherit;
 }
 
 .s-switch__track {
@@ -17,6 +16,8 @@
   opacity: $switch-track-opacity;
   right: $switch-track-x;
   top: $switch-track-top;
+  transition: background-color $primary-transition;
+  will-change: background-color;
 }
 
 .s-switch__thumb {
@@ -30,6 +31,7 @@
   justify-content: center;
   align-items: center;
   transition: $primary-transition;
+  will-change: transform;
   @include elevation(4);
 
   &::before {
@@ -48,16 +50,14 @@
   }
 }
 
-input {
-  position: absolute;
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  user-select: none;
-  cursor: pointer;
+.s-switch {
+  display: flex;
+  margin-bottom: 8px;
+  align-items: center;
+  position: relative;
 
-  &:checked + .s-switch__thumb {
-    transform: translate($switch-dirty-offset-x);
+  label {
+    margin-left: 8px;
   }
 }
 
@@ -67,20 +67,29 @@ input {
   flex: 0 0 auto;
   height: 24px;
   position: relative;
-  transition: $primary-transition;
 
   &:hover {
     .s-switch__thumb::before {
       display: block;
     }
   }
-}
 
-.s-switch {
-  display: flex;
-  margin-bottom: 8px;
-  align-items: center;
-  position: relative;
+  &.inset {
+    width: $switch-track-inset-width;
+
+    .s-switch__track {
+      width: $switch-track-inset-width;
+      border-radius: $switch-track-inset-border-radius;
+      height: $switch-track-inset-height;
+      left: -4px;
+      opacity: $switch-track-inset-opacity;
+      top: calc(50% - #{$switch-track-inset-height / 2});
+    }
+
+    .s-switch__thumb {
+      box-shadow: none;
+    }
+  }
 
   &.dense {
     .s-switch__thumb {
@@ -92,21 +101,53 @@ input {
       height: $switch-track-dense-height;
       width: $switch-track-dense-width;
     }
+
+    &.inset {
+      .s-switch__track {
+        height: $switch-track-dense-inset-height;
+        width: $switch-track-dense-inset-width;
+        top: $switch-track-dense-top;
+        left: -3px;
+      }
+    }
   }
 
   &.disabled {
     opacity: $switch-disabled-opacity;
+    pointer-events: none;
 
     .s-switch__thumb {
       color: var(--theme-controls-thumb-disabled);
+
+      &::before {
+        display: none;
+      }
     }
 
+    // stylelint-disable-next-line no-descending-specificity
     .s-switch__track {
       color: var(--theme-controls-track-disabled);
     }
   }
-}
 
-label {
-  margin-left: 8px;
+  & > input {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    cursor: pointer;
+
+    &:checked ~ {
+      // stylelint-disable-next-line no-descending-specificity
+      .s-switch__track,
+      .s-switch__thumb {
+        color: inherit;
+      }
+
+      .s-switch__thumb {
+        transform: translate($switch-dirty-offset-x);
+      }
+    }
+  }
 }

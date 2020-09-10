@@ -4,11 +4,38 @@
   display: flex;
   align-items: center;
   position: relative;
+
+  label {
+    padding-left: 12px;
+  }
+}
+
+.s-radio__background {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  border: 2px solid currentColor;
+  border-radius: 100%;
+  color: inherit;
+  background-color: transparent;
+  pointer-events: none;
+
+  &::before {
+    transition: 60ms map-get($transitions, 'ease-in-out');
+    width: $radio-size - 8;
+    height: $radio-size - 8;
+    border-radius: 100%;
+    content: '';
+    background-color: currentColor;
+    transform: scale(0);
+    will-change: transform;
+  }
 }
 
 .s-radio__wrapper {
   overflow: unset !important;
-  color: var(--theme-text-secondary);
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -29,13 +56,13 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    color: inherit;
     background-color: currentColor;
     transform: scale(2);
     opacity: 0;
   }
 
   &:not(.disabled) {
+    color: var(--theme-text-secondary);
     cursor: pointer;
 
     &:hover::before {
@@ -46,45 +73,18 @@
   &.disabled {
     color: var(--theme-controls-disabled) !important;
   }
-}
 
-.s-radio__background {
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  display: inline-flex;
-  justify-content: center;
-  border: 2px solid currentColor;
-  border-radius: 100%;
-  color: inherit;
-  background-color: transparent;
-  pointer-events: none;
+  input {
+    position: absolute;
+    width: $radio-size * 2;
+    height: $radio-size * 2;
+    cursor: inherit;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
 
-  &::before {
-    transition: 120ms 0ms map-get($transitions, 'swing');
-    width: $radio-size - 8;
-    height: $radio-size - 8;
-    border-radius: 100%;
-    content: '';
-    background-color: currentColor;
-    transform: scale(0);
+    &:checked ~ .s-radio__background::before {
+      transform: scale(1);
+    }
   }
-}
-
-input {
-  position: absolute;
-  width: $radio-size * 2;
-  height: $radio-size * 2;
-  cursor: inherit;
-  opacity: 0;
-  margin: 0;
-  padding: 0;
-
-  &:checked ~ .s-radio__background::before {
-    transform: scale(1);
-  }
-}
-
-label {
-  padding-left: 12px;
 }

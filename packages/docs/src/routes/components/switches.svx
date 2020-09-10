@@ -48,3 +48,13 @@ You can change the colors of the switch and the labels.
 
 Here are some different states the switch can be in.
 <Example name="states" />
+
+### Dense
+
+Here are some different states the switch can be in.
+<Example name="dense" />
+
+### Inset
+
+Here are some different states the switch can be in.
+<Example name="inset" />

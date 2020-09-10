@@ -21,7 +21,7 @@
       "keywords": [],
       "visibility": "public",
       "description": "Class to add to checkbox when it is checked or indeterminate.",
-      "name": "activeClass",
+      "name": "color",
       "kind": "let",
       "static": false,
       "readonly": false,
@@ -30,7 +30,7 @@
         "text": "string",
         "type": "string"
       },
-      "defaultValue": "primary-text"
+      "defaultValue": "primary"
     },
     {
       "keywords": [],

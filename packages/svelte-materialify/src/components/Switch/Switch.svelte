@@ -3,12 +3,14 @@
 </script>
 
 <script>
+  import TextColor from '../../internal/TextColor';
+
   // Add class to switch wrapper.
   let klass = '';
   export { klass as class };
 
-  // Classes to add to switch when checked.
-  export let activeClass = 'primary-text';
+  // Color of the switch when active.
+  export let color = 'primary';
 
   // The value for the switch.
   export let value = null;
@@ -18,6 +20,9 @@
 
   // Get/Set checked state.
   export let checked = false;
+
+  //
+  export let inset = false;
 
   // Makes the switch dense.
   export let dense = false;
@@ -51,12 +56,16 @@
   }
 </script>
 
-<style lang="scss" src="./Switch.scss">
+<style lang="scss" src="./Switch.scss" global>
 </style>
 
-<div class="s-switch {klass}" class:dense class:disabled {style}>
-  <div class="s-switch__wrapper">
-    <div class="s-switch__track {checked ? activeClass : ''}" />
+<div class="s-switch {klass}" {style}>
+  <div
+    class="s-switch__wrapper"
+    class:dense
+    class:inset
+    class:disabled
+    use:TextColor={checked && color}>
     <input
       type="checkbox"
       role="switch"
@@ -67,7 +76,8 @@
       {value}
       on:change={groupUpdate}
       on:change />
-    <div class="s-switch__thumb {checked ? activeClass : ''}" />
+    <div class="s-switch__track" />
+    <div class="s-switch__thumb" />
   </div>
   <label for={id}>
     <slot />

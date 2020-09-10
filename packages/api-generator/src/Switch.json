@@ -20,8 +20,8 @@
     {
       "keywords": [],
       "visibility": "public",
-      "description": "Classes to add to switch when checked.",
-      "name": "activeClass",
+      "description": "Color of the switch when active.",
+      "name": "color",
       "kind": "let",
       "static": false,
       "readonly": false,
@@ -30,7 +30,7 @@
         "text": "string",
         "type": "string"
       },
-      "defaultValue": "primary-text"
+      "defaultValue": "primary"
     },
     {
       "keywords": [],
@@ -81,6 +81,21 @@
           "property": "checked"
         }
       ]
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "inset",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
     },
     {
       "keywords": [],

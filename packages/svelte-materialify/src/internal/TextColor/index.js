@@ -6,7 +6,7 @@
  */
 export default (node, text) => {
   let klass;
-  if (text) {
+  if (typeof text === 'string') {
     if (/^#([0-9A-F]{3}){1,2}$/i.test(text)) {
       // This is a CSS hex.
       node.style.color = text;
@@ -29,12 +29,12 @@ export default (node, text) => {
         node.style.color = null;
       }
 
-      if (newText) {
+      if (typeof newText === 'string') {
         if (/^#([0-9A-F]{3}){1,2}$/i.test(newText)) {
           // This is a CSS hex.
           node.style.color = newText;
           klass = false;
-        } else if (text.startsWith('--')) {
+        } else if (newText.startsWith('--')) {
           // This is a CSS variable.
           node.style.color = `var(${newText})`;
           klass = false;

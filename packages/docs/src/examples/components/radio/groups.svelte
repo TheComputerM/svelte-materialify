@@ -1,7 +1,7 @@
 <script>
   import Radio from 'svelte-materialify/src/components/Radio';
 
-  let group;
+  let group = 2;
 </script>
 
 <div class="d-flex justify-space-around">

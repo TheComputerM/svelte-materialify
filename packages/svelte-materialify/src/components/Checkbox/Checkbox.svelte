@@ -7,13 +7,14 @@
 
 <script>
   import Ripple from '../../actions/Ripple';
+  import TextColor from '../../internal/TextColor';
 
   // Add class to checkbox wrapper.
   let klass = '';
   export { klass as class };
 
   // Class to add to checkbox when it is checked or indeterminate.
-  export let activeClass = 'primary-text';
+  export let color = 'primary';
 
   // Get/Set checked state.
   export let checked = false;
@@ -56,14 +57,15 @@
   }
 </script>
 
-<style lang="scss" src="./Checkbox.scss">
+<style lang="scss" src="./Checkbox.scss" global>
 </style>
 
 <div class="s-checkbox" {style}>
   <div
-    class="s-checkbox__wrapper {klass} {checked || indeterminate ? activeClass : ''}"
+    class="s-checkbox__wrapper {klass}"
     class:disabled
-    use:Ripple={{ centered: true }}>
+    use:Ripple={{ centered: true }}
+    use:TextColor={checked || indeterminate ? color : false}>
     <input
       type="checkbox"
       role="checkbox"
