@@ -9,7 +9,7 @@ on:
 
 jobs:
   test:
-    name: Tests
+    name: tests
     runs-on: ubuntu-latest
     timeout-minutes: 10
     strategy:
@@ -33,37 +33,5 @@ jobs:
         name: Test
         env:
           CI: true
-  docs:
-    name: Deploy Docs
-    needs: test
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/cache@v2
-        with:
-          path: |
-            node_modules
-            **/node_modules
-          key: ${{ runner.os }}-${{ hashFiles('./yarn.lock') }}
-      - run: yarn --frozen-lockfile --non-interactive
-      - run: yarn docs
-      - name: Deploy preview
-        uses: amondnet/vercel-action@v19
-        if: github.event_name == 'pull_request'
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.ORG_ID }}
-          vercel-project-id: ${{ secrets.PROJECT_ID }}
-      - name: Deploy production
-        uses: amondnet/vercel-action@v19
-        if: github.event_name == 'push' && github.repository_owner == 'TheComputerM'
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.ORG_ID }}
-          vercel-project-id: ${{ secrets.PROJECT_ID }}
-          vercel-args: '--prod'
 
 
