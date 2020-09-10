@@ -8,14 +8,13 @@
   <a href="https://github.com/thecomputerm/svelte-materialify/actions?query=workflow%3ACI">
     <img src="https://github.com/thecomputerm/svelte-materialify/workflows/CI/badge.svg" alt="CI badge">
   </a>
-  <!-- One Day -->
-  <!-- <a href="https://www.npmjs.com/package/svelte-materialify">
+  <a href="https://www.npmjs.com/package/svelte-materialify">
     <img src="https://img.shields.io/npm/dt/svelte-materialify.svg" alt="Downloads">
   </a>
   <a href="https://www.npmjs.com/package/svelte-materialify">
     <img src="https://img.shields.io/npm/dm/svelte-materialify.svg" alt="Downloads">
   </a>
-  <br> -->
+  <br>
   <a href="https://github.com/thecomputerm/svelte-materialify/blob/master/LICENSE.md">
     <img src="https://img.shields.io/npm/l/svelte-materialify.svg" alt="License">
   </a>
