@@ -5,7 +5,15 @@
 </script>
 
 <script>
-  import { Container, Button, Icon, Row, Col, Table } from 'svelte-materialify/src/';
+  import {
+    Container,
+    Button,
+    Icon,
+    Row,
+    Col,
+    Table,
+    Footer,
+  } from 'svelte-materialify/src/';
 </script>
 
 <style lang="scss">
@@ -20,6 +28,14 @@
 
     :global(.s-btn) {
       width: 100%;
+    }
+  }
+
+  .footer-links a {
+    opacity: 0.8;
+    margin: 8px;
+    &:hover {
+      opacity: 1;
     }
   }
 </style>
@@ -53,7 +69,8 @@
           <a
             href="https://github.com/TheComputerM/svelte-materialify"
             target="_blank"
-            class="black-text">
+            class="black-text"
+            rel="noopener">
             <Button depressed size="x-large" class="white">
               <Icon class="mdi mdi-github mr-3" />
               GitHub
@@ -76,7 +93,7 @@
     Building applications with Svelte has never been easier. Supercharge your development
     process with all of the tools you need to succeed.
   </p>
-  <div class="elevation-5">
+  <div class="elevation-5 pb-1">
     <h3 class="text-h5 pt-3 pb-3">Svelte Framework Comparison 2020</h3>
     <Table class="text-left">
       <thead>
@@ -176,8 +193,39 @@
         </tr>
       </tbody>
     </Table>
-    <p class="text-center font-italic text-subtitle-2 grey-text" role="presentation">
+    <p
+      class="text-center font-italic text-subtitle-2 grey-text mt-2"
+      aria-disabled="true">
       ** Based on average commit frequency as of September 2020
     </p>
   </div>
 </Container>
+
+<Footer class="theme--dark">
+  <div class="pa-4 text-center" style="width: 100%">
+    <img src="logo-192.png" alt="Svelte Materialify" width="128px" />
+    <div class="footer-links">
+      <a
+        href="https://github.com/TheComputerM/svelte-materialify"
+        aria-label="GitHub"
+        target="_blank"
+        rel="noopener">
+        <Icon class="mdi mdi-github" />
+      </a>
+      <a
+        href="https://twitter.com/TheComputerM"
+        aria-label="Twitter"
+        target="_blank"
+        rel="noopener">
+        <Icon class="mdi mdi-twitter" />
+      </a>
+    </div>
+    <div class="mt-2">
+      <span class="text-body-2">
+        Released under the <a href="https://opensource.org/licenses/MIT" rel="noopener"> MIT
+          License </a>
+      </span>
+      <p class="mt-1">Copyright © 2020 Mudit Somani</p>
+    </div>
+  </div>
+</Footer>
