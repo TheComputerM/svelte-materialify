@@ -1,0 +1,47 @@
+---
+title: Footer
+related:
+  - AppBar: /components/app-bar/
+---
+
+<script context="module">
+  export async function preload() {
+    let sources = await this.fetch('examples/components/footer.json');
+    sources = await sources.json();
+    return { sources };
+  }
+</script>
+
+<script>
+  import { API, Example, setExamples } from '@shared';
+  import * as Examples from '@examples/components/footer';
+  import { Footer as doc } from 'svelte-materialify-api';
+  export let sources;
+  setExamples([sources, Examples]);
+</script>
+
+# Footer
+The `Footer` component is used for displaying general information that a user might want to access from any page within your site.
+
+## API
+
+<API {doc} />
+
+## Examples
+
+Below is a collection of simple to complex examples.
+
+### Absolute
+
+The `absolute` prop positions footers absolutely at the bottom of their parent container.
+<Example name="absolute" />
+
+### Padless
+
+The `padless` prop removes all default padding from the footer component.
+<Example name="padless" />
+
+### Company
+
+The `footer` component as a basic company footer with links.
+<Example name="company" />

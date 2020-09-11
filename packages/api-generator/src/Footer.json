@@ -1,42 +1,27 @@
 {
   "version": 3,
-  "name": "Icon",
+  "name": "Footer",
   "data": [
     {
       "visibility": "public",
       "description": null,
       "keywords": [],
-      "name": "size",
-      "kind": "let",
+      "name": "class",
+      "kind": "const",
       "static": false,
-      "readonly": false,
+      "readonly": true,
       "type": {
         "kind": "type",
         "text": "string",
         "type": "string"
       },
-      "defaultValue": "24px"
+      "localName": "klass"
     },
     {
       "visibility": "public",
       "description": null,
       "keywords": [],
-      "name": "rotate",
-      "kind": "let",
-      "static": false,
-      "readonly": false,
-      "type": {
-        "kind": "type",
-        "text": "number",
-        "type": "number"
-      },
-      "defaultValue": 0
-    },
-    {
-      "visibility": "public",
-      "description": null,
-      "keywords": [],
-      "name": "disabled",
+      "name": "absolute",
       "kind": "let",
       "static": false,
       "readonly": false,
@@ -51,31 +36,46 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
-      "name": "path",
+      "name": "fixed",
       "kind": "let",
       "static": false,
       "readonly": false,
       "type": {
         "kind": "type",
-        "text": "object",
-        "type": "object"
+        "text": "boolean",
+        "type": "boolean"
       },
-      "defaultValue": null
+      "defaultValue": false
     },
     {
       "visibility": "public",
       "description": null,
       "keywords": [],
-      "name": "label",
+      "name": "inset",
       "kind": "let",
       "static": false,
       "readonly": false,
       "type": {
         "kind": "type",
-        "text": "object",
-        "type": "object"
+        "text": "boolean",
+        "type": "boolean"
       },
-      "defaultValue": null
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "padless",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
     },
     {
       "visibility": "public",
@@ -91,21 +91,6 @@
         "type": "object"
       },
       "defaultValue": null
-    },
-    {
-      "visibility": "public",
-      "description": null,
-      "keywords": [],
-      "name": "class",
-      "kind": "const",
-      "static": false,
-      "readonly": true,
-      "type": {
-        "kind": "type",
-        "text": "string",
-        "type": "string"
-      },
-      "localName": "klass"
     }
   ],
   "computed": [],

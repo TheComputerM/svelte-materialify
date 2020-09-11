@@ -1,6 +1,7 @@
 ---
 title: Breadcrumbs Component
 related:
+  - Switch: /components/switches/
   - Breadcrumbs API: /api/Breadcrumbs/
 ---
 

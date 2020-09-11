@@ -44,3 +44,4 @@ export { default as ItemGroup } from './components/ItemGroup';
 export { default as SlideGroup, SlideItem } from './components/SlideGroup';
 export { default as Window, WindowItem } from './components/Window';
 export { default as Tabs, Tab, TabContent } from './components/Tabs';
+export { default as Footer } from './components/Footer';

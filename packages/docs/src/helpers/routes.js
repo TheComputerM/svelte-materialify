@@ -63,6 +63,7 @@ export default [
       { text: 'Grid', href: '/components/grid/' },
       { text: 'Icons', href: '/components/icons/' },
       { text: 'Expansion Panels', href: '/components/expansion-panels/' },
+      { text: 'Footer', href: '/components/footer/' },
       {
         text: 'Forms',
         open: false,

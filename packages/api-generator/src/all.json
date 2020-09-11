@@ -19,6 +19,7 @@
     "Divider",
     "ExpansionPanel",
     "ExpansionPanels",
+    "Footer",
     "Col",
     "Container",
     "Row",
@@ -46,8 +47,8 @@
     "Tabs",
     "Textarea",
     "TextField",
+    "VirtualList",
     "Window",
-    "WindowItem",
-    "VirtualList"
+    "WindowItem"
   ]
 }

@@ -1,0 +1,40 @@
+@import './variables';
+
+.s-footer {
+  background-color: var(--theme-app-bar);
+  align-items: center;
+  display: flex;
+  flex: 0 1 auto !important;
+  flex-wrap: wrap;
+  padding: $footer-padding;
+  position: relative;
+  transition-duration: $footer-transition-duration;
+  transition-property: $footer-transition-property;
+  transition-timing-function: $footer-transition-timing-function;
+  border-radius: $footer-border-radius;
+  @include elevation($footer-elevation);
+
+  &.absolute,
+  &.fixed {
+    z-index: 3;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &.absolute {
+    position: absolute;
+
+    &:not(.inset) {
+      width: 100%;
+    }
+  }
+
+  &.fixed {
+    position: fixed;
+  }
+
+  &.padless {
+    padding: $footer-padless-padding;
+  }
+}
