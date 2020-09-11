@@ -1,0 +1,49 @@
+---
+title: Badges
+related:
+  - Icons: /components/icons/
+  - Alerts: /components/alerts/
+---
+
+<script context="module">
+  export async function preload() {
+    let sources = await this.fetch('examples/components/badges.json');
+    sources = await sources.json();
+    return { sources };
+  }
+</script>
+
+<script>
+  import { API, Example, setExamples } from '@shared';
+  import * as Examples from '@examples/components/badges';
+  import { Badge as doc } from 'svelte-materialify-api';
+  export let sources;
+  setExamples([sources, Examples]);
+</script>
+
+# Badges
+
+The `Badge` component superscripts or subscripts an avatar-like icon or text onto content to highlight information to a user or to just draw attention to a specific element. Content within the badge usually contains numbers or icons.
+
+## API
+
+<API {doc} />
+
+## Examples
+
+Below is a collection of simple to complex examples.
+
+### Basic
+
+This is how to use basic badges.
+<Example name="basic" />
+
+### Dynamic Notifications
+
+You can incorporate badges with dynamic content to make things such as a notification system.
+<Example name="notifications" />
+
+### Offset
+
+The `Badge` component is flexible and can be used in a variety of use-cases over numerous elements. Options to tweak the location are also available through the `offsetX` and `offsetY` props.
+<Example name="offset" />

@@ -3,6 +3,7 @@
     "Alert",
     "AppBar",
     "Avatar",
+    "Badge",
     "Breadcrumbs",
     "Button",
     "ButtonGroup",
@@ -45,8 +46,8 @@
     "Tabs",
     "Textarea",
     "TextField",
-    "VirtualList",
     "Window",
-    "WindowItem"
+    "WindowItem",
+    "VirtualList"
   ]
 }
