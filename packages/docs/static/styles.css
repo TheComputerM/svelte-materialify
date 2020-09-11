@@ -4,6 +4,9 @@
 html {
   scroll-behavior: smooth;
 }
+:target {
+  scroll-margin-top: 64px;
+}
 .text-mono {
   font-family: "Fira Code", "Roboto Mono", "Consolas", monospace;
 }

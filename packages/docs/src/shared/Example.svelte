@@ -44,19 +44,30 @@
 <div class="example">
   <div class="text-right pa-1">
     {#if colorInvertable}
-      <Button fab icon size="small" on:click={() => (isComponentDark = !isComponentDark)}>
+      <Button
+        fab
+        icon
+        size="small"
+        aria-label="invert color"
+        on:click={() => (isComponentDark = !isComponentDark)}>
         <Icon class="mdi mdi-invert-colors" />
       </Button>
     {/if}
     <a
       href="https://github.com/TheComputerM/svelte-materialify/tree/master/packages/docs/{path}"
+      aria-label="GitHub"
       rel="noopener noreferrer"
       target="_blank">
-      <Button fab icon size="small" class="text--primary">
+      <Button fab icon size="small" aria-label="GitHub" class="text--primary">
         <Icon class="mdi mdi-github" />
       </Button>
     </a>
-    <Button fab icon size="small" on:click={() => (codeVisible = !codeVisible)}>
+    <Button
+      fab
+      icon
+      size="small"
+      aria-label="Show Code"
+      on:click={() => (codeVisible = !codeVisible)}>
       <Icon class="mdi mdi-code-tags" />
     </Button>
   </div>

@@ -40,7 +40,6 @@
   }
   .markdown-container .heading {
     position: relative;
-    scroll-margin-top: 64px;
   }
   .markdown-container .heading > a {
     position: absolute;

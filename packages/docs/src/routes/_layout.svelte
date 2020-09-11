@@ -1,17 +1,24 @@
 <script>
   import { onMount } from 'svelte';
-  import { MaterialApp } from 'svelte-materialify/src';
+  import { mdiGithub, mdiWeatherSunny, mdiWeatherNight, mdiMenu } from '@mdi/js';
+  import { MaterialApp, AppBar, Button, Icon } from 'svelte-materialify/src';
   import SiteNavigation from '../helpers/Navigation/SiteNavigation.svelte';
   import Loading from '../helpers/Navigation/Loading.svelte';
   import { theme } from '../helpers/stores';
 
   export let segment;
 
+  let sidenav = false;
   let breakpoints = {};
   let navigation = false;
 
   function checkMobile() {
     navigation = !window.matchMedia(breakpoints['md-and-down']).matches;
+  }
+
+  function toggleTheme() {
+    if ($theme === 'light') theme.set('dark');
+    else theme.set('light');
   }
 
   onMount(async () => {
@@ -24,9 +31,7 @@
     breakpoints = breakpoints.default;
     checkMobile();
 
-    return () => {
-      unsubscribe();
-    };
+    return unsubscribe;
   });
 </script>
 
@@ -34,11 +39,8 @@
   main {
     padding-top: 56px;
   }
-  .navigation-enabled {
+  .navigation-enabled:not(.index-page) {
     padding: 56px 256px 0 256px;
-  }
-  .index-page {
-    padding: 0;
   }
 </style>
 
@@ -53,9 +55,41 @@
 </svelte:head>
 
 <MaterialApp theme={$theme}>
+  <AppBar
+    fixed
+    style="width:100%"
+    class={segment === undefined ? 'primary-color theme--dark' : ''}>
+    <div slot="icon">
+      {#if !navigation && segment !== undefined}
+        <Button
+          fab
+          depressed
+          on:click={() => (sidenav = !sidenav)}
+          aria-label="Open Menu">
+          <Icon path={mdiMenu} />
+        </Button>
+      {/if}
+    </div>
+    <a href="/" slot="title" rel="external" class="text--primary"> Svelte Materialify </a>
+    <div style="flex-grow:1" />
+    <a
+      href="https://github.com/TheComputerM/svelte-materialify"
+      target="_blank"
+      rel="noopener">
+      <Button class="white-text grey darken-3" aria-label="GitHub" fab={!navigation}>
+        <Icon path={mdiGithub} class={navigation ? 'mr-3' : ''} />
+        {#if navigation}GitHub{/if}
+      </Button>
+    </a>
+    <Button fab text on:click={toggleTheme} aria-label="Toggle Theme">
+      <Icon path={theme === 'light' ? mdiWeatherNight : mdiWeatherSunny} />
+    </Button>
+  </AppBar>
+
   {#if segment !== undefined}
-    <SiteNavigation bind:theme={$theme} {navigation} />
+    <SiteNavigation {navigation} {sidenav} />
   {/if}
+
   <main class:navigation-enabled={navigation} class:index-page={segment === undefined}>
     {#if segment !== undefined}
       <Loading />
