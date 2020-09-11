@@ -41,14 +41,16 @@
   export let style = null;
 
   const dispatch = createEventDispatcher();
-  const Value = writable(value);
+  const values = writable(value);
   const Disabled = writable(disabled);
 
-  $: Value.set(value);
+  $: values.set(value);
   $: Disabled.set(disabled);
 
+  let startIndex = -1;
+
   setContext(EXPANSION_PANELS, {
-    Value,
+    values,
     Disabled,
     selectPanel: (index) => {
       if (value.includes(index)) {
@@ -67,10 +69,14 @@
         dispatch('change', { index, active: true });
       }
     },
+    index: () => {
+      startIndex += 1;
+      return startIndex;
+    },
   });
 </script>
 
-<style lang="scss" src="./ExpansionPanels.scss">
+<style lang="scss" src="./ExpansionPanels.scss" global>
 </style>
 
 <div

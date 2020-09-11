@@ -3,10 +3,12 @@
 </script>
 
 <script>
-  import { getContext, onMount } from 'svelte';
+  import { getContext } from 'svelte';
   import { EXPANSION_PANELS } from './ExpansionPanels.svelte';
   import { slide } from 'svelte/transition';
   import Icon from '../Icon';
+
+  const { values, Disabled, selectPanel, index } = getContext(EXPANSION_PANELS);
 
   // Classes to add to the panel.
   let klass = '';
@@ -24,32 +26,24 @@
   // Styles to add to the panel.
   export let style = null;
 
-  let panel;
-  let index;
+  const value = index();
   let active = false;
 
-  const { Value, Disabled, selectPanel } = getContext(EXPANSION_PANELS);
-
   function toggle() {
-    selectPanel(index);
+    selectPanel(value);
   }
 
   // Inheriting the disabled value from parent.
   $: disabled = $Disabled == null ? disabled : $Disabled;
 
   // Checking if panel is active everytime the value has changed.
-  $: active = $Value.includes(index);
-
-  onMount(() => {
-    index = Array.from(panel.parentNode.children).indexOf(panel);
-  });
+  $: active = $values.includes(value);
 </script>
 
-<style lang="scss" src="./ExpansionPanel.scss">
+<style lang="scss" src="./ExpansionPanel.scss" global>
 </style>
 
 <div
-  bind:this={panel}
   class="s-expansion-panel {klass}"
   aria-expanded={active}
   class:active
