@@ -1,5 +1,7 @@
 ---
 title: Chip Component
+related:
+  - Textarea: /components/textarea/
 ---
 
 <script context="module">

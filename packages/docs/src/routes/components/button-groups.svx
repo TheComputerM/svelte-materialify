@@ -2,6 +2,7 @@
 title: Button group Component
 related:
   - Textfield: /components/text-field/
+  - Checkbox: /components/checkboxes/
   - ButtonGroup API: /api/ButtonGroup/
 ---
 

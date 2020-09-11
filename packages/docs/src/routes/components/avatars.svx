@@ -1,5 +1,7 @@
 ---
 title: Avatar Component
+related:
+  - Radio: /components/radio/
 ---
 
 <script context="module">
