@@ -30,7 +30,7 @@ A better material design framework for Svelte. _(much like [Vuetify](https://vue
 
 This is still in development. To contribute, please read [CONTRIBUTING.md](./CONTRIBUTING.md) and open a PR.
 
-There are currently more than **35** different components are more are planned to arrive soon.
+There are currently more than **50+** different components are more are planned to arrive soon.
 
 ## Website
 
