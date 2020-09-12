@@ -1,6 +1,18 @@
 /* eslint-disable no-param-reassign */
 
 /**
+ * @param {string} klass
+ */
+function formatClass(klass) {
+  return klass.split(' ').map((i) => {
+    if (/^(lighten|darken|accent)-/.test(i)) {
+      return `text-${i}`;
+    }
+    return `${i}-text`;
+  });
+}
+
+/**
  * @param node {Element}
  * @param text {string|boolean}
  */
@@ -16,15 +28,15 @@ export default (node, text) => {
       node.style.color = `var(${text})`;
       klass = false;
     } else {
-      klass = `${text}-text`;
-      node.classList.add(klass);
+      klass = formatClass(text);
+      node.classList.add(...klass);
     }
   }
 
   return {
     update(newText) {
       if (klass) {
-        node.classList.remove(klass);
+        node.classList.remove(...klass);
       } else {
         node.style.color = null;
       }
@@ -39,8 +51,8 @@ export default (node, text) => {
           node.style.color = `var(${newText})`;
           klass = false;
         } else {
-          klass = `${newText}-text`;
-          node.classList.add(klass);
+          klass = formatClass(newText);
+          node.classList.add(...klass);
         }
       }
     },
