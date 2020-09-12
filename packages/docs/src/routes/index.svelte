@@ -22,16 +22,22 @@
     font-weight: 300;
   }
 
-  .buttons a {
-    margin: 4px;
-    flex-grow: 1;
+  #home {
+    background-image: linear-gradient(135deg, #6e45e2 0%, #88d3ce 100%);
+    a {
+      margin: 4px;
+      flex-grow: 1;
 
-    :global(.s-btn) {
-      width: 100%;
+      :global(.s-btn) {
+        width: 100%;
+      }
+    }
+    img {
+      width: 192px;
     }
   }
 
-  .footer-links a {
+  .footer-links > a {
     opacity: 0.8;
     margin: 8px;
     &:hover {
@@ -44,9 +50,7 @@
   <title>Svelte Material Design Component Framework - Svelte Materialify</title>
 </svelte:head>
 
-<div
-  class="theme--dark"
-  style="background-image: linear-gradient(135deg, #764ba2 0%, #667eea 100%);">
+<div class="theme--dark" id="home">
   <Container class="pt-6 pb-6">
     <Row>
       <Col class="d-flex justify-center flex-column" md="7">
@@ -56,7 +60,7 @@
           Components. No design skills required — everything you need to create amazing
           applications is at your fingertips.
         </p>
-        <div class="d-flex flex-wrap buttons">
+        <div class="d-flex flex-wrap">
           <a href="/getting-started/installation/" class="blue-text text-darken-2">
             <Button size="x-large" class="white elevation-4">
               <Icon class="mdi mdi-speedometer mr-3" />
@@ -79,9 +83,9 @@
         </div>
       </Col>
       <Col class="d-flex justify-center align-center flex-column" md="5">
-        <img src="svelte-logo.png" alt="Svelte" width="192px" />
+        <img src="svelte-logo.png" alt="Svelte" />
         <Icon size="64px" class="mdi mdi-plus mt-4 mb-4" />
-        <img src="logo-192.png" alt="Svelte" width="192px" />
+        <img src="logo-192.png" alt="Svelte Materialify" />
       </Col>
     </Row>
   </Container>
@@ -168,7 +172,7 @@
           <td />
         </tr>
         <tr>
-          <td>Updates**</td>
+          <td>Updates*</td>
           <td>Weekly</td>
           <td>Bi-Monthly</td>
           <td>Monthly</td>
@@ -196,7 +200,7 @@
     <p
       class="text-center font-italic text-subtitle-2 grey-text mt-2"
       aria-disabled="true">
-      ** Based on average commit frequency as of September 2020
+      * Based on average commit frequency as of September 2020
     </p>
   </div>
 </Container>
