@@ -1,7 +1,10 @@
 import { RippleStart, RippleStop } from './material-ripple';
 
+/**
+ * @param node {Element}
+ */
 export default (node, options = {}) => {
-  if (typeof options !== 'boolean' || options) {
+  if (options) {
     let ripple;
     let keyboardActive = false;
     const handleStart = (e) => {
