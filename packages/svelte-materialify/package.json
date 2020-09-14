@@ -42,7 +42,7 @@
     "sass": "^1.26.10",
     "standard-changelog": "^2.0.24",
     "svelte": "^3.25.0",
-    "svelte-check": "^1.0.39",
+    "svelte-check": "^1.0.41",
     "svelte-htm": "^1.1.1",
     "svelte-jester": "^1.1.5",
     "svelte-preprocess": "^4.2.1"
