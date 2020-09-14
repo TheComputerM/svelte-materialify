@@ -31,7 +31,7 @@ export {
   CardText,
   CardTitle,
 } from './components/Card';
-export { default as List, ListGroup, ListItem } from './components/List';
+export { default as List, ListGroup, ListItemGroup, ListItem } from './components/List';
 export { default as VirtualList } from './components/VirtualList';
 export { default as Menu } from './components/Menu';
 export { default as Overlay } from './components/Overlay';
