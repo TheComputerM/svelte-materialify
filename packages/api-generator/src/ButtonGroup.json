@@ -4,20 +4,6 @@
   "data": [
     {
       "visibility": "public",
-      "description": null,
-      "keywords": [],
-      "name": "BUTTON_GROUP",
-      "kind": "const",
-      "static": false,
-      "readonly": true,
-      "type": {
-        "kind": "type",
-        "text": "any",
-        "type": "any"
-      }
-    },
-    {
-      "visibility": "public",
       "description": "Classes to add to button group.",
       "keywords": [],
       "name": "class",

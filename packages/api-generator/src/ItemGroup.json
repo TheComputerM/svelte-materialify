@@ -108,6 +108,21 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
+      "name": "role",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "object",
+        "type": "object"
+      },
+      "defaultValue": null
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "style",
       "kind": "let",
       "static": false,

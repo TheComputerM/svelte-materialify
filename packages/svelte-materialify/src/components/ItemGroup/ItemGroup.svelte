@@ -13,13 +13,14 @@
   export let multiple = false;
   export let mandatory = false;
   export let max = Infinity;
+  export let role = null;
   export let style = null;
 
   const dispatch = createEventDispatcher();
-  const Value = writable(value);
-  $: Value.set(value);
+  const valueStore = writable(value);
+  $: valueStore.set(value);
 
-  const unsub = Value.subscribe((val) => {
+  const unsub = valueStore.subscribe((val) => {
     dispatch('change', val);
   });
   onDestroy(unsub);
@@ -38,18 +39,23 @@
         value = [val];
       }
     },
-    values: Value,
-    inheritedActiveClass: activeClass,
+    register: (setValue) => {
+      const u = valueStore.subscribe((val) => {
+        setValue(val);
+      });
+      onDestroy(u);
+    },
     index: () => {
       startIndex += 1;
       return startIndex;
     },
+    _activeClass: activeClass,
   });
 </script>
 
 <style lang="scss" src="./ItemGroup.scss" global>
 </style>
 
-<div class="s-item-group {klass}" {style}>
+<div class="s-item-group {klass}" {role} {style}>
   <slot />
 </div>

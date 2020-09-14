@@ -1,10 +1,5 @@
-<script context="module">
-  export const BUTTON_GROUP = {};
-</script>
-
 <script>
   import ItemGroup from '../ItemGroup';
-  import { setContext } from 'svelte';
 
   // Classes to add to button group.
   let klass = '';
@@ -39,9 +34,6 @@
 
   // Styles to apply to button group.
   export let style = null;
-
-  let group;
-  setContext(BUTTON_GROUP, $$restProps);
 </script>
 
 <style lang="scss" src="./ButtonGroup.scss" global>
@@ -54,7 +46,6 @@
     class:borderless
     class:tile
     class:rounded
-    bind:this={group}
     {style}>
     <slot />
   </div>

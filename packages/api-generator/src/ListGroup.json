@@ -21,21 +21,6 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
-      "name": "activeClass",
-      "kind": "let",
-      "static": false,
-      "readonly": false,
-      "type": {
-        "kind": "type",
-        "text": "string",
-        "type": "string"
-      },
-      "defaultValue": ""
-    },
-    {
-      "visibility": "public",
-      "description": null,
-      "keywords": [],
       "name": "active",
       "kind": "let",
       "static": false,
@@ -115,10 +100,9 @@
       "readonly": false,
       "type": {
         "kind": "type",
-        "text": "boolean",
-        "type": "boolean"
-      },
-      "defaultValue": true
+        "text": "any",
+        "type": "any"
+      }
     },
     {
       "visibility": "public",
@@ -143,6 +127,21 @@
   "keywords": [],
   "events": [],
   "slots": [
+    {
+      "name": "activator",
+      "description": null,
+      "visibility": "public",
+      "parameters": [
+        {
+          "name": "{toggle}",
+          "visibility": "public"
+        },
+        {
+          "name": "{active}",
+          "visibility": "public"
+        }
+      ]
+    },
     {
       "name": "default",
       "description": null,
