@@ -1,6 +1,5 @@
 <script>
   import { setContext, getContext } from 'svelte';
-  import { writable } from 'svelte/store';
 
   let klass = '';
   export { klass as class };
@@ -17,20 +16,15 @@
     setContext('S_ListItemRole', 'listitem');
     role = 'list';
   }
-
-  const ListOptions = writable({ disabled, dense });
-  $: ListOptions.set({ disabled, dense });
-
-  setContext('S_ListOptions', ListOptions);
-  setContext('S_ListDense', dense);
 </script>
 
-<style lang="scss" src="./List.scss">
+<style lang="scss" src="./List.scss" global>
 </style>
 
 <div
   {role}
   class="s-list {klass}"
+  aria-disabled={disabled}
   class:dense
   class:disabled
   class:flat

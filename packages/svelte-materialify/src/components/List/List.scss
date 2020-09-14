@@ -8,10 +8,8 @@
   padding-top: $list-padding-top;
   position: static;
 
-  :global {
-    .s-subheader {
-      padding-top: $list-subheader-padding-top;
-    }
+  .s-subheader {
+    padding-top: $list-subheader-padding-top;
   }
 
   &.disabled {
@@ -19,22 +17,18 @@
   }
 
   &.dense {
-    :global {
-      .s-subheader {
-        font-size: $list-dense-subheader-font-size;
-        height: $list-dense-subheader-height;
-        padding: $list-dense-subheader-padding;
-      }
+    .s-subheader {
+      font-size: $list-dense-subheader-font-size;
+      height: $list-dense-subheader-height;
+      padding: $list-dense-subheader-padding;
     }
   }
 
   &.rounded {
     padding: 8px;
 
-    :global {
-      .s-list-item {
-        border-radius: 32px !important;
-      }
+    .s-list-item {
+      border-radius: 32px !important;
     }
   }
 
@@ -42,28 +36,24 @@
     padding-left: $list-nav-padding-left;
     padding-right: $list-nav-padding-right;
 
-    :global {
-      .s-list-item {
-        padding: $list-nav-item-padding;
-        border-radius: $list-nav-border-radius;
+    .s-list-item {
+      padding: $list-nav-item-padding;
+      border-radius: $list-nav-border-radius;
 
-        &::before {
-          border-radius: $list-nav-border-radius;
-        }
+      &::before {
+        border-radius: $list-nav-border-radius;
       }
     }
   }
 
   &.nav,
   &.rounded {
-    :global {
-      .s-list-item:not(:last-child):not(:only-child) {
-        margin-bottom: $list-nav-rounded-item-margin-bottom;
-      }
+    .s-list-item:not(:last-child):not(:only-child) {
+      margin-bottom: $list-nav-rounded-item-margin-bottom;
+    }
 
-      .s-list-item.dense:not(:last-child):not(:only-child) {
-        margin-bottom: $list-nav-rounded-dense-item-margin-bottom;
-      }
+    .s-list-item.dense:not(:last-child):not(:only-child) {
+      margin-bottom: $list-nav-rounded-dense-item-margin-bottom;
     }
   }
 
@@ -72,10 +62,8 @@
   }
 
   &.flat {
-    :global {
-      .s-list-item::before {
-        display: none;
-      }
+    .s-list-item::before {
+      display: none;
     }
   }
 }

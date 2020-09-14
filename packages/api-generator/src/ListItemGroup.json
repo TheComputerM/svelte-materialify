@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "name": "ListItem",
+  "name": "ListItemGroup",
   "data": [
     {
       "visibility": "public",
@@ -21,37 +21,21 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
-      "name": "activeClass",
-      "kind": "let",
-      "static": false,
-      "readonly": false,
-      "type": {
-        "kind": "type",
-        "text": "object",
-        "type": "object"
-      },
-      "defaultValue": null
-    },
-    {
-      "visibility": "public",
-      "description": null,
-      "keywords": [],
       "name": "value",
       "kind": "let",
       "static": false,
       "readonly": false,
       "type": {
         "kind": "type",
-        "text": "object",
-        "type": "object"
-      },
-      "defaultValue": null
+        "text": "any",
+        "type": "any"
+      }
     },
     {
       "visibility": "public",
       "description": null,
       "keywords": [],
-      "name": "active",
+      "name": "multiple",
       "kind": "let",
       "static": false,
       "readonly": false,
@@ -66,7 +50,7 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
-      "name": "dense",
+      "name": "mandatory",
       "kind": "let",
       "static": false,
       "readonly": false,
@@ -81,7 +65,21 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
-      "name": "disabled",
+      "name": "max",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "style",
       "kind": "let",
       "static": false,
       "readonly": false,
@@ -91,34 +89,6 @@
         "type": "object"
       },
       "defaultValue": null
-    },
-    {
-      "visibility": "public",
-      "description": null,
-      "keywords": [],
-      "name": "selectable",
-      "kind": "let",
-      "static": false,
-      "readonly": false,
-      "type": {
-        "kind": "type",
-        "text": "any",
-        "type": "any"
-      }
-    },
-    {
-      "visibility": "public",
-      "description": null,
-      "keywords": [],
-      "name": "ripple",
-      "kind": "let",
-      "static": false,
-      "readonly": false,
-      "type": {
-        "kind": "type",
-        "text": "any",
-        "type": "any"
-      }
     }
   ],
   "computed": [],
@@ -126,39 +96,10 @@
   "components": [],
   "description": null,
   "keywords": [],
-  "events": [
-    {
-      "name": "click",
-      "parent": "div",
-      "modificators": [],
-      "locations": null,
-      "loc": null,
-      "visibility": "public",
-      "description": "",
-      "keywords": []
-    }
-  ],
+  "events": [],
   "slots": [
     {
-      "name": "left",
-      "description": null,
-      "visibility": "public",
-      "parameters": []
-    },
-    {
       "name": "default",
-      "description": null,
-      "visibility": "public",
-      "parameters": []
-    },
-    {
-      "name": "subtitle",
-      "description": null,
-      "visibility": "public",
-      "parameters": []
-    },
-    {
-      "name": "right",
       "description": null,
       "visibility": "public",
       "parameters": []

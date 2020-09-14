@@ -5,10 +5,8 @@
   position: relative;
   max-width: 100%;
 
-  :global {
-    .s-list-item.active {
-      color: inherit;
-    }
+  .s-list-item.active {
+    color: inherit;
   }
 
   &.disabled {
@@ -17,8 +15,8 @@
   }
 
   &.offset {
-    :global(.s-list-item) {
-      padding-left: var(--offset) !important;
+    .s-list-item {
+      padding-left: var(--s-list-group-offset) !important;
     }
   }
 }
