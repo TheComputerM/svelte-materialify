@@ -12,7 +12,7 @@
   "scripts": {
     "docs": "yarn workspace docs export",
     "dev": "yarn workspace docs dev",
-    "release": "yarn workspace svelte-materialify release",
+    "release": "yarn workspace svelte-materialify publish",
     "start": "yarn workspace svelte-materialify start",
     "api": "yarn workspace svelte-materialify-api start",
     "test": "yarn workspace svelte-materialify test",

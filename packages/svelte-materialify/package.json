@@ -13,14 +13,7 @@
     "watch:css": "npm run css -- --watch",
     "test": "jest",
     "check": "svelte-check --workspace src/components",
-    "version": "standard-changelog && git add CHANGELOG.md",
-    "release": "np"
-  },
-  "np": {
-    "branch": "master",
-    "cleanup": false,
-    "yarn": true,
-    "releaseDraft": false
+    "version": "standard-changelog && git add CHANGELOG.md"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
@@ -33,7 +26,6 @@
     "babel-jest": "^26.2.2",
     "concurrently": "^5.3.0",
     "jest": "^26.4.2",
-    "np": "^6.5.0",
     "postcss": "^7.0.32",
     "rollup": "^2.26.11",
     "rollup-plugin-svelte": "^6.0.1",
