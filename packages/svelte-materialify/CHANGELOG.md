@@ -1,3 +1,10 @@
+## [0.1.1](https://github.com/TheComputerM/svelte-materialify/compare/v0.1.0...v0.1.1) (2020-09-15)
+
+### Bug Fixes
+
+- **TextField:** label active ([d7b22a0](https://github.com/TheComputerM/svelte-materialify/commit/d7b22a0e60b014a85ccfdf26230d2d47019cf3de))
+- converted every style to global ([f2cc52f](https://github.com/TheComputerM/svelte-materialify/commit/f2cc52f5a9b63476d9b1c7761d342b9b41949621))
+
 # 0.1.0 (2020-09-15)
 
 ### Bug Fixes
