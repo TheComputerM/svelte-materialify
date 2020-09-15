@@ -70,7 +70,8 @@
   export let id = null;
 
   id = id || `s-input-${uid(5)}`;
-  $: labelActive = !!placeholder || value;
+  let focused = false;
+  $: labelActive = !!placeholder || value || focused;
   let messages = [];
 
   function checkRules() {
@@ -82,16 +83,16 @@
   }
 
   function onFocus() {
-    labelActive = true;
+    focused = true;
   }
 
   function onBlur() {
+    focused = false;
     if (validateOnBlur) checkRules();
   }
 
   function clear() {
     value = '';
-    if (!placeholder) labelActive = false;
   }
 
   function onInput() {
