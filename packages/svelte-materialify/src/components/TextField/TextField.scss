@@ -173,6 +173,13 @@
   margin-top: 4px;
   padding-top: $text-field-label-top * 2;
 
+  > {
+    [slot='prepend'],
+    [slot='append'] {
+      align-self: flex-start;
+    }
+  }
+
   &.error,
   &.success {
     .s-text-field__wrapper::before {

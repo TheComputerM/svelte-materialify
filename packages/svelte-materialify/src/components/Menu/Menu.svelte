@@ -108,10 +108,12 @@
 
   // When the activator slot is clicked.
   function triggerClick(e) {
-    if (active) {
-      close();
-    } else if (openOnClick) {
-      open(e.offsetX, e.offsetY);
+    if (!disabled) {
+      if (active) {
+        close();
+      } else if (openOnClick) {
+        open(e.offsetX, e.offsetY);
+      }
     }
   }
 
@@ -146,7 +148,7 @@
   });
 </script>
 
-<style lang="scss" src="./Menu.scss">
+<style lang="scss" src="./Menu.scss" global>
 </style>
 
 <div
@@ -157,7 +159,7 @@
   <!-- Slot for the trigger/activator. -->
   <slot name="activator" />
 
-  {#if active && !disabled}
+  {#if active}
     <div
       class="s-menu {klass}"
       role="menu"

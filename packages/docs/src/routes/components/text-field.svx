@@ -1,6 +1,7 @@
 ---
 title: Text Field Component
 related:
+  - Select: /components/selects/
   - TextField API: /api/TextField/
 ---
 

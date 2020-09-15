@@ -70,7 +70,7 @@
   export let id = null;
 
   id = id || `s-input-${uid(5)}`;
-  let labelActive = !!placeholder || value;
+  $: labelActive = !!placeholder || value;
   let messages = [];
 
   function checkRules() {
@@ -86,7 +86,6 @@
   }
 
   function onBlur() {
-    if (!value && !placeholder) labelActive = false;
     if (validateOnBlur) checkRules();
   }
 
@@ -129,6 +128,7 @@
       <label for={id} class:active={labelActive}>
         <slot />
       </label>
+      <slot name="content" />
       <input
         type="text"
         bind:value

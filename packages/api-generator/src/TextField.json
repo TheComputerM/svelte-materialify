@@ -345,6 +345,12 @@
       "parameters": []
     },
     {
+      "name": "content",
+      "description": "Slot for prepend inside the input.",
+      "visibility": "public",
+      "parameters": []
+    },
+    {
       "name": "clear-icon",
       "description": "Slot for the icon when `clearable` is true.",
       "visibility": "public",

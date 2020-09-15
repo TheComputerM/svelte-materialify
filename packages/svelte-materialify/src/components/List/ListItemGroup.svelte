@@ -20,7 +20,7 @@
 <ItemGroup
   class="s-list-item-group {klass}"
   role="listbox"
-  {value}
+  bind:value
   {multiple}
   {mandatory}
   {max}

@@ -29,7 +29,13 @@
         "kind": "type",
         "text": "any",
         "type": "any"
-      }
+      },
+      "bind": [
+        {
+          "source": "ItemGroup",
+          "property": "value"
+        }
+      ]
     },
     {
       "visibility": "public",
