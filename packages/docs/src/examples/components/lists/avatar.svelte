@@ -14,7 +14,7 @@
     <Subheader>Svelte</Subheader>
     {#each items as item, i}
       <ListItem>
-        <span slot="left">
+        <span slot="prepend">
           {#if item.icon}
             <Icon class="mdi mdi-star pink-text" />
           {:else}
@@ -22,7 +22,7 @@
           {/if}
         </span>
         {item.name}
-        <span slot="right">
+        <span slot="append">
           <Avatar><img src="//picsum.photos/50?random={i}" alt="profile" /></Avatar>
         </span>
       </ListItem>

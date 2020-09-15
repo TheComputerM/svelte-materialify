@@ -67,7 +67,7 @@
     min-width: $list-item-child-min-width;
   }
 
-  [slot='left'] {
+  [slot='prepend'] {
     .s-avatar {
       margin-right: $list-item-avatar-first-child-margin;
     }
@@ -154,7 +154,7 @@
     margin-bottom: $list-item-icon-margin-y/2;
   }
 
-  [slot='left'] {
+  [slot='prepend'] {
     .s-icon,
     .s-checkbox,
     .s-radio {

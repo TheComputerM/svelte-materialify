@@ -66,7 +66,7 @@
       {#each items as item}
         <slot name="item" {item}>
           <ListItem {dense} value={item.value}>
-            <span slot="left">
+            <span slot="prepend">
               {#if multiple}
                 <Checkbox checked={value.includes(item.value)} />
               {/if}

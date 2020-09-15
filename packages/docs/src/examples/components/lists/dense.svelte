@@ -7,17 +7,17 @@
     <Subheader>Filter</Subheader>
     <ListItemGroup class="blue-text" value={[1]}>
       <ListItem>
-        <span slot="left">
+        <span slot="prepend">
           <Icon class="mdi mdi-home" />
         </span> Item 1
       </ListItem>
       <ListItem>
-        <span slot="left">
+        <span slot="prepend">
           <Icon class="mdi mdi-account" />
         </span> Item 2
       </ListItem>
       <ListItem>
-        <span slot="left">
+        <span slot="prepend">
           <Icon class="mdi mdi-flag" />
         </span> Item 3
       </ListItem>

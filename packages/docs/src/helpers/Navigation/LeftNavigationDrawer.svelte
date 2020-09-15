@@ -52,13 +52,13 @@
   {#each items as item}
     {#if item.items}
       <ListItem dense on:click={() => (item.open = !item.open)}>
-        <div slot="left">
+        <div slot="prepend">
           {#if item.icon}
             <Icon path={item.icon} />
           {/if}
         </div>
         {item.text}
-        <div slot="right">
+        <div slot="append">
           <Icon path={mdiChevronDown} rotate={item.open ? 180 : 0} class="chevron" />
         </div>
       </ListItem>
@@ -67,7 +67,7 @@
     {:else}
       <a href={item.href} rel="prefetch">
         <ListItem active={item.href.replace(/\//g, '') === activeLink}>
-          <div slot="left">
+          <div slot="prepend">
             {#if item.icon}
               <Icon class="mdi mdi-{item.icon}" />
             {/if}

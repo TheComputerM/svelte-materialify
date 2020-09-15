@@ -28,7 +28,7 @@
     <ListItemGroup>
       {#each items as item}
         <ListItem>
-          <span slot="left">
+          <span slot="prepend">
             <Icon class="mdi {item.icon}" />
           </span>
           {item.text}

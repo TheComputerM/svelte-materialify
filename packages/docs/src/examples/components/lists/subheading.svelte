@@ -10,17 +10,17 @@
     <Divider />
     <Subheader>Notifications</Subheader>
     <ListItem>
-      <span slot="left">
+      <span slot="prepend">
         <Checkbox />
       </span> Notifications <span slot="subtitle"> Allow Notifications </span>
     </ListItem>
     <ListItem>
-      <span slot="left">
+      <span slot="prepend">
         <Checkbox />
       </span> Sound <span slot="subtitle"> Hangouts sound. </span>
     </ListItem>
     <ListItem>
-      <span slot="left">
+      <span slot="prepend">
         <Checkbox />
       </span> Invites <span slot="subtitle"> Notify when invited. </span>
     </ListItem>

@@ -46,7 +46,7 @@
   use:Ripple={ripple}
   on:click={click}
   on:click>
-  <slot name="left" />
+  <slot name="prepend" />
   <div class="s-list-item__content">
     <div class="s-list-item__title">
       <slot />
@@ -55,5 +55,5 @@
       <slot name="subtitle" />
     </div>
   </div>
-  <slot name="right" />
+  <slot name="append" />
 </div>
