@@ -14,7 +14,7 @@
     "gumshoejs": "^5.1.2",
     "polka": "next",
     "sirv": "^1.0.0",
-    "svelte-materialify": "^0.0.1",
+    "svelte-materialify": "^0.1.0",
     "svelte-materialify-api": "^0.0.1"
   },
   "devDependencies": {
