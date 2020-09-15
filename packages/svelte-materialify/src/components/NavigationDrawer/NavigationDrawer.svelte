@@ -21,7 +21,7 @@
   if (mini) width = miniWidth;
 </script>
 
-<style lang="scss" src="./NavigationDrawer.scss">
+<style lang="scss" src="./NavigationDrawer.scss" global>
 </style>
 
 <aside

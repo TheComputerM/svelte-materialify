@@ -3,13 +3,11 @@
 .s-chip__close {
   cursor: pointer;
 
-  :global {
-    .s-icon {
-      font-size: $chip-close-size;
-      max-height: $chip-close-size;
-      max-width: $chip-close-size;
-      user-select: none;
-    }
+  .s-icon {
+    font-size: $chip-close-size;
+    max-height: $chip-close-size;
+    max-width: $chip-close-size;
+    user-select: none;
   }
 
   &:focus,
@@ -51,30 +49,28 @@
     top: 0;
   }
 
-  :global {
-    .s-avatar {
-      height: $chip-avatar-size !important;
-      min-width: $chip-avatar-size !important;
-      width: $chip-avatar-size !important;
+  .s-avatar {
+    height: $chip-avatar-size !important;
+    min-width: $chip-avatar-size !important;
+    width: $chip-avatar-size !important;
+  }
+
+  .s-icon {
+    font-size: $chip-icon-size;
+  }
+
+  .s-icon,
+  .s-avatar {
+    color: inherit;
+
+    &:first-child {
+      margin-left: $chip-icon-margin-before;
+      margin-right: $chip-icon-margin-after;
     }
 
-    .s-icon {
-      font-size: $chip-icon-size;
-    }
-
-    .s-icon,
-    .s-avatar {
-      color: inherit;
-
-      &:first-child {
-        margin-left: $chip-icon-margin-before;
-        margin-right: $chip-icon-margin-after;
-      }
-
-      &:last-child {
-        margin-left: $chip-icon-margin-after;
-        margin-right: $chip-icon-margin-before;
-      }
+    &:last-child {
+      margin-left: $chip-icon-margin-after;
+      margin-right: $chip-icon-margin-before;
     }
   }
 
@@ -97,18 +93,16 @@
   }
 
   &.pill {
-    :global {
-      .s-avatar {
-        height: $chip-pill-avatar-size !important;
-        width: $chip-pill-avatar-size !important;
+    .s-avatar {
+      height: $chip-pill-avatar-size !important;
+      width: $chip-pill-avatar-size !important;
 
-        &:first-child {
-          margin-left: $chip-pill-avatar-margin-before;
-        }
+      &:first-child {
+        margin-left: $chip-pill-avatar-margin-before;
+      }
 
-        &:last-child {
-          margin-right: $chip-pill-avatar-margin-before;
-        }
+      &:last-child {
+        margin-right: $chip-pill-avatar-margin-before;
       }
     }
   }

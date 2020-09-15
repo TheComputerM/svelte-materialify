@@ -67,13 +67,13 @@
     pointer-events: none;
     user-select: none;
 
-    > :global(*:not(.s-progress-linear)) {
+    > *:not(.s-progress-linear) {
       opacity: $card-disabled-opacity;
       transition: inherit;
     }
   }
 
-  > :global(*:first-child:not(.s-btn):not(.s-chip)) {
+  > *:first-child:not(.s-btn):not(.s-chip) {
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
   }

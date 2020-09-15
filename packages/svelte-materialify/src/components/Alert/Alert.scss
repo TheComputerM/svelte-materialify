@@ -12,19 +12,17 @@
     color: map-deep-get($material-dark-theme, 'text', 'primary');
   }
 
-  :global {
-    .s-icon,
-    .s-btn {
-      color: inherit !important;
-    }
+  .s-icon,
+  .s-btn {
+    color: inherit !important;
+  }
 
-    .s-icon {
-      align-self: flex-start;
-    }
+  .s-icon {
+    align-self: flex-start;
+  }
 
-    [slot='icon'] {
-      margin-right: $spacer * 4;
-    }
+  [slot='icon'] {
+    margin-right: $spacer * 4;
   }
 
   .s-alert__border {

@@ -12,7 +12,7 @@
   export { klass as class };
 </script>
 
-<style lang="scss" src="./Card.scss">
+<style lang="scss" src="./Card.scss" global>
 </style>
 
 <div

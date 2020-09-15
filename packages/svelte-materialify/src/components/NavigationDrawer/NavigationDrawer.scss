@@ -74,16 +74,14 @@
   &.mini {
     overflow: hidden;
 
-    :global {
-      .s-list-item {
-        > *:first-child {
-          margin-left: 0;
-          margin-right: 0;
-        }
+    .s-list-item {
+      > *:first-child {
+        margin-left: 0;
+        margin-right: 0;
+      }
 
-        > *:not(:first-child) {
-          display: none;
-        }
+      > *:not(:first-child) {
+        display: none;
       }
     }
   }

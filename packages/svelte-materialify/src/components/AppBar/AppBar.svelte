@@ -14,7 +14,7 @@
   export let style = '';
 </script>
 
-<style lang="scss" src="./AppBar.scss">
+<style lang="scss" src="./AppBar.scss" global>
 </style>
 
 <header

@@ -15,7 +15,7 @@
   export let style = '';
 </script>
 
-<style lang="scss" src="./Avatar.scss">
+<style lang="scss" src="./Avatar.scss" global>
 </style>
 
 <div class="s-avatar {klass}" class:tile use:Style={{ 'avatar-size': size }} {style}>

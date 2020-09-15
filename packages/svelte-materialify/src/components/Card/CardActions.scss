@@ -5,7 +5,7 @@
   display: flex;
   padding: $card-actions-padding;
 
-  :global(.s-btn) {
+  .s-btn {
     padding: $card-btn-padding;
   }
 }

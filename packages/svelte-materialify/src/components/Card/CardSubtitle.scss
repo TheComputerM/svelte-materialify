@@ -8,7 +8,7 @@
   letter-spacing: $card-text-letter-spacing;
   padding: $card-subtitle-padding;
 
-  + :global(.s-card-text) {
+  + .s-card-text {
     padding-top: $card-adjacent-sibling-text-padding-top;
   }
 }

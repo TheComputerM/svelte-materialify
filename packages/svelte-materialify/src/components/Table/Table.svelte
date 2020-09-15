@@ -6,11 +6,11 @@
   export { klass as class };
 </script>
 
-<style lang="scss" src="./Table.scss">
+<style lang="scss" src="./Table.scss" global>
 </style>
 
-<div class="s-table {klass}" {style}>
-  <table class:dense class:fixed-header={fixedHeader}>
+<div class="s-table__wrapper {klass}" {style}>
+  <table class="s-table" class:dense class:fixed-header={fixedHeader}>
     <slot />
   </table>
 </div>

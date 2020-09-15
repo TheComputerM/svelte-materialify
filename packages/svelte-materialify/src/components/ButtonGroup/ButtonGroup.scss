@@ -9,18 +9,14 @@
   transition: $primary-transition;
 
   &:not(.elevated) {
-    :global {
-      .s-btn-group-item.s-btn {
-        box-shadow: none;
-      }
+    .s-btn-group-item.s-btn {
+      box-shadow: none;
     }
   }
 
   &.borderless {
-    :global {
-      .s-btn-group-item.s-btn {
-        border-width: 0;
-      }
+    .s-btn-group-item.s-btn {
+      border-width: 0;
     }
   }
 

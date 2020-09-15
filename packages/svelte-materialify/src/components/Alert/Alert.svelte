@@ -53,7 +53,7 @@
   }
 </script>
 
-<style lang="scss" src="./Alert.scss">
+<style lang="scss" src="./Alert.scss" global>
 </style>
 
 {#if visible}

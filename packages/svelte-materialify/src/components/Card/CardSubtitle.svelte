@@ -4,7 +4,7 @@
   export { klass as class };
 </script>
 
-<style lang="scss" src="./CardSubtitle.scss">
+<style lang="scss" src="./CardSubtitle.scss" global>
 </style>
 
 <div class="s-card-subtitle {klass}" {style}>

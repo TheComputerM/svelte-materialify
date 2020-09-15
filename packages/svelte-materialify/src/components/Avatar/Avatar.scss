@@ -16,19 +16,17 @@
     color: map-deep-get($material-dark-theme, 'text', 'primary');
   }
 
-  :global {
-    .s-icon,
-    img,
-    svg {
-      color: inherit;
-      border-radius: inherit;
-      display: inline-flex;
-      height: inherit;
-      width: inherit;
-    }
-  }
-
   &:not(.tile) {
     border-radius: $avatar-border-radius;
+  }
+
+  .s-icon,
+  img,
+  svg {
+    color: inherit;
+    border-radius: inherit;
+    display: inline-flex;
+    height: inherit;
+    width: inherit;
   }
 }

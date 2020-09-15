@@ -19,7 +19,7 @@
   $: visible = active && !disabled;
 </script>
 
-<style lang="scss" src="./Dialog.scss">
+<style lang="scss" src="./Dialog.scss" global>
 </style>
 
 {#if visible}
