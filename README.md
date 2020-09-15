@@ -77,6 +77,17 @@ If you want finer control over Svelte Materialify and installation you want to i
 $ npm i -D svelte-materialify svelte-preprocess sass
 ```
 
+```html
+<script>
+  // In a svelte file
+  // Import Everything
+  import * as S from 'svelte-materialify/src';
+  // OR
+  import { Button } from 'svelte-materialify/src';
+  // Import a single component
+</script>
+```
+
 Then create a **\_material-theme.scss** file and place it in any folder, lets put it in a folder called **theme**. Then include the path in the preprocess function in your **rollup.config.js** (likewise follow the same in webpack but for svelte-loader).
 
 ### Svelte
