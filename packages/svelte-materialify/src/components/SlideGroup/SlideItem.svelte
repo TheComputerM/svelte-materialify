@@ -5,18 +5,20 @@
   import Class from '../../internal/Class';
 
   const click = getContext(SLIDE_GROUP);
-  const { select, values, inheritedActiveClass, index } = getContext(ITEM_GROUP);
+  const { select, register, _activeClass, index } = getContext(ITEM_GROUP);
 
   let active;
   let item;
 
   let klass = '';
   export { klass as class };
-  export let activeClass = inheritedActiveClass;
+  export let activeClass = _activeClass;
   export let value = index();
   export let disabled = null;
 
-  $: active = $values.includes(value);
+  register((values) => {
+    active = values.includes(value);
+  });
 
   function selectItem({ target }) {
     if (!disabled) {
