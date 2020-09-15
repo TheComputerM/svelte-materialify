@@ -5,7 +5,7 @@
   export { klass as class };
 </script>
 
-<style lang="scss">
+<style lang="scss" global>
   @import '../../styles/variables';
 
   .s-container {
