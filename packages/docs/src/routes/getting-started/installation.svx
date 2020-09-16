@@ -49,7 +49,7 @@ We can also **optionally** add [focus-visible](https://github.com/WICG/focus-vis
 If you want finer control over Svelte Materialify and installation you want to install all its peer dependencies. Follow this guide for SSR.
 
 ```shell
-$ npm i -D svelte-materialify svelte-preprocess sass
+$ npm i -D svelte-materialify svelte-preprocess sass postcss
 ```
 
 ```html
