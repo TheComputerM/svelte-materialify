@@ -13,8 +13,7 @@
     "watch:css": "yarn run css --watch",
     "test": "jest",
     "check": "svelte-check --workspace src/components",
-    "version": "standard-changelog && git add CHANGELOG.md",
-    "prepublish": "yarn start"
+    "version": "standard-changelog && git add CHANGELOG.md"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
