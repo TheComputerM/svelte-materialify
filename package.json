@@ -51,11 +51,11 @@
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-svelte3": "^2.7.3",
     "plop": "^2.7.4",
-    "prettier": "^2.1.1",
+    "prettier": "^2.1.2",
     "prettier-plugin-svelte": "^1.2.1",
     "stylelint": "^13.7.1",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.18.0",
-    "svelte": "^3.25.0"
+    "svelte": "^3.25.1"
   }
 }

@@ -5,15 +5,16 @@
   "module": "dist/index.mjs",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "concurrently \"npm:watch:*\" -k",
-    "start": "concurrently \"npm:build\" \"npm:css\"",
+    "dev": "concurrently \"yarn:watch:*\" -k",
+    "start": "concurrently \"yarn:build\" \"yarn:css\"",
     "build": "rollup -c",
     "watch:build": "rollup -c -w",
     "css": "sass src/styles/_global.scss:dist/global.css -I theme -s compressed --no-source-map",
-    "watch:css": "npm run css -- --watch",
+    "watch:css": "yarn run css --watch",
     "test": "jest",
     "check": "svelte-check --workspace src/components",
-    "version": "standard-changelog && git add CHANGELOG.md"
+    "version": "standard-changelog && git add CHANGELOG.md",
+    "prepublish": "yarn start"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
@@ -22,21 +23,21 @@
     "@rollup/plugin-node-resolve": "^9.0.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/svelte": "^3.0.0",
-    "autoprefixer": "^9.8.6",
+    "autoprefixer": "^10.0.0",
     "babel-jest": "^26.2.2",
     "concurrently": "^5.3.0",
     "jest": "^26.4.2",
-    "postcss": "^7.0.32",
+    "postcss": "^8.0.3",
     "rollup": "^2.26.11",
     "rollup-plugin-svelte": "^6.0.1",
     "rollup-plugin-terser": "^7.0.2",
     "sass": "^1.26.10",
     "standard-changelog": "^2.0.24",
-    "svelte": "^3.25.0",
-    "svelte-check": "^1.0.41",
+    "svelte": "^3.25.1",
+    "svelte-check": "^1.0.42",
     "svelte-htm": "^1.1.1",
     "svelte-jester": "^1.1.5",
-    "svelte-preprocess": "^4.2.1"
+    "svelte-preprocess": "^4.3.0"
   },
   "files": [
     "src",
