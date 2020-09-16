@@ -1,0 +1,61 @@
+---
+title: Icons
+related:
+  - Button: /components/buttons/
+  - Card: /components/cards/
+---
+
+<script context="module">
+  export async function preload() {
+    let sources = await this.fetch('examples/components/icons.json');
+    sources = await sources.json();
+    return { sources };
+  }
+</script>
+
+<script>
+  import { API, Example, setExamples } from '@shared';
+  import * as Examples from '@examples/components/icons';
+  import { Icon as doc } from 'svelte-materialify-api';
+  export let sources;
+  setExamples([sources, Examples]);
+</script>
+
+<svelte:head>
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+</svelte:head>
+
+# Icons
+
+The `Icon` component provides a large set of glyphs to provide context to various aspects of your application. We recommend the official [Material Design Icons](https://materialdesignicons.com/) page. To use any of these icons simply use the mdi- prefix followed by the icon name.
+
+## API
+
+<API {doc} />
+
+## Examples
+
+Below is a collection of simple to complex examples.
+
+### Types of Icons
+
+The `Icon` component is iconset agnostic, you can use any icon from any vendor you like. Just include thier icon font file if you want to use them.
+<Example name="types" />
+
+### Color
+
+Using color helpers you can change the color of an icon from the standard dark and light themes.
+<Example name="color" />
+
+### SVG
+
+You can easily use SVG icons instead of icon fonts.
+<Example name="svg" />
+
+### Disabled
+
+Disable the icon using the `disabled` prop.
+<Example name="disabled" />

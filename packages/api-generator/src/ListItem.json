@@ -140,7 +140,7 @@
   ],
   "slots": [
     {
-      "name": "left",
+      "name": "prepend",
       "description": null,
       "visibility": "public",
       "parameters": []
@@ -158,7 +158,7 @@
       "parameters": []
     },
     {
-      "name": "right",
+      "name": "append",
       "description": null,
       "visibility": "public",
       "parameters": []

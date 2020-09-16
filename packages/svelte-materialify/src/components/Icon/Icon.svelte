@@ -2,13 +2,14 @@
   import Style from '../../internal/Style';
 
   let klass = '';
+  export { klass as class };
   export let size = '24px';
   export let rotate = 0;
+  export let spin = false;
   export let disabled = false;
   export let path = null;
   export let label = null;
   export let style = null;
-  export { klass as class };
 </script>
 
 <style type="scss" src="./Icon.scss" global>
@@ -17,6 +18,7 @@
 <i
   aria-hidden="true"
   class="s-icon {klass}"
+  class:spin
   aria-label={label}
   class:disabled
   use:Style={{ 'icon-size': size, 'icon-rotate': `${rotate}deg` }}

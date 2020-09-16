@@ -6,6 +6,21 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
+      "name": "class",
+      "kind": "const",
+      "static": false,
+      "readonly": true,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "localName": "klass"
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "size",
       "kind": "let",
       "static": false,
@@ -31,6 +46,21 @@
         "type": "number"
       },
       "defaultValue": 0
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "spin",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
     },
     {
       "visibility": "public",
@@ -91,21 +121,6 @@
         "type": "object"
       },
       "defaultValue": null
-    },
-    {
-      "visibility": "public",
-      "description": null,
-      "keywords": [],
-      "name": "class",
-      "kind": "const",
-      "static": false,
-      "readonly": true,
-      "type": {
-        "kind": "type",
-        "text": "string",
-        "type": "string"
-      },
-      "localName": "klass"
     }
   ],
   "computed": [],

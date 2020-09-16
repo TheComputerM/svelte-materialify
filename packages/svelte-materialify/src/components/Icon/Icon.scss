@@ -21,7 +21,21 @@
     color: var(--theme-icons-inactive);
   }
 
-  svg {
+  &.spin {
+    animation: infinite s-icon-spin linear 1s;
+  }
+
+  > svg {
     fill: currentColor;
+  }
+}
+
+@keyframes s-icon-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
   }
 }
