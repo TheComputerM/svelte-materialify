@@ -13,7 +13,7 @@
   export let value = '';
 
   // The color of the input when active.
-  export let color = null;
+  export let color = 'primary';
 
   // Changes the variant of the input to filled.
   export let filled = false;
@@ -67,9 +67,8 @@
   export let error = false;
 
   // Id of the text input.
-  export let id = null;
+  export let id = `s-input-${uid(5)}`;
 
-  id = id || `s-input-${uid(5)}`;
   let focused = false;
   $: labelActive = !!placeholder || value || focused;
   let messages = [];

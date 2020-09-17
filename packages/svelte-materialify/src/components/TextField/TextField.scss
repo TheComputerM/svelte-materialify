@@ -5,6 +5,7 @@
   flex-grow: 1;
 
   label {
+    position: absolute;
     max-width: 90%;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -172,13 +173,6 @@
 .s-text-field {
   margin-top: 4px;
   padding-top: $text-field-label-top * 2;
-
-  > {
-    [slot='prepend'],
-    [slot='append'] {
-      align-self: flex-start;
-    }
-  }
 
   &.error,
   &.success {

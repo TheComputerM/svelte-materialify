@@ -1,4 +1,6 @@
 <script>
+  import TextColor from '../../internal/TextColor';
+
   let klass = '';
   export { klass as class };
   export let value = null;
@@ -23,7 +25,7 @@
   class:error
   class:readonly
   class:disabled
-  style="--input-active-color:{color}">
+  use:TextColor={color}>
   <slot name="prepend" />
   <div class="s-input__control">
     <div class="s-input__slot">

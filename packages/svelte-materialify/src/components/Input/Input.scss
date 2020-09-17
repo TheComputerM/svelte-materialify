@@ -38,7 +38,6 @@
 }
 
 .s-input {
-  color: var(--input-active-color, $primary-color);
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -70,20 +69,23 @@
     }
   }
 
-  [slot='prepend'],
-  [slot='append'] {
-    display: inline-flex;
-    margin-bottom: 4px;
-    margin-top: 4px;
-    line-height: 1;
-  }
+  & > {
+    [slot='prepend'],
+    [slot='append'] {
+      align-self: flex-start;
+      display: inline-flex;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      line-height: 1;
+    }
 
-  [slot='prepend'] {
-    margin-right: $input-prepend-append-outer-margin;
-  }
+    [slot='prepend'] {
+      margin-right: $input-prepend-append-outer-margin;
+    }
 
-  [slot='append'] {
-    margin-left: $input-prepend-append-outer-margin;
+    [slot='append'] {
+      margin-left: $input-prepend-append-outer-margin;
+    }
   }
 
   .s-icon {
@@ -98,7 +100,6 @@
   }
 
   label {
-    position: absolute;
     height: $input-label-height;
     line-height: $input-label-letter-spacing;
     color: var(--theme-text-secondary);

@@ -13,7 +13,7 @@
   export let value = '';
 
   // The color of the input when active.
-  export let color = null;
+  export let color = 'primary';
 
   // Changes the variant of the input to filled.
   export let filled = false;

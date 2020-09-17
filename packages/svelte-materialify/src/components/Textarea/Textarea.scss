@@ -13,13 +13,15 @@
     margin-top: 4px;
   }
 
-  [slot='prepend'],
-  [slot='append'] {
-    align-self: flex-start;
-    margin-top: $textarea-icon-margin-top;
-  }
-
   .s-text-field__wrapper {
+    & > {
+      [slot='prepend'],
+      [slot='append'] {
+        align-self: flex-start;
+        margin-top: $textarea-icon-margin-top;
+      }
+    }
+
     &.filled {
       [slot='prepend'],
       [slot='append'] {

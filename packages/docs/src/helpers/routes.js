@@ -71,6 +71,7 @@ export default [
           { text: 'Text Field', href: '/components/text-field/' },
           { text: 'Textarea', href: '/components/textarea/' },
           { text: 'Selects', href: '/components/selects/' },
+          { text: 'Sliders', href: '/components/sliders/' },
           { text: 'Checkboxes', href: '/components/checkboxes/' },
           { text: 'Switches', href: '/components/switches/' },
           { text: 'Radio', href: '/components/radio/' },

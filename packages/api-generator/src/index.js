@@ -40,6 +40,7 @@ export { default as Radio } from './Radio.json';
 export { default as Select } from './Select.json';
 export { default as SlideGroup } from './SlideGroup.json';
 export { default as SlideItem } from './SlideItem.json';
+export { default as Slider } from './Slider.json';
 export { default as Subheader } from './Subheader.json';
 export { default as Switch } from './Switch.json';
 export { default as Table } from './Table.json';

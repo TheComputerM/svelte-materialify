@@ -33,10 +33,10 @@
       "readonly": false,
       "type": {
         "kind": "type",
-        "text": "object",
-        "type": "object"
+        "text": "string",
+        "type": "string"
       },
-      "defaultValue": null
+      "defaultValue": "primary"
     },
     {
       "keywords": [],
@@ -282,10 +282,9 @@
       "readonly": false,
       "type": {
         "kind": "type",
-        "text": "object",
-        "type": "object"
-      },
-      "defaultValue": null
+        "text": "any",
+        "type": "any"
+      }
     }
   ],
   "computed": [],

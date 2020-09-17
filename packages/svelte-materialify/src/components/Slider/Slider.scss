@@ -1,0 +1,233 @@
+@import './variables';
+
+/*! nouislider - 14.6.1 - 8/17/2020 */
+
+.s-slider__label {
+  &:not(.inverse-label) {
+    margin-right: $slider-label-margin-end;
+  }
+
+  &.inverse-label {
+    order: 1;
+    margin-left: $slider-label-margin-start;
+  }
+}
+
+.s-slider__connect,
+.s-slider__origin {
+  will-change: transform;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  transform-origin: 0 0;
+  transform-style: preserve-3d;
+}
+
+.s-slider__connect {
+  height: 100%;
+  width: 100%;
+  background-color: currentColor;
+}
+
+.s-slider__origin {
+  height: 10%;
+  width: 10%;
+}
+
+.s-slider__touch-area {
+  height: 100%;
+  width: 100%;
+}
+
+.s-slider__state-tap {
+  .s-slider__connect,
+  .s-slider__origin {
+    transition: transform $slider-transition;
+  }
+}
+
+.s-slider__state-drag * {
+  cursor: inherit !important;
+}
+
+.s-slider__draggable {
+  cursor: ew-resize;
+}
+
+.s-slider__vertical .s-slider__draggable {
+  cursor: ns-resize;
+}
+
+.s-slider__base,
+.s-slider__connects {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.s-slider__connects {
+  overflow: hidden;
+  z-index: 0;
+  color: inherit;
+  border-radius: 3px;
+
+  &::before {
+    position: absolute;
+    background-color: currentColor;
+    content: '';
+    width: 100%;
+    height: 100%;
+    opacity: 0.26;
+  }
+}
+
+.s-slider__handle {
+  backface-visibility: hidden;
+  position: absolute;
+  width: $slider-thumb-size;
+  height: $slider-thumb-size;
+  right: -$slider-thumb-size / 2;
+  top: -$slider-thumb-size / 2;
+  border-radius: $slider-thumb-border-radius;
+  background: currentColor;
+  cursor: default;
+  outline: none;
+
+  &::before {
+    content: '';
+    z-index: -1;
+    color: inherit;
+    background-color: currentColor;
+    width: $slider-thumb-size * 3;
+    height: $slider-thumb-size * 3;
+    left: -$slider-thumb-size;
+    top: -$slider-thumb-size;
+    opacity: 0.3;
+    pointer-events: none;
+    position: absolute;
+    border-radius: inherit;
+    transition: transform $slider-transition;
+    transform: scale(0.1);
+  }
+
+  &:hover::before {
+    transform: scale(1);
+  }
+
+  &.focus-visible::before {
+    transform: scale($slider-thumb-focused-scale);
+  }
+}
+
+.s-slider__active {
+  &::before {
+    transform: scale(1.5) !important;
+  }
+}
+
+.s-slider__tooltip {
+  transition: opacity $slider-thumb-label-transition;
+  position: absolute;
+  bottom: 0;
+  user-select: none;
+  font-size: $slider-thumb-label-font-size;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    background-color: inherit;
+    width: $slider-thumb-label-width;
+    height: $slider-thumb-label-height;
+    border-radius: 50% 50% 0;
+  }
+}
+
+.s-slider__horizontal {
+  height: $slider-track-width;
+  width: 100%;
+
+  .s-slider__tooltip {
+    left: 50%;
+    transform: translateY(-100%) translateY(-12px) translateX(-50%);
+
+    &::before {
+      transform: rotate(45deg);
+    }
+  }
+
+  .s-slider__origin {
+    height: 0;
+  }
+}
+
+.s-slider__vertical {
+  margin-left: auto;
+  margin-right: auto;
+  width: $slider-track-width;
+
+  .s-slider__tooltip {
+    bottom: 50%;
+    transform: translateX(-100%) translateX(-18px) translateY(50%);
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .s-slider__origin {
+    width: 0;
+  }
+
+  .s-slider__base {
+    min-height: 150px;
+  }
+
+  .s-slider__connects {
+    min-height: inherit;
+  }
+}
+
+.s-slider__target {
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  touch-action: none;
+  user-select: none;
+  position: relative;
+  border-radius: 4px;
+
+  &:not(.persistent-thumb) {
+    .s-slider__tooltip {
+      opacity: 0;
+    }
+
+    .s-slider__active {
+      .s-slider__tooltip {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.s-slider {
+  .s-input__slot {
+    min-height: 32px;
+  }
+}
+
+[disabled].s-slider__target {
+  .s-slider__connect,
+  .s-slider__handle {
+    background: var(--theme-text-disabled);
+  }
+
+  .s-slider__handle {
+    cursor: not-allowed;
+  }
+}
