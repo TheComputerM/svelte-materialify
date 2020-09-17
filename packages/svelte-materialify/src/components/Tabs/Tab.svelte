@@ -6,7 +6,7 @@
   import Ripple from '../../actions/Ripple';
 
   const click = getContext(SLIDE_GROUP);
-  const { select, values, index } = getContext(ITEM_GROUP);
+  const { select, register, index } = getContext(ITEM_GROUP);
 
   let klass = '';
   export { klass as class };
@@ -15,9 +15,10 @@
 
   let active;
   const value = index();
-  let tab;
 
-  $: active = $values.includes(value);
+  register((values) => {
+    active = values.includes(value);
+  });
 
   function selectTab({ target }) {
     if (!disabled) {
@@ -31,7 +32,6 @@
 </style>
 
 <button
-  bind:this={tab}
   class="s-tab s-slide-item {klass}"
   role="tab"
   aria-selected={active}

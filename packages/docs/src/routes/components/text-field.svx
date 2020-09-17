@@ -2,6 +2,7 @@
 title: Text Field Component
 related:
   - Select: /components/selects/
+  - Slider: /components/sliders/
   - TextField API: /api/TextField/
 ---
 

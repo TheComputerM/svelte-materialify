@@ -1,5 +1,8 @@
 ---
 title: Tabs
+related:
+  - Icon: /components/icons/
+  - Windows: /components/windows/
 ---
 
 <script context="module">
