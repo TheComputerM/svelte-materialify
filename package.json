@@ -10,12 +10,12 @@
     ]
   },
   "scripts": {
-    "docs": "yarn workspace docs export",
-    "dev": "yarn workspace docs dev",
-    "release": "yarn workspace svelte-materialify publish",
-    "start": "yarn workspace svelte-materialify start",
-    "api": "yarn workspace svelte-materialify-api start",
-    "test": "yarn workspace svelte-materialify test",
+    "docs": "lerna run --scope docs export",
+    "dev": "lerna run --stream --scope docs dev",
+    "release": "lerna publish",
+    "start": "lerna run --scope svelte-materialify start",
+    "api": "lerna run --scope svelte-materialify-api start",
+    "test": "lerna run --stream --scope svelte-materialify test",
     "generate": "plop",
     "lint": "concurrently \"yarn:lint:js\" \"yarn:lint:css\"",
     "lint:fix": "concurrently \"yarn:lint:js:fix\" \"yarn:lint:css:fix\"",
@@ -50,6 +50,7 @@
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-svelte3": "^2.7.3",
+    "lerna": "^3.22.1",
     "plop": "^2.7.4",
     "prettier": "^2.1.2",
     "prettier-plugin-svelte": "^1.2.1",
@@ -57,5 +58,8 @@
     "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.18.0",
     "svelte": "^3.25.1"
+  },
+  "engines": {
+    "yarn": ">=1.22.0"
   }
 }
