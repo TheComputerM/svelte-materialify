@@ -25,7 +25,7 @@
 
 <Col cols="12" md="4">
   <a {href}>
-    <ListItem link class="grey {$theme === 'light' ? 'lighten-5' : 'darken-3'}">
+    <ListItem class="grey {$theme === 'light' ? 'lighten-5' : 'darken-3'}">
       <div slot="prepend">
         <Icon class="mdi mdi-{icon}" />
       </div>
