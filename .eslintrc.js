@@ -32,7 +32,10 @@ module.exports = {
       rules: {
         'import/no-extraneous-dependencies': 'off',
         'import/prefer-default-export': 'off',
-        'import/no-unresolved': ['error', { ignore: ['^@sapper/'] }],
+        'import/no-unresolved': [
+          'error',
+          { ignore: ['^@sapper/', '^@shared', '^@examples'] },
+        ],
         'no-return-assign': ['error', 'except-parens'],
         'no-param-reassign': ['error', { props: false }],
       },
