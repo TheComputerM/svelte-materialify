@@ -1,3 +1,4 @@
+export { default as playground } from './playground.svelte';
 export { default as raised } from './raised.svelte';
 export { default as depressed } from './depressed.svelte';
 export { default as block } from './block.svelte';

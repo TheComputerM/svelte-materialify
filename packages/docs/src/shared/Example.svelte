@@ -36,13 +36,13 @@
     border: thin solid var(--theme-dividers);
   }
 
-  .example :first-child {
+  .example-toolbar {
     background-color: var(--theme-app-bar);
   }
 </style>
 
 <div class="example">
-  <div class="text-right pa-1">
+  <div class="example-toolbar text-right pa-1">
     {#if colorInvertable}
       <Button
         fab
@@ -76,7 +76,7 @@
       {@html codeContent}
     </div>
   {/if}
-  <div class="pa-2 example-content {isComponentDark ? 'theme--dark' : ''}" {style}>
+  <div class="pa-2 {isComponentDark ? 'theme--dark' : ''}" {style}>
     <svelte:component this={component} />
   </div>
 </div>

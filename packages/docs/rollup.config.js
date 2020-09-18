@@ -13,12 +13,13 @@ import loadLanguages from 'prismjs/components/';
 import pkg from './package.json';
 
 const tinydate = require('tinydate');
+const path = require('path');
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 
-const onwarn = (warning, onwarn) =>
+const onwarn = (warning) =>
   (warning.code === 'MISSING_EXPORT' && /'preload'/.test(warning.message)) ||
   (warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message)) ||
   onwarn(warning);
@@ -103,8 +104,8 @@ export default {
     plugins: [
       alias({
         entries: [
-          { find: '@examples', replacement: '../../examples' },
-          { find: '@shared', replacement: '../../shared' },
+          { find: '@examples', replacement: path.resolve(__dirname, 'src/examples/') },
+          { find: '@shared', replacement: path.resolve(__dirname, 'src/shared/') },
         ],
       }),
       replace({
@@ -164,8 +165,8 @@ export default {
     plugins: [
       alias({
         entries: [
-          { find: '@examples', replacement: '../../examples' },
-          { find: '@shared', replacement: '../../shared' },
+          { find: '@examples', replacement: path.resolve(__dirname, 'src/examples/') },
+          { find: '@shared', replacement: path.resolve(__dirname, 'src/shared/') },
         ],
       }),
       replace({

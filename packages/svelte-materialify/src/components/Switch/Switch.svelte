@@ -21,7 +21,7 @@
   // Get/Set checked state.
   export let checked = false;
 
-  //
+  // make switch inset.
   export let inset = false;
 
   // Makes the switch dense.

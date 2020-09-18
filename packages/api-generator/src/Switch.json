@@ -83,9 +83,9 @@
       ]
     },
     {
-      "visibility": "public",
-      "description": null,
       "keywords": [],
+      "visibility": "public",
+      "description": "make switch inset.",
       "name": "inset",
       "kind": "let",
       "static": false,
