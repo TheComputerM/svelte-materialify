@@ -1,3 +1,14 @@
+## [0.1.3](https://github.com/TheComputerM/svelte-materialify/compare/v0.1.2...v0.1.3) (2020-09-18)
+
+### Bug Fixes
+
+- **Slider:** slider styles ([7c15e31](https://github.com/TheComputerM/svelte-materialify/commit/7c15e31ca5904bd732cd8c46349fbb7b49ab3231))
+- **Tabs:** register Tab ([9b94995](https://github.com/TheComputerM/svelte-materialify/commit/9b949951af73c308bf329d5416a063aa1385c73f))
+
+### Features
+
+- **Slider:** added Slider ([e5bb9e4](https://github.com/TheComputerM/svelte-materialify/commit/e5bb9e4481961bf46c6ad503256fd496209848fd))
+
 ## [0.1.2](https://github.com/TheComputerM/svelte-materialify/compare/v0.1.1...v0.1.2) (2020-09-15)
 
 ## [0.1.1](https://github.com/TheComputerM/svelte-materialify/compare/v0.1.0...v0.1.1) (2020-09-15)
