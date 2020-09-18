@@ -15,7 +15,7 @@ related:
 </script>
 
 <script>
-  import { Alert, API, Example, setExamples } from '@shared';
+  import { API, Example, setExamples } from '@shared';
   import { Button as doc } from 'svelte-materialify-api';
   import * as Examples from '@examples/components/buttons';
   export let sources;
@@ -24,21 +24,20 @@ related:
 
 # Button
 
-The `Button` component replaces the standard html button with a material deisgn theme and a multitude of options
+The `Button` component replaces the standard html button with a material deisgn theme and a multitude of options. Any color helper class can be used to alter the background or text color.
 
-<Alert type='info'>
-You can add any props including `aria-*` and other attributes which are not present in the props list below
-</Alert>
+## Playground
 
+Buttons in their simplest form contain uppercase text, a slight elevation, hover effect, and a ripple effect on click.
+<Examples.playground />
 
 ## API
 
 <API {doc} />
 
-
 ## Examples
 
-Here are some examples
+Below is a collection of simple to complex examples.
 
 ### Raised
 
@@ -55,42 +54,35 @@ These are just buttons with no box shadow
 Big bois
 <Example name="block" />
 
-
 ### Floating Action Buttons
 
 Floating buttons are rounded and usually contain an icon.
 <Example name="fab" />
-
 
 ### Icon
 
 Icons can be used for the primary content of a button.
 <Example name="icon" />
 
-
 ### Outlined
 
 Outlined buttons inherit their borders from the current color applied.
 <Example name="outlined" />
-
 
 ### Rounded
 
 Rounded buttons behave the same as regular buttons but have rounded edges.
 <Example name="rounded" />
 
-
 ### Text
 
 Text buttons have no box shadow and no background. Only on hover is the container for the button shown.
 <Example name="text" />
 
-
 ### Tile
 
 Tile buttons behave the same as regular buttons but have no border radius.
 <Example name="tile" />
-
 
 ### Sizing
 
