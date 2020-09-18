@@ -88,8 +88,8 @@
   position: absolute;
   width: $slider-thumb-size;
   height: $slider-thumb-size;
-  right: -$slider-thumb-size / 2;
-  top: -$slider-thumb-size / 2;
+  right: -$slider-thumb-size / 2 + 1;
+  top: -$slider-thumb-size / 2 + 1;
   border-radius: $slider-thumb-border-radius;
   background: currentColor;
   cursor: default;
@@ -219,12 +219,17 @@
   .s-input__slot {
     min-height: 32px;
   }
+
+  &.readonly {
+    pointer-events: none;
+  }
 }
 
 [disabled].s-slider__target {
+  .s-slider__connects,
   .s-slider__connect,
   .s-slider__handle {
-    background: var(--theme-text-disabled);
+    background-color: var(--theme-text-disabled);
   }
 
   .s-slider__handle {
