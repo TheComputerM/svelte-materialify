@@ -1,7 +1,9 @@
 ---
 title: Chip Component
 related:
-  - Textarea: /components/textarea/
+  - Avatar: /components/avatars/
+  - Icon: /components/icons/
+  - Select: /components/selects/
 ---
 
 <script context="module">
@@ -15,6 +17,7 @@ related:
 <script>
   import { API, Example, setExamples } from '@shared';
   import { Chip as doc } from 'svelte-materialify-api';
+  import Playground from '@playground/chips.svelte';
   import * as Examples from '@examples/components/chips';
   export let sources;
   setExamples([sources, Examples]);
@@ -23,6 +26,11 @@ related:
 # Chips
 
 The `Chip` component is used to convey small pieces of information. Using the close property, the chip becomes interactive, allowing user interaction.
+
+## Playground
+
+Chips come in the following variations: Default, label, closeable, outlined, pill. The default slot of `Chip` will also accept avatars and icons alongside text.
+<Playground />
 
 ## API
 

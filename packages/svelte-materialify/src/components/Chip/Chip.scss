@@ -2,6 +2,8 @@
 
 .s-chip__close {
   cursor: pointer;
+  margin-left: $chip-icon-margin-after;
+  margin-right: $chip-icon-margin-before;
 
   .s-icon {
     font-size: $chip-close-size;
@@ -50,17 +52,17 @@
   }
 
   .s-avatar {
-    height: $chip-avatar-size !important;
-    min-width: $chip-avatar-size !important;
-    width: $chip-avatar-size !important;
+    height: $chip-avatar-size;
+    min-width: $chip-avatar-size;
+    width: $chip-avatar-size;
   }
 
   .s-icon {
     font-size: $chip-icon-size;
   }
 
-  .s-icon,
-  .s-avatar {
+  & > .s-icon,
+  & > .s-avatar {
     color: inherit;
 
     &:first-child {
@@ -93,9 +95,9 @@
   }
 
   &.pill {
-    .s-avatar {
-      height: $chip-pill-avatar-size !important;
-      width: $chip-pill-avatar-size !important;
+    & > .s-avatar {
+      height: $chip-pill-avatar-size;
+      width: $chip-pill-avatar-size;
 
       &:first-child {
         margin-left: $chip-pill-avatar-margin-before;
