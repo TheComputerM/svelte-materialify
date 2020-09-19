@@ -39,6 +39,7 @@
   }
 
   .playground__content {
+    padding: 6px;
     min-height: 100px;
     height: calc(100% - 44px);
     width: 100%;
