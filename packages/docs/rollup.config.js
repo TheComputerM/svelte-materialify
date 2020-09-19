@@ -104,8 +104,9 @@ export default {
     plugins: [
       alias({
         entries: [
-          { find: '@examples', replacement: path.resolve(__dirname, 'src/examples/') },
-          { find: '@shared', replacement: path.resolve(__dirname, 'src/shared/') },
+          { find: '@examples', replacement: path.resolve(__dirname, 'examples') },
+          { find: '@shared', replacement: path.resolve(__dirname, 'shared') },
+          { find: '@playground', replacement: path.resolve(__dirname, 'playground') },
         ],
       }),
       replace({
@@ -165,8 +166,9 @@ export default {
     plugins: [
       alias({
         entries: [
-          { find: '@examples', replacement: path.resolve(__dirname, 'src/examples/') },
-          { find: '@shared', replacement: path.resolve(__dirname, 'src/shared/') },
+          { find: '@examples', replacement: path.resolve(__dirname, 'examples') },
+          { find: '@shared', replacement: path.resolve(__dirname, 'shared') },
+          { find: '@playground', replacement: path.resolve(__dirname, 'playground') },
         ],
       }),
       replace({

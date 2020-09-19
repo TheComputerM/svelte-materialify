@@ -10,7 +10,7 @@
   import { onDestroy } from 'svelte';
   import { slide } from 'svelte/transition';
   import { Icon, Button } from 'svelte-materialify/src';
-  import { theme } from '../helpers/stores';
+  import { theme } from '../src/helpers/stores';
 
   export let name = '';
   export let style = null;

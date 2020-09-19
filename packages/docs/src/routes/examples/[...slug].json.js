@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const Prism = require('prismjs');
 
-const base = './src/examples';
+const BASE = './examples';
 
 function getFiles(dir, output = {}) {
   fs.readdirSync(dir).forEach((file) => {
@@ -24,7 +24,7 @@ function getFiles(dir, output = {}) {
   return output;
 }
 
-const examples = getFiles(base);
+const examples = getFiles(BASE);
 
 export function get(req, res, next) {
   const [type, file] = req.params.slug;
