@@ -1,3 +1,10 @@
+## [0.1.4](https://github.com/TheComputerM/svelte-materialify/compare/v0.1.3...v0.1.4) (2020-09-19)
+
+### Features
+
+- **Button:** added activeClass prop ([7d8b15b](https://github.com/TheComputerM/svelte-materialify/commit/7d8b15b0984d12970a7fb521c7c27c5260821b47))
+- reactive ripple ([83ffe9b](https://github.com/TheComputerM/svelte-materialify/commit/83ffe9b2de8f8315dab57f73be2cb6a890ddb535))
+
 ## [0.1.3](https://github.com/TheComputerM/svelte-materialify/compare/v0.1.2...v0.1.3) (2020-09-18)
 
 ### Bug Fixes
