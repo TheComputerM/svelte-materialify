@@ -43,6 +43,7 @@ code[class*="language-"] {
 .token,
 code[class*="language-"],
 pre[class*="language-"] {
+  font-family: "Fira Code", "Roboto Mono", "Consolas", monospace;
   font-weight: 500;
   transition: 150ms ease;
 }
