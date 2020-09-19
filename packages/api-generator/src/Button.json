@@ -214,6 +214,21 @@
       "defaultValue": false
     },
     {
+      "keywords": [],
+      "visibility": "public",
+      "description": "The class applied to the button when active.",
+      "name": "activeClass",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "defaultValue": "active"
+    },
+    {
       "keywords": [
         {
           "name": "type",

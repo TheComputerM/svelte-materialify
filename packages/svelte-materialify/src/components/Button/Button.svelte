@@ -1,5 +1,6 @@
 <script>
   import Ripple from '../../actions/Ripple';
+  import Class from '../../internal/Class';
 
   // Classes to add to the button
   let klass = '';
@@ -41,6 +42,9 @@
   // Make the button active
   export let active = false;
 
+  // The class applied to the button when active.
+  export let activeClass = 'active';
+
   /**
    * Specifies the type of button
    * @type {button|reset|submit}
@@ -68,7 +72,7 @@
   class:outlined
   class:rounded
   class:disabled
-  class:active
+  use:Class={[active && activeClass]}
   {type}
   {style}
   {disabled}

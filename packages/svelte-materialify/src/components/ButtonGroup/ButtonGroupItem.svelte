@@ -26,8 +26,9 @@
 </style>
 
 <Button
-  class="s-btn-group-item {active ? activeClass : ''} {klass}"
-  active={active && activeClass === 'active'}
+  class="s-btn-group-item {klass}"
+  {activeClass}
+  {active}
   {disabled}
   on:click={click}
   on:click>
