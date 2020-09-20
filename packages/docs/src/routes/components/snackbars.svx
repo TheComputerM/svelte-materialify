@@ -1,0 +1,50 @@
+---
+title: Snackbars
+related:
+  - Button: /components/buttons/
+  - Colors: /styles/colors/
+  - Select: /components/selects/
+---
+
+<script context="module">
+  export async function preload() {
+    let sources = await this.fetch('examples/components/snackbars.json');
+    sources = await sources.json();
+    return { sources };
+  }
+</script>
+
+<script>
+  import { API, Example, setExamples } from '@shared';
+  import * as Examples from '@examples/components/snackbars';
+  import { Snackbar as doc } from 'svelte-materialify-api';
+  export let sources;
+  setExamples([sources, Examples]);
+</script>
+
+# Snackbars
+
+The `Snackbar` component is used to display a quick message to a user. Snackbars support positioning, removal delay, and callbacks.
+
+## API
+
+<API {doc} />
+
+## Examples
+
+Below are some simple and complex examples.
+
+### Timeout
+
+The timeout property lets you customize the delay before the `Snackbar` is hidden.
+<Example name="timeout" />
+
+### Variants
+
+Apply different styles to the snackbar using props such as text, outlined, and more.
+<Example name="variants" />
+
+### Actions
+
+Add different actions to the snackbar.
+<Example name="actions" />

@@ -1,0 +1,17 @@
+@import '../../styles/variables';
+
+$snackbar-absolute-z-index: 1 !default;
+$snackbar-background-color: #333333 !default;
+$snackbar-border-radius: $border-radius-root !default;
+$snackbar-btn-padding: 0 8px !default;
+$snackbar-color: hsla(0, 0%, 100%, 0.87) !default;
+$snackbar-font-size: map-deep-get($headings, 'body-2', 'size') !default;
+$snackbar-font-weight: map-deep-get($headings, 'body-2', 'weight') !default;
+$snackbar-letter-spacing: map-deep-get($headings, 'body-2', 'letter-spacing') !default;
+$snackbar-line-height: map-deep-get($headings, 'body-2', 'line-height') !default;
+$snackbar-padding: 14px 16px !default;
+$snackbar-elevation: 6 !default;
+$snackbar-wrapper-margin: 8px !default;
+$snackbar-wrapper-min-height: 48px !default;
+$snackbar-wrapper-min-width: 344px !default;
+$snackbar-z-index: 1000 !default;

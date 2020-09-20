@@ -22,27 +22,25 @@ related:
 
 # Switches
 
+The `Switch` component provides users the ability to choose between two distinct values. These are very similiar to a toggle, or on/off switch, though aesthetically different than a checkbox.
+
 ## API
 
 <API {doc} />
 
-
 ## Examples
 
 Below are some simple and complex examples.
-
 
 ### Groups
 
 You can combine switches into groups.
 <Example name="groups" />
 
-
 ### Colors
 
 You can change the colors of the switch and the labels.
 <Example name="colors" />
-
 
 ### States
 

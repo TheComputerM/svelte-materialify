@@ -90,6 +90,7 @@ export default [
           { text: 'Linear', href: '/components/progress-linear/' },
         ],
       },
+      { text: 'Snackbars', href: '/components/snackbars/' },
       { text: 'Subheader', href: '/components/subheader/' },
     ],
   },

@@ -1,0 +1,96 @@
+@import './variables';
+
+.s-snackbar__wrapper {
+  display: flex;
+  pointer-events: none;
+  width: 100%;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: var(--s-snackbar-y) var(--s-snackbar-x);
+
+  &:not(.absolute) {
+    position: fixed;
+    z-index: $snackbar-z-index;
+  }
+
+  &.absolute {
+    position: absolute;
+    z-index: $snackbar-absolute-z-index;
+  }
+
+  &.center {
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.left {
+    justify-content: flex-start;
+  }
+
+  &.top {
+    align-items: flex-start;
+  }
+
+  &.right {
+    justify-content: flex-end;
+  }
+
+  &.bottom {
+    align-items: flex-end;
+  }
+}
+
+.s-snackbar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  pointer-events: auto;
+  padding: $snackbar-padding;
+  font-size: $snackbar-font-size;
+  letter-spacing: $snackbar-letter-spacing;
+  background-color: $snackbar-background-color;
+  color: $snackbar-color;
+  margin: $snackbar-wrapper-margin;
+  min-height: $snackbar-wrapper-min-height;
+  min-width: $snackbar-wrapper-min-width;
+
+  @include elevation($snackbar-elevation);
+
+  &:not(.tile) {
+    border-radius: $snackbar-border-radius;
+  }
+
+  &.outlined {
+    background-color: transparent;
+    color: $snackbar-background-color;
+    border: thin solid currentColor;
+  }
+
+  &.text {
+    color: $snackbar-background-color;
+    background-color: inherit;
+
+    &::before {
+      content: '';
+      background-color: currentColor;
+      border-radius: inherit;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0.12;
+      position: absolute;
+      pointer-events: none;
+    }
+  }
+
+  &.rounded {
+    border-radius: map-get($rounded, 'pill');
+  }
+
+  .s-btn {
+    padding: $snackbar-btn-padding;
+  }
+}
