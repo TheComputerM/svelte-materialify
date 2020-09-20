@@ -13,7 +13,7 @@
     Col,
     Table,
     Footer,
-  } from 'svelte-materialify/src/';
+  } from 'svelte-materialify/src';
 </script>
 
 <style lang="scss">
