@@ -1,3 +1,9 @@
+## [0.1.5](https://github.com/TheComputerM/svelte-materialify/compare/v0.1.4...v0.1.5) (2020-09-20)
+
+### Features
+
+- **Snackbar:** added Snackbar ([75c638b](https://github.com/TheComputerM/svelte-materialify/commit/75c638b8258320e79a9a33528be250d97af47a18))
+
 ## [0.1.4](https://github.com/TheComputerM/svelte-materialify/compare/v0.1.3...v0.1.4) (2020-09-19)
 
 ### Features
