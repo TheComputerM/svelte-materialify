@@ -1,5 +1,14 @@
 <script>
-  import { List, Subheader, ListItem, Checkbox, Divider } from 'svelte-materialify/src';
+  import {
+    List,
+    Subheader,
+    ListItemGroup,
+    ListItem,
+    Checkbox,
+    Divider,
+  } from 'svelte-materialify/src';
+
+  let values = [];
 </script>
 
 <div class="d-flex justify-center">
@@ -9,20 +18,22 @@
     <ListItem selectable>Show your status</ListItem>
     <Divider />
     <Subheader>Notifications</Subheader>
-    <ListItem>
-      <span slot="prepend">
-        <Checkbox />
-      </span> Notifications <span slot="subtitle"> Allow Notifications </span>
-    </ListItem>
-    <ListItem>
-      <span slot="prepend">
-        <Checkbox />
-      </span> Sound <span slot="subtitle"> Hangouts sound. </span>
-    </ListItem>
-    <ListItem>
-      <span slot="prepend">
-        <Checkbox />
-      </span> Invites <span slot="subtitle"> Notify when invited. </span>
-    </ListItem>
+    <ListItemGroup multiple bind:value={values}>
+      <ListItem>
+        <span slot="prepend">
+          <Checkbox checked={values.includes(0)} />
+        </span> Notifications <span slot="subtitle"> Allow Notifications </span>
+      </ListItem>
+      <ListItem>
+        <span slot="prepend">
+          <Checkbox checked={values.includes(1)} />
+        </span> Sound <span slot="subtitle"> Hangouts sound. </span>
+      </ListItem>
+      <ListItem>
+        <span slot="prepend">
+          <Checkbox checked={values.includes(2)} />
+        </span> Invites <span slot="subtitle"> Notify when invited. </span>
+      </ListItem>
+    </ListItemGroup>
   </List>
 </div>

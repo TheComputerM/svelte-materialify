@@ -21,7 +21,7 @@
   onDestroy(unsubscribe);
 
   function openCollapsedNavigation(parent) {
-    const activeParent = parent.items.find((child) => {
+    return !!parent.items.find((child) => {
       if (child.items) openCollapsedNavigation(child);
       if (escaped(child.href) === activeLink || child.open) {
         parent.open = true;
@@ -29,7 +29,6 @@
       }
       return false;
     });
-    return activeParent;
   }
 
   if (depth === 0) {
@@ -38,17 +37,7 @@
   }
 </script>
 
-<style>
-  a {
-    text-decoration: none;
-  }
-  :global(.s-list-item .s-icon.chevron) {
-    will-change: transform;
-    transition: transform 250ms ease-in-out;
-  }
-</style>
-
-<ListGroup active={visible} {offset}>
+<ListGroup eager active={visible} {offset}>
   {#each items as item}
     {#if item.items}
       <ListItem dense on:click={() => (item.open = !item.open)}>
@@ -67,11 +56,6 @@
     {:else}
       <a href={item.href} rel="prefetch">
         <ListItem active={item.href.replace(/\//g, '') === activeLink}>
-          <div slot="prepend">
-            {#if item.icon}
-              <Icon class="mdi mdi-{item.icon}" />
-            {/if}
-          </div>
           {item.text}
         </ListItem>
       </a>
