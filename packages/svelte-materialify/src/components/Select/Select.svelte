@@ -19,6 +19,7 @@
   export let dense = false;
   export let placeholder = null;
   export let hint = '';
+  export let mandatory = false;
   export let multiple = false;
   export let max = Infinity;
   export let chips = false;
@@ -62,7 +63,7 @@
         </span>
       </TextField>
     </span>
-    <ListItemGroup bind:value {multiple} {max}>
+    <ListItemGroup bind:value {mandatory} {multiple} {max}>
       {#each items as item}
         <slot name="item" {item}>
           <ListItem {dense} value={item.value}>
