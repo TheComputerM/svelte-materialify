@@ -1,19 +1,22 @@
 import jump from './jump';
 
-export default (node, options = {}) => {
-  const target = options.target || node.getAttribute('data-target') || node.href;
-  const isTouchable = 'ontouchstart' in window;
+export default (node, _options = {}) => {
+  let options = _options;
+  let target = options.target || node.getAttribute('data-target') || node.href;
   const Jump = () => {
     jump(target, options);
   };
 
-  node.addEventListener('mousedown', Jump);
-  if (isTouchable) node.addEventListener('touchstart', Jump);
+  node.addEventListener('pointerdown', Jump);
 
   return {
+    update(newOptions) {
+      options = newOptions;
+      target = options.target || node.getAttribute('data-target') || node.href;
+      if (!options) node.removeEventListener('pointerdown', Jump);
+    },
     destroy() {
-      node.removeEventListener('mousedown', Jump);
-      if (isTouchable) node.removeEventListener('touchstart', Jump);
+      node.removeEventListener('pointerdown', Jump);
     },
   };
 };

@@ -1,0 +1,48 @@
+---
+title: Jump action
+related:
+  - Button: /components/buttons/
+  - ExpansionPanel: /components/expansion-panels/
+  - Colors: /styles/colors/
+---
+
+<script context="module">
+  export async function preload() {
+    let sources = await this.fetch('examples/actions/jump.json');
+    sources = await sources.json();
+    return { sources };
+  }
+</script>
+
+<script>
+  import { Example, setExamples } from '@shared';
+  import * as Examples from '@examples/actions/jump';
+  export let sources;
+  setExamples([sources, Examples]);
+</script>
+
+<style>
+  :global(html) {
+    scroll-behavior: auto !important;
+  }
+</style>
+
+# Jump
+
+This action allows you to smooth scroll to a any position using [jump.js](http://callmecavs.com/jump.js/).
+
+## Usage
+
+The default behavior is to bind to the window. If no additional configuration options are needed, you can simply pass your callback function. This is the options you can pass through and thier default values.
+
+```js
+{
+  target: '', // can be a number, selector, or and element
+  duration: 1000,
+  offset: 0,
+  callback: () => {},
+  easing: () => {} // any easing function
+}
+```
+
+<Example name="usage" />
