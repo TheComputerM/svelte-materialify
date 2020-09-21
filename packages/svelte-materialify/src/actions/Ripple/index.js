@@ -5,6 +5,7 @@ import { RippleStart, RippleStop } from './material-ripple';
  */
 export default (node, _options = {}) => {
   let options = _options;
+  let destroyed = false;
   let ripple;
   let keyboardActive = false;
   const handleStart = (e) => {
@@ -34,6 +35,7 @@ export default (node, _options = {}) => {
     node.addEventListener('mouseleave', handleStop);
     node.addEventListener('keydown', handleKeyboardStart);
     node.addEventListener('keyup', handleKeyboardStop);
+    destroyed = false;
   }
 
   function destroy() {
@@ -47,6 +49,7 @@ export default (node, _options = {}) => {
     node.removeEventListener('mouseleave', handleStop);
     node.removeEventListener('keydown', handleKeyboardStart);
     node.removeEventListener('keyup', handleKeyboardStop);
+    destroyed = true;
   }
 
   if (options) setup();
@@ -54,8 +57,8 @@ export default (node, _options = {}) => {
   return {
     update(newOptions) {
       options = newOptions;
-      if (options) setup();
-      else destroy();
+      if (options && destroyed) setup();
+      else if (!(options || destroyed)) destroy();
     },
     destroy,
   };
