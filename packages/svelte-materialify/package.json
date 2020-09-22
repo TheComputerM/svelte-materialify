@@ -4,6 +4,7 @@
   "description": "A material design framework/component library for Svelte, with full support for light and dark themes and customisability.",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
+  "types": "@types/index.d.ts",
   "scripts": {
     "dev": "concurrently \"yarn:watch:*\" -k",
     "start": "concurrently \"yarn:build\" \"yarn:css\"",
@@ -34,7 +35,7 @@
     "rollup-plugin-terser": "^7.0.2",
     "sass": "^1.26.10",
     "standard-changelog": "^2.0.24",
-    "svelte": "^3.25.1",
+    "svelte": "^3.26.0",
     "svelte-check": "^1.0.43",
     "svelte-htm": "^1.1.1",
     "svelte-jester": "^1.1.5",
@@ -42,7 +43,8 @@
   },
   "files": [
     "src",
-    "dist"
+    "dist",
+    "@types"
   ],
   "peerDependencies": {
     "sass": "^1.26.10",

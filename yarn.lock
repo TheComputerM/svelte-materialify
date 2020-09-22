@@ -9907,10 +9907,15 @@ svelte2tsx@*:
     dedent-js "^1.0.1"
     pascal-case "^3.1.1"
 
-svelte@3.25.1, svelte@^3.25.1:
+svelte@3.25.1:
   version "3.25.1"
   resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.25.1.tgz#218def1243fea5a97af6eb60f5e232315bb57ac4"
   integrity sha512-IbrVKTmuR0BvDw4ii8/gBNy8REu7nWTRy9uhUz+Yuae5lIjWgSGwKlWtJGC2Vg95s+UnXPqDu0Kk/sUwe0t2GQ==
+
+svelte@^3.26.0:
+  version "3.26.0"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.26.0.tgz#20ae354e55689ad37d872d2ce3276aeaa9bf305d"
+  integrity sha512-9tclNfffORwbSewfofEHddqXhfhFvFcgJlkF3QhZfMuoh6whPOPY87eHiJRHph4na3VxQoGDyEWAZcNAl1K/2A==
 
 sveltedoc-parser@^3.0.4:
   version "3.0.4"
