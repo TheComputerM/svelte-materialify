@@ -1,3 +1,18 @@
+## [0.1.6](https://github.com/TheComputerM/svelte-materialify/compare/v0.1.5...v0.1.6) (2020-09-22)
+
+### Bug Fixes
+
+- add px to numeric inputs ([c394e66](https://github.com/TheComputerM/svelte-materialify/commit/c394e6699c2e5a7f237803d1301e0bac70bbf9cf))
+- **Menu:** wrapper width ([d3640f6](https://github.com/TheComputerM/svelte-materialify/commit/d3640f6905affc81022fa89c7039b826bb978768))
+- updated event listeners ([5305b3d](https://github.com/TheComputerM/svelte-materialify/commit/5305b3d3d8b5ba6ae6ee724f3dd6f1f851c03521))
+
+### Features
+
+- **SlideGroup:** added touch support ([d18e33b](https://github.com/TheComputerM/svelte-materialify/commit/d18e33b948d5e18dfc2d3fb55610cb850677eb72))
+- added Touch action ([4bc90b8](https://github.com/TheComputerM/svelte-materialify/commit/4bc90b8eed85559a430312f2482ad4d1043673d1))
+- **ListGroup:** added `eager` prop ([7a2d5e1](https://github.com/TheComputerM/svelte-materialify/commit/7a2d5e18ed4993295bc6e3603ba602db816664c0))
+- **Select:** added `mandatory` prop ([125d572](https://github.com/TheComputerM/svelte-materialify/commit/125d572aea357fbb70c8e789411a7914c915e8d7))
+
 ## [0.1.5](https://github.com/TheComputerM/svelte-materialify/compare/v0.1.4...v0.1.5) (2020-09-20)
 
 ### Features
