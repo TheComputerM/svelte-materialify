@@ -20,6 +20,9 @@
   } else if (checkIfHrefContains('/api/')) {
     icon = 'beaker amber-text';
     subtitle = 'API';
+  } else if (checkIfHrefContains('/actions/')) {
+    icon = 'function indigo-text';
+    subtitle = 'Actions';
   }
 </script>
 

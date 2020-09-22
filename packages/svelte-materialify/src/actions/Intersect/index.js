@@ -1,5 +1,5 @@
 export default (node, options) => {
-  const settings = { once: false, observer: {}, ...options };
+  const settings = { once: false, ...options };
   const observer = new IntersectionObserver((entries) => {
     const entry = entries[0];
     const intersecting = entry.isIntersecting;
@@ -13,7 +13,7 @@ export default (node, options) => {
         observer.unobserve(node);
       }
     }
-  }, settings.observer);
+  }, settings);
   observer.observe(node);
   return {
     destroy() {

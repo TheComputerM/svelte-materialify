@@ -1,0 +1,33 @@
+---
+title: Intersection action
+related:
+  - Mutate: /actions/mutate/
+  - ClickOutside: /actions/click-outside/
+---
+
+<script context="module">
+  export async function preload() {
+    let sources = await this.fetch('examples/actions/intersect.json');
+    sources = await sources.json();
+    return { sources };
+  }
+</script>
+
+<script>
+  import { Example, setExamples } from '@shared';
+  import * as Examples from '@examples/actions/intersect';
+  export let sources;
+  setExamples([sources, Examples]);
+</script>
+
+# Intersect
+
+The `Intersect` action utilizes the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API). It provides an easy-to-use interface for detecting when elements are visible within the user's viewport. This is also used for the [Lazy](/components/lazy/) component.
+
+## Usage
+
+<Example name="usage" />
+
+## Polyfill
+
+While the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) is not available in IE11 by default, it can be implemented using a [polyfill](https://github.com/w3c/IntersectionObserver).
