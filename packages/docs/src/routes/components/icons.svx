@@ -17,6 +17,7 @@ related:
   import { API, Example, setExamples } from '@shared';
   import * as Examples from '@examples/components/icons';
   import { Icon as doc } from 'svelte-materialify-api';
+  import Playground from '@playground/icons.svelte';
   export let sources;
   setExamples([sources, Examples]);
 </script>
@@ -31,6 +32,12 @@ related:
 # Icons
 
 The `Icon` component provides a large set of glyphs to provide context to various aspects of your application. We recommend the official [Material Design Icons](https://materialdesignicons.com/) page. To use any of these icons simply use the mdi- prefix followed by the icon name.
+
+## Playground
+
+Icons come in two themes (light and dark), and can have any size.
+
+<Playground />
 
 ## API
 
