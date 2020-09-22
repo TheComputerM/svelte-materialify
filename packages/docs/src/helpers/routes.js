@@ -102,6 +102,7 @@ export default [
       { text: 'Ripple', href: '/actions/ripple/' },
       { text: 'Intersection observer', href: '/actions/intersect/' },
       { text: 'Jump', href: '/actions/jump/' },
+      { text: 'Touch', href: '/actions/touch/' },
     ],
   },
   {

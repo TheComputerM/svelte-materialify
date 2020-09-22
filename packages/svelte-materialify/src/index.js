@@ -1,7 +1,8 @@
-export { default as ClickOutside } from './actions/ClickOutside';
 export { default as Ripple } from './actions/Ripple';
+export { default as ClickOutside } from './actions/ClickOutside';
 export { default as Intersect } from './actions/Intersect';
 export { default as Jump } from './actions/Jump';
+export { default as Touch } from './actions/Touch';
 
 export { default as MaterialApp } from './components/MaterialApp';
 export { default as Icon } from './components/Icon';
