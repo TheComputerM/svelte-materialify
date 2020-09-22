@@ -1,13 +1,13 @@
 <script>
-  import { Menu, Button, List, ListItem, Checkbox } from 'svelte-materialify/src';
+  import { Menu, Button, List, ListItem, Switch } from 'svelte-materialify/src';
 
   let x = false;
   let y = false;
 </script>
 
-<Checkbox bind:checked={x}>Offset X</Checkbox>
+<Switch bind:checked={x}>Offset X</Switch>
+<Switch bind:checked={y}>Offset Y</Switch>
 
-<Checkbox bind:checked={y}>Offset Y</Checkbox>
 <br />
 <div class="d-flex justify-center">
   <Menu offsetX={x} offsetY={y}>
