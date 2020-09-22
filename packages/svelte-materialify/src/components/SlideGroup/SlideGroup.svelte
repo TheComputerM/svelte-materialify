@@ -50,6 +50,15 @@
     x -= wrapperWidth;
   }
 
+  let touchStartX;
+  function touchstart({ touches }) {
+    touchStartX = x + touches[0].clientX;
+  }
+
+  function touchmove({ touches }) {
+    x = touchStartX - touches[0].clientX;
+  }
+
   $: arrowsVisible = wrapperWidth < contentWidth && showArrows;
 </script>
 
@@ -75,7 +84,11 @@
       </slot>
     </div>
   {/if}
-  <div class="s-slide-group__wrapper" bind:clientWidth={wrapperWidth}>
+  <div
+    class="s-slide-group__wrapper"
+    on:touchstart={touchstart}
+    on:touchmove={touchmove}
+    bind:clientWidth={wrapperWidth}>
     <div
       class="s-slide-group__content"
       style="transform:translate(-{x}px)"
