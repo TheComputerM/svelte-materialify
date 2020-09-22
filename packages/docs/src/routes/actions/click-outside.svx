@@ -1,0 +1,31 @@
+---
+title: Click Outside action
+related:
+  - Ripple: /actions/ripple/
+  - Intersect: /actions/intersect/
+  - Menu: /components/menus/
+---
+
+<script context="module">
+  export async function preload() {
+    let sources = await this.fetch('examples/actions/click-outside.json');
+    sources = await sources.json();
+    return { sources };
+  }
+</script>
+
+<script>
+  import { Example, setExamples } from '@shared';
+  import * as Examples from '@examples/actions/click-outside';
+  export let sources;
+  setExamples([sources, Examples]);
+</script>
+
+# ClickOutside
+
+The `ClickOutside` directive calls a function when something outside of the target element is clicked on. This is used internally by components like `Menu` and `Dalog`.
+
+## Usage
+
+The `ClickOutside` action allows you to provide a handler to be invoked when the user clicks outside of the target element.
+<Example name="usage" />

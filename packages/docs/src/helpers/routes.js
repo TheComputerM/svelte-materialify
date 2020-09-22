@@ -100,6 +100,7 @@ export default [
     open: false,
     items: [
       { text: 'Ripple', href: '/actions/ripple/' },
+      { text: 'Click outside', href: '/actions/click-outside/' },
       { text: 'Intersection observer', href: '/actions/intersect/' },
       { text: 'Jump', href: '/actions/jump/' },
       { text: 'Touch', href: '/actions/touch/' },
