@@ -152,7 +152,7 @@
 </style>
 
 <div
-  class="s-menu-wrapper"
+  class="s-menu__wrapper"
   bind:this={wrapper}
   use:ClickOutside
   on:clickOutside={clickOutsideMenu}>
