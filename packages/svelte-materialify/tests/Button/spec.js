@@ -19,7 +19,7 @@ describe('Button', () => {
     );
     const button = getByRole('button');
 
-    await fireEvent.mouseDown(button);
+    await fireEvent.pointerDown(button);
     const ripple = button.querySelector('.ripple-boi');
     await waitFor(() => {
       expect(ripple).toBeInTheDocument();
