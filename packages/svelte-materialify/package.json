@@ -36,7 +36,7 @@
     "sass": "^1.26.10",
     "standard-changelog": "^2.0.24",
     "svelte": "^3.26.0",
-    "svelte-check": "^1.0.43",
+    "svelte-check": "^1.0.48",
     "svelte-htm": "^1.1.1",
     "svelte-jester": "^1.1.5",
     "svelte-preprocess": "^4.3.0"

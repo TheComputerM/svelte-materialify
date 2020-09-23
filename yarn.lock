@@ -9820,10 +9820,10 @@ supports-hyperlinks@^2.0.0:
     has-flag "^4.0.0"
     supports-color "^7.0.0"
 
-svelte-check@^1.0.43:
-  version "1.0.46"
-  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-1.0.46.tgz#7e61f76401d0f3603eee778e54a1c081bbefffc5"
-  integrity sha512-IV3gff7cwo12HIh7JZvFtRTZJkZS585QfI6e4Xru32WqthJ/9HLQlf1z0Gyj7sSz+eWM4J1HsDqTDKyKB63PSg==
+svelte-check@^1.0.48:
+  version "1.0.48"
+  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-1.0.48.tgz#632e21e188ef8a7277b360e052a5ce9315b7da71"
+  integrity sha512-2dnyJUv/5UWT5rkIWvyYpJdwV8aXJtOBSbUpltL2da+STt/wT8WHOWIwTdc2l3JdCKsp0ycOcSE4EdcLOhwtfw==
   dependencies:
     chalk "^4.0.0"
     chokidar "^3.4.1"
