@@ -1,6 +1,6 @@
 <script>
   import { fade } from 'svelte/transition';
-  import Style from '../../internal/Style';
+  import BackgroundColor from '../../internal/BackgroundColor';
 
   let klass = '';
   export let active = true;
@@ -22,11 +22,8 @@
     class="s-overlay {klass}"
     class:absolute
     on:click
-    use:Style={{ 'overlay-index': index }}
-    {style}>
-    <div
-      class="s-overlay__scrim"
-      style="opacity:{opacity};background-color:{color};border-color:{color}" />
+    style="z-index:{index};{style}">
+    <div class="s-overlay__scrim" use:BackgroundColor={color} style="opacity:{opacity}" />
     <div class="s-overlay__content">
       <slot />
     </div>
