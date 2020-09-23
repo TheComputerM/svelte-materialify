@@ -1,3 +1,9 @@
+## [0.1.7](https://github.com/TheComputerM/svelte-materialify/compare/v0.1.6...v0.1.7) (2020-09-23)
+
+### Bug Fixes
+
+- **Overlay:** fixed index ([e352b7a](https://github.com/TheComputerM/svelte-materialify/commit/e352b7aeaa25138947d95a1e963af583e4501ab0))
+
 ## [0.1.6](https://github.com/TheComputerM/svelte-materialify/compare/v0.1.5...v0.1.6) (2020-09-22)
 
 ### Bug Fixes

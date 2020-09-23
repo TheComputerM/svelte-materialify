@@ -1,6 +1,6 @@
 {
   "name": "docs",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "private": true,
   "scripts": {
     "dev": "sapper dev --ext \".svelte .svx\"",
@@ -14,7 +14,7 @@
     "gumshoejs": "^5.1.2",
     "polka": "next",
     "sirv": "^1.0.0",
-    "svelte-materialify": "^0.1.6",
+    "svelte-materialify": "^0.1.7",
     "svelte-materialify-api": "^0.1.6"
   },
   "devDependencies": {
