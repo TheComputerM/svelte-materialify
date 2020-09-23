@@ -2,11 +2,11 @@
  * Click Outside
  * @param {Node} node
  */
-export default (node, options = {}) => {
-  const { include } = { include: [], ...options };
+export default (node, _options = {}) => {
+  const options = { include: [], ..._options };
 
   function detect({ target }) {
-    if (!node.contains(target) || include.some((i) => target.isSameNode(i))) {
+    if (!node.contains(target) || options.include.some((i) => target.isSameNode(i))) {
       node.dispatchEvent(new CustomEvent('clickOutside'));
     }
   }
