@@ -2,7 +2,6 @@ import svelte from 'rollup-plugin-svelte';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
-import sveltePreprocess from 'svelte-preprocess';
 import bundleSize from 'rollup-plugin-bundle-size';
 import pkg from './package.json';
 
@@ -12,14 +11,7 @@ const name = pkg.name
   .replace(/^\w/, (m) => m.toUpperCase())
   .replace(/-\w/g, (m) => m[1].toUpperCase());
 
-const preprocess = sveltePreprocess({
-  scss: {
-    includePaths: ['src', 'theme'],
-  },
-  postcss: {
-    plugins: [require('autoprefixer')],
-  },
-});
+const { preprocess } = require('./svelte.config');
 
 export default {
   input: 'src/index.js',
