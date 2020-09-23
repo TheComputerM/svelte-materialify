@@ -151,6 +151,21 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
+      "name": "mandatory",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "multiple",
       "kind": "let",
       "static": false,

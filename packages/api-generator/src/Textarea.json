@@ -353,6 +353,16 @@
       "visibility": "public",
       "description": "",
       "keywords": []
+    },
+    {
+      "name": "change",
+      "parent": "textarea",
+      "modificators": [],
+      "locations": null,
+      "loc": null,
+      "visibility": "public",
+      "description": "",
+      "keywords": []
     }
   ],
   "slots": [

@@ -36,6 +36,21 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
+      "name": "eager",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "transition",
       "kind": "let",
       "static": false,
@@ -114,10 +129,10 @@
       "readonly": false,
       "type": {
         "kind": "type",
-        "text": "string",
-        "type": "string"
+        "text": "object",
+        "type": "object"
       },
-      "defaultValue": ""
+      "defaultValue": null
     }
   ],
   "computed": [],

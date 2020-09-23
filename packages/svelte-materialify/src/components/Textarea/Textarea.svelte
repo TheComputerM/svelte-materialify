@@ -156,6 +156,7 @@
         on:focus
         on:blur
         on:input
+        on:change
         {...$$restProps} />
     </div>
 

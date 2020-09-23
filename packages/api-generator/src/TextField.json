@@ -322,6 +322,16 @@
       "visibility": "public",
       "description": "",
       "keywords": []
+    },
+    {
+      "name": "change",
+      "parent": "input",
+      "modificators": [],
+      "locations": null,
+      "loc": null,
+      "visibility": "public",
+      "description": "",
+      "keywords": []
     }
   ],
   "slots": [
