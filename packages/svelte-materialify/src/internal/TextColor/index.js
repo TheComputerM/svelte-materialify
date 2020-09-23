@@ -12,6 +12,22 @@ function formatClass(klass) {
   });
 }
 
+function setTextColor(node, text) {
+  if (/^(#|rgb|hsl|currentColor)/.test(text)) {
+    // This is a CSS hex.
+    node.style.color = text;
+    return false;
+  }
+  if (text.startsWith('--')) {
+    // This is a CSS variable.
+    node.style.color = `var(${text})`;
+    return false;
+  }
+  const klass = formatClass(text);
+  node.classList.add(...klass);
+  return klass;
+}
+
 /**
  * @param node {Element}
  * @param text {string|boolean}
@@ -19,18 +35,7 @@ function formatClass(klass) {
 export default (node, text) => {
   let klass;
   if (typeof text === 'string') {
-    if (/^#([0-9A-F]{3}){1,2}$/i.test(text)) {
-      // This is a CSS hex.
-      node.style.color = text;
-      klass = false;
-    } else if (text.startsWith('--')) {
-      // This is a CSS variable.
-      node.style.color = `var(${text})`;
-      klass = false;
-    } else {
-      klass = formatClass(text);
-      node.classList.add(...klass);
-    }
+    klass = setTextColor(node, text);
   }
 
   return {
@@ -42,18 +47,7 @@ export default (node, text) => {
       }
 
       if (typeof newText === 'string') {
-        if (/^#([0-9A-F]{3}){1,2}$/i.test(newText)) {
-          // This is a CSS hex.
-          node.style.color = newText;
-          klass = false;
-        } else if (newText.startsWith('--')) {
-          // This is a CSS variable.
-          node.style.color = `var(${newText})`;
-          klass = false;
-        } else {
-          klass = formatClass(newText);
-          node.classList.add(...klass);
-        }
+        klass = setTextColor(node, newText);
       }
     },
   };
