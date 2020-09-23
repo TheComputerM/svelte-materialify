@@ -1,3 +1,9 @@
+## [0.1.8](https://github.com/TheComputerM/svelte-materialify/compare/v0.1.7...v0.1.8) (2020-09-23)
+
+### Features
+
+- **text-input:** trigger change event from textfield ([73ff714](https://github.com/TheComputerM/svelte-materialify/commit/73ff714bfd503f74c7abdac916ea56d238fec94f))
+
 ## [0.1.7](https://github.com/TheComputerM/svelte-materialify/compare/v0.1.6...v0.1.7) (2020-09-23)
 
 ### Bug Fixes
