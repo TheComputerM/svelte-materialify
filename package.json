@@ -32,7 +32,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,svelte,scss,md}": "prettier -w --plugin-search-dir=.",
+    "*.{js,ts,svelte,scss,md}": "prettier -w --plugin-search-dir=.",
     "*.{js,svelte}": "eslint --ext .svelte,.js --fix",
     "*.scss": "stylelint --syntax scss --fix"
   },
