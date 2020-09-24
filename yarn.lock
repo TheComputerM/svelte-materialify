@@ -8237,7 +8237,12 @@ prelude-ls@~1.1.2:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
   integrity sha1-IZMqVJ9eUv/ZqCf1cOBL5iqX2lQ=
 
-prettier-plugin-svelte@^1.2.1, prettier-plugin-svelte@~1.2.1:
+prettier-plugin-svelte@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-svelte/-/prettier-plugin-svelte-1.3.0.tgz#2193231127a38d38f1a180ba5459d8ee53ab813d"
+  integrity sha512-YGUOXR/WkIVSDEEjtTYd1koaTsPezSVH5b5bLNxo1pWaIvZeT0Nzj21wHTdt2IpHxv8wAgyLr8R/fHbq+wIzww==
+
+prettier-plugin-svelte@~1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/prettier-plugin-svelte/-/prettier-plugin-svelte-1.2.1.tgz#2af472cb7ebf7f8254a132e44cce18ed3bf2ef6f"
   integrity sha512-oULQ6cmqAVA3PmtgagM3139UXJHbLOLQjzGOKkH/pRQbT9vXcWQtbWXEO1fAePWQis5TiDgm2p/PIKh5w1fd/A==
@@ -8973,10 +8978,10 @@ rollup-pluginutils@^2.8.2:
   dependencies:
     estree-walker "^0.6.1"
 
-rollup@^2.28.1:
-  version "2.28.1"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.28.1.tgz#ceedca3cdb013c2fa8f22f958a29c203368159ea"
-  integrity sha512-DOtVoqOZt3+FjPJWLU8hDIvBjUylc9s6IZvy76XklxzcLvAQLtVAG/bbhsMhcWnYxC0TKKcf1QQ/tg29zeID0Q==
+rollup@^2.28.2:
+  version "2.28.2"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.28.2.tgz#599ec4978144a82d8a8ec3d37670a8440cb04e4b"
+  integrity sha512-8txbsFBFLmm9Xdt4ByTOGa9Muonmc8MfNjnGAR8U8scJlF1ZW7AgNZa7aqBXaKtlvnYP/ab++fQIq9dB9NWUbg==
   optionalDependencies:
     fsevents "~2.1.2"
 
@@ -9820,10 +9825,10 @@ supports-hyperlinks@^2.0.0:
     has-flag "^4.0.0"
     supports-color "^7.0.0"
 
-svelte-check@^1.0.48:
-  version "1.0.48"
-  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-1.0.48.tgz#632e21e188ef8a7277b360e052a5ce9315b7da71"
-  integrity sha512-2dnyJUv/5UWT5rkIWvyYpJdwV8aXJtOBSbUpltL2da+STt/wT8WHOWIwTdc2l3JdCKsp0ycOcSE4EdcLOhwtfw==
+svelte-check@^1.0.49:
+  version "1.0.49"
+  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-1.0.49.tgz#54c639fff8b503aa8c0b02ff9e25a4087a01c2a7"
+  integrity sha512-oPreGVlGYPz06bSXHk3v3a2X8DwFnQJZ9Fdwr6sYQONr7qUn0pBUm35VwfuIWWfjgfc2NKV8AHr6kBbHGklX6A==
   dependencies:
     chalk "^4.0.0"
     chokidar "^3.4.1"
@@ -9912,10 +9917,10 @@ svelte@3.25.1:
   resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.25.1.tgz#218def1243fea5a97af6eb60f5e232315bb57ac4"
   integrity sha512-IbrVKTmuR0BvDw4ii8/gBNy8REu7nWTRy9uhUz+Yuae5lIjWgSGwKlWtJGC2Vg95s+UnXPqDu0Kk/sUwe0t2GQ==
 
-svelte@^3.26.0:
-  version "3.26.0"
-  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.26.0.tgz#20ae354e55689ad37d872d2ce3276aeaa9bf305d"
-  integrity sha512-9tclNfffORwbSewfofEHddqXhfhFvFcgJlkF3QhZfMuoh6whPOPY87eHiJRHph4na3VxQoGDyEWAZcNAl1K/2A==
+svelte@^3.27.0:
+  version "3.27.0"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.27.0.tgz#69660e08470f8026ee055f88f98b9a77f243ad13"
+  integrity sha512-yF8+ikXVaLwP32GhGZ6lT69lXBJ1r9KsYq6W5wDCzpPexiWQydLtqV+Bbc6BYTYeUNEW4Zx+BSXIDp/QleGqRw==
 
 sveltedoc-parser@^3.0.4:
   version "3.0.4"
