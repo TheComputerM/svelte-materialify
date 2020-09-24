@@ -13,20 +13,27 @@ const name = pkg.name
 
 const { preprocess } = require('./svelte.config');
 
-export default {
-  input: 'src/index.js',
-  output: [
-    { file: 'dist/index.mjs', sourcemap: true, format: 'es' },
-    { file: 'dist/index.js', sourcemap: true, format: 'umd', name },
-  ],
-  plugins: [
-    svelte({ hydratable: true, preprocess }),
-    resolve(),
-    commonjs(),
-    production && terser(),
-    production && bundleSize(),
-  ],
-  watch: {
-    clearScreen: false,
+const plugins = [
+  resolve(),
+  commonjs(),
+  production && terser(),
+  production && bundleSize(),
+];
+
+const output = (path) => [
+  { file: `${path}/index.mjs`, sourcemap: true, format: 'es' },
+  { file: `${path}/index.js`, sourcemap: true, format: 'umd', name },
+];
+
+export default [
+  {
+    input: 'src/index.js',
+    output: output('dist'),
+    plugins: [svelte({ hydratable: true, preprocess }), ...plugins],
   },
-};
+  {
+    input: 'src/index.js',
+    output: output('dist/ssr'),
+    plugins: [svelte({ generate: 'ssr', hydratable: true, preprocess }), ...plugins],
+  },
+];
