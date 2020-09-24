@@ -1,3 +1,13 @@
+## [0.1.9](https://github.com/TheComputerM/svelte-materialify/compare/v0.1.8...v0.1.9) (2020-09-24)
+
+### Bug Fixes
+
+- **List:** background color to unset ([3b10d84](https://github.com/TheComputerM/svelte-materialify/commit/3b10d84b7bc3d4c955207e05d97e22484a772a4c))
+
+### Features
+
+- generate ssr bundle also ([250ee7a](https://github.com/TheComputerM/svelte-materialify/commit/250ee7ae4f5ece07ac2ee4ef3a2dda4c3b23bdc0))
+
 ## [0.1.8](https://github.com/TheComputerM/svelte-materialify/compare/v0.1.7...v0.1.8) (2020-09-23)
 
 ### Features
