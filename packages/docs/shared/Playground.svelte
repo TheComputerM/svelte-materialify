@@ -16,6 +16,7 @@
 
   export let values;
   export let controls;
+  export let block = false;
   export let variants = false;
   export let cols = 8;
 
@@ -43,6 +44,10 @@
     min-height: 100px;
     height: calc(100% - 44px);
     width: 100%;
+    position: relative;
+  }
+
+  .playground__content:not(.block) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,18 +74,18 @@
           </SlideGroup>
         {/if}
       </div>
-      <div class="playground__content theme--{theme}">
+      <div class="playground__content theme--{theme}" class:block>
         <slot />
       </div>
     </Col>
     <Col md={12 - cols} cols="12">
-      <div class="playground__toolbar justify-space-between pl-1 pr-1">
+      <div class="playground__toolbar justify-space-between pl-2 pr-2">
         <div class="text-h6">Options</div>
         <Button icon on:click={toggleTheme}>
           <Icon class="mdi mdi-invert mdi-invert-colors" />
         </Button>
       </div>
-      <div class="pa-1">
+      <div class="pa-2">
         {#each Object.keys(controls) as label}
           <div class="mb-2" />
           {#if controls[label].type === 'switch'}
@@ -90,7 +95,10 @@
           {:else if controls[label].type === 'slider'}
             <Slider bind:value={values[label]}>{label}</Slider>
           {:else if controls[label].type === 'select'}
-            <Select bind:value={values[label]} items={controls[label].items}>
+            <Select
+              mandatory={controls[label].mandatory}
+              bind:value={values[label]}
+              items={controls[label].items}>
               {label}
               <div slot="item" let:item>
                 <ListItem value={item}>{item}</ListItem>

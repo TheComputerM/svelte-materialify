@@ -26,28 +26,23 @@ related:
 
 The `Menu` component shows a menu at the position of the element used to activate it.
 
-
 ## API
 
 <API {doc} />
-
 
 ## Usage
 
 Remember to put the element that activates the menu in the activator slot.
 <Example name="basic" />
 
-
 ## Examples
 
 Below is a collection of simple to complex examples.
-
 
 ### Absolute Position
 
 Menus can also be placed absolutely on top of the activator element using the `absolute` prop. Try clicking anywhere on the image.
 <Example name="absolute" />
-
 
 ### Hover
 
@@ -59,12 +54,10 @@ Menus can be accessed using hover instead of clicking with the `hover` prop.
 Menu can be offset by the **X** and **Y** axis to make the activator visible.
 <Example name="offsets" />
 
-
 ### Close on content click
 
 You can choose the close or not close the menu when the content inside it has been clicked.
 <Example name="contentClick" />
-
 
 ### Transitions
 

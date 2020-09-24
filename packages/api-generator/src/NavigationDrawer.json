@@ -126,7 +126,7 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
-      "name": "noBorder",
+      "name": "borderless",
       "kind": "let",
       "static": false,
       "readonly": false,

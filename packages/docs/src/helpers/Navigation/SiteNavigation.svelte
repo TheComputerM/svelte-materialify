@@ -8,7 +8,12 @@
   import RightNavigationDrawer from './RightNavigationDrawer.svelte';
 </script>
 
-<NavigationDrawer active={navigation || sidenav} style="height:100vh;" fixed clipped>
+<NavigationDrawer
+  active={navigation || sidenav}
+  style="height:100vh;"
+  fixed
+  clipped
+  borderless>
   <br />
   <div class="d-flex justify-center">
     <Button outlined rounded class="blue-text" size="small">Become A Sponsor</Button>
@@ -30,7 +35,7 @@
     right
     fixed
     clipped
-    noBorder>
+    borderless>
     <RightNavigationDrawer />
   </NavigationDrawer>
 {/if}

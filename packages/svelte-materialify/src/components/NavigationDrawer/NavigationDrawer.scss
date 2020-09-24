@@ -43,7 +43,7 @@
 
   &.absolute {
     position: absolute;
-    z-index: 5;
+    z-index: 2;
   }
 
   &.right {
@@ -72,6 +72,7 @@
   }
 
   &.mini {
+    width: var(--s-nav-min-width);
     overflow: hidden;
 
     .s-list-item {
