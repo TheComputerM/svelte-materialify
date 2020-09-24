@@ -5,7 +5,9 @@
 <Slider>
   <span slot="prepend">
     <Icon class="mdi mdi-plus" />
-  </span> Icon <span slot="append">
+  </span>
+  Icon
+  <span slot="append">
     <Icon class="mdi mdi-minus" />
   </span>
 </Slider>

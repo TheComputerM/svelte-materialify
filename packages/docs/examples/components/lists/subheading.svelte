@@ -22,17 +22,23 @@
       <ListItem>
         <span slot="prepend">
           <Checkbox checked={values.includes(0)} />
-        </span> Notifications <span slot="subtitle"> Allow Notifications </span>
+        </span>
+        Notifications
+        <span slot="subtitle"> Allow Notifications </span>
       </ListItem>
       <ListItem>
         <span slot="prepend">
           <Checkbox checked={values.includes(1)} />
-        </span> Sound <span slot="subtitle"> Hangouts sound. </span>
+        </span>
+        Sound
+        <span slot="subtitle"> Hangouts sound. </span>
       </ListItem>
       <ListItem>
         <span slot="prepend">
           <Checkbox checked={values.includes(2)} />
-        </span> Invites <span slot="subtitle"> Notify when invited. </span>
+        </span>
+        Invites
+        <span slot="subtitle"> Notify when invited. </span>
       </ListItem>
     </ListItemGroup>
   </List>

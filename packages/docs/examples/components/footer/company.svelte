@@ -11,6 +11,7 @@
     {/each}
   </div>
   <div class="indigo lighten-1 pa-2 text-center" style="width:100%">
-    2020 - <b>Svelte Materialify</b>
+    2020 -
+    <b>Svelte Materialify</b>
   </div>
 </Footer>

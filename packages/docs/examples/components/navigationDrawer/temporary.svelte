@@ -25,17 +25,20 @@
       <ListItem>
         <span slot="prepend">
           <Icon class="mdi mdi-view-dashboard" />
-        </span> Dashboard
+        </span>
+        Dashboard
       </ListItem>
       <ListItem>
         <span slot="prepend">
           <Icon class="mdi mdi-account-box" />
-        </span> Account
+        </span>
+        Account
       </ListItem>
       <ListItem>
         <span slot="prepend">
           <Icon class="mdi mdi-gavel" />
-        </span> Admin
+        </span>
+        Admin
       </ListItem>
     </List>
   </NavigationDrawer>

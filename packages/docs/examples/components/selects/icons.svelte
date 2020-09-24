@@ -14,12 +14,14 @@
     <Select {items}>
       <span slot="prepend">
         <Icon class="mdi mdi-home" />
-      </span> Regular
+      </span>
+      Regular
     </Select>
   </Col>
   <Col>
     <Select {items}>
-      Regular <span slot="append">
+      Regular
+      <span slot="append">
         <Icon class="mdi mdi-home" />
       </span>
     </Select>

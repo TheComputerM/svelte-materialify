@@ -12,7 +12,8 @@
   <div class="pa-2">
     {#each Array(5) as _, i}
       <TabContent>
-        Item Content {i + 1}
+        Item Content
+        {i + 1}
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan, diam et
           elementum gravida, arcu mi fermentum nibh, vel dapibus ligula orci non est.

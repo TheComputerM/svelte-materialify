@@ -11,7 +11,9 @@
 
   {#each Array(20) as _, i}
     <TabContent>
-      <br /> Item Content {i + 1}
+      <br />
+      Item Content
+      {i + 1}
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan, diam et
         elementum gravida, arcu mi fermentum nibh, vel dapibus ligula orci non est. Morbi

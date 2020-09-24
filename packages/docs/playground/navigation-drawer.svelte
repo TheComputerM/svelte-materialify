@@ -32,24 +32,29 @@
       <ListItem class="mt-2">
         <span slot="prepend" class="ml-n2">
           <Avatar size={40}><img src="//picsum.photos/50" alt="profile" /></Avatar>
-        </span> Application <span slot="subtitle"> Subtitle </span>
+        </span>
+        Application
+        <span slot="subtitle"> Subtitle </span>
       </ListItem>
       <Divider />
       <List dense nav>
         <ListItem>
           <span slot="prepend">
             <Icon class="mdi mdi-view-dashboard" />
-          </span> Dashboard
+          </span>
+          Dashboard
         </ListItem>
         <ListItem>
           <span slot="prepend">
             <Icon class="mdi mdi-account-box" />
-          </span> Account
+          </span>
+          Account
         </ListItem>
         <ListItem>
           <span slot="prepend">
             <Icon class="mdi mdi-gavel" />
-          </span> Admin
+          </span>
+          Admin
         </ListItem>
       </List>
     </NavigationDrawer>

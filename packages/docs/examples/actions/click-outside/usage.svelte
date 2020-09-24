@@ -30,5 +30,6 @@
   use:ClickOutside
   on:clickOutside={clickOutside}
   on:click={click}>
-  Click {active ? 'Outside' : 'Me'}
+  Click
+  {active ? 'Outside' : 'Me'}
 </div>

@@ -9,17 +9,20 @@
       <ListItem>
         <span slot="prepend">
           <Icon class="mdi mdi-home" />
-        </span> Item 1
+        </span>
+        Item 1
       </ListItem>
       <ListItem>
         <span slot="prepend">
           <Icon class="mdi mdi-account" />
-        </span> Item 2
+        </span>
+        Item 2
       </ListItem>
       <ListItem>
         <span slot="prepend">
           <Icon class="mdi mdi-flag" />
-        </span> Item 3
+        </span>
+        Item 3
       </ListItem>
     </ListItemGroup>
   </List>

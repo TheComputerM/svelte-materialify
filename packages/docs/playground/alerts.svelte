@@ -45,7 +45,8 @@
       {#if values.icon}
         <Icon class="mdi mdi-home" />
       {/if}
-    </span> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis itaque excepturi
+    </span>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis itaque excepturi
     suscipit possimus blanditiis, illum libero sequi a deleniti sapiente.
   </Alert>
 </Playground>

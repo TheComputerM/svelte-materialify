@@ -7,7 +7,8 @@
     <ListItem>List Item</ListItem>
     <ListItem>List Item <span slot="subtitle"> With a subtitle </span></ListItem>
     <ListItem>
-      List Item (icon) <span slot="append">
+      List Item (icon)
+      <span slot="append">
         <Icon class="mdi mdi-home" />
       </span>
       <span slot="subtitle">

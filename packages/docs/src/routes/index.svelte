@@ -226,8 +226,8 @@
     </div>
     <div class="mt-2">
       <span class="text-body-2">
-        Released under the <a href="https://opensource.org/licenses/MIT" rel="noopener"> MIT
-          License </a>
+        Released under the
+        <a href="https://opensource.org/licenses/MIT" rel="noopener"> MIT License </a>
       </span>
       <p class="mt-1">Copyright © 2020 Mudit Somani</p>
     </div>
