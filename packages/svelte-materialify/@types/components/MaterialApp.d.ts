@@ -1,9 +1,9 @@
-import { SvelteComponent } from 'svelte';
+import { LocalSvelteComponent } from '../shared';
 
-declare class MaterialApp extends SvelteComponent {
-  $$prop_def: {
-    theme?: string;
-  } & Record<string, any>;
+interface MaterialAppProps {
+  theme?: string;
 }
+
+declare class MaterialApp extends LocalSvelteComponent<MaterialAppProps> {}
 
 export default MaterialApp;

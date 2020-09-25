@@ -1,18 +1,17 @@
-import { SvelteComponent } from 'svelte';
+import { LocalSvelteComponent } from '../shared';
 
-declare class AppBar extends SvelteComponent {
-  $$prop_def: {
-    class?: string;
-    height?: string;
-    tile?: boolean;
-    flat?: boolean;
-    dense?: boolean;
-    prominent?: boolean;
-    fixed?: boolean;
-    absolute?: boolean;
-    collapsed?: boolean;
-    style?: string;
-  } & Record<string, any>;
+interface AppBarProps {
+  height?: string;
+  tile?: boolean;
+  flat?: boolean;
+  dense?: boolean;
+  prominent?: boolean;
+  fixed?: boolean;
+  absolute?: boolean;
+  collapsed?: boolean;
+  style?: string;
 }
+
+declare class AppBar extends LocalSvelteComponent<AppBarProps> {}
 
 export default AppBar;

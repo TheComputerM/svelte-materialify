@@ -1,16 +1,15 @@
-import { SvelteComponent } from 'svelte';
+import { LocalSvelteComponent } from '../shared';
 
-declare class Icon extends SvelteComponent {
-  $$prop_def: {
-    class?: string;
-    size?: string;
-    rotate?: number;
-    spin?: boolean;
-    disabled?: boolean;
-    path?: any;
-    label?: any;
-    style?: string;
-  } & Record<string, any>;
+interface IconProps {
+  size?: string;
+  rotate?: number;
+  spin?: boolean;
+  disabled?: boolean;
+  path?: any;
+  label?: any;
+  style?: string;
 }
+
+declare class Icon extends LocalSvelteComponent<IconProps> {}
 
 export default Icon;

@@ -1,16 +1,15 @@
-import { SvelteComponent } from 'svelte';
+import { LocalSvelteComponent } from '../../shared';
 
-declare class List extends SvelteComponent {
-  $$prop_def: {
-    class?: string;
-    dense?: boolean;
-    disabled?: boolean;
-    flat?: boolean;
-    rounded?: boolean;
-    nav?: boolean;
-    outlined?: boolean;
-    style?: string;
-  } & Record<string, any>;
+interface ListProps {
+  dense?: boolean;
+  disabled?: boolean;
+  flat?: boolean;
+  rounded?: boolean;
+  nav?: boolean;
+  outlined?: boolean;
+  style?: string;
 }
+
+declare class List extends LocalSvelteComponent<ListProps> {}
 
 export default List;

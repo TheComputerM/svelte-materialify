@@ -1,16 +1,15 @@
-import { SvelteComponent } from 'svelte';
+import { LocalSvelteComponent } from '../shared';
 
-declare class Overlay extends SvelteComponent {
-  $$prop_def: {
-    class?: string;
-    active?: boolean;
-    opacity?: number;
-    color?: string;
-    index?: number;
-    absolute?: boolean;
-    fadeOptions?: any;
-    style?: string;
-  } & Record<string, any>;
+interface OverlayProps {
+  active?: boolean;
+  opacity?: number;
+  color?: string;
+  index?: number;
+  absolute?: boolean;
+  fadeOptions?: any;
+  style?: string;
 }
+
+declare class Overlay extends LocalSvelteComponent<OverlayProps> {}
 
 export default Overlay;

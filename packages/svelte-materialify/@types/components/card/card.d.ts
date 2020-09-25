@@ -1,18 +1,17 @@
-import { SvelteComponent } from 'svelte';
+import { LocalSvelteComponent } from '../../shared';
 
-declare class Card extends SvelteComponent {
-  $$prop_def: {
-    class?: string;
-    flat?: boolean;
-    tile?: boolean;
-    outlined?: boolean;
-    raised?: boolean;
-    shaped?: boolean;
-    hover?: boolean;
-    link?: boolean;
-    disabled?: boolean;
-    style?: string;
-  } & Record<string, any>;
+interface CardProps {
+  flat?: boolean;
+  tile?: boolean;
+  outlined?: boolean;
+  raised?: boolean;
+  shaped?: boolean;
+  hover?: boolean;
+  link?: boolean;
+  disabled?: boolean;
+  style?: string;
 }
+
+declare class Card extends LocalSvelteComponent<CardProps> {}
 
 export default Card;

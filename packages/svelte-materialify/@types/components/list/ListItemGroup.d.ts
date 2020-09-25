@@ -1,14 +1,13 @@
-import { SvelteComponent } from 'svelte';
+import { LocalSvelteComponent } from '../../shared';
 
-declare class ListItemGroup extends SvelteComponent {
-  $$prop_def: {
-    class?: string;
-    value?: any;
-    multiple?: boolean;
-    mandatory?: boolean;
-    max?: number;
-    style?: string;
-  } & Record<string, any>;
+interface ListItemGroupProps {
+  value?: any;
+  multiple?: boolean;
+  mandatory?: boolean;
+  max?: number;
+  style?: string;
 }
+
+declare class ListItemGroup extends LocalSvelteComponent<ListItemGroupProps> {}
 
 export default ListItemGroup;
