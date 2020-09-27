@@ -1,8 +1,9 @@
 <script context="module">
   import CodeBlock from './CodeBlock.svelte';
-  import { Row } from 'svelte-materialify/src';
-  import ReadyForMore from './ReadyForMore.svelte';
   import { markdown } from '../stores';
+  import Meta from '@shared/Meta.svelte';
+  import ReadyForMore from './ReadyForMore.svelte';
+  import { Row, Divider } from 'svelte-materialify/src';
 
   export { CodeBlock };
 </script>
@@ -37,6 +38,7 @@
   .markdown-container h1 + p {
     font-size: 1.25rem;
     font-weight: 300;
+    margin-bottom: 2rem;
   }
   .markdown-container .heading {
     position: relative;
@@ -66,32 +68,33 @@
   }
 </style>
 
-<svelte:head>
-  <title>{title} | Svelte Materialify</title>
-</svelte:head>
+<Meta title={`${title} | Svelte Materialify`} />
 
 <section class="markdown-container pa-4 pa-sm-6 pa-md-8">
   <slot />
   {#if related}
     <section>
-      <h2 id="ready-for-more" class="heading text-h4 mb-3">
-        <a href="#ready-for-more" aria-hidden="true"> <i class="mdi mdi-pound" /> </a>
-        Ready For More?
-      </h2>
+      <h2 class="text-h4 mb-3">Ready For More?</h2>
+      <p>
+        Continue to learn more about svelte materialify with content selected by the
+        creator.
+      </p>
       <Row class="justify-space-between">
         {#each related as item}
-          <ReadyForMore href={Object.values(item)[0]} name={Object.keys(item)[0]} />
+          <ReadyForMore item={Object.entries(item)} />
         {/each}
       </Row>
     </section>
   {/if}
-  <div class="mt-16 d-flex justify-space-between blue-grey-text text-darken-1">
+  <br /><br />
+  <Divider />
+  <div class="mt-8 d-flex justify-space-between blue-grey-text text-darken-1">
     <span>
       <b>Edit This Page on</b>
       <a
         class="app-link"
         rel="noopener"
-        href="https://github.com/TheComputerM/svelte-materialify/tree/master/site/src/routes{$page.path}">
+        href="https://github.com/TheComputerM/svelte-materialify/tree/master/site/src/routes{$page.path}.svx">
         GitHub
       </a>
     </span>

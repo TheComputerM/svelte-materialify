@@ -14,6 +14,7 @@
     Table,
     Footer,
   } from 'svelte-materialify/src';
+  import Meta from '@shared/Meta.svelte';
 </script>
 
 <style lang="scss">
@@ -46,9 +47,7 @@
   }
 </style>
 
-<svelte:head>
-  <title>Svelte Material Design Component Framework - Svelte Materialify</title>
-</svelte:head>
+<Meta title="Svelte Material Design Component Framework - Svelte Materialify" />
 
 <div class="theme--dark" id="home">
   <Container class="pt-6 pb-6">
