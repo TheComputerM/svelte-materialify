@@ -15,7 +15,7 @@ related:
 </script>
 
 <script>
-  import { API, Example, setExamples } from '@shared';
+  import { API, Example, setExamples, Alert } from '@shared';
   import { NavigationDrawer as doc } from 'svelte-materialify-api';
   import * as Examples from '@examples/components/navigationDrawer';
   import Playground from '@playground/navigation-drawer.svelte';
@@ -26,6 +26,10 @@ related:
 # Navigation Drawers
 
 The `NavigationDrawer` component is what your users will utilize to navigate through the application. The navigation-drawer is pre-configured to work with or without any router right out the box. Within your application you will generally place the NavigationDrawer as a direct child of MaterialApp.
+
+<Alert type="warning">
+It is recommended that you do not toggle the navigation drawer with an <code>#if</code> block as if the navigation contains a large about of data, it is better for it to be always loaded in the DOM. Use the active prop instead.
+</Alert>
 
 ## Playground
 

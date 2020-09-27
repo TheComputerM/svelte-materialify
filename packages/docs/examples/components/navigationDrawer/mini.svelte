@@ -26,7 +26,7 @@
       Mudit Somani
     </ListItem>
     <Divider />
-    <List dense>
+    <List dense nav>
       <ListItem>
         <span slot="prepend">
           <Icon class="mdi mdi-home-city" />
