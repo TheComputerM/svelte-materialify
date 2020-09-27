@@ -14,7 +14,7 @@
   const icon = icons[type];
 </script>
 
-<Alert class="{type}-text" border="left" coloredBorder>
+<Alert class="{type}-text" border="left" text>
   <div slot="icon">
     <Icon class="mdi mdi-{icon}" />
   </div>
