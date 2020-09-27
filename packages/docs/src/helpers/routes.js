@@ -1,17 +1,9 @@
 import { all as API } from 'svelte-materialify-api';
-import {
-  mdiSpeedometer,
-  mdiPalette,
-  mdiViewDashboard,
-  mdiFunction,
-  mdiBeaker,
-} from '@mdi/js';
 
 export default [
   {
     text: 'Getting Started',
-    icon: mdiSpeedometer,
-    open: false,
+    icon: 'speedometer',
     items: [
       { text: 'Installation', href: '/getting-started/installation/' },
       { text: 'Usage', href: '/getting-started/usage/' },
@@ -20,8 +12,7 @@ export default [
   },
   {
     text: 'Styles',
-    icon: mdiPalette,
-    open: false,
+    icon: 'palette',
     items: [
       { text: 'CSS Reset', href: '/styles/reset/' },
       { text: 'Content', href: '/styles/content/' },
@@ -36,8 +27,7 @@ export default [
   },
   {
     text: 'Components',
-    icon: mdiViewDashboard,
-    open: false,
+    icon: 'view-dashboard',
     items: [
       { text: 'Material App', href: '/components/material-app/' },
       { text: 'Alerts', href: '/components/alerts/' },
@@ -48,7 +38,6 @@ export default [
       { text: 'Badges', href: '/components/badges/' },
       {
         text: 'Groups',
-        open: false,
         items: [
           { text: 'Button Groups', href: '/components/button-groups/' },
           { text: 'Slide Groups', href: '/components/slide-groups/' },
@@ -66,7 +55,6 @@ export default [
       { text: 'Footer', href: '/components/footer/' },
       {
         text: 'Forms',
-        open: false,
         items: [
           { text: 'Text Field', href: '/components/text-field/' },
           { text: 'Textarea', href: '/components/textarea/' },
@@ -84,7 +72,6 @@ export default [
       { text: 'Overlay', href: '/components/overlay/' },
       {
         text: 'Progress',
-        open: false,
         items: [
           { text: 'Circular', href: '/components/progress-circular/' },
           { text: 'Linear', href: '/components/progress-linear/' },
@@ -96,8 +83,7 @@ export default [
   },
   {
     text: 'Actions',
-    icon: mdiFunction,
-    open: false,
+    icon: 'function',
     items: [
       { text: 'Ripple', href: '/actions/ripple/' },
       { text: 'Click outside', href: '/actions/click-outside/' },
@@ -108,8 +94,7 @@ export default [
   },
   {
     text: 'API',
-    icon: mdiBeaker,
-    open: false,
+    icon: 'beaker',
     items: API.names.map((i) => ({ text: i, href: `/api/${i}/` })),
   },
 ];

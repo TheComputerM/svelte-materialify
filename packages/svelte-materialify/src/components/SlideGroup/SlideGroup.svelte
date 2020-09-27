@@ -86,8 +86,8 @@
   {/if}
   <div
     class="s-slide-group__wrapper"
-    on:touchstart={touchstart}
-    on:touchmove={touchmove}
+    on:touchstart|passive={touchstart}
+    on:touchmove|passive={touchmove}
     bind:clientWidth={wrapperWidth}>
     <div
       class="s-slide-group__content"

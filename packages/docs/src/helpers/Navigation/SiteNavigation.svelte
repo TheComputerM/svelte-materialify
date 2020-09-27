@@ -3,6 +3,7 @@
   export let sidenav;
 
   import { Button, NavigationDrawer, List, Overlay } from 'svelte-materialify/src/';
+  import routes from '../routes';
 
   import LeftNavigationDrawer from './LeftNavigationDrawer.svelte';
   import RightNavigationDrawer from './RightNavigationDrawer.svelte';
@@ -20,7 +21,9 @@
   </div>
   <br />
   <List nav dense>
-    <LeftNavigationDrawer />
+    {#each routes as route}
+      <LeftNavigationDrawer item={route} />
+    {/each}
   </List>
 </NavigationDrawer>
 <Overlay

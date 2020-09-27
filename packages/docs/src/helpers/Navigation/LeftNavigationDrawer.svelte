@@ -1,63 +1,44 @@
 <script>
-  import { mdiChevronDown } from '@mdi/js';
-  import { ListGroup, ListItem, Icon } from 'svelte-materialify/src';
   import { stores } from '@sapper/app';
-  import { onDestroy } from 'svelte';
+  import { ListGroup, ListItem, Icon } from 'svelte-materialify/src';
 
-  import routes from '../routes';
-
-  let activeLink;
   const { page } = stores();
-  export let items = routes;
+  export let item;
   export let depth = 0;
-  export let visible = true;
-  let offset = `${(depth + 1) * 28}px`;
-  const escaped = (text = '') => text.replace(/\//g, '');
+  const offset = 1.5 ** depth * 54;
 
-  const unsubscribe = page.subscribe(({ path }) => {
-    activeLink = escaped(path);
-  });
-
-  onDestroy(unsubscribe);
-
-  function openCollapsedNavigation(parent) {
-    return !!parent.items.find((child) => {
-      if (child.items) openCollapsedNavigation(child);
-      if (escaped(child.href) === activeLink || child.open) {
-        parent.open = true;
-        return true;
-      }
-      return false;
+  function expand(parent) {
+    return parent.some((child) => {
+      if (child.items) return expand(child.items);
+      return $page.path === child.href;
     });
   }
 
-  if (depth === 0) {
-    offset = false;
-    items.find((i) => openCollapsedNavigation(i));
+  export let expanded = expand(item.items);
+
+  function toggle() {
+    expanded = !expanded;
   }
 </script>
 
-<ListGroup eager active={visible} {offset}>
-  {#each items as item}
-    {#if item.items}
-      <ListItem dense on:click={() => (item.open = !item.open)}>
-        <div slot="prepend">
-          {#if item.icon}
-            <Icon path={item.icon} />
-          {/if}
-        </div>
-        {item.text}
-        <div slot="append">
-          <Icon path={mdiChevronDown} rotate={item.open ? 180 : 0} class="chevron" />
-        </div>
-      </ListItem>
-
-      <svelte:self items={item.items} depth={depth + 1} bind:visible={item.open} />
+<ListItem dense on:click={toggle}>
+  <div slot="prepend">
+    {#if item.icon}
+      <Icon class="mdi mdi-{item.icon}" />
+    {/if}
+  </div>
+  {item.text}
+  <div slot="append">
+    <Icon class="mdi mdi-chevron-down" rotate={expanded ? 180 : 0} />
+  </div>
+</ListItem>
+<ListGroup {offset} active={expanded}>
+  {#each item.items as children}
+    {#if children.items}
+      <svelte:self item={children} depth={depth + 1} />
     {:else}
-      <a href={item.href} rel="prefetch">
-        <ListItem active={item.href.replace(/\//g, '') === activeLink}>
-          {item.text}
-        </ListItem>
+      <a href={children.href} rel="prefetch">
+        <ListItem active={children.href === $page.path}>{children.text}</ListItem>
       </a>
     {/if}
   {/each}
