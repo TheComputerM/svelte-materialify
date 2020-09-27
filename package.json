@@ -10,8 +10,8 @@
     ]
   },
   "scripts": {
-    "docs": "lerna run --scope docs export",
-    "dev": "lerna run --stream --scope docs dev",
+    "docs": "lerna run docs",
+    "dev": "lerna run --stream dev",
     "release": "lerna publish",
     "start": "lerna run --scope svelte-materialify start",
     "api": "lerna run --scope svelte-materialify-api start",
