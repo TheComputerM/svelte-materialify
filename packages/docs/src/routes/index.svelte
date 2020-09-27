@@ -54,7 +54,7 @@
   <Container class="pt-6 pb-6">
     <Row>
       <Col class="d-flex justify-center flex-column" md="7">
-        <h1 class="mb-4">Svelte <br /> Materialify</h1>
+        <h1 class="mb-4 text-h2 text-md-h1">Svelte <br /> Materialify</h1>
         <p class="mb-3 title grey-text text-lighten-4">
           Svelte Materialify is a Svelte UI Library with beautifully handcrafted Material
           Components. No design skills required — everything you need to create amazing

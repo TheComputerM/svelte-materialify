@@ -26,7 +26,9 @@
       text-transform: map-get($value_map, 'text-transform');
     }
   }
+}
 
+@each $heading, $value_map in $headings {
   @include create_breakpoints() using ($screen_size) {
     .text-#{$screen_size}-#{$heading} {
       font-size: map-get($value_map, 'size');
