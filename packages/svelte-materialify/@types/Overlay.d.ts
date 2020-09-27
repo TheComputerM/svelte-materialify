@@ -1,4 +1,4 @@
-import { LocalSvelteComponent } from '../shared';
+import { SvelteComponent } from './shared';
 
 interface OverlayProps {
   active?: boolean;
@@ -10,6 +10,6 @@ interface OverlayProps {
   style?: string;
 }
 
-declare class Overlay extends LocalSvelteComponent<OverlayProps> {}
+declare class Overlay extends SvelteComponent<OverlayProps> {}
 
 export default Overlay;

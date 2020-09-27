@@ -1,4 +1,4 @@
-import { LocalSvelteComponent } from '../shared';
+import { SvelteComponent } from './shared';
 
 interface TextFieldProps {
   // Value of the text input.
@@ -27,15 +27,9 @@ interface TextFieldProps {
   placeholder?: string;
   // Hint text.
   hint?: string;
-  /**
-   * Creates counter for input length.
-   * @type {number}
-   */
+  // Creates counter for input length.
   counter?: number;
-  /**
-   * An array of functions which take input value as arguement and return error message.
-   * @type {Array}
-   */
+  // An array of functions which take input value as arguement and return error message.
   rules: ((value) => string | false)[];
   // Delays validation till blur.
   validateOnBlur: boolean;
@@ -45,6 +39,6 @@ interface TextFieldProps {
   id?: string;
 }
 
-declare class TextField extends LocalSvelteComponent<TextFieldProps> {}
+declare class TextField extends SvelteComponent<TextFieldProps> {}
 
 export default TextField;

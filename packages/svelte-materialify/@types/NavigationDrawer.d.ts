@@ -1,4 +1,4 @@
-import { LocalSvelteComponent } from '../shared';
+import { SvelteComponent } from './shared';
 
 interface NavigationDrawerProps {
   width?: string;
@@ -16,6 +16,6 @@ interface NavigationDrawerProps {
   style?: string;
 }
 
-declare class NavigationDrawer extends LocalSvelteComponent<NavigationDrawerProps> {}
+declare class NavigationDrawer extends SvelteComponent<NavigationDrawerProps> {}
 
 export default NavigationDrawer;

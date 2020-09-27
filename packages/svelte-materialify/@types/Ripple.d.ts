@@ -1,4 +1,4 @@
-interface RippleOptions {
+export interface RippleOptions {
   color?: string;
   class?: string;
   opacity?: number;

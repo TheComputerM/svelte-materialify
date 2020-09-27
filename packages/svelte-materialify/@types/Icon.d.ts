@@ -1,4 +1,4 @@
-import { LocalSvelteComponent } from '../shared';
+import { SvelteComponent } from './shared';
 
 interface IconProps {
   size?: string;
@@ -10,6 +10,6 @@ interface IconProps {
   style?: string;
 }
 
-declare class Icon extends LocalSvelteComponent<IconProps> {}
+declare class Icon extends SvelteComponent<IconProps> {}
 
 export default Icon;

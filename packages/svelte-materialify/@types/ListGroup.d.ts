@@ -1,4 +1,5 @@
-import { LocalSvelteComponent } from '../../shared';
+import { SvelteComponent } from './shared';
+import { RippleOptions } from './Ripple';
 
 interface ListGroupProps {
   active?: boolean;
@@ -7,10 +8,10 @@ interface ListGroupProps {
   transitionOpts?: Record<string, any>;
   offset?: boolean;
   disabled?: boolean;
-  ripple?: any;
+  ripple?: RippleOptions;
   style?: string;
 }
 
-declare class ListGroup extends LocalSvelteComponent<ListGroupProps> {}
+declare class ListGroup extends SvelteComponent<ListGroupProps> {}
 
 export default ListGroup;

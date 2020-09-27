@@ -7,7 +7,7 @@ type LocalSvelteProps = {
  * Local svelte class for adding typescript definitions for svelte components
  *
  */
-export declare class LocalSvelteComponent<Props = {}> {
+export declare class SvelteComponent<Props = {}> {
   constructor(props: Props & LocalSvelteProps);
   $on<T = any>(event: string, callback: (event: CustomEvent<T>) => void): () => void;
   $$prop_def: Props & LocalSvelteProps;

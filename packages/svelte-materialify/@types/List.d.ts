@@ -1,4 +1,4 @@
-import { LocalSvelteComponent } from '../../shared';
+import { SvelteComponent } from './shared';
 
 interface ListProps {
   dense?: boolean;
@@ -10,6 +10,6 @@ interface ListProps {
   style?: string;
 }
 
-declare class List extends LocalSvelteComponent<ListProps> {}
+declare class List extends SvelteComponent<ListProps> {}
 
 export default List;

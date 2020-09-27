@@ -1,4 +1,4 @@
-import { LocalSvelteComponent } from '../../shared';
+import { SvelteComponent } from './shared';
 
 interface CardProps {
   flat?: boolean;
@@ -12,6 +12,6 @@ interface CardProps {
   style?: string;
 }
 
-declare class Card extends LocalSvelteComponent<CardProps> {}
+declare class Card extends SvelteComponent<CardProps> {}
 
 export default Card;

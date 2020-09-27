@@ -1,4 +1,5 @@
-import { LocalSvelteComponent } from '../../shared';
+import { SvelteComponent } from './shared';
+import { RippleOptions } from './Ripple';
 
 interface ListItemProps {
   class?: string;
@@ -8,9 +9,10 @@ interface ListItemProps {
   dense?: boolean;
   disabled?: boolean;
   selectable?: boolean;
-  ripple?: any;
+  ripple?: RippleOptions;
+  style?: string;
 }
 
-declare class ListItem extends LocalSvelteComponent<ListItemProps> {}
+declare class ListItem extends SvelteComponent<ListItemProps> {}
 
 export default ListItem;

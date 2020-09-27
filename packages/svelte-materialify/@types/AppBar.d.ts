@@ -1,4 +1,4 @@
-import { LocalSvelteComponent } from '../shared';
+import { SvelteComponent } from './shared';
 
 interface AppBarProps {
   height?: string;
@@ -12,6 +12,6 @@ interface AppBarProps {
   style?: string;
 }
 
-declare class AppBar extends LocalSvelteComponent<AppBarProps> {}
+declare class AppBar extends SvelteComponent<AppBarProps> {}
 
 export default AppBar;

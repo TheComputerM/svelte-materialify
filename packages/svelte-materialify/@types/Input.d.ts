@@ -1,4 +1,4 @@
-import { LocalSvelteComponent } from '../shared';
+import { SvelteComponent } from './shared';
 
 interface InputProps {
   value?: any;
@@ -13,6 +13,6 @@ interface InputProps {
   error?: boolean;
 }
 
-declare class Input extends LocalSvelteComponent<InputProps> {}
+declare class Input extends SvelteComponent<InputProps> {}
 
 export default Input;

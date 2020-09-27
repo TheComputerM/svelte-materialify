@@ -1,4 +1,4 @@
-import { LocalSvelteComponent } from '../../shared';
+import { SvelteComponent } from './shared';
 
 interface ListItemGroupProps {
   value?: any;
@@ -8,6 +8,6 @@ interface ListItemGroupProps {
   style?: string;
 }
 
-declare class ListItemGroup extends LocalSvelteComponent<ListItemGroupProps> {}
+declare class ListItemGroup extends SvelteComponent<ListItemGroupProps> {}
 
 export default ListItemGroup;

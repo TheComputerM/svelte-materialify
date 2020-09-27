@@ -1,4 +1,5 @@
-import { LocalSvelteComponent } from '../shared';
+import { SvelteComponent } from './shared';
+import { RippleOptions } from './Ripple';
 
 interface ButtonProps {
   fab?: boolean;
@@ -14,10 +15,10 @@ interface ButtonProps {
   active?: boolean;
   activeClass?: string;
   type?: 'button' | 'reset' | 'submit';
-  ripple?: any;
+  ripple?: RippleOptions;
   style?: string;
 }
 
-declare class Button extends LocalSvelteComponent<ButtonProps> {}
+declare class Button extends SvelteComponent<ButtonProps> {}
 
 export default Button;
