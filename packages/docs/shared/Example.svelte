@@ -41,6 +41,8 @@
   }
 </style>
 
+<svelte:options immutable={true} />
+
 <div class="example">
   <div class="example-toolbar text-right pa-1">
     {#if colorInvertable}

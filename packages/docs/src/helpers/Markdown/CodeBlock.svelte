@@ -61,6 +61,8 @@
   }
 </style>
 
+<svelte:options immutable={true} />
+
 <div class="code-block" use:copy>
   <slot />
   <Button fab depressed size="small" style="position:absolute" aria-label="Copy">

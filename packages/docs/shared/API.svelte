@@ -12,6 +12,8 @@
   }
 </script>
 
+<svelte:options immutable={true} />
+
 <section>
   <h3 class="heading text-h5 mb-2" id="props">
     <a href="#props" tabindex="-1" aria-hidden="true"> <i class="mdi mdi-pound" /> </a>

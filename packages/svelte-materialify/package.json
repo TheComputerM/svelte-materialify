@@ -6,7 +6,7 @@
   "main": "dist/index.js",
   "types": "@types/index.d.ts",
   "scripts": {
-    "dev": "concurrently \"yarn:watch:*\" -k",
+    "watch": "concurrently \"yarn:watch:*\" -k",
     "start": "concurrently \"yarn:build\" \"yarn:css\"",
     "build": "rollup -c",
     "watch:build": "rollup -c -w",

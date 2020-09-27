@@ -26,6 +26,8 @@
   }
 </script>
 
+<svelte:options immutable={true} />
+
 <Col cols="12" md="4">
   <a {href}>
     <ListItem class="grey {$theme === 'light' ? 'lighten-5' : 'darken-3'}">

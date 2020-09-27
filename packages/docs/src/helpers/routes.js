@@ -3,7 +3,8 @@ import { all as API } from 'svelte-materialify-api';
 export default [
   {
     text: 'Getting Started',
-    icon: 'speedometer',
+    icon: 'speedometer-medium',
+    openIcon: 'speedometer',
     items: [
       { text: 'Installation', href: '/getting-started/installation/' },
       { text: 'Usage', href: '/getting-started/usage/' },
@@ -12,7 +13,8 @@ export default [
   },
   {
     text: 'Styles',
-    icon: 'palette',
+    icon: 'palette-outline',
+    openIcon: 'palette',
     items: [
       { text: 'CSS Reset', href: '/styles/reset/' },
       { text: 'Content', href: '/styles/content/' },
@@ -27,7 +29,8 @@ export default [
   },
   {
     text: 'Components',
-    icon: 'view-dashboard',
+    icon: 'view-dashboard-outline',
+    openIcon: 'view-dashboard',
     items: [
       { text: 'Material App', href: '/components/material-app/' },
       { text: 'Alerts', href: '/components/alerts/' },
@@ -84,6 +87,7 @@ export default [
   {
     text: 'Actions',
     icon: 'function',
+    openIcon: 'function-variant',
     items: [
       { text: 'Ripple', href: '/actions/ripple/' },
       { text: 'Click outside', href: '/actions/click-outside/' },
@@ -94,7 +98,8 @@ export default [
   },
   {
     text: 'API',
-    icon: 'beaker',
+    icon: 'flask-empty-outline',
+    openIcon: 'flask-outline',
     items: API.names.map((i) => ({ text: i, href: `/api/${i}/` })),
   },
 ];
