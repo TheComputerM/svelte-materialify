@@ -15,14 +15,14 @@
   export let style = null;
 
   setContext('S_ListItemRipple', ripple);
-  const tempActive = active;
-  active = eager;
 
   function toggle() {
     active = !active;
   }
 
   if (eager) {
+    const tempActive = active;
+    active = true;
     onMount(() => {
       active = tempActive;
     });

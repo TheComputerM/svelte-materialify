@@ -7,7 +7,7 @@
 
   let klass = '';
   export { klass as class };
-  export let activeClass = null;
+  export let activeClass = 'active';
   export let value = null;
   export let active = false;
   export let dense = false;
@@ -38,7 +38,6 @@
   use:Class={[active && activeClass]}
   {role}
   aria-selected={role === 'option' ? active : null}
-  class:active
   class:dense
   class:disabled
   class:selectable
