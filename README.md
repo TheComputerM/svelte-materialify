@@ -1,8 +1,10 @@
 <p align="center">
   <a href="https://svelte-materialify.vercel.app/" target="_blank">
-    <img alt="Vuetify Logo" width="100" src="logo/logo.svg">
+    <img alt="Svelte Materialify Logo" width="100" src="logo/logo.svg">
   </a>
 </p>
+
+<h1 align="center">Svelte Materialify</h1>
 
 <p align="center">
   <a href="https://github.com/thecomputerm/svelte-materialify/actions?query=workflow%3ACI">
@@ -26,7 +28,7 @@
 
 **Currently In Active Development**
 
-A better material design framework for Svelte. _(much like [Vuetify](https://vuetifyjs.com/))_. With full support for light and dark themes and customisability.
+A better Material UI design framework for Svelte with full support for light / dark themes and customisability.
 
 This is still in development. To contribute, please read [CONTRIBUTING.md](./CONTRIBUTING.md) and open a PR.
 
@@ -144,7 +146,5 @@ export default {
 
 - **[Shriji](https://github.com/peopledrivemecrazy)** for the logos.
 - **[MDsveX](https://github.com/pngwn/MDsveX)**
-- **[sveltedoc-parser](https://github.com/alexprey/sveltedoc-parser)**
 - **[Vuetify](https://vuetifyjs.com/)**
 - **[Material Design](https://material.io/components/)**
-- **[Jump.js](https://github.com/callmecavs/jump.js)**
