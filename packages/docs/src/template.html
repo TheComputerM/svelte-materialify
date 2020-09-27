@@ -6,16 +6,12 @@
     <meta name="theme-color" content="#651FFF" />
     <meta
       name="description"
-      content="A material design framework/component library for Svelte, with full support for light and dark themes and customisability."
+      content="A Material UI component library for Svelte, with full support for light and dark themes and customisability."
     />
     <meta property="og:type" content="website" />
     <meta
       name="keywords"
       content="svelte, material, quick start, components, install svelte materialify"
-    />
-    <meta
-      name="google-site-verification"
-      content="uHxHGg63VPyWD3PgVoq09K7uEYR4Ks69ZotFGDggjBs"
     />
 
     %sapper.base%
@@ -56,6 +52,20 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="manifest" href="manifest.json" crossorigin="use-credentials" />
     <link rel="icon" type="image/png" href="favicon.png" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-156679564-3"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-156679564-3');
+    </script>
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"
