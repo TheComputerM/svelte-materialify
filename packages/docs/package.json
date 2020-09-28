@@ -1,6 +1,6 @@
 {
   "name": "docs",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "private": true,
   "scripts": {
     "dev": "sapper dev --ext \".svelte .svx\"",
@@ -14,8 +14,8 @@
     "gumshoejs": "^5.1.2",
     "polka": "next",
     "sirv": "^1.0.0",
-    "svelte-materialify": "^0.1.9",
-    "svelte-materialify-api": "^0.1.9"
+    "svelte-materialify": "^0.1.10",
+    "svelte-materialify-api": "^0.1.10"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",

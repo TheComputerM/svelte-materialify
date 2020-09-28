@@ -1,3 +1,22 @@
+## [0.1.10](https://github.com/TheComputerM/svelte-materialify/compare/v0.1.9...v0.1.10) (2020-09-28)
+
+### Bug Fixes
+
+- some minor bugs ([814a3b7](https://github.com/TheComputerM/svelte-materialify/commit/814a3b7d3b1bce586bb59ab7fcdb3b0812c2bab4))
+
+### Features
+
+- **ListItem:** multiline option ([1b945b6](https://github.com/TheComputerM/svelte-materialify/commit/1b945b6eed5c634cf2d4dc2e14530b63723f8c5c))
+- rearrange types ([ad432d9](https://github.com/TheComputerM/svelte-materialify/commit/ad432d956fcd83e82cd9d342ae7ff78cbbfe8ad0))
+- **typing:** adds more typescript definitions ([e2c6e67](https://github.com/TheComputerM/svelte-materialify/commit/e2c6e67ee6de30b39aa961ada44063506c368bb7))
+- **typing:** fixes after review ([808d00a](https://github.com/TheComputerM/svelte-materialify/commit/808d00a4bcd264b471289e3054d8ca3c33ece147))
+
+### Performance Improvements
+
+- improve docs ([ede254c](https://github.com/TheComputerM/svelte-materialify/commit/ede254c36a617d6b3eea1bcc305be5d1c4da5154))
+- increased speed ([49b4038](https://github.com/TheComputerM/svelte-materialify/commit/49b40383da1340a0dc2df11d770537f22d29667c))
+- set immutable flags ([bab011e](https://github.com/TheComputerM/svelte-materialify/commit/bab011e07ac6a17e81d83b71814f192629a997a6))
+
 ## [0.1.9](https://github.com/TheComputerM/svelte-materialify/compare/v0.1.8...v0.1.9) (2020-09-24)
 
 ### Bug Fixes
