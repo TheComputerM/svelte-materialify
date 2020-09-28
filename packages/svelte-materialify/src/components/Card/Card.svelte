@@ -1,5 +1,8 @@
 <script>
+  import ProgressLinear from '../ProgressLinear';
+
   let klass = '';
+  export { klass as class };
   export let flat = false;
   export let tile = false;
   export let outlined = false;
@@ -7,9 +10,9 @@
   export let shaped = false;
   export let hover = false;
   export let link = false;
+  export let loading = false;
   export let disabled = false;
   export let style = null;
-  export { klass as class };
 </script>
 
 <style lang="scss" src="./Card.scss" global>
@@ -26,5 +29,10 @@
   class:link
   class:disabled
   {style}>
+  {#if loading}
+    <slot name="progress">
+      <ProgressLinear indeterminate />
+    </slot>
+  {/if}
   <slot />
 </div>
