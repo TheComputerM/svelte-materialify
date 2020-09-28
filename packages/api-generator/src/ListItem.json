@@ -110,6 +110,21 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
+      "name": "multiline",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "ripple",
       "kind": "let",
       "static": false,

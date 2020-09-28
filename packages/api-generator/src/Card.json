@@ -6,6 +6,21 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
+      "name": "class",
+      "kind": "const",
+      "static": false,
+      "readonly": true,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "localName": "klass"
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "flat",
       "kind": "let",
       "static": false,
@@ -111,6 +126,21 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
+      "name": "loading",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "disabled",
       "kind": "let",
       "static": false,
@@ -136,21 +166,6 @@
         "type": "object"
       },
       "defaultValue": null
-    },
-    {
-      "visibility": "public",
-      "description": null,
-      "keywords": [],
-      "name": "class",
-      "kind": "const",
-      "static": false,
-      "readonly": true,
-      "type": {
-        "kind": "type",
-        "text": "string",
-        "type": "string"
-      },
-      "localName": "klass"
     }
   ],
   "computed": [],
@@ -160,6 +175,12 @@
   "keywords": [],
   "events": [],
   "slots": [
+    {
+      "name": "progress",
+      "description": null,
+      "visibility": "public",
+      "parameters": []
+    },
     {
       "name": "default",
       "description": null,

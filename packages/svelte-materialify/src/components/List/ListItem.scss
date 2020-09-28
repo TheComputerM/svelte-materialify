@@ -105,6 +105,13 @@
     user-select: auto;
   }
 
+  &.multiline {
+    .s-list-item__title,
+    .s-list-item__subtitle {
+      white-space: normal;
+    }
+  }
+
   &:not(.disabled) {
     &.focus-visible {
       &::before {

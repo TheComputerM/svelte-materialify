@@ -13,6 +13,7 @@
   export let dense = false;
   export let disabled = null;
   export let selectable = !role;
+  export let multiline = false;
   export let ripple = getContext('S_ListItemRipple') || !selectable || false;
 
   const Group = getContext('S_ListItemGroup');
@@ -41,6 +42,7 @@
   class:dense
   class:disabled
   class:selectable
+  class:multiline
   class:link={!selectable}
   use:Ripple={ripple}
   on:click={click}
