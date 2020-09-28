@@ -9,10 +9,7 @@
 </script>
 
 <script>
-  import { stores } from '@sapper/app';
   import { onMount, onDestroy, tick } from 'svelte';
-
-  const { page } = stores();
 
   onMount(() => {
     document.querySelectorAll('.markdown-container .heading a').forEach((a) => {
@@ -94,7 +91,7 @@
       <a
         class="app-link"
         rel="noopener"
-        href="https://github.com/TheComputerM/svelte-materialify/tree/master/site/src/routes{$page.path}.svx">
+        href="https://github.com/TheComputerM/svelte-materialify/tree/master/packages/docs/src/routes">
         GitHub
       </a>
     </span>

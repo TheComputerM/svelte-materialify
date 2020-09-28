@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte';
-  import { mdiGithub, mdiWeatherSunny, mdiWeatherNight, mdiMenu } from '@mdi/js';
+  import { mdiGithub } from '@mdi/js';
   import { MaterialApp, AppBar, Button, Icon } from 'svelte-materialify/src';
   import SiteNavigation from '../helpers/Navigation/SiteNavigation.svelte';
   import Loading from '../helpers/Navigation/Loading.svelte';
@@ -10,10 +10,10 @@
 
   let sidenav = false;
   let breakpoints = {};
-  let navigation = false;
+  let mobile = false;
 
   function checkMobile() {
-    navigation = !window.matchMedia(breakpoints['md-and-down']).matches;
+    mobile = window.matchMedia(breakpoints['md-and-down']).matches;
   }
 
   function toggleTheme() {
@@ -21,14 +21,16 @@
     else theme.set('light');
   }
 
-  onMount(async () => {
+  onMount(() => {
     theme.set(window.localStorage.getItem('theme') || 'light');
     const unsubscribe = theme.subscribe((value) => {
       window.localStorage.setItem('theme', value);
     });
 
-    breakpoints = await import('svelte-materialify/src/utils/breakpoints');
-    breakpoints = breakpoints.default;
+    import('svelte-materialify/src/utils/breakpoints').then(({ default: data }) => {
+      breakpoints = data;
+    });
+
     checkMobile();
 
     return unsubscribe;
@@ -39,7 +41,7 @@
   main {
     padding-top: 56px;
   }
-  .navigation-enabled:not(.index-page) {
+  .navigation-enabled {
     padding: 56px 256px 0 256px;
   }
 </style>
@@ -60,13 +62,13 @@
     style="width:100%"
     class={segment === undefined ? 'primary-color theme--dark' : ''}>
     <div slot="icon">
-      {#if !navigation && segment !== undefined}
+      {#if mobile && segment !== undefined}
         <Button
           fab
           depressed
           on:click={() => (sidenav = !sidenav)}
           aria-label="Open Menu">
-          <Icon path={mdiMenu} />
+          <Icon class="mdi mdi-menu" />
         </Button>
       {/if}
     </div>
@@ -76,21 +78,21 @@
       href="https://github.com/TheComputerM/svelte-materialify"
       target="_blank"
       rel="noopener">
-      <Button class="white-text grey darken-3" aria-label="GitHub" fab={!navigation}>
-        <Icon path={mdiGithub} class={navigation ? 'mr-3' : ''} />
-        {#if navigation}GitHub{/if}
+      <Button class="white-text grey darken-3" aria-label="GitHub" fab={mobile}>
+        <Icon path={mdiGithub} class={!mobile ? 'mr-3' : ''} />
+        {#if !mobile}GitHub{/if}
       </Button>
     </a>
     <Button fab text on:click={toggleTheme} aria-label="Toggle Theme">
-      <Icon path={theme === 'light' ? mdiWeatherNight : mdiWeatherSunny} />
+      <Icon class="mdi mdi-weather-{$theme === 'light' ? 'night' : 'sunny'}" />
     </Button>
   </AppBar>
 
   {#if segment !== undefined}
-    <SiteNavigation {navigation} {sidenav} />
+    <SiteNavigation {mobile} bind:sidenav />
   {/if}
 
-  <main class:navigation-enabled={navigation} class:index-page={segment === undefined}>
+  <main class:navigation-enabled={!mobile && segment !== undefined}>
     {#if segment !== undefined}
       <Loading />
     {/if}

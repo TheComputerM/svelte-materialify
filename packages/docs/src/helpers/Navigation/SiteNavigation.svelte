@@ -1,5 +1,5 @@
 <script>
-  export let navigation;
+  export let mobile;
   export let sidenav;
 
   import { Button, NavigationDrawer, List, Overlay } from 'svelte-materialify/src/';
@@ -10,7 +10,7 @@
 </script>
 
 <NavigationDrawer
-  active={navigation || sidenav}
+  active={!mobile || sidenav}
   style="height:100vh;"
   fixed
   clipped
@@ -28,11 +28,11 @@
 </NavigationDrawer>
 <Overlay
   index="3"
-  active={!navigation && sidenav}
+  active={mobile && sidenav}
   on:click={() => (sidenav = false)}
   fadeOptions={{ duration: 250 }} />
 
-{#if navigation}
+{#if !mobile}
   <NavigationDrawer
     style="height:100vh;background:var(--theme-surface)"
     right

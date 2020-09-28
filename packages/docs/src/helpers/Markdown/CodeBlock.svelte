@@ -10,8 +10,8 @@
   import { Button, Icon } from 'svelte-materialify/src';
 
   export let lang = '';
-  Object.keys(aliases).forEach((alias) => {
-    if (aliases[alias].includes(lang)) lang = alias;
+  Object.entries(aliases).forEach(([alias, names]) => {
+    if (names.includes(lang)) lang = alias;
   });
 
   function copy(node) {

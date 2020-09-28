@@ -13,7 +13,7 @@ export const breakpoints = {
   xl,
 };
 
-const displayBreakpoints = {
+export default {
   'xs-only': `only screen and (max-width: ${sm - 1}px)`,
   'sm-only': `only screen and (min-width: ${sm}px) and (max-width: ${md - 1}px)`,
   'sm-and-down': `only screen and (max-width: ${md - 1}px)`,
@@ -26,5 +26,3 @@ const displayBreakpoints = {
   'lg-and-up': `only screen and (min-width: ${lg}px)`,
   'xl-only': `only screen and (min-width: ${xl}px)`,
 };
-
-export default displayBreakpoints;

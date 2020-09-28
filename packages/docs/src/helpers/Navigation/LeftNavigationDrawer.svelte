@@ -1,3 +1,7 @@
+<script context="module">
+  let activeDepth = -1;
+</script>
+
 <script>
   import { stores } from '@sapper/app';
   import { ListGroup, ListItem, Icon } from 'svelte-materialify/src';
@@ -8,13 +12,15 @@
   const offset = 1.5 ** depth * 54;
 
   function expand(parent) {
-    return parent.some((child) => {
+    const found = parent.some((child) => {
       if (child.items) return expand(child.items);
       return $page.path === child.href;
     });
+    if (found) activeDepth = depth;
+    return found;
   }
 
-  export let expanded = expand(item.items);
+  export let expanded = depth > activeDepth && expand(item.items);
 
   function toggle() {
     expanded = !expanded;

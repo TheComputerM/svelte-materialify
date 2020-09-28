@@ -2,7 +2,8 @@
 title: Breadcrumbs Component
 related:
   - Switch: /components/switches/
-  - Breadcrumbs API: /api/Breadcrumbs/
+  - Button: /components/buttons/
+  - NavigationDrawer: /components/navigation-drawer/
 ---
 
 <script context="module">
@@ -17,11 +18,19 @@ related:
   import { API, Example, setExamples } from '@shared';
   import { Breadcrumbs as doc } from 'svelte-materialify-api';
   import * as Examples from '@examples/components/breadcrumbs';
+  import Playground from '@playground/breadcrumbs.svelte';
   export let sources;
   setExamples([sources, Examples]);
 </script>
 
 # Breadcrumbs
+
+The `Breadcrumbs` component is a navigational helper for pages. It can accept a Material Icons icon or text characters as a divider. An array of objects can be passed to the items property of the component. Additionally, slots exists for more control of the breadcrumbs.
+
+## Playground
+
+By default, breadcrumbs use a text divider. This can be any string.
+<Playground />
 
 ## API
 
@@ -32,11 +41,11 @@ The array of item in the `items` prop.
 ```ts
 type items = Array<item>;
 type item = {
-  disabled?: false,
-  href?: '',
-  text: '',
-  class?: '',
-  props?: {},
+  disabled?: false;
+  href?: '';
+  text: '';
+  class?: '';
+  props?: {};
 };
 ```
 
@@ -44,21 +53,17 @@ type item = {
 
 Below is a collection of simple to complex examples.
 
-
 ### Basic
 
 Basic examples for breadcrumbs.
 <Example name="basic" />
-
 
 ### Custom Divider
 
 Breadcrumbs separator can be set using `divider` slot. You can also use material icons as dividers.
 <Example name="customDivider" />
 
-
 ### Slots
 
 You can use the default slot to customize each breadcrumb item. Remember to add class `s-breadcrumb-item` to each item to add the default styles.
 <Example name="slots" />
-

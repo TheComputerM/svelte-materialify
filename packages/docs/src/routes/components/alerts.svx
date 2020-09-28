@@ -1,7 +1,7 @@
 ---
 title: Alert Component
 related:
-  - Buttons: /components/buttons/
+  - Button: /components/buttons/
   - Icon: /components/icons/
   - Alert API: /api/Alert/
 ---

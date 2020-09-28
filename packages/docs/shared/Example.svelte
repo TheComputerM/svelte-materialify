@@ -4,6 +4,9 @@
   export function setExamples(examples) {
     [sources, components] = examples;
   }
+  export function preload() {
+    console.log('lol');
+  }
 </script>
 
 <script>
