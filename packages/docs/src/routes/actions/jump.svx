@@ -6,21 +6,6 @@ related:
   - Colors: /styles/colors/
 ---
 
-<script context="module">
-  export async function preload() {
-    let sources = await this.fetch('examples/Jump.json');
-    sources = await sources.json();
-    return { sources };
-  }
-</script>
-
-<script>
-  import Example, { setExamples } from '@/components/examples/Example.svelte';
-  import * as Examples from '@/examples/Jump';
-  export let sources;
-  setExamples([sources, Examples]);
-</script>
-
 <style>
   :global(html) {
     scroll-behavior: auto !important;
@@ -45,4 +30,4 @@ The default behavior is to bind to the window. If no additional configuration op
 }
 ```
 
-<Example name="usage" />
+<Components.Example file="Jump/usage" />

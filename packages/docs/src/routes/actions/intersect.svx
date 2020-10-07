@@ -5,28 +5,13 @@ related:
   - ClickOutside: /actions/click-outside/
 ---
 
-<script context="module">
-  export async function preload() {
-    let sources = await this.fetch('examples/Intersect.json');
-    sources = await sources.json();
-    return { sources };
-  }
-</script>
-
-<script>
-  import Example, { setExamples } from '@/components/examples/Example.svelte';
-  import * as Examples from '@/examples/Intersect';
-  export let sources;
-  setExamples([sources, Examples]);
-</script>
-
 # Intersect
 
 The `Intersect` action utilizes the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API). It provides an easy-to-use interface for detecting when elements are visible within the user's viewport. This is also used for the [Lazy](/components/lazy/) component.
 
 ## Usage
 
-<Example name="usage" />
+<Components.Example file="Intersect/usage" />
 
 ## Polyfill
 

@@ -6,20 +6,8 @@ related:
   - Button API: /api/Button/
 ---
 
-<script context="module">
-  export async function preload() {
-    let sources = await this.fetch('examples/Button.json');
-    sources = await sources.json();
-    return { sources };
-  }
-</script>
-
 <script>
-  import Example, { setExamples } from '@/components/examples/Example.svelte';
   import Playground from '@/playground/Button.svelte';
-  import * as Examples from '@/examples/Button';
-  export let sources;
-  setExamples([sources, Examples]);
 </script>
 
 # Button
@@ -42,49 +30,49 @@ Below is a collection of simple to complex examples.
 ### Raised
 
 This is the default one
-<Example name="raised" />
+<Components.Example file="Button/raised" />
 
 ### Depressed
 
 These are just buttons with no box shadow
-<Example name="depressed" />
+<Components.Example file="Button/depressed" />
 
 ### Block
 
 Big bois
-<Example name="block" />
+<Components.Example file="Button/block" />
 
 ### Floating Action Buttons
 
 Floating buttons are rounded and usually contain an icon.
-<Example name="fab" />
+<Components.Example file="Button/fab" />
 
 ### Icon
 
 Icons can be used for the primary content of a button.
-<Example name="icon" />
+<Components.Example file="Button/icon" />
 
 ### Outlined
 
 Outlined buttons inherit their borders from the current color applied.
-<Example name="outlined" />
+<Components.Example file="Button/outlined" />
 
 ### Rounded
 
 Rounded buttons behave the same as regular buttons but have rounded edges.
-<Example name="rounded" />
+<Components.Example file="Button/rounded" />
 
 ### Text
 
 Text buttons have no box shadow and no background. Only on hover is the container for the button shown.
-<Example name="text" />
+<Components.Example file="Button/text" />
 
 ### Tile
 
 Tile buttons behave the same as regular buttons but have no border radius.
-<Example name="tile" />
+<Components.Example file="Button/tile" />
 
 ### Sizing
 
 Buttons can be given different sizing options to fit a multitude of scenarios. We do not set font sizes for icons as different icon packs look differently
-<Example name="sizing" />
+<Components.Example file="Button/sizing" />

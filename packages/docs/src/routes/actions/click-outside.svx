@@ -6,21 +6,6 @@ related:
   - Menu: /components/menus/
 ---
 
-<script context="module">
-  export async function preload() {
-    let sources = await this.fetch('examples/ClickOutside.json');
-    sources = await sources.json();
-    return { sources };
-  }
-</script>
-
-<script>
-  import Example, { setExamples } from '@/components/examples/Example.svelte';
-  import * as Examples from '@/examples/ClickOutside';
-  export let sources;
-  setExamples([sources, Examples]);
-</script>
-
 # ClickOutside
 
 The `ClickOutside` directive calls a function when something outside of the target element is clicked on. This is used internally by components like `Menu` and `Dalog`.
@@ -28,4 +13,4 @@ The `ClickOutside` directive calls a function when something outside of the targ
 ## Usage
 
 The `ClickOutside` action allows you to provide a handler to be invoked when the user clicks outside of the target element.
-<Example name="usage" />
+<Components.Example file="ClickOutside/usage" />

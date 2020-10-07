@@ -6,20 +6,8 @@ related:
   - AppBar API: /api/AppBar/
 ---
 
-<script context="module">
-  export async function preload() {
-    let sources = await this.fetch('examples/AppBar.json');
-    sources = await sources.json();
-    return { sources };
-  }
-</script>
-
 <script>
-  import Example, { setExamples } from '@/components/examples/Example.svelte';
-  import * as Examples from '@/examples/AppBar';
   import Playground from '@/playground/AppBar.svelte';
-  export let sources;
-  setExamples([sources, Examples]);
 </script>
 
 # App Bar
@@ -38,7 +26,7 @@ The `AppBar` component is used for application-wide actions and information.
 ## Usage
 
 Here is a basic example on how to use the AppBar.
-<Example name="basic" />
+<Components.Example file="AppBar/basic" />
 
 ## Examples
 
@@ -47,14 +35,14 @@ Below is a collection of simple to complex examples.
 ### Dense
 
 You can make app-bar dense. A dense app bar has lower height than regular one.
-<Example name="dense" />
+<Components.Example file="AppBar/dense" />
 
 ### Collapsing Bars
 
 With the collapse prop you can easily control the state of toolbar that the user interacts with.
-<Example name="collapse" />
+<Components.Example file="AppBar/collapse" />
 
 ### Navigation Drawers
 
 It is very easy to integrate navigation drawers with app bars.
-<Example name="drawer" style="overflow-x:hidden;padding:0!important;" />
+<Components.Example file="AppBar/drawer" style="overflow-x:hidden;padding:0!important;" />

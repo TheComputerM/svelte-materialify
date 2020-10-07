@@ -5,21 +5,6 @@ related:
   - Windows: /components/windows/
 ---
 
-<script context="module">
-  export async function preload() {
-    let sources = await this.fetch('examples/Tabs.json');
-    sources = await sources.json();
-    return { sources };
-  }
-</script>
-
-<script>
-  import Example, { setExamples } from '@/components/examples/Example.svelte';
-  import * as Examples from '@/examples/Tabs';
-  export let sources;
-  setExamples([sources, Examples]);
-</script>
-
 # Tabs
 
 The `Tabs` component is used for hiding content behind a selectable item. This can also be used as a pseudo-navigation for a page, where the tabs are links and the tab-items are the content.
@@ -37,29 +22,29 @@ Below is a collection of simple to complex examples.
 ### Fixed Tabs
 
 The fixed-tabs prop forces tab to take up all available space up to the maximum width (300px).
-<Example name="fixedTabs" />
+<Components.Example file="Tabs/fixedTabs" />
 
 ### Centered Active
 
 Active tab is always centered.
-<Example name="centeredActive" />
+<Components.Example file="Tabs/centeredActive" />
 
 ### Grow
 
 The grow prop will make the tab items take up all available space up to a maximum width of 300px.
-<Example name="grow" />
+<Components.Example file="Tabs/grow" />
 
 ### Vertical
 
 Tabs can be toggled to stack its v-tab components vertically.
-<Example name="vertical" />
+<Components.Example file="Tabs/vertical" />
 
 ### Icons
 
 Tabs can contain icons as well as text. This increases their height to 72px.
-<Example name="icons" />
+<Components.Example file="Tabs/icons" />
 
 ### Extension
 
 You can use them inside [AppBar](/components/app-bar/)'s extension slot.
-<Example name="extension" />
+<Components.Example file="Tabs/extension" />

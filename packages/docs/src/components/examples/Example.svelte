@@ -1,32 +1,36 @@
 <script context="module">
-  let sources;
-  let components;
-  export function setExamples(examples) {
-    [sources, components] = examples;
-  }
+  import Prism from 'prismjs';
+  import { theme } from '@/util/stores';
 </script>
 
 <script>
-  import { onDestroy } from 'svelte';
   import { slide } from 'svelte/transition';
   import { Icon, Button } from 'svelte-materialify/src';
-  import { theme } from '@/util/stores';
 
-  export let name = '';
+  export let file = '';
   export let style = null;
-  const { code, path } = sources[name];
-  const component = components[name];
 
-  let codeVisible = false;
-  let colorInvertable = false;
-  let isComponentDark = false;
-  const unsubscribe = theme.subscribe((value) => {
-    colorInvertable = value === 'light';
-    isComponentDark = colorInvertable ? isComponentDark : false;
+  let component;
+  let code;
+  import(
+    /* webpackChunkName: "examples" */
+    /* webpackMode: "lazy-once" */
+    `../../examples/${file}.svelte`
+  ).then((data) => {
+    component = data.default;
   });
-  onDestroy(unsubscribe);
 
-  const codeContent = `<pre class=language-html><code class=language-html>${code}</code></pre>`;
+  import(
+    /* webpackChunkName: "examples-source" */
+    /* webpackMode: "lazy-once" */
+    `!raw-loader!../../examples/${file}.svelte`
+  ).then((data) => {
+    code = Prism.highlight(data.default, Prism.languages.html, 'html');
+  });
+
+  $: colorInvertable = $theme === 'light';
+  let codeVisible = false;
+  let codeThemeDark = false;
 </script>
 
 <style>
@@ -51,12 +55,12 @@
         icon
         size="small"
         aria-label="invert color"
-        on:click={() => (isComponentDark = !isComponentDark)}>
+        on:click={() => (codeThemeDark = !codeThemeDark)}>
         <Icon class="mdi mdi-invert-colors" />
       </Button>
     {/if}
     <a
-      href="https://github.com/TheComputerM/svelte-materialify/tree/master/packages/docs/{path}"
+      href="https://github.com/TheComputerM/svelte-materialify/tree/master/packages/docs/src/examples/{file}.svelte"
       aria-label="GitHub"
       rel="noopener noreferrer"
       target="_blank">
@@ -75,10 +79,15 @@
   </div>
   {#if codeVisible}
     <div transition:slide={{ duration: 250 }}>
-      {@html codeContent}
+      <pre class="language-html">
+        <code
+          class="language-html">
+          {@html code}
+        </code>
+      </pre>
     </div>
   {/if}
-  <div class="pa-2 {isComponentDark ? 'theme--dark' : ''}" {style}>
+  <div class="pa-2" class:theme--dark={codeThemeDark} {style}>
     <svelte:component this={component} />
   </div>
 </div>

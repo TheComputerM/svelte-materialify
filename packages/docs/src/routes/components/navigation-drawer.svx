@@ -6,20 +6,8 @@ related:
   - AppBar: /components/app-bar/
 ---
 
-<script context="module">
-  export async function preload() {
-    let sources = await this.fetch('examples/NavigationDrawer.json');
-    sources = await sources.json();
-    return { sources }
-  }
-</script>
-
 <script>
-  import Example, { setExamples } from '@/components/examples/Example.svelte';
-  import * as Examples from '@/examples/NavigationDrawer';
   import Playground from '@/playground/NavigationDrawer.svelte';
-  export let sources;
-  setExamples([sources, Examples]);
 </script>
 
 # Navigation Drawers
@@ -45,19 +33,19 @@ Below is a collection of simple to complex examples.
 ## Colored Drawer
 
 Navigation drawers can be customized to fit any application's design. Here we apply a custom background color and an appended content area using the **append** slot.
-<Example name="colored" />
+<Components.Example file="NavigationDrawer/colored" />
 
 ## Mini
 
 When using the mini-variant prop, the drawer will shrink (default 56px) and hide everything inside of v-list except the first element.
-<Example name="mini" />
+<Components.Example file="NavigationDrawer/mini" />
 
 ## Temporary
 
 A temporary drawer sits above its application and uses a scrim (overlay) to darken the background. This drawer behavior is mimicked by default when on mobile. Clicking outside of the drawer will cause it to close.
-<Example name="temporary" style="overflow-x:hidden;padding:0!important;" />
+<Components.Example file="NavigationDrawer/temporary" style="overflow-x:hidden;padding:0!important;" />
 
 ## Right
 
 Navigation drawers can also be positioned on the right side of your application (or an element). This is also useful for creating a side-sheet with auxillary information that may not have any navigation links.
-<Example name="right" />
+<Components.Example file="NavigationDrawer/right" />

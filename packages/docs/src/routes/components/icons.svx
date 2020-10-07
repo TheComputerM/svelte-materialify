@@ -5,20 +5,8 @@ related:
   - Card: /components/cards/
 ---
 
-<script context="module">
-  export async function preload() {
-    let sources = await this.fetch('examples/Icon.json');
-    sources = await sources.json();
-    return { sources };
-  }
-</script>
-
 <script>
-  import Example, { setExamples } from '@/components/examples/Example.svelte';
-  import * as Examples from '@/examples/Icon';
   import Playground from '@/playground/Icon.svelte';
-  export let sources;
-  setExamples([sources, Examples]);
 </script>
 
 <svelte:head>
@@ -49,19 +37,19 @@ Below is a collection of simple to complex examples.
 ### Types of Icons
 
 The `Icon` component is iconset agnostic, you can use any icon from any vendor you like. Just include thier icon font file if you want to use them.
-<Example name="types" />
+<Components.Example file="Icon/types" />
 
 ### Color
 
 Using color helpers you can change the color of an icon from the standard dark and light themes.
-<Example name="color" />
+<Components.Example file="Icon/color" />
 
 ### SVG
 
 You can easily use SVG icons instead of icon fonts.
-<Example name="svg" />
+<Components.Example file="Icon/svg" />
 
 ### Disabled
 
 Disable the icon using the `disabled` prop.
-<Example name="disabled" />
+<Components.Example file="Icon/disabled" />

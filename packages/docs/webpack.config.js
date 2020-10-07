@@ -20,7 +20,7 @@ loadLanguages(['bash', 'scss', 'typescript']);
 const preprocess = [
   mdsvex({
     extension: '.svx',
-    layout: './src/components/layout/MDXLayout.svelte',
+    layout: './src/components/layout/Layout.svelte',
     remarkPlugins: [
       require('remark-sectionize'),
       [
@@ -65,11 +65,11 @@ const preprocess = [
           const langTag = `language-${lang}`;
           const codeTag = `<code class=${langTag}>${escaped}</code>`;
           const pre = `<pre class=${langTag}>${codeTag}</pre>`;
-          return `<Components.CodeBlock lang='${lang}'>${pre}</Components.CodeBlock>`;
+          return `<Components.Markup lang='${lang}'>${pre}</Components.Markup>`;
         }
         const escaped = escape(code);
         const pre = `<pre><code>${escaped}</code></pre>`;
-        return `<Components.CodeBlock>${pre}</Components.CodeBlock>`;
+        return `<Components.Markup>${pre}</Components.Markup>`;
       },
     },
   }),

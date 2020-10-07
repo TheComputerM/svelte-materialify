@@ -6,21 +6,6 @@ related:
   - ButtonGroup API: /api/ButtonGroup/
 ---
 
-<script context="module">
-  export async function preload() {
-    let sources = await this.fetch('examples/ButtonGroup.json');
-    sources = await sources.json();
-    return { sources };
-  }
-</script>
-
-<script>
-  import Example, { setExamples } from '@/components/examples/Example.svelte';
-  import * as Examples from '@/examples/ButtonGroup';
-  export let sources;
-  setExamples([sources, Examples]);
-</script>
-
 # Button Groups
 
 Use `ButtonGroup` to group a series of buttons on a single line.
@@ -37,19 +22,19 @@ Below is a collection of simple to complex examples.
 ### Basic
 
 Here are some examples of different props.
-<Example name="basic" />
+<Components.Example file="ButtonGroup/basic" />
 
 ### Selectable
 
 Add ability to select a button.
-<Example name="selectable" />
+<Components.Example file="ButtonGroup/selectable" />
 
 ### Multiple
 
 Add ability to select multiple buttons.
-<Example name="multiple" />
+<Components.Example file="ButtonGroup/multiple" />
 
 ### Mandatory
 
 Make is necessary for at least one button to be selected.
-<Example name="mandatory" />
+<Components.Example file="ButtonGroup/mandatory" />

@@ -6,25 +6,13 @@ related:
   - Alert API: /api/Alert/
 ---
 
-<script context="module">
-  export async function preload() {
-    let sources = await this.fetch('examples/Alert.json');
-    sources = await sources.json();
-    return { sources };
-  }
-</script>
-
 <script>
-  import Example, { setExamples } from '@/components/examples/Example.svelte';
-  import * as Examples from '@/examples/Alert';
   import Playground from '@/playground/Alert.svelte';
-  export let sources;
-  setExamples([sources, Examples]);
 </script>
 
 # Alert
 
-The `<Components.Alert>` component is used to convey important information to the user through the use contextual types icons and color. Many parts of an alert such as `border`, `icon`, and `color` can also be customized to fit almost any situation.
+The `Alert` component is used to convey important information to the user through the use contextual types icons and color. Many parts of an alert such as `border`, `icon`, and `color` can also be customized to fit almost any situation.
 
 ## Playground
 
@@ -42,44 +30,44 @@ Below is a collection of simple to complex examples.
 ### Colors
 
 Diffrent colors and variations of the `Alert`.
-<Example name="colors" />
+<Components.Example file="Alert/colors" />
 
 ### Border
 
 Add a border using the `border` prop to either **left**, **right**, **top** or **bottom**.
-<Example name="border" />
+<Components.Example file="Alert/border" />
 
 ### Colored Border
 
 The `coloredBorder` prop removes the alert background in order to accent the `border` prop.
-<Example name="coloredBorder" />
+<Components.Example file="Alert/coloredBorder" />
 
 ### Dense
 
 The `dense` prop decreases the height of the alert to create a simple and compact style. When combined with the `border` prop the border thickness will be decreased to stay consistent with the style.
-<Example name="dense" />
+<Components.Example file="Alert/dense" />
 
 ### Dismissible
 
 There is inbuilt dismiss functionality in `Alert`. You can also change the icon of the close button and call a function when the alert has been closed.
-<Example name="dismissible" />
+<Components.Example file="Alert/dismissible" />
 
 ### Icon
 
 The icon slot allows you to and an icon at the beginning og the Alert. It will inherit the color and style of the Alert.
-<Example name="icon" />
+<Components.Example file="Alert/icon" />
 
 ### Outlined
 
 The `outlined` prop inverts the style of an alert, inheriting the currently applied color, applying it to the text and border, and making its background transparent.
-<Example name="outlined" />
+<Components.Example file="Alert/outlined" />
 
 ### Transition
 
 Use the `transition` prop to set the type of transition and use the `transitionOpts` prop to specify the options for the transition
-<Example name="transition" />
+<Components.Example file="Alert/transition" />
 
 ### Text
 
 The `text` prop is a simple alert variant that applies a reduced opacity background of the provided color. Similar to other styled props, text can be combined with other props like `dense`, `border`, and `outlined` to create a unique and customized component.
-<Example name="text" />
+<Components.Example file="Alert/text" />

@@ -2,21 +2,6 @@
 title: Slide Group
 ---
 
-<script context="module">
-  export async function preload() {
-    let sources = await this.fetch('examples/SlideGroup.json');
-    sources = await sources.json();
-    return { sources };
-  }
-</script>
-
-<script>
-  import Example, { setExamples } from '@/components/examples/Example.svelte';
-  import * as Examples from '@/examples/SlideGroup';
-  export let sources;
-  setExamples([sources, Examples]);
-</script>
-
 # Slide Group
 
 The SlideGroup component is used to display pseudo paginated information. It uses [ItemGroup](/components/item-groups/) at its core and provides a baseline for components such as v-tabs.
@@ -33,19 +18,19 @@ Below is a collection of simple to complex examples.
 ### Active Class
 
 Active class can be customized.
-<Example name="activeClass" />
+<Components.Example file="SlideGroup/activeClass" />
 
 ### Multiple
 
 You can select multiple items.
-<Example name="multiple" />
+<Components.Example file="SlideGroup/multiple" />
 
 ### Mandatory
 
 At least 1 item must be selected.
-<Example name="mandatory" />
+<Components.Example file="SlideGroup/mandatory" />
 
 ### Center Active
 
 Active item is always centered.
-<Example name="centerActive" />
+<Components.Example file="SlideGroup/centerActive" />

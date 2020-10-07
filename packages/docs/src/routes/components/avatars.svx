@@ -6,20 +6,8 @@ related:
   - Radio: /components/radio/
 ---
 
-<script context="module">
-  export async function preload() {
-    let sources = await this.fetch('examples/Avatar.json');
-    sources = await sources.json();
-    return { sources };
-  }
-</script>
-
 <script>
-  import Example, { setExamples } from '@/components/examples/Example.svelte';
-  import * as Examples from '@/examples/Avatar';
   import Playground from '@/playground/Avatar.svelte';
-  export let sources;
-  setExamples([sources, Examples]);
 </script>
 
 # Avatars
@@ -44,16 +32,16 @@ Below is a collection of simple to complex examples.
 
 The `size` prop allows you to define the height and width of avatar. This prop scales both evenly with an aspect ratio of 1. height and width props will override this prop.
 
-<Example name="size" />
+<Components.Example file="Avatar/size" />
 
 ### Tile
 
 The `tile` prop removes the border radius from v-avatar leaving you with a simple square avatar.
 
-<Example name="tile" />
+<Components.Example file="Avatar/tile" />
 
 ### Types
 
 You can add text, images and icons to the avatar.
 
-<Example name="types" />
+<Components.Example file="Avatar/types" />

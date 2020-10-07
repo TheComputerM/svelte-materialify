@@ -6,20 +6,9 @@ related:
   - Text and Typography: /styles/text-and-typography/
 ---
 
-<script context="module">
-  export async function preload() {
-    let sources = await this.fetch('examples/Card.json');
-    sources = await sources.json();
-    return { sources };
-  }
-</script>
 
 <script>
-  import Example, { setExamples } from '@/components/examples/Example.svelte';
   import Playground from '@/playground/Card.svelte';
-  import * as Examples from '@/examples/Card';
-  export let sources;
-  setExamples([sources, Examples]);
 </script>
 
 # Cards
@@ -65,12 +54,12 @@ Below are some simple and complex examples.
 ### Outlined
 
 An outlined card has 0 elevation and contains a soft border.
-<Example name="outlined" />
+<Components.Example file="Card/outlined" />
 
 ### Custom actions
 
 With a simple conditional, you can easily add supplementary text that is hidden until opened.
-<Example name="customActions" />
+<Components.Example file="Card/customActions" />
 
 ### Grids
 
@@ -79,9 +68,9 @@ Using grids, you can create beautiful layouts.
 ### Horizontal
 
 Using flexbox helper classes, you can create customized horizontal cards.
-<Example name="horizontal" />
+<Components.Example file="Card/horizontal" />
 
 ### Information cards
 
 Cards are entry points to more detailed information. To keep things concise, ensure to limit the number of actions the user can take.
-<Example name="information" />
+<Components.Example file="Card/information" />

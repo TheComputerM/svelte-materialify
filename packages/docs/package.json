@@ -11,6 +11,7 @@
     "compression": "^1.7.1",
     "gumshoejs": "^5.1.2",
     "polka": "next",
+    "prismjs": "^1.21.0",
     "sirv": "^1.0.0",
     "svelte-materialify": "^0.1.10",
     "svelte-materialify-api": "^0.1.10"
@@ -19,7 +20,7 @@
     "autoprefixer": "^9.8.6",
     "mdsvex": "^0.8.7",
     "postcss": "^7.0.34",
-    "prismjs": "^1.21.0",
+    "raw-loader": "^4.0.1",
     "remark-autolink-headings": "^6.0.1",
     "remark-class-names": "^0.1.0",
     "remark-external-links": "^7.0.1",
@@ -31,7 +32,6 @@
     "webpack-modules": "^1.0.0",
     "sapper": "^0.28.10",
     "sass": "^1.26.12",
-    "svelte-preprocess": "^4.4.3",
-    "tinydate": "^1.3.0"
+    "svelte-preprocess": "^4.4.3"
   }
 }

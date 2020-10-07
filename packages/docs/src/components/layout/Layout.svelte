@@ -1,12 +1,13 @@
 <script context="module">
-  import CodeBlock from './CodeBlock.svelte';
+  import Markup from '../Markup.svelte';
+  import Example from '../examples/Example.svelte';
   import { markdown } from '@/util/stores';
   import Meta from '../Meta.svelte';
   import ReadyForMore from './ReadyForMore.svelte';
   import { Row, Divider } from 'svelte-materialify/src';
   import Alert from '../Alert.svelte';
 
-  export { CodeBlock, Alert };
+  export { Markup, Alert, Example };
 </script>
 
 <script>

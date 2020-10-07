@@ -5,21 +5,6 @@ related:
   - Text Field: /components/text-field/
 ---
 
-<script context="module">
-  export async function preload() {
-    let sources = await this.fetch('examples/Slider.json');
-    sources = await sources.json();
-    return { sources };
-  }
-</script>
-
-<script>
-  import Example, { setExamples } from '@/components/examples/Example.svelte';
-  import * as Examples from '@/examples/Slider';
-  export let sources;
-  setExamples([sources, Examples]);
-</script>
-
 # Sliders
 
 The `Slider` component is a better visualization of the number input. It is used for gathering numerical user data.
@@ -35,44 +20,44 @@ Below is a collection of simple to complex examples.
 ### Min and Max values
 
 You can set `min` and `max` values of sliders.
-<Example name="minMax" />
+<Components.Example file="Slider/minMax" />
 
 ### Disabled
 
 You cannot interact with disabled sliders.
-<Example name="disabled" />
+<Components.Example file="Slider/disabled" />
 
 ### Readonly
 
 You cannot interact with readonly sliders, but they look as ordinary ones.
-<Example name="readonly" />
+<Components.Example file="Slider/readonly" />
 
 ### Icons
 
 You can add icons to the slider with the `append` and `prepend` slots.
-<Example name="icons" />
+<Components.Example file="Slider/icons" />
 
 ### Thumb
 
 You can display a thumb.
-<Example name="thumb" />
+<Components.Example file="Slider/thumb" />
 
 ### Inverse Label
 
 Slider with `inverseLabel` property displays label at the end of it.
-<Example name="inverseLabel" />
+<Components.Example file="Slider/inverseLabel" />
 
 ### Step
 
 Steps are predetermined values to which the user can move the slider.
-<Example name="step" />
+<Components.Example file="Slider/step" />
 
 ### Colors
 
 You can set custom colors for slider and thumb with the help of `color` and `thumbClass`.
-<Example name="colors" />
+<Components.Example file="Slider/colors" />
 
 ### Range
 
 Range sliders.
-<Example name="range" />
+<Components.Example file="Slider/range" />

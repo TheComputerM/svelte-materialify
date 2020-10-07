@@ -5,20 +5,6 @@ related:
   - Alerts: /components/alerts/
 ---
 
-<script context="module">
-  export async function preload() {
-    let sources = await this.fetch('examples/Badge.json');
-    sources = await sources.json();
-    return { sources };
-  }
-</script>
-
-<script>
-  import Example, { setExamples } from '@/components/examples/Example.svelte';
-  import * as Examples from '@/examples/Badge';
-  export let sources;
-  setExamples([sources, Examples]);
-</script>
 
 # Badges
 
@@ -35,14 +21,14 @@ Below is a collection of simple to complex examples.
 ### Basic
 
 This is how to use basic badges.
-<Example name="basic" />
+<Components.Example file="Badge/basic" />
 
 ### Dynamic Notifications
 
 You can incorporate badges with dynamic content to make things such as a notification system.
-<Example name="notifications" />
+<Components.Example file="Badge/notifications" />
 
 ### Offset
 
 The `Badge` component is flexible and can be used in a variety of use-cases over numerous elements. Options to tweak the location are also available through the `offsetX` and `offsetY` props.
-<Example name="offset" />
+<Components.Example file="Badge/offset" />

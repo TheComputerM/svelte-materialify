@@ -5,21 +5,6 @@ related:
   - ClickOutside: /actions/click-outside/
 ---
 
-<script context="module">
-  export async function preload() {
-    let sources = await this.fetch('examples/Touch.json');
-    sources = await sources.json();
-    return { sources };
-  }
-</script>
-
-<script>
-  import Example, { setExamples } from '@/components/examples/Example.svelte';
-  import * as Examples from '@/examples/Touch';
-  export let sources;
-  setExamples([sources, Examples]);
-</script>
-
 # Touch
 
 The `Touch` action allows you to capture swipe gestures and apply directional callbacks.
@@ -27,4 +12,4 @@ The `Touch` action allows you to capture swipe gestures and apply directional ca
 ## Usage
 
 On a mobile device, try swiping in various directions.
-<Example name="usage" />
+<Components.Example file="Touch/usage" />

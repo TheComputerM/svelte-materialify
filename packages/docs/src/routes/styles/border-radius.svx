@@ -5,21 +5,6 @@ related:
   - Text and Typography: /styles/text-and-typography/
 ---
 
-<script context="module">
-  export async function preload() {
-    let sources = await this.fetch('examples/border-radius.json');
-    sources = await sources.json();
-    return { sources }
-  }
-</script>
-
-<script>
-  import Example, { setExamples } from '@/components/examples/Example.svelte';
-  import * as Examples from '@/examples/border-radius';
-  export let sources;
-  setExamples([sources, Examples]);
-</script>
-
 # Border Radius
 
 Use border utilities to quickly style the border-radius of any element.
@@ -56,14 +41,14 @@ $rounded: map-deep-merge(
 ### Different sizes and types
 
 The rounded helper classes allow you to modify the border radius of an element. Use the `.rounded-sm`, `.rounded`, `.rounded-lg`, and `.rounded-xl` to add a border radius of varying size.
-<Example name="sizes" />
+<Components.Example file="border-radius/sizes" />
 
 ### Sides
 
 Use these helper classes to add border radius to specific sides.
-<Example name="side" />
+<Components.Example file="border-radius/side" />
 
 ### Corners
 
 Use these helper classes to add border radius to specific corners.
-<Example name="corner" />
+<Components.Example file="border-radius/corner" />

@@ -4,21 +4,6 @@ related:
   - Switch API: /api/Switch/
 ---
 
-<script context="module">
-  export async function preload() {
-    let sources = await this.fetch('examples/Switch.json');
-    sources = await sources.json();
-    return { sources }
-  }
-</script>
-
-<script>
-  import Example, { setExamples } from '@/components/examples/Example.svelte';
-  import * as Examples from '@/examples/Switch';
-  export let sources;
-  setExamples([sources, Examples]);
-</script>
-
 # Switches
 
 The `Switch` component provides users the ability to choose between two distinct values. These are very similiar to a toggle, or on/off switch, though aesthetically different than a checkbox.
@@ -34,24 +19,24 @@ Below are some simple and complex examples.
 ### Groups
 
 You can combine switches into groups.
-<Example name="groups" />
+<Components.Example file="Snackbar/groups" />
 
 ### Colors
 
 You can change the colors of the switch and the labels.
-<Example name="colors" />
+<Components.Example file="Snackbar/colors" />
 
 ### States
 
 Here are some different states the switch can be in.
-<Example name="states" />
+<Components.Example file="Snackbar/states" />
 
 ### Dense
 
 Here are some different states the switch can be in.
-<Example name="dense" />
+<Components.Example file="Snackbar/dense" />
 
 ### Inset
 
 Here are some different states the switch can be in.
-<Example name="inset" />
+<Components.Example file="Snackbar/inset" />

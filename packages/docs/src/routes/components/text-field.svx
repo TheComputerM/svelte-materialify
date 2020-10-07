@@ -6,21 +6,6 @@ related:
   - TextField API: /api/TextField/
 ---
 
-<script context="module">
-  export async function preload() {
-    let sources = await this.fetch('examples/TextField.json');
-    sources = await sources.json();
-    return { sources }
-  }
-</script>
-
-<script>
-  import Example, { setExamples } from '@/components/examples/Example.svelte';
-  import * as Examples from '@/examples/TextField';
-  export let sources;
-  setExamples([sources, Examples]);
-</script>
-
 # Text Fields
 
 Text fields components are used for collecting user provided information.
@@ -35,44 +20,44 @@ All the properties which are not in the API list will be directly forwarded to t
 
 ## Usage
 
-<Example name="variants" />
+<Components.Example file="TextField/variants" />
 
 ## Examples
 
 ### Dense
 
 You can reduces the text field height with `dense` prop.
-<Example name="dense" />
+<Components.Example file="TextField/dense" />
 
 ### Disabled and Readonly
 
 Text fields can be `disabled` or `readonly`.
-<Example name="disabled" />
+<Components.Example file="TextField/disabled" />
 
 ### Icons
 
 You can add icons to the text field with `prepend`, `append`, `prepend-outer` and `append-outer` slots.
-<Example name="icons" />
+<Components.Example file="TextField/icons" />
 
 ### Clearable
 
 When `clearable`, you can customize the clear icon with clear-icon.
-<Example name="clearable" />
+<Components.Example file="TextField/clearable" />
 
 ### Counter
 
 Use a `counter` prop to inform a user of the character limit. The counter does not perform any validation by itself. You will need to pair it with either the internal validation system, or a 3rd party library.
-<Example name="counter" />
+<Components.Example file="TextField/counter" />
 
 ### Label
 
 Text field label can be defined in the default slot.
-<Example name="label" />
+<Components.Example file="TextField/label" />
 
 ### Password
 
 A password input can be used with an appended icon and callback to control the visibility.
-<Example name="password" />
+<Components.Example file="TextField/password" />
 
 ### Validation
 
@@ -87,4 +72,4 @@ const rules = [
 ];
 ```
 
-<Example name="validation" />
+<Components.Example file="TextField/validation" />

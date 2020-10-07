@@ -6,21 +6,6 @@ related:
   - Select: /components/selects/
 ---
 
-<script context="module">
-  export async function preload() {
-    let sources = await this.fetch('examples/Snackbar.json');
-    sources = await sources.json();
-    return { sources };
-  }
-</script>
-
-<script>
-  import Example, { setExamples } from '@/components/examples/Example.svelte';
-  import * as Examples from '@/examples/Snackbar';
-  export let sources;
-  setExamples([sources, Examples]);
-</script>
-
 # Snackbars
 
 The `Snackbar` component is used to display a quick message to a user. Snackbars support positioning, removal delay, and callbacks.
@@ -36,14 +21,14 @@ Below are some simple and complex examples.
 ### Timeout
 
 The timeout property lets you customize the delay before the `Snackbar` is hidden.
-<Example name="timeout" />
+<Components.Example file="Snackbar/timeout" />
 
 ### Variants
 
 Apply different styles to the snackbar using props such as text, outlined, and more.
-<Example name="variants" />
+<Components.Example file="Snackbar/variants" />
 
 ### Actions
 
 Add different actions to the snackbar.
-<Example name="actions" />
+<Components.Example file="Snackbar/actions" />

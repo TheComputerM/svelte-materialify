@@ -4,21 +4,6 @@ related:
   - Checkbox API: /api/Checkbox/
 ---
 
-<script context="module">
-  export async function preload() {
-    let sources = await this.fetch('examples/Checkbox.json');
-    sources = await sources.json();
-    return { sources };
-  }
-</script>
-
-<script>
-  import Example, { setExamples } from '@/components/examples/Example.svelte';
-  import * as Examples from '@/examples/Checkbox';
-  export let sources;
-  setExamples([sources, Examples]);
-</script>
-
 # Checkboxes
 
 Use `Checkbox` as a simple wrapper over checkbox, used to select multiple values, that also has the same features like `bind:group` and an indeterminate state.
@@ -34,14 +19,14 @@ Below are some simple and complex examples.
 ### Groups
 
 You can combine checkboxes into groups.
-<Example name="groups" />
+<Components.Example file="Checkbox/groups" />
 
 ### Colors
 
 You can change the colors of the checkbox and the labels.
-<Example name="colors" />
+<Components.Example file="Checkbox/colors" />
 
 ### States
 
 Here are some different states the checkbox can be in.
-<Example name="states" />
+<Components.Example file="Checkbox/states" />

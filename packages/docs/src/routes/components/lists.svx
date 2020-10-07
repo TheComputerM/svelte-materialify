@@ -6,21 +6,6 @@ related:
   - Subheader: /components/subheaders/
 ---
 
-<script context="module">
-  export async function preload() {
-    let sources = await this.fetch('examples/List.json');
-    sources = await sources.json();
-    return { sources };
-  }
-</script>
-
-<script>
-  import Example, { setExamples } from '@/components/examples/Example.svelte';
-  import * as Examples from '@/examples/List';
-  export let sources;
-  setExamples([sources, Examples]);
-</script>
-
 # Lists
 
 The `List` component is used to display information. It can contain an avatar, content, actions, subheaders and much more. Lists present content in a way that makes it easy to identify a specific item in a collection. They provide a consistent styling for organizing groups of text and images.
@@ -38,34 +23,34 @@ Below is a collection of simple to complex examples.
 ### Basic
 
 This is a basic example.
-<Example name="basic" />
+<Components.Example file="List/basic" />
 
 ### Disabled
 
 You cannot interact with disabled `List`.
-<Example name="disabled" />
+<Components.Example file="List/disabled" />
 
 ### Dense
 
 Smol
-<Example name="dense" />
+<Components.Example file="List/dense" />
 
 ### Avatar and Icons
 
 We can add avatars and icons to out lists.
-<Example name="avatar" />
+<Components.Example file="List/avatar" />
 
 ### Nested
 
 Using the `ListGroup` component you can create infinite levels of depth and set custom offsets.
-<Example name="nested" />
+<Components.Example file="List/nested" />
 
 ### Subheading and Dividers
 
 Lists can contain multiple subheaders and dividers.
-<Example name="subheading" />
+<Components.Example file="List/subheading" />
 
 ### Navigation
 
 Lists can receive an alternative `nav` styling that reduces the width `ListItem` takes up as well as adding a border radius.
-<Example name="navigation" />
+<Components.Example file="List/navigation" />

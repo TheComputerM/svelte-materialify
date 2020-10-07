@@ -12,7 +12,7 @@
 
 <script>
   import API from '@/components/API.svelte';
-  import Layout from '@/components/layout/MDXLayout.svelte';
+  import Layout from '@/components/layout/Layout.svelte';
 
   export let doc;
   export let name;

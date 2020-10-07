@@ -6,20 +6,8 @@ related:
   - NavigationDrawer: /components/navigation-drawer/
 ---
 
-<script context="module">
-  export async function preload() {
-    let sources = await this.fetch('examples/Breadcrumbs.json');
-    sources = await sources.json();
-    return { sources };
-  }
-</script>
-
 <script>
-  import Example, { setExamples } from '@/components/examples/Example.svelte';
-  import * as Examples from '@/examples/Breadcrumbs';
   import Playground from '@/playground/Breadcrumbs.svelte';
-  export let sources;
-  setExamples([sources, Examples]);
 </script>
 
 # Breadcrumbs
@@ -55,14 +43,14 @@ Below is a collection of simple to complex examples.
 ### Basic
 
 Basic examples for breadcrumbs.
-<Example name="basic" />
+<Components.Example file="Breadcrumbs/basic" />
 
 ### Custom Divider
 
 Breadcrumbs separator can be set using `divider` slot. You can also use material icons as dividers.
-<Example name="customDivider" />
+<Components.Example file="Breadcrumbs/customDivider" />
 
 ### Slots
 
 You can use the default slot to customize each breadcrumb item. Remember to add class `s-breadcrumb-item` to each item to add the default styles.
-<Example name="slots" />
+<Components.Example file="Breadcrumbs/slots" />

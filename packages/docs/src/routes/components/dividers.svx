@@ -5,21 +5,6 @@ related:
   - AppBar: /components/app-bar/
 ---
 
-<script context="module">
-  export async function preload() {
-    let sources = await this.fetch('examples/Divider.json');
-    sources = await sources.json();
-    return { sources };
-  }
-</script>
-
-<script>
-  import Example, { setExamples } from '@/components/examples/Example.svelte';
-  import * as Examples from '@/examples/Divider';
-  export let sources;
-  setExamples([sources, Examples]);
-</script>
-
 # Dividers
 
 The `Divider` component is used to separate sections of lists or layouts.
@@ -35,14 +20,14 @@ Below is a collection of simple to complex examples.
 ### Horizontal
 
 Here is the default divider.
-<Example name="horizontal" />
+<Components.Example file="Divider/horizontal" />
 
 ### Inset
 
 Inset dividers are moved 72px to the right. This will cause them to line up with list items.
-<Example name="inset" />
+<Components.Example file="Divider/inset" />
 
 ### Vertical
 
 Vertical dividers give you more tools for unique layouts.
-<Example name="vertical" />
+<Components.Example file="Divider/vertical" />

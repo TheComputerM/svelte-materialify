@@ -5,50 +5,29 @@ related:
   - Radio API: /api/Radio/
 ---
 
-<script context="module">
-  export async function preload() {
-    let sources = await this.fetch('examples/Radio.json');
-    sources = await sources.json();
-    return { sources }
-  }
-</script>
-
-<script>
-  import Example, { setExamples } from '@/components/examples/Example.svelte';
-  import * as Examples from '@/examples/Radio';
-  export let sources;
-  setExamples([sources, Examples]);
-</script>
-
 # Radio Button
 
 Radio component allows a user to select one option from a predefined set of mutually exclusive options.
 
-
 ## API
 
-- [Checkbox](/api/Checkbox/)
-
+- [Radio](/api/Radio/)
 
 ## Examples
 
 Below are some simple and complex examples.
 
-
 ### Groups
 
 You can combine radio buttons into groups.
-<Example name="groups" />
-
+<Components.Example file="Radio/groups" />
 
 ### Colors
 
 You can change the colors of the radio and the labels.
-<Example name="colors" />
-
+<Components.Example file="Radio/colors" />
 
 ### States
 
 Here are some different states the radio can be in.
-<Example name="states" />
-
+<Components.Example file="Radio/states" />

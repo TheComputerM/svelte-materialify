@@ -5,21 +5,6 @@ related:
   - Text Field: /components/text-field/
 ---
 
-<script context="module">
-  export async function preload() {
-    let sources = await this.fetch('examples/Textarea.json');
-    sources = await sources.json();
-    return { sources };
-  }
-</script>
-
-<script>
-  import Example, { setExamples } from '@/components/examples/Example.svelte';
-  import * as Examples from '@/examples/Textarea';
-  export let sources;
-  setExamples([sources, Examples]);
-</script>
-
 # Textarea
 
 Textarea components are used for collecting large amounts of textual data.
@@ -30,26 +15,26 @@ Textarea components are used for collecting large amounts of textual data.
 
 ## Usage
 
-<Example name="variants" />
+<Components.Example file="Textarea/variants" />
 
 ## Examples
 
 ### Icons
 
 You can add icons to the text field with `prepend`, `append`, `prepend-outer` and `append-outer` slots.
-<Example name="icons" />
+<Components.Example file="Textarea/icons" />
 
 ### Grow
 
 When using the `autogrow` prop, textarea's will automatically increase in size when the contained text exceeds its size.
-<Example name="grow" />
+<Components.Example file="Textarea/grow" />
 
 ### Counter
 
 The `counter` prop informs the user of a character limit for the Textarea.
-<Example name="counter" />
+<Components.Example file="Textarea/counter" />
 
 ### No Resize
 
 Textarea's have the option to remain the same size regardless of their content's size, using the `noResize` prop.
-<Example name="noResize" />
+<Components.Example file="Textarea/noResize" />
