@@ -1,16 +1,17 @@
 <script context="module">
   import Markup from '../Markup.svelte';
   import Example from '../examples/Example.svelte';
-  import { markdown } from '@/util/stores';
-  import Meta from '../Meta.svelte';
-  import RelatedPages from './RelatedPages.svelte';
-  import { Divider } from 'svelte-materialify/src';
   import Alert from '../Alert.svelte';
 
   export { Markup, Alert, Example };
 </script>
 
 <script>
+  import { markdown } from '@/util/stores';
+  import links from '@/util/links';
+  import Meta from '../Meta.svelte';
+  import RelatedPages from './RelatedPages.svelte';
+  import { Divider } from 'svelte-materialify/src';
   import { onMount, onDestroy, tick } from 'svelte';
 
   onMount(() => {
@@ -79,13 +80,8 @@
   <div class="mt-8 d-flex justify-space-between blue-grey-text text-darken-1">
     <span>
       <b>Edit This Page on</b>
-      <a
-        class="app-link"
-        rel="noopener"
-        href="https://github.com/TheComputerM/svelte-materialify/tree/master/packages/docs/src/routes">
-        GitHub
-      </a>
+      <a class="app-link" rel="noopener" href="{links.docs}/src/routes"> GitHub </a>
     </span>
-    <span class="text-body-2"> <b>Last Updated:</b> CURRENT_DATE </span>
+    <a rel="noopener" target="_blank" href={links.star}> <i class="mdi mdi-star" /> </a>
   </div>
 </section>

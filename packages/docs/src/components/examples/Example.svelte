@@ -1,6 +1,7 @@
 <script context="module">
-  import Prism from 'prismjs';
   import { theme } from '@/util/stores';
+  import links from '@/util/links';
+  import Prism from 'prismjs';
 </script>
 
 <script>
@@ -60,7 +61,7 @@
       </Button>
     {/if}
     <a
-      href="https://github.com/TheComputerM/svelte-materialify/tree/master/packages/docs/src/examples/{file}.svelte"
+      href="{links.docs}/src/examples/{file}.svelte"
       aria-label="GitHub"
       rel="noopener noreferrer"
       target="_blank">

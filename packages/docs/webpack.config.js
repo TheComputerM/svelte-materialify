@@ -111,7 +111,6 @@ module.exports = {
       new webpack.DefinePlugin({
         'process.browser': true,
         'process.env.NODE_ENV': JSON.stringify(mode),
-        CURRENT_DATE: new Date().toISOString().substring(0, 10),
       }),
     ].filter(Boolean),
     devtool: dev && 'inline-source-map',
