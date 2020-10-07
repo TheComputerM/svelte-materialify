@@ -7,16 +7,15 @@ related:
 
 <script context="module">
   export async function preload() {
-    let sources = await this.fetch('examples/components/textarea.json');
+    let sources = await this.fetch('examples/Textarea.json');
     sources = await sources.json();
     return { sources };
   }
 </script>
 
 <script>
-  import { API, Example, setExamples } from '@shared';
-  import * as Examples from '@examples/components/textarea';
-  import { Textarea as doc } from 'svelte-materialify-api';
+  import Example, { setExamples } from '@/components/examples/Example.svelte';
+  import * as Examples from '@/examples/Textarea';
   export let sources;
   setExamples([sources, Examples]);
 </script>
@@ -27,7 +26,7 @@ Textarea components are used for collecting large amounts of textual data.
 
 ## API
 
-<API {doc} />
+- [Textarea](/api/Textarea/)
 
 ## Usage
 

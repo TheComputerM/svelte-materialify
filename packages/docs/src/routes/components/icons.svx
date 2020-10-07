@@ -7,17 +7,16 @@ related:
 
 <script context="module">
   export async function preload() {
-    let sources = await this.fetch('examples/components/icons.json');
+    let sources = await this.fetch('examples/Icon.json');
     sources = await sources.json();
     return { sources };
   }
 </script>
 
 <script>
-  import { API, Example, setExamples } from '@shared';
-  import * as Examples from '@examples/components/icons';
-  import { Icon as doc } from 'svelte-materialify-api';
-  import Playground from '@playground/icons.svelte';
+  import Example, { setExamples } from '@/components/examples/Example.svelte';
+  import * as Examples from '@/examples/Icon';
+  import Playground from '@/playground/Icon.svelte';
   export let sources;
   setExamples([sources, Examples]);
 </script>
@@ -41,7 +40,7 @@ Icons come in two themes (light and dark), and can have any size.
 
 ## API
 
-<API {doc} />
+- [Icon](/api/Icon/)
 
 ## Examples
 

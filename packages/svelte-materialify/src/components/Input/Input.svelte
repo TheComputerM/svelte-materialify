@@ -26,7 +26,7 @@
   class:readonly
   class:disabled
   use:TextColor={color}>
-  <slot name="prepend" />
+  <slot name="prepend-outer" />
   <div class="s-input__control">
     <div class="s-input__slot">
       <slot />
@@ -43,5 +43,5 @@
       {/if}
     </div>
   </div>
-  <slot name="append" />
+  <slot name="append-outer" />
 </div>

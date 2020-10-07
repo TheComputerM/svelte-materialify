@@ -2,9 +2,9 @@
   import { onMount } from 'svelte';
   import { mdiGithub } from '@mdi/js';
   import { MaterialApp, AppBar, Button, Icon } from 'svelte-materialify/src';
-  import SiteNavigation from '../helpers/Navigation/SiteNavigation.svelte';
-  import Loading from '../helpers/Navigation/Loading.svelte';
-  import { theme } from '../helpers/stores';
+  import SiteNavigation from '@/components/navigation/SiteNavigation.svelte';
+  import Loading from '@/components/navigation/Loading.svelte';
+  import { theme } from '@/util/stores';
 
   export let segment;
 

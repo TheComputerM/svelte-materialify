@@ -8,24 +8,23 @@ related:
 
 <script context="module">
   export async function preload() {
-    let sources = await this.fetch('examples/components/alerts.json');
+    let sources = await this.fetch('examples/Alert.json');
     sources = await sources.json();
     return { sources };
   }
 </script>
 
 <script>
-  import { API, Example, setExamples } from '@shared';
-  import { Alert as doc } from 'svelte-materialify-api';
-  import * as Examples from '@examples/components/alerts';
-  import Playground from '@playground/alerts.svelte';
+  import Example, { setExamples } from '@/components/examples/Example.svelte';
+  import * as Examples from '@/examples/Alert';
+  import Playground from '@/playground/Alert.svelte';
   export let sources;
   setExamples([sources, Examples]);
 </script>
 
 # Alert
 
-The `<Alert>` component is used to convey important information to the user through the use contextual types icons and color. Many parts of an alert such as `border`, `icon`, and `color` can also be customized to fit almost any situation.
+The `<Components.Alert>` component is used to convey important information to the user through the use contextual types icons and color. Many parts of an alert such as `border`, `icon`, and `color` can also be customized to fit almost any situation.
 
 ## Playground
 
@@ -34,7 +33,7 @@ Alerts in their simplest form are a flat sheets of paper that display a message.
 
 ## API
 
-<API {doc} />
+- [Alert](/api/Alert/)
 
 ## Examples
 

@@ -8,17 +8,16 @@ related:
 
 <script context="module">
   export async function preload() {
-    let sources = await this.fetch('examples/components/chips.json');
+    let sources = await this.fetch('examples/Chip.json');
     sources = await sources.json();
     return { sources };
   }
 </script>
 
 <script>
-  import { API, Example, setExamples } from '@shared';
-  import { Chip as doc } from 'svelte-materialify-api';
-  import Playground from '@playground/chips.svelte';
-  import * as Examples from '@examples/components/chips';
+  import Example, { setExamples } from '@/components/examples/Example.svelte';
+  import Playground from '@/playground/Chip.svelte';
+  import * as Examples from '@/examples/Chip';
   export let sources;
   setExamples([sources, Examples]);
 </script>
@@ -34,7 +33,7 @@ Chips come in the following variations: Default, label, closeable, outlined, pil
 
 ## API
 
-<API {doc} />
+- [Chip](/api/Chip/)
 
 ## Examples
 

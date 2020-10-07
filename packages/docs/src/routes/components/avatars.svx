@@ -8,17 +8,16 @@ related:
 
 <script context="module">
   export async function preload() {
-    let sources = await this.fetch('examples/components/avatars.json');
+    let sources = await this.fetch('examples/Avatar.json');
     sources = await sources.json();
     return { sources };
   }
 </script>
 
 <script>
-  import { API, Example, setExamples } from '@shared';
-  import { Avatar as doc } from 'svelte-materialify-api';
-  import * as Examples from '@examples/components/avatars';
-  import Playground from '@playground/avatars.svelte';
+  import Example, { setExamples } from '@/components/examples/Example.svelte';
+  import * as Examples from '@/examples/Avatar';
+  import Playground from '@/playground/Avatar.svelte';
   export let sources;
   setExamples([sources, Examples]);
 </script>
@@ -35,7 +34,7 @@ Avatars in their simplest form display content within a circular container.
 
 ## API
 
-<API {doc} />
+- [Avatar](/api/Avatar/)
 
 ## Examples
 

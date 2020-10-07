@@ -5,10 +5,6 @@ related:
   - App: /components/material-app/
 ---
 
-<script>
-  import Alert from '@shared/Alert.svelte';
-</script>
-
 # Usage
 Once you have installed Svelte Materialify and other dependencies, it is time to learn how to use it.
 

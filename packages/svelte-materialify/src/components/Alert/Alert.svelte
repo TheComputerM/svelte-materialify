@@ -4,43 +4,19 @@
 
   const dispatch = createEventDispatcher();
 
-  import Button from '../Button/Button.svelte';
+  import Button from '../Button';
 
-  // Classes to add to alert.
   let klass = '';
   export { klass as class };
-
-  // Is the alert active/dismissed.
   export let visible = true;
-
-  // Alert transition function.
   export let transition = fade;
-
-  // Alert transition function options.
   export let transitionOpts = { duration: 0 };
-
-  // Makes alert dense.
   export let dense = false;
-
-  // Adds a thin border to alert.
   export let outlined = false;
-
-  // Applies the defined color to text and a low opacity background of the same.
   export let text = false;
-
-  // Removes the component's border-radius.
   export let tile = false;
-
-  // Adds a close icon that can hide the alert.
   export let dismissible = false;
-
-  /**
-   * The location of the border
-   * @type {left|right|top|bottom|false}
-   */
   export let border = false;
-
-  // Applies the defined color to the alert's border.
   export let coloredBorder = false;
 
   function dismiss() {

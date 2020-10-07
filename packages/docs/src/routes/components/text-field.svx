@@ -8,16 +8,15 @@ related:
 
 <script context="module">
   export async function preload() {
-    let sources = await this.fetch('examples/components/textField.json');
+    let sources = await this.fetch('examples/TextField.json');
     sources = await sources.json();
     return { sources }
   }
 </script>
 
 <script>
-  import { Alert, API, Example, setExamples } from '@shared';
-  import { TextField as doc } from 'svelte-materialify-api';
-  import * as Examples from '@examples/components/textField';
+  import Example, { setExamples } from '@/components/examples/Example.svelte';
+  import * as Examples from '@/examples/TextField';
   export let sources;
   setExamples([sources, Examples]);
 </script>
@@ -26,13 +25,13 @@ related:
 
 Text fields components are used for collecting user provided information.
 
-<Alert type='info'>
+<Components.Alert type='info'>
 All the properties which are not in the API list will be directly forwarded to the input element (such as maxlength).
-</Alert>
+</Components.Alert>
 
 ## API
 
-<API {doc} />
+- [TextField](/api/TextField/)
 
 ## Usage
 

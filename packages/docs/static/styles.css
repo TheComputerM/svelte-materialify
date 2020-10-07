@@ -8,11 +8,60 @@ html {
   scroll-margin-top: 64px;
 }
 .text-mono {
-  font-family: "Fira Code", "Roboto Mono", "Consolas", monospace;
+  font-family: 'Fira Code', 'Roboto Mono', 'Consolas', monospace;
 }
 pre,
 samp,
 code,
 kbd {
-  font-family: "Fira Code", "Roboto Mono", "Consolas", monospace;
+  font-family: 'Fira Code', 'Roboto Mono', 'Consolas', monospace;
+}
+code[class*='language-'],
+pre[class*='language-'] {
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+:not(pre) > code[class*='language-'] {
+  white-space: normal;
+  border-radius: 0.2rem;
+  padding: 0.1rem;
+}
+
+pre[class*='language-'] {
+  overflow: auto;
+  position: relative;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  padding-right: 4rem;
+}
+
+code[class*='language-'] {
+  padding: 0;
+}
+
+[class*='language-'] .namespace {
+  opacity: 0.7;
+}
+
+.token,
+code[class*='language-'],
+pre[class*='language-'] {
+  font-family: 'Fira Code', 'Roboto Mono', 'Consolas', monospace;
+  font-weight: 500;
+  transition: 150ms ease;
 }

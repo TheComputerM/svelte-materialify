@@ -8,7 +8,7 @@
   export let active = false;
   export let persistent = false;
   export let disabled = false;
-  export let width = '500px';
+  export let width = 500;
   export let fullscreen = false;
   export let transition = scale;
   export let overlay = {};

@@ -8,16 +8,15 @@ related:
 
 <script context="module">
   export async function preload() {
-    let sources = await this.fetch('examples/components/menus.json');
+    let sources = await this.fetch('examples/Menu.json');
     sources = await sources.json();
     return { sources }
   }
 </script>
 
 <script>
-  import { API, Example, setExamples } from '@shared';
-  import { Menu as doc } from 'svelte-materialify-api';
-  import * as Examples from '@examples/components/menus';
+  import Example, { setExamples } from '@/components/examples/Example.svelte';
+  import * as Examples from '@/examples/Menu';
   export let sources;
   setExamples([sources, Examples]);
 </script>
@@ -28,7 +27,7 @@ The `Menu` component shows a menu at the position of the element used to activat
 
 ## API
 
-<API {doc} />
+- [Menu](/api/Menu/)
 
 ## Usage
 

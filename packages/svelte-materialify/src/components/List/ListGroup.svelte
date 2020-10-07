@@ -36,7 +36,6 @@
 {#if active}
   <div
     transition:transition={transitionOpts}
-    role="group"
     aria-disabled={disabled}
     class="s-list-group {klass}"
     class:offset

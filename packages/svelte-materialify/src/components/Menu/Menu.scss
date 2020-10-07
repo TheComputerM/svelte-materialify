@@ -16,6 +16,7 @@
   backface-visibility: hidden;
   position: absolute;
   contain: content;
+  max-height: $menu-max-height;
   overflow: auto;
   @include elevation($menu-content-elevation);
 

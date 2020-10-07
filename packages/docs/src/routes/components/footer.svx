@@ -6,16 +6,15 @@ related:
 
 <script context="module">
   export async function preload() {
-    let sources = await this.fetch('examples/components/footer.json');
+    let sources = await this.fetch('examples/Footer.json');
     sources = await sources.json();
     return { sources };
   }
 </script>
 
 <script>
-  import { API, Example, setExamples } from '@shared';
-  import * as Examples from '@examples/components/footer';
-  import { Footer as doc } from 'svelte-materialify-api';
+  import Example, { setExamples } from '@/components/examples/Example.svelte';
+  import * as Examples from '@/examples/Footer';
   export let sources;
   setExamples([sources, Examples]);
 </script>
@@ -25,7 +24,7 @@ The `Footer` component is used for displaying general information that a user mi
 
 ## API
 
-<API {doc} />
+- [Footer](/api/Footer/)
 
 ## Examples
 

@@ -12,9 +12,11 @@
   export let active = false;
   export let dense = false;
   export let disabled = null;
-  export let selectable = !role;
   export let multiline = false;
-  export let ripple = getContext('S_ListItemRipple') || !selectable || false;
+  export let link = role;
+  export let selectable = !link;
+  export let ripple = getContext('S_ListItemRipple') || role || false;
+  export let style = null;
 
   const Group = getContext('S_ListItemGroup');
   let click = () => {};
@@ -38,15 +40,17 @@
   class="s-list-item {klass}"
   use:Class={[active && activeClass]}
   {role}
+  tabindex={link ? 0 : -1}
   aria-selected={role === 'option' ? active : null}
   class:dense
   class:disabled
-  class:selectable
   class:multiline
-  class:link={!selectable}
+  class:link
+  class:selectable
   use:Ripple={ripple}
   on:click={click}
-  on:click>
+  on:click
+  {style}>
   <slot name="prepend" />
   <div class="s-list-item__content">
     <div class="s-list-item__title">

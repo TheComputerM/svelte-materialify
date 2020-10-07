@@ -1,3 +1,5 @@
+/* eslint-disable implicit-arrow-linebreak */
+/* eslint-disable operator-linebreak */
 import alias from '@rollup/plugin-alias';
 import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
@@ -27,7 +29,7 @@ loadLanguages(['bash', 'scss', 'typescript']);
 const preprocess = [
   mdsvex({
     extension: '.svx',
-    layout: './src/helpers/Markdown/MDXLayout.svelte',
+    layout: './src/components/layout/MDXLayout.svelte',
     remarkPlugins: [
       require('remark-sectionize'),
       [
@@ -102,11 +104,7 @@ export default {
     output: config.client.output(),
     plugins: [
       alias({
-        entries: [
-          { find: '@examples', replacement: path.resolve(__dirname, 'examples') },
-          { find: '@shared', replacement: path.resolve(__dirname, 'shared') },
-          { find: '@playground', replacement: path.resolve(__dirname, 'playground') },
-        ],
+        entries: [{ find: '@', replacement: path.resolve(__dirname, 'src') }],
       }),
       replace({
         'process.browser': true,
@@ -164,11 +162,7 @@ export default {
     output: config.server.output(),
     plugins: [
       alias({
-        entries: [
-          { find: '@examples', replacement: path.resolve(__dirname, 'examples') },
-          { find: '@shared', replacement: path.resolve(__dirname, 'shared') },
-          { find: '@playground', replacement: path.resolve(__dirname, 'playground') },
-        ],
+        entries: [{ find: '@', replacement: path.resolve(__dirname, 'src') }],
       }),
       replace({
         'process.browser': false,

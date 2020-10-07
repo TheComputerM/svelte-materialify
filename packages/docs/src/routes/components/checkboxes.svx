@@ -6,16 +6,15 @@ related:
 
 <script context="module">
   export async function preload() {
-    let sources = await this.fetch('examples/components/checkboxes.json');
+    let sources = await this.fetch('examples/Checkbox.json');
     sources = await sources.json();
     return { sources };
   }
 </script>
 
 <script>
-  import { API, Example, setExamples } from '@shared';
-  import { Checkbox as doc } from 'svelte-materialify-api';
-  import * as Examples from '@examples/components/checkboxes';
+  import Example, { setExamples } from '@/components/examples/Example.svelte';
+  import * as Examples from '@/examples/Checkbox';
   export let sources;
   setExamples([sources, Examples]);
 </script>
@@ -26,7 +25,7 @@ Use `Checkbox` as a simple wrapper over checkbox, used to select multiple values
 
 ## API
 
-<API {doc} />
+- [Checkbox](/api/Checkbox/)
 
 ## Examples
 

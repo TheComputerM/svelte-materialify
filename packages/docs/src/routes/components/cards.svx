@@ -8,17 +8,16 @@ related:
 
 <script context="module">
   export async function preload() {
-    let sources = await this.fetch('examples/components/cards.json');
+    let sources = await this.fetch('examples/Card.json');
     sources = await sources.json();
     return { sources };
   }
 </script>
 
 <script>
-  import { API, Example, setExamples } from '@shared';
-  import { Button as doc } from 'svelte-materialify-api';
-  import Playground from '@playground/cards.svelte';
-  import * as Examples from '@examples/components/cards';
+  import Example, { setExamples } from '@/components/examples/Example.svelte';
+  import Playground from '@/playground/Card.svelte';
+  import * as Examples from '@/examples/Card';
   export let sources;
   setExamples([sources, Examples]);
 </script>

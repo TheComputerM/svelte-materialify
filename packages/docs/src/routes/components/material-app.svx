@@ -6,20 +6,13 @@ related:
   - Buttons: /components/buttons/
 ---
 
-<script>
-  import API from '@shared/API.svelte';
-  import { MaterialApp as doc } from 'svelte-materialify-api';
-</script>
-
 # Material App
 
 This component is the base for Svelte Materialify and helps you to bootstrap your app. All other svelte materialify components are required to be inside of this component in order for them to properly inherit styles and helpers. `MaterialApp` should ideally only be used once inside your app.
 
-
 ## API
 
-<API {doc} />
-
+- [MaterialApp](/api/MaterialApp/)
 
 ## Usage
 
@@ -37,22 +30,18 @@ The default theme is the light theme, this is how ideally your base layout shoul
 </script>
 
 <MaterialApp {theme}>
-  <Button on:click={toggleTheme}>Toggle Theme</Button>
+  <button on:click="{toggleTheme}">Toggle Theme</button>
   ...
 </MaterialApp>
 ```
-
 
 ## Manually set themes
 
 Suppose if you want your `div` to be dark themed no matter what the theme of the app is then add the class `theme--dark` to the `div` or `theme--light` if you want it to be light themed.
 
-
 ```html
 <MaterialApp {theme}>
   <!-- this div will have dark theme no matter the value of {theme} -->
-  <div class='theme--dark'>
-    ...
-  </div>
+  <div class="theme--dark">...</div>
 </MaterialApp>
 ```

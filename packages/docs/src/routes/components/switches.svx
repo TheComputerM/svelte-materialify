@@ -6,16 +6,15 @@ related:
 
 <script context="module">
   export async function preload() {
-    let sources = await this.fetch('examples/components/switches.json');
+    let sources = await this.fetch('examples/Switch.json');
     sources = await sources.json();
     return { sources }
   }
 </script>
 
 <script>
-  import { API, Example, setExamples } from '@shared';
-  import { Switch as doc } from 'svelte-materialify-api';
-  import * as Examples from '@examples/components/switches';
+  import Example, { setExamples } from '@/components/examples/Example.svelte';
+  import * as Examples from '@/examples/Switch';
   export let sources;
   setExamples([sources, Examples]);
 </script>
@@ -26,7 +25,7 @@ The `Switch` component provides users the ability to choose between two distinct
 
 ## API
 
-<API {doc} />
+- [Switch](/api/Switch/)
 
 ## Examples
 

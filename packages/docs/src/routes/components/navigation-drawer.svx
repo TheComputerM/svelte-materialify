@@ -8,17 +8,16 @@ related:
 
 <script context="module">
   export async function preload() {
-    let sources = await this.fetch('examples/components/navigationDrawer.json');
+    let sources = await this.fetch('examples/NavigationDrawer.json');
     sources = await sources.json();
     return { sources }
   }
 </script>
 
 <script>
-  import { API, Example, setExamples, Alert } from '@shared';
-  import { NavigationDrawer as doc } from 'svelte-materialify-api';
-  import * as Examples from '@examples/components/navigationDrawer';
-  import Playground from '@playground/navigation-drawer.svelte';
+  import Example, { setExamples } from '@/components/examples/Example.svelte';
+  import * as Examples from '@/examples/NavigationDrawer';
+  import Playground from '@/playground/NavigationDrawer.svelte';
   export let sources;
   setExamples([sources, Examples]);
 </script>
@@ -27,9 +26,9 @@ related:
 
 The `NavigationDrawer` component is what your users will utilize to navigate through the application. The navigation-drawer is pre-configured to work with or without any router right out the box. Within your application you will generally place the NavigationDrawer as a direct child of MaterialApp.
 
-<Alert type="warning">
+<Components.Alert type="warning">
 It is recommended that you do not toggle the navigation drawer with an <code>#if</code> block as if the navigation contains a large about of data, it is better for it to be always loaded in the DOM. Use the active prop instead.
-</Alert>
+</Components.Alert>
 
 ## Playground
 
@@ -37,7 +36,7 @@ It is recommended that you do not toggle the navigation drawer with an <code>#if
 
 ## API
 
-<API {doc} />
+- [NavigationDrawer](/api/NavigationDrawer/)
 
 ## Examples
 

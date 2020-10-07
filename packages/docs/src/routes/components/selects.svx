@@ -4,16 +4,15 @@ title: Selects
 
 <script context="module">
   export async function preload() {
-    let sources = await this.fetch('examples/components/selects.json');
+    let sources = await this.fetch('examples/Select.json');
     sources = await sources.json();
     return { sources };
   }
 </script>
 
 <script>
-  import { API, Example, setExamples } from '@shared';
-  import * as Examples from '@examples/components/selects';
-  import { Select as doc } from 'svelte-materialify-api';
+  import Example, { setExamples } from '@/components/examples/Example.svelte';
+  import * as Examples from '@/examples/Select';
   export let sources;
   setExamples([sources, Examples]);
 </script>
@@ -24,7 +23,7 @@ Select fields components are used for collecting user provided information from 
 
 ## API
 
-<API {doc} />
+- [Select](/api/Select/)
 
 ## Examples
 

@@ -8,17 +8,16 @@ related:
 
 <script context="module">
   export async function preload() {
-    let sources = await this.fetch('examples/components/appBar.json');
+    let sources = await this.fetch('examples/AppBar.json');
     sources = await sources.json();
     return { sources };
   }
 </script>
 
 <script>
-  import { API, Example, setExamples } from '@shared';
-  import { AppBar as doc } from 'svelte-materialify-api';
-  import * as Examples from '@examples/components/appBar';
-  import Playground from '@playground/app-bar.svelte';
+  import Example, { setExamples } from '@/components/examples/Example.svelte';
+  import * as Examples from '@/examples/AppBar';
+  import Playground from '@/playground/AppBar.svelte';
   export let sources;
   setExamples([sources, Examples]);
 </script>
@@ -34,7 +33,7 @@ The `AppBar` component is used for application-wide actions and information.
 
 ## API
 
-<API {doc} />
+- [AppBar](/api/AppBar/)
 
 ## Usage
 

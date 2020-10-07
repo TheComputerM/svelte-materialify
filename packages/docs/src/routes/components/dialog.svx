@@ -4,16 +4,15 @@ title: Dialog Component
 
 <script context="module">
   export async function preload() {
-    let sources = await this.fetch('examples/components/dialog.json');
+    let sources = await this.fetch('examples/Dialog.json');
     sources = await sources.json();
     return { sources }
   }
 </script>
 
 <script>
-  import { API, Example, setExamples } from '@shared';
-  import { Dialog as doc } from 'svelte-materialify-api';
-  import * as Examples from '@examples/components/dialog';
+  import Example, { setExamples } from '@/components/examples/Example.svelte';
+  import * as Examples from '@/examples/Dialog';
   export let sources;
   setExamples([sources, Examples]);
 </script>
@@ -24,7 +23,7 @@ The `Dialog` component inform users about a specific task and may contain critic
 
 ## API
 
-<API {doc} />
+- [Dialog](/api/Dialog/)
 
 ## Examples
 

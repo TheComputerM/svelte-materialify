@@ -7,16 +7,15 @@ related:
 
 <script context="module">
   export async function preload() {
-    let sources = await this.fetch('examples/components/radio.json');
+    let sources = await this.fetch('examples/Radio.json');
     sources = await sources.json();
     return { sources }
   }
 </script>
 
 <script>
-  import { API, Example, setExamples } from '@shared';
-  import { Checkbox as doc } from 'svelte-materialify-api';
-  import * as Examples from '@examples/components/radio';
+  import Example, { setExamples } from '@/components/examples/Example.svelte';
+  import * as Examples from '@/examples/Radio';
   export let sources;
   setExamples([sources, Examples]);
 </script>
@@ -28,7 +27,7 @@ Radio component allows a user to select one option from a predefined set of mutu
 
 ## API
 
-<API {doc} />
+- [Checkbox](/api/Checkbox/)
 
 
 ## Examples

@@ -8,17 +8,16 @@ related:
 
 <script context="module">
   export async function preload() {
-    let sources = await this.fetch('examples/components/breadcrumbs.json');
+    let sources = await this.fetch('examples/Breadcrumbs.json');
     sources = await sources.json();
     return { sources };
   }
 </script>
 
 <script>
-  import { API, Example, setExamples } from '@shared';
-  import { Breadcrumbs as doc } from 'svelte-materialify-api';
-  import * as Examples from '@examples/components/breadcrumbs';
-  import Playground from '@playground/breadcrumbs.svelte';
+  import Example, { setExamples } from '@/components/examples/Example.svelte';
+  import * as Examples from '@/examples/Breadcrumbs';
+  import Playground from '@/playground/Breadcrumbs.svelte';
   export let sources;
   setExamples([sources, Examples]);
 </script>
@@ -34,7 +33,7 @@ By default, breadcrumbs use a text divider. This can be any string.
 
 ## API
 
-<API {doc} />
+- [Breadcrumbs](/api/Breadcrumbs/)
 
 The array of item in the `items` prop.
 

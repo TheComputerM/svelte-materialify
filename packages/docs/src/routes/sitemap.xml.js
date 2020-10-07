@@ -1,4 +1,4 @@
-import routes from '../helpers/routes';
+import routes from '../util/routes';
 
 const tinydate = require('tinydate');
 

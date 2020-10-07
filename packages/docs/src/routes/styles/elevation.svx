@@ -7,15 +7,15 @@ related:
 
 <script context="module">
   export async function preload() {
-    let sources = await this.fetch('examples/styles/elevation.json');
+    let sources = await this.fetch('examples/elevation.json');
     sources = await sources.json();
     return { sources }
   }
 </script>
 
 <script>
-  import { Example, setExamples } from '@shared';
-  import * as Examples from '@examples/styles/elevation';
+  import Example, { setExamples } from '@/components/examples/Example.svelte';
+  import * as Examples from '@/examples/elevation';
 
   export let sources;
   setExamples([sources, Examples]);

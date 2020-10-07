@@ -6,7 +6,7 @@
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node helpers/generate.js"
+    "api": "node helpers/generate.js"
   },
   "devDependencies": {
     "@rollup/plugin-json": "^4.1.0",

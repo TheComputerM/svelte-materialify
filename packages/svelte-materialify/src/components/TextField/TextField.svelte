@@ -9,64 +9,23 @@
   import Input from '../Input';
   import Icon from '../Icon';
 
-  // Value of the text input.
   export let value = '';
-
-  // The color of the input when active.
   export let color = 'primary';
-
-  // Changes the variant of the input to filled.
   export let filled = false;
-
-  // Changes the variant of the input to solo.
   export let solo = false;
-
-  // Changes the variant of the input to outlined.
   export let outlined = false;
-
-  // Removes any shadow from the input.
   export let flat = false;
-
-  // Reduces the input height.
   export let dense = false;
-
-  // Adds a border radius to the input.
   export let rounded = false;
-
-  // Add input clear functionality.
   export let clearable = false;
-
-  // Puts input in readonly state.
   export let readonly = false;
-
-  // Disable the input.
   export let disabled = false;
-
-  // The input placeholder content.
   export let placeholder = null;
-
-  // Hint text.
   export let hint = '';
-
-  /**
-   * Creates counter for input length.
-   * @type {number}
-   */
   export let counter = false;
-
-  /**
-   * An array of functions which take input value as arguement and return error message.
-   * @type {Array}
-   */
   export let rules = [];
-
-  // Delays validation till blur.
   export let validateOnBlur = false;
-
-  // Error state of the input.
   export let error = false;
-
-  // Id of the text input.
   export let id = `s-input-${uid(5)}`;
 
   let focused = false;
@@ -110,10 +69,10 @@
   {counter}
   {messages}
   {error}>
-  <div slot="prepend">
-    <!-- Slot for prepend outside the input. -->
+  <!-- Slot for prepend outside the input. -->
+  <span slot="prepend-outer">
     <slot name="prepend-outer" />
-  </div>
+  </span>
   <div
     class="s-text-field__wrapper"
     class:filled
@@ -158,8 +117,8 @@
     <!-- Slot for append inside the input. -->
     <slot name="append" />
   </div>
-  <div slot="append">
-    <!-- Slot for append outside the input. -->
+  <!-- Slot for append outside the input. -->
+  <span slot="append-outer">
     <slot name="append-outer" />
-  </div>
+  </span>
 </Input>

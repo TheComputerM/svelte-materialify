@@ -1,0 +1,32 @@
+---
+title: Spacing
+related:
+  - Elevation: /styles/elevation/
+  - Content: /styles/content/
+  - Grid: /components/grid/
+---
+
+<script context="module">
+  export async function preload() {
+    let sources = await this.fetch('examples/spacing.json');
+    sources = await sources.json();
+    return { sources }
+  }
+</script>
+
+<script>
+  import Example, { setExamples } from '@/components/examples/Example.svelte';
+  import * as Examples from '@/examples/spacing';
+
+  export let sources;
+  setExamples([sources, Examples]);
+</script>
+
+# Spacing
+
+Update your layout without creating new classes. Spacing helpers are useful for modifying the padding and margin of an element.
+
+## Playground
+
+Use the playground to get a feel for what the different helper classes can do. For an explanation of how they work, see the How it works section below.
+<Example name="playground" />

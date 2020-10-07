@@ -8,15 +8,15 @@ related:
 
 <script context="module">
   export async function preload() {
-    let sources = await this.fetch('examples/actions/ripple.json');
+    let sources = await this.fetch('examples/Ripple.json');
     sources = await sources.json();
     return { sources };
   }
 </script>
 
 <script>
-  import { Example, setExamples } from '@shared';
-  import * as Examples from '@examples/actions/ripple';
+  import Example, { setExamples } from '@/components/examples/Example.svelte';
+  import * as Examples from '@/examples/Ripple';
   export let sources;
   setExamples([sources, Examples]);
 </script>

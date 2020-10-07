@@ -1,13 +1,9 @@
 <script>
-  // Classes to add to breadcrumb.
   let klass = '';
   export { klass as class };
-
-  // Make the breadcrumb large
   export let large = false;
-
-  // Array of objects for each breadcrumb
   export let items = [];
+  export let style = null;
 
   const defaults = {
     disabled: false,
@@ -23,7 +19,7 @@
 <style lang="scss" src="./Breadcrumbs.scss" global>
 </style>
 
-<ul class="s-breadcrumbs {klass}" class:large>
+<ul class="s-breadcrumbs {klass}" class:large {style}>
   {#each items as item, i}
     {#if i !== 0}
       <li class="divider">

@@ -6,10 +6,6 @@ related:
   - Content: /styles/content/
 ---
 
-<script>
-  import Alert from '@shared/Alert.svelte';
-</script>
-
 # Installation
 
 Get Started with Svelte Materialify, the best material UI component library for Svelte
@@ -63,9 +59,9 @@ $ npm i -D svelte-materialify svelte-preprocess sass postcss
 </script>
 ```
 
-<Alert type='info'>
+<Components.Alert type='info'>
   Now you can use SCSS and SASS in your styles.
-</Alert>
+</Components.Alert>
 
 Then create a **\_material-theme.scss** file and place it in any folder, lets put it in a folder called **theme**. Then include the path in the preprocess function in your __rollup.config.js__ (likewise follow the same in webpack but for svelte-loader).
 

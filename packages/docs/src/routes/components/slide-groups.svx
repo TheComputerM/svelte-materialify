@@ -4,15 +4,15 @@ title: Slide Group
 
 <script context="module">
   export async function preload() {
-    let sources = await this.fetch('examples/components/slideGroup.json');
+    let sources = await this.fetch('examples/SlideGroup.json');
     sources = await sources.json();
     return { sources };
   }
 </script>
 
 <script>
-  import { API, Example, setExamples } from '@shared';
-  import * as Examples from '@examples/components/slideGroup';
+  import Example, { setExamples } from '@/components/examples/Example.svelte';
+  import * as Examples from '@/examples/SlideGroup';
   export let sources;
   setExamples([sources, Examples]);
 </script>

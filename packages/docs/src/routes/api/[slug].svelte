@@ -12,8 +12,8 @@
 
 <script>
   /* eslint import/no-unresolved: 0 */
-  import API from '@shared/API.svelte';
-  import Layout from '../../helpers/Markdown/MDXLayout.svelte';
+  import API from '@/components/API.svelte';
+  import Layout from '@/components/layout/MDXLayout.svelte';
 
   export let doc;
   export let name;

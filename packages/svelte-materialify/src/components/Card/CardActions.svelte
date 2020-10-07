@@ -1,7 +1,7 @@
 <script>
   let klass = '';
-  export let style = null;
   export { klass as class };
+  export let style = null;
 </script>
 
 <style lang="scss" src="./CardActions.scss" global>

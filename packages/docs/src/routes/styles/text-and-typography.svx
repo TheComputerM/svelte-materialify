@@ -6,15 +6,15 @@ related:
 
 <script context="module">
   export async function preload() {
-    let sources = await this.fetch('examples/styles/typography.json');
+    let sources = await this.fetch('examples/typography.json');
     sources = await sources.json();
     return { sources }
   }
 </script>
 
 <script>
-  import { Example, setExamples } from '@shared';
-  import * as Examples from '@examples/styles/typography';
+  import Example, { setExamples } from '@/components/examples/Example.svelte';
+  import * as Examples from '@/examples/typography';
   export let sources;
   setExamples([sources, Examples]);
 </script>

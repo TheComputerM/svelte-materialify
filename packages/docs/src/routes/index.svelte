@@ -14,7 +14,7 @@
     Table,
     Footer,
   } from 'svelte-materialify/src';
-  import Meta from '@shared/Meta.svelte';
+  import Meta from '@/components/Meta.svelte';
 </script>
 
 <style lang="scss">
