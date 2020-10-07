@@ -11,7 +11,6 @@
 </script>
 
 <script>
-  /* eslint import/no-unresolved: 0 */
   import API from '@/components/API.svelte';
   import Layout from '@/components/layout/MDXLayout.svelte';
 
