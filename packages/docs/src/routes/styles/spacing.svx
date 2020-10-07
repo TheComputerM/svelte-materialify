@@ -1,9 +1,9 @@
 ---
 title: Spacing
 related:
-  - Elevation: /styles/elevation/
-  - Content: /styles/content/
-  - Grid: /components/grid/
+  - styles/elevation/
+  - styles/content/
+  - components/grid/
 ---
 
 # Spacing

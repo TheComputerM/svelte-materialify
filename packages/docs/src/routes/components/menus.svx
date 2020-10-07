@@ -1,9 +1,9 @@
 ---
 title: Menu Component
 related:
-  - Lists: /components/lists/
-  - Buttons: /components/buttons/
-  - Menu API: /api/Menu/
+  - components/lists
+  - components/buttons
+  - api/Menu
 ---
 
 # Menus

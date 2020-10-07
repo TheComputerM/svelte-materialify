@@ -1,9 +1,9 @@
 ---
 title: Button Component
 related:
-  - ButtonGroup: /components/button-groups/
-  - Alert: /components/alerts/
-  - Button API: /api/Button/
+  - components/button-groups
+  - components/alerts
+  - api/Button
 ---
 
 <script>

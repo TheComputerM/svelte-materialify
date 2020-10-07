@@ -1,9 +1,9 @@
 ---
 title: Snackbars
 related:
-  - Button: /components/buttons/
-  - Colors: /styles/colors/
-  - Select: /components/selects/
+  - components/buttons
+  - styles/colors
+  - components/selects
 ---
 
 # Snackbars

@@ -1,8 +1,8 @@
 ---
 title: Icons
 related:
-  - Button: /components/buttons/
-  - Card: /components/cards/
+  - components/buttons
+  - components/cards
 ---
 
 <script>

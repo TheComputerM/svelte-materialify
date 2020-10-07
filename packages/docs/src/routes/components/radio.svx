@@ -1,8 +1,8 @@
 ---
 title: Radio Component
 related:
-  - Checkbox: /components/checkboxes/
-  - Radio API: /api/Radio/
+  - components/checkboxes
+  - api/Radio
 ---
 
 # Radio Button

@@ -1,9 +1,9 @@
 ---
 title: Avatar Component
 related:
-  - Badge: /components/badges/
-  - List: /components/lists/
-  - Radio: /components/radio/
+  - components/badges
+  - components/lists
+  - components/radio
 ---
 
 <script>

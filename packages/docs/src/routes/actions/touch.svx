@@ -1,8 +1,8 @@
 ---
 title: Touch action
 related:
-  - Ripple: /actions/ripple/
-  - ClickOutside: /actions/click-outside/
+  - actions/ripple
+  - actions/click-outside
 ---
 
 # Touch

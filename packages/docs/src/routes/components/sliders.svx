@@ -1,8 +1,8 @@
 ---
 title: Sliders
 related:
-  - Select: /components/selects/
-  - Text Field: /components/text-field/
+  - components/selects
+  - components/text-field
 ---
 
 # Sliders

@@ -1,8 +1,8 @@
 ---
 title: Intersection action
 related:
-  - Mutate: /actions/mutate/
-  - ClickOutside: /actions/click-outside/
+  - actions/mutate
+  - actions/click-outside
 ---
 
 # Intersect

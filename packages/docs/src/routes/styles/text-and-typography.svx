@@ -1,7 +1,7 @@
 ---
 title: Text and Typography
 related:
-  - Usage: /getting-started/usage/
+  - getting-started/usage
 ---
 
 # Text and Typography

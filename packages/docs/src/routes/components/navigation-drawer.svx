@@ -1,9 +1,9 @@
 ---
 title: NavigationDrawer Component
 related:
-  - Lists: /components/lists/
-  - Icon: /components/icons/
-  - AppBar: /components/app-bar/
+  - components/lists
+  - components/icons
+  - components/app-bar
 ---
 
 <script>

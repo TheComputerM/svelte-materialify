@@ -1,8 +1,8 @@
 ---
 title: Expansion Panel Component
 related:
-  - ExpansionPanels API: /api/ExpansionPanels/
-  - ExpansionPanel API: /api/ExpansionPanel/
+  - api/ExpansionPanels
+  - api/ExpansionPanel
 ---
 
 # Expansion Panels

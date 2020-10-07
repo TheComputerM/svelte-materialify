@@ -1,9 +1,9 @@
 ---
 title: Lists
 related:
-  - ItemGroup: /components/item-groups/
-  - ListItemGroup: /components/list-item-groups/
-  - Subheader: /components/subheaders/
+  - components/item-groups
+  - components/list-item-groups
+  - components/subheaders
 ---
 
 # Lists

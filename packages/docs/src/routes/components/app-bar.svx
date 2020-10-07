@@ -1,9 +1,9 @@
 ---
 title: App Bar Component
 related:
-  - Button: /components/buttons/
-  - Icon: /components/icons/
-  - AppBar API: /api/AppBar/
+  - components/buttons
+  - components/icons
+  - api/AppBar
 ---
 
 <script>

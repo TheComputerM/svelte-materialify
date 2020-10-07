@@ -1,9 +1,9 @@
 ---
 title: Material App
 related:
-  - Installation: /getting-started/installation/
-  - Usage: /getting-started/usage/
-  - Buttons: /components/buttons/
+  - getting-started/installation
+  - getting-started/usage
+  - components/buttons
 ---
 
 # Material App

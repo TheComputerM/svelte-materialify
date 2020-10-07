@@ -1,9 +1,9 @@
 ---
 title: Breadcrumbs Component
 related:
-  - Switch: /components/switches/
-  - Button: /components/buttons/
-  - NavigationDrawer: /components/navigation-drawer/
+  - components/switches
+  - components/buttons
+  - components/navigation-drawer
 ---
 
 <script>

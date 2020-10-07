@@ -1,9 +1,9 @@
 ---
 title: Chip Component
 related:
-  - Avatar: /components/avatars/
-  - Icon: /components/icons/
-  - Select: /components/selects/
+  - components/avatars
+  - components/icons
+  - components/selects
 ---
 
 <script>

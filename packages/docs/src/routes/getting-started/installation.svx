@@ -1,9 +1,9 @@
 ---
 title: Getting Started with Svelte Materialify
 related:
-  - Alerts: /components/alerts/
-  - Buttons: /components/buttons/
-  - Content: /styles/content/
+  - components/alerts
+  - components/buttons
+  - styles/content
 ---
 
 # Installation

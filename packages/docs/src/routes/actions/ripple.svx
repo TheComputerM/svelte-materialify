@@ -1,9 +1,9 @@
 ---
 title: Ripple action
 related:
-  - Button: /components/buttons/
-  - ExpansionPanel: /components/expansion-panels/
-  - Colors: /styles/colors/
+  - components/buttons
+  - components/expansion-panels
+  - styles/colors
 ---
 
 # Ripple

@@ -1,9 +1,9 @@
 ---
 title: Card Component
 related:
-  - Button: /components/buttons/
-  - Image: /components/images/
-  - Text and Typography: /styles/text-and-typography/
+  - components/buttons
+  - components/images
+  - styles/text-and-typography
 ---
 
 

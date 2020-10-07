@@ -1,8 +1,8 @@
 ---
 title: Dividers
 related:
-  - Lists: /components/lists/
-  - AppBar: /components/app-bar/
+  - components/lists
+  - components/app-bar
 ---
 
 # Dividers

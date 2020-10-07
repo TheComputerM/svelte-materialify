@@ -1,8 +1,8 @@
 ---
 title: Flex
 related:
-  - Usage: /getting-started/usage/
-  - Text and Typography: /styles/text-and-typography/
+  - getting-started/usage/
+  - Text and styles/text-and-typography/
 ---
 
 <script>

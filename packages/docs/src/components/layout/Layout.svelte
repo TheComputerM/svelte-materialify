@@ -3,8 +3,8 @@
   import Example from '../examples/Example.svelte';
   import { markdown } from '@/util/stores';
   import Meta from '../Meta.svelte';
-  import ReadyForMore from './ReadyForMore.svelte';
-  import { Row, Divider } from 'svelte-materialify/src';
+  import RelatedPages from './RelatedPages.svelte';
+  import { Divider } from 'svelte-materialify/src';
   import Alert from '../Alert.svelte';
 
   export { Markup, Alert, Example };
@@ -72,18 +72,7 @@
 <section class="markdown-container pa-4 pa-sm-6 pa-md-8">
   <slot />
   {#if related}
-    <section>
-      <h2 class="text-h4 mb-3">Ready For More?</h2>
-      <p>
-        Continue to learn more about svelte materialify with content selected by the
-        creator.
-      </p>
-      <Row class="justify-space-between">
-        {#each related as item}
-          <ReadyForMore item={Object.entries(item)} />
-        {/each}
-      </Row>
-    </section>
+    <RelatedPages {related} />
   {/if}
   <br /><br />
   <Divider />

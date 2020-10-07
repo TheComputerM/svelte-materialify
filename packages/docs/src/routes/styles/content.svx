@@ -1,8 +1,8 @@
 ---
 title: Content
 related:
-  - Colors: /styles/colors/
-  - Reset: /styles/reset/
+  - styles/colors/
+  - styles/reset/
 ---
 
 # Content

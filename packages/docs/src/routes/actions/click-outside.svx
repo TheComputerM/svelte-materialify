@@ -1,9 +1,9 @@
 ---
 title: Click Outside action
 related:
-  - Ripple: /actions/ripple/
-  - Intersect: /actions/intersect/
-  - Menu: /components/menus/
+  - actions/ripple
+  - actions/intersect
+  - components/menus
 ---
 
 # ClickOutside

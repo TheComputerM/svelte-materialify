@@ -1,8 +1,8 @@
 ---
 title: Badges
 related:
-  - Icons: /components/icons/
-  - Alerts: /components/alerts/
+  - components/icons
+  - components/alerts
 ---
 
 
