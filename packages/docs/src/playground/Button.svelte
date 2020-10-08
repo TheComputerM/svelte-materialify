@@ -1,5 +1,5 @@
 <script>
-  import Playground from '@/components/examples/Playground.svelte';
+  import Playground from '@/components/doc/Playground.svelte';
   import { Button, Icon } from 'svelte-materialify/src';
 
   const variants = ['depressed', 'outlined', 'rounded', 'text', 'fab', 'icon', 'tile'];

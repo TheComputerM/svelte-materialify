@@ -3,4 +3,4 @@ __sapper__
 static
 dist
 packages/docs/src/*.js
-packages/docs/src/components/examples/
+packages/docs/src/components/doc/

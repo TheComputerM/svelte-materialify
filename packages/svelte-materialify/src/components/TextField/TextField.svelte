@@ -9,6 +9,8 @@
   import Input from '../Input';
   import Icon from '../Icon';
 
+  let klass = '';
+  export { klass as class };
   export let value = '';
   export let color = 'primary';
   export let filled = false;
@@ -27,6 +29,7 @@
   export let validateOnBlur = false;
   export let error = false;
   export let id = `s-input-${uid(5)}`;
+  export let style = null;
 
   let focused = false;
   $: labelActive = !!placeholder || value || focused;
@@ -59,7 +62,7 @@
 </script>
 
 <Input
-  class="s-text-field"
+  class="s-text-field {klass}"
   {color}
   {readonly}
   {disabled}
@@ -68,7 +71,8 @@
   {hint}
   {counter}
   {messages}
-  {error}>
+  {error}
+  {style}>
   <!-- Slot for prepend outside the input. -->
   <span slot="prepend-outer">
     <slot name="prepend-outer" />

@@ -10,8 +10,8 @@ const pkg = require('./package.json');
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
-
 const alias = {
+  svelte: path.resolve('../../', 'node_modules', 'svelte'),
   '@': path.resolve(__dirname, 'src'),
 };
 const extensions = ['.mjs', '.js', '.json', '.svelte', '.html', '.svx'];
@@ -20,7 +20,7 @@ loadLanguages(['bash', 'scss', 'typescript']);
 const preprocess = [
   mdsvex({
     extension: '.svx',
-    layout: './src/components/layout/Layout.svelte',
+    layout: './src/components/doc/Layout.svelte',
     remarkPlugins: [
       require('remark-sectionize'),
       [
@@ -102,6 +102,10 @@ module.exports = {
             },
           },
         },
+        {
+          test: /\.worker\.js$/,
+          use: { loader: 'worker-loader' },
+        },
       ],
     },
     mode,
@@ -136,6 +140,10 @@ module.exports = {
               dev,
             },
           },
+        },
+        {
+          test: /\.worker\.js$/,
+          use: { loader: 'worker-loader' },
         },
       ],
     },

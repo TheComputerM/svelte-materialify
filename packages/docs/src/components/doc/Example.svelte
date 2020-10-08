@@ -17,16 +17,16 @@
     /* webpackChunkName: "examples" */
     /* webpackMode: "lazy-once" */
     `../../examples/${file}.svelte`
-  ).then((data) => {
-    component = data.default;
+  ).then(({ default: data }) => {
+    component = data;
   });
 
   import(
     /* webpackChunkName: "examples-source" */
     /* webpackMode: "lazy-once" */
     `!raw-loader!../../examples/${file}.svelte`
-  ).then((data) => {
-    code = Prism.highlight(data.default, Prism.languages.html, 'html');
+  ).then(({ default: data }) => {
+    code = Prism.highlight(data, Prism.languages.html, 'html');
   });
 
   $: colorInvertable = $theme === 'light';
@@ -40,9 +40,8 @@
     border-radius: 4px;
     border: thin solid var(--theme-dividers);
   }
-
   .example-toolbar {
-    background-color: var(--theme-app-bar);
+    border-bottom: thin solid var(--theme-dividers);
   }
 </style>
 
@@ -79,14 +78,12 @@
     </Button>
   </div>
   {#if codeVisible}
-    <div transition:slide={{ duration: 250 }}>
-      <pre class="language-html">
-        <code
-          class="language-html">
-          {@html code}
-        </code>
-      </pre>
-    </div>
+    <pre transition:slide={{ duration: 250 }} class="language-html ma-0">
+      <code
+        class="language-html">
+        {@html code}
+      </code>
+    </pre>
   {/if}
   <div class="pa-2" class:theme--dark={codeThemeDark} {style}>
     <svelte:component this={component} />

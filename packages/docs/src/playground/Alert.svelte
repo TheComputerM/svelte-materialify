@@ -1,5 +1,5 @@
 <script>
-  import Playground from '@/components/examples/Playground.svelte';
+  import Playground from '@/components/doc/Playground.svelte';
   import { Alert, Icon } from 'svelte-materialify/src';
 
   const variants = ['dense', 'outlined', 'text', 'tile'];

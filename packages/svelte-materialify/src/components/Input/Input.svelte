@@ -13,6 +13,7 @@
   export let messages = [];
   export let messagesCount = 1;
   export let error = false;
+  export let style = null;
 </script>
 
 <style lang="scss" global>
@@ -25,6 +26,7 @@
   class:error
   class:readonly
   class:disabled
+  {style}
   use:TextColor={color}>
   <slot name="prepend-outer" />
   <div class="s-input__control">

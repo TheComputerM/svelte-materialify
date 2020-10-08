@@ -102,6 +102,6 @@ export default [
     text: 'API',
     icon: 'flask-empty-outline',
     openIcon: 'flask-outline',
-    items: API.names.map((i) => ({ text: i, href: `/api/${i}/` })),
+    items: API.names.map((i) => ({ text: `${i} API`, href: `/api/${i}/` })),
   },
 ];

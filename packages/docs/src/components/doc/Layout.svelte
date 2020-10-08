@@ -1,7 +1,7 @@
 <script context="module">
-  import Markup from '../Markup.svelte';
-  import Example from '../examples/Example.svelte';
-  import Alert from '../Alert.svelte';
+  import Markup from './Markup.svelte';
+  import Example from './Example.svelte';
+  import Alert from './Alert.svelte';
 
   export { Markup, Alert, Example };
 </script>

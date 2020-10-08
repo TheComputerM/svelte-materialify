@@ -1,5 +1,5 @@
 <script>
-  import Playground from '@/components/examples/Playground.svelte';
+  import Playground from '@/components/doc/Playground.svelte';
   import { Chip, Avatar, Icon } from 'svelte-materialify/src';
 
   const variants = ['label', 'link', 'outlined', 'pill'];
