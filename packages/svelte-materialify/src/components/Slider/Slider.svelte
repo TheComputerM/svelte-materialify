@@ -107,7 +107,7 @@
 
 <!-- svelte-ignore a11y-label-has-associated-control -->
 <Input class="s-slider" {color} {readonly} {disabled} {hint}>
-  <div slot="prepend">
+  <div slot="prepend-outer">
     <!-- Slot for prepend outside the input. -->
     <slot name="prepend" />
   </div>
@@ -117,7 +117,7 @@
     bind:this={sliderElement}
     {disabled}
     {style} />
-  <div slot="append">
+  <div slot="append-outer">
     <!-- Slot for append outside the input. -->
     <slot name="append" />
   </div>
