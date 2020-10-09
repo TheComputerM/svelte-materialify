@@ -1,8 +1,8 @@
 <script>
   import { onMount } from 'svelte';
   import { mdiGithub } from '@mdi/js';
-  import { MaterialApp, AppBar, Button, Icon } from 'svelte-materialify/src';
-  // import Search from '@/components/navigation/Search.svelte';
+  import { MaterialApp, AppBar, Button, Icon, Divider } from 'svelte-materialify/src';
+  import Search from '@/components/navigation/Search.svelte';
   import SiteNavigation from '@/components/navigation/SiteNavigation.svelte';
   import Loading from '@/components/navigation/Loading.svelte';
   import { theme } from '@/util/stores';
@@ -75,10 +75,10 @@
     </div>
     <a href="/" slot="title" rel="external" class="text--primary"> Svelte Materialify </a>
     <div style="flex-grow:1" />
-    <!-- {#if !mobile}
+    {#if !mobile}
       <Search />
       <Divider class="ml-4 mr-4" inset vertical />
-    {/if} -->
+    {/if}
     <a
       href="https://github.com/TheComputerM/svelte-materialify"
       target="_blank"
