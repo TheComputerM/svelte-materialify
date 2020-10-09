@@ -80,6 +80,16 @@
     }
   }
 
+  & > {
+    [slot='prepend'] {
+      margin-right: $text-field-prepend-append-margin;
+    }
+
+    [slot='append'] {
+      margin-right: $text-field-prepend-append-margin;
+    }
+  }
+
   &.outlined {
     &::before {
       top: 0;

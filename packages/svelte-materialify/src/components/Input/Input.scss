@@ -69,8 +69,8 @@
   }
 
   & > {
-    [slot='prepend'],
-    [slot='append'] {
+    [slot='prepend-outer'],
+    [slot='append-outer'] {
       align-self: flex-start;
       display: inline-flex;
       margin-bottom: 4px;
@@ -78,11 +78,11 @@
       line-height: 1;
     }
 
-    [slot='prepend'] {
+    [slot='prepend-outer'] {
       margin-right: $input-prepend-append-outer-margin;
     }
 
-    [slot='append'] {
+    [slot='append-outer'] {
       margin-left: $input-prepend-append-outer-margin;
     }
   }
