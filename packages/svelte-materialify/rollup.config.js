@@ -29,11 +29,11 @@ export default [
   {
     input: 'src/index.js',
     output: output('dist'),
-    plugins: [svelte({ hydratable: true, preprocess }), ...plugins],
+    plugins: [svelte({ preprocess }), ...plugins],
   },
   {
     input: 'src/index.js',
     output: output('dist/ssr'),
-    plugins: [svelte({ generate: 'ssr', hydratable: true, preprocess }), ...plugins],
+    plugins: [svelte({ generate: 'ssr', preprocess }), ...plugins],
   },
 ];
