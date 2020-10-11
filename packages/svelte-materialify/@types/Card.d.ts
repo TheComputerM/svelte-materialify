@@ -28,15 +28,3 @@ interface CardProps {
 declare class Card extends SvelteComponent<CardProps> {}
 
 export default Card;
-
-interface CardChildrenProps {
-  class?: string;
-  style?: string;
-}
-
-declare class CardTitle extends SvelteComponent<CardChildrenProps> {}
-declare class CardSubtitle extends SvelteComponent<CardChildrenProps> {}
-declare class CardText extends SvelteComponent<CardChildrenProps> {}
-declare class CardActions extends SvelteComponent<CardChildrenProps> {}
-
-export { CardTitle, CardSubtitle, CardText, CardActions };
