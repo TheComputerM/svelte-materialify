@@ -84,6 +84,7 @@ export default [
       },
       { text: 'Snackbars', href: '/components/snackbars/' },
       { text: 'Subheader', href: '/components/subheader/' },
+      { text: 'Tooltips', href: '/components/tooltips/' },
     ],
   },
   {

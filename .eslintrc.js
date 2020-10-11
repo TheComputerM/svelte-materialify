@@ -50,7 +50,7 @@ module.exports = {
         ExportDeclaration: { consistent: true },
       },
     ],
-    'operator-linebreak': ['error', 'none', { overrides: { '=': 'after' } }],
+    'operator-linebreak': ['error', 'after'],
     'no-nested-ternary': 'off',
     'import/no-extraneous-dependencies': 'off',
     'global-require': 'off',
