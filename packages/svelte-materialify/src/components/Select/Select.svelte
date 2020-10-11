@@ -24,6 +24,7 @@
   export let max = Infinity;
   export let chips = false;
   export let disabled = null;
+  export let format = (val) => val.join(', ');
 </script>
 
 <style lang="scss" src="./Select.scss" global>
@@ -38,7 +39,7 @@
         {solo}
         {dense}
         {disabled}
-        value={value.join(', ')}
+        value={format(value)}
         {placeholder}
         {hint}
         readonly>
