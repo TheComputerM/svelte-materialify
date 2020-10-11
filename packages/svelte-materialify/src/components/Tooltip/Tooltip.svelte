@@ -2,26 +2,13 @@
   import { onMount } from 'svelte';
   import BackgroundColor from '../../internal/BackgroundColor';
 
-  // Add class to tooltip.
   let klass = '';
   export { klass as class };
-
-  // Color of the tooltip when active.
   export let color = 'default';
-
-  // Controls whether the component is visible or hidden.
   export let active = false;
-
-  // Aligns the component towards the top.
   export let top = false;
-
-  // Aligns the component towards the bottom.
   export let bottom = false;
-
-  // Aligns the component towards the left.
   export let left = false;
-
-  // Aligns the component towards the right.
   export let right = false;
 
   let innerWidth;
