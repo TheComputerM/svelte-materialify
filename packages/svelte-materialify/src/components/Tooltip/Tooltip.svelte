@@ -91,27 +91,38 @@
     tooltip.style.top = calculateTop();
   };
 
-  const handleMouseOver = () => {
+  const handleMouseEnter = () => {
     active = true;
   };
 
-  const handleMouseOut = () => {
+  const handleMouseLeave = () => {
     active = false;
   };
 
   const handleResize = () => {
-    updateTooltipPosition();
+    if (active) {
+      updateTooltipPosition();
+    }
   };
 
   const handleActiveUpdate = () => ({
     update: () => {
-      updateTooltipPosition();
+      if (active) {
+        updateTooltipPosition();
+      }
     },
   });
 
   onMount(() => {
+    activator.addEventListener('mouseenter', handleMouseEnter);
+    activator.addEventListener('mouseleave', handleMouseLeave);
     document.body.appendChild(tooltip);
     updateTooltipPosition();
+
+    return () => {
+      activator.removeEventListener('mouseenter', handleMouseEnter);
+      activator.removeEventListener('mouseleave', handleMouseLeave);
+    };
   });
 </script>
 
@@ -125,11 +136,7 @@
   bind:scrollY
   on:resize={handleResize} />
 
-<div
-  on:mouseover={handleMouseOver}
-  on:mouseout={handleMouseOut}
-  bind:this={activator}
-  class="s-tooltip__wrapper">
+<div bind:this={activator} class="s-tooltip__wrapper">
   <!-- Slot for the element that display the tooltip -->
   <slot />
 </div>
