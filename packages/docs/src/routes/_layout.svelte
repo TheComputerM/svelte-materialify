@@ -30,9 +30,8 @@
 
     import('svelte-materialify/src/utils/breakpoints').then(({ default: data }) => {
       breakpoints = data;
+      checkMobile();
     });
-
-    checkMobile();
 
     return unsubscribe;
   });
