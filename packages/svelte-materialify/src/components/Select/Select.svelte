@@ -24,8 +24,7 @@
   export let max = Infinity;
   export let chips = false;
   export let disabled = null;
-  const join = (val) => val.join(', ');
-  export let format = join;
+  export let format = (val) => val.join(', ');
 </script>
 
 <style lang="scss" src="./Select.scss" global>
