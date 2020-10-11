@@ -14,9 +14,17 @@
   const icon = icons[type];
 </script>
 
+<style lang="scss" global>
+  .s-alert--doc {
+    .s-alert__content p:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+</style>
+
 <svelte:options immutable={true} />
 
-<Alert class="{type}-text" border="left" text>
+<Alert class="s-alert--doc {type}-text" border="left" text>
   <div slot="icon">
     <Icon class="mdi mdi-{icon}" />
   </div>
