@@ -2,17 +2,46 @@
   "name": "svelte-materialify",
   "version": "0.1.10",
   "description": "A material design framework/component library for Svelte, with full support for light and dark themes and customisability.",
-  "module": "dist/index.mjs",
+  "keywords": [
+    "svelte",
+    "sveltejs",
+    "svelte-components",
+    "material-design",
+    "material",
+    "material-theme",
+    "material-components",
+    "component-library",
+    "svelte-material",
+    "ui",
+    "ui-components",
+    "ui-kit"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheComputerM/svelte-materialify",
+    "directory": "packages/svelte-materialify"
+  },
+  "license": "MIT",
+  "author": "TheComputerM",
   "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "types": "@types/index.d.ts",
+  "files": [
+    "src",
+    "dist",
+    "@types"
+  ],
   "scripts": {
     "build": "concurrently \"yarn:build:js\" \"yarn:build:css\"",
-    "build:js": "rollup -c",
     "build:css": "sass src/styles/_global.scss:dist/global.css -I theme -s compressed --no-source-map",
-    "test": "jest",
+    "build:js": "rollup -c",
     "check": "svelte-check --workspace src/components",
-    "version": "standard-changelog && git add CHANGELOG.md",
-    "prepublishOnly": "concurrently \"yarn:build:js\" \"yarn:build:css\""
+    "prepublishOnly": "concurrently \"yarn:build:js\" \"yarn:build:css\"",
+    "test": "jest",
+    "version": "standard-changelog && git add CHANGELOG.md"
+  },
+  "dependencies": {
+    "uid": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
@@ -38,36 +67,7 @@
     "svelte-jester": "^1.1.5",
     "svelte-preprocess": "^4.5.1"
   },
-  "files": [
-    "src",
-    "dist",
-    "@types"
-  ],
   "peerDependencies": {
     "svelte": ">=3.28.0"
-  },
-  "dependencies": {
-    "uid": "^1.0.0"
-  },
-  "author": "TheComputerM",
-  "license": "MIT",
-  "repository": {
-    "url": "https://github.com/TheComputerM/svelte-materialify",
-    "type": "git",
-    "directory": "packages/svelte-materialify"
-  },
-  "keywords": [
-    "svelte",
-    "sveltejs",
-    "svelte-components",
-    "material-design",
-    "material",
-    "material-theme",
-    "material-components",
-    "component-library",
-    "svelte-material",
-    "ui",
-    "ui-components",
-    "ui-kit"
-  ]
+  }
 }

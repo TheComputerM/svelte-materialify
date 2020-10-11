@@ -10,20 +10,20 @@
     ]
   },
   "scripts": {
-    "build": "lerna run build",
-    "docs": "lerna run docs",
     "api": "lerna run api",
+    "build": "lerna run build",
     "dev": "lerna run --stream dev",
-    "test": "lerna run --stream test",
-    "release": "lerna publish",
+    "docs": "lerna run docs",
+    "fmt": "prettier . -w --plugin-search-dir=.",
+    "fmt:check": "prettier . -c --plugin-search-dir=.",
     "lint": "concurrently \"yarn:lint:js\" \"yarn:lint:css\"",
+    "lint:css": "stylelint **/*.scss --syntax scss",
+    "lint:css:fix": "stylelint **/*.scss --syntax scss --fix",
     "lint:fix": "concurrently \"yarn:lint:js:fix\" \"yarn:lint:css:fix\"",
     "lint:js": "eslint . --ext .svelte,.js",
     "lint:js:fix": "eslint . --ext .svelte,.js --fix",
-    "lint:css": "stylelint **/*.scss --syntax scss",
-    "lint:css:fix": "stylelint **/*.scss --syntax scss --fix",
-    "fmt:check": "prettier . -c --plugin-search-dir=.",
-    "fmt": "prettier . -w --plugin-search-dir=."
+    "release": "lerna publish",
+    "test": "lerna run --stream test"
   },
   "husky": {
     "hooks": {
@@ -32,9 +32,9 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts,svelte,scss,md}": "prettier -w --plugin-search-dir=.",
+    "*.scss": "stylelint --syntax scss --fix",
     "*.{js,svelte}": "eslint --ext .svelte,.js --fix",
-    "*.scss": "stylelint --syntax scss --fix"
+    "*.{js,ts,svelte,scss,md}": "prettier -w --plugin-search-dir=."
   },
   "dependencies": {
     "husky": "^4.3.0",
