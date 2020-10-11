@@ -20,7 +20,7 @@
 
   const calcXOverflow = (calculatedLeft, width) => {
     const xOverflow = calculatedLeft + width - innerWidth + 12;
-    let newLeft = 0;
+    let newLeft = calculatedLeft;
 
     if ((!left || right) && xOverflow > 0) {
       newLeft = Math.max(calculatedLeft - xOverflow, 0);
@@ -36,7 +36,7 @@
     const tooltipHeight = tooltip.offsetHeight;
     const totalHeight = calculatedTop + tooltipHeight;
     const isOverflowing = toTop < totalHeight;
-    let newTop = 0;
+    let newTop = calculatedTop;
 
     // If overflowing bottom and offset
     if (isOverflowing && activator.top > tooltipHeight) {
