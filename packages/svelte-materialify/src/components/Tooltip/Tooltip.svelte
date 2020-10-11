@@ -20,7 +20,7 @@
 
   const calcXOverflow = (calculatedLeft, width) => {
     const xOverflow = calculatedLeft + width - innerWidth + 12;
-    let newLeft = 0;
+    let newLeft = calculatedLeft;
 
     if ((!left || right) && xOverflow > 0) {
       newLeft = Math.max(calculatedLeft - xOverflow, 0);
@@ -36,7 +36,7 @@
     const tooltipHeight = tooltip.offsetHeight;
     const totalHeight = calculatedTop + tooltipHeight;
     const isOverflowing = toTop < totalHeight;
-    let newTop = 0;
+    let newTop = calculatedTop;
 
     // If overflowing bottom and offset
     if (isOverflowing && activator.top > tooltipHeight) {
@@ -91,18 +91,27 @@
     tooltip.style.top = calculateTop();
   };
 
-  const handleMouseOver = () => {
-    updateTooltipPosition();
+  const handleMouseEnter = () => {
     active = true;
   };
 
-  const handleMouseOut = () => {
+  const handleMouseLeave = () => {
     active = false;
   };
 
   const handleResize = () => {
-    updateTooltipPosition();
+    if (active) {
+      updateTooltipPosition();
+    }
   };
+
+  const handleActiveUpdate = () => ({
+    update: () => {
+      if (active) {
+        updateTooltipPosition();
+      }
+    },
+  });
 
   onMount(() => {
     document.body.appendChild(tooltip);
@@ -121,8 +130,8 @@
   on:resize={handleResize} />
 
 <div
-  on:mouseover={handleMouseOver}
-  on:mouseout={handleMouseOut}
+  on:mouseenter={handleMouseEnter}
+  on:mouseleave={handleMouseLeave}
   bind:this={activator}
   class="s-tooltip__wrapper">
   <!-- Slot for the element that display the tooltip -->
@@ -137,6 +146,7 @@
   class:top
   class:left
   class:right
+  use:handleActiveUpdate={active}
   use:BackgroundColor={color}>
   <!-- Slot for the content of the tooltip -->
   <slot name="tip" />
