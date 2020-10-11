@@ -1,0 +1,37 @@
+@import './variables';
+
+.s-tooltip__wrapper {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.s-tooltip {
+  background: $tooltip-background-color;
+  color: $tooltip-text-color;
+  border-radius: $tooltip-border-radius;
+  font-size: $tooltip-font-size;
+  line-height: round($tooltip-font-size * 1.6);
+  z-index: $tooltip-z-index;
+  display: inline-block;
+  padding: $tooltip-padding;
+  position: absolute;
+  text-transform: initial;
+  text-align: center;
+  width: auto;
+  opacity: 0;
+  pointer-events: none;
+  transform-origin: center;
+  transform: scale(0);
+  transition-property: opacity, transform;
+  transition-duration: $tooltip-transition-leave-duration, 0s;
+  transition-delay: 0s, $tooltip-transition-leave-duration;
+  transition-timing-function: $tooltip-transition-timing-function;
+
+  &.active {
+    opacity: 0.9;
+    transform: scale(1);
+    transition-property: transform, opacity;
+    transition-duration: $tooltip-transition-enter-duration;
+    transition-delay: 0s;
+  }
+}

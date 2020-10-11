@@ -1,0 +1,11 @@
+@import '../../styles/variables';
+
+$tooltip-background-color: rgba(material-color('grey', 'darken-2'), 0.9) !default;
+$tooltip-text-color: material-color('shades', 'white') !default;
+$tooltip-border-radius: $border-radius-root !default;
+$tooltip-font-size: 14px !default;
+$tooltip-transition-timing-function: map-get($transitions, 'linear-out-slow-in') !default;
+$tooltip-transition-enter-duration: 300ms !default;
+$tooltip-transition-leave-duration: 300ms !default;
+$tooltip-padding: 5px 16px !default;
+$tooltip-z-index: 1000 !default;
