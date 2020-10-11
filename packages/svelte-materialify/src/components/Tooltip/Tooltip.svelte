@@ -114,15 +114,8 @@
   });
 
   onMount(() => {
-    activator.addEventListener('mouseenter', handleMouseEnter);
-    activator.addEventListener('mouseleave', handleMouseLeave);
     document.body.appendChild(tooltip);
     updateTooltipPosition();
-
-    return () => {
-      activator.removeEventListener('mouseenter', handleMouseEnter);
-      activator.removeEventListener('mouseleave', handleMouseLeave);
-    };
   });
 </script>
 
@@ -136,7 +129,11 @@
   bind:scrollY
   on:resize={handleResize} />
 
-<div bind:this={activator} class="s-tooltip__wrapper">
+<div
+  on:mouseenter={handleMouseEnter}
+  on:mouseleave={handleMouseLeave}
+  bind:this={activator}
+  class="s-tooltip__wrapper">
   <!-- Slot for the element that display the tooltip -->
   <slot />
 </div>
