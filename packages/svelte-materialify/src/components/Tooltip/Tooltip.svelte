@@ -92,7 +92,6 @@
   };
 
   const handleMouseOver = () => {
-    updateTooltipPosition();
     active = true;
   };
 
@@ -103,6 +102,12 @@
   const handleResize = () => {
     updateTooltipPosition();
   };
+
+  const handleActiveUpdate = () => ({
+    update: () => {
+      updateTooltipPosition();
+    },
+  });
 
   onMount(() => {
     document.body.appendChild(tooltip);
@@ -137,6 +142,7 @@
   class:top
   class:left
   class:right
+  use:handleActiveUpdate={active}
   use:BackgroundColor={color}>
   <!-- Slot for the content of the tooltip -->
   <slot name="tip" />
