@@ -1,0 +1,132 @@
+{
+  "version": 3,
+  "name": "Tooltip",
+  "data": [
+    {
+      "visibility": "public",
+      "description": "Add class to tooltip.",
+      "keywords": [],
+      "name": "class",
+      "kind": "const",
+      "static": false,
+      "readonly": true,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "localName": "klass"
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Color of the tooltip when active.",
+      "name": "color",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "defaultValue": "default"
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Controls whether the component is visible or hidden.",
+      "name": "active",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Aligns the component towards the top.",
+      "name": "top",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Aligns the component towards the bottom.",
+      "name": "bottom",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Aligns the component towards the left.",
+      "name": "left",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "Aligns the component towards the right.",
+      "name": "right",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    }
+  ],
+  "computed": [],
+  "methods": [],
+  "components": [],
+  "description": null,
+  "keywords": [],
+  "events": [],
+  "slots": [
+    {
+      "name": "default",
+      "description": "Slot for the element that display the tooltip",
+      "visibility": "public",
+      "parameters": []
+    },
+    {
+      "name": "tip",
+      "description": "Slot for the content of the tooltip",
+      "visibility": "public",
+      "parameters": []
+    }
+  ],
+  "refs": []
+}

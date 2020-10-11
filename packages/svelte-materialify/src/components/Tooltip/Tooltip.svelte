@@ -138,6 +138,7 @@
   on:mouseout={handleMouseOut}
   bind:this={activator}
   class="s-tooltip__wrapper">
+  <!-- Slot for the element that display the tooltip -->
   <slot />
 </div>
 
@@ -150,5 +151,6 @@
   class:left
   class:right
   use:BackgroundColor={color}>
+  <!-- Slot for the content of the tooltip -->
   <slot name="tip" />
 </span>

@@ -51,6 +51,7 @@
     "Tabs",
     "Textarea",
     "TextField",
+    "Tooltip",
     "VirtualList",
     "Window",
     "WindowItem"
