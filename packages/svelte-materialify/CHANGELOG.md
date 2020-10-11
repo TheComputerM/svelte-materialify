@@ -1,3 +1,11 @@
+## [0.1.11](https://github.com/TheComputerM/svelte-materialify/compare/v0.1.10...v0.1.11) (2020-10-11)
+
+### Bug Fixes
+
+- generate non hydratable bundle ([416e7de](https://github.com/TheComputerM/svelte-materialify/commit/416e7de630da48e875c3965b10674368cb13d965))
+- **Input:** append and prepend margin ([a91d597](https://github.com/TheComputerM/svelte-materialify/commit/a91d597ba8fee60c0b7dd0e0f5b5bc75e3b0a14a))
+- **Slider:** append and prepend ([dfae4aa](https://github.com/TheComputerM/svelte-materialify/commit/dfae4aa3a8792679426e0908b11f245f4cdba957))
+
 ## [0.1.10](https://github.com/TheComputerM/svelte-materialify/compare/v0.1.9...v0.1.10) (2020-09-28)
 
 ### Bug Fixes

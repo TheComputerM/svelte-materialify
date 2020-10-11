@@ -1,6 +1,6 @@
 {
   "name": "docs",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development sapper dev --ext \".svelte .svx\"",
@@ -14,8 +14,8 @@
     "polka": "next",
     "prismjs": "^1.21.0",
     "sirv": "^1.0.0",
-    "svelte-materialify": "^0.1.10",
-    "svelte-materialify-api": "^0.1.10"
+    "svelte-materialify": "^0.1.11",
+    "svelte-materialify-api": "^0.1.11"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",
