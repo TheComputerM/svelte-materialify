@@ -22,7 +22,7 @@ The `Tooltip` component is useful for conveying information when a user hovers o
 
 <Components.Alert type="info">
 
-  In order for `Tooltip` to be positioned correctly a position prop ( `top` | `bottom` | `left` | `right` ) is required
+In order for Tooltip to be positioned correctly a position prop (`top`|`bottom`|`left`|`right`) is required
 
 </Components.Alert>
 

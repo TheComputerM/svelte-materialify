@@ -1,10 +1,7 @@
-<script context="module">
+<script>
   import { theme } from '@/util/stores';
   import links from '@/util/links';
-  import Prism from 'prismjs';
-</script>
-
-<script>
+  import { onMount } from 'svelte';
   import { slide } from 'svelte/transition';
   import { Icon, Button } from 'svelte-materialify/src';
 
@@ -12,21 +9,13 @@
   export let style = null;
 
   let component;
-  let code;
-  import(
-    /* webpackChunkName: "examples" */
-    /* webpackMode: "lazy-once" */
-    `../../examples/${file}.svelte`
-  ).then(({ default: data }) => {
-    component = data;
-  });
-
-  import(
-    /* webpackChunkName: "examples-source" */
-    /* webpackMode: "lazy-once" */
-    `!raw-loader!../../examples/${file}.svelte`
-  ).then(({ default: data }) => {
-    code = Prism.highlight(data, Prism.languages.html, 'html');
+  let source = '';
+  const [dir, name] = file.split('/');
+  onMount(() => {
+    import(`../../examples/${dir}/${name}.svelte`).then((data) => {
+      component = data.default;
+      source = data.source;
+    });
   });
 
   $: colorInvertable = $theme === 'light';
@@ -81,7 +70,7 @@
     <pre transition:slide={{ duration: 250 }} class="language-html ma-0">
       <code
         class="language-html">
-        {@html code}
+        {@html source}
       </code>
     </pre>
   {/if}

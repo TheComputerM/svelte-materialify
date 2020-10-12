@@ -35,33 +35,29 @@
 </script>
 
 <style global>
-  .markdown-container h1 + p {
+  h1 + p {
     font-size: 1.25rem;
     font-weight: 300;
     margin-bottom: 2rem;
   }
-  .markdown-container .heading {
+  .heading {
     position: relative;
   }
-  .markdown-container .heading > a {
+  .heading > a {
     position: absolute;
     top: 0;
     left: -1em;
     font-size: 0.75em;
     opacity: 0;
   }
-  .markdown-container .heading:hover > a {
+  .heading:hover > a {
     opacity: 1;
   }
-
-  .markdown-container .app-link {
+  .app-link {
     font-weight: 500;
   }
-  .markdown-container .app-link::after {
-    content: '\F03CC';
-    font: normal normal normal 24px/1 'Material Design Icons';
-    margin-left: 4px;
-    font-size: inherit;
+  .app-link > span {
+    margin-left: 2px;
   }
   .markdown-container > section section {
     margin-bottom: 3rem;
@@ -80,8 +76,11 @@
   <div class="mt-8 d-flex justify-space-between blue-grey-text text-darken-1">
     <span>
       <b>Edit This Page on</b>
-      <a class="app-link" rel="noopener" href="{links.docs}/src/routes"> GitHub </a>
+      <a class="app-link" rel="noopener" target="_blank" href="{links.docs}/src/routes">
+        GitHub
+        <span> <i class="mdi mdi-open-in-new" /> </span>
+      </a>
     </span>
-    <a rel="noopener" target="_blank" href={links.star}> <i class="mdi mdi-star" /> </a>
+    <span> <b>Last Updated</b>: CURRENT_DATE </span>
   </div>
 </section>

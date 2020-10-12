@@ -14,11 +14,9 @@
   const icon = icons[type];
 </script>
 
-<style lang="scss" global>
-  .s-alert--doc {
-    .s-alert__content p:last-child {
-      margin-bottom: 0 !important;
-    }
+<style global>
+  .s-alert--doc p {
+    margin-bottom: 0 !important;
   }
 </style>
 
