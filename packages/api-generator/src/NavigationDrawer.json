@@ -4,7 +4,7 @@
   "data": [
     {
       "visibility": "public",
-      "description": null,
+      "description": "classes added to the drawer",
       "keywords": [],
       "name": "class",
       "kind": "const",
@@ -19,7 +19,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "width of the drawer",
       "keywords": [],
       "name": "width",
       "kind": "let",
@@ -34,7 +34,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "sets the state of the drawer",
       "keywords": [],
       "name": "active",
       "kind": "let",
@@ -49,7 +49,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "changes position of drawer to fixed",
       "keywords": [],
       "name": "fixed",
       "kind": "let",
@@ -64,7 +64,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "changes position of drawer to absolute",
       "keywords": [],
       "name": "absolute",
       "kind": "let",
@@ -79,7 +79,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "places the navigation drawer on the right",
       "keywords": [],
       "name": "right",
       "kind": "let",
@@ -94,7 +94,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "condenses navigation drawer width",
       "keywords": [],
       "name": "mini",
       "kind": "let",
@@ -109,7 +109,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "a clipped drawer rests under the AppBar",
       "keywords": [],
       "name": "clipped",
       "kind": "let",
@@ -124,7 +124,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "removes the border",
       "keywords": [],
       "name": "borderless",
       "kind": "let",
@@ -139,7 +139,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "width assigned when the mini prop is turned on",
       "keywords": [],
       "name": "miniWidth",
       "kind": "let",
@@ -154,7 +154,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "height assigned when the clipped prop is turned on",
       "keywords": [],
       "name": "clippedHeight",
       "kind": "let",
@@ -169,7 +169,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "transiton function for the drawer",
       "keywords": [],
       "name": "transition",
       "kind": "let",
@@ -183,7 +183,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "options for the transition",
       "keywords": [],
       "name": "transitionOpts",
       "kind": "let",
@@ -197,7 +197,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "styles added to the drawer",
       "keywords": [],
       "name": "style",
       "kind": "let",

@@ -18,7 +18,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "classes added to item group",
       "keywords": [],
       "name": "class",
       "kind": "const",
@@ -33,7 +33,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "class to add to item when active",
       "keywords": [],
       "name": "activeClass",
       "kind": "let",
@@ -48,7 +48,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "value of the group",
       "keywords": [],
       "name": "value",
       "kind": "let",
@@ -62,7 +62,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "allows to select multiple items",
       "keywords": [],
       "name": "multiple",
       "kind": "let",
@@ -77,7 +77,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "makes sure atleast one item is selected",
       "keywords": [],
       "name": "mandatory",
       "kind": "let",
@@ -92,7 +92,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "max number of selection",
       "keywords": [],
       "name": "max",
       "kind": "let",
@@ -121,7 +121,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "styles added to item group",
       "keywords": [],
       "name": "style",
       "kind": "let",

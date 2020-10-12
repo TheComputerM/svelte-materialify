@@ -4,7 +4,7 @@
   "data": [
     {
       "visibility": "public",
-      "description": null,
+      "description": "overlay is visible or not",
       "keywords": [],
       "name": "active",
       "kind": "let",
@@ -19,7 +19,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "the opacity of the overlay",
       "keywords": [],
       "name": "opacity",
       "kind": "let",
@@ -34,7 +34,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "the color of the overlay",
       "keywords": [],
       "name": "color",
       "kind": "let",
@@ -49,7 +49,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "the z-index of the overlay",
       "keywords": [],
       "name": "index",
       "kind": "let",
@@ -64,7 +64,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "makes the position of overlay absolute",
       "keywords": [],
       "name": "absolute",
       "kind": "let",
@@ -79,7 +79,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "options passed to the fade transition",
       "keywords": [],
       "name": "fadeOptions",
       "kind": "let",
@@ -93,7 +93,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "styles added to the overlay",
       "keywords": [],
       "name": "style",
       "kind": "let",
@@ -108,7 +108,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "classes added to overlay",
       "keywords": [],
       "name": "class",
       "kind": "const",

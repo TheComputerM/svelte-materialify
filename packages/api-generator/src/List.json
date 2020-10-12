@@ -4,7 +4,7 @@
   "data": [
     {
       "visibility": "public",
-      "description": null,
+      "description": "classes added to the list",
       "keywords": [],
       "name": "class",
       "kind": "const",
@@ -19,7 +19,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "reduces padding og list items",
       "keywords": [],
       "name": "dense",
       "kind": "let",
@@ -34,7 +34,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "disables the list",
       "keywords": [],
       "name": "disabled",
       "kind": "let",
@@ -49,7 +49,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "removes box shadow from the list",
       "keywords": [],
       "name": "flat",
       "kind": "let",
@@ -64,7 +64,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "adds border radius to the list",
       "keywords": [],
       "name": "rounded",
       "kind": "let",
@@ -79,7 +79,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "makes the list items navigation style",
       "keywords": [],
       "name": "nav",
       "kind": "let",
@@ -94,7 +94,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "adds a thin outline to the list",
       "keywords": [],
       "name": "outlined",
       "kind": "let",
@@ -109,7 +109,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "styles to add to the list",
       "keywords": [],
       "name": "style",
       "kind": "let",

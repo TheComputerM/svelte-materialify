@@ -4,7 +4,7 @@
   "data": [
     {
       "visibility": "public",
-      "description": null,
+      "description": "classes added to the input",
       "keywords": [],
       "name": "class",
       "kind": "const",
@@ -19,7 +19,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "value of the input",
       "keywords": [],
       "name": "value",
       "kind": "let",
@@ -34,7 +34,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "color of the input",
       "keywords": [],
       "name": "color",
       "kind": "let",
@@ -49,7 +49,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "makes the input dense",
       "keywords": [],
       "name": "dense",
       "kind": "let",
@@ -64,7 +64,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "makes the input readonly",
       "keywords": [],
       "name": "readonly",
       "kind": "let",
@@ -79,7 +79,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "disables the input",
       "keywords": [],
       "name": "disabled",
       "kind": "let",
@@ -165,6 +165,21 @@
         "type": "boolean"
       },
       "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "style",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "object",
+        "type": "object"
+      },
+      "defaultValue": null
     }
   ],
   "computed": [],
@@ -175,7 +190,7 @@
   "events": [],
   "slots": [
     {
-      "name": "prepend",
+      "name": "prepend-outer",
       "description": null,
       "visibility": "public",
       "parameters": []
@@ -187,7 +202,7 @@
       "parameters": []
     },
     {
-      "name": "append",
+      "name": "append-outer",
       "description": null,
       "visibility": "public",
       "parameters": []

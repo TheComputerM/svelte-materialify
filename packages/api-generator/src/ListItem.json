@@ -4,7 +4,7 @@
   "data": [
     {
       "visibility": "public",
-      "description": null,
+      "description": "classes added to the listitem",
       "keywords": [],
       "name": "class",
       "kind": "const",
@@ -19,7 +19,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "classes added when active",
       "keywords": [],
       "name": "activeClass",
       "kind": "let",
@@ -34,7 +34,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "value to use in ListItemGroup",
       "keywords": [],
       "name": "value",
       "kind": "let",
@@ -49,7 +49,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "specify active state",
       "keywords": [],
       "name": "active",
       "kind": "let",
@@ -64,7 +64,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "makes the listitem dense",
       "keywords": [],
       "name": "dense",
       "kind": "let",
@@ -79,7 +79,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "disables the listitem",
       "keywords": [],
       "name": "disabled",
       "kind": "let",
@@ -94,21 +94,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
-      "keywords": [],
-      "name": "selectable",
-      "kind": "let",
-      "static": false,
-      "readonly": false,
-      "type": {
-        "kind": "type",
-        "text": "any",
-        "type": "any"
-      }
-    },
-    {
-      "visibility": "public",
-      "description": null,
+      "description": "there is no word wrap",
       "keywords": [],
       "name": "multiline",
       "kind": "let",
@@ -125,6 +111,34 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
+      "name": "link",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
+    },
+    {
+      "visibility": "public",
+      "description": "makes text selectable if true",
+      "keywords": [],
+      "name": "selectable",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
+    },
+    {
+      "visibility": "public",
+      "description": "options for the ripple action",
+      "keywords": [],
       "name": "ripple",
       "kind": "let",
       "static": false,
@@ -134,6 +148,21 @@
         "text": "any",
         "type": "any"
       }
+    },
+    {
+      "visibility": "public",
+      "description": "styles added to listitem",
+      "keywords": [],
+      "name": "style",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "object",
+        "type": "object"
+      },
+      "defaultValue": null
     }
   ],
   "computed": [],

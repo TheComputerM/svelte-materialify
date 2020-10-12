@@ -19,7 +19,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "controls whether the dialog is visible or hidden",
       "keywords": [],
       "name": "active",
       "kind": "let",
@@ -34,7 +34,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "clicking outside of the dialog will not deactivate it",
       "keywords": [],
       "name": "persistent",
       "kind": "let",
@@ -49,7 +49,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "disables the ability to open the dialog",
       "keywords": [],
       "name": "disabled",
       "kind": "let",
@@ -64,7 +64,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "sets the width for the dialog",
       "keywords": [],
       "name": "width",
       "kind": "let",
@@ -72,14 +72,14 @@
       "readonly": false,
       "type": {
         "kind": "type",
-        "text": "string",
-        "type": "string"
+        "text": "number",
+        "type": "number"
       },
-      "defaultValue": "500px"
+      "defaultValue": 500
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "changes dialog for fullscreen display",
       "keywords": [],
       "name": "fullscreen",
       "kind": "let",
@@ -94,7 +94,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "transition of the dialog",
       "keywords": [],
       "name": "transition",
       "kind": "let",
@@ -108,7 +108,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "props for the overlay",
       "keywords": [],
       "name": "overlay",
       "kind": "let",

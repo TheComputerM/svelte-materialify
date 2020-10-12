@@ -4,7 +4,7 @@
   "data": [
     {
       "visibility": "public",
-      "description": null,
+      "description": "classes added to the icon",
       "keywords": [],
       "name": "class",
       "kind": "const",
@@ -19,7 +19,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "size of the icon",
       "keywords": [],
       "name": "size",
       "kind": "let",
@@ -34,7 +34,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "degress by which to rotate the icon",
       "keywords": [],
       "name": "rotate",
       "kind": "let",
@@ -49,7 +49,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "makes the icon spin",
       "keywords": [],
       "name": "spin",
       "kind": "let",
@@ -64,7 +64,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "disables the icon",
       "keywords": [],
       "name": "disabled",
       "kind": "let",
@@ -79,7 +79,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "svg path for the icon",
       "keywords": [],
       "name": "path",
       "kind": "let",
@@ -94,7 +94,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "label for the icon",
       "keywords": [],
       "name": "label",
       "kind": "let",
@@ -109,7 +109,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "styles added to the icon",
       "keywords": [],
       "name": "style",
       "kind": "let",

@@ -4,7 +4,7 @@
   "data": [
     {
       "visibility": "public",
-      "description": null,
+      "description": "classes added to the appbar",
       "keywords": [],
       "name": "class",
       "kind": "const",
@@ -19,7 +19,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "height of the appbar",
       "keywords": [],
       "name": "height",
       "kind": "let",
@@ -34,7 +34,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "removes the border radius",
       "keywords": [],
       "name": "tile",
       "kind": "let",
@@ -49,7 +49,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "removes the box shadow",
       "keywords": [],
       "name": "flat",
       "kind": "let",
@@ -64,7 +64,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "reduces the height",
       "keywords": [],
       "name": "dense",
       "kind": "let",
@@ -79,7 +79,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "increases the height",
       "keywords": [],
       "name": "prominent",
       "kind": "let",
@@ -94,7 +94,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "makes the positon of the appbar fixed",
       "keywords": [],
       "name": "fixed",
       "kind": "let",
@@ -109,7 +109,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "makes the positon of the appbar absolute",
       "keywords": [],
       "name": "absolute",
       "kind": "let",
@@ -124,7 +124,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "collapses the appbar reducing its maximum width",
       "keywords": [],
       "name": "collapsed",
       "kind": "let",
@@ -139,7 +139,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "styles added to the appbar",
       "keywords": [],
       "name": "style",
       "kind": "let",

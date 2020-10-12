@@ -4,7 +4,7 @@
   "data": [
     {
       "visibility": "public",
-      "description": null,
+      "description": "theme for the app",
       "keywords": [],
       "name": "theme",
       "kind": "let",

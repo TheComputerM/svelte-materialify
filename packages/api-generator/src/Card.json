@@ -4,7 +4,7 @@
   "data": [
     {
       "visibility": "public",
-      "description": null,
+      "description": "classes added to the card",
       "keywords": [],
       "name": "class",
       "kind": "const",
@@ -19,7 +19,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "remove box shadow from card",
       "keywords": [],
       "name": "flat",
       "kind": "let",
@@ -34,7 +34,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "remove border radius",
       "keywords": [],
       "name": "tile",
       "kind": "let",
@@ -49,7 +49,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "adds a thin border",
       "keywords": [],
       "name": "outlined",
       "kind": "let",
@@ -64,7 +64,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "makes the card more elevated",
       "keywords": [],
       "name": "raised",
       "kind": "let",
@@ -79,7 +79,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "add border radius to opposite corners",
       "keywords": [],
       "name": "shaped",
       "kind": "let",
@@ -94,7 +94,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "more elevation on hover",
       "keywords": [],
       "name": "hover",
       "kind": "let",
@@ -109,7 +109,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "card with button-like functionality",
       "keywords": [],
       "name": "link",
       "kind": "let",
@@ -124,7 +124,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "shows the linear progress bar",
       "keywords": [],
       "name": "loading",
       "kind": "let",
@@ -139,7 +139,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "disables the card and lowers opacity",
       "keywords": [],
       "name": "disabled",
       "kind": "let",
@@ -154,7 +154,7 @@
     },
     {
       "visibility": "public",
-      "description": null,
+      "description": "styles added the card",
       "keywords": [],
       "name": "style",
       "kind": "let",
