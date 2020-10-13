@@ -17,6 +17,7 @@ const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 
 // eslint-disable-next-line no-shadow
 const onwarn = (warning, onwarn) =>
+  // eslint-disable-next-line implicit-arrow-linebreak
   (warning.code === 'MISSING_EXPORT' && /'preload'/.test(warning.message)) ||
   (warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message)) ||
   onwarn(warning);
