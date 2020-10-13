@@ -6,11 +6,11 @@ module.exports = {
   transform(code, id) {
     if (id.includes('\\examples\\')) {
       const highlighted = Prism.highlight(code, Prism.languages.svelte, 'svelte');
-      const output = `${code}\n<script context="module">export const source = ${JSON.stringify(
+      const output = `<script context="module">export const source = ${JSON.stringify(
         highlighted,
       )}</script>`;
       return {
-        code: output,
+        code: `${code}\n${output}`,
         map: { mappings: '' },
       };
     }
