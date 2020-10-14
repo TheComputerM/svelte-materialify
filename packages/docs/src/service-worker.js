@@ -1,6 +1,5 @@
-import {
-  timestamp, files, shell, routes,
-} from '@sapper/service-worker';
+/* eslint-disable no-restricted-globals */
+import { timestamp, files, shell } from '@sapper/service-worker';
 
 const ASSETS = `cache${timestamp}`;
 
@@ -24,9 +23,9 @@ self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then(async (keys) => {
       // delete old caches
-      for (const key of keys) {
+      keys.forEach(async (key) => {
         if (key !== ASSETS) await caches.delete(key);
-      }
+      });
 
       self.clients.claim();
     }),
@@ -54,11 +53,11 @@ self.addEventListener('fetch', (event) => {
   // which Sapper has generated for you. It's not right for every
   // app, but if it's right for yours then uncomment this section
   /*
-	if (url.origin === self.origin && routes.find(route => route.pattern.test(url.pathname))) {
-		event.respondWith(caches.match('/service-worker-index.html'));
-		return;
-	}
-	*/
+  if (url.origin === self.origin && routes.find(route => route.pattern.test(url.pathname))) {
+    event.respondWith(caches.match('/service-worker-index.html'));
+    return;
+  }
+  */
 
   if (event.request.cache === 'only-if-cached') return;
 
@@ -66,19 +65,17 @@ self.addEventListener('fetch', (event) => {
   // cache if the user is offline. (If the pages never change, you
   // might prefer a cache-first approach to a network-first one.)
   event.respondWith(
-    caches
-      .open(`offline${timestamp}`)
-      .then(async (cache) => {
-        try {
-          const response = await fetch(event.request);
-          cache.put(event.request, response.clone());
-          return response;
-        } catch (err) {
-          const response = await cache.match(event.request);
-          if (response) return response;
+    caches.open(`offline${timestamp}`).then(async (cache) => {
+      try {
+        const response = await fetch(event.request);
+        cache.put(event.request, response.clone());
+        return response;
+      } catch (err) {
+        const response = await cache.match(event.request);
+        if (response) return response;
 
-          throw err;
-        }
-      }),
+        throw err;
+      }
+    }),
   );
 });

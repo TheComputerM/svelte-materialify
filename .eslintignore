@@ -2,5 +2,4 @@ __sapper__
 *.config.js
 static
 dist
-packages/docs/src/*.js
 Example.svelte

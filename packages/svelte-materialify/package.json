@@ -2,6 +2,29 @@
   "name": "svelte-materialify",
   "version": "0.1.11",
   "description": "A material design framework/component library for Svelte, with full support for light and dark themes and customisability.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheComputerM/svelte-materialify",
+    "directory": "packages/svelte-materialify"
+  },
+  "author": "TheComputerM",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "scripts": {
+    "build": "concurrently \"yarn:build:js\" \"yarn:build:css\"",
+    "build:css": "sass src/styles/_global.scss:dist/global.css -I theme -s compressed --no-source-map",
+    "build:js": "rollup -c",
+    "check": "svelte-check --workspace src/components",
+    "prepublishOnly": "concurrently \"yarn:build:js\" \"yarn:build:css\"",
+    "test": "jest",
+    "version": "standard-changelog && git add CHANGELOG.md"
+  },
+  "files": [
+    "@types",
+    "dist",
+    "src"
+  ],
   "keywords": [
     "svelte",
     "sveltejs",
@@ -16,29 +39,8 @@
     "ui-components",
     "ui-kit"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/TheComputerM/svelte-materialify",
-    "directory": "packages/svelte-materialify"
-  },
-  "license": "MIT",
-  "author": "TheComputerM",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "@types/index.d.ts",
-  "files": [
-    "src",
-    "dist",
-    "@types"
-  ],
-  "scripts": {
-    "build": "concurrently \"yarn:build:js\" \"yarn:build:css\"",
-    "build:css": "sass src/styles/_global.scss:dist/global.css -I theme -s compressed --no-source-map",
-    "build:js": "rollup -c",
-    "check": "svelte-check --workspace src/components",
-    "prepublishOnly": "concurrently \"yarn:build:js\" \"yarn:build:css\"",
-    "test": "jest",
-    "version": "standard-changelog && git add CHANGELOG.md"
+  "peerDependencies": {
+    "svelte": ">=3.28.0"
   },
   "dependencies": {
     "uid": "^1.0.0"
@@ -67,7 +69,5 @@
     "svelte-jester": "^1.1.5",
     "svelte-preprocess": "^4.5.1"
   },
-  "peerDependencies": {
-    "svelte": ">=3.28.0"
-  }
+  "types": "@types/index.d.ts"
 }

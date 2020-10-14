@@ -1,13 +1,8 @@
 {
   "name": "root",
   "private": true,
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ],
-    "nohoist": [
-      "husky"
-    ]
+  "engines": {
+    "yarn": ">=1.22.0"
   },
   "scripts": {
     "api": "lerna run api",
@@ -25,17 +20,6 @@
     "release": "lerna publish",
     "test": "lerna run --stream test"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "lint-staged": {
-    "*.scss": "stylelint --syntax scss --fix",
-    "*.{js,svelte}": "eslint --ext .svelte,.js --fix",
-    "*.{js,ts,svelte,scss,md}": "prettier -w --plugin-search-dir=."
-  },
   "dependencies": {
     "husky": "^4.3.0",
     "lint-staged": "^10.4.0"
@@ -51,13 +35,30 @@
     "eslint-plugin-svelte3": "^2.7.3",
     "lerna": "^3.22.1",
     "prettier": "^2.1.2",
+    "prettier-plugin-package": "^1.0.0",
     "prettier-plugin-svelte": "^1.4.0",
     "stylelint": "^13.7.2",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.18.0",
     "svelte": "^3.29.0"
   },
-  "engines": {
-    "yarn": ">=1.22.0"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.scss": "stylelint --syntax scss --fix",
+    "*.{js,svelte}": "eslint --ext .svelte,.js --fix",
+    "*.{js,ts,svelte,scss,md}": "prettier -w --plugin-search-dir=."
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "husky"
+    ]
   }
 }
