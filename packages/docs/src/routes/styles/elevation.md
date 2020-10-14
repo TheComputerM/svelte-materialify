@@ -13,11 +13,13 @@ the class `elevation-{n}`, where `n` is a integer between 0-24 corresponding to 
 elevation.
 
 ## Usage
+
 The `elevation` helper classes allow you to assign a custom **z-depth** to any element.
 
 <Components.Example file="elevation/elevations" />
 
 ## SCSS
+
 You can also access the elevation helpers through SCSS mixins by including the elevation tool
 
 ```scss

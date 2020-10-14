@@ -6,6 +6,7 @@ const loadLanguages = require('prismjs/components/');
 loadLanguages(['bash', 'scss', 'typescript']);
 module.exports = [
   mdsvex({
+    extensions: ['.md'],
     layout: './src/components/doc/Layout.svelte',
     remarkPlugins: [
       require('remark-sectionize'),

@@ -5,7 +5,6 @@ related:
   - components/alerts
 ---
 
-
 # Badges
 
 The `Badge` component superscripts or subscripts an avatar-like icon or text onto content to highlight information to a user or to just draw attention to a specific element. Content within the badge usually contains numbers or icons.

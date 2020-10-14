@@ -6,7 +6,6 @@ related:
   - styles/text-and-typography
 ---
 
-
 <script>
   import Playground from '@/playground/Card.svelte';
 </script>

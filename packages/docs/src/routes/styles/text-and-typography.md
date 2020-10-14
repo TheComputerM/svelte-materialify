@@ -32,7 +32,7 @@ Text can be transformed with text capitalization classes.
 
 ## Font Weights
 
-Material design, by default, supports **100**, **300**, **400**, **500**, **700**, **900** font weights and *italicized text*.
+Material design, by default, supports **100**, **300**, **400**, **500**, **700**, **900** font weights and _italicized text_.
 
 <Components.Example file="typography/weight" />
 

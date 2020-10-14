@@ -3,8 +3,8 @@
   "version": "0.1.11",
   "private": true,
   "scripts": {
-    "dev": "sapper dev --ext \".svelte .svx\"",
-    "docs": "sapper export --legacy --ext \".svelte .svx\""
+    "dev": "sapper dev --ext \".svelte .md\"",
+    "docs": "sapper export --legacy --ext \".svelte .md\""
   },
   "dependencies": {
     "@mdi/js": "^5.7.55",

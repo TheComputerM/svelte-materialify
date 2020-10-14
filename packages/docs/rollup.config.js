@@ -21,11 +21,7 @@ const onwarn = (warning, onwarn) =>
   (warning.code === 'MISSING_EXPORT' && /'preload'/.test(warning.message)) ||
   (warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message)) ||
   onwarn(warning);
-const extensions = ['.svelte', '.svx'];
-const replaced = {
-  'process.env.NODE_ENV': JSON.stringify(mode),
-  CURRENT_DATE: new Date().toISOString().substring(0, 10),
-};
+const extensions = ['.svelte', '.md'];
 const preprocess = require('./scripts/preprocess');
 const examples = require('./scripts/examples');
 
@@ -39,7 +35,8 @@ export default {
       }),
       replace({
         'process.browser': true,
-        ...replaced,
+        'process.env.NODE_ENV': JSON.stringify(mode),
+        CURRENT_DATE: new Date().toISOString().substring(0, 10),
       }),
       examples,
       svelte({
@@ -101,7 +98,8 @@ export default {
       }),
       replace({
         'process.browser': false,
-        ...replaced,
+        'process.env.NODE_ENV': JSON.stringify(mode),
+        CURRENT_DATE: new Date().toISOString().substring(0, 10),
       }),
       examples,
       svelte({

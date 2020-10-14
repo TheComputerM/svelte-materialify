@@ -14,7 +14,6 @@ Get Started with Svelte Materialify, the best material UI component library for 
 
 If you want to try out svelte materialify and tinker with it, visit the [repl playground](https://svelte.dev/repl/2c55788d8ffd4458bfe9bcb5f58956db).
 
-
 If want a fast and basic setup then only installing `svelte-materialify` should be fine.
 
 ```shell
@@ -27,9 +26,9 @@ And then in your svelte files, import the compiled module for svelte materialify
 <script>
   // In a svelte file
   // Import Everything
-  import * as S from "svelte-materialify";
+  import * as S from 'svelte-materialify';
   // OR
-  import { Button } from "svelte-materialify";
+  import { Button } from 'svelte-materialify';
   // Import a single component
 </script>
 ```
@@ -60,20 +59,20 @@ $ npm i -D svelte-materialify svelte-preprocess sass postcss
 ```
 
 <Components.Alert type='info'>
-  Now you can use SCSS and SASS in your styles.
+Now you can use SCSS and SASS in your styles.
 </Components.Alert>
 
-Then create a **\_material-theme.scss** file and place it in any folder, lets put it in a folder called **theme**. Then include the path in the preprocess function in your __rollup.config.js__ (likewise follow the same in webpack but for svelte-loader).
+Then create a **\_material-theme.scss** file and place it in any folder, lets put it in a folder called **theme**. Then include the path in the preprocess function in your **rollup.config.js** (likewise follow the same in webpack but for svelte-loader).
 
 ### Svelte
 
 ```js
-import sveltePreprocess from "svelte-preprocess";
+import sveltePreprocess from 'svelte-preprocess';
 
 const preprocess = sveltePreprocess({
   scss: {
-    includePaths: ["theme"],
-  }
+    includePaths: ['theme'],
+  },
 });
 
 export default {
@@ -81,11 +80,12 @@ export default {
   plugins: [
     svelte({ preprocess }),
     // ...
-  ]
-}
+  ],
+};
 ```
 
 ### Sapper Integration
+
 ```js
 import sveltePreprocess from "svelte-preprocess";
 
@@ -116,4 +116,3 @@ export default {
 
 Now _you_ can also use scss styles in your own components. Learn more about
 [svelte-preprocess](https://github.com/sveltejs/svelte-preprocess/blob/master/docs/usage.md).
-

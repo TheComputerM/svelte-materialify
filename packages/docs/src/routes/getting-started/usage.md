@@ -6,9 +6,11 @@ related:
 ---
 
 # Usage
+
 Once you have installed Svelte Materialify and other dependencies, it is time to learn how to use it.
 
 ## Layout
+
 All components should be children of `MaterialApp` which has all the global styles and
 enables theming.
 
@@ -18,13 +20,14 @@ enables theming.
   let theme = 'light';
 </script>
 
-<MaterialApp theme={theme}>
+<MaterialApp theme="{theme}">
   <slot />
 </MaterialApp>
 ```
 
 ## Theming
-What to customise some SCSS variables, worry not, just put them in the **_material-theme.scss** you had created.
+
+What to customise some SCSS variables, worry not, just put them in the **\_material-theme.scss** you had created.
 
 ```scss
 $body-font-family: "Poppins", "Segoe UI", sans-serif;
@@ -36,10 +39,11 @@ $spacer: 6px !default;
 To access these variables in your own components just import the variable file from svelte materialify.
 
 ```scss
-@import "svelte-materialify/src/styles/variables";
+@import 'svelte-materialify/src/styles/variables';
 ```
 
 ## Components
+
 Just import them one by one or all at once from svelte materialify.
 
 ```html
@@ -55,5 +59,5 @@ Just import them one by one or all at once from svelte materialify.
 
 <S.Button>These Are</S.Button>
 
-<Button>The Same Thing</Button>
+<button>The Same Thing</button>
 ```

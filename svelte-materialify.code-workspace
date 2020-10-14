@@ -31,9 +31,6 @@
     "[markdown]": {
       "editor.wordWrap": "on"
     },
-    "files.associations": {
-      "*.svx": "markdown"
-    },
     "files.eol": "\n"
   },
   "tasks": {
