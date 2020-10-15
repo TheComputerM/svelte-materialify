@@ -1,19 +1,7 @@
-<script context="module">
-  const aliases = {
-    js: ['javascript'],
-    sh: ['bash', 'shell'],
-    ts: ['typescript'],
-  };
-</script>
-
 <script>
   import { Button, Icon } from 'svelte-materialify/src';
 
   export let lang = '';
-  Object.entries(aliases).forEach(([alias, names]) => {
-    if (names.includes(lang)) lang = alias;
-  });
-
   function copy(node) {
     const toCopy = node.querySelector('pre').textContent;
     const clipboard = new ClipboardJS(node.querySelector('.s-btn'), {
@@ -50,8 +38,8 @@
 
   span {
     position: absolute;
-    right: 1.15rem;
-    bottom: 0.75rem;
+    right: 1rem;
+    bottom: 1rem;
     text-transform: uppercase;
     color: var(--theme-text-secondary);
     font-size: 0.7rem;
@@ -64,7 +52,12 @@
 <svelte:options immutable={true} />
 
 <div class="code-block" use:copy>
-  <slot />
+  <pre class="language-{lang}">
+    <code
+      class="language-{lang}">
+      <slot />
+    </code>
+  </pre>
   <Button fab depressed size="small" style="position:absolute" aria-label="Copy">
     <Icon size="20px" class="mdi mdi-content-copy" />
   </Button>

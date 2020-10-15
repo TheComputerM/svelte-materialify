@@ -3,6 +3,7 @@
   import links from '@/util/links';
   import { onMount } from 'svelte';
   import { slide } from 'svelte/transition';
+  import Markup from './Markup.svelte';
   import { Icon, Button } from 'svelte-materialify/src';
 
   export let file = '';
@@ -67,12 +68,11 @@
     </Button>
   </div>
   {#if codeVisible}
-    <pre transition:slide={{ duration: 250 }} class="language-html ma-0">
-      <code
-        class="language-html">
+    <div transition:slide={{ duration: 250 }}>
+      <Markup lang="svelte">
         {@html source}
-      </code>
-    </pre>
+      </Markup>
+    </div>
   {/if}
   <div class="pa-2" class:theme--dark={codeThemeDark} {style}>
     <svelte:component this={component} />

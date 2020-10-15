@@ -4,6 +4,18 @@ const Prism = require('prismjs');
 const loadLanguages = require('prismjs/components/');
 
 loadLanguages(['bash', 'scss', 'typescript']);
+
+const alias = {
+  javascript: 'js',
+  bash: 'sh',
+  shell: 'sh',
+  typescript: 'ts',
+};
+
+function formatLanguage(lang) {
+  return alias[lang] || lang;
+}
+
 module.exports = [
   mdsvex({
     extensions: ['.md'],
@@ -55,14 +67,12 @@ module.exports = [
         if (lang && Prism.languages[lang]) {
           const parsed = Prism.highlight(code, Prism.languages[lang]);
           const escaped = escape(parsed);
-          const langTag = `language-${lang}`;
-          const codeTag = `<code class=${langTag}>${escaped}</code>`;
-          const pre = `<pre class=${langTag}>${codeTag}</pre>`;
-          return `<Components.Markup lang='${lang}'>${pre}</Components.Markup>`;
+          return `<Components.Markup lang='${formatLanguage(
+            lang,
+          )}'>${escaped}</Components.Markup>`;
         }
         const escaped = escape(code);
-        const pre = `<pre><code>${escaped}</code></pre>`;
-        return `<Components.Markup>${pre}</Components.Markup>`;
+        return `<Components.Markup>${escaped}</Components.Markup>`;
       },
     },
   }),
