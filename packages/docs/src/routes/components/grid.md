@@ -74,3 +74,8 @@ Columns will automatically take up an equal amount of space within their parent 
 
 Offsets are useful for compensating for elements that may not be visible yet, or to control the position of content. Just as with breakpoints, you can set an offset for any available sizes. This allows you to fine tune your application layout precisely to your needs.
 <Components.Example file="Grid/offset" />
+
+### Margin Helpers
+
+Using the [auto margin helper utilities](/styles/spacing/) you can force sibling columns away from each other.
+<Components.Example file="Grid/margin" />
