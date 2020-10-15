@@ -1,12 +1,14 @@
 <script>
+  import BackgroundColor from '../../internal/BackgroundColor';
+
   let klass = '';
   export let value = 0;
   export let active = true;
   export let indeterminate = false;
   export let height = '4px';
   export let backgroundOpacity = 0.3;
-  export let backgroundColor = 'primary-color';
-  export let color = 'primary-color';
+  export let backgroundColor = 'primary';
+  export let color = backgroundColor;
   export let buffer = 100;
   export let reversed = false;
   export let stream = false;
@@ -30,16 +32,21 @@
   class:rounded
   style="height:{height};{style}">
   <div
-    class="background {backgroundColor}"
+    use:BackgroundColor={backgroundColor}
+    class="background"
     style="opacity:{backgroundOpacity};{reversed ? 'right' : 'left'}:{value}%;width:{buffer - value}%" />
 
   {#if indeterminate}
-    <div class={color}>
+    <div use:BackgroundColor={color}>
       <div class="indeterminate long" />
       <div class="indeterminate short" />
     </div>
   {:else}
-    <div class="determinate {color}" class:striped style="width:{value}%" />
+    <div
+      use:BackgroundColor={color}
+      class="determinate"
+      class:striped
+      style="width:{value}%" />
   {/if}
 
   <div class="s-progress-linear__content">
