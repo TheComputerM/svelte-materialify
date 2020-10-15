@@ -36,7 +36,7 @@
     "remark-external-links": "^8.0.0",
     "remark-sectionize": "^1.1.1",
     "remark-slug": "^6.0.0",
-    "rollup": "^2.30.0",
+    "rollup": "^2.31.0",
     "sapper": "^0.28.10",
     "sass": "^1.27.0",
     "serve": "^11.3.2",
