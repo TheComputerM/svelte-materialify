@@ -1,18 +1,11 @@
 <script>
   import Style from '../../internal/Style';
 
-  // Classes to add to avatar.
   let klass = '';
   export { klass as class };
-
-  // Height and width of the avatar.
-  export let size = '48px';
-
-  // Removes border radius
+  export let size = 48;
   export let tile = false;
-
-  // Styles for avatar
-  export let style = '';
+  export let style = null;
 </script>
 
 <style lang="scss" src="./Avatar.scss" global>

@@ -36,7 +36,7 @@
         aria-label={label}
         aria-live="polite"
         aria-atomic="true"
-        use:Style={{ 'badge-offset-x': `${offsetX}px`, 'badge-offset-y': `${offsetY}px` }}>
+        use:Style={{ 'badge-offset-x': offsetX, 'badge-offset-y': offsetY }}>
         <slot name="badge">{value}</slot>
       </span>
     {/if}
