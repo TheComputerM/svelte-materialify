@@ -46,8 +46,8 @@
     "uid": "^1.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.0",
-    "@babel/preset-env": "^7.12.0",
+    "@babel/core": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
     "@rollup/plugin-commonjs": "^15.1.0",
     "@rollup/plugin-node-resolve": "^9.0.0",
     "@testing-library/jest-dom": "^5.11.4",
@@ -64,7 +64,7 @@
     "sass": "^1.27.0",
     "standard-changelog": "^2.0.24",
     "svelte": "^3.29.0",
-    "svelte-check": "^1.0.58",
+    "svelte-check": "^1.0.59",
     "svelte-htm": "^1.1.1",
     "svelte-jester": "^1.1.5",
     "svelte-preprocess": "^4.5.1"
