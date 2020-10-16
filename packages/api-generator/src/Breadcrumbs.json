@@ -4,7 +4,7 @@
   "data": [
     {
       "visibility": "public",
-      "description": "Classes to add to breadcrumb.",
+      "description": null,
       "keywords": [],
       "name": "class",
       "kind": "const",
@@ -18,9 +18,9 @@
       "localName": "klass"
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Make the breadcrumb large",
+      "description": null,
+      "keywords": [],
       "name": "large",
       "kind": "let",
       "static": false,
@@ -33,9 +33,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Array of objects for each breadcrumb",
+      "description": null,
+      "keywords": [],
       "name": "items",
       "kind": "let",
       "static": false,
@@ -45,6 +45,21 @@
         "text": "any",
         "type": "any"
       }
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "style",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "object",
+        "type": "object"
+      },
+      "defaultValue": null
     }
   ],
   "computed": [],

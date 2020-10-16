@@ -4,7 +4,7 @@
   "data": [
     {
       "visibility": "public",
-      "description": "Classes to add to alert.",
+      "description": null,
       "keywords": [],
       "name": "class",
       "kind": "const",
@@ -18,9 +18,9 @@
       "localName": "klass"
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Is the alert active/dismissed.",
+      "description": null,
+      "keywords": [],
       "name": "visible",
       "kind": "let",
       "static": false,
@@ -33,9 +33,9 @@
       "defaultValue": true
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Alert transition function.",
+      "description": null,
+      "keywords": [],
       "name": "transition",
       "kind": "let",
       "static": false,
@@ -47,9 +47,9 @@
       }
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Alert transition function options.",
+      "description": null,
+      "keywords": [],
       "name": "transitionOpts",
       "kind": "let",
       "static": false,
@@ -61,9 +61,9 @@
       }
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Makes alert dense.",
+      "description": null,
+      "keywords": [],
       "name": "dense",
       "kind": "let",
       "static": false,
@@ -76,9 +76,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Adds a thin border to alert.",
+      "description": null,
+      "keywords": [],
       "name": "outlined",
       "kind": "let",
       "static": false,
@@ -91,9 +91,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Applies the defined color to text and a low opacity background of the same.",
+      "description": null,
+      "keywords": [],
       "name": "text",
       "kind": "let",
       "static": false,
@@ -106,9 +106,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Removes the component's border-radius.",
+      "description": null,
+      "keywords": [],
       "name": "tile",
       "kind": "let",
       "static": false,
@@ -121,9 +121,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Adds a close icon that can hide the alert.",
+      "description": null,
+      "keywords": [],
       "name": "dismissible",
       "kind": "let",
       "static": false,
@@ -136,55 +136,24 @@
       "defaultValue": false
     },
     {
-      "keywords": [
-        {
-          "name": "type",
-          "description": "{left|right|top|bottom|false}"
-        }
-      ],
       "visibility": "public",
-      "description": "The location of the border",
+      "description": null,
+      "keywords": [],
       "name": "border",
       "kind": "let",
       "static": false,
       "readonly": false,
       "type": {
-        "kind": "union",
-        "text": "left|right|top|bottom|false",
-        "type": [
-          {
-            "kind": "type",
-            "text": "left",
-            "type": "left"
-          },
-          {
-            "kind": "type",
-            "text": "right",
-            "type": "right"
-          },
-          {
-            "kind": "type",
-            "text": "top",
-            "type": "top"
-          },
-          {
-            "kind": "type",
-            "text": "bottom",
-            "type": "bottom"
-          },
-          {
-            "kind": "type",
-            "text": "false",
-            "type": "false"
-          }
-        ]
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
       },
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Applies the defined color to the alert's border.",
+      "description": null,
+      "keywords": [],
       "name": "coloredBorder",
       "kind": "let",
       "static": false,

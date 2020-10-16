@@ -4,7 +4,7 @@
   "data": [
     {
       "visibility": "public",
-      "description": "Classes to add to avatar.",
+      "description": null,
       "keywords": [],
       "name": "class",
       "kind": "const",
@@ -18,24 +18,24 @@
       "localName": "klass"
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Height and width of the avatar.",
+      "description": null,
+      "keywords": [],
       "name": "size",
       "kind": "let",
       "static": false,
       "readonly": false,
       "type": {
         "kind": "type",
-        "text": "string",
-        "type": "string"
+        "text": "number",
+        "type": "number"
       },
-      "defaultValue": "48px"
+      "defaultValue": 48
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Removes border radius",
+      "description": null,
+      "keywords": [],
       "name": "tile",
       "kind": "let",
       "static": false,
@@ -48,9 +48,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Styles for avatar",
+      "description": null,
+      "keywords": [],
       "name": "style",
       "kind": "let",
       "static": false,

@@ -3,9 +3,24 @@
   "name": "TextField",
   "data": [
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Value of the text input.",
+      "description": null,
+      "keywords": [],
+      "name": "class",
+      "kind": "const",
+      "static": false,
+      "readonly": true,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "localName": "klass"
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "value",
       "kind": "let",
       "static": false,
@@ -24,9 +39,9 @@
       ]
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "The color of the input when active.",
+      "description": null,
+      "keywords": [],
       "name": "color",
       "kind": "let",
       "static": false,
@@ -39,9 +54,9 @@
       "defaultValue": "primary"
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Changes the variant of the input to filled.",
+      "description": null,
+      "keywords": [],
       "name": "filled",
       "kind": "let",
       "static": false,
@@ -54,9 +69,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Changes the variant of the input to solo.",
+      "description": null,
+      "keywords": [],
       "name": "solo",
       "kind": "let",
       "static": false,
@@ -69,9 +84,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Changes the variant of the input to outlined.",
+      "description": null,
+      "keywords": [],
       "name": "outlined",
       "kind": "let",
       "static": false,
@@ -84,9 +99,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Removes any shadow from the input.",
+      "description": null,
+      "keywords": [],
       "name": "flat",
       "kind": "let",
       "static": false,
@@ -99,9 +114,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Reduces the input height.",
+      "description": null,
+      "keywords": [],
       "name": "dense",
       "kind": "let",
       "static": false,
@@ -114,9 +129,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Adds a border radius to the input.",
+      "description": null,
+      "keywords": [],
       "name": "rounded",
       "kind": "let",
       "static": false,
@@ -129,9 +144,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Add input clear functionality.",
+      "description": null,
+      "keywords": [],
       "name": "clearable",
       "kind": "let",
       "static": false,
@@ -144,9 +159,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Puts input in readonly state.",
+      "description": null,
+      "keywords": [],
       "name": "readonly",
       "kind": "let",
       "static": false,
@@ -159,9 +174,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Disable the input.",
+      "description": null,
+      "keywords": [],
       "name": "disabled",
       "kind": "let",
       "static": false,
@@ -174,9 +189,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "The input placeholder content.",
+      "description": null,
+      "keywords": [],
       "name": "placeholder",
       "kind": "let",
       "static": false,
@@ -189,9 +204,9 @@
       "defaultValue": null
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Hint text.",
+      "description": null,
+      "keywords": [],
       "name": "hint",
       "kind": "let",
       "static": false,
@@ -204,15 +219,39 @@
       "defaultValue": ""
     },
     {
-      "keywords": [
-        {
-          "name": "type",
-          "description": "{number}"
-        }
-      ],
       "visibility": "public",
-      "description": "Creates counter for input length.",
+      "description": null,
+      "keywords": [],
       "name": "counter",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "rules",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "errorCount",
       "kind": "let",
       "static": false,
       "readonly": false,
@@ -221,31 +260,12 @@
         "text": "number",
         "type": "number"
       },
-      "defaultValue": false
+      "defaultValue": 1
     },
     {
-      "keywords": [
-        {
-          "name": "type",
-          "description": "{Array}"
-        }
-      ],
       "visibility": "public",
-      "description": "An array of functions which take input value as arguement and return error message.",
-      "name": "rules",
-      "kind": "let",
-      "static": false,
-      "readonly": false,
-      "type": {
-        "kind": "type",
-        "text": "Array",
-        "type": "Array"
-      }
-    },
-    {
+      "description": null,
       "keywords": [],
-      "visibility": "public",
-      "description": "Delays validation till blur.",
       "name": "validateOnBlur",
       "kind": "let",
       "static": false,
@@ -258,9 +278,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Error state of the input.",
+      "description": null,
+      "keywords": [],
       "name": "error",
       "kind": "let",
       "static": false,
@@ -273,9 +293,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Id of the text input.",
+      "description": null,
+      "keywords": [],
       "name": "id",
       "kind": "let",
       "static": false,
@@ -285,6 +305,21 @@
         "text": "any",
         "type": "any"
       }
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "style",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "object",
+        "type": "object"
+      },
+      "defaultValue": null
     }
   ],
   "computed": [],

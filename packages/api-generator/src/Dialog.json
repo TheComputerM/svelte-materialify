@@ -72,10 +72,10 @@
       "readonly": false,
       "type": {
         "kind": "type",
-        "text": "string",
-        "type": "string"
+        "text": "number",
+        "type": "number"
       },
-      "defaultValue": "500px"
+      "defaultValue": 500
     },
     {
       "visibility": "public",

@@ -4,7 +4,7 @@
   "data": [
     {
       "visibility": "public",
-      "description": "Classes to add to the button",
+      "description": null,
       "keywords": [],
       "name": "class",
       "kind": "const",
@@ -18,9 +18,9 @@
       "localName": "klass"
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Designates the button as a floating-action-button",
+      "description": null,
+      "keywords": [],
       "name": "fab",
       "kind": "let",
       "static": false,
@@ -33,9 +33,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Designates the button as icon",
+      "description": null,
+      "keywords": [],
       "name": "icon",
       "kind": "let",
       "static": false,
@@ -48,9 +48,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Makes button take 100% of the space",
+      "description": null,
+      "keywords": [],
       "name": "block",
       "kind": "let",
       "static": false,
@@ -63,55 +63,24 @@
       "defaultValue": false
     },
     {
-      "keywords": [
-        {
-          "name": "type",
-          "description": "{x-small|small|default|large|x-large}"
-        }
-      ],
       "visibility": "public",
-      "description": "Determines the size of the button",
+      "description": null,
+      "keywords": [],
       "name": "size",
       "kind": "let",
       "static": false,
       "readonly": false,
       "type": {
-        "kind": "union",
-        "text": "x-small|small|default|large|x-large",
-        "type": [
-          {
-            "kind": "type",
-            "text": "x-small",
-            "type": "x-small"
-          },
-          {
-            "kind": "type",
-            "text": "small",
-            "type": "small"
-          },
-          {
-            "kind": "type",
-            "text": "default",
-            "type": "default"
-          },
-          {
-            "kind": "type",
-            "text": "large",
-            "type": "large"
-          },
-          {
-            "kind": "type",
-            "text": "x-large",
-            "type": "x-large"
-          }
-        ]
+        "kind": "type",
+        "text": "string",
+        "type": "string"
       },
       "defaultValue": "default"
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Removed the border radius if true.",
+      "description": null,
+      "keywords": [],
       "name": "tile",
       "kind": "let",
       "static": false,
@@ -124,9 +93,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Makes the background transparent.",
+      "description": null,
+      "keywords": [],
       "name": "text",
       "kind": "let",
       "static": false,
@@ -139,9 +108,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Removes the button box shadow.",
+      "description": null,
+      "keywords": [],
       "name": "depressed",
       "kind": "let",
       "static": false,
@@ -154,9 +123,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Makes the background transparent and applies a thin border.",
+      "description": null,
+      "keywords": [],
       "name": "outlined",
       "kind": "let",
       "static": false,
@@ -169,9 +138,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Applies a large border radius on the button.",
+      "description": null,
+      "keywords": [],
       "name": "rounded",
       "kind": "let",
       "static": false,
@@ -184,9 +153,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Removes the ability to click or target the component.",
+      "description": null,
+      "keywords": [],
       "name": "disabled",
       "kind": "let",
       "static": false,
@@ -199,9 +168,9 @@
       "defaultValue": null
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Make the button active",
+      "description": null,
+      "keywords": [],
       "name": "active",
       "kind": "let",
       "static": false,
@@ -214,9 +183,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "The class applied to the button when active.",
+      "description": null,
+      "keywords": [],
       "name": "activeClass",
       "kind": "let",
       "static": false,
@@ -229,45 +198,24 @@
       "defaultValue": "active"
     },
     {
-      "keywords": [
-        {
-          "name": "type",
-          "description": "{button|reset|submit}"
-        }
-      ],
       "visibility": "public",
-      "description": "Specifies the type of button",
+      "description": null,
+      "keywords": [],
       "name": "type",
       "kind": "let",
       "static": false,
       "readonly": false,
       "type": {
-        "kind": "union",
-        "text": "button|reset|submit",
-        "type": [
-          {
-            "kind": "type",
-            "text": "button",
-            "type": "button"
-          },
-          {
-            "kind": "type",
-            "text": "reset",
-            "type": "reset"
-          },
-          {
-            "kind": "type",
-            "text": "submit",
-            "type": "submit"
-          }
-        ]
+        "kind": "type",
+        "text": "string",
+        "type": "string"
       },
       "defaultValue": "button"
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Options for the ripple directive",
+      "description": null,
+      "keywords": [],
       "name": "ripple",
       "kind": "let",
       "static": false,
@@ -279,9 +227,9 @@
       }
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Styles for component",
+      "description": null,
+      "keywords": [],
       "name": "style",
       "kind": "let",
       "static": false,

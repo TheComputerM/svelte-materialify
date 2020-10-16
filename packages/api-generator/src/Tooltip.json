@@ -4,7 +4,7 @@
   "data": [
     {
       "visibility": "public",
-      "description": "Add class to tooltip.",
+      "description": null,
       "keywords": [],
       "name": "class",
       "kind": "const",
@@ -18,9 +18,9 @@
       "localName": "klass"
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Color of the tooltip when active.",
+      "description": null,
+      "keywords": [],
       "name": "color",
       "kind": "let",
       "static": false,
@@ -33,9 +33,9 @@
       "defaultValue": "default"
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Controls whether the component is visible or hidden.",
+      "description": null,
+      "keywords": [],
       "name": "active",
       "kind": "let",
       "static": false,
@@ -48,9 +48,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Aligns the component towards the top.",
+      "description": null,
+      "keywords": [],
       "name": "top",
       "kind": "let",
       "static": false,
@@ -63,9 +63,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Aligns the component towards the bottom.",
+      "description": null,
+      "keywords": [],
       "name": "bottom",
       "kind": "let",
       "static": false,
@@ -78,9 +78,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Aligns the component towards the left.",
+      "description": null,
+      "keywords": [],
       "name": "left",
       "kind": "let",
       "static": false,
@@ -93,9 +93,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Aligns the component towards the right.",
+      "description": null,
+      "keywords": [],
       "name": "right",
       "kind": "let",
       "static": false,

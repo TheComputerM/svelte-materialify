@@ -96,20 +96,6 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
-      "name": "selectable",
-      "kind": "let",
-      "static": false,
-      "readonly": false,
-      "type": {
-        "kind": "type",
-        "text": "any",
-        "type": "any"
-      }
-    },
-    {
-      "visibility": "public",
-      "description": null,
-      "keywords": [],
       "name": "multiline",
       "kind": "let",
       "static": false,
@@ -125,6 +111,34 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
+      "name": "link",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "selectable",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "ripple",
       "kind": "let",
       "static": false,
@@ -134,6 +148,21 @@
         "text": "any",
         "type": "any"
       }
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "style",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "object",
+        "type": "object"
+      },
+      "defaultValue": null
     }
   ],
   "computed": [],

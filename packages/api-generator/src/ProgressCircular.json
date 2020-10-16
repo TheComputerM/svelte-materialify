@@ -6,6 +6,21 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
+      "name": "class",
+      "kind": "const",
+      "static": false,
+      "readonly": true,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "localName": "klass"
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "indeterminate",
       "kind": "let",
       "static": false,
@@ -16,6 +31,21 @@
         "type": "boolean"
       },
       "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "color",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "defaultValue": "secondary"
     },
     {
       "visibility": "public",
@@ -81,16 +111,16 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
-      "name": "class",
-      "kind": "const",
+      "name": "style",
+      "kind": "let",
       "static": false,
-      "readonly": true,
+      "readonly": false,
       "type": {
         "kind": "type",
         "text": "string",
         "type": "string"
       },
-      "localName": "klass"
+      "defaultValue": ""
     }
   ],
   "computed": [],
