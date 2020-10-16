@@ -20,6 +20,6 @@
 
 {#if !$markdown}
   <div class="loading">
-    <ProgressCircular indeterminate size="75" width="5" class="primary-text" />
+    <ProgressCircular indeterminate size="75" width="5" color="primary" />
   </div>
 {/if}
