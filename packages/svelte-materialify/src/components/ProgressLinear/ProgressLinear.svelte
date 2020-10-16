@@ -2,12 +2,13 @@
   import BackgroundColor from '../../internal/BackgroundColor';
 
   let klass = '';
+  export { klass as class };
   export let value = 0;
   export let active = true;
   export let indeterminate = false;
   export let height = '4px';
-  export let backgroundOpacity = 0.3;
   export let backgroundColor = 'primary';
+  export let backgroundOpacity = 0.3;
   export let color = backgroundColor;
   export let buffer = 100;
   export let reversed = false;
@@ -15,7 +16,6 @@
   export let rounded = false;
   export let striped = false;
   export let style = '';
-  export { klass as class };
 </script>
 
 <style lang="scss" src="./ProgressLinear.scss">

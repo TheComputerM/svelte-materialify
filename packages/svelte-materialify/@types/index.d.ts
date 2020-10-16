@@ -25,3 +25,5 @@ export { default as NavigationDrawer } from './NavigationDrawer';
 export { default as Dialog } from './Dialog';
 export { default as Overlay } from './Overlay';
 export { default as TextField } from './TextField';
+export { default as ProgressLinear } from './ProgressLinear';
+export { default as ProgressCircular } from './ProgressCircular';

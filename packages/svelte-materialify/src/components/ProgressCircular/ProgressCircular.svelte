@@ -9,6 +9,7 @@
   export let size = 32;
   export let value = 0;
   export let width = 4;
+  export let style = '';
 
   const radius = 20;
   const circumference = 2 * 3.1416 * radius;
@@ -37,7 +38,7 @@
   use:TextColor={color}
   class="s-progress-circular {klass}"
   class:indeterminate
-  style="width:{size}px;height:{size}px">
+  style="width:{size}px;height:{size}px;{style}">
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="{viewBoxSize}
