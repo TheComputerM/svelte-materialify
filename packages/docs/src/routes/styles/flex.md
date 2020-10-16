@@ -2,7 +2,7 @@
 title: Flex
 related:
   - getting-started/usage/
-  - Text and styles/text-and-typography/
+  - styles/text-and-typography/
 ---
 
 <script>

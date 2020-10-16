@@ -3,7 +3,7 @@ title: Lists
 related:
   - components/item-groups
   - components/list-item-groups
-  - components/subheaders
+  - components/subheader
 ---
 
 # Lists
