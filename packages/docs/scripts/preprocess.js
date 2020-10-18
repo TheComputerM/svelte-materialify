@@ -1,7 +1,7 @@
-const { mdsvex } = require('mdsvex');
-const sveltePreprocess = require('svelte-preprocess');
-const Prism = require('prismjs');
-const loadLanguages = require('prismjs/components/');
+import { mdsvex } from 'mdsvex';
+import sveltePreprocess from 'svelte-preprocess';
+import Prism from 'prismjs';
+import loadLanguages from 'prismjs/components/';
 
 loadLanguages(['bash', 'scss', 'typescript']);
 
@@ -16,7 +16,7 @@ function formatLanguage(lang) {
   return alias[lang] || lang;
 }
 
-module.exports = [
+export default [
   mdsvex({
     extensions: ['.md'],
     layout: './src/components/doc/Layout.svelte',

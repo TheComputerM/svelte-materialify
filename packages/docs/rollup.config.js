@@ -7,6 +7,9 @@ import babel from '@rollup/plugin-babel';
 import dynamic from '@rollup/plugin-dynamic-import-vars';
 import { terser } from 'rollup-plugin-terser';
 import config from 'sapper/config/rollup';
+import preprocess from './scripts/preprocess';
+import examples from './scripts/examples';
+import worker from './scripts/worker';
 import pkg from './package.json';
 
 const path = require('path');
@@ -22,8 +25,6 @@ const onwarn = (warning, onwarn) =>
   (warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message)) ||
   onwarn(warning);
 const extensions = ['.svelte', '.md'];
-const preprocess = require('./scripts/preprocess');
-const examples = require('./scripts/examples');
 
 export default {
   client: {
@@ -54,6 +55,7 @@ export default {
       dynamic({
         include: '**/*.svelte',
       }),
+      worker,
 
       legacy &&
         babel({
@@ -116,6 +118,7 @@ export default {
       dynamic({
         include: '**/*.svelte',
       }),
+      worker,
     ],
     external: Object.keys(pkg.dependencies).concat(require('module').builtinModules),
     preserveEntrySignatures: 'strict',

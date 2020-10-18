@@ -1,7 +1,7 @@
-const Prism = require('prismjs');
-require('prism-svelte');
+import Prism from 'prismjs';
+import 'prism-svelte';
 
-module.exports = {
+export default {
   name: 'examples',
   transform(code, id) {
     if (id.includes('examples')) {
