@@ -17,7 +17,7 @@
     "svelte-materialify-api": "^0.1.11"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.1",
+    "@babel/core": "^7.12.3",
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@babel/plugin-transform-runtime": "^7.12.1",
     "@babel/preset-env": "^7.12.1",
@@ -36,7 +36,7 @@
     "remark-external-links": "^8.0.0",
     "remark-sectionize": "^1.1.1",
     "remark-slug": "^6.0.0",
-    "rollup": "^2.31.0",
+    "rollup": "^2.32.0",
     "sapper": "^0.28.10",
     "sass": "^1.27.0",
     "serve": "^11.3.2",
