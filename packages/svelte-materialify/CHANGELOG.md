@@ -1,3 +1,22 @@
+## [0.1.12](https://github.com/TheComputerM/svelte-materialify/compare/v0.1.11...v0.1.12) (2020-10-19)
+
+### Bug Fixes
+
+- **Tooltip:** add a use action to detect when active changes ([7cb6040](https://github.com/TheComputerM/svelte-materialify/commit/7cb6040048eecf650046bef3e3980b702a526588))
+- **Tooltip:** fix bug due to eslint fix ([a0d38b4](https://github.com/TheComputerM/svelte-materialify/commit/a0d38b4d354e20f3c55ea7b638a3cfadaa4b296f))
+- **Tooltip:** use bind instead of addEventListener ([8fd9dd7](https://github.com/TheComputerM/svelte-materialify/commit/8fd9dd78a7d64a20ccda75cf351e94796370d08f))
+
+### Features
+
+- **Select:** added `format` prop ([#22](https://github.com/TheComputerM/svelte-materialify/issues/22)) ([8301ca7](https://github.com/TheComputerM/svelte-materialify/commit/8301ca77bc76548859bead64f44f82394ac2778e))
+- **Tabs:** added value prop ([0d96d7e](https://github.com/TheComputerM/svelte-materialify/commit/0d96d7edec63c5ec07e6b12c23d220f291a1933a))
+- **types:** added more types ([5131be8](https://github.com/TheComputerM/svelte-materialify/commit/5131be8ff698477313ec7c2f8075882889d1e5a8))
+- **types:** added more types ([e098df1](https://github.com/TheComputerM/svelte-materialify/commit/e098df114d71f949ad06ff2cce9fce5f14943382))
+
+### Performance Improvements
+
+- **Tooltip:** reduce number of call to update the tooltip position ([8012667](https://github.com/TheComputerM/svelte-materialify/commit/80126679264d23a9bc653afa778b0f9af62b0c94))
+
 ## [0.1.11](https://github.com/TheComputerM/svelte-materialify/compare/v0.1.10...v0.1.11) (2020-10-11)
 
 ### Bug Fixes
