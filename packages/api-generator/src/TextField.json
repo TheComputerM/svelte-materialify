@@ -251,21 +251,6 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
-      "name": "errorCount",
-      "kind": "let",
-      "static": false,
-      "readonly": false,
-      "type": {
-        "kind": "type",
-        "text": "number",
-        "type": "number"
-      },
-      "defaultValue": 1
-    },
-    {
-      "visibility": "public",
-      "description": null,
-      "keywords": [],
       "name": "validateOnBlur",
       "kind": "let",
       "static": false,

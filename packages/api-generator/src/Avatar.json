@@ -57,10 +57,10 @@
       "readonly": false,
       "type": {
         "kind": "type",
-        "text": "string",
-        "type": "string"
+        "text": "object",
+        "type": "object"
       },
-      "defaultValue": ""
+      "defaultValue": null
     }
   ],
   "computed": [],

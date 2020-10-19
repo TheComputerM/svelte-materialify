@@ -21,6 +21,21 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
+      "name": "value",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "object",
+        "type": "object"
+      },
+      "defaultValue": null
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "color",
       "kind": "let",
       "static": false,
@@ -81,6 +96,65 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
+      "name": "counter",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "hint",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "defaultValue": ""
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "messages",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "messagesCount",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "number",
+        "type": "number"
+      },
+      "defaultValue": 1
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "error",
       "kind": "let",
       "static": false,
@@ -123,12 +197,6 @@
     },
     {
       "name": "default",
-      "description": null,
-      "visibility": "public",
-      "parameters": []
-    },
-    {
-      "name": "messages",
       "description": null,
       "visibility": "public",
       "parameters": []

@@ -12,10 +12,9 @@
   export { klass as class };
   export let activeClass = '';
   export let disabled = null;
+  export let value = index();
 
   let active;
-  const value = index();
-
   register((values) => {
     active = values.includes(value);
   });
