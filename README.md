@@ -24,6 +24,10 @@
   <a href="https://www.npmjs.com/package/svelte-materialify">
     <img src="https://img.shields.io/npm/v/svelte-materialify.svg" alt="Version">
   </a>
+
+  <a href="https://gitter.im/svelte-materialify/community">
+    <img src="https://badges.gitter.im/svelte-materialify/community.svg" alt="Gitter">
+  </a>  
 </p>
 
 **Currently In Active Development**
@@ -141,6 +145,9 @@ export default {
   },
 };
 ```
+
+## Join the Discussion
+We have a <a href="https://gitter.im/svelte-materialify/community">Gitter chat room</a> set up where you can talk directly with other users or the developpers. Come in and discuss new features, future goals, general problems or questions, or anything else you can think of.
 
 ## Thanks:
 
