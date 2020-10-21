@@ -20,6 +20,9 @@
   <a href="https://github.com/thecomputerm/svelte-materialify/blob/master/LICENSE.md">
     <img src="https://img.shields.io/npm/l/svelte-materialify.svg" alt="License">
   </a>
+  <a href="https://discord.gg/dKGmnhf">
+    <img src="https://img.shields.io/discord/768317529641975829?logo=Discord" alt="Discord">
+  </a>
   <br>
   <a href="https://www.npmjs.com/package/svelte-materialify">
     <img src="https://img.shields.io/npm/v/svelte-materialify.svg" alt="Version">

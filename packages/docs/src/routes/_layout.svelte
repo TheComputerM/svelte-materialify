@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte';
-  import { mdiGithub } from '@mdi/js';
+  import { mdiGithub, mdiDiscord } from '@mdi/js';
   import { MaterialApp, AppBar, Button, Icon } from 'svelte-materialify/src';
   import SiteNavigation from '@/components/navigation/SiteNavigation.svelte';
   import Loading from '@/components/navigation/Loading.svelte';
@@ -37,6 +37,9 @@
 </script>
 
 <style>
+  a {
+    color: inherit;
+  }
   main {
     padding-top: 56px;
   }
@@ -80,6 +83,11 @@
       <Button class="white-text grey darken-3" aria-label="GitHub" fab={mobile}>
         <Icon path={mdiGithub} class={!mobile ? 'mr-3' : ''} />
         {#if !mobile}GitHub{/if}
+      </Button>
+    </a>
+    <a href="https://discord.gg/dKGmnhf" target="_blank" rel="noopener">
+      <Button text fab>
+        <Icon path={mdiDiscord} />
       </Button>
     </a>
     <Button fab text on:click={toggleTheme} aria-label="Toggle Theme">
