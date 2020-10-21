@@ -1,3 +1,9 @@
+## [0.1.13](https://github.com/TheComputerM/svelte-materialify/compare/v0.1.12...v0.1.13) (2020-10-21)
+
+### Features
+
+- **Tabs:** added ripple option ([314e0d0](https://github.com/TheComputerM/svelte-materialify/commit/314e0d0689e67a63d965b61ff1c8614b1ecd9deb))
+
 ## [0.1.12](https://github.com/TheComputerM/svelte-materialify/compare/v0.1.11...v0.1.12) (2020-10-19)
 
 ### Bug Fixes
