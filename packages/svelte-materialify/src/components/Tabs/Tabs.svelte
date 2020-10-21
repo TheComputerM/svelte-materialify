@@ -1,7 +1,11 @@
+<script context="module">
+  export const TABS = {};
+</script>
+
 <script>
   import SlideGroup from '../SlideGroup';
   import Window from '../Window';
-  import { onMount } from 'svelte';
+  import { onMount, setContext } from 'svelte';
 
   let sliderElement;
   let windowComponent;
@@ -20,7 +24,10 @@
   export let icons = false;
   export let slider = true;
   export let sliderClass = '';
+  export let ripple = {};
   export let vertical = false;
+
+  setContext(TABS, { ripple });
 
   function moveSlider({ detail }) {
     if (slider) {

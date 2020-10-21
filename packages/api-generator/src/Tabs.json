@@ -6,6 +6,20 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
+      "name": "TABS",
+      "kind": "const",
+      "static": false,
+      "readonly": true,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "class",
       "kind": "const",
       "static": false,
@@ -171,6 +185,20 @@
         "type": "string"
       },
       "defaultValue": ""
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "ripple",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
     },
     {
       "visibility": "public",
