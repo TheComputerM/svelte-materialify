@@ -53,7 +53,7 @@
   };
 
   const calculateLeft = () => {
-    const activatorLeft = activator.offsetLeft;
+    const activatorLeft = activator.getBoundingClientRect().x + scrollX;
     let calculatedLeft = 0;
 
     if (top || bottom) {
@@ -70,7 +70,7 @@
   };
 
   const calculateTop = () => {
-    const activatorTop = activator.offsetTop;
+    const activatorTop = activator.getBoundingClientRect().y + scrollY;
     let calculatedTop = 0;
 
     if (top || bottom) {
