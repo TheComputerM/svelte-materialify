@@ -28,49 +28,46 @@ Follow these instructions if you are planning to make a pull request.
 4.  Copy the url of your browser, it should now be : https://github.com/**your_github_user_id**/svelte-materialify
 5.  On your PC open a command prompt window and type the following commands
 
-```
+```shell
 $ git clone https://github.com/{your_github_user_id}/svelte-materialify.git
 $ cd svelte-materialify
 ```
 
-This will get the entire repository on your machine.
-Finally we can build the library.
+This will get the entire repository on your machine, now we can build the library.
 
 ## Build
 
-Building is done with yarn (not npm)
+Building is done with yarn (**not** npm)
 To install the dependencies type:
 
-```
+```shell
 yarn
 ```
 
-Then to build the main library type
+Then to build the main library, svelte materialify itself.
 
-```
+```shell
 yarn build
 ```
 
-To build and open the documentation type
+To build and develop the documentation site.
 
-```
+```shell
 yarn dev
 ```
 
-Then you can build the "API". I only write the documentation I am not really sure what this is yet.
+Then you can build the API, which provides the definitions and types for the different props/events/slots for the components.
 
-```
+```shell
 yarn api
 ```
 
 ## Submit your change
 
-First make a change and make sure it works well.
-Then commit your changes following [this syntax](https://github.com/conventional-changelog/commitlint/#what-is-commitlint)
+First make a change and make sure it works well by running `yarn lint` and `yarn test`, then commit your changes following [this syntax](https://github.com/conventional-changelog/commitlint/#what-is-commitlint).
 
 For example here
 
 `docs: improve contributing.md document`
 
-Then push your changes to your github repository.
-Finally from the github repository web page you can click the Pull Request button to send it to TheComputerM for review.
+Then push your changes to your github repository, finally from the github repository web page you can click the Pull Request button and a contributor will review the changes you made.

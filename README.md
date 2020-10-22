@@ -41,109 +41,21 @@ There are currently more than **50+** different components are more are planned 
 
 Website is located at [https://svelte-materialify.vercel.app/](https://svelte-materialify.vercel.app/), it is still in development.
 
-# Installation
+## Installation
 
-Get Started with Svelte Materialify, the best material UI component library for Svelte
+See how to [install](https://svelte-materialify.vercel.app/getting-started/installation/) svelte materialify for your preferred framework _(svelte/sapper/routify)_.
 
-## Minimal Install
+## Support
 
-If you want to try out svelte materialify and tinker with it, visit the [repl playground](https://svelte.dev/repl/2c55788d8ffd4458bfe9bcb5f58956db).
+For help and support questions, please join our [community discord](https://discord.gg/dKGmnhf). Issues should only be used for reporting bugs and suggesting features/enhancements.
 
-If want a fast and basic setup then only installing `svelte-materialify` should be fine.
+## Contributing
 
-```shell
-$ npm i svelte-materialify
-```
+Thank you for taking the time to contribute, you should start by reading the [Code of Conduct]() and the [Contribution Guide](https://svelte-materialify.vercel.app/getting-started/contributing/).
 
-And then in your svelte files, import the compiled module for svelte materialify
+## Changelog
 
-```html
-<script>
-  // In a svelte file
-  // Import Everything
-  import * as S from 'svelte-materialify';
-  // OR
-  import { Button } from 'svelte-materialify';
-  // Import a single component
-</script>
-```
-
-We can also **optionally** add [focus-visible](https://github.com/WICG/focus-visible), if you want keyboard focused styles.
-
-```html
-<script src="https://unpkg.com/focus-visible@latest/dist/focus-visible.min.js"></script>
-```
-
-## Advanced Install
-
-If you want finer control over Svelte Materialify and installation you want to install all its peer dependencies. Follow this guide for SSR.
-
-```shell
-$ npm i -D svelte-materialify svelte-preprocess sass postcss
-```
-
-```html
-<script>
-  // In a svelte file
-  // Import Everything
-  import * as S from 'svelte-materialify/src';
-  // OR
-  import { Button } from 'svelte-materialify/src';
-  // Import a single component
-</script>
-```
-
-Then create a **\_material-theme.scss** file and place it in any folder, lets put it in a folder called **theme**. Then include the path in the preprocess function in your **rollup.config.js** (likewise follow the same in webpack but for svelte-loader).
-
-### Svelte
-
-```js
-import sveltePreprocess from 'svelte-preprocess';
-
-const preprocess = sveltePreprocess({
-  scss: {
-    includePaths: ['theme'],
-  },
-});
-
-export default {
-  // ...,
-  plugins: [
-    svelte({ preprocess }),
-    // ...
-  ],
-};
-```
-
-### Sapper Integration
-
-```js
-import sveltePreprocess from "svelte-preprocess";
-
-const preprocess = sveltePreprocess({
-  scss: {
-    includePaths: ["theme"],
-  }
-});
-
-export default {
-  client: {
-    plugins: [
-      svelte({
-        preprocess,
-        // ...
-      }),
-  },
-  server: {
-    plugins: [
-      svelte({
-        preprocess,
-        // ...
-      }),
-    ],
-  },
-};
-```
+Detailed changes for each release are listed [here]().
 
 ## Thanks:
 
