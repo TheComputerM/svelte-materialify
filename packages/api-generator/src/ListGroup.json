@@ -21,6 +21,35 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
+      "name": "activatorClass",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "defaultValue": ""
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "activatorProps",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "active",
       "kind": "let",
       "static": false,
@@ -143,16 +172,29 @@
   "events": [],
   "slots": [
     {
-      "name": "activator",
+      "name": "prepend",
       "description": null,
       "visibility": "public",
       "parameters": [
         {
-          "name": "{toggle}",
+          "name": "slot",
           "visibility": "public"
-        },
+        }
+      ]
+    },
+    {
+      "name": "activator",
+      "description": null,
+      "visibility": "public",
+      "parameters": []
+    },
+    {
+      "name": "append",
+      "description": null,
+      "visibility": "public",
+      "parameters": [
         {
-          "name": "{active}",
+          "name": "slot",
           "visibility": "public"
         }
       ]

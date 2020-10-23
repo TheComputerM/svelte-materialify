@@ -292,10 +292,15 @@
   ],
   "slots": [
     {
-      "name": "prepend",
+      "name": "prepend-outer",
       "description": "Slot for prepend outside the input.",
       "visibility": "public",
-      "parameters": []
+      "parameters": [
+        {
+          "name": "slot",
+          "visibility": "public"
+        }
+      ]
     },
     {
       "name": "default",
@@ -304,10 +309,15 @@
       "parameters": []
     },
     {
-      "name": "append",
+      "name": "append-outer",
       "description": "Slot for append outside the input.",
       "visibility": "public",
-      "parameters": []
+      "parameters": [
+        {
+          "name": "slot",
+          "visibility": "public"
+        }
+      ]
     }
   ],
   "refs": []

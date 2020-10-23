@@ -266,6 +266,35 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
+      "name": "errorCount",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "number",
+        "type": "number"
+      },
+      "defaultValue": 1
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "messages",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "validateOnBlur",
       "kind": "let",
       "static": false,
@@ -296,7 +325,36 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
+      "name": "success",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "boolean",
+        "type": "boolean"
+      },
+      "defaultValue": false
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "id",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "style",
       "kind": "let",
       "static": false,
       "readonly": false,
@@ -357,10 +415,15 @@
   ],
   "slots": [
     {
-      "name": "append-outer",
+      "name": "prepend-outer",
       "description": "Slot for prepend outside the input.",
       "visibility": "public",
-      "parameters": []
+      "parameters": [
+        {
+          "name": "slot",
+          "visibility": "public"
+        }
+      ]
     },
     {
       "name": "prepend",
@@ -387,10 +450,15 @@
       "parameters": []
     },
     {
-      "name": "prepend-outer",
+      "name": "append-outer",
       "description": "Slot for append outside the input.",
       "visibility": "public",
-      "parameters": []
+      "parameters": [
+        {
+          "name": "slot",
+          "visibility": "public"
+        }
+      ]
     }
   ],
   "refs": []

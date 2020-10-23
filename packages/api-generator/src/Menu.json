@@ -4,7 +4,7 @@
   "data": [
     {
       "visibility": "public",
-      "description": "Classes to add to menu.",
+      "description": null,
       "keywords": [],
       "name": "class",
       "kind": "const",
@@ -18,9 +18,9 @@
       "localName": "klass"
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "The menu's active state.",
+      "description": null,
+      "keywords": [],
       "name": "active",
       "kind": "let",
       "static": false,
@@ -33,9 +33,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Makes the menu appear where the mouse was clicked.",
+      "description": null,
+      "keywords": [],
       "name": "absolute",
       "kind": "let",
       "static": false,
@@ -48,9 +48,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "The transition function for the menu.",
+      "description": null,
+      "keywords": [],
       "name": "transition",
       "kind": "let",
       "static": false,
@@ -62,9 +62,9 @@
       }
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Options for the transition when menu opens.",
+      "description": null,
+      "keywords": [],
       "name": "inOpts",
       "kind": "let",
       "static": false,
@@ -76,9 +76,9 @@
       }
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Options for the transition when menu closes.",
+      "description": null,
+      "keywords": [],
       "name": "outOpts",
       "kind": "let",
       "static": false,
@@ -90,9 +90,9 @@
       }
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Offsets the menu on x-axis when true.",
+      "description": null,
+      "keywords": [],
       "name": "offsetX",
       "kind": "let",
       "static": false,
@@ -105,9 +105,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Offsets the menu on y-axis when true.",
+      "description": null,
+      "keywords": [],
       "name": "offsetY",
       "kind": "let",
       "static": false,
@@ -120,9 +120,9 @@
       "defaultValue": true
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Offsets the menu on x-axis by some value.",
+      "description": null,
+      "keywords": [],
       "name": "nudgeX",
       "kind": "let",
       "static": false,
@@ -135,9 +135,9 @@
       "defaultValue": 0
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Offsets the menu on y-axis by some value.",
+      "description": null,
+      "keywords": [],
       "name": "nudgeY",
       "kind": "let",
       "static": false,
@@ -150,9 +150,9 @@
       "defaultValue": 0
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Designates whether menu should open on activator click.",
+      "description": null,
+      "keywords": [],
       "name": "openOnClick",
       "kind": "let",
       "static": false,
@@ -165,9 +165,9 @@
       "defaultValue": true
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Designates whether menu should open and close on activator hover.",
+      "description": null,
+      "keywords": [],
       "name": "hover",
       "kind": "let",
       "static": false,
@@ -180,9 +180,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Designates if menu should close on outside-activator click.",
+      "description": null,
+      "keywords": [],
       "name": "closeOnClickOutside",
       "kind": "let",
       "static": false,
@@ -195,9 +195,9 @@
       "defaultValue": true
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Designates if menu should close when its content is clicked.",
+      "description": null,
+      "keywords": [],
       "name": "closeOnClick",
       "kind": "let",
       "static": false,
@@ -210,9 +210,9 @@
       "defaultValue": true
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Aligns the component with respect to its bottom.",
+      "description": null,
+      "keywords": [],
       "name": "bottom",
       "kind": "let",
       "static": false,
@@ -225,9 +225,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Aligns the component with respect to its right.",
+      "description": null,
+      "keywords": [],
       "name": "right",
       "kind": "let",
       "static": false,
@@ -240,9 +240,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Removed the border radius.",
+      "description": null,
+      "keywords": [],
       "name": "tile",
       "kind": "let",
       "static": false,
@@ -255,9 +255,9 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Disables the menu.",
+      "description": null,
+      "keywords": [],
       "name": "disabled",
       "kind": "let",
       "static": false,
@@ -270,10 +270,10 @@
       "defaultValue": false
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "The z-index of the menu",
-      "name": "zIndex",
+      "description": null,
+      "keywords": [],
+      "name": "index",
       "kind": "let",
       "static": false,
       "readonly": false,
@@ -285,9 +285,9 @@
       "defaultValue": 8
     },
     {
-      "keywords": [],
       "visibility": "public",
-      "description": "Styles for the menu.",
+      "description": null,
+      "keywords": [],
       "name": "style",
       "kind": "let",
       "static": false,

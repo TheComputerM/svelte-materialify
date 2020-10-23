@@ -6,6 +6,21 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
+      "name": "class",
+      "kind": "const",
+      "static": false,
+      "readonly": true,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "localName": "klass"
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "active",
       "kind": "let",
       "static": false,
@@ -244,10 +259,15 @@
   "events": [],
   "slots": [
     {
-      "name": "prepend",
+      "name": "prepend-outer",
       "description": null,
       "visibility": "public",
-      "parameters": []
+      "parameters": [
+        {
+          "name": "slot",
+          "visibility": "public"
+        }
+      ]
     },
     {
       "name": "default",
@@ -256,10 +276,15 @@
       "parameters": []
     },
     {
-      "name": "append",
+      "name": "append-outer",
       "description": null,
       "visibility": "public",
-      "parameters": []
+      "parameters": [
+        {
+          "name": "slot",
+          "visibility": "public"
+        }
+      ]
     },
     {
       "name": "item",
