@@ -13,7 +13,7 @@ The `Tabs` component is used for hiding content behind a selectable item. This c
 
 - [Tabs](/api/Tabs/)
 - [Tab](/api/Tab/)
-- [TabContent](/api/TabContent/);
+- [TabContent](/api/TabContent/)
 
 ## Examples
 
