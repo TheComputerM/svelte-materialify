@@ -3,65 +3,26 @@
   import { onMount, setContext, createEventDispatcher } from 'svelte';
   import { fade } from 'svelte/transition';
 
-  // Classes to add to menu.
   let klass = '';
   export { klass as class };
-
-  // The menu's active state.
   export let active = false;
-
-  // Makes the menu appear where the mouse was clicked.
   export let absolute = false;
-
-  // The transition function for the menu.
   export let transition = fade;
-
-  // Options for the transition when menu opens.
   export let inOpts = { duration: 250 };
-
-  // Options for the transition when menu closes.
   export let outOpts = { duration: 200 };
-
-  // Offsets the menu on x-axis when true.
   export let offsetX = false;
-
-  // Offsets the menu on y-axis when true.
   export let offsetY = true;
-
-  // Offsets the menu on x-axis by some value.
   export let nudgeX = 0;
-
-  // Offsets the menu on y-axis by some value.
   export let nudgeY = 0;
-
-  // Designates whether menu should open on activator click.
   export let openOnClick = true;
-
-  // Designates whether menu should open and close on activator hover.
   export let hover = false;
-
-  // Designates if menu should close on outside-activator click.
   export let closeOnClickOutside = true;
-
-  // Designates if menu should close when its content is clicked.
   export let closeOnClick = true;
-
-  // Aligns the component with respect to its bottom.
   export let bottom = false;
-
-  // Aligns the component with respect to its right.
   export let right = false;
-
-  // Removed the border radius.
   export let tile = false;
-
-  // Disables the menu.
   export let disabled = false;
-
-  // The z-index of the menu
-  export let zIndex = 8;
-
-  // Styles for the menu.
+  export let index = 8;
   export let style = '';
 
   let origin = 'top left';
@@ -167,7 +128,7 @@
       on:click={menuClick}
       in:transition={inOpts}
       out:transition={outOpts}
-      style="{position};transform-origin:{origin};z-index:{zIndex};{style}">
+      style="{position};transform-origin:{origin};z-index:{index};{style}">
       <slot />
     </div>
   {/if}
