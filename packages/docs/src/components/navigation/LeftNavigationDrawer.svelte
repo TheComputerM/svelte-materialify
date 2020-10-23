@@ -27,12 +27,7 @@
 </style>
 
 <svelte:options immutable={true} />
-<ListGroup
-  class="secondary-text"
-  eager
-  {offset}
-  bind:active={expanded}
-  activatorProps={{ dense: true }}>
+<ListGroup class="secondary-text" eager {offset} bind:active={expanded}>
   <div slot="prepend">
     {#if item.icon}
       <Icon class="mdi mdi-{expanded ? item.openIcon : item.icon}" />

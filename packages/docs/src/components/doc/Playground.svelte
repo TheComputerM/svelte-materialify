@@ -96,6 +96,7 @@
             <Slider bind:value={values[label]}>{label}</Slider>
           {:else if controls[label].type === 'select'}
             <Select
+              class="mt-4"
               mandatory={controls[label].mandatory}
               bind:value={values[label]}
               items={controls[label].items}>
@@ -105,7 +106,7 @@
               </div>
             </Select>
           {:else if controls[label].type === 'text'}
-            <TextField bind:value={values[label]}>{label}</TextField>
+            <TextField bind:value={values[label]} class="mt-4">{label}</TextField>
           {/if}
         {/each}
       </div>
