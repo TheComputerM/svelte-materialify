@@ -107,18 +107,15 @@
 
 <!-- svelte-ignore a11y-label-has-associated-control -->
 <Input class="s-slider" {color} {readonly} {disabled} {hint}>
-  <div slot="prepend-outer">
-    <!-- Slot for prepend outside the input. -->
-    <slot name="prepend" />
-  </div>
+  <!-- Slot for prepend outside the input. -->
+  <slot slot="prepend-outer" name="prepend-outer" />
   <label class="s-slider__label" class:inverse-label={inverseLabel}><slot /></label>
   <div
     class:persistent-thumb={persistentThumb}
     bind:this={sliderElement}
     {disabled}
     {style} />
-  <div slot="append-outer">
-    <!-- Slot for append outside the input. -->
-    <slot name="append" />
-  </div>
+
+  <!-- Slot for append outside the input. -->
+  <slot slot="append-outer" name="append-outer" />
 </Input>

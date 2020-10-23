@@ -43,9 +43,8 @@
         {placeholder}
         {hint}
         readonly>
-        <span slot="prepend-outer">
-          <slot name="prepend" />
-        </span>
+        <slot slot="prepend-outer" name="prepend-outer" />
+
         <slot />
         <div slot="content">
           {#if chips}
@@ -59,9 +58,7 @@
         <span slot="append">
           <Icon path={DOWN_ICON} rotate={active ? 180 : 0} />
         </span>
-        <span slot="append-outer">
-          <slot name="append" />
-        </span>
+        <slot slot="append-outer" name="append-outer" />
       </TextField>
     </span>
     <ListItemGroup bind:value {mandatory} {multiple} {max}>

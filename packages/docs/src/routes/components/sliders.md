@@ -34,7 +34,7 @@ You cannot interact with readonly sliders, but they look as ordinary ones.
 
 ### Icons
 
-You can add icons to the slider with the `append` and `prepend` slots.
+You can add icons to the slider with the `append-outer` and `prepend-outer` slots.
 <Components.Example file="Slider/icons" />
 
 ### Thumb

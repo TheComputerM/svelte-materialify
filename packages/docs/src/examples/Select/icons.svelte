@@ -12,7 +12,7 @@
 <Row>
   <Col>
     <Select {items}>
-      <span slot="prepend">
+      <span slot="prepend-outer">
         <Icon class="mdi mdi-home" />
       </span>
       Regular
@@ -21,7 +21,7 @@
   <Col>
     <Select {items}>
       Regular
-      <span slot="append">
+      <span slot="append-outer">
         <Icon class="mdi mdi-home" />
       </span>
     </Select>

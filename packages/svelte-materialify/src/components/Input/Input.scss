@@ -28,12 +28,13 @@
   max-width: 100%;
   font-size: 12px;
   overflow: hidden;
-}
 
-.s-input__messages {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+  & > [slot='messages'] {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
 }
 
 .s-input {
@@ -128,25 +129,6 @@
     label {
       color: var(--theme-text-disabled);
     }
-  }
-
-  &.error,
-  &.success {
-    .s-input__details {
-      color: inherit;
-    }
-
-    label {
-      color: inherit;
-    }
-  }
-
-  &.error {
-    color: $error-color;
-  }
-
-  &.success {
-    color: $success-color;
   }
 
   &.dense {

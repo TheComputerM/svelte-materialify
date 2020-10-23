@@ -25,19 +25,22 @@
   export let placeholder = null;
   export let hint = '';
   export let counter = false;
+  export let messages = [];
   export let rules = [];
+  export let errorCount = 1;
   export let validateOnBlur = false;
   export let error = false;
+  export let success = false;
   export let id = `s-input-${uid(5)}`;
   export let style = null;
 
   let focused = false;
   $: labelActive = !!placeholder || value || focused;
-  let messages = [];
+  let errorMessages = [];
 
   function checkRules() {
-    messages = rules.map((r) => r(value)).filter((r) => typeof r === 'string');
-    if (messages.length) error = true;
+    errorMessages = rules.map((r) => r(value)).filter((r) => typeof r === 'string');
+    if (errorMessages.length) error = true;
     else {
       error = false;
     }
@@ -64,19 +67,14 @@
 <Input
   class="s-text-field {klass}"
   {color}
+  {dense}
   {readonly}
   {disabled}
-  {dense}
-  {value}
-  {hint}
-  {counter}
-  {messages}
   {error}
+  {success}
   {style}>
   <!-- Slot for prepend outside the input. -->
-  <span slot="prepend-outer">
-    <slot name="prepend-outer" />
-  </span>
+  <slot slot="prepend-outer" name="prepend-outer" />
   <div
     class="s-text-field__wrapper"
     class:filled
@@ -121,8 +119,16 @@
     <!-- Slot for append inside the input. -->
     <slot name="append" />
   </div>
+
+  <div slot="messages">
+    <div>
+      <span>{hint}</span>
+      {#each messages as message}<span>{message}</span>{/each}
+      {#each errorMessages.slice(0, errorCount) as message}<span>{message}</span>{/each}
+    </div>
+    {#if counter}<span>{value.length} / {counter}</span>{/if}
+  </div>
+
   <!-- Slot for append outside the input. -->
-  <span slot="append-outer">
-    <slot name="append-outer" />
-  </span>
+  <slot slot="append-outer" name="append-outer" />
 </Input>
