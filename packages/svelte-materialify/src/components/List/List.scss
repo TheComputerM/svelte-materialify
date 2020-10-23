@@ -11,6 +11,10 @@
     padding-top: $list-subheader-padding-top;
   }
 
+  .s-list-item.active {
+    color: inherit;
+  }
+
   &.disabled {
     pointer-events: none;
   }

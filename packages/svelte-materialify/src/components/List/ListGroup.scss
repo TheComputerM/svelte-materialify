@@ -5,15 +5,17 @@
   position: relative;
   max-width: 100%;
 
-  .s-list-item.active {
-    color: inherit;
-  }
-
   &.disabled {
     pointer-events: none;
     color: var(--theme-text-disabled);
   }
+}
 
+.s-list-group__activator.active:not(:hover):not(:focus)::before {
+  opacity: 0;
+}
+
+.s-list-group__items {
   &.offset {
     .s-list-item {
       padding-left: var(--s-list-group-offset) !important;

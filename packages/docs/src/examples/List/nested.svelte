@@ -1,5 +1,7 @@
 <script>
   import { List, ListGroup, ListItem, Icon } from 'svelte-materialify/src';
+
+  let active = false;
 </script>
 
 <div class="d-flex justify-center">
@@ -10,17 +12,13 @@
       </span>
       Home
     </ListItem>
-    <ListGroup offset="72px">
-      <span slot="activator" let:toggle let:active>
-        <ListItem on:click={toggle}>
-          <span slot="prepend">
-            <Icon class="mdi mdi-cog" />
-          </span>
-          Actions
-          <span slot="append">
-            <Icon class="mdi mdi-chevron-up" rotate={active ? 0 : 180} />
-          </span>
-        </ListItem>
+    <ListGroup bind:active offset={72}>
+      <span slot="prepend">
+        <Icon class="mdi mdi-cog" />
+      </span>
+      <span slot="activator"> Actions </span>
+      <span slot="append">
+        <Icon class="mdi mdi-chevron-up" rotate={active ? 0 : 180} />
       </span>
       <ListItem>Create</ListItem>
       <ListItem>Read</ListItem>

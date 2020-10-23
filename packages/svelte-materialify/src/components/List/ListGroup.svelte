@@ -1,10 +1,13 @@
 <script>
   import { slide } from 'svelte/transition';
   import { onMount, setContext } from 'svelte';
+  import ListItem from './ListItem.svelte';
   import Style from '../../internal/Style';
 
   let klass = 'primary-text';
   export { klass as class };
+  export let activatorClass = '';
+  export let activatorProps = {};
   export let active = true;
   export let eager = false;
   export let transition = slide;
@@ -32,15 +35,25 @@
 <style lang="scss" src="./ListGroup.scss" global>
 </style>
 
-<slot name="activator" {toggle} {active} />
-{#if active}
-  <div
-    transition:transition={transitionOpts}
-    aria-disabled={disabled}
-    class="s-list-group {klass}"
-    class:offset
-    {style}
-    use:Style={{ 'list-group-offset': offset }}>
-    <slot />
-  </div>
-{/if}
+<div class="s-list-group {klass}">
+  <ListItem
+    class="s-list-group__activator {activatorClass}"
+    {active}
+    {...activatorProps}
+    on:click={toggle}>
+    <slot slot="prepend" name="prepend" />
+    <slot name="activator" />
+    <slot slot="append" name="append" />
+  </ListItem>
+  {#if active}
+    <div
+      transition:transition={transitionOpts}
+      aria-disabled={disabled}
+      class="s-list-group__items"
+      class:offset
+      {style}
+      use:Style={{ 'list-group-offset': offset }}>
+      <slot />
+    </div>
+  {/if}
+</div>
