@@ -10,6 +10,8 @@
   import Checkbox from '../Checkbox';
   import Icon from '../Icon';
 
+  let klass = '';
+  export { klass as class };
   export let active = false;
   export let value = [];
   export let items = [];
@@ -30,7 +32,7 @@
 <style lang="scss" src="./Select.scss" global>
 </style>
 
-<div class="s-select" class:disabled class:chips>
+<div class="s-select {klass}" class:disabled class:chips>
   <Menu offsetY={false} bind:active {disabled} closeOnClick={!multiple}>
     <span slot="activator">
       <TextField
