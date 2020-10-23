@@ -1,3 +1,16 @@
+# [0.2.0](https://github.com/TheComputerM/svelte-materialify/compare/v0.1.13...v0.2.0) (2020-10-23)
+
+### Bug Fixes
+
+- rework ListGroup ([fce84b5](https://github.com/TheComputerM/svelte-materialify/commit/fce84b5541371a9602650613bd126ec7e531f4e3))
+- **Tooltip:** update method to get left and top position ([a12cbeb](https://github.com/TheComputerM/svelte-materialify/commit/a12cbeb9abc5a5dfe432b738f8864920dd963652))
+
+### Features
+
+- **Select:** add class prop ([da28195](https://github.com/TheComputerM/svelte-materialify/commit/da2819584d2e1e25b6bac3e96a3f2a87a2d67381))
+- **types:** added for Menu ([7c45da4](https://github.com/TheComputerM/svelte-materialify/commit/7c45da4d044f5e257be97cb4ed73abc8ba9e06f8))
+- faster and better inputs ([6913c93](https://github.com/TheComputerM/svelte-materialify/commit/6913c934de9a2856ae7be6b3c1e6b72c299d3a46))
+
 ## [0.1.13](https://github.com/TheComputerM/svelte-materialify/compare/v0.1.12...v0.1.13) (2020-10-21)
 
 ### Features
