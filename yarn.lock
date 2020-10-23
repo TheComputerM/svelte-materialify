@@ -7682,10 +7682,10 @@ mz@^2.5.0:
     object-assign "^4.0.1"
     thenify-all "^1.0.0"
 
-nanoid@^3.1.12:
-  version "3.1.12"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.12.tgz#6f7736c62e8d39421601e4a0c77623a97ea69654"
-  integrity sha512-1qstj9z5+x491jfiC4Nelk+f8XBad7LN20PmyWINJEMRSf3wcAjAWysw1qaA8z6NSKe2sjq1hRSDpBH5paCb6A==
+nanoid@^3.1.15:
+  version "3.1.15"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.15.tgz#28e7c4ce56aff2d0c2d37814c7aef9d6c5b3e6f3"
+  integrity sha512-n8rXUZ8UU3lV6+43atPrSizqzh25n1/f00Wx1sCiE7R1sSHytZLTTiQl8DjC4IDLOnEZDlgJhy0yO4VsIpMxow==
 
 nanomatch@^1.2.9:
   version "1.2.13"
@@ -8575,14 +8575,14 @@ postcss@^7.0.14, postcss@^7.0.2, postcss@^7.0.21, postcss@^7.0.26, postcss@^7.0.
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
-postcss@^8.1.2:
-  version "8.1.2"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.1.2.tgz#9731fcaa4f7b0bef47121821bdae9eeb609a324c"
-  integrity sha512-mToqEVFq8jF9TFhlIK4HhE34zknFJuNTgqtsr60vUvrWn+9TIYugCwiV1JZRxCuOrej2jjstun1bn4Bc7/1HkA==
+postcss@^8.1.3:
+  version "8.1.3"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.1.3.tgz#b25138b872ca9f9512c218d9d57ebb59015a9c39"
+  integrity sha512-AKsHGqd7HmXmL/EgyAjI4Gx719A5yQdt9HzyXrI8M/hzxfumecYS95kfvIt40UZqPVNoEt0Va1M3PG54XtNPbg==
   dependencies:
     colorette "^1.2.1"
     line-column "^1.0.2"
-    nanoid "^3.1.12"
+    nanoid "^3.1.15"
     source-map "^0.6.1"
 
 prelude-ls@^1.2.1:
@@ -9413,10 +9413,10 @@ rollup-pluginutils@^2.8.2:
   dependencies:
     estree-walker "^0.6.1"
 
-rollup@^2.32.0:
-  version "2.32.0"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.32.0.tgz#ac58c8e85782bea8aa2d440fc05aba345013582a"
-  integrity sha512-0FIG1jY88uhCP2yP4CfvtKEqPDRmsUwfY1kEOOM+DH/KOGATgaIFd/is1+fQOxsvh62ELzcFfKonwKWnHhrqmw==
+rollup@^2.32.1:
+  version "2.32.1"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.32.1.tgz#625a92c54f5b4d28ada12d618641491d4dbb548c"
+  integrity sha512-Op2vWTpvK7t6/Qnm1TTh7VjEZZkN8RWgf0DHbkKzQBwNf748YhXbozHVefqpPp/Fuyk/PQPAnYsBxAEtlMvpUw==
   optionalDependencies:
     fsevents "~2.1.2"
 
@@ -10301,10 +10301,10 @@ supports-hyperlinks@^2.0.0:
     has-flag "^4.0.0"
     supports-color "^7.0.0"
 
-svelte-check@^1.0.60:
-  version "1.0.60"
-  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-1.0.60.tgz#7496b9bcaff791f250a5ba9166a0f10620be0f42"
-  integrity sha512-trkcPGNnSRJZjQgKgqxh3ZZdqH57xksyHH9B2YcJ+VGqoMS1OzwkxWav1J39/VLM1K8GbNwFOfso6KIdS8L+0Q==
+svelte-check@^1.0.61:
+  version "1.0.61"
+  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-1.0.61.tgz#9723747d5f2e86b7241be93ae32c194f2f4476f0"
+  integrity sha512-hngvMp2Y9ZsJC7c4Gf29Ec2fm5/F8RX0GIVEkzVnrr8TFRMzkP4sVmMj2R/u02c0NY0MBhgZ974pMuHu74pyPA==
   dependencies:
     chalk "^4.0.0"
     chokidar "^3.4.1"
@@ -10403,10 +10403,10 @@ svelte@3.25.1:
   resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.25.1.tgz#218def1243fea5a97af6eb60f5e232315bb57ac4"
   integrity sha512-IbrVKTmuR0BvDw4ii8/gBNy8REu7nWTRy9uhUz+Yuae5lIjWgSGwKlWtJGC2Vg95s+UnXPqDu0Kk/sUwe0t2GQ==
 
-svelte@^3.29.0:
-  version "3.29.0"
-  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.29.0.tgz#80acac4254341ad8f3301e5ef03f4127ea967d96"
-  integrity sha512-f+A65eyOQ5ujETLy+igNXtlr6AEjAQLYd1yJE1VwNiXMQO5Z/Vmiy3rL+zblV/9jd7rtTTWqO1IcuXsP2Qv0OA==
+svelte@^3.29.4:
+  version "3.29.4"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.29.4.tgz#d0f80cb58109ef52963855c23496f7153bb2eb7e"
+  integrity sha512-oW0fGHlyFFMvzRtIvOs84b0fOc0gmZNQcL5Is3hxuTpvaYX3pfd8oHy4KnOvbq4Ca6SG6AHdRMk7OhApTo0NqA==
 
 sveltedoc-parser@^3.0.4:
   version "3.0.4"
