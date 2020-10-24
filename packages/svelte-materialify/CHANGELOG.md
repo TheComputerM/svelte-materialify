@@ -1,3 +1,9 @@
+## [0.2.2](https://github.com/TheComputerM/svelte-materialify/compare/v0.2.1...v0.2.2) (2020-10-24)
+
+### Bug Fixes
+
+- not linting compiled ([9994c04](https://github.com/TheComputerM/svelte-materialify/commit/9994c049881d8e862b7a420f9f714db3d5258d13))
+
 ## [0.2.1](https://github.com/TheComputerM/svelte-materialify/compare/v0.2.0...v0.2.1) (2020-10-24)
 
 ### Features
