@@ -1,5 +1,7 @@
 ---
 title: Badges
+description: The badge component is a small status descriptor for elements. This typically contains a small number or short set of characters.
+keywords: badges, svelte materialify badge, svelte badge component
 related:
   - components/icons
   - components/alerts

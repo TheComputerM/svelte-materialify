@@ -1,5 +1,7 @@
 ---
 title: Alert Component
+description: The Alert component is used to convey information to the user. Designed to stand out, the alerts come in four contextual styles.
+keywords: alert, alerts, svelte alert component, svelte materialify alert
 related:
   - components/buttons
   - components/icons

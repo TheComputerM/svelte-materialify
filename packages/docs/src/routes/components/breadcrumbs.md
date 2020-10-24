@@ -1,5 +1,7 @@
 ---
 title: Breadcrumbs Component
+description: The breadcrumbs component is a navigational helper for pages. It can accept a Material Icons icon or characters as a divider.
+keywords: breadcrumbs, svelte materialify breadcrumb, svelte breadcrumb component
 related:
   - components/switches
   - components/buttons

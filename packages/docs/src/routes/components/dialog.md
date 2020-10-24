@@ -1,5 +1,11 @@
 ---
 title: Dialog Component
+description: The dialog component informs a user about a specific task and may contain critical information or require the user to take a specific action.
+keywords: dialogs, svelte materialify dialog, svelte dialog component
+related:
+  - components/buttons
+  - components/cards
+  - components/menus
 ---
 
 # Dialog

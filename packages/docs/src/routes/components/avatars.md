@@ -1,5 +1,7 @@
 ---
 title: Avatar Component
+description: The avatar component is used to control the size and border radius of an image. It can be used with numerous components to provide better visual context.
+keywords: avatars, svelte materialify avatar, svelte avatar component
 related:
   - components/badges
   - components/lists

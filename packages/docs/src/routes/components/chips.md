@@ -1,5 +1,7 @@
 ---
 title: Chip Component
+description: The chip component allows a user to enter information, make selections, filter content or trigger actions.
+keywords: chips, svelte materialify chip, svelte chip component
 related:
   - components/avatars
   - components/icons

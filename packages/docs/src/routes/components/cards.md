@@ -1,5 +1,7 @@
 ---
 title: Card Component
+description: The Card component is a versatile component that can be used for anything from a panel to a static image.
+keywords: cards, svelte materialify card, svelte card component
 related:
   - components/buttons
   - components/images

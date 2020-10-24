@@ -1,5 +1,7 @@
 ---
 title: Button group Component
+description: The button group component allows you to combine a series of selectable buttons together in a single-line.
+keywords: button groups, svelte materialify button group, svelte button group component
 related:
   - components/text-field
   - components/checkboxes

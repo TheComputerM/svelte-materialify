@@ -1,5 +1,7 @@
 ---
 title: App Bar Component
+description: The app bar component is a supercharged toolbar with advanced scrolling techniques and application layout support.
+keywords: app bars, svelte materialify app bar, svelte app bar component
 related:
   - components/buttons
   - components/icons

@@ -1,5 +1,7 @@
 ---
 title: Button Component
+description: The button component communicates actions that a user can take and are typically placed in dialogs, forms, cards and toolbars.
+keywords: buttons, svelte materialify button, svelte button component
 related:
   - components/button-groups
   - components/alerts

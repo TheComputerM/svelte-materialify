@@ -1,6 +1,10 @@
 ---
 title: Checkbox Component
+description: The checkbox component permits users to select between two values.
+keywords: checkbox, checkbox component, svelte materialify checkbox, svelte checkbox component
 related:
+  - components/switches
+  - components/text-field
   - api/Checkbox
 ---
 

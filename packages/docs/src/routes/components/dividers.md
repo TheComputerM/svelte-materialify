@@ -1,7 +1,10 @@
 ---
 title: Dividers
+description: The divider component is a thin line commonly used to separate groups of content in lists or layouts.
+keywords: dividers, svelte materialify divider, svelte divider component
 related:
   - components/lists
+  - components/navigation-drawers
   - components/app-bar
 ---
 
