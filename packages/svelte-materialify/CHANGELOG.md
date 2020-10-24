@@ -1,3 +1,9 @@
+## [0.2.1](https://github.com/TheComputerM/svelte-materialify/compare/v0.2.0...v0.2.1) (2020-10-24)
+
+### Features
+
+- added preprocessed version ([8669950](https://github.com/TheComputerM/svelte-materialify/commit/86699504baf46376c128d5a8de6b3f097d65cde7))
+
 # [0.2.0](https://github.com/TheComputerM/svelte-materialify/compare/v0.1.13...v0.2.0) (2020-10-23)
 
 ### Bug Fixes
