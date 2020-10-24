@@ -10,9 +10,38 @@ related:
 
 Get Started with Svelte Materialify, the best material UI component library for Svelte
 
+If you want to try out svelte materialify and tinker with it, visit the [repl playground](https://svelte.dev/repl/2c55788d8ffd4458bfe9bcb5f58956db).
+
+We can also **optionally** add [focus-visible](https://github.com/WICG/focus-visible), if you want keyboard focused styles.
+
+```html
+<script src="https://unpkg.com/focus-visible@latest/dist/focus-visible.min.js"></script>
+```
+
+## Minimal Install
+
+If want a fast and basic setup then only installing `svelte-materialify` should be fine.
+
+```shell
+$ npm i svelte-materialify
+```
+
+And then in your svelte files, import the compiled module for svelte materialify
+
+```html
+<script>
+  // In a svelte file
+  // Import Everything
+  import * as S from 'svelte-materialify';
+  // OR
+  import { Button } from 'svelte-materialify';
+  // Import a single component
+</script>
+```
+
 ## Advanced Install
 
-If you want finer control over Svelte Materialify and installation you want to install all its peer dependencies. Follow this guide for SSR.
+If you want finer control over Svelte Materialify and installation you want to install all its peer dependencies.
 
 ```shell
 $ npm i -D svelte-materialify svelte-preprocess sass postcss
@@ -30,7 +59,9 @@ $ npm i -D svelte-materialify svelte-preprocess sass postcss
 ```
 
 <Components.Alert type='info'>
-Now you can use SCSS and SASS in your styles.
+
+Now _you_ can also use SCSS and SASS styles in your own components. Learn more about [svelte-preprocess](https://github.com/sveltejs/svelte-preprocess/blob/master/docs/usage.md).
+
 </Components.Alert>
 
 Then create a **\_material-theme.scss** file and place it in any folder, lets put it in a folder called **theme**. Then include the path in the preprocess function in your **rollup.config.js** (likewise follow the same in webpack but for svelte-loader).
@@ -49,21 +80,51 @@ module.exports = {
 };
 ```
 
-### Svelte
+### Rollup
 
 ```js
 const { preprocess } = require('./svelte.config');
 
 export default {
-  // ...,
+  // some config...,
   plugins: [
     svelte({ preprocess }),
-    // ...
+    // more plugins...
   ],
 };
 ```
 
-### Sapper Integration
+### Webpack
+
+```js
+const { preprocess } = require('./svelte.config');
+
+module.exports = {
+  // some config...
+  module: {
+    rules: [
+      {
+        test: /.(svelte|html)$/,
+        use: {
+          loader: 'svelte-loader',
+          options: {
+            // svelte options...,
+            preprocess,
+          },
+        },
+      },
+    ],
+  },
+};
+```
+
+### Integrations
+
+Learn how to integrate svelte materialify with existing frameworks.
+
+#### Sapper
+
+Add preprocessor for both client and server bundles.
 
 ```js
 const { preprocess } = require('./svelte.config');
@@ -87,38 +148,4 @@ export default {
 };
 ```
 
-Now _you_ can also use scss styles in your own components. Learn more about
-[svelte-preprocess](https://github.com/sveltejs/svelte-preprocess/blob/master/docs/usage.md).
-
-## Minimal Install
-
-<Components.Alert type="danger">
-Use Advanced Installation, minimal installation is very, very broken and very unoptimised.
-</Components.Alert>
-
-If you want to try out svelte materialify and tinker with it, visit the [repl playground](https://svelte.dev/repl/2c55788d8ffd4458bfe9bcb5f58956db).
-
-If want a fast and basic setup then only installing `svelte-materialify` should be fine.
-
-```shell
-$ npm i svelte-materialify
-```
-
-And then in your svelte files, import the compiled module for svelte materialify
-
-```html
-<script>
-  // In a svelte file
-  // Import Everything
-  import * as S from 'svelte-materialify';
-  // OR
-  import { Button } from 'svelte-materialify';
-  // Import a single component
-</script>
-```
-
-We can also **optionally** add [focus-visible](https://github.com/WICG/focus-visible), if you want keyboard focused styles.
-
-```html
-<script src="https://unpkg.com/focus-visible@latest/dist/focus-visible.min.js"></script>
-```
+## Templates

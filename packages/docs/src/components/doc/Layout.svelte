@@ -60,7 +60,8 @@
     margin-left: 2px;
   }
   .markdown-container > section section {
-    margin-bottom: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 </style>
 
