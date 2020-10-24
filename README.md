@@ -33,7 +33,7 @@
 
 A better Material UI design framework for Svelte with full support for light / dark themes and customisability.
 
-This is still in development. To contribute, please read [CONTRIBUTING.md](./CONTRIBUTING.md) and open a PR.
+This is still in development. To contribute, please read [CONTRIBUTING.md](https://svelte-materialify.vercel.app/getting-started/contributing/) and open a PR.
 
 There are currently more than **50+** different components are more are planned to arrive soon.
 

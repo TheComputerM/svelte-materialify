@@ -68,6 +68,6 @@ First make a change and make sure it works well by running `yarn lint` and `yarn
 
 For example here
 
-`docs: improve contributing.md document`
+`docs: improve contributing.md`
 
 Then push your changes to your github repository, finally from the github repository web page you can click the Pull Request button and a contributor will review the changes you made.
