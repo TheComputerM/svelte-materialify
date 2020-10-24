@@ -11,11 +11,10 @@
   "author": "TheComputerM",
   "main": "compiled/index.js",
   "module": "compiled/index.mjs",
-  "svelte": "dist/index.js",
   "scripts": {
     "build": "concurrently \"yarn:build:js\" \"yarn:build:minimal\"",
-    "build:minimal": "node preprocess.js",
     "build:js": "rollup -c",
+    "build:minimal": "node preprocess.js",
     "check": "svelte-check --workspace src/components",
     "prepublishOnly": "concurrently \"yarn:build:js\" \"yarn:build:minimal\"",
     "test": "jest",
@@ -23,8 +22,8 @@
   },
   "files": [
     "@types",
-    "dist",
     "compiled",
+    "dist",
     "src"
   ],
   "keywords": [
@@ -72,5 +71,6 @@
     "svelte-jester": "^1.1.5",
     "svelte-preprocess": "^4.5.1"
   },
-  "types": "@types/index.d.ts"
+  "types": "@types/index.d.ts",
+  "svelte": "dist/index.js"
 }
