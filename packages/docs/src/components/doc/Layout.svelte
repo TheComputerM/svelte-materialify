@@ -30,7 +30,9 @@
     markdown.set(true);
   });
 
-  export let title = '';
+  export let title;
+  export let description;
+  export let keywords;
   export let related = null;
 </script>
 
@@ -65,7 +67,7 @@
   }
 </style>
 
-<Meta title={`${title} | Svelte Materialify`} />
+<Meta title="{title} | Svelte Materialify" {description} {keywords} />
 
 <section class="markdown-container pa-4 pa-sm-6 pa-md-8">
   <slot />

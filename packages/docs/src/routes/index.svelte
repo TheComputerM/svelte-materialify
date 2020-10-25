@@ -47,7 +47,10 @@
   }
 </style>
 
-<Meta title="Svelte Material Design Component Framework - Svelte Materialify" />
+<Meta
+  title="Svelte Material Design Component Framework - Svelte Materialify"
+  description="Svelte Materialify is a  Material UI component library for Svelte, with full support for light and dark themes."
+  keywords="svelte, material, ui, components, install svelte materialify" />
 
 <div class="theme--dark" id="home">
   <Container class="pt-6 pb-6">
