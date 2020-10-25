@@ -1,3 +1,9 @@
+## [0.2.4](https://github.com/TheComputerM/svelte-materialify/compare/v0.2.3...v0.2.4) (2020-10-25)
+
+### Bug Fixes
+
+- **Window:** remove querySelector ([72ecd04](https://github.com/TheComputerM/svelte-materialify/commit/72ecd04957229f95145d6ac52cb6b74f98617026))
+
 ## [0.2.3](https://github.com/TheComputerM/svelte-materialify/compare/v0.2.2...v0.2.3) (2020-10-25)
 
 ### Bug Fixes
