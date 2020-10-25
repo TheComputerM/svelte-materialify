@@ -6,6 +6,20 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
+      "name": "WINDOW",
+      "kind": "const",
+      "static": false,
+      "readonly": true,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "class",
       "kind": "const",
       "static": false,
