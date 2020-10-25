@@ -1,3 +1,9 @@
+## [0.2.3](https://github.com/TheComputerM/svelte-materialify/compare/v0.2.2...v0.2.3) (2020-10-25)
+
+### Bug Fixes
+
+- **Tabs:** remove use of querySelector ([bf8700b](https://github.com/TheComputerM/svelte-materialify/commit/bf8700b25c03d10b04400c3de82114669ed0214d))
+
 ## [0.2.2](https://github.com/TheComputerM/svelte-materialify/compare/v0.2.1...v0.2.2) (2020-10-24)
 
 ### Bug Fixes
