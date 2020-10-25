@@ -1,14 +1,15 @@
 <script>
-  import { getContext } from 'svelte';
+  import { getContext, onMount } from 'svelte';
   import { SLIDE_GROUP } from '../SlideGroup/SlideGroup.svelte';
   import { ITEM_GROUP } from '../ItemGroup/ItemGroup.svelte';
   import { TABS } from './Tabs.svelte';
   import Class from '../../internal/Class';
   import Ripple from '../../actions/Ripple';
 
+  let tab;
   const click = getContext(SLIDE_GROUP);
   const { select, register, index } = getContext(ITEM_GROUP);
-  const { ripple } = getContext(TABS);
+  const { ripple, registerTab } = getContext(TABS);
 
   let klass = '';
   export { klass as class };
@@ -27,12 +28,17 @@
       select(value);
     }
   }
+
+  onMount(() => {
+    registerTab(tab);
+  });
 </script>
 
 <style lang="scss" src="./Tab.scss" global>
 </style>
 
 <button
+  bind:this={tab}
   class="s-tab s-slide-item {klass}"
   role="tab"
   aria-selected={active}

@@ -5,12 +5,11 @@
 <script>
   import SlideGroup from '../SlideGroup';
   import Window from '../Window';
-  import { onMount, setContext } from 'svelte';
+  import { setContext } from 'svelte';
 
   let sliderElement;
   let windowComponent;
-  let tabWrapper;
-  let tabs;
+  const tabs = [];
 
   let klass = '';
   export { klass as class };
@@ -27,7 +26,12 @@
   export let ripple = {};
   export let vertical = false;
 
-  setContext(TABS, { ripple });
+  setContext(TABS, {
+    ripple,
+    registerTab: (tab) => {
+      tabs.push(tab);
+    },
+  });
 
   function moveSlider({ detail }) {
     if (slider) {
@@ -42,10 +46,6 @@
     }
     windowComponent.set(value[0]);
   }
-
-  onMount(() => {
-    tabs = tabWrapper.querySelectorAll('.s-tab');
-  });
 </script>
 
 <style lang="scss" src="./Tabs.scss" global>
@@ -53,7 +53,6 @@
 
 <div class="s-tabs" role="tablist" class:vertical>
   <div
-    bind:this={tabWrapper}
     class="s-tabs-bar {klass}"
     role="tablist"
     class:fixed-tabs={fixedTabs}
