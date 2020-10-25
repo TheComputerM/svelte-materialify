@@ -1,5 +1,9 @@
+<script context="module">
+  export const WINDOW = {};
+</script>
+
 <script>
-  import { onMount } from 'svelte';
+  import { onMount, setContext } from 'svelte';
 
   let klass = '';
   export { klass as class };
@@ -9,11 +13,15 @@
   export let reverse = false;
   export let continuous = true;
 
-  /** @type {Element} */
   let container;
-  /** @type {Array<Element>} */
-  let windowItems = [];
+  const windowItems = [];
   let moving = false;
+
+  setContext(WINDOW, {
+    registerWindow: (window) => {
+      windowItems.push(window);
+    },
+  });
 
   export function set(index) {
     const prevIndex = windowItems.findIndex((i) => i.classList.contains(activeClass));
@@ -74,7 +82,6 @@
   }
 
   onMount(() => {
-    windowItems = Array.from(container.querySelectorAll('.s-window-item'));
     const activeItem = windowItems[value];
     if (activeItem) activeItem.classList.add(activeClass);
   });

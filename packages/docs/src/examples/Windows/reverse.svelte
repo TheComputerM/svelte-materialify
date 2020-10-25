@@ -4,7 +4,7 @@
   let window;
 </script>
 
-<style lang="scss">
+<style>
   .slide {
     height: 200px;
     display: flex;
