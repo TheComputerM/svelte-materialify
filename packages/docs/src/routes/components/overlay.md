@@ -1,5 +1,7 @@
 ---
-title: Overlay
+title: Overlay Component
+description: The overlay component makes it easy to create a scrim or hovering effect over components or your entire application.
+keywords: overlays, svelte materialify overlay, svelte overlay component
 related:
   - components/cards
   - components/dialog

@@ -1,5 +1,7 @@
 ---
 title: Spacing
+description: Spacing helper classes allow you to apply margin or padding to any element in increments from 1 to 5.
+keywords: spacing helper classes, spacing classes, svelte materialify spacing
 related:
   - styles/elevation/
   - styles/content/

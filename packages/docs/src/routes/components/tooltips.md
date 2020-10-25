@@ -1,5 +1,7 @@
 ---
-title: Tooltip
+title: Tooltip Component
+description: The tooltip component displays textual information regarding the element it is attached to.
+keywords: tooltips, svelte materialify tooltip, svelte tooltip component
 related:
   - components/badges
   - components/icons

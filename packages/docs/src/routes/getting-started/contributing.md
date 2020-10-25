@@ -1,5 +1,7 @@
 ---
 title: Contributing
+description: Here is how you can contribute to Svelte Materialify and make the world a better place.
+keywords: contribute, contributing, feature request
 ---
 
 # Contributing

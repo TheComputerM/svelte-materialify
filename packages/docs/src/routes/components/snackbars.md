@@ -1,5 +1,7 @@
 ---
-title: Snackbars
+title: Snackbar Component
+description: The snackbar component informs user of a process that your application has performed is will perform. It can be temporary and often contains actions.
+keywords: snackbars, svelte materialify snackbar, svelte snackbar component
 related:
   - components/buttons
   - styles/colors

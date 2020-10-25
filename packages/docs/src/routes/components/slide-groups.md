@@ -1,5 +1,11 @@
 ---
-title: Slide Group
+title: Slide Group Component
+description: The slide group component is similar to item groups in that you can make selectable content out of elements but does so in a single line fashion.
+keywords: slide groups, slideable groups, svelte materialify slide group, svelte slide group component
+related:
+  - components/icons
+  - components/carousels
+  - components/tabs
 ---
 
 # Slide Group

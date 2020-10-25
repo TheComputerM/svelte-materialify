@@ -1,5 +1,7 @@
 ---
-title: Progress Circular
+title: Progress circular Component
+description: The progress circular component is useful for displaying a visual indicator of numerical data in a circle.
+keywords: progress circular, svelte materialify progress circular, svelte progress circular component, circular progress
 related:
   - components/cards
   - components/progress-linear

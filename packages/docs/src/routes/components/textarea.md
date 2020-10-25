@@ -1,5 +1,7 @@
 ---
-title: Textarea
+title: Textarea Component
+description: The textarea component is a text field that accepts lengthy textual input from users.
+keywords: textareas, svelte materialify textarea, svelte textarea component
 related:
   - components/selects
   - components/text-field

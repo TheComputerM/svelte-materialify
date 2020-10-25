@@ -1,5 +1,7 @@
 ---
 title: Progress Linear
+description: The progress-linear component is useful for displaying a visual indicator of numerical data in a straight line.
+keywords: progress linear, svelte materialify progress linear, svelte progress linear component, linear progress
 related:
   - components/cards
   - components/progress-circular

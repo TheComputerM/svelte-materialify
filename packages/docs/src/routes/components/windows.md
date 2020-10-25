@@ -1,5 +1,11 @@
 ---
-title: Windows
+title: Windows Component
+description: The window component is a wrapper container that allows transitioning between content. It serves as the baseline for tabs and carousels.
+keywords: windows, svelte materialify window, svelte window component
+related:
+  - components/carousels
+  - components/steppers
+  - components/tabs
 ---
 
 # Windows

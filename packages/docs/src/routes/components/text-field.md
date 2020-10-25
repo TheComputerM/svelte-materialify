@@ -1,5 +1,7 @@
 ---
 title: Text Field Component
+description: The text field component accepts textual input from users.
+keywords: text fields, svelte materialify text field, svelte text field component
 related:
   - components/selects
   - components/sliders

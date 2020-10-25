@@ -1,5 +1,10 @@
 ---
-title: Selects
+title: Select Component
+description: The select component provides a list of options that a user can make selections from.
+keywords: selects, svelte materialify select, svelte select component
+related:
+  - components/autocomplete
+  - components/checkboxes
 ---
 
 # Selects

@@ -1,5 +1,7 @@
 ---
 title: Jump action
+description: The Jump action allowsyou to smoot scroll to any position
+keywords: jump action, svelte jump action, svelte materialify jump
 related:
   - components/buttons
   - components/expansion-panels
@@ -14,7 +16,7 @@ related:
 
 # Jump
 
-This action allows you to smooth scroll to a any position using [jump.js](http://callmecavs.com/jump.js/).
+This action allows you to smooth scroll to any position using [jump.js](http://callmecavs.com/jump.js/).
 
 ## Usage
 

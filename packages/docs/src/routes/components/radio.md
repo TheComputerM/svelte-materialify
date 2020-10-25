@@ -1,5 +1,7 @@
 ---
 title: Radio Component
+description: A radio button allows the user to choose only one of a set of options using a radio group.
+keywords: radio groups, radio buttons, svelte materialify radio group, svelte materialify radio, svelte radio component, svelte radio group component
 related:
   - components/checkboxes
   - api/Radio

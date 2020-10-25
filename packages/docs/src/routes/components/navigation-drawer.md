@@ -1,5 +1,7 @@
 ---
-title: NavigationDrawer Component
+title: Navigation drawer Component
+description: The navigation drawer component contains internal navigation links for an application and can be permanently on-screen or controlled programmatically.
+keywords: navigation drawer, svelte materialify navigation drawer, svelte navigation drawer component
 related:
   - components/lists
   - components/icons

@@ -1,5 +1,7 @@
 ---
 title: Ripple action
+description: The Ripple action can be used to show a material design ripple when an element is clicked
+keywords: ripple action, svelte ripple action, svelte materialify ripple
 related:
   - components/buttons
   - components/expansion-panels

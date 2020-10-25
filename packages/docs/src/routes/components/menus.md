@@ -1,9 +1,11 @@
 ---
 title: Menu Component
+description: The menu component exposes a drop down of potential selections or actions that the user can make.
+keywords: menus, vuetify menu component, vue menu component
 related:
   - components/lists
   - components/buttons
-  - api/Menu
+  - components/dialog
 ---
 
 # Menus

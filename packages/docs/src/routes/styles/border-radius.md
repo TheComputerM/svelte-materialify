@@ -1,8 +1,10 @@
 ---
 title: Border Radius
+description: Use border utilities to quickly style the border-radius of any element.
+keywords: border radius classes, radius utilities, svelte materialify radius helper classes
 related:
-  - getting-started/usage/
-  - styles/text-and-typography/
+  - getting-started/usage
+  - styles/text-and-typography
 ---
 
 # Border Radius

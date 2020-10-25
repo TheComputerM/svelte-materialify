@@ -1,5 +1,7 @@
 ---
 title: Intersection action
+description: The Intersection action calls a function when an element is scrolled into viewport
+keywords: intersect action, svelte intersect action, svelte materialify intersect
 related:
   - actions/mutate
   - actions/click-outside

@@ -1,5 +1,7 @@
 ---
 title: Text and Typography
+description: View the various typography styles. From headings to captions, with various weights, sizes and italics.
+keywords: typography, headings, titles, text
 related:
   - getting-started/usage
 ---

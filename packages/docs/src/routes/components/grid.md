@@ -1,5 +1,7 @@
 ---
 title: Grid
+description: Svelte Materialify supports the 12 point Material Design grid for laying out and controlling breakpoints for your application.
+keywords: grids, svelte materialify grid, layout component, flex component
 related:
   - styles/flex
   - styles/display-helpers

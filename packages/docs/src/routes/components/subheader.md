@@ -1,5 +1,7 @@
 ---
-title: Subheader
+title: Subheader Component
+description: The subheader component is used to provide context of sections of content or filtering and sorting criteria.
+keywords: subheaders, svelte materialify subheader, svelte subheader component
 related:
   - components/cards
   - components/grid

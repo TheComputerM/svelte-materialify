@@ -1,5 +1,7 @@
 ---
 title: Float
+description: Float helper classes allow you to control the float property of an element based upon the viewport size.
+keywords: float helper classes, float classes, svelte materialify float
 ---
 
 # Float

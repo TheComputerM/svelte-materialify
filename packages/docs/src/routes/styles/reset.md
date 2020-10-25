@@ -1,5 +1,7 @@
 ---
 title: CSS Reset
+description: Svelte Materialify uses ress.min, a complete browser reset based off or normalize.css.
+keywords: ress.min, css reset, svelte materialify css reset
 ---
 
 # CSS Reset

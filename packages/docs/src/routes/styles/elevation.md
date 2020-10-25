@@ -1,5 +1,7 @@
 ---
 title: Elevation
+description: Elevation helper classes allow you to control relative depth, or distance, between two surfaces along the z-axis.
+keywords: elevation helper classes, elevation classes, svelte materialify elevation
 related:
   - getting-started/usage/
   - styles/text-and-typography/

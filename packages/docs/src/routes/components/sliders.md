@@ -1,8 +1,11 @@
 ---
-title: Sliders
+title: Slider Component
+description: The slider component is a better visualization of the number input. It is used for gathering numerical user data.
+keywords: sliders, svelte materialify slider, svelte slider component
 related:
   - components/selects
   - components/text-field
+  - components/lists
 ---
 
 # Sliders

@@ -1,5 +1,7 @@
 ---
 title: Touch action
+description: The Touch action captues touch gestures in mobile devices.
+keywords: touch action, svelte touch action, svelte materialify touch
 related:
   - actions/ripple
   - actions/click-outside

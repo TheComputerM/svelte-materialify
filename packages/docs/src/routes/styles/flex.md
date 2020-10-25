@@ -1,5 +1,7 @@
 ---
 title: Flex
+description: Flex helper classes allow you to modify flexbox parents and children.
+keywords: flex helper classes, flex classes, svelte materialify flex
 related:
   - getting-started/usage/
   - styles/text-and-typography/

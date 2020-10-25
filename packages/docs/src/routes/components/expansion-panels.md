@@ -1,8 +1,11 @@
 ---
 title: Expansion Panel Component
+description: The expansion panel component is a lightweight container that hides information behind expandable and contractable containers.
+keywords: expansion panels, svelte materialify expansion panel, svelte expansion panel component
 related:
+  - components/cards
+  - components/lists
   - api/ExpansionPanels
-  - api/ExpansionPanel
 ---
 
 # Expansion Panels

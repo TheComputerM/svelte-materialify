@@ -1,6 +1,10 @@
 ---
 title: Switch Component
+description: The switch component is a simple and eloquent toggle used to select between two values.
+keywords: switch, switch component, svelte materialify switch, svelte switch component
 related:
+  - components/checkboxes
+  - components/radio-buttons
   - api/Switch
 ---
 

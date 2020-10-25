@@ -1,5 +1,7 @@
 ---
 title: Lists
+description: The list component is a continuous group of text, images and icons that may contain primary or supplemental actions.
+keywords: lists, svelte materialify list component, svelte list component
 related:
   - components/item-groups
   - components/list-item-groups

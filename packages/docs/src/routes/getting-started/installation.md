@@ -1,5 +1,7 @@
 ---
 title: Getting Started with Svelte Materialify
+description: Here is how you can install Svelte Materialify with the tools and frameworks you love.
+keywords: quick start, svelte materialify templates, installing materialify, install svelte materialify
 related:
   - components/alerts
   - components/buttons

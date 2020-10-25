@@ -1,6 +1,10 @@
 ---
-title: Footer
+title: Footer Component
+description: The footer component provides a container for displaying additional navigation information about a site.
+keywords: footers, svelte materialify footer, svelte footer component
 related:
+  - components/grid
+  - components/buttons
   - components/app-bar
 ---
 

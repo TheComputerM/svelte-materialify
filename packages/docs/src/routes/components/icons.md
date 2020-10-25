@@ -1,5 +1,7 @@
 ---
-title: Icons
+title: Icon Component
+description: The icon component is compatible with multiple common icon fonts such as Material Design Icons, Font Awesome and more.
+keywords: icons, svelte materialify icon, svelte icon component
 related:
   - components/buttons
   - components/cards

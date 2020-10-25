@@ -1,5 +1,7 @@
 ---
 title: Usage
+description: Here is how to use Svelte Materialify with best practices in mind.
+keywords: quick start, usage, how to, use svelte materialify
 related:
   - getting-started/installation
   - components/material-app
