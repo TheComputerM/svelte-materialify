@@ -178,6 +178,10 @@
       padding: $text-field-outlined-rounded-padding;
     }
   }
+
+  &.flat {
+    @include elevation(0, true);
+  }
 }
 
 .s-text-field {
