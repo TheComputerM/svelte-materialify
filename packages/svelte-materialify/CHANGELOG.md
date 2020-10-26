@@ -1,3 +1,9 @@
+## [0.2.5](https://github.com/TheComputerM/svelte-materialify/compare/v0.2.4...v0.2.5) (2020-10-26)
+
+### Bug Fixes
+
+- **TextField:** add style for 'flat' ([9aef49a](https://github.com/TheComputerM/svelte-materialify/commit/9aef49a13563db3a3fc1063b380370851ea19166))
+
 ## [0.2.4](https://github.com/TheComputerM/svelte-materialify/compare/v0.2.3...v0.2.4) (2020-10-25)
 
 ### Bug Fixes
