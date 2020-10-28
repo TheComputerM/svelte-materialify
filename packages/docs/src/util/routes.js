@@ -44,7 +44,7 @@ export default [
         text: 'Groups',
         items: [
           { text: 'Button Groups', href: '/components/button-groups/' },
-          { text: 'ListItem Groups', href: '/components/list-item-groups/' },
+          { text: 'List item Groups', href: '/components/list-item-groups/' },
           { text: 'Slide Groups', href: '/components/slide-groups/' },
           { text: 'Windows', href: '/components/windows/' },
         ],
