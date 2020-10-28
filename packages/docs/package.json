@@ -8,7 +8,7 @@
     "preview": "serve __sapper__/export"
   },
   "dependencies": {
-    "@mdi/js": "^5.7.55",
+    "@mdi/js": "^5.8.55",
     "compression": "^1.7.1",
     "gumshoejs": "^5.1.2",
     "polka": "next",
@@ -24,7 +24,7 @@
     "@rollup/plugin-alias": "^3.1.1",
     "@rollup/plugin-babel": "^5.2.1",
     "@rollup/plugin-dynamic-import-vars": "^1.1.0",
-    "@rollup/plugin-replace": "^2.3.3",
+    "@rollup/plugin-replace": "^2.3.4",
     "autoprefixer": "^10.0.1",
     "mdsvex": "^0.8.7",
     "postcss": "^8.1.3",
