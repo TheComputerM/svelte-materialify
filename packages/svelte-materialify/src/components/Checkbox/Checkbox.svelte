@@ -39,13 +39,13 @@
 
   id = id || `s-checkbox-${uid(5)}`;
 
-  const hasValidGroup = Array.isArray(group);
-  if (hasValidGroup && value) {
-    if (group.indexOf(value) >= 0) checked = true;
+  $: hasValidGroup = Array.isArray(group);
+  $: if (hasValidGroup && value != null) {
+    checked = group.indexOf(value) >= 0;
   }
 
   function groupUpdate() {
-    if (hasValidGroup && value) {
+    if (hasValidGroup && value != null) {
       const i = group.indexOf(value);
       if (i < 0) {
         group.push(value);
