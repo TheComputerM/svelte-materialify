@@ -19,11 +19,12 @@
   export let style = null;
 
   const Group = getContext('S_ListItemGroup');
-  let click = () => {};
+  let click = null;
 
   if (Group) {
-    const { select, register, index } = getContext(Group);
+    const { select, register, index, activeClass: _activeClass } = getContext(Group);
     value = value || index();
+    activeClass = _activeClass || activeClass;
     register((values) => {
       active = values.includes(value);
     });

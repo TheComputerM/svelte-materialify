@@ -8,6 +8,7 @@
   let klass = 'primary-text';
   export { klass as class };
   export let value = [];
+  export let activeClass = 'active';
   export let multiple = false;
   export let mandatory = false;
   export let max = Infinity;
@@ -21,6 +22,7 @@
   class="s-list-item-group {klass}"
   role="listbox"
   bind:value
+  {activeClass}
   {multiple}
   {mandatory}
   {max}
