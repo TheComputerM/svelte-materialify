@@ -1,3 +1,10 @@
+## [0.2.6](https://github.com/TheComputerM/svelte-materialify/compare/v0.2.5...v0.2.6) (2020-10-28)
+
+### Bug Fixes
+
+- **checkbox:** groupUpdate and edge case when value = 0 ([e9ae8a1](https://github.com/TheComputerM/svelte-materialify/commit/e9ae8a1e7d40c3253bd513b33de7fdbfba12f986))
+- **Textarea:** autogrow ([8687d7c](https://github.com/TheComputerM/svelte-materialify/commit/8687d7cf17a7ef46ae2d084d3354fc08cecff7f2))
+
 ## [0.2.5](https://github.com/TheComputerM/svelte-materialify/compare/v0.2.4...v0.2.5) (2020-10-26)
 
 ### Bug Fixes
