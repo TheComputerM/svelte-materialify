@@ -26,7 +26,7 @@
   export let max = Infinity;
   export let chips = false;
   export let disabled = null;
-  export let format = (val) => Array.isArray(val)? val.join(', '):val;
+  export let format = (val) => (Array.isArray(val) ? val.join(', ') : val);
 </script>
 
 <style lang="scss" src="./Select.scss" global>
