@@ -14,6 +14,9 @@
   export { klass as class };
   export let active = false;
   export let value = [];
+  $: valueAsArray = multiple ? value : [value];
+  $: changedValue(valueAsArray);
+  const changedValue = (valueAsArray) => value = multiple ? valueAsArray : valueAsArray[0];
   export let items = [];
   export let filled = false;
   export let outlined = false;
@@ -41,7 +44,7 @@
         {solo}
         {dense}
         {disabled}
-        value={format(value)}
+        value={format(valueAsArray)}
         {placeholder}
         {hint}
         readonly>
@@ -51,7 +54,7 @@
         <div slot="content">
           {#if chips}
             <span class="s-select__chips">
-              {#each value as v}
+              {#each valueAsArray as v}
                 <Chip>{v}</Chip>
               {/each}
             </span>
@@ -63,13 +66,13 @@
         <slot slot="append-outer" name="append-outer" />
       </TextField>
     </span>
-    <ListItemGroup bind:value {mandatory} {multiple} {max}>
+    <ListItemGroup bind:value={valueAsArray} {mandatory} {multiple} {max}>
       {#each items as item}
         <slot name="item" {item}>
           <ListItem {dense} value={item.value}>
             <span slot="prepend">
               {#if multiple}
-                <Checkbox checked={value.includes(item.value)} />
+                <Checkbox checked={valueAsArray.includes(item.value)} />
               {/if}
             </span>
             {item.name}
