@@ -14,9 +14,6 @@
   export { klass as class };
   export let active = false;
   export let value = [];
-  $: valueAsArray = multiple ? value : [value];
-  $: changedValue(valueAsArray);
-  const changedValue = (valueAsArray) => value = multiple ? valueAsArray : valueAsArray[0];
   export let items = [];
   export let filled = false;
   export let outlined = false;
@@ -30,6 +27,10 @@
   export let chips = false;
   export let disabled = null;
   export let format = (val) => val.join(', ');
+  
+  $: valueAsArray = multiple ? value : [value];
+  const changedValue = (valAsArray) => { value = multiple ? valAsArray : valAsArray[0]; }
+  $: changedValue(valueAsArray);
 </script>
 
 <style lang="scss" src="./Select.scss" global>
