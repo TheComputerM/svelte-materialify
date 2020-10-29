@@ -16,7 +16,7 @@
 
   let klass = '';
   export { klass as class };
-  export let { activeClass } = ITEM;
+  export let activeClass = ITEM.activeClass;
   export let value = ITEM.index();
   export let active = false;
   export let dense = false;
