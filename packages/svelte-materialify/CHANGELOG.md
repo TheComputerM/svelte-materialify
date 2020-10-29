@@ -1,3 +1,9 @@
+## [0.2.7](https://github.com/TheComputerM/svelte-materialify/compare/v0.2.6...v0.2.7) (2020-10-29)
+
+### Bug Fixes
+
+- better item groups ([522d81e](https://github.com/TheComputerM/svelte-materialify/commit/522d81e68bfde18ac9620fb59ca70af931d8a7ba))
+
 ## [0.2.6](https://github.com/TheComputerM/svelte-materialify/compare/v0.2.5...v0.2.6) (2020-10-28)
 
 ### Bug Fixes
