@@ -4,26 +4,26 @@
   import { ITEM_GROUP } from '../ItemGroup/ItemGroup.svelte';
   import Class from '../../internal/Class';
 
-  const click = getContext(SLIDE_GROUP);
-  const { select, register, _activeClass, index } = getContext(ITEM_GROUP);
+  const moveGroup = getContext(SLIDE_GROUP);
+  const ITEM = getContext(ITEM_GROUP);
 
   let active;
-  let item;
+  let itemElement;
 
   let klass = '';
   export { klass as class };
-  export let activeClass = _activeClass;
-  export let value = index();
+  export let { activeClass } = ITEM;
+  export let value = ITEM.index();
   export let disabled = null;
 
-  register((values) => {
+  ITEM.register((values) => {
     active = values.includes(value);
   });
 
-  function selectItem({ target }) {
+  function selectItem() {
     if (!disabled) {
-      click(target);
-      select(value);
+      moveGroup(itemElement);
+      ITEM.select(value);
     }
   }
 </script>
@@ -36,7 +36,7 @@
 </style>
 
 <div
-  bind:this={item}
+  bind:this={itemElement}
   class="s-slide-item {klass}"
   use:Class={[active && activeClass]}
   on:click={selectItem}>

@@ -49,7 +49,7 @@
       startIndex += 1;
       return startIndex;
     },
-    _activeClass: activeClass,
+    activeClass,
   });
 </script>
 

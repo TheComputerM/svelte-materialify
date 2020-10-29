@@ -3,7 +3,7 @@
   import { WINDOW } from './Window.svelte';
 
   let window;
-  const { registerWindow } = getContext(WINDOW);
+  const registerWindow = getContext(WINDOW);
 
   let klass = '';
   export { klass as class };

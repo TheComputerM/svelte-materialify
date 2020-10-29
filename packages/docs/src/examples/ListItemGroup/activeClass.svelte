@@ -3,13 +3,13 @@
 </script>
 
 <style>
-  :global(dash-border) {
+  :global(.dash-border) {
     border: 1px dashed green;
   }
 </style>
 
 <div class="ml-auto mr-auto elevation-2" style="width:500px">
-  <ListItemGroup>
+  <ListItemGroup activeClass="dash-border">
     <ListItem>
       <span slot="prepend">
         <Icon class="mdi mdi-home" />

@@ -3,22 +3,22 @@
   import Button from '../Button';
   import { ITEM_GROUP } from '../ItemGroup/ItemGroup.svelte';
 
-  const { select, register, index, _activeClass } = getContext(ITEM_GROUP);
+  const ITEM = getContext(ITEM_GROUP);
 
   let active;
 
   let klass = '';
   export { klass as class };
-  export let value = index();
-  export let activeClass = _activeClass;
+  export let value = ITEM.index();
+  export let { activeClass } = ITEM;
   export let disabled = null;
 
-  register((values) => {
+  ITEM.register((values) => {
     active = values.includes(value);
   });
 
   function click() {
-    if (!disabled) select(value);
+    if (!disabled) ITEM.select(value);
   }
 </script>
 

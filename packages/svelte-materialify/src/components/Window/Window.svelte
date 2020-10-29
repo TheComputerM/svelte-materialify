@@ -17,10 +17,8 @@
   const windowItems = [];
   let moving = false;
 
-  setContext(WINDOW, {
-    registerWindow: (window) => {
-      windowItems.push(window);
-    },
+  setContext(WINDOW, (window) => {
+    windowItems.push(window);
   });
 
   export function set(index) {

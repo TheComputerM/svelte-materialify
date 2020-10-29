@@ -24,8 +24,7 @@
   export let max = Infinity;
 
   let x = 0;
-  setContext(SLIDE_GROUP, (target) => {
-    const item = target.closest('.s-slide-item');
+  setContext(SLIDE_GROUP, (item) => {
     const left = item.offsetLeft;
     const width = item.offsetWidth;
 

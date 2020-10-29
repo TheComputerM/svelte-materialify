@@ -4,11 +4,20 @@
   import Class from '../../internal/Class';
 
   const role = getContext('S_ListItemRole');
+  const ITEM_GROUP = getContext('S_ListItemGroup');
+  const ITEM = ITEM_GROUP ?
+    getContext(ITEM_GROUP) :
+    {
+      select: () => null,
+      register: () => null,
+      index: () => null,
+      activeClass: 'active',
+    };
 
   let klass = '';
   export { klass as class };
-  export let activeClass = 'active';
-  export let value = null;
+  export let { activeClass } = ITEM;
+  export let value = ITEM.index();
   export let active = false;
   export let dense = false;
   export let disabled = null;
@@ -18,19 +27,12 @@
   export let ripple = getContext('S_ListItemRipple') || role || false;
   export let style = null;
 
-  const Group = getContext('S_ListItemGroup');
-  let click = null;
+  ITEM.register((values) => {
+    active = values.includes(value);
+  });
 
-  if (Group) {
-    const { select, register, index, activeClass: _activeClass } = getContext(Group);
-    value = value || index();
-    activeClass = _activeClass || activeClass;
-    register((values) => {
-      active = values.includes(value);
-    });
-    click = () => {
-      if (!disabled) select(value);
-    };
+  function click() {
+    if (!disabled) ITEM.select(value);
   }
 </script>
 
