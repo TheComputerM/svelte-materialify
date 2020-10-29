@@ -5,14 +5,13 @@
 
   const role = getContext('S_ListItemRole');
   const ITEM_GROUP = getContext('S_ListItemGroup');
-  const ITEM = ITEM_GROUP ?
-    getContext(ITEM_GROUP) :
-    {
-      select: () => null,
-      register: () => null,
-      index: () => null,
-      activeClass: 'active',
-    };
+  const DEFAULTS = {
+    select: () => null,
+    register: () => null,
+    index: () => null,
+    activeClass: 'active',
+  };
+  const ITEM = ITEM_GROUP ? getContext(ITEM_GROUP) : DEFAULTS;
 
   let klass = '';
   export { klass as class };
