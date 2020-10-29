@@ -29,7 +29,7 @@
   export let format = (val) => val.join(', ');
   
   $: valueAsArray = multiple ? value : [value];
-  const changedValue = (valAsArray) => { value = multiple ? valAsArray : valAsArray[0]; }
+  const changedValue = (valAsArray) => { value = multiple ? valAsArray : valAsArray[0]; };
   $: changedValue(valueAsArray);
 </script>
 
