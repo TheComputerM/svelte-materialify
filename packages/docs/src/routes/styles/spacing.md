@@ -24,7 +24,7 @@ The helper classes apply **margin** or **padding** to an element ranging from <u
 Where _property_ can be:
 
 - `m`: applies margin
-- `m`: applies padding
+- `p`: applies padding
 
 <br />
 
