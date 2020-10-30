@@ -1,3 +1,9 @@
+# [0.3.0](https://github.com/TheComputerM/svelte-materialify/compare/v0.2.7...v0.3.0) (2020-10-30)
+
+### Features
+
+- groups return single value when not multiple ([e256dab](https://github.com/TheComputerM/svelte-materialify/commit/e256dab42d81b0f5be384d2db669d5e846d56bcd))
+
 ## [0.2.7](https://github.com/TheComputerM/svelte-materialify/compare/v0.2.6...v0.2.7) (2020-10-29)
 
 ### Bug Fixes
