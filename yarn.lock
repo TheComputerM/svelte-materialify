@@ -9500,10 +9500,10 @@ sapper@^0.28.10:
     sourcemap-codec "^1.4.6"
     string-hash "^1.1.3"
 
-sass@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.27.0.tgz#0657ff674206b95ec20dc638a93e179c78f6ada2"
-  integrity sha512-0gcrER56OkzotK/GGwgg4fPrKuiFlPNitO7eUJ18Bs+/NBlofJfMxmxqpqJxjae9vu0Wq8TZzrSyxZal00WDig==
+sass@^1.28.0:
+  version "1.28.0"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.28.0.tgz#546f1308ff74cc4ec2ad735fd35dc18bc3f51f72"
+  integrity sha512-9FWX/0wuE1KxwfiP02chZhHaPzu6adpx9+wGch7WMOuHy5npOo0UapRI3FNSHva2CczaYJu2yNUBN8cCSqHz/A==
   dependencies:
     chokidar ">=2.0.0 <4.0.0"
 
@@ -10303,10 +10303,10 @@ supports-hyperlinks@^2.0.0:
     has-flag "^4.0.0"
     supports-color "^7.0.0"
 
-svelte-check@^1.1.3:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-1.1.3.tgz#e841784cc778848fd85434c56d9c7783a70c6b07"
-  integrity sha512-zJdKceG8DHsOB3bPm+TOC1zYkPgjtXwUrrr1OgLhBRrblbCYmt8R8NPa0+l7jmmA2yzKuGSjzia/aSWA88rg4g==
+svelte-check@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-1.1.6.tgz#705fea71a757511f47894cdfa1ffab6e5c5cab4d"
+  integrity sha512-9CTehTTy02B4b7hsSp/F0JO8LrI3hNAgXfBtQ2JkxbDSLqlMPM5d2wcMrSzws9QQg6clRfBnn44wx3h/XYWWmg==
   dependencies:
     chalk "^4.0.0"
     chokidar "^3.4.1"
