@@ -41,9 +41,10 @@
       "readonly": false,
       "type": {
         "kind": "type",
-        "text": "any",
-        "type": "any"
+        "text": "number",
+        "type": "number"
       },
+      "defaultValue": 0,
       "bind": [
         {
           "source": "SlideGroup",

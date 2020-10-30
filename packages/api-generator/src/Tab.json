@@ -41,10 +41,9 @@
       "readonly": false,
       "type": {
         "kind": "type",
-        "text": "string",
-        "type": "string"
-      },
-      "defaultValue": ""
+        "text": "any",
+        "type": "any"
+      }
     },
     {
       "visibility": "public",
