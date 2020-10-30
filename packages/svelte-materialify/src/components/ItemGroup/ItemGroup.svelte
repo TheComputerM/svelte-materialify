@@ -18,26 +18,27 @@
 
   const dispatch = createEventDispatcher();
   const valueStore = writable(value);
-  $: valueStore.set(value);
+  $: valueStore.set(multiple ? value : [value]);
 
   const unsub = valueStore.subscribe((val) => {
-    dispatch('change', val);
+    dispatch('change', multiple ? val : val[0]);
   });
+
   onDestroy(unsub);
 
   let startIndex = -1;
   setContext(ITEM_GROUP, {
     select: (val) => {
-      if (value.includes(val)) {
-        if (!(mandatory && value.length === 1)) {
-          value.splice(value.indexOf(val), 1);
-          value = value;
-        }
-      } else if (multiple) {
-        if (value.length < max) value = [...value, val];
-      } else {
-        value = [val];
-      }
+      if (multiple) {
+        if (value.includes(val)) {
+          if (!(mandatory && value === 1)) {
+            value.splice(value.indexOf(val), 1);
+            value = value;
+          }
+        } else if (value.length < max) value = [...value, val];
+      } else if (value === val) {
+        if (!mandatory) value = null;
+      } else value = val;
     },
     register: (setValue) => {
       const u = valueStore.subscribe((val) => {

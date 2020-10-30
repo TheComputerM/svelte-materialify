@@ -8,24 +8,24 @@
 
   let tab;
   const click = getContext(SLIDE_GROUP);
-  const { select, register, index } = getContext(ITEM_GROUP);
+  const ITEM = getContext(ITEM_GROUP);
   const { ripple, registerTab } = getContext(TABS);
 
   let klass = '';
   export { klass as class };
-  export let value = index();
-  export let activeClass = '';
+  export let value = ITEM.index();
+  export let activeClass = ITEM.activeClass;
   export let disabled = null;
 
   let active;
-  register((values) => {
+  ITEM.register((values) => {
     active = values.includes(value);
   });
 
   function selectTab({ target }) {
     if (!disabled) {
       click(target);
-      select(value);
+      ITEM.select(value);
     }
   }
 

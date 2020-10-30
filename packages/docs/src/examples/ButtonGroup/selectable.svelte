@@ -1,7 +1,7 @@
 <script>
   import { ButtonGroup, ButtonGroupItem } from 'svelte-materialify/src';
 
-  let value = [1];
+  let value = 1;
 </script>
 
 <div class="text-center">

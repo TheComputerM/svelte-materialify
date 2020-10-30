@@ -5,7 +5,7 @@
 </script>
 
 <div class="ml-auto mr-auto elevation-2" style="width:500px">
-  <ListItemGroup bind:value>
+  <ListItemGroup multiple bind:value>
     <ListItem value="foo">
       Foo
       <span slot="append">

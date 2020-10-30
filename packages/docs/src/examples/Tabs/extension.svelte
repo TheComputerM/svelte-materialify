@@ -1,7 +1,7 @@
 <script>
   import { Tabs, Tab, Window, WindowItem, AppBar } from 'svelte-materialify/src';
 
-  let value = [0];
+  let value = 0;
 </script>
 
 <AppBar>
@@ -17,7 +17,7 @@
   </div>
 </AppBar>
 
-<Window value={value[0]} class="ma-4">
+<Window {value} class="ma-4">
   <WindowItem>
     <h4>Item 1</h4>
     <p>

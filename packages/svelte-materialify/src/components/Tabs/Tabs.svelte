@@ -5,7 +5,7 @@
 <script>
   import SlideGroup from '../SlideGroup';
   import Window from '../Window';
-  import { setContext } from 'svelte';
+  import { onMount, setContext } from 'svelte';
 
   let sliderElement;
   let windowComponent;
@@ -13,7 +13,7 @@
 
   let klass = '';
   export { klass as class };
-  export let value = [0];
+  export let value = 0;
   export let centerActive = false;
   export let showArrows = true;
   export let fixedTabs = false;
@@ -35,7 +35,7 @@
 
   function moveSlider({ detail }) {
     if (slider) {
-      const activeTab = tabs[detail[0]];
+      const activeTab = tabs[detail];
       if (vertical) {
         sliderElement.style.top = `${activeTab.offsetTop}px`;
         sliderElement.style.height = `${activeTab.offsetHeight}px`;
@@ -44,8 +44,12 @@
         sliderElement.style.width = `${activeTab.offsetWidth}px`;
       }
     }
-    windowComponent.set(value[0]);
+    windowComponent.set(value);
   }
+
+  onMount(() => {
+    moveSlider({ detail: value });
+  });
 </script>
 
 <style lang="scss" src="./Tabs.scss" global>

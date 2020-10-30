@@ -26,7 +26,7 @@
   export let max = Infinity;
   export let chips = false;
   export let disabled = null;
-  export let format = (val) => val.join(', ');
+  export let format = (val) => (Array.isArray(val) ? val.join(', ') : val);
 </script>
 
 <style lang="scss" src="./Select.scss" global>
@@ -51,7 +51,7 @@
         <div slot="content">
           {#if chips}
             <span class="s-select__chips">
-              {#each value as v}
+              {#each Array.isArray(value) ? value : [value] as v}
                 <Chip>{v}</Chip>
               {/each}
             </span>
