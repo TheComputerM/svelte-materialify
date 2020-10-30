@@ -1,5 +1,5 @@
 <script context="module">
-  import uid from 'uid';
+  import uid from '../../internal/uid';
 </script>
 
 <script>
