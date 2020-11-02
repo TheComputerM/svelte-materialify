@@ -46,6 +46,10 @@
     }
   }
 
+  onMount(()=>{
+    checkRules()
+  })
+
   function onFocus() {
     focused = true;
   }
