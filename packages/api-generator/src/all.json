@@ -2,8 +2,8 @@
   "names": [
     "Alert",
     "AppBar",
-    "Avatar",
     "Badge",
+    "Avatar",
     "Breadcrumbs",
     "Button",
     "ButtonGroup",
@@ -13,6 +13,8 @@
     "CardSubtitle",
     "CardText",
     "CardTitle",
+    "Carousel",
+    "CarouselItem",
     "Checkbox",
     "Chip",
     "Dialog",

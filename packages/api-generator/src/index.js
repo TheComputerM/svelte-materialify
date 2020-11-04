@@ -1,8 +1,8 @@
 export { default as all } from './all.json';
 export { default as Alert } from './Alert.json';
 export { default as AppBar } from './AppBar.json';
-export { default as Avatar } from './Avatar.json';
 export { default as Badge } from './Badge.json';
+export { default as Avatar } from './Avatar.json';
 export { default as Breadcrumbs } from './Breadcrumbs.json';
 export { default as Button } from './Button.json';
 export { default as ButtonGroup } from './ButtonGroup.json';
@@ -12,6 +12,8 @@ export { default as CardActions } from './CardActions.json';
 export { default as CardSubtitle } from './CardSubtitle.json';
 export { default as CardText } from './CardText.json';
 export { default as CardTitle } from './CardTitle.json';
+export { default as Carousel } from './Carousel.json';
+export { default as CarouselItem } from './CarouselItem.json';
 export { default as Checkbox } from './Checkbox.json';
 export { default as Chip } from './Chip.json';
 export { default as Dialog } from './Dialog.json';
