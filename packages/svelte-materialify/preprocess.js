@@ -12,6 +12,9 @@ const processor = sveltePreprocess({
   scss: {
     includePaths: [path.join(BASE, 'theme')],
   },
+  postcss: {
+    plugins: [require('cssnano')()],
+  },
 });
 
 del.sync(['dist/**']);
