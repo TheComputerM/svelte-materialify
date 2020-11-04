@@ -1,12 +1,9 @@
-<script context="module">
-  const down = 'M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z';
-</script>
-
 <script>
   import { getContext } from 'svelte';
   import { EXPANSION_PANELS } from './ExpansionPanels.svelte';
   import { slide } from 'svelte/transition';
   import Icon from '../Icon';
+  import down from '../../internal/Icons/down';
 
   const { values, Disabled, selectPanel, index } = getContext(EXPANSION_PANELS);
 

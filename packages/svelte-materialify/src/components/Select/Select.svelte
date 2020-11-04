@@ -1,7 +1,3 @@
-<script context="module">
-  const DOWN_ICON = 'M7,10L12,15L17,10H7Z';
-</script>
-
 <script>
   import TextField from '../TextField';
   import Menu from '../Menu';
@@ -9,6 +5,7 @@
   import Chip from '../Chip';
   import Checkbox from '../Checkbox';
   import Icon from '../Icon';
+  import DOWN_ICON from '../../internal/Icons/down';
 
   let klass = '';
   export { klass as class };

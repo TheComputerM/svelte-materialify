@@ -1,12 +1,12 @@
 <script context="module">
   export const SLIDE_GROUP = {};
-  const prevIcon = 'M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z';
-  const nextIcon = 'M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z';
 </script>
 
 <script>
   import { setContext, afterUpdate } from 'svelte';
   import ItemGroup from '../ItemGroup';
+  import prevIcon from '../../internal/Icons/prev';
+  import nextIcon from '../../internal/Icons/next';
   import Icon from '../Icon';
 
   let contentWidth;
