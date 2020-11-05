@@ -4,15 +4,16 @@
   max-width: 100%;
   position: relative;
 
-  &:not(.disabled){
-    input, .s-menu__wrapper {
-      cursor: pointer;
-    }
-  }
-
   .s-menu__wrapper,
   .s-menu {
     width: 100%;
+  }
+  
+  &:not(.disabled){
+    input,
+    .s-menu__wrapper {
+      cursor: pointer;
+    }
   }
 
   &.chips {
