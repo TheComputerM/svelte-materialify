@@ -1,3 +1,14 @@
+## [0.3.1](https://github.com/TheComputerM/svelte-materialify/compare/v0.3.0...v0.3.1) (2020-11-05)
+
+### Bug Fixes
+
+- **styles:** update aria-disabled selector ([b91c08e](https://github.com/TheComputerM/svelte-materialify/commit/b91c08e04b3baaa80510f1041a8aa9edb4a25f2b))
+
+### Features
+
+- local icons ([7cdec36](https://github.com/TheComputerM/svelte-materialify/commit/7cdec36654067a8242f1b6aa4845402d84e9708b))
+- smaller bundles ([998c3a2](https://github.com/TheComputerM/svelte-materialify/commit/998c3a24c814e128eea264e3002cbbe6db59e328))
+
 # [0.3.0](https://github.com/TheComputerM/svelte-materialify/compare/v0.2.7...v0.3.0) (2020-10-30)
 
 ### Features
