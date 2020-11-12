@@ -23,7 +23,8 @@
   class:disabled
   use:Style={{ 'icon-size': size, 'icon-rotate': `${rotate}deg` }}
   aria-disabled={disabled}
-  {style}>
+  {style}
+  on:click>
   {#if path}
     <svg
       xmlns="http://www.w3.org/2000/svg"

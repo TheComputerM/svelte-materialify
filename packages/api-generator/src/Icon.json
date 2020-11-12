@@ -128,7 +128,18 @@
   "components": [],
   "description": null,
   "keywords": [],
-  "events": [],
+  "events": [
+    {
+      "name": "click",
+      "parent": "i",
+      "modificators": [],
+      "locations": null,
+      "loc": null,
+      "visibility": "public",
+      "description": "",
+      "keywords": []
+    }
+  ],
   "slots": [
     {
       "name": "default",
