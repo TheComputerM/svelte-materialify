@@ -75,3 +75,9 @@ const rules = [
 ```
 
 <Components.Example file="TextField/validation" />
+
+### EventHandler
+
+Text field provides eventHandler like `on:keypress` to perform actions while pressing keys.
+
+<Components.Example file="TextField/actions" />
