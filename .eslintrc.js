@@ -37,7 +37,6 @@ module.exports = {
         'no-return-assign': ['error', 'except-parens'],
         'no-param-reassign': ['error', { props: false }],
       },
-      globals: { ClipboardJS: 'readonly' },
     },
   ],
   extends: ['eslint:recommended', 'airbnb-base'],

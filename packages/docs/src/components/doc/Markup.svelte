@@ -1,10 +1,11 @@
 <script>
+  import Clipboard from 'clipboard';
   import { Button, Icon } from 'svelte-materialify/src';
 
   export let lang = '';
   function copy(node) {
     const toCopy = node.querySelector('pre').textContent;
-    const clipboard = new ClipboardJS(node.querySelector('.s-btn'), {
+    const clipboard = new Clipboard(node.querySelector('.s-btn'), {
       text: () => toCopy,
     });
     return {

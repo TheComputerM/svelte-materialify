@@ -26,6 +26,7 @@
     "@rollup/plugin-dynamic-import-vars": "^1.1.0",
     "@rollup/plugin-replace": "^2.3.4",
     "autoprefixer": "^10.0.2",
+    "clipboard": "^2.0.6",
     "mdsvex": "^0.8.7",
     "postcss": "^8.1.7",
     "prism-svelte": "^0.4.7",
