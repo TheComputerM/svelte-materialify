@@ -1,3 +1,14 @@
+## [0.3.2](https://github.com/TheComputerM/svelte-materialify/compare/v0.3.1...v0.3.2) (2020-11-15)
+
+### Bug Fixes
+
+- **Select:** cursor and width ([#55](https://github.com/TheComputerM/svelte-materialify/issues/55)) ([c200072](https://github.com/TheComputerM/svelte-materialify/commit/c20007214c36d2c314de6e136b21dcf460c68add))
+
+### Features
+
+- **textfield:** adding keypress eventHandler ([5deaa7a](https://github.com/TheComputerM/svelte-materialify/commit/5deaa7adbbacbcb5ba7b8e1be9380598f0b669e8))
+- **textfield:** adding on:keypress eventhandler ([4ea87bf](https://github.com/TheComputerM/svelte-materialify/commit/4ea87bf68436ea6f6d6df0b31a45f677ec6d40a8))
+
 ## [0.3.1](https://github.com/TheComputerM/svelte-materialify/compare/v0.3.0...v0.3.1) (2020-11-05)
 
 ### Bug Fixes
