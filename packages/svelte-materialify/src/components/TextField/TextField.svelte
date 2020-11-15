@@ -99,6 +99,7 @@
         on:blur
         on:input
         on:change
+        on:keypress
         {...$$restProps} />
     </div>
 

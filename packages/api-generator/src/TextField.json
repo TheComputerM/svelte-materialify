@@ -396,6 +396,16 @@
       "visibility": "public",
       "description": "",
       "keywords": []
+    },
+    {
+      "name": "keypress",
+      "parent": "input",
+      "modificators": [],
+      "locations": null,
+      "loc": null,
+      "visibility": "public",
+      "description": "",
+      "keywords": []
     }
   ],
   "slots": [
