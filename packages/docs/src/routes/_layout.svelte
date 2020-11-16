@@ -51,8 +51,14 @@
 <svelte:window on:resize={checkMobile} />
 
 <svelte:head>
-  <link rel="stylesheet" href="prism/material-light.css" disabled={$theme === 'dark'} />
-  <link rel="stylesheet" href="prism/material-dark.css" disabled={$theme === 'light'} />
+  <link
+    rel="stylesheet"
+    href="prism/material-light.css"
+    disabled={$theme === 'dark' ? true : null} />
+  <link
+    rel="stylesheet"
+    href="prism/material-dark.css"
+    disabled={$theme === 'light' ? true : null} />
 </svelte:head>
 
 <MaterialApp theme={$theme}>
