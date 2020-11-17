@@ -249,3 +249,34 @@
     }
   }
 }
+
+.flex-grow-0 {
+  flex-grow: 0;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.flex-shrink-1 {
+  flex-shrink: 1;
+}
+
+@include create_breakpoints() using ($screen_size) {
+  .flex-#{$screen_size}-grow-0 {
+    flex-grow: 0;
+  }
+  .flex-#{$screen_size}-grow-1 {
+    flex-grow: 1;
+  }
+  .flex-#{$screen_size}-shrink-0 {
+    flex-shrink: 0;
+  }
+  .flex-#{$screen_size}-shrink-1 {
+    flex-shrink: 1;
+  }
+}
