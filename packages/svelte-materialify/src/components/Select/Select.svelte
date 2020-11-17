@@ -18,7 +18,7 @@
   export let dense = false;
   export let placeholder = null;
   export let hint = '';
-  export let mandatory = false;
+  export let mandatory = true;
   export let multiple = false;
   export let max = Infinity;
   export let chips = false;
