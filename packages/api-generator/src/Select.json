@@ -175,7 +175,7 @@
         "text": "boolean",
         "type": "boolean"
       },
-      "defaultValue": false
+      "defaultValue": true
     },
     {
       "visibility": "public",
