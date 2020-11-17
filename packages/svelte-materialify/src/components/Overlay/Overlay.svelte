@@ -3,12 +3,14 @@
   import BackgroundColor from '../../internal/BackgroundColor';
 
   let klass = '';
+  export let transition = fade;
+  export let inOpts = { duration: 250 };
+  export let outOpts = { duration: 250 };
   export let active = true;
   export let opacity = 0.46;
   export let color = 'rgb(33, 33, 33)';
   export let index = 5;
   export let absolute = false;
-  export let fadeOptions = {};
   export let style = '';
   export { klass as class };
 </script>
@@ -18,7 +20,8 @@
 
 {#if active}
   <div
-    transition:fade={fadeOptions}
+    in:transition={inOpts}
+    out:transition={outOpts}
     class="s-overlay {klass}"
     class:absolute
     on:click
