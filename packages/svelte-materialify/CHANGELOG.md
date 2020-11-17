@@ -1,3 +1,10 @@
+## [0.3.3](https://github.com/TheComputerM/svelte-materialify/compare/v0.3.2...v0.3.3) (2020-11-17)
+
+### Features
+
+- **overlay:** adding transition, inOpts, outOpts as props ([85daff7](https://github.com/TheComputerM/svelte-materialify/commit/85daff763ec5fb77fdb792b24aac51678d72c17a))
+- **style:** implemented flex grow and shrink ([1591070](https://github.com/TheComputerM/svelte-materialify/commit/159107072c1d12ed7ab7c8eb0eb78bc47ce0abd7))
+
 ## [0.3.2](https://github.com/TheComputerM/svelte-materialify/compare/v0.3.1...v0.3.2) (2020-11-15)
 
 ### Bug Fixes
