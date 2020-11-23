@@ -17,6 +17,7 @@ export { default as CardText } from './CardText';
 export { default as CardActions } from './CardActions';
 export { default as Container } from './Container';
 export { default as Col } from './Col';
+export { default as Divider } from './Divider';
 export { default as ItemGroup } from './ItemGroup';
 export { default as Icon } from './Icon';
 export { default as Input } from './Input';
