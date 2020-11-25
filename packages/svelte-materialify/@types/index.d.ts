@@ -30,10 +30,7 @@ export { default as NavigationDrawer } from './NavigationDrawer';
 export { default as Dialog } from './Dialog';
 export { default as Overlay } from './Overlay';
 export { default as Row } from './Row';
-<<<<<<< HEAD
 export { default as Snackbar } from './Snackbar';
-=======
->>>>>>> 328f231d28203ed4df50999b5c772f38862b73a6
 export { default as TextField } from './TextField';
 export { default as ProgressLinear } from './ProgressLinear';
 export { default as ProgressCircular } from './ProgressCircular';
