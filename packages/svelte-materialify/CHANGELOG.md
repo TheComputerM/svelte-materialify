@@ -1,3 +1,14 @@
+## [0.3.4](https://github.com/TheComputerM/svelte-materialify/compare/v0.3.3...v0.3.4) (2020-11-29)
+
+### Bug Fixes
+
+- better selection control ([b1e2542](https://github.com/TheComputerM/svelte-materialify/commit/b1e25422ed5dcf2b00ec7fd337b924472d93a0bf))
+- **types:** fix some types ([3be086f](https://github.com/TheComputerM/svelte-materialify/commit/3be086f60aa4c9748a622867b16540a6839d5506))
+
+### Features
+
+- **types:** add Container, Row, Col, Dividers ([328f231](https://github.com/TheComputerM/svelte-materialify/commit/328f231d28203ed4df50999b5c772f38862b73a6))
+
 ## [0.3.3](https://github.com/TheComputerM/svelte-materialify/compare/v0.3.2...v0.3.3) (2020-11-17)
 
 ### Features
