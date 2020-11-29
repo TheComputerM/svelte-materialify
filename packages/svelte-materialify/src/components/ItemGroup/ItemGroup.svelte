@@ -18,13 +18,8 @@
 
   const dispatch = createEventDispatcher();
   const valueStore = writable(value);
-  $: valueStore.set(multiple ? value : [value]);
-
-  const unsub = valueStore.subscribe((val) => {
-    dispatch('change', multiple ? val : val[0]);
-  });
-
-  onDestroy(unsub);
+  $: valueStore.set(value);
+  $: dispatch('change', value);
 
   let startIndex = -1;
   setContext(ITEM_GROUP, {
@@ -42,7 +37,7 @@
     },
     register: (setValue) => {
       const u = valueStore.subscribe((val) => {
-        setValue(val);
+        setValue(multiple ? val : [val]);
       });
       onDestroy(u);
     },
