@@ -23,6 +23,7 @@
   export let max = Infinity;
   export let chips = false;
   export let disabled = null;
+  export let closeOnClick = !multiple;
   export let format = (val) => (Array.isArray(val) ? val.join(', ') : val);
 </script>
 
@@ -30,7 +31,7 @@
 </style>
 
 <div class="s-select {klass}" class:disabled class:chips>
-  <Menu offsetY={false} bind:active {disabled} closeOnClick={!multiple}>
+  <Menu offsetY={false} bind:active {disabled} {closeOnClick}>
     <span slot="activator">
       <TextField
         {filled}
