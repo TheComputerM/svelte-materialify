@@ -30,11 +30,11 @@ interface TextFieldProps {
   // Creates counter for input length.
   counter?: number;
   // An array of functions which take input value as arguement and return error message.
-  rules: ((value) => string | false)[];
+  rules?: ((value) => string | true)[];
   // Delays validation till blur.
-  validateOnBlur: boolean;
+  validateOnBlur?: boolean;
   // Error state of the input.
-  error: boolean;
+  error?: boolean;
   // Id of the text input.
   id?: string;
 }
