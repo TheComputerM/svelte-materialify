@@ -63,17 +63,53 @@
       "defaultValue": false
     },
     {
+      "keywords": [
+        {
+          "name": "type",
+          "description": "{'x-small' | 'small' | 'default' | 'large' | 'x-large'}"
+        }
+      ],
       "visibility": "public",
-      "description": null,
-      "keywords": [],
+      "description": "The size of the button.",
       "name": "size",
       "kind": "let",
       "static": false,
       "readonly": false,
       "type": {
-        "kind": "type",
-        "text": "string",
-        "type": "string"
+        "kind": "union",
+        "text": "'x-small' | 'small' | 'default' | 'large' | 'x-large'",
+        "type": [
+          {
+            "kind": "const",
+            "text": "'x-small'",
+            "type": "string",
+            "value": "x-small"
+          },
+          {
+            "kind": "const",
+            "text": "'small'",
+            "type": "string",
+            "value": "small"
+          },
+          {
+            "kind": "const",
+            "text": "'default'",
+            "type": "string",
+            "value": "default"
+          },
+          {
+            "kind": "const",
+            "text": "'large'",
+            "type": "string",
+            "value": "large"
+          },
+          {
+            "kind": "const",
+            "text": "'x-large'",
+            "type": "string",
+            "value": "x-large"
+          }
+        ]
       },
       "defaultValue": "default"
     },
@@ -153,17 +189,22 @@
       "defaultValue": false
     },
     {
+      "keywords": [
+        {
+          "name": "type",
+          "description": "{boolean}"
+        }
+      ],
       "visibility": "public",
-      "description": null,
-      "keywords": [],
+      "description": "",
       "name": "disabled",
       "kind": "let",
       "static": false,
       "readonly": false,
       "type": {
         "kind": "type",
-        "text": "object",
-        "type": "object"
+        "text": "boolean",
+        "type": "boolean"
       },
       "defaultValue": null
     },
@@ -213,31 +254,41 @@
       "defaultValue": "button"
     },
     {
+      "keywords": [
+        {
+          "name": "type",
+          "description": "{RippleOptions}"
+        }
+      ],
       "visibility": "public",
-      "description": null,
-      "keywords": [],
+      "description": "",
       "name": "ripple",
       "kind": "let",
       "static": false,
       "readonly": false,
       "type": {
         "kind": "type",
-        "text": "any",
-        "type": "any"
+        "text": "RippleOptions",
+        "type": "RippleOptions"
       }
     },
     {
+      "keywords": [
+        {
+          "name": "type",
+          "description": "{string}"
+        }
+      ],
       "visibility": "public",
-      "description": null,
-      "keywords": [],
+      "description": "",
       "name": "style",
       "kind": "let",
       "static": false,
       "readonly": false,
       "type": {
         "kind": "type",
-        "text": "object",
-        "type": "object"
+        "text": "string",
+        "type": "string"
       },
       "defaultValue": null
     }

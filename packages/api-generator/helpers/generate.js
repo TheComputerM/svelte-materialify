@@ -7,6 +7,7 @@ const fmt = require('json-format');
 const rollup = require('rollup');
 const json = require('@rollup/plugin-json');
 const { terser } = require('rollup-plugin-terser');
+const generateTypings = require('./typings');
 
 const defaults = { defaultVersion: 3 };
 
@@ -22,6 +23,8 @@ async function generateJSON(filename) {
     if (err) throw err;
     console.log(`${name}.json has been saved`);
   });
+
+  return Promise.resolve(doc);
 }
 
 async function indexjs(paths) {
@@ -48,8 +51,13 @@ async function build() {
 }
 
 (async () => {
+  const generateTypes = process.argv.slice(2).includes('--types');
   let paths = await globby('../svelte-materialify/src/**/*.svelte');
-  paths.forEach(generateJSON);
+  paths.forEach(async (path) => {
+    const doc = await generateJSON(path);
+    if (generateTypes) await generateTypings(doc);
+  });
+
   paths = paths.map((name) => basename(name, '.svelte'));
   await writeFile('./src/all.json', fmt({ names: paths }, format), (err) => {
     if (err) throw err;

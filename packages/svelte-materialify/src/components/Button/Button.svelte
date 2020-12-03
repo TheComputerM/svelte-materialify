@@ -7,17 +7,30 @@
   export let fab = false;
   export let icon = false;
   export let block = false;
+  /**
+   * The size of the button.
+   * @type {'x-small' | 'small' | 'default' | 'large' | 'x-large'}
+   */
   export let size = 'default';
   export let tile = false;
   export let text = false;
   export let depressed = false;
   export let outlined = false;
   export let rounded = false;
+  /**
+   * @type {boolean}
+   */
   export let disabled = null;
   export let active = false;
   export let activeClass = 'active';
   export let type = 'button';
+  /**
+   * @type {RippleOptions}
+   */
   export let ripple = {};
+  /**
+   * @type {string}
+   */
   export let style = null;
 </script>
 

@@ -1,0 +1,24 @@
+import { SvelteComponent } from './shared';
+{{#each (importKnownTypes this)}}
+{{{this}}}{{! this is a fully form import statement string }}
+{{/each}}
+
+interface {{name}}Props {
+{{#each data as | prop |}}{{#ifEqual prop.visibility 'public'}}
+  {{#ifHasDocumentation prop}}
+  /**
+  {{#if prop.description}}
+   * {{{prop.description}}}
+  {{/if}}
+  {{#ifExists prop.defaultValue}}
+   * @default {{{defaultValue prop}}}
+  {{/ifExists}}
+   */
+  {{/ifHasDocumentation}}
+  {{prop.name}}?: {{{propType prop}}};
+{{/ifEqual}}{{/each}}
+}
+
+declare class {{name}} extends SvelteComponent<{{name}}Props> {}
+
+export default {{name}};
