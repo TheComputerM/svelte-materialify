@@ -40,7 +40,7 @@
     "stylelint": "^13.8.0",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.18.0",
-    "svelte": "^3.30.0"
+    "svelte": "^3.31.0"
   },
   "husky": {
     "hooks": {

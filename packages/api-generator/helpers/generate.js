@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-const { writeFile } = require('fs');
+const { writeFile, existsSync, mkdirSync } = require('fs');
 const { basename } = require('path');
 const globby = require('globby');
 const sveltedoc = require('sveltedoc-parser');
@@ -7,7 +7,11 @@ const fmt = require('json-format');
 const rollup = require('rollup');
 const json = require('@rollup/plugin-json');
 const { terser } = require('rollup-plugin-terser');
-const generateTypings = require('./typings');
+const { generateTypings, TYPINGS_PATH } = require('./typings');
+
+if (!existsSync(TYPINGS_PATH)) {
+  mkdirSync(TYPINGS_PATH);
+}
 
 const defaults = { defaultVersion: 3 };
 
@@ -53,9 +57,10 @@ async function build() {
 (async () => {
   const generateTypes = process.argv.slice(2).includes('--types');
   let paths = await globby('../svelte-materialify/src/**/*.svelte');
-  paths.forEach(async (path) => {
+
+  const promisesOfJson = paths.map(async (path) => {
     const doc = await generateJSON(path);
-    if (generateTypes) await generateTypings(doc);
+    return Promise.resolve(doc);
   });
 
   paths = paths.map((name) => basename(name, '.svelte'));
@@ -63,6 +68,16 @@ async function build() {
     if (err) throw err;
     console.log('all.json has been saved');
   });
+
+  if (generateTypes) {
+    const types = await generateTypings(Promise.all(promisesOfJson));
+    const typingsBundle = types.map((t) => t.content).join('\n');
+    writeFile(`${TYPINGS_PATH}/index.d.ts`, typingsBundle, (err) => {
+      if (err) throw err;
+      console.log('index.d.ts has been saved');
+    });
+  }
+
   indexjs(paths);
   build();
 })();

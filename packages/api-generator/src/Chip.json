@@ -51,7 +51,7 @@
       "keywords": [
         {
           "name": "type",
-          "description": "{x-small|small|default|large|x-large}"
+          "description": "{'x-small' | 'small' | 'default' | 'large' | 'x-large'}"
         }
       ],
       "visibility": "public",
@@ -62,32 +62,37 @@
       "readonly": false,
       "type": {
         "kind": "union",
-        "text": "x-small|small|default|large|x-large",
+        "text": "'x-small' | 'small' | 'default' | 'large' | 'x-large'",
         "type": [
           {
-            "kind": "type",
-            "text": "x-small",
-            "type": "x-small"
+            "kind": "const",
+            "text": "'x-small'",
+            "type": "string",
+            "value": "x-small"
           },
           {
-            "kind": "type",
-            "text": "small",
-            "type": "small"
+            "kind": "const",
+            "text": "'small'",
+            "type": "string",
+            "value": "small"
           },
           {
-            "kind": "type",
-            "text": "default",
-            "type": "default"
+            "kind": "const",
+            "text": "'default'",
+            "type": "string",
+            "value": "default"
           },
           {
-            "kind": "type",
-            "text": "large",
-            "type": "large"
+            "kind": "const",
+            "text": "'large'",
+            "type": "string",
+            "value": "large"
           },
           {
-            "kind": "type",
-            "text": "x-large",
-            "type": "x-large"
+            "kind": "const",
+            "text": "'x-large'",
+            "type": "string",
+            "value": "x-large"
           }
         ]
       },
