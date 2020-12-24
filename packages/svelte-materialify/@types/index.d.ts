@@ -26,6 +26,7 @@ export { default as ListGroup } from './ListGroup';
 export { default as ListItemGroup } from './ListItemGroup';
 export { default as ListItem } from './ListItem';
 export { default as MaterialApp } from './MaterialApp';
+export { default as Menu } from './Menu';
 export { default as NavigationDrawer } from './NavigationDrawer';
 export { default as Dialog } from './Dialog';
 export { default as Overlay } from './Overlay';
