@@ -118,9 +118,9 @@
             <tr>
               <td class="font-weight-bold text-mono">{slot.name}</td>
               <td>
-                {#each slot.parameters as slotParam}
+                {#each slot.parameters as slotParam, i}
                   <code>{slotParam.name}</code>
-                  ;
+                  {#if i < slot.parameters.length - 1}<span>, </span>{/if}
                 {:else}None{/each}
               </td>
               <td>{slot.description || 'No Description'}</td>
