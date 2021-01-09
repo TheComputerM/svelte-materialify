@@ -1,0 +1,17 @@
+interface {{name}}Props {
+{{#each data as | prop |}}{{#ifEqual prop.visibility 'public'}}
+  {{#ifHasDocumentation prop}}
+  /**
+  {{#if prop.description}}
+   * {{{prop.description}}}
+  {{/if}}
+  {{#ifExists prop.defaultValue}}
+   * @default {{{defaultValue prop}}}
+  {{/ifExists}}
+   */
+  {{/ifHasDocumentation}}
+  {{prop.name}}?: {{{propType prop}}};
+{{/ifEqual}}{{/each}}
+}
+
+export declare class {{name}} extends SvelteComponentTyped<{{name}}Props> {}

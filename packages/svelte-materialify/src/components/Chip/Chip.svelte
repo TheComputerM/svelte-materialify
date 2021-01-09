@@ -16,7 +16,7 @@
 
   /**
    * Specifies the size of chip.
-   * @type {x-small|small|default|large|x-large}
+   * @type {'x-small' | 'small' | 'default' | 'large' | 'x-large'}
    */
   export let size = 'default';
   export let outlined = false;

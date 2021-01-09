@@ -6,11 +6,13 @@
   "main": "dist/index.js",
   "module": "dist/index.js",
   "scripts": {
-    "api": "node helpers/generate.js"
+    "api:json": "node helpers/generate.js",
+    "api": "node helpers/generate.js --types"
   },
   "devDependencies": {
     "@rollup/plugin-json": "^4.1.0",
     "globby": "^11.0.1",
+    "handlebars": "^4.7.6",
     "json-format": "1.0.1",
     "rollup": "^2.33.3",
     "rollup-plugin-terser": "^7.0.2",

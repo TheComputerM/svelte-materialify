@@ -41,7 +41,7 @@
     "sapper": "^0.28.10",
     "sass": "^1.28.0",
     "serve": "^11.3.2",
-    "svelte": "^3.30.0",
+    "svelte": "^3.31.0",
     "svelte-preprocess": "^4.6.1"
   }
 }
