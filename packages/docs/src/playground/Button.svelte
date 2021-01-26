@@ -21,7 +21,7 @@
     block: false,
     disabled: false,
     active: false,
-    size: ['default'],
+    size: 'default',
   };
 </script>
 
@@ -30,7 +30,7 @@
     block={values.block}
     disabled={values.disabled}
     active={values.active}
-    size={values.size[0]}
+    size={values.size}
     {...formatVariant(values.variants)}>
     {#if values.variants.includes('icon') || values.variants.includes('fab')}
       <Icon class="mdi mdi-home" />
