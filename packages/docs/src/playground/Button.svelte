@@ -11,7 +11,7 @@
     size: {
       type: 'select',
       items: ['x-small', 'small', 'default', 'large', 'x-large'],
-      mandatory: true
+      mandatory: true,
     },
   };
 
