@@ -30,7 +30,7 @@
     block={values.block}
     disabled={values.disabled}
     active={values.active}
-    size={(values.size = values.size && values.size.length ? values.size : 'default')}
+    size={(values.size = values.size || 'default')}
     {...formatVariant(values.variants)}>
     {#if values.variants.includes('icon') || values.variants.includes('fab')}
       <Icon class="mdi mdi-home" />
