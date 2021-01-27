@@ -11,6 +11,7 @@
     size: {
       type: 'select',
       items: ['x-small', 'small', 'default', 'large', 'x-large'],
+      mandatory: true
     },
   };
 
@@ -30,7 +31,7 @@
     block={values.block}
     disabled={values.disabled}
     active={values.active}
-    size={(values.size = values.size || 'default')}
+    size={values.size}
     {...formatVariant(values.variants)}>
     {#if values.variants.includes('icon') || values.variants.includes('fab')}
       <Icon class="mdi mdi-home" />
