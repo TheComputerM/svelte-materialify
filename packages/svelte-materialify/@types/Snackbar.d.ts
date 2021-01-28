@@ -3,33 +3,33 @@ import { TransitionConfig } from 'svelte/transition';
 
 interface SnackbarProps {
   /** absolute sets the snackbar with position absolute otherwise it is fixed */
-  absolute?: boolean,
+  absolute?: boolean;
   /** active shows or hides the snackbar */
-  active?: boolean,
+  active?: boolean;
   /** top shows the snackbar on the top side of the page */
-  top?: boolean,
+  top?: boolean;
   /** top shows the snackbar on the left side of the page */
-  left?: boolean,
+  left?: boolean;
   /** top shows the snackbar on the bottom side of the page */
-  bottom?: boolean,
+  bottom?: boolean;
   /** top shows the snackbar on the right side of the page */
-  right?: boolean,
+  right?: boolean;
   /** top shows the snackbar on the centered of the page */
-  center?: boolean,
+  center?: boolean;
   /** offsetY defines the offset from the left or right side of the page */
-  offsetX?: string,
+  offsetX?: string;
   /** offsetY defines the offset from the top or bottom side of the page */
-  offsetY?: string,
+  offsetY?: string;
   /** outlined gives the snackbar a outlined style */
-  outlined?: boolean,
+  outlined?: boolean;
   /** text gives the snackbar a text style */
-  text?: boolean,
+  text?: boolean;
   /** rounded gives the snackbar a rounded style */
-  rounded?: boolean,
+  rounded?: boolean;
   /** tile gives the snackbar a tile style */
-  tile?: boolean,
+  tile?: boolean;
   /** timout is the delay before the snackar hides away */
-  timeout?: number,
+  timeout?: number;
   /** transiton function for the snackbar */
   transition?: (node: Element, options: any) => TransitionConfig;
   /** classes added to the snackbar */
