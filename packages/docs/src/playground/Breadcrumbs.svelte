@@ -25,8 +25,6 @@
 
 <Playground {controls} bind:values>
   <Breadcrumbs large={values.large} {items}>
-    <div slot="divider">
-      {values.divider[0]}
-    </div>
+    <div slot="divider">{values.divider[0]}</div>
   </Breadcrumbs>
 </Playground>

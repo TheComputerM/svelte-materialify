@@ -278,6 +278,6 @@ svg:not([fill]) {
 }
 
 /* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
-[aria-disabled=true] {
+[aria-disabled='true'] {
   cursor: default;
 }
