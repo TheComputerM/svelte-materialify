@@ -33,12 +33,13 @@
   $: labelActive = !!placeholder || value || focused;
   let errorMessages = [];
 
-  function checkRules() {
+  export function validate() {
     errorMessages = rules.map((r) => r(value)).filter((r) => typeof r === 'string');
     if (errorMessages.length) error = true;
     else {
       error = false;
     }
+    return error;
   }
 
   function onFocus() {
@@ -47,7 +48,7 @@
 
   function onBlur() {
     focused = false;
-    if (validateOnBlur) checkRules();
+    if (validateOnBlur) validate();
   }
 
   function clear() {
@@ -55,7 +56,7 @@
   }
 
   function onInput() {
-    if (!validateOnBlur) checkRules();
+    if (!validateOnBlur) validate();
   }
 </script>
 
