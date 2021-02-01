@@ -55,6 +55,7 @@ export default [
       { text: 'Dialog', href: '/components/dialog/' },
       { text: 'Dividers', href: '/components/dividers/' },
       { text: 'Grid', href: '/components/grid/' },
+      { text: 'FluidGrid', href: '/components/fluidgrid/' },
       { text: 'Icons', href: '/components/icons/' },
       { text: 'Expansion Panels', href: '/components/expansion-panels/' },
       { text: 'Footer', href: '/components/footer/' },
