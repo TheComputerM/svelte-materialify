@@ -1,5 +1,8 @@
 <script>
-  let klass = '';
+  import { setContext, getContext } from 'svelte';
+  import { writable } from 'svelte/store';
+  import contextKey from './context';
+
   export let container = false;
   export let item = false;
   export let spacing = null;
@@ -12,7 +15,21 @@
   export let lg = null;
   export let xl = null;
   export let style = null;
-  export { klass as class };
+
+  let parentSpacingStore;
+  let childSpacingStore;
+
+  if (item) {
+    parentSpacingStore = getContext(contextKey);
+  }
+  if (container) {
+    childSpacingStore = writable(spacing);
+    const { set, update, ...readonly } = childSpacingStore;
+    setContext(contextKey, readonly);
+  }
+  $: if (childSpacingStore) {
+    childSpacingStore.set(spacing);
+  }
 
   function breakpointClass(name, value) {
     if (Number.isInteger(value)) {
@@ -26,8 +43,8 @@
 
   let classes;
   $: classes = [
-    klass,
-    container && spacing > 0 && `spacing-${spacing}`,
+    container && spacing > 0 && `container-spacing-${spacing}`,
+    item && $parentSpacingStore > 0 && `item-spacing-${$parentSpacingStore}`,
     container && direction && `flex-${direction}`,
     container && justify && `justify-${justify}`,
     container && alignItems && `align-${alignItems}`,
@@ -39,7 +56,7 @@
   ].filter((x) => x !== false);
 </script>
 
-<style lang="scss" src="./FluidGrid.scss" global>
+<style lang="scss" src="./FluidGrid.scss">
 </style>
 
 <div class="s-fluid-grid {classes.join(' ')}" class:container class:item {style}>

@@ -1,36 +1,43 @@
-@import '../../styles/tools/breakpoints';
 @import '../../styles/variables';
 
 $grid-breakpoint-names: map-keys($grid-breakpoints);
 
-.s-fluid-grid.container {
+@mixin create_spacing() {
+  @for $i from 1 through 16 {
+    @content ($i);
+  }
+}
+
+.container {
   display: flex;
   flex-wrap: wrap;
 
-  & > .item {
-    @each $grid-breakpoint-name in $grid-breakpoint-names {
-      @media (min-width: map-get($grid-breakpoints, $grid-breakpoint-name)) {
-        &.#{$grid-breakpoint-name}-auto {
-          flex-grow: 1;
-          min-width: 0;
-          width: 0;
-        }
+  @include create_spacing() using ($i) {
+    &.container-spacing-#{$i} {
+      margin: -$spacer * $i;
+    }
+  }
+}
 
-        @for $i from 1 through $grid-columns {
-          &.#{$grid-breakpoint-name}-#{$i} {
-            width: percentage($i / $grid-columns);
-          }
-        }
-      }
+.item {
+  @include create_spacing() using ($i) {
+    &.item-spacing-#{$i} {
+      padding: $spacer * $i;
     }
   }
 
-  @for $i from 1 through 16 {
-    &.spacing-#{$i} {
-      margin: -$spacer * $i;
+  @each $grid-breakpoint-name in $grid-breakpoint-names {
+    @media (min-width: map-get($grid-breakpoints, $grid-breakpoint-name)) {
+      &.#{$grid-breakpoint-name}-auto {
+        flex-grow: 1;
+        min-width: 0;
+        width: 0;
+      }
 
-      & > .item {
-        padding: $spacer * $i;
+      @for $i from 1 through $grid-columns {
+        &.#{$grid-breakpoint-name}-#{$i} {
+          width: percentage($i / $grid-columns);
+        }
       }
     }
   }
