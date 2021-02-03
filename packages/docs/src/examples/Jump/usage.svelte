@@ -6,7 +6,7 @@
     Slider,
     Button,
     Jump,
-  } from 'svelte-materialify/src';
+  } from 'svelte-materialify';
 
   const defaults = {
     number: 500,

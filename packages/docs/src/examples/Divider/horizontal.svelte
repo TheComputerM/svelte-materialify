@@ -1,5 +1,5 @@
 <script>
-  import { List, ListItem, Divider, Card, Subheader } from 'svelte-materialify/src';
+  import { List, ListItem, Divider, Card, Subheader } from 'svelte-materialify';
 </script>
 
 <Card>

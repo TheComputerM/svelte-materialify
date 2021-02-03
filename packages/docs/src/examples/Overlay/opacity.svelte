@@ -1,5 +1,5 @@
 <script>
-  import { Button, Overlay } from 'svelte-materialify/src';
+  import { Button, Overlay } from 'svelte-materialify';
 
   let active = false;
 </script>

@@ -1,5 +1,5 @@
 <script>
-  import { Snackbar } from 'svelte-materialify/src';
+  import { Snackbar } from 'svelte-materialify';
 </script>
 
 <div style="height:300px;position:relative;">

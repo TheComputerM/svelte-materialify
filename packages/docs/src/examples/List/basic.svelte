@@ -1,5 +1,5 @@
 <script>
-  import { ListItem, Icon } from 'svelte-materialify/src';
+  import { ListItem, Icon } from 'svelte-materialify';
 </script>
 
 <div class="d-flex justify-center mt-2 mb-2">

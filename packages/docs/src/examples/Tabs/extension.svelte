@@ -1,5 +1,5 @@
 <script>
-  import { Tabs, Tab, Window, WindowItem, AppBar } from 'svelte-materialify/src';
+  import { Tabs, Tab, Window, WindowItem, AppBar } from 'svelte-materialify';
 
   let value = 0;
 </script>

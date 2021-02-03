@@ -7,7 +7,7 @@
     Avatar,
     Icon,
     Divider,
-  } from 'svelte-materialify/src';
+  } from 'svelte-materialify';
 
   const items = [
     { text: 'My Files', icon: 'mdi-folder' },

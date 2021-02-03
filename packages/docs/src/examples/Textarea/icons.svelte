@@ -1,7 +1,5 @@
 <script>
-  import Textarea from 'svelte-materialify/src/components/Textarea';
-  import { Row, Col } from 'svelte-materialify/src/components/Grid';
-  import Icon from 'svelte-materialify/src/components/Icon';
+  import { Textarea, Row, Col, Icon } from 'svelte-materialify';
 </script>
 
 <Row>

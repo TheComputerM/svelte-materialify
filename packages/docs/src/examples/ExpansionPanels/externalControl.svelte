@@ -1,9 +1,5 @@
 <script>
-  import ExpansionPanels, {
-    ExpansionPanel,
-  } from 'svelte-materialify/src/components/ExpansionPanels';
-
-  import Button from 'svelte-materialify/src/components/Button';
+  import { ExpansionPanels, ExpansionPanel, Button } from 'svelte-materialify';
 
   let value = [2];
 

@@ -1,5 +1,5 @@
 <script>
-  import { Card, CardText, CardActions, Button } from 'svelte-materialify/src';
+  import { Card, CardText, CardActions, Button } from 'svelte-materialify';
 </script>
 
 <div class="d-flex justify-center mt-4 mb-4">

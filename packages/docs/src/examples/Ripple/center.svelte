@@ -1,5 +1,5 @@
 <script>
-  import { Ripple } from 'svelte-materialify/src';
+  import { Ripple } from 'svelte-materialify';
 </script>
 
 <div class="text-center pt-8 pb-8 text-h5 elevation-2" use:Ripple={{ centered: true }}>

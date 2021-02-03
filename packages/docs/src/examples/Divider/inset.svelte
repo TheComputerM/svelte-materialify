@@ -6,7 +6,7 @@
     Card,
     Subheader,
     Avatar,
-  } from 'svelte-materialify/src';
+  } from 'svelte-materialify';
 </script>
 
 <Card>

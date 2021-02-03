@@ -1,5 +1,5 @@
 <script>
-  import { AppBar, Divider, Button } from 'svelte-materialify/src';
+  import { AppBar, Divider, Button } from 'svelte-materialify';
 </script>
 
 <AppBar>

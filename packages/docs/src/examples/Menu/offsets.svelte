@@ -1,5 +1,5 @@
 <script>
-  import { Menu, Button, List, ListItem, Switch } from 'svelte-materialify/src';
+  import { Menu, Button, List, ListItem, Switch } from 'svelte-materialify';
 
   let x = false;
   let y = false;

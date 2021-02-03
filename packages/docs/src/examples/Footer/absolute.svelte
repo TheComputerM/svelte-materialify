@@ -1,5 +1,5 @@
 <script>
-  import { Footer } from 'svelte-materialify/src';
+  import { Footer } from 'svelte-materialify';
 </script>
 
 <div style="height: 200px;position:relative;">

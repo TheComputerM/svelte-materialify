@@ -1,5 +1,5 @@
 <script>
-  import Checkbox from 'svelte-materialify/src/components/Checkbox';
+  import { Checkbox } from 'svelte-materialify';
 </script>
 
 <Checkbox checked>On</Checkbox>

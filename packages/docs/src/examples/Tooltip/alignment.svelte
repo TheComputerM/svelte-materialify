@@ -1,5 +1,5 @@
 <script>
-  import { Row, Col, Button, Tooltip } from 'svelte-materialify/src';
+  import { Row, Col, Button, Tooltip } from 'svelte-materialify';
 </script>
 
 <Row class="text-center align-center justify-space-around">

@@ -5,7 +5,7 @@
     Icon,
     NavigationDrawer,
     Overlay,
-  } from 'svelte-materialify/src';
+  } from 'svelte-materialify';
 
   let active = false;
   function toggleNavigation() {

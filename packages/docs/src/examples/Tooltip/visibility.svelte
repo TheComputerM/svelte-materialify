@@ -1,5 +1,5 @@
 <script>
-  import { Row, Col, Button, Icon, Tooltip } from 'svelte-materialify/src';
+  import { Row, Col, Button, Icon, Tooltip } from 'svelte-materialify';
 
   let show = false;
 </script>

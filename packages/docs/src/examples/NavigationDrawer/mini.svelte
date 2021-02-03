@@ -6,7 +6,7 @@
     Avatar,
     Divider,
     Icon,
-  } from 'svelte-materialify/src';
+  } from 'svelte-materialify';
 
   let mini = true;
   function mouseenter() {

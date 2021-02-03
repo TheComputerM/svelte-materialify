@@ -1,5 +1,5 @@
 <script>
-  import { Slider } from 'svelte-materialify/src';
+  import { Slider } from 'svelte-materialify';
 </script>
 
 <Slider value={[10, 20]} thumb={[false, true]} persistentThumb>Range</Slider>

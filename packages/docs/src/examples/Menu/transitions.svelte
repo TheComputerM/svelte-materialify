@@ -1,5 +1,5 @@
 <script>
-  import { Menu, Button, List, ListItem } from 'svelte-materialify/src';
+  import { Menu, Button, List, ListItem } from 'svelte-materialify';
 
   import { scale } from 'svelte/transition';
   import { elasticOut } from 'svelte/easing';

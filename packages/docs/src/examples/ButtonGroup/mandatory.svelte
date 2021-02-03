@@ -1,5 +1,5 @@
 <script>
-  import { ButtonGroup, ButtonGroupItem } from 'svelte-materialify/src';
+  import { ButtonGroup, ButtonGroupItem } from 'svelte-materialify';
 
   const values = [0, [0]];
 </script>

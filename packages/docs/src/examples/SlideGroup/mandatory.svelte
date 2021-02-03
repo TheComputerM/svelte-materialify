@@ -1,5 +1,5 @@
 <script>
-  import { SlideGroup, SlideItem, Button } from 'svelte-materialify/src';
+  import { SlideGroup, SlideItem, Button } from 'svelte-materialify';
 </script>
 
 <SlideGroup mandatory value={[0]}>

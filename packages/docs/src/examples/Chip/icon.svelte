@@ -1,5 +1,5 @@
 <script>
-  import { Chip, Icon, Avatar } from 'svelte-materialify/src/';
+  import { Chip, Icon, Avatar } from 'svelte-materialify';
 </script>
 
 <div class="d-flex justify-center">

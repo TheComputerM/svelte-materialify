@@ -1,6 +1,5 @@
 <script>
-  import TextField from 'svelte-materialify/src/components/TextField';
-  import Icon from 'svelte-materialify/src/components/Icon';
+  import { TextField, Icon } from 'svelte-materialify';
 
   let show = false;
 </script>

@@ -1,5 +1,5 @@
 <script>
-  import { AppBar, Button, Icon } from 'svelte-materialify/src';
+  import { AppBar, Button, Icon } from 'svelte-materialify';
 </script>
 
 <AppBar dense>

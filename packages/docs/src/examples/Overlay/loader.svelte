@@ -1,5 +1,5 @@
 <script>
-  import { Button, Overlay, ProgressCircular, Icon } from 'svelte-materialify/src';
+  import { Button, Overlay, ProgressCircular, Icon } from 'svelte-materialify';
 
   let active = false;
 </script>

@@ -1,5 +1,5 @@
 <script>
-  import { Tabs, Tab, TabContent } from 'svelte-materialify/src';
+  import { Tabs, Tab, TabContent } from 'svelte-materialify';
 </script>
 
 <Tabs vertical>

@@ -1,5 +1,5 @@
 <script>
-  import { Icon, Badge } from 'svelte-materialify/src';
+  import { Icon, Badge } from 'svelte-materialify';
 </script>
 
 <div class="d-flex pt-4 pb-4 justify-space-around">

@@ -9,7 +9,7 @@
     TextField,
     Row,
     Col,
-  } from 'svelte-materialify/src';
+  } from 'svelte-materialify';
 
   let active = false;
 

@@ -1,5 +1,5 @@
 <script>
-  import { Subheader, Button, Icon, Row, Col } from 'svelte-materialify/src';
+  import { Subheader, Button, Icon, Row, Col } from 'svelte-materialify';
 </script>
 
 <div class="ml-auto mr-auto elevation-3 rounded pa-3" style="width:400px">

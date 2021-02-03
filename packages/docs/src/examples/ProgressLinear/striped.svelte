@@ -1,5 +1,5 @@
 <script>
-  import { ProgressLinear } from 'svelte-materialify/src';
+  import { ProgressLinear } from 'svelte-materialify';
 </script>
 
 <ProgressLinear striped value={25} />

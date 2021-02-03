@@ -1,5 +1,5 @@
 <script>
-  import { Slider, TextField, Subheader } from 'svelte-materialify/src';
+  import { Slider, TextField, Subheader } from 'svelte-materialify';
 
   const min = -50;
   const max = 90;

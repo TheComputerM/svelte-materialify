@@ -1,5 +1,5 @@
 <script>
-  import { Ripple } from 'svelte-materialify/src';
+  import { Ripple } from 'svelte-materialify';
   import Colors from 'svelte-materialify/src/utils/colors';
 
   const colors = ['red', 'green', 'blue', 'purple', 'yellow', 'orange'];

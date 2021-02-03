@@ -1,5 +1,5 @@
 <script>
-  import { Slider, Icon } from 'svelte-materialify/src';
+  import { Slider, Icon } from 'svelte-materialify';
 </script>
 
 <Slider>

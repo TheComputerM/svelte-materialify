@@ -1,5 +1,5 @@
 <script>
-  import { Container, Row, Col } from 'svelte-materialify/src';
+  import { Container, Row, Col } from 'svelte-materialify';
 </script>
 
 <Container>

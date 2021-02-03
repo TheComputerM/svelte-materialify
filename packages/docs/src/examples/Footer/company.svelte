@@ -1,5 +1,5 @@
 <script>
-  import { Footer, Button } from 'svelte-materialify/src';
+  import { Footer, Button } from 'svelte-materialify';
 
   const links = ['Home', 'About', 'Team', 'Services', 'Contact Us'];
 </script>

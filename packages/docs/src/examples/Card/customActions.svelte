@@ -7,7 +7,7 @@
     Button,
     Icon,
     Divider,
-  } from 'svelte-materialify/src';
+  } from 'svelte-materialify';
   import { slide } from 'svelte/transition';
 
   let active = false;

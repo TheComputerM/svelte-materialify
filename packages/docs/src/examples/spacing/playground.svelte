@@ -1,5 +1,5 @@
 <script>
-  import { Row, Col, Select } from 'svelte-materialify/src';
+  import { Row, Col, Select } from 'svelte-materialify';
 
   const directions = ['a', 't', 'b', 'l', 'r'].map((i) => ({ value: i, name: i }));
 

@@ -1,5 +1,5 @@
 <script>
-  import { Tabs, Tab } from 'svelte-materialify/src';
+  import { Tabs, Tab } from 'svelte-materialify';
 </script>
 
 <Tabs fixedTabs class="primary-color theme--dark">

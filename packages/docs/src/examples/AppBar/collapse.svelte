@@ -1,5 +1,5 @@
 <script>
-  import { AppBar, Checkbox, Button, Icon } from 'svelte-materialify/src';
+  import { AppBar, Checkbox, Button, Icon } from 'svelte-materialify';
 
   let collapsed = false;
 </script>

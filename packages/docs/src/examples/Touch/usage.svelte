@@ -1,5 +1,5 @@
 <script>
-  import { Touch } from 'svelte-materialify/src';
+  import { Touch } from 'svelte-materialify';
 
   let x = 0;
   let y = 0;

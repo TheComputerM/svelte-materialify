@@ -1,5 +1,5 @@
 <script>
-  import Avatar from 'svelte-materialify/src/components/Avatar';
+  import { Avatar } from 'svelte-materialify';
 </script>
 
 <div class="d-flex justify-space-around">

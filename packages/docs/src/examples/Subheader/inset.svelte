@@ -1,5 +1,5 @@
 <script>
-  import { Subheader, ListItem, Icon } from 'svelte-materialify/src';
+  import { Subheader, ListItem, Icon } from 'svelte-materialify';
 </script>
 
 <div class="ml-auto mr-auto elevation-2 pa-2" style="width:400px">

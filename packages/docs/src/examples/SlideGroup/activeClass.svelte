@@ -1,5 +1,5 @@
 <script>
-  import { SlideGroup, SlideItem, Ripple, Icon } from 'svelte-materialify/src';
+  import { SlideGroup, SlideItem, Ripple, Icon } from 'svelte-materialify';
 </script>
 
 <style>

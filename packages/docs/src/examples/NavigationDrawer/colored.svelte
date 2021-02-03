@@ -1,5 +1,5 @@
 <script>
-  import { NavigationDrawer, List, ListItem, Button, Icon } from 'svelte-materialify/src';
+  import { NavigationDrawer, List, ListItem, Button, Icon } from 'svelte-materialify';
 </script>
 
 <div class="d-flex justify-center">

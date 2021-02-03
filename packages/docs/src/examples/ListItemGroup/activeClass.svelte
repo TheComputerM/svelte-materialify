@@ -1,5 +1,5 @@
 <script>
-  import { ListItemGroup, ListItem, Icon } from 'svelte-materialify/src';
+  import { ListItemGroup, ListItem, Icon } from 'svelte-materialify';
 </script>
 
 <style>

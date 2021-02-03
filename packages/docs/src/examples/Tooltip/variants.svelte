@@ -1,5 +1,5 @@
 <script>
-  import { Button, Tooltip, Icon } from 'svelte-materialify/src';
+  import { Button, Tooltip, Icon } from 'svelte-materialify';
 </script>
 
 <div class="d-flex justify-space-around align-center">

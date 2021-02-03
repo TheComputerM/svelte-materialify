@@ -1,5 +1,5 @@
 <script>
-  import { Button, Window, WindowItem } from 'svelte-materialify/src';
+  import { Button, Window, WindowItem } from 'svelte-materialify';
 
   let window;
 </script>

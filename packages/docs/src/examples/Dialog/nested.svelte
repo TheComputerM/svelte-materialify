@@ -1,5 +1,5 @@
 <script>
-  import { Button, Dialog } from 'svelte-materialify/src';
+  import { Button, Dialog } from 'svelte-materialify';
 
   let active1;
   let active2;

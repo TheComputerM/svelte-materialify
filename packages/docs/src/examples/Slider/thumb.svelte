@@ -1,5 +1,5 @@
 <script>
-  import { Slider, Subheader } from 'svelte-materialify/src';
+  import { Slider, Subheader } from 'svelte-materialify';
 
   let value = 50;
 

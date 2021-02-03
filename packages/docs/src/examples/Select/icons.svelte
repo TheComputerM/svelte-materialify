@@ -1,5 +1,5 @@
 <script>
-  import { Row, Col, Select, Icon } from 'svelte-materialify/src';
+  import { Row, Col, Select, Icon } from 'svelte-materialify';
 
   const items = [
     { name: 'Foo', value: 'foo' },
