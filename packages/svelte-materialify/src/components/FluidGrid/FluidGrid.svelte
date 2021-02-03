@@ -3,6 +3,7 @@
   import { writable } from 'svelte/store';
   import contextKey from './context';
 
+  let klass = '';
   export let container = false;
   export let item = false;
   export let spacing = null;
@@ -15,6 +16,7 @@
   export let lg = null;
   export let xl = null;
   export let style = null;
+  export { klass as class };
 
   let parentSpacingStore;
   let childSpacingStore;
@@ -43,6 +45,7 @@
 
   let classes;
   $: classes = [
+    klass,
     container && spacing > 0 && `container-spacing-${spacing}`,
     item && $parentSpacingStore > 0 && `item-spacing-${$parentSpacingStore}`,
     container && direction && `flex-${direction}`,
