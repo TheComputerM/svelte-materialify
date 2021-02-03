@@ -1,3 +1,5 @@
+<svelte:options immutable={true} />
+
 <script context="module">
   let activeDepth = -1;
 </script>
@@ -26,7 +28,6 @@
 <style>
 </style>
 
-<svelte:options immutable={true} />
 <ListGroup class="secondary-text" eager {offset} bind:active={expanded}>
   <div slot="prepend">
     {#if item.icon}
@@ -41,7 +42,7 @@
     {#if children.items}
       <svelte:self item={children} depth={depth + 1} />
     {:else}
-      <a href={children.href} rel="prefetch">
+      <a href={children.href} sapper:prefetch>
         <ListItem active={children.href === $page.path}>{children.text}</ListItem>
       </a>
     {/if}

@@ -41,9 +41,11 @@ export default {
       }),
       examples,
       svelte({
-        dev,
-        hydratable: true,
         emitCss: true,
+        compilerOptions: {
+          dev,
+          hydratable: true,
+        },
         extensions,
         preprocess,
       }),
@@ -105,9 +107,11 @@ export default {
       }),
       examples,
       svelte({
-        generate: 'ssr',
-        hydratable: true,
-        dev,
+        compilerOptions: {
+          generate: 'ssr',
+          hydratable: true,
+          dev,
+        },
         extensions,
         preprocess,
       }),
