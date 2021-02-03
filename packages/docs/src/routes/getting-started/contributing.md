@@ -39,8 +39,8 @@ This will get the entire repository on your machine, now we can build the librar
 
 ## Build
 
-Building is done with yarn (**not** npm)
-To install the dependencies type:
+Building is done with yarn (**not** npm).
+From the root folder, install the dependencies by typing:
 
 ```shell
 yarn
