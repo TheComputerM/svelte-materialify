@@ -20,7 +20,7 @@ export default {
     { file: pkg.main, sourcemap: true, format: 'umd', name },
   ],
   plugins: [
-    svelte({ preprocess }),
+    svelte({ preprocess, emitCss: false }),
     resolve(),
     commonjs(),
     production && terser(),
