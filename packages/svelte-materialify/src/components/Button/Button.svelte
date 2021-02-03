@@ -26,7 +26,7 @@
 
 <button
   class="s-btn size-{size} {klass}"
-  class:fab
+  class:s-btn--fab={fab}
   class:icon
   class:block
   class:tile

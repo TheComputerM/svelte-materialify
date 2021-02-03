@@ -79,7 +79,7 @@
     }
   }
 
-  &:not(.icon):not(.fab) {
+  &:not(.icon):not(.s-btn--fab) {
     @each $name, $size in $btn-sizes {
       &.size-#{$name} {
         height: #{$size}px;
@@ -140,7 +140,7 @@
   }
 
   &.icon,
-  &.fab {
+  &.s-btn--fab {
     border-radius: 50%;
     min-width: 0;
     min-height: 0;
@@ -152,7 +152,7 @@
     }
   }
 
-  &.fab {
+  &.s-btn--fab {
     @each $size, $value in $fab-sizes {
       &.size-#{$size} {
         height: #{$value}px;
