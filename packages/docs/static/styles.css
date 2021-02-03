@@ -4,6 +4,9 @@
 html {
   scroll-behavior: smooth;
 }
+#root {
+  height: 100%;
+}
 :target {
   scroll-margin-top: 64px;
 }
