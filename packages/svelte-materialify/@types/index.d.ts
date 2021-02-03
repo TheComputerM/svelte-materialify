@@ -35,3 +35,5 @@ export { default as Snackbar } from './Snackbar';
 export { default as TextField } from './TextField';
 export { default as ProgressLinear } from './ProgressLinear';
 export { default as ProgressCircular } from './ProgressCircular';
+export { default as ExpansionPanel } from './ExpansionPanel';
+export { default as ExpansionPanels } from './ExpansionPanels';
