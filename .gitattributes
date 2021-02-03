@@ -1,0 +1,17 @@
+* text=auto
+
+# Common formats
+*.html text
+*.xml text
+*.css text
+*.scss text
+*.js text
+*.properties text
+*.rtf text
+*.yaml text
+*.yml text
+*.md text
+
+LICENSE text
+
+*.svelte text
