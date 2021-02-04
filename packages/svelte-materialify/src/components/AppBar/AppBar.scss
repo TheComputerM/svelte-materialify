@@ -6,14 +6,14 @@
   display: block;
   flex: 1 1 auto;
   max-width: 100%;
+  position: relative;
+  z-index: 5;
   transition: $app-bar-transition;
 
   .s-app-bar__wrapper {
     height: var(--s-app-bar-height);
     align-items: center;
     display: flex;
-    position: relative;
-    z-index: 0;
     padding: 4px;
 
     .s-btn.fab {
@@ -63,7 +63,6 @@
   &.fixed {
     position: fixed;
     top: 0;
-    z-index: 5;
   }
 
   &.absolute {
