@@ -1,0 +1,36 @@
+@import '../../styles/global';
+
+:root {
+  overflow: hidden;
+}
+
+body {
+  float: left;
+  width: 100%;
+  background: var(--theme-surface);
+}
+
+.s-app {
+  height: 100%;
+  overflow: auto;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+  background: var(--theme-surface);
+}
+
+*::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px var(--theme-buttons-disabled);
+  background: var(--theme-surface);
+}
+
+*::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px var(--theme-icons-inactive);
+  background: var(--theme-text-secondary);
+  border-radius: 9px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-text-primary);
+}
