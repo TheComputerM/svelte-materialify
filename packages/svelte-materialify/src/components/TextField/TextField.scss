@@ -58,6 +58,7 @@
   }
 
   &::after {
+    background-color: currentColor;
     border-color: currentColor;
     border-style: solid;
     border-width: thin 0 thin 0;
