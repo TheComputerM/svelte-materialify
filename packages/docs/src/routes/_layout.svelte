@@ -89,7 +89,7 @@
       </Button>
     </a>
     <a href="https://discord.gg/dKGmnhf" target="_blank" rel="noopener">
-      <Button text fab>
+      <Button text fab aria-label="Discord">
         <Icon path={mdiDiscord} />
       </Button>
     </a>
