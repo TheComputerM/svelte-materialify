@@ -404,6 +404,26 @@
       "locations": null,
       "loc": null,
       "visibility": "public",
+      "description": "Deprecated - Use keyup or keydown instead",
+      "keywords": []
+    },
+    {
+      "name": "keyup",
+      "parent": "input",
+      "modificators": [],
+      "locations": null,
+      "loc": null,
+      "visibility": "public",
+      "description": "",
+      "keywords": []
+    },
+    {
+      "name": "keydown",
+      "parent": "input",
+      "modificators": [],
+      "locations": null,
+      "loc": null,
+      "visibility": "public",
       "description": "",
       "keywords": []
     },
