@@ -18,7 +18,7 @@ const format = {
 async function generateJSON(filename) {
   const doc = await sveltedoc.parse({ filename, ...defaults });
   const name = basename(filename, '.svelte');
-  await writeFile(`./src/${name}.json`, fmt(doc, format), (err) => {
+  await writeFile(`./src/${name}.json`, `${fmt(doc, format)}\n`, (err) => {
     if (err) throw err;
     console.log(`${name}.json has been saved`);
   });
