@@ -101,6 +101,8 @@
         on:input
         on:change
         on:keypress
+        on:keydown
+        on:keyup
         {...$$restProps} />
     </div>
 
