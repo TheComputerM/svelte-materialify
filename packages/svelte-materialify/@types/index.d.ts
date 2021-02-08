@@ -37,3 +37,4 @@ export { default as ProgressLinear } from './ProgressLinear';
 export { default as ProgressCircular } from './ProgressCircular';
 export { default as ExpansionPanel } from './ExpansionPanel';
 export { default as ExpansionPanels } from './ExpansionPanels';
+export { default as Tooltip } from './Tooltip';
