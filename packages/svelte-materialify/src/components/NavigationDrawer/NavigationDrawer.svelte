@@ -16,6 +16,7 @@
   export let clippedHeight = '56px';
   export let transition = fade;
   export let transitionOpts = {};
+  export let index = 4;
   export let style = null;
 </script>
 
@@ -32,8 +33,12 @@
   class:mini
   class:clipped
   on:hover
-  use:Style={{ 'nav-width': width, 'nav-min-width': miniWidth, 'nav-clipped-height': clippedHeight }}
-  {style}>
+  use:Style={{
+    'nav-width': width,
+    'nav-min-width': miniWidth,
+    'nav-clipped-height': clippedHeight,
+  }}
+  style="z-index:{index};{style}">
   <slot name="prepend" />
   <div class="s-navigation-drawer__content">
     <slot />
