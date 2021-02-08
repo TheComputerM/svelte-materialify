@@ -86,6 +86,7 @@
         <slot />
       </label>
       <slot name="content" />
+      <!-- keypress Evemt is deprecated. Use keydown or keyup instead -->
       <input
         type="text"
         bind:value
@@ -101,6 +102,8 @@
         on:input
         on:change
         on:keypress
+        on:keydown
+        on:keyup
         {...$$restProps} />
     </div>
 
