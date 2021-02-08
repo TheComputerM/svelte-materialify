@@ -38,12 +38,10 @@
 
   &.fixed {
     position: fixed;
-    z-index: 6;
   }
 
   &.absolute {
     position: absolute;
-    z-index: 2;
   }
 
   &.right {
@@ -66,7 +64,6 @@
   }
 
   &.clipped {
-    z-index: 4;
     top: var(--s-nav-clipped-height);
     max-height: calc(100% - var(--s-nav-clipped-height));
   }

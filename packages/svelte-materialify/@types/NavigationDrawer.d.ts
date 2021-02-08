@@ -28,6 +28,8 @@ interface NavigationDrawerProps {
   transition?: (node: Element, options: any) => TransitionConfig;
   /** options for the transition */
   transitionOpts?: any;
+  /** The z-index of the drawer */
+  index?: number;
   /** styles added to the drawer */
   style?: string;
 }

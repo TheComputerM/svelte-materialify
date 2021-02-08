@@ -199,6 +199,21 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
+      "name": "index",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "number",
+        "type": "number"
+      },
+      "defaultValue": 4
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "style",
       "kind": "let",
       "static": false,
