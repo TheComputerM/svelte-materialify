@@ -50,8 +50,8 @@
     "TabContent",
     "Tabs",
     "Textarea",
-    "Tooltip",
     "TextField",
+    "Tooltip",
     "VirtualList",
     "Window",
     "WindowItem"
