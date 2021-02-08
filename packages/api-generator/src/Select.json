@@ -240,6 +240,20 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
+      "name": "closeOnClick",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "any",
+        "type": "any"
+      }
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "format",
       "kind": "let",
       "static": false,
