@@ -48,6 +48,10 @@
   {#if active}
     <div
       transition:transition={transitionOpts}
+      on:introstart
+      on:outrostart
+      on:introend
+      on:outroend
       aria-disabled={disabled}
       class="s-list-group__items"
       class:offset

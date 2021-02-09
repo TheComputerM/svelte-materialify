@@ -62,7 +62,13 @@
     </div>
   </button>
   {#if active}
-    <div class="s-expansion-panel__content" transition:slide={slideOpts}>
+    <div
+      class="s-expansion-panel__content"
+      transition:slide={slideOpts}
+      on:introstart
+      on:outrostart
+      on:introend
+      on:outroend>
       <slot />
     </div>
   {/if}

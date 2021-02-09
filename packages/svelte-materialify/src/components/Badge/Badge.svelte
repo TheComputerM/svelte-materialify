@@ -27,6 +27,10 @@
       <span
         class="s-badge__badge {klass}"
         transition:transition
+        on:introstart
+        on:outrostart
+        on:introend
+        on:outroend
         class:bordered
         class:dot
         class:tile

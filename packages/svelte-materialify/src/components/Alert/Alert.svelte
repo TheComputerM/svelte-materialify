@@ -37,6 +37,10 @@
     role="alert"
     class="s-alert {klass}"
     transition:transition={transitionOpts}
+    on:introstart
+    on:outrostart
+    on:introend
+    on:outroend
     class:dense
     class:outlined
     class:text
