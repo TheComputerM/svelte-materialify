@@ -28,9 +28,9 @@
   export let success = false;
   export let id = `s-input-${uid(5)}`;
   export let style = null;
+  export let textarea = null;
 
   let labelActive = !!placeholder || value;
-  let textarea;
   let errorMessages = [];
 
   function checkRules() {

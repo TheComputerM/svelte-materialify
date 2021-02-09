@@ -19,12 +19,14 @@
   export let type = 'button';
   export let ripple = {};
   export let style = null;
+  export let button = null;
 </script>
 
 <style lang="scss" src="./Button.scss" global>
 </style>
 
 <button
+  bind:this={button}
   class="s-btn size-{size} {klass}"
   class:s-btn--fab={fab}
   class:icon

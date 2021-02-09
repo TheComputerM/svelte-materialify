@@ -28,6 +28,7 @@
   export let success = false;
   export let id = `s-input-${uid(5)}`;
   export let style = null;
+  export let inputElement = null;
 
   let focused = false;
   $: labelActive = !!placeholder || value || focused;
@@ -86,9 +87,10 @@
         <slot />
       </label>
       <slot name="content" />
-      <!-- keypress Evemt is deprecated. Use keydown or keyup instead -->
+      <!-- keypress Event is deprecated. Use keydown or keyup instead -->
       <input
         type="text"
+        bind:this={inputElement}
         bind:value
         {placeholder}
         {id}

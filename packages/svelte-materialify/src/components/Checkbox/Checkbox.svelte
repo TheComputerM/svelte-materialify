@@ -37,6 +37,9 @@
   // Styles to add to checkbox.
   export let style = null;
 
+  // The <input/> element of the checkbox.
+  export let inputElement = null;
+
   id = id || `s-checkbox-${uid(5)}`;
 
   $: hasValidGroup = Array.isArray(group);
@@ -68,6 +71,7 @@
     use:TextColor={checked || indeterminate ? color : false}>
     <input
       type="checkbox"
+      bind:this={inputElement}
       role="checkbox"
       aria-checked={checked}
       bind:checked
