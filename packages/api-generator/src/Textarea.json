@@ -364,6 +364,21 @@
         "type": "object"
       },
       "defaultValue": null
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "textarea",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "object",
+        "type": "object"
+      },
+      "defaultValue": null
     }
   ],
   "computed": [],

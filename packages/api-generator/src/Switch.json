@@ -156,6 +156,21 @@
         "type": "object"
       },
       "defaultValue": null
+    },
+    {
+      "keywords": [],
+      "visibility": "public",
+      "description": "The <input/> element of the switch.",
+      "name": "inputElement",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "object",
+        "type": "object"
+      },
+      "defaultValue": null
     }
   ],
   "computed": [],

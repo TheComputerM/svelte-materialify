@@ -28,6 +28,9 @@
   // Styles for the radio wrapper.
   export let style = null;
 
+  // The <input/> element of the radio.
+  export let inputElement = null;
+
   id = id || `s-radio-${uid(5)}`;
   $: active = group === value;
 </script>
@@ -43,6 +46,7 @@
     use:Ripple={{ centered: true }}>
     <input
       type="radio"
+      bind:this={inputElement}
       role="radio"
       aria-selected={active}
       bind:group

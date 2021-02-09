@@ -36,6 +36,9 @@
   // Styles to add to switch.
   export let style = null;
 
+  // The <input/> element of the switch.
+  export let inputElement = null;
+
   id = id || `s-switch-${uid(5)}`;
 
   const hasValidGroup = Array.isArray(group);
@@ -68,6 +71,7 @@
     use:TextColor={checked && color}>
     <input
       type="checkbox"
+      bind:this={inputElement}
       role="switch"
       aria-checked={checked}
       bind:checked

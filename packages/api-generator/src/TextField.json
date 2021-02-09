@@ -349,10 +349,34 @@
         "type": "object"
       },
       "defaultValue": null
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "inputElement",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "object",
+        "type": "object"
+      },
+      "defaultValue": null
     }
   ],
   "computed": [],
-  "methods": [],
+  "methods": [
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "validate",
+      "args": [],
+      "static": false
+    }
+  ],
   "components": [],
   "description": null,
   "keywords": [],
@@ -364,7 +388,7 @@
       "locations": null,
       "loc": null,
       "visibility": "public",
-      "description": "Slot for prepend inside the input.",
+      "description": "keypress Event is deprecated. Use keydown or keyup instead",
       "keywords": []
     },
     {
@@ -408,7 +432,7 @@
       "keywords": []
     },
     {
-      "name": "keyup",
+      "name": "keydown",
       "parent": "input",
       "modificators": [],
       "locations": null,
@@ -418,7 +442,7 @@
       "keywords": []
     },
     {
-      "name": "keydown",
+      "name": "keyup",
       "parent": "input",
       "modificators": [],
       "locations": null,
