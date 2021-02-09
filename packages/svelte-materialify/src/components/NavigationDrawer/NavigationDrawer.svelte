@@ -26,6 +26,10 @@
 <aside
   class="s-navigation-drawer {klass}"
   transition:transition={transitionOpts}
+  on:introstart
+  on:outrostart
+  on:introend
+  on:outroend
   class:active
   class:fixed
   class:absolute

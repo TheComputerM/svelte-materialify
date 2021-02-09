@@ -27,7 +27,11 @@
     <div
       class="s-dialog__content {klass}"
       class:fullscreen
-      transition:transition={{ duration: 300, start: 0.1 }}>
+      transition:transition={{ duration: 300, start: 0.1 }}
+      on:introstart
+      on:outrostart
+      on:introend
+      on:outroend>
       <slot />
     </div>
   </div>

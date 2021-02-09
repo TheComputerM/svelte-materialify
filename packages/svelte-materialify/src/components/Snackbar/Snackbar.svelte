@@ -45,6 +45,10 @@
   {#if active}
     <div
       transition:transition
+      on:introstart
+      on:outrostart
+      on:introend
+      on:outroend
       class="s-snackbar {klass}"
       class:outlined
       class:text
