@@ -262,7 +262,48 @@
   "components": [],
   "description": null,
   "keywords": [],
-  "events": [],
+  "events": [
+    {
+      "name": "introstart",
+      "parent": "div",
+      "modificators": [],
+      "locations": null,
+      "loc": null,
+      "visibility": "public",
+      "description": "",
+      "keywords": []
+    },
+    {
+      "name": "outrostart",
+      "parent": "div",
+      "modificators": [],
+      "locations": null,
+      "loc": null,
+      "visibility": "public",
+      "description": "",
+      "keywords": []
+    },
+    {
+      "name": "introend",
+      "parent": "div",
+      "modificators": [],
+      "locations": null,
+      "loc": null,
+      "visibility": "public",
+      "description": "",
+      "keywords": []
+    },
+    {
+      "name": "outroend",
+      "parent": "div",
+      "modificators": [],
+      "locations": null,
+      "loc": null,
+      "visibility": "public",
+      "description": "",
+      "keywords": []
+    }
+  ],
   "slots": [
     {
       "name": "default",
