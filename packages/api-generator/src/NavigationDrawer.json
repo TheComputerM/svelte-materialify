@@ -233,6 +233,46 @@
   "keywords": [],
   "events": [
     {
+      "name": "introstart",
+      "parent": "aside",
+      "modificators": [],
+      "locations": null,
+      "loc": null,
+      "visibility": "public",
+      "description": "",
+      "keywords": []
+    },
+    {
+      "name": "outrostart",
+      "parent": "aside",
+      "modificators": [],
+      "locations": null,
+      "loc": null,
+      "visibility": "public",
+      "description": "",
+      "keywords": []
+    },
+    {
+      "name": "introend",
+      "parent": "aside",
+      "modificators": [],
+      "locations": null,
+      "loc": null,
+      "visibility": "public",
+      "description": "",
+      "keywords": []
+    },
+    {
+      "name": "outroend",
+      "parent": "aside",
+      "modificators": [],
+      "locations": null,
+      "loc": null,
+      "visibility": "public",
+      "description": "",
+      "keywords": []
+    },
+    {
       "name": "hover",
       "parent": "aside",
       "modificators": [],
