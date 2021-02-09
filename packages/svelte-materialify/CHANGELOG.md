@@ -1,3 +1,25 @@
+## [0.3.5](https://github.com/TheComputerM/svelte-materialify/compare/v0.3.4...v0.3.5) (2021-02-09)
+
+### Bug Fixes
+
+- **types:** add Toolbar to index ([91aa3ee](https://github.com/TheComputerM/svelte-materialify/commit/91aa3ee9617965c9f20ae4458c3a9a501064ccbc))
+- close [#71](https://github.com/TheComputerM/svelte-materialify/issues/71) by docseltsam ([0143431](https://github.com/TheComputerM/svelte-materialify/commit/0143431073bab43f6303a8250d04932b82dbd5c3))
+- generate with lf line-ending ([2c9c00c](https://github.com/TheComputerM/svelte-materialify/commit/2c9c00c4e71c8e720cfd593ca50daaddf28f9623))
+- set Appbar z-index ([7e1b527](https://github.com/TheComputerM/svelte-materialify/commit/7e1b527227de88835950cf905c9a06cccccbc6e0))
+- update Select API ([00eeb56](https://github.com/TheComputerM/svelte-materialify/commit/00eeb5692c33c3a52c2ce0109837a428ab68da86))
+- **Button:** rename fab ([b713ef5](https://github.com/TheComputerM/svelte-materialify/commit/b713ef5d54ef127d450161513f2ef8ee75ea1333))
+- **clickOutside:** set event propagation to capturing phase ([c116592](https://github.com/TheComputerM/svelte-materialify/commit/c1165924c3d8cd0631e9fbd1599e57bc90a3e35b))
+- **docs:** add aria-label ([f72f9d6](https://github.com/TheComputerM/svelte-materialify/commit/f72f9d60189a0514d31a64fbc47c3c706eb99f9f))
+- **types:** add ExpansionPanel-s to index ([8c2a746](https://github.com/TheComputerM/svelte-materialify/commit/8c2a74682a9430ba50bd2186bc909a5c831942f9))
+- **types:** missing export of Menu ([b98e987](https://github.com/TheComputerM/svelte-materialify/commit/b98e987182195305f4e1ea934b3e3bca932260b7))
+
+### Features
+
+- add NavDrawer z-index prop ([f58b58c](https://github.com/TheComputerM/svelte-materialify/commit/f58b58c2b36f050e38604ee50e59fa7b4354fc2f))
+- **MaterialApp:** make full height ([4116c1e](https://github.com/TheComputerM/svelte-materialify/commit/4116c1e417435d53e2ad14e21acb68717e64cb08))
+- **Select:** export closeOnClick ([369c401](https://github.com/TheComputerM/svelte-materialify/commit/369c401be2abcabf16ab1659c5261fc48a4e8479))
+- **TextField:** allow manual validation ([0236948](https://github.com/TheComputerM/svelte-materialify/commit/0236948a2fa40497072acee50a8a0b3476fe4af5))
+
 ## [0.3.4](https://github.com/TheComputerM/svelte-materialify/compare/v0.3.3...v0.3.4) (2020-11-29)
 
 ### Bug Fixes
