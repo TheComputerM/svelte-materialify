@@ -28,11 +28,13 @@
       </Button>
     </CardActions>
     {#if active}
-      <Divider />
-      <div transition:slide class="pl-4 pr-4 pt-2 pb-2">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita autem,
-        asperiores dolores, doloremque ea atque suscipit dolore, ut adipisci amet possimus
-        dicta at voluptas consequatur!
+      <div transition:slide>
+        <Divider />
+        <div class="pl-4 pr-4 pt-2 pb-2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita autem,
+          asperiores dolores, doloremque ea atque suscipit dolore, ut adipisci amet possimus
+          dicta at voluptas consequatur!
+        </div>
       </div>
     {/if}
   </Card>
