@@ -8,10 +8,14 @@ related:
 ---
 
 <style>
-  :global(.example .s-col) {
+  :global(.grid-example .s-col) {
     border: thin solid var(--theme-dividers);
   }
 </style>
+
+<script>
+  import Wrapper from '../../examples/Grid/_wrapper.svelte'
+</script>
 
 # Grid
 
@@ -21,7 +25,9 @@ Svelte Materialify comes with a 12 column grid system built using flexbox. The g
 
 The Svelte Materialify grid is heavily inspired by the [Bootstrap Grid](https://getbootstrap.com/docs/4.0/layout/grid/). It is integrated by using a series of containers, rows, and columns to layout and align content.
 
-<Components.Example file="Grid/usage" />
+<Wrapper>
+  <Components.Example file="Grid/usage" />
+</Wrapper>
 
 ## API
 
@@ -65,19 +71,27 @@ Breakpoints based props on grid components work in an `andUp` fashion. With this
 ### Align
 
 Change the vertical alignment of flex items and their parents using the **align** and **align-self** helper classes.
+<Wrapper>
 <Components.Example file="Grid/align" />
+</Wrapper>
 
 ### Breakpoint sizing
 
 Columns will automatically take up an equal amount of space within their parent container. This can be modified using the **cols** prop. You can also utilize the **sm**, **md**, **lg**, and **xl** props to further define how the column will be sized in different viewport sizes.
+<Wrapper>
 <Components.Example file="Grid/breakpoint" />
+</Wrapper>
 
 ### Offsets
 
 Offsets are useful for compensating for elements that may not be visible yet, or to control the position of content. Just as with breakpoints, you can set an offset for any available sizes. This allows you to fine tune your application layout precisely to your needs.
+<Wrapper>
 <Components.Example file="Grid/offset" />
+</Wrapper>
 
 ### Margin Helpers
 
 Using the [auto margin helper utilities](/styles/spacing/) you can force sibling columns away from each other.
+<Wrapper>
 <Components.Example file="Grid/margin" />
+</Wrapper>
