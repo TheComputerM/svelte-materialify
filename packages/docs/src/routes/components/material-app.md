@@ -1,5 +1,7 @@
 ---
 title: Material App
+description: The material app component is a wrapper which provides all components inside it with styles and helpers
+keywords: material app, svelte materialify material component, svelte material component
 related:
   - getting-started/installation
   - getting-started/usage
