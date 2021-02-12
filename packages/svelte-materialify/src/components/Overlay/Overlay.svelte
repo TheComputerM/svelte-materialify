@@ -20,6 +20,7 @@
 
 {#if active}
   <div
+    tabindex="-1"
     in:transition={inOpts}
     out:transition={outOpts}
     class="s-overlay {klass}"
