@@ -27,7 +27,6 @@
   export let inverseLabel = false;
   export let readonly = false;
   export let disabled = null;
-  export let hint = '';
   export let style = null;
 
   function format(val) {
@@ -106,7 +105,7 @@
 </style>
 
 <!-- svelte-ignore a11y-label-has-associated-control -->
-<Input class="s-slider" {color} {readonly} {disabled} {hint}>
+<Input class="s-slider" {color} {readonly} {disabled}>
   <!-- Slot for prepend outside the input. -->
   <slot slot="prepend-outer" name="prepend-outer" />
   <label class="s-slider__label" class:inverse-label={inverseLabel}><slot /></label>
