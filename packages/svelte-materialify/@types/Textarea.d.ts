@@ -1,8 +1,8 @@
 import { SvelteComponent } from './shared';
 
-interface TextareaProps<T extends string | number | string[] = string[]> {
+interface TextareaProps {
   /** Value of the textarea. */
-  value?: T;
+  value?: string | number | string[];
   /** Color class of the textarea when active. */
   color?: string;
   /** Whether textarea is the `filled` material design variant. */
@@ -37,7 +37,7 @@ interface TextareaProps<T extends string | number | string[] = string[]> {
    * A list of validator functions that take the textarea value and return an error
    * message, or `true` otherwise.
    */
-  rules?: ((value: T) => string | true)[];
+  rules?: ((value: string | number | string[]) => string | true)[];
   /** Number of error messages to display. Defaults to one. */
   errorCount?: number;
   /** Error messages to display. */

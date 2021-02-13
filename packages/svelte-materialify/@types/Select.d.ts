@@ -1,12 +1,12 @@
 import { SvelteComponent } from './shared';
 
-interface SelectProps<T extends number[] | string[] = string[]> {
+interface SelectProps {
   /** Classes to add to select wrapper. */
   class?: string;
   /** Whether select is opened. */
-  active?: string;
+  active?: boolean;
   /** Value of the select. */
-  value?: T;
+  value?: number[] | string[];
   /** List of items to select from. */
   items?: { name: string | number, value: string | number }[];
   /** Whether select is the `filled` material design variant. */
