@@ -1,4 +1,5 @@
 <script>
+  import { createEventDispatcher } from 'svelte';
   import TextField from '../TextField';
   import Menu from '../Menu';
   import { ListItemGroup, ListItem } from '../List';
@@ -25,6 +26,7 @@
   export let disabled = null;
   export let closeOnClick = !multiple;
   export let format = (val) => (Array.isArray(val) ? val.join(', ') : val);
+  const dispatch = createEventDispatcher();
 </script>
 
 <style lang="scss" src="./Select.scss" global>
@@ -64,7 +66,14 @@
     <ListItemGroup bind:value {mandatory} {multiple} {max}>
       {#each items as item}
         <slot name="item" {item}>
-          <ListItem {dense} value={item.value}>
+          <ListItem
+            {dense}
+            value={item.value}
+            on:click={function () {
+              dispatch('change', {
+                value: item.value,
+              });
+            }}>
             <span slot="prepend">
               {#if multiple}
                 <Checkbox checked={value.includes(item.value)} />
