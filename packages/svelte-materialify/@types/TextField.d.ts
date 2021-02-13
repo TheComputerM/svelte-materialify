@@ -34,7 +34,7 @@ interface TextFieldProps {
   /** Error messages to display. */
   messages?: string[];
   /**
-   * A list of validator functions that take the textarea value and return an error
+   * A list of validator functions that take the text field value and return an error
    * message, or `true` otherwise.
    */
   rules?: ((value: string) => string | true)[];
@@ -44,11 +44,13 @@ interface TextFieldProps {
   validateOnBlur?: boolean;
   /** Whether text field has error. */
   error?: boolean;
+  /** Whether text field has `success` class. */
+  success?: boolean;
   /** Id of the text field. Defaults to a random uid. */
   id?: string;
-  /** Styles to add to textarea wrapper. */
+  /** Styles to add to text field wrapper. */
   style?: string;
-  /** Reference to textarea element in the DOM. */
+  /** Reference to text field element in the DOM. */
   inputElement?: Element;
 }
 
