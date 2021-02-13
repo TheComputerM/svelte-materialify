@@ -1,42 +1,55 @@
 import { SvelteComponent } from './shared';
 
 interface TextFieldProps {
-  // Value of the text input.
+  /** Classes to add to text field wrapper. */
+  class?: string;
+  /** Value of the text field. */
   value?: string;
-  // The color of the input when active.
+  /** Color class of the text field when active. */
   color?: string;
-  // Changes the variant of the input to filled.
+  /** Whether text field is the `filled` material design variant. */
   filled?: boolean;
-  // Changes the variant of the input to solo.
+  /** Whether text field is outlined by elevation. */
   solo?: boolean;
-  // Changes the variant of the input to outlined.
+  /** Whether text field is the `outlined` material design variant. */
   outlined?: boolean;
-  // Removes any shadow from the input.
+  /** Whether text field do not have elevation. */
   flat?: boolean;
-  // Reduces the input height.
+  /** Whether text field height is reduced. */
   dense?: boolean;
-  // Adds a border radius to the input.
+  /** Whether text field has rounded corners. */
   rounded?: boolean;
-  // Add input clear functionality.
+  /** Whether text field has a clear button. */
   clearable?: boolean;
-  // Puts input in readonly state.
+  /** Whether text field is read-only. */
   readonly?: boolean;
-  // Disable the input.
+  /** Whether text field is disabled. */
   disabled?: boolean;
-  // The input placeholder content.
+  /** Placeholder content for text field. */
   placeholder?: string;
-  // Hint text.
+  /** Hint text. */
   hint?: string;
-  // Creates counter for input length.
+  /** Display a counter set to a desired input length. */
   counter?: number;
-  // An array of functions which take input value as arguement and return error message.
-  rules?: ((value) => string | true)[];
-  // Delays validation till blur.
+  /** Error messages to display. */
+  messages?: string[];
+  /**
+   * A list of validator functions that take the textarea value and return an error
+   * message, or `true` otherwise.
+   */
+  rules?: ((value: string) => string | true)[];
+  /** Number of error messages to display. Defaults to one. */
+  errorCount?: number;
+  /** Whether to delay validation until blur. */
   validateOnBlur?: boolean;
-  // Error state of the input.
+  /** Whether text field has error. */
   error?: boolean;
-  // Id of the text input.
+  /** Id of the text field. Defaults to a random uid. */
   id?: string;
+  /** Styles to add to textarea wrapper. */
+  style?: string;
+  /** Reference to textarea element in the DOM. */
+  inputElement?: Element;
 }
 
 declare class TextField extends SvelteComponent<TextFieldProps> {}
