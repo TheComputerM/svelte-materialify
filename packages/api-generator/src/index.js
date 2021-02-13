@@ -18,6 +18,7 @@ export { default as Dialog } from './Dialog.json';
 export { default as Divider } from './Divider.json';
 export { default as ExpansionPanel } from './ExpansionPanel.json';
 export { default as ExpansionPanels } from './ExpansionPanels.json';
+export { default as FluidGrid } from './FluidGrid.json';
 export { default as Footer } from './Footer.json';
 export { default as Col } from './Col.json';
 export { default as Container } from './Container.json';

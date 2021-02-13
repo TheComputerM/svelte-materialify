@@ -52,6 +52,10 @@
   justify-content: space-around;
 }
 
+.justify-space-evenly {
+  justify-content: space-evenly;
+}
+
 @include create_breakpoints() using ($screen_size) {
   .justify-#{$screen_size}-start {
     justify-content: flex-start;

@@ -93,7 +93,15 @@
               <span class="text--secondary">{label}</span>
             </Switch>
           {:else if controls[label].type === 'slider'}
-            <Slider bind:value={values[label]}>{label}</Slider>
+            <Slider
+              bind:value={values[label]}
+              min={controls[label].min || 0}
+              max={controls[label].max || 100}
+              step={controls[label].step || null}
+              thumb={controls[label].thumb || false}
+              persistentThumb={controls[label].persistentThumb || false}>
+              {label}
+            </Slider>
           {:else if controls[label].type === 'select'}
             <Select
               class="mt-4"
