@@ -20,7 +20,13 @@ related:
 
 # Icons
 
-The `Icon` component provides a large set of glyphs to provide context to various aspects of your application. We recommend the official [Material Design Icons](https://materialdesignicons.com/) page. To use any of these icons simply use the mdi- prefix followed by the icon name.
+The `Icon` component allows to provide visual context to various aspects of your application. It is iconset agnostic, so you can use any icon from any vendor you like.
+
+:warning: Don't use a webfont, like we are doing here. Use a library which just exports svg path data.
+
+We recommend the @mdi/js library:
+`npm install @mdi/js`
+See: [Material Design Icons](https://materialdesignicons.com/).
 
 ## Playground
 
@@ -36,9 +42,9 @@ Icons come in two themes (light and dark), and can have any size.
 
 Below is a collection of simple to complex examples.
 
-### Types of Icons
+### Icon size and spinning
 
-The `Icon` component is iconset agnostic, you can use any icon from any vendor you like. Just include thier icon font file if you want to use them.
+You can specify if the icon should spin.
 <Components.Example file="Icon/types" />
 
 ### Color
