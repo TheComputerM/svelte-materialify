@@ -22,6 +22,6 @@
     </div>
     <span slot="title"> Click The Menu </span>
   </AppBar>
-  <NavigationDrawer absolute {active}>Content</NavigationDrawer>
+  <NavigationDrawer style="position: relative" {active}>Content</NavigationDrawer>
   <Overlay {active} absolute on:click={toggleNavigation} index={1} />
 </div>
