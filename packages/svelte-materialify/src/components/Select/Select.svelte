@@ -1,4 +1,5 @@
 <script>
+  import { createEventDispatcher } from 'svelte';
   import TextField from '../TextField';
   import Menu from '../Menu';
   import { ListItemGroup, ListItem } from '../List';
@@ -25,6 +26,8 @@
   export let disabled = null;
   export let closeOnClick = !multiple;
   export let format = (val) => (Array.isArray(val) ? val.join(', ') : val);
+  const dispatch = createEventDispatcher();
+  $: dispatch('change', value)
 </script>
 
 <style lang="scss" src="./Select.scss" global>
