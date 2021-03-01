@@ -27,7 +27,7 @@
   export let closeOnClick = !multiple;
   export let format = (val) => (Array.isArray(val) ? val.join(', ') : val);
   const dispatch = createEventDispatcher();
-  $: dispatch('change', value)
+  $: dispatch('change', value);
 </script>
 
 <style lang="scss" src="./Select.scss" global>
