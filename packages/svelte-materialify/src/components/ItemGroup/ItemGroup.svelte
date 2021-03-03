@@ -26,7 +26,7 @@
     select: (val) => {
       if (multiple) {
         if (value.includes(val)) {
-          if (!(mandatory && value === 1)) {
+          if (!mandatory || value.length > 1) {
             value.splice(value.indexOf(val), 1);
             value = value;
           }
