@@ -4,7 +4,7 @@ export { default as Intersect } from './actions/Intersect';
 export { default as Jump } from './actions/Jump';
 export { default as Touch } from './actions/Touch';
 
-export { default as MaterialApp } from './components/MaterialApp';
+export { default as MaterialApp, MaterialAppMin } from './components/MaterialApp';
 export { default as Icon } from './components/Icon';
 export { default as Button } from './components/Button';
 export { default as ButtonGroup, ButtonGroupItem } from './components/ButtonGroup';
