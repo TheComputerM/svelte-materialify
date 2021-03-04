@@ -31,6 +31,7 @@ export { default as ListGroup } from './ListGroup.json';
 export { default as ListItem } from './ListItem.json';
 export { default as ListItemGroup } from './ListItemGroup.json';
 export { default as MaterialApp } from './MaterialApp.json';
+export { default as MaterialAppMin } from './MaterialAppMin.json';
 export { default as Menu } from './Menu.json';
 export { default as NavigationDrawer } from './NavigationDrawer.json';
 export { default as Overlay } from './Overlay.json';

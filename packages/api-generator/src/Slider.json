@@ -244,21 +244,6 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
-      "name": "hint",
-      "kind": "let",
-      "static": false,
-      "readonly": false,
-      "type": {
-        "kind": "type",
-        "text": "string",
-        "type": "string"
-      },
-      "defaultValue": ""
-    },
-    {
-      "visibility": "public",
-      "description": null,
-      "keywords": [],
       "name": "style",
       "kind": "let",
       "static": false,

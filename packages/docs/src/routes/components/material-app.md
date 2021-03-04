@@ -12,9 +12,14 @@ related:
 
 This component is the base for Svelte Materialify and helps you to bootstrap your app. All other svelte materialify components are required to be inside of this component in order for them to properly inherit styles and helpers. `MaterialApp` should ideally only be used once inside your app.
 
+<Components.Alert type="warning">
+If you don't want our css utility classes or typography styles, use <code>MaterialAppMin</code> instead! It only provides ress.css, theming and colors.
+</Components.Alert>
+
 ## API
 
 - [MaterialApp](/api/MaterialApp/)
+- [MaterialAppMin](/api/MaterialAppMin/)
 
 ## Usage
 
@@ -46,4 +51,15 @@ Suppose if you want your `div` to be dark themed no matter what the theme of the
   <!-- this div will have dark theme no matter the value of {theme} -->
   <div class="theme--dark">...</div>
 </MaterialApp>
+```
+
+## Remove css helpers, defaults and typography
+
+If you want to use your own heading styles, fonts, etc. and just want theming and colors out of the box:
+
+```html
+<!-- Min version -->
+<MaterialAppMin {theme}>
+  ...
+</MaterialAppMin>
 ```
