@@ -1,0 +1,12 @@
+@use '../../styles/theme';
+@use '../../styles/generic/reset';
+@use '../../styles/generic/color';
+
+.s-app {
+  min-height: 100%;
+}
+
+.s-ripple-container {
+  position: relative;
+  overflow: hidden;
+}
