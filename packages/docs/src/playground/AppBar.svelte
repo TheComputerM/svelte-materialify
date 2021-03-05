@@ -1,6 +1,7 @@
 <script>
   import Playground from '@/components/doc/Playground.svelte';
   import { AppBar, Button, Icon } from 'svelte-materialify/src';
+  import { mdiMenu, mdiMagnify } from '@mdi/js';
 
   const variants = ['dense', 'prominent', 'flat'];
   const controls = {
@@ -27,13 +28,13 @@
     {...formatVariant(values.variants)}>
     <span slot="icon">
       <Button text fab>
-        <Icon class="mdi mdi-menu" />
+        <Icon path={mdiMenu} />
       </Button>
     </span>
     <span slot="title"> Title </span>
     <div style="flex-grow:1" />
     <Button text fab>
-      <Icon class="mdi mdi-magnify" />
+      <Icon path={mdiMagnify} />
     </Button>
   </AppBar>
 </Playground>

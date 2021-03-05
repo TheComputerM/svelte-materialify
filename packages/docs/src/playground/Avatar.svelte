@@ -1,6 +1,7 @@
 <script>
   import Playground from '@/components/doc/Playground.svelte';
   import { Avatar, Icon } from 'svelte-materialify/src';
+  import { mdiHome } from '@mdi/js';
 
   const controls = {
     size: { type: 'slider' },
@@ -24,7 +25,7 @@
 <Playground {controls} bind:values>
   <Avatar tile={values.tile} size="{values.size}px" class="{values.color[0]}-color">
     {#if values.icon}
-      <Icon class="mdi mdi-home" />
+      <Icon path={mdiHome} />
     {:else}MS{/if}
   </Avatar>
 </Playground>

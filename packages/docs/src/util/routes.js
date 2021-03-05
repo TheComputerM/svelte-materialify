@@ -1,10 +1,11 @@
 import { all as API } from 'svelte-materialify-api';
+import { mdiSpeedometerMedium, mdiSpeedometer, mdiPaletteOutline, mdiPalette, mdiViewDashboardOutline, mdiViewDashboard, mdiFunction, mdiFunctionVariant, mdiFlaskEmptyOutline, mdiFlaskOutline } from '@mdi/js';
 
 export default [
   {
     text: 'Getting Started',
-    icon: 'speedometer-medium',
-    openIcon: 'speedometer',
+    icon: mdiSpeedometerMedium,
+    openIcon: mdiSpeedometer,
     items: [
       { text: 'Installation', href: '/getting-started/installation/' },
       { text: 'Usage', href: '/getting-started/usage/' },
@@ -13,8 +14,8 @@ export default [
   },
   {
     text: 'Styles',
-    icon: 'palette-outline',
-    openIcon: 'palette',
+    icon: mdiPaletteOutline,
+    openIcon: mdiPalette,
     items: [
       { text: 'CSS Reset', href: '/styles/reset/' },
       { text: 'Content', href: '/styles/content/' },
@@ -30,8 +31,8 @@ export default [
   },
   {
     text: 'Components',
-    icon: 'view-dashboard-outline',
-    openIcon: 'view-dashboard',
+    icon: mdiViewDashboardOutline,
+    openIcon: mdiViewDashboard,
     items: [
       { text: 'Material App', href: '/components/material-app/' },
       { text: 'Alerts', href: '/components/alerts/' },
@@ -89,8 +90,8 @@ export default [
   },
   {
     text: 'Actions',
-    icon: 'function',
-    openIcon: 'function-variant',
+    icon: mdiFunction,
+    openIcon: mdiFunctionVariant,
     items: [
       { text: 'Ripple', href: '/actions/ripple/' },
       { text: 'Click outside', href: '/actions/click-outside/' },
@@ -101,8 +102,8 @@ export default [
   },
   {
     text: 'API',
-    icon: 'flask-empty-outline',
-    openIcon: 'flask-outline',
+    icon: mdiFlaskEmptyOutline,
+    openIcon: mdiFlaskOutline,
     items: API.names.map((i) => ({ text: `${i} API`, href: `/api/${i}/` })),
   },
 ];

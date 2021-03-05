@@ -1,3 +1,5 @@
+<svelte:options immutable={true} />
+
 <script context="module">
   export async function preload({ params }) {
     const res = await this.fetch(`api/${params.slug}.json`);
@@ -11,8 +13,9 @@
 </script>
 
 <script>
-  import { Table } from 'svelte-materialify/src';
+  import { Table, Icon } from 'svelte-materialify/src';
   import Layout from '@/components/doc/Layout.svelte';
+  import { mdiPound } from '@mdi/js';
 
   function getKeyword(obj, keyword, _default) {
     if (obj.keywords.length !== 0) {
@@ -32,13 +35,14 @@
   }
 </style>
 
-<svelte:options immutable={true} />
 <Layout title={`${name} API`}>
   <h1 class="text-h3 mb-6">{name} API</h1>
 
   <section>
     <h3 class="heading text-h5 mb-2" id="props">
-      <a href="#props" tabindex="-1" aria-hidden="true"> <i class="mdi mdi-pound" /> </a>
+      <a href="#props" tabindex="-1" aria-hidden="true">
+        <Icon path={mdiPound} size="18px" style="color: currentColor" class="mr-1" />
+      </a>
       Props
     </h3>
     <Table style="border: thin solid var(--theme-dividers)">
@@ -72,7 +76,7 @@
     <section>
       <h3 class="heading text-h5 mb-2" id="events">
         <a href="#events" tabindex="-1" aria-hidden="true">
-          <i class="mdi mdi-pound" />
+          <Icon path={mdiPound} size="18px" style="color: currentColor" class="mr-1" />
         </a>
         Events
       </h3>
@@ -101,7 +105,7 @@
     <section>
       <h3 class="heading text-h5 mb-2" id="slots">
         <a href="#slots" tabindex="-1" aria-hidden="true">
-          <i class="mdi mdi-pound" />
+          <Icon path={mdiPound} size="18px" style="color: currentColor" class="mr-1" />
         </a>
         Slots
       </h3>

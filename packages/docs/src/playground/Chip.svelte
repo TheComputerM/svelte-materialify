@@ -1,6 +1,7 @@
 <script>
   import Playground from '@/components/doc/Playground.svelte';
   import { Chip, Avatar, Icon } from 'svelte-materialify/src';
+  import { mdiAccountCircle } from '@mdi/js';
 
   const variants = ['label', 'link', 'outlined', 'pill'];
 
@@ -22,7 +23,7 @@
     close: false,
     active: true,
     avatar: false,
-    icon: 'account-circle',
+    icon: mdiAccountCircle,
     size: ['default'],
   };
 </script>
@@ -35,7 +36,7 @@
     {...formatVariant(values.variants)}>
     {#if values.avatar}
       <Avatar class="primary-color">
-        <Icon class="mdi mdi-{values.icon}" />
+        <Icon path={values.icon} />
       </Avatar>
     {/if}
     <span> Chip Component </span>

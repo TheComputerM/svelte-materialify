@@ -15,6 +15,7 @@
     Footer,
   } from 'svelte-materialify/src';
   import Meta from '@/components/Meta.svelte';
+  import { mdiSpeedometer, mdiGithub, mdiPlus, mdiCheckBold, mdiTwitter } from '@mdi/js';
 </script>
 
 <style lang="scss">
@@ -65,7 +66,7 @@
         <div class="d-flex flex-wrap">
           <a href="/getting-started/installation/" class="blue-text text-darken-2">
             <Button size="x-large" class="white elevation-4">
-              <Icon class="mdi mdi-speedometer mr-3" />
+              <Icon path={mdiSpeedometer} class="mr-3" />
               Get Started
             </Button>
           </a>
@@ -78,7 +79,7 @@
             class="black-text"
             rel="noopener">
             <Button depressed size="x-large" class="white">
-              <Icon class="mdi mdi-github mr-3" />
+              <Icon path={mdiGithub} class="mr-3" />
               GitHub
             </Button>
           </a>
@@ -86,7 +87,7 @@
       </Col>
       <Col class="d-flex justify-center align-center flex-column" md="5">
         <img src="svelte-logo.png" alt="Svelte" />
-        <Icon size="64px" class="mdi mdi-plus mt-4 mb-4" />
+        <Icon size="64px" path={mdiPlus} class="mt-4 mb-4" />
         <img src="logo-192.png" alt="Svelte Materialify" />
       </Col>
     </Row>
@@ -124,7 +125,7 @@
         <tr>
           <td>Full Accessibility Support</td>
           <td>
-            <Icon class="mdi mdi-check-bold success-text" />
+            <Icon path={mdiCheckBold} class="success-text" />
           </td>
           <td />
           <td />
@@ -134,25 +135,25 @@
         <tr>
           <td>Server Side Rendering support</td>
           <td>
-            <Icon class="mdi mdi-check-bold success-text" />
+            <Icon path={mdiCheckBold} class="success-text" />
           </td>
           <td>
-            <Icon class="mdi mdi-check-bold success-text" />
+            <Icon path={mdiCheckBold} class="success-text" />
           </td>
           <td>
-            <Icon class="mdi mdi-check-bold success-text" />
+            <Icon path={mdiCheckBold} class="success-text" />
           </td>
           <td>
-            <Icon class="mdi mdi-check-bold success-text" />
+            <Icon path={mdiCheckBold} class="success-text" />
           </td>
           <td>
-            <Icon class="mdi mdi-check-bold success-text" />
+            <Icon path={mdiCheckBold} class="success-text" />
           </td>
         </tr>
         <tr>
           <td>Long Term Support</td>
           <td>
-            <Icon class="mdi mdi-check-bold success-text" />
+            <Icon path={mdiCheckBold} class="success-text" />
           </td>
           <td />
           <td />
@@ -162,14 +163,14 @@
         <tr>
           <td>Custom Themes</td>
           <td>
-            <Icon class="mdi mdi-check-bold success-text" />
+            <Icon path={mdiCheckBold} class="success-text" />
           </td>
           <td />
           <td>
-            <Icon class="mdi mdi-check-bold success-text" />
+            <Icon path={mdiCheckBold} class="success-text" />
           </td>
           <td>
-            <Icon class="mdi mdi-check-bold success-text" />
+            <Icon path={mdiCheckBold} class="success-text" />
           </td>
           <td />
         </tr>
@@ -216,14 +217,14 @@
         aria-label="GitHub"
         target="_blank"
         rel="noopener">
-        <Icon class="mdi mdi-github" />
+        <Icon path={mdiGithub} />
       </a>
       <a
         href="https://twitter.com/TheComputerM"
         aria-label="Twitter"
         target="_blank"
         rel="noopener">
-        <Icon class="mdi mdi-twitter" />
+        <Icon path={mdiTwitter} />
       </a>
     </div>
     <div class="mt-2">

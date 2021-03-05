@@ -1,6 +1,9 @@
+<svelte:options immutable={true} />
+
 <script>
   import Clipboard from 'clipboard';
   import { Button, Icon } from 'svelte-materialify/src';
+  import { mdiContentCopy } from '@mdi/js';
 
   export let lang = '';
   function copy(node) {
@@ -50,17 +53,16 @@
   }
 </style>
 
-<svelte:options immutable={true} />
-
 <div class="code-block" use:copy>
-  <pre class="language-{lang}">
+  <pre
+    class="language-{lang}">
     <code
       class="language-{lang}">
       <slot />
     </code>
   </pre>
   <Button fab depressed size="small" style="position:absolute" aria-label="Copy">
-    <Icon size="20px" class="mdi mdi-content-copy" />
+    <Icon size="20px" path={mdiContentCopy} />
   </Button>
   <span aria-hidden="true">{lang}</span>
 </div>

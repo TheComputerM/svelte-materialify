@@ -5,6 +5,7 @@
   import SiteNavigation from '@/components/navigation/SiteNavigation.svelte';
   import Loading from '@/components/navigation/Loading.svelte';
   import { theme } from '@/util/stores';
+  import { mdiMenu, mdiWeatherNight, mdiWeatherSunny } from '@mdi/js';
 
   export let segment;
 
@@ -73,7 +74,7 @@
           depressed
           on:click={() => (sidenav = !sidenav)}
           aria-label="Open Menu">
-          <Icon class="mdi mdi-menu" />
+          <Icon path={mdiMenu} />
         </Button>
       {/if}
     </div>
@@ -94,7 +95,7 @@
       </Button>
     </a>
     <Button fab text on:click={toggleTheme} aria-label="Toggle Theme">
-      <Icon class="mdi mdi-weather-{$theme === 'light' ? 'night' : 'sunny'}" />
+      <Icon path={$theme === 'light' ? mdiWeatherNight : mdiWeatherSunny} />
     </Button>
   </AppBar>
 

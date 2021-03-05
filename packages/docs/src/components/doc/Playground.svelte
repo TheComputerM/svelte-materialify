@@ -13,6 +13,7 @@
     Ripple,
     ListItem,
   } from 'svelte-materialify/src';
+  import { mdiInvertColors } from '@mdi/js';
 
   export let values;
   export let controls;
@@ -82,7 +83,7 @@
       <div class="playground__toolbar justify-space-between pl-2 pr-2">
         <div class="text-h6">Options</div>
         <Button icon on:click={toggleTheme}>
-          <Icon class="mdi mdi-invert mdi-invert-colors" />
+          <Icon path={mdiInvertColors} />
         </Button>
       </div>
       <div class="pa-2">
