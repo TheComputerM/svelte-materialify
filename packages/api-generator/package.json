@@ -1,6 +1,6 @@
 {
   "name": "svelte-materialify-api",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "private": true,
   "license": "MIT",
   "main": "dist/index.js",

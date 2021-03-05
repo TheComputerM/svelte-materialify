@@ -1,3 +1,21 @@
+## [0.3.6](https://github.com/TheComputerM/svelte-materialify/compare/v0.3.5...v0.3.6) (2021-03-05)
+
+### Bug Fixes
+
+- **ItemGroup:** check for index ([9fe0fa3](https://github.com/TheComputerM/svelte-materialify/commit/9fe0fa3d15afe09535a80e55e609bf966cdc4818))
+- **ItemGroup:** cross mandatory and multiple ([be16ead](https://github.com/TheComputerM/svelte-materialify/commit/be16ead9dbc9933c8f841a42a49382ec80f213fa))
+- added forgotten ; ([ddba141](https://github.com/TheComputerM/svelte-materialify/commit/ddba141bf852b49ae03d4060b2d30573758da4ad))
+- on:change support for select component ([b1215b4](https://github.com/TheComputerM/svelte-materialify/commit/b1215b498670aac48a3351c69912c8a6b6fe80a8))
+- **Slider:** Input has no hint prop ([31e1ae2](https://github.com/TheComputerM/svelte-materialify/commit/31e1ae2426578e5627d9bd08277724fa5da42082))
+- **types:** remove generic type from from props ([2c4f4f3](https://github.com/TheComputerM/svelte-materialify/commit/2c4f4f3f0085cdbccb94a385e999601d204dfa62))
+
+### Features
+
+- **MaterialApp:** minimal css utilities version ([6320085](https://github.com/TheComputerM/svelte-materialify/commit/6320085f5a44242e168369c65bcd3cdc116d6475))
+- **types:** add form field type definitions ([7b36edc](https://github.com/TheComputerM/svelte-materialify/commit/7b36edc3291817c5bf6c81269af6ea0579887488))
+- export input elements ([4f33fe1](https://github.com/TheComputerM/svelte-materialify/commit/4f33fe1886463e4f3606e81be5573dc164bba667))
+- forward all transition events ([a5c10f5](https://github.com/TheComputerM/svelte-materialify/commit/a5c10f535e27f91c1789614f4c4f62cef55ee892))
+
 ## [0.3.5](https://github.com/TheComputerM/svelte-materialify/compare/v0.3.4...v0.3.5) (2021-02-09)
 
 ### Bug Fixes
