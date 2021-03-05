@@ -1,6 +1,6 @@
 <script>
   import { Button, Overlay, ProgressCircular, Icon } from 'svelte-materialify/src';
-
+  import { mdiOpenInNew } from '@mdi/js';
   let active = false;
 </script>
 
@@ -11,7 +11,7 @@
       active = true;
     }}>
     Launch Application
-    <Icon class="mdi mdi-open-in-new ml-2" />
+    <Icon path={mdiOpenInNew} class="ml-2" />
   </Button>
 </div>
 

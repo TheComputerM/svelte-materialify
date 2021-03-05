@@ -1,6 +1,6 @@
 <script>
   import { Icon, Badge, Button } from 'svelte-materialify/src';
-
+  import { mdiHome } from '@mdi/js';
   let value = 1;
 </script>
 
@@ -20,6 +20,6 @@
     Clear Notifications
   </Button>
   <Badge class="primary-color" active={value !== 0} {value}>
-    <Icon class="mdi mdi-home" />
+    <Icon path={mdiHome} />
   </Badge>
 </div>

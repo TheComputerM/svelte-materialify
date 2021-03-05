@@ -1,6 +1,7 @@
 <script>
   import TextField from 'svelte-materialify/src/components/TextField';
   import Icon from 'svelte-materialify/src/components/Icon';
+  import { mdiEyeOff, mdiEye } from '@mdi/js';
 
   let show = false;
 </script>
@@ -12,6 +13,6 @@
     on:click={() => {
       show = !show;
     }}>
-    <Icon class="mdi mdi-{show ? 'eye-off' : 'eye'}" />
+    <Icon path={show ? mdiEyeOff : mdiEye} />
   </div>
 </TextField>

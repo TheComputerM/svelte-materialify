@@ -1,5 +1,6 @@
 <script>
   import { ListItem, Icon } from 'svelte-materialify/src';
+  import { mdiHome } from '@mdi/js';
 </script>
 
 <div class="d-flex justify-center mt-2 mb-2">
@@ -9,7 +10,7 @@
     <ListItem>
       List Item (icon)
       <span slot="append">
-        <Icon class="mdi mdi-home" />
+        <Icon path={mdiHome} />
       </span>
       <span slot="subtitle">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, saepe. Quis nam non

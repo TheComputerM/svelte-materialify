@@ -1,5 +1,6 @@
 <script>
   import { NavigationDrawer, List, ListItem, Button, Icon } from 'svelte-materialify/src';
+  import { mdiViewDashboard, mdiAccountBox, mdiGavel } from '@mdi/js';
 </script>
 
 <div style="position:relative;height:350px;">
@@ -7,19 +8,19 @@
     <List>
       <ListItem>
         <span slot="prepend">
-          <Icon class="mdi mdi-view-dashboard" />
+          <Icon path={mdiViewDashboard} />
         </span>
         Dashboard
       </ListItem>
       <ListItem>
         <span slot="prepend">
-          <Icon class="mdi mdi-account-box" />
+          <Icon path={mdiAccountBox} />
         </span>
         Account
       </ListItem>
       <ListItem>
         <span slot="prepend">
-          <Icon class="mdi mdi-gavel" />
+          <Icon path={mdiGavel} />
         </span>
         Admin
       </ListItem>

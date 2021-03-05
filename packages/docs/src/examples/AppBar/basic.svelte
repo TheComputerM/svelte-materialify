@@ -1,11 +1,12 @@
 <script>
   import { AppBar, Button, Icon, Menu, ListItem } from 'svelte-materialify/src';
+  import { mdiMenu, mdiDotsVertical } from '@mdi/js';
 </script>
 
 <AppBar>
   <div slot="icon">
     <Button fab depressed>
-      <Icon class="mdi mdi-menu" />
+      <Icon path={mdiMenu} />
     </Button>
   </div>
   <span slot="title">Title</span>
@@ -14,7 +15,7 @@
   <Menu right>
     <div slot="activator">
       <Button fab depressed>
-        <Icon class="mdi mdi-dots-vertical" />
+        <Icon path={mdiDotsVertical} />
       </Button>
     </div>
     <ListItem>Item 1</ListItem>

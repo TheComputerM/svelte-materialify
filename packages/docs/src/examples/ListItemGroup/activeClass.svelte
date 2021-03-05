@@ -1,5 +1,6 @@
 <script>
   import { ListItemGroup, ListItem, Icon } from 'svelte-materialify/src';
+  import { mdiHome, mdiStar, mdiAccount } from '@mdi/js';
 </script>
 
 <style>
@@ -12,17 +13,17 @@
   <ListItemGroup activeClass="dash-border">
     <ListItem>
       <span slot="prepend">
-        <Icon class="mdi mdi-home" />
+        <Icon path={mdiHome} />
       </span>Item 1
     </ListItem>
     <ListItem>
       <span slot="prepend">
-        <Icon class="mdi mdi-star" />
+        <Icon path={mdiStar} />
       </span>Item 2
     </ListItem>
     <ListItem>
       <span slot="prepend">
-        <Icon class="mdi mdi-account" />
+        <Icon path={mdiAccount} />
       </span>Item 3
     </ListItem>
   </ListItemGroup>

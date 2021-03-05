@@ -1,6 +1,6 @@
 <script>
   import { Row, Col, Button, Icon, Tooltip } from 'svelte-materialify/src';
-
+  import { mdiCart } from '@mdi/js';
   let show = false;
 </script>
 
@@ -10,7 +10,7 @@
   </Col>
   <Col cols={12} class="mt-12">
     <Tooltip top bind:active={show}>
-      <Icon class="mdi mdi-cart" />
+      <Icon path={mdiCart} />
       <span slot="tip">Programmatic tooltip</span>
     </Tooltip>
   </Col>

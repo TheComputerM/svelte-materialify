@@ -8,15 +8,24 @@
     Icon,
     Divider,
   } from 'svelte-materialify/src';
+  import {
+    mdiFolder,
+    mdiAccountMultiple,
+    mdiStar,
+    mdiHistory,
+    mdiCheckCircle,
+    mdiUpload,
+    mdiCloudUpload,
+  } from '@mdi/js';
 
   const items = [
-    { text: 'My Files', icon: 'mdi-folder' },
-    { text: 'Shared with me', icon: 'mdi-account-multiple' },
-    { text: 'Starred', icon: 'mdi-star' },
-    { text: 'Recent', icon: 'mdi-history' },
-    { text: 'Offline', icon: 'mdi-check-circle' },
-    { text: 'Uploads', icon: 'mdi-upload' },
-    { text: 'Backups', icon: 'mdi-cloud-upload' },
+    { text: 'My Files', icon: mdiFolder },
+    { text: 'Shared with me', icon: mdiAccountMultiple },
+    { text: 'Starred', icon: mdiStar },
+    { text: 'Recent', icon: mdiHistory },
+    { text: 'Offline', icon: mdiCheckCircle },
+    { text: 'Uploads', icon: mdiUpload },
+    { text: 'Backups', icon: mdiCloudUpload },
   ];
 </script>
 
@@ -29,7 +38,7 @@
       {#each items as item}
         <ListItem>
           <span slot="prepend">
-            <Icon class="mdi {item.icon}" />
+            <Icon path={item.icon} />
           </span>
           {item.text}
         </ListItem>

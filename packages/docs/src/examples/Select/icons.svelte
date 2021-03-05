@@ -1,6 +1,6 @@
 <script>
   import { Row, Col, Select, Icon } from 'svelte-materialify/src';
-
+  import { mdiHome } from '@mdi/js';
   const items = [
     { name: 'Foo', value: 'foo' },
     { name: 'Bar', value: 'bar' },
@@ -13,7 +13,7 @@
   <Col>
     <Select {items}>
       <span slot="prepend-outer">
-        <Icon class="mdi mdi-home" />
+        <Icon path={mdiHome} />
       </span>
       Regular
     </Select>
@@ -22,7 +22,7 @@
     <Select {items}>
       Regular
       <span slot="append-outer">
-        <Icon class="mdi mdi-home" />
+        <Icon path={mdiHome} />
       </span>
     </Select>
   </Col>

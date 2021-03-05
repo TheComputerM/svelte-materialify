@@ -8,6 +8,7 @@
     "preview": "serve __sapper__/export"
   },
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@mdi/js": "^5.9.55",
     "compression": "^1.7.1",
     "gumshoejs": "^5.1.2",
