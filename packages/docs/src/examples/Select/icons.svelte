@@ -1,6 +1,7 @@
 <script>
   import { Row, Col, Select, Icon } from 'svelte-materialify/src';
   import { mdiHome } from '@mdi/js';
+
   const items = [
     { name: 'Foo', value: 'foo' },
     { name: 'Bar', value: 'bar' },

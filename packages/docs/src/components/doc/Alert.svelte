@@ -1,6 +1,8 @@
 <svelte:options immutable={true} />
 
 <script context="module">
+  import { mdiInformation, mdiAlert, mdiAlertOctagram, mdiCheck } from '@mdi/js';
+
   const icons = {
     info: mdiInformation,
     danger: mdiAlert,
@@ -11,7 +13,6 @@
 
 <script>
   import { Alert, Icon } from 'svelte-materialify/src';
-  import { mdiInformation, mdiAlert, mdiAlertOctagram, mdiCheck } from '@mdi/js';
 
   export let type = 'info';
   const icon = icons[type];

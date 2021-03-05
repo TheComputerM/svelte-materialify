@@ -1,6 +1,7 @@
 <script>
   import { Icon, Badge, Button } from 'svelte-materialify/src';
   import { mdiHome } from '@mdi/js';
+
   let value = 1;
 </script>
 

@@ -1,6 +1,7 @@
 <script>
   import { AppBar, Checkbox, Button, Icon } from 'svelte-materialify/src';
   import { mdiMenu } from '@mdi/js';
+
   let collapsed = false;
 </script>
 

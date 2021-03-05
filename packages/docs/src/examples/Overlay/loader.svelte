@@ -1,6 +1,7 @@
 <script>
   import { Button, Overlay, ProgressCircular, Icon } from 'svelte-materialify/src';
   import { mdiOpenInNew } from '@mdi/js';
+
   let active = false;
 </script>
 
