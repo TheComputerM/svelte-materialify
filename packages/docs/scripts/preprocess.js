@@ -2,6 +2,7 @@ import { mdsvex } from 'mdsvex';
 import sveltePreprocess from 'svelte-preprocess';
 import Prism from 'prismjs';
 import loadLanguages from 'prismjs/components/';
+import { mdiOpenInNew, mdiPound } from '@mdi/js';
 
 loadLanguages(['bash', 'scss', 'typescript']);
 
@@ -41,8 +42,11 @@ export default [
           rel: ['noopener', 'noreferrer'],
           content: {
             type: 'element',
-            tagName: 'i',
-            properties: { className: ['mdi', 'mdi-open-in-new'] },
+            tagName: 'svg',
+            properties: { width: '16px', height: '16px', viewBox: '0 0 24 24' },
+            children: [
+              { type: 'element', tagName: 'path', properties: { d: mdiOpenInNew } },
+            ],
           },
         },
       ],
@@ -52,8 +56,11 @@ export default [
         {
           content: {
             type: 'element',
-            tagName: 'i',
-            properties: { className: ['mdi', 'mdi-pound'] },
+            tagName: 'svg',
+            properties: { width: '0.7em', height: '0.7em', viewBox: '0 0 24 24' },
+            children: [
+              { type: 'element', tagName: 'path', properties: { d: mdiPound } },
+            ],
           },
         },
       ],
