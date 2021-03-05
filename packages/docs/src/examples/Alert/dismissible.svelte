@@ -1,7 +1,5 @@
 <script>
-  import Alert from 'svelte-materialify/src/components/Alert';
-  import Icon from 'svelte-materialify/src/components/Icon';
-  import Button from 'svelte-materialify/src/components/Button';
+  import { Alert, Icon, Button } from 'svelte-materialify/src';
   import { mdiAlertCircle } from '@mdi/js';
 
   let timesDismissed = 0;

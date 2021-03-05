@@ -1,9 +1,5 @@
 <script>
-  import ExpansionPanels, {
-    ExpansionPanel,
-  } from 'svelte-materialify/src/components/ExpansionPanels';
-
-  import Button from 'svelte-materialify/src/components/Button';
+  import { ExpansionPanel, ExpansionPanels, Button } from 'svelte-materialify/src';
 
   let value = [2];
 
@@ -26,17 +22,17 @@
 <ExpansionPanels multiple bind:value>
   <ExpansionPanel>
     <span slot="header">Item</span>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat amet natus
-    obcaecati molestiae quas mollitia error modi atque aliquam esse.
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat amet natus obcaecati
+    molestiae quas mollitia error modi atque aliquam esse.
   </ExpansionPanel>
   <ExpansionPanel>
     <span slot="header">Item</span>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat amet natus
-    obcaecati molestiae quas mollitia error modi atque aliquam esse.
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat amet natus obcaecati
+    molestiae quas mollitia error modi atque aliquam esse.
   </ExpansionPanel>
   <ExpansionPanel>
     <span slot="header">Item</span>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat amet natus
-    obcaecati molestiae quas mollitia error modi atque aliquam esse.
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat amet natus obcaecati
+    molestiae quas mollitia error modi atque aliquam esse.
   </ExpansionPanel>
 </ExpansionPanels>

@@ -1,6 +1,5 @@
 <script>
-  import Button from 'svelte-materialify/src/components/Button';
-  import Icon from 'svelte-materialify/src/components/Icon';
+  import { Button, Icon } from 'svelte-materialify/src';
   import { mdiPen } from '@mdi/js';
 </script>
 
