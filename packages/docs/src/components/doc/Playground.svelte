@@ -100,10 +100,22 @@
               class="mt-4"
               mandatory={controls[label].mandatory}
               bind:value={values[label]}
-              items={controls[label].items}>
+              items={controls[label].items}
+              format={(val) =>
+                controls[label].format
+                  ? controls[label].format(val)
+                  : Array.isArray(val)
+                  ? val.join(', ')
+                  : val}>
               {label}
               <div slot="item" let:item>
-                <ListItem value={item}>{item}</ListItem>
+                {#if controls[label].format}
+                  <ListItem value={item.value}>
+                    {item.name}
+                  </ListItem>
+                {:else}
+                  <ListItem value={item}>{item}</ListItem>
+                {/if}
               </div>
             </Select>
           {:else if controls[label].type === 'text'}

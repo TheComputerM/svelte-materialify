@@ -1,15 +1,21 @@
 <script>
   import Playground from '@/components/doc/Playground.svelte';
   import { Chip, Avatar, Icon } from 'svelte-materialify/src';
-  import { mdiAccountCircle } from '@mdi/js';
+  import { mdiPlus, mdiMagnet, mdiAccount, mdiViewDashboard } from '@mdi/js';
 
   const variants = ['label', 'link', 'outlined', 'pill'];
+
+  const items = [{ mdiPlus }, { mdiMagnet }, { mdiAccount }, { mdiViewDashboard }].map(
+    (mdi) => {
+      return { name: Object.keys(mdi)[0], value: Object.values(mdi)[0] };
+    },
+  );
 
   const controls = {
     close: { type: 'switch' },
     active: { type: 'switch' },
     avatar: { type: 'switch' },
-    icon: { type: 'text' },
+    icon: { type: 'select', items, format: (val) => items.find((i) => i.value == val).name },
     size: {
       type: 'select',
       items: ['x-small', 'small', 'default', 'large', 'x-large'],
@@ -23,7 +29,7 @@
     close: false,
     active: true,
     avatar: false,
-    icon: mdiAccountCircle,
+    icon: items[0].value,
     size: ['default'],
   };
 </script>
