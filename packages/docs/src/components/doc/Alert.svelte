@@ -1,9 +1,13 @@
+<svelte:options immutable={true} />
+
 <script context="module">
+  import { mdiInformation, mdiAlert, mdiAlertOctagram, mdiCheck } from '@mdi/js';
+
   const icons = {
-    info: 'information',
-    danger: 'alert',
-    warning: 'alert-octagram',
-    success: 'check',
+    info: mdiInformation,
+    danger: mdiAlert,
+    warning: mdiAlertOctagram,
+    success: mdiCheck,
   };
 </script>
 
@@ -20,11 +24,9 @@
   }
 </style>
 
-<svelte:options immutable={true} />
-
 <Alert class="s-alert--doc {type}-text" border="left" text>
   <div slot="icon">
-    <Icon class="mdi mdi-{icon}" />
+    <Icon path={icon} />
   </div>
   <slot />
 </Alert>

@@ -11,8 +11,9 @@
   import links from '@/util/links';
   import Meta from '../Meta.svelte';
   import RelatedPages from './RelatedPages.svelte';
-  import { Divider } from 'svelte-materialify/src';
+  import { Divider, Icon } from 'svelte-materialify/src';
   import { onMount, onDestroy, tick } from 'svelte';
+  import { mdiOpenInNew } from '@mdi/js';
 
   onMount(() => {
     document.querySelectorAll('.markdown-container .heading a').forEach((a) => {
@@ -48,8 +49,7 @@
   .heading > a {
     position: absolute;
     top: 0;
-    left: -1em;
-    font-size: 0.75em;
+    left: -0.7em;
     opacity: 0;
   }
   .heading:hover > a {
@@ -77,13 +77,16 @@
   <br /><br />
   <Divider />
   <div class="mt-8 d-flex justify-space-between blue-grey-text text-darken-1">
-    <span>
-      <b>Edit This Page on</b>
-      <a class="app-link" rel="noopener" target="_blank" href="{links.docs}/src/routes">
-        GitHub
-        <span> <i class="mdi mdi-open-in-new" /> </span>
+    <div class="d-flex">
+      <a
+        class="app-link d-flex justify-center align-center"
+        rel="noopener"
+        target="_blank"
+        href="{links.docs}/src/routes">
+        Edit This Page on GitHub
+        <Icon path={mdiOpenInNew} size="16px" style="color: currentColor" class="ml-1" />
       </a>
-    </span>
+    </div>
     <span> <b>Last Updated</b>: CURRENT_DATE </span>
   </div>
 </section>

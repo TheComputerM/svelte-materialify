@@ -1,6 +1,7 @@
 <script>
   import Playground from '@/components/doc/Playground.svelte';
   import { Button, Icon } from 'svelte-materialify/src';
+  import { mdiHome } from '@mdi/js';
 
   const variants = ['depressed', 'outlined', 'rounded', 'text', 'fab', 'icon', 'tile'];
 
@@ -34,7 +35,7 @@
     size={values.size}
     {...formatVariant(values.variants)}>
     {#if values.variants.includes('icon') || values.variants.includes('fab')}
-      <Icon class="mdi mdi-home" />
+      <Icon path={mdiHome} />
     {:else}Click Me{/if}
   </Button>
 </Playground>

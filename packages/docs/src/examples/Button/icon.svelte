@@ -1,19 +1,20 @@
 <script>
   import Button from 'svelte-materialify/src/components/Button';
   import Icon from 'svelte-materialify/src/components/Icon';
+  import { mdiHeart, mdiStar, mdiThumbUp, mdiCancel } from '@mdi/js';
 </script>
 
 <div class="d-flex flex-column flex-sm-row justify-space-around">
   <Button icon class="pink-text">
-    <Icon class="mdi mdi-heart" />
+    <Icon path={mdiHeart} />
   </Button>
   <Button icon class="indigo-text">
-    <Icon class="mdi mdi-star" />
+    <Icon path={mdiStar} />
   </Button>
   <Button icon class="green-text">
-    <Icon class="mdi mdi-thumb-up" />
+    <Icon path={mdiThumbUp} />
   </Button>
   <Button icon disabled>
-    <Icon class="mdi mdi-cancel" />
+    <Icon path={mdiCancel} />
   </Button>
 </div>

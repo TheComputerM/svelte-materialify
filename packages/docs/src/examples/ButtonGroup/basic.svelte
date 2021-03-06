@@ -1,5 +1,11 @@
 <script>
   import { ButtonGroup, ButtonGroupItem, Icon } from 'svelte-materialify/src';
+  import {
+    mdiFormatAlignLeft,
+    mdiFormatAlignCenter,
+    mdiFormatAlignRight,
+    mdiFormatAlignJustify,
+  } from '@mdi/js';
 </script>
 
 <div class="d-flex justify-space-between">
@@ -61,16 +67,16 @@
     <h6>Icon</h6>
     <ButtonGroup>
       <ButtonGroupItem>
-        <Icon class="mdi mdi-format-align-left" />
+        <Icon path={mdiFormatAlignLeft} />
       </ButtonGroupItem>
       <ButtonGroupItem>
-        <Icon class="mdi mdi-format-align-center" />
+        <Icon path={mdiFormatAlignCenter} />
       </ButtonGroupItem>
       <ButtonGroupItem>
-        <Icon class="mdi mdi-format-align-right" />
+        <Icon path={mdiFormatAlignRight} />
       </ButtonGroupItem>
       <ButtonGroupItem>
-        <Icon class="mdi mdi-format-align-justify" />
+        <Icon path={mdiFormatAlignJustify} />
       </ButtonGroupItem>
     </ButtonGroup>
   </div>

@@ -1,16 +1,17 @@
 <script>
   import { Subheader, Button, Icon, Row, Col } from 'svelte-materialify/src';
+  import { mdiArrowLeft, mdiMagnify } from '@mdi/js';
 </script>
 
 <div class="ml-auto mr-auto elevation-3 rounded pa-3" style="width:400px">
   <div class="d-flex align-center">
     <Button fab text>
-      <Icon class="mdi mdi-arrow-left" />
+      <Icon path={mdiArrowLeft} />
     </Button>
     <span class="text-h6 ml-4"> Albums </span>
     <div style="flex-grow:1" />
     <Button fab text>
-      <Icon class="mdi mdi-magnify" />
+      <Icon path={mdiMagnify} />
     </Button>
   </div>
   <Subheader>May</Subheader>

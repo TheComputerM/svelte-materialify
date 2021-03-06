@@ -1,11 +1,12 @@
 <script>
   import Avatar from 'svelte-materialify/src/components/Avatar';
   import Icon from 'svelte-materialify/src/components/Icon';
+  import { mdiAccountCircle } from '@mdi/js';
 </script>
 
 <div class="d-flex justify-space-around">
   <Avatar class="primary-color">
-    <Icon class="mdi mdi-account-circle" />
+    <Icon path={mdiAccountCircle} />
   </Avatar>
   <Avatar><img src="https://picsum.photos/200" alt="Avatar" /></Avatar>
   <Avatar class="red white-text"><b>MS</b></Avatar>

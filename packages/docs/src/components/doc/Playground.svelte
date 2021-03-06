@@ -13,6 +13,7 @@
     Ripple,
     ListItem,
   } from 'svelte-materialify/src';
+  import { mdiInvertColors } from '@mdi/js';
 
   export let values;
   export let controls;
@@ -82,7 +83,7 @@
       <div class="playground__toolbar justify-space-between pl-2 pr-2">
         <div class="text-h6">Options</div>
         <Button icon on:click={toggleTheme}>
-          <Icon class="mdi mdi-invert mdi-invert-colors" />
+          <Icon path={mdiInvertColors} />
         </Button>
       </div>
       <div class="pa-2">
@@ -99,10 +100,21 @@
               class="mt-4"
               mandatory={controls[label].mandatory}
               bind:value={values[label]}
-              items={controls[label].items}>
+              items={controls[label].items}
+              format={(val) => (controls[label].format ?
+                  controls[label].format(val) :
+                  Array.isArray(val) ?
+                  val.join(', ') :
+                  val)}>
               {label}
               <div slot="item" let:item>
-                <ListItem value={item}>{item}</ListItem>
+                {#if controls[label].format}
+                  <ListItem value={item.value}>
+                    {item.name}
+                  </ListItem>
+                {:else}
+                  <ListItem value={item}>{item}</ListItem>
+                {/if}
               </div>
             </Select>
           {:else if controls[label].type === 'text'}

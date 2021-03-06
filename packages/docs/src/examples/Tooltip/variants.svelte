@@ -1,5 +1,6 @@
 <script>
   import { Button, Tooltip, Icon } from 'svelte-materialify/src';
+  import { mdiHome } from '@mdi/js';
 </script>
 
 <div class="d-flex justify-space-around align-center">
@@ -9,7 +10,7 @@
   </Tooltip>
 
   <Tooltip bottom>
-    <Icon class="mdi mdi-home" />
+    <Icon path={mdiHome} />
     <span slot="tip">Tooltip</span>
   </Tooltip>
 

@@ -7,6 +7,7 @@
 <script>
   import { stores } from '@sapper/app';
   import { ListGroup, ListItem, Icon } from 'svelte-materialify/src';
+  import { mdiChevronDown } from '@mdi/js';
 
   const { page } = stores();
   export let item;
@@ -31,12 +32,12 @@
 <ListGroup class="secondary-text" eager {offset} bind:active={expanded}>
   <div slot="prepend">
     {#if item.icon}
-      <Icon class="mdi mdi-{expanded ? item.openIcon : item.icon}" />
+      <Icon path={expanded ? item.openIcon : item.icon} />
     {/if}
   </div>
   <slot slot="activator">{item.text}</slot>
   <div slot="append">
-    <Icon class="mdi mdi-chevron-down" rotate={expanded ? 180 : 0} />
+    <Icon path={mdiChevronDown} rotate={expanded ? 180 : 0} />
   </div>
   {#each item.items as children}
     {#if children.items}

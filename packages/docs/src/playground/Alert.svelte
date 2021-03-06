@@ -1,6 +1,7 @@
 <script>
   import Playground from '@/components/doc/Playground.svelte';
   import { Alert, Icon } from 'svelte-materialify/src';
+  import { mdiHome } from '@mdi/js';
 
   const variants = ['dense', 'outlined', 'text', 'tile'];
 
@@ -43,10 +44,10 @@
     {...formatVariant(values.variants)}>
     <span slot="icon">
       {#if values.icon}
-        <Icon class="mdi mdi-home" />
+        <Icon path={mdiHome} />
       {/if}
     </span>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis itaque excepturi
-    suscipit possimus blanditiis, illum libero sequi a deleniti sapiente.
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis itaque excepturi suscipit
+    possimus blanditiis, illum libero sequi a deleniti sapiente.
   </Alert>
 </Playground>

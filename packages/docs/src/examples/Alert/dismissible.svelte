@@ -2,6 +2,7 @@
   import Alert from 'svelte-materialify/src/components/Alert';
   import Icon from 'svelte-materialify/src/components/Icon';
   import Button from 'svelte-materialify/src/components/Button';
+  import { mdiAlertCircle } from '@mdi/js';
 
   let timesDismissed = 0;
   let alert = true;
@@ -23,7 +24,7 @@
 
   <Alert class="primary-color" dismissible bind:visible={alert} on:dismiss={onDismiss}>
     <div slot="close">
-      <Icon class="mdi mdi-alert-circle" />
+      <Icon path={mdiAlertCircle} />
     </div>
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem molestiae voluptates
     et quae rem autem quasi officia odit suscipit dolor.

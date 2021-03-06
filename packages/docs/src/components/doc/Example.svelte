@@ -1,3 +1,5 @@
+<svelte:options immutable={true} />
+
 <script>
   import { theme } from '@/util/stores';
   import links from '@/util/links';
@@ -5,6 +7,7 @@
   import { slide } from 'svelte/transition';
   import Markup from './Markup.svelte';
   import { Icon, Button } from 'svelte-materialify/src';
+  import { mdiInvertColors, mdiGithub, mdiCodeTags } from '@mdi/js';
 
   export let file = '';
   export let style = null;
@@ -35,8 +38,6 @@
   }
 </style>
 
-<svelte:options immutable={true} />
-
 <div class="example">
   <div class="example-toolbar text-right pa-1">
     {#if colorInvertable}
@@ -46,7 +47,7 @@
         size="small"
         aria-label="invert color"
         on:click={() => (codeThemeDark = !codeThemeDark)}>
-        <Icon class="mdi mdi-invert-colors" />
+        <Icon path={mdiInvertColors} />
       </Button>
     {/if}
     <a
@@ -55,7 +56,7 @@
       rel="noopener noreferrer"
       target="_blank">
       <Button fab icon size="small" aria-label="GitHub" class="text--primary">
-        <Icon class="mdi mdi-github" />
+        <Icon path={mdiGithub} />
       </Button>
     </a>
     <Button
@@ -64,7 +65,7 @@
       size="small"
       aria-label="Show Code"
       on:click={() => (codeVisible = !codeVisible)}>
-      <Icon class="mdi mdi-code-tags" />
+      <Icon path={mdiCodeTags} />
     </Button>
   </div>
   {#if codeVisible}

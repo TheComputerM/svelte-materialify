@@ -1,5 +1,6 @@
 <script>
   import { List, ListGroup, ListItem, Icon } from 'svelte-materialify/src';
+  import { mdiHome, mdiCog, mdiChevronUp } from '@mdi/js';
 
   let active = false;
 </script>
@@ -8,17 +9,17 @@
   <List class="elevation-2" style="width:300px">
     <ListItem>
       <span slot="prepend">
-        <Icon class="mdi mdi-home" />
+        <Icon path={mdiHome} />
       </span>
       Home
     </ListItem>
     <ListGroup bind:active offset={72}>
       <span slot="prepend">
-        <Icon class="mdi mdi-cog" />
+        <Icon path={mdiCog} />
       </span>
       <span slot="activator"> Actions </span>
       <span slot="append">
-        <Icon class="mdi mdi-chevron-up" rotate={active ? 0 : 180} />
+        <Icon path={mdiChevronUp} rotate={active ? 0 : 180} />
       </span>
       <ListItem>Create</ListItem>
       <ListItem>Read</ListItem>

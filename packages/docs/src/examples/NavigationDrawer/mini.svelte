@@ -7,6 +7,7 @@
     Divider,
     Icon,
   } from 'svelte-materialify/src';
+  import { mdiHomeCity, mdiAccount, mdiAccountGroup } from '@mdi/js';
 
   let mini = true;
   function mouseenter() {
@@ -29,19 +30,19 @@
     <List dense nav>
       <ListItem>
         <span slot="prepend">
-          <Icon class="mdi mdi-home-city" />
+          <Icon path={mdiHomeCity} />
         </span>
         Home
       </ListItem>
       <ListItem>
         <span slot="prepend">
-          <Icon class="mdi mdi-account" />
+          <Icon path={mdiAccount} />
         </span>
         Account
       </ListItem>
       <ListItem>
         <span slot="prepend">
-          <Icon class="mdi mdi-account-group" />
+          <Icon path={mdiAccountGroup} />
         </span>
         Users
       </ListItem>

@@ -26,11 +26,7 @@
     {/each}
   </List>
 </NavigationDrawer>
-<Overlay
-  index="3"
-  active={mobile && sidenav}
-  on:click={() => (sidenav = false)}
-  fadeOptions={{ duration: 250 }} />
+<Overlay index="3" active={mobile && sidenav} on:click={() => (sidenav = false)} />
 
 {#if !mobile}
   <NavigationDrawer

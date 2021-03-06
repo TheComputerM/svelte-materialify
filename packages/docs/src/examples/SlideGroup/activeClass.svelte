@@ -1,5 +1,6 @@
 <script>
   import { SlideGroup, SlideItem, Ripple, Icon } from 'svelte-materialify/src';
+  import { mdiMinus, mdiPlus } from '@mdi/js';
 </script>
 
 <style>
@@ -16,7 +17,7 @@
 
 <SlideGroup activeClass="white-text">
   <span slot="previous">
-    <Icon class="mdi mdi-minus" />
+    <Icon path={mdiMinus} />
   </span>
   {#each Array(15) as _, i}
     <SlideItem let:active>
@@ -24,6 +25,6 @@
     </SlideItem>
   {/each}
   <span slot="next">
-    <Icon class="mdi mdi-plus" />
+    <Icon path={mdiPlus} />
   </span>
 </SlideGroup>

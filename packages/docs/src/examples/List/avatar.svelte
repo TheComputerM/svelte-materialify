@@ -1,5 +1,6 @@
 <script>
   import { List, ListItem, Subheader, Avatar, Icon } from 'svelte-materialify/src';
+  import { mdiStar, mdiStarOutline } from '@mdi/js';
 
   const items = [
     { name: 'Simon' },
@@ -16,9 +17,9 @@
       <ListItem>
         <span slot="prepend">
           {#if item.icon}
-            <Icon class="mdi mdi-star pink-text" />
+            <Icon path={mdiStar} class="pink-text" />
           {:else}
-            <Icon class="mdi mdi-star-outline" />
+            <Icon path={mdiStarOutline} />
           {/if}
         </span>
         {item.name}
