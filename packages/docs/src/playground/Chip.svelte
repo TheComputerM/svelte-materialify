@@ -5,17 +5,22 @@
 
   const variants = ['label', 'link', 'outlined', 'pill'];
 
-  const items = [{ mdiPlus }, { mdiMagnet }, { mdiAccount }, { mdiViewDashboard }].map(
-    (mdi) => {
-      return { name: Object.keys(mdi)[0], value: Object.values(mdi)[0] };
-    },
-  );
+  const items = [
+    { mdiPlus },
+    { mdiMagnet },
+    { mdiAccount },
+    { mdiViewDashboard },
+  ].map((mdi) => ({ name: Object.keys(mdi)[0], value: Object.values(mdi)[0] }));
 
   const controls = {
     close: { type: 'switch' },
     active: { type: 'switch' },
     avatar: { type: 'switch' },
-    icon: { type: 'select', items, format: (val) => items.find((i) => i.value == val).name },
+    icon: {
+      type: 'select',
+      items,
+      format: (val) => items.find((i) => i.value == val).name, // eslint-disable-line eqeqeq
+    },
     size: {
       type: 'select',
       items: ['x-small', 'small', 'default', 'large', 'x-large'],

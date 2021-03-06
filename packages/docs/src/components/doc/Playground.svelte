@@ -101,12 +101,11 @@
               mandatory={controls[label].mandatory}
               bind:value={values[label]}
               items={controls[label].items}
-              format={(val) =>
-                controls[label].format
-                  ? controls[label].format(val)
-                  : Array.isArray(val)
-                  ? val.join(', ')
-                  : val}>
+              format={(val) => (controls[label].format ?
+                  controls[label].format(val) :
+                  Array.isArray(val) ?
+                  val.join(', ') :
+                  val)}>
               {label}
               <div slot="item" let:item>
                 {#if controls[label].format}
