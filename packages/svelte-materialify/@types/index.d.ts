@@ -40,6 +40,7 @@ export { default as Row } from './Row';
 export { default as Select } from './Select';
 export { default as Slider } from './Slider';
 export { default as Snackbar } from './Snackbar';
+export { default as Subheader } from './Subheader';
 export { default as Switch } from './Switch';
 export { default as Textarea } from './Textarea';
 export { default as TextField } from './TextField';
