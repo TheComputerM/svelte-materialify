@@ -47,6 +47,7 @@
   class:active
   use:Class={[active && activeClass]}
   on:click={selectTab}
+  on:click
   use:Ripple={ripple}>
   <slot />
 </button>
