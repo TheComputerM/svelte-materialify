@@ -1,6 +1,5 @@
 <script>
-  import Chip from 'svelte-materialify/src/components/Chip';
-  import Icon from 'svelte-materialify/src/components/Icon';
+  import { Chip, Icon } from 'svelte-materialify/src';
   import { mdiAccount } from '@mdi/js';
 </script>
 

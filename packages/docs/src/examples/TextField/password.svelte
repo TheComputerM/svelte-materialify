@@ -1,6 +1,5 @@
 <script>
-  import TextField from 'svelte-materialify/src/components/TextField';
-  import Icon from 'svelte-materialify/src/components/Icon';
+  import { TextField, Icon } from 'svelte-materialify/src';
   import { mdiEyeOff, mdiEye } from '@mdi/js';
 
   let show = false;

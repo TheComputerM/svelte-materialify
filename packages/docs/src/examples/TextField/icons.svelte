@@ -1,7 +1,5 @@
 <script>
-  import TextField from 'svelte-materialify/src/components/TextField';
-  import { Row, Col } from 'svelte-materialify/src/components/Grid';
-  import Icon from 'svelte-materialify/src/components/Icon';
+  import { TextField, Row, Col, Icon } from 'svelte-materialify/src';
   import { mdiHome } from '@mdi/js';
 </script>
 

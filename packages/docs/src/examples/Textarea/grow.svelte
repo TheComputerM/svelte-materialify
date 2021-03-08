@@ -1,5 +1,5 @@
 <script>
-  import Textarea from 'svelte-materialify/src/components/Textarea';
+  import { Textarea } from 'svelte-materialify/src';
 </script>
 
 <br />

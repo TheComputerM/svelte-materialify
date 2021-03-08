@@ -1,5 +1,5 @@
 <script>
-  import Alert from 'svelte-materialify/src/components/Alert';
+  import { Alert } from 'svelte-materialify/src';
 </script>
 
 <Alert class="indigo-text" border="left" coloredBorder>

@@ -1,5 +1,5 @@
 <script>
-  import Radio from 'svelte-materialify/src/components/Radio';
+  import { Radio } from 'svelte-materialify/src';
 
   let group;
   let disabledGroup = null;

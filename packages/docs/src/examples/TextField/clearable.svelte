@@ -1,6 +1,5 @@
 <script>
-  import TextField from 'svelte-materialify/src/components/TextField';
-  import { Row, Col } from 'svelte-materialify/src/components/Grid';
+  import { TextField, Row, Col } from 'svelte-materialify/src';
 
   const value = 'Hello';
 </script>

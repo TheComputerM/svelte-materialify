@@ -1,6 +1,5 @@
 <script>
-  import Alert from 'svelte-materialify/src/components/Alert';
-  import Icon from 'svelte-materialify/src/components/Icon';
+  import { Alert, Icon } from 'svelte-materialify/src';
   import { mdiCheck, mdiThumbUp, mdiAlert } from '@mdi/js';
 </script>
 

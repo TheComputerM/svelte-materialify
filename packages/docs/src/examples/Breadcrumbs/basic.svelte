@@ -1,5 +1,5 @@
 <script>
-  import Breadcrumbs from 'svelte-materialify/src/components/Breadcrumbs';
+  import { Breadcrumbs } from 'svelte-materialify/src';
 
   const items = [
     { text: 'Dashboard', href: '/components/breadcrumbs/' },

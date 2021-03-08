@@ -1,7 +1,6 @@
 <script>
   import { scale } from 'svelte/transition';
-  import Alert from 'svelte-materialify/src/components/Alert';
-  import Button from 'svelte-materialify/src/components/Button';
+  import { Alert, Button } from 'svelte-materialify/src';
 
   let alert = true;
 </script>

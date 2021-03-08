@@ -12,19 +12,14 @@
   }
 </script>
 
-<style>
-  div {
-    margin: 12px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 250px;
-    height: 250px;
-  }
-</style>
-
 <div
   class="elevation-4 rounded text-h6"
+  style="margin: 12px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;"
   class:primary-color={active}
   class:white-text={active}
   use:ClickOutside
