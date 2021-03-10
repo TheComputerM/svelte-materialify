@@ -17,6 +17,7 @@
   export let connect = Array.isArray(value) ? true : 'lower';
   export let color = 'primary';
   export let step = null;
+  export let precision = 0;
   export let margin = null;
   export let limit = null;
   export let padding = null;
@@ -55,7 +56,7 @@
     noUiSlider.create(sliderElement, {
       cssPrefix: 's-slider__',
       format: {
-        to: (v) => Math.round(v),
+        to: (v) => v.toFixed(precision),
         from: (v) => Number(v),
       },
       start: value,
