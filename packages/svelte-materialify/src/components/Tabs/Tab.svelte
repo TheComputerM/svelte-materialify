@@ -15,7 +15,7 @@
   export { klass as class };
   export let value = ITEM.index();
   export let activeClass = ITEM.activeClass;
-  export let disabled = null;
+  export let disabled = false;
 
   let active;
   ITEM.register((values) => {
