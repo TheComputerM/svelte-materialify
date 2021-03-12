@@ -44,7 +44,7 @@ export { default as Subheader } from './Subheader';
 export { default as Switch } from './Switch';
 export { default as Tab } from './Tab';
 export { default as Tabs } from './Tabs';
-export { default as TabsContent } from './TabsContent';
+export { default as TabContent } from './TabContent';
 export { default as Textarea } from './Textarea';
 export { default as TextField } from './TextField';
 export { default as Tooltip } from './Tooltip';

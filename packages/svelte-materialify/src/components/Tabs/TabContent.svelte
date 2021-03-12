@@ -3,7 +3,7 @@
 
   let klass = '';
   export { klass as class };
-  export let style = null;
+  export let style = "";
 </script>
 
 <div class="s-tab-content {klass}" role="tabpanel" {style}>
