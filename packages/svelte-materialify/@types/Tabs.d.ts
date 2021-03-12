@@ -1,7 +1,6 @@
 import { SvelteComponent } from './shared';
 
 export interface TabsProps {
-    TABS?: any;
     class?: string;
     value?: number;
     centerActive?: boolean;
