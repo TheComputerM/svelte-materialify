@@ -10,6 +10,7 @@ export { default as Button } from './components/Button';
 export { default as ButtonGroup, ButtonGroupItem } from './components/ButtonGroup';
 export { default as Input } from './components/Input';
 export { default as TextField } from './components/TextField';
+export { default as NumberField } from './components/NumberField';
 export { default as Textarea } from './components/Textarea';
 export { default as Slider } from './components/Slider';
 export { default as Select } from './components/Select';

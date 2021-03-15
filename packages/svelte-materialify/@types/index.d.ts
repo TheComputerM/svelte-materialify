@@ -32,6 +32,7 @@ export { default as ListItemGroup } from './ListItemGroup';
 export { default as MaterialApp } from './MaterialApp';
 export { default as Menu } from './Menu';
 export { default as NavigationDrawer } from './NavigationDrawer';
+export { default as NumberField } from './NumberField';
 export { default as Overlay } from './Overlay';
 export { default as ProgressCircular } from './ProgressCircular';
 export { default as ProgressLinear } from './ProgressLinear';
