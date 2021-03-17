@@ -32,8 +32,6 @@
     border: controls.border.items[0],
     color: controls.color.items[0],
   };
-
-  $: console.log(values.border);
 </script>
 
 <Playground {variants} {controls} bind:values>
