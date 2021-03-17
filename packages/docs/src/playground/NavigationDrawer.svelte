@@ -19,7 +19,7 @@
   let values = {
     mini: false,
     right: false,
-    color: ['teal'],
+    color: 'teal',
   };
 </script>
 

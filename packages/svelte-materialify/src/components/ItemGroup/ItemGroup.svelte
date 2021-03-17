@@ -36,6 +36,7 @@
       // } else if (typeof (val) === '???') {
       //   value = [val];
       } else value = val;
+      //old:
       // } else if (typeof (val) === 'number') {
       //   value = val;
       // } else value = [val];

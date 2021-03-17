@@ -14,6 +14,10 @@
   export let path = null;
   export let label = null;
   export let style = null;
+  $: {
+    width = size;
+    height = size;
+  }
 </script>
 
 <style type="scss" src="./Icon.scss" global>
