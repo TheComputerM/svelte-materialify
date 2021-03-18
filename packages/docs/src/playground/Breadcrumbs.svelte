@@ -13,7 +13,7 @@
 
   let values = {
     large: false,
-    divider: ['/'],
+    divider: '/',
   };
 
   const items = [

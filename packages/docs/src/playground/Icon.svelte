@@ -23,7 +23,7 @@
   let values = {
     size: 24,
     icon: mdiPlus,
-    color: [],
+    color: 'purple',
   };
 </script>
 

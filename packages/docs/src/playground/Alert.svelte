@@ -29,17 +29,17 @@
     visible: true,
     icon: false,
     coloredBorder: false,
-    border: [],
-    color: ['primary'],
+    border: controls.border.items[0],
+    color: controls.color.items[0],
   };
 </script>
 
 <Playground {variants} {controls} bind:values>
   <Alert
-    class="{values.color[0]}-{textColor(values.variants) ? 'text' : 'color'}"
+    class="{values.color}-{textColor(values.variants) ? 'text' : 'color'}"
     dismissible={values.dismissible}
     bind:visible={values.visible}
-    border={values.border[0]}
+    border={values.border}
     coloredBorder={values.coloredBorder}
     {...formatVariant(values.variants)}>
     <span slot="icon">

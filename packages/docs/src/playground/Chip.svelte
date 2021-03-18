@@ -35,13 +35,13 @@
     active: true,
     avatar: false,
     icon: items[0].value,
-    size: ['default'],
+    size: 'default',
   };
 </script>
 
 <Playground {controls} {variants} bind:values>
   <Chip
-    size={values.size[0]}
+    size={values.size}
     close={values.close}
     bind:active={values.active}
     {...formatVariant(values.variants)}>

@@ -18,12 +18,12 @@
     size: 48,
     tile: false,
     icon: false,
-    color: ['primary'],
+    color: 'primary',
   };
 </script>
 
 <Playground {controls} bind:values>
-  <Avatar tile={values.tile} size="{values.size}px" class="{values.color[0]}-color">
+  <Avatar tile={values.tile} size="{values.size}px" class="{values.color}-color">
     {#if values.icon}
       <Icon path={mdiHome} />
     {:else}MS{/if}
