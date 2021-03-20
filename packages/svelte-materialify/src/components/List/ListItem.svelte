@@ -52,6 +52,7 @@
   use:Ripple={ripple}
   on:click={click}
   on:click
+  on:dblclick
   {style}>
   <slot name="prepend" />
   <div class="s-list-item__content">
