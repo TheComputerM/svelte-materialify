@@ -42,7 +42,7 @@
         {solo}
         {dense}
         {disabled}
-        value={format(value)}
+        value={items ? format(value) : 'no items'}
         {placeholder}
         {hint}
         readonly>
