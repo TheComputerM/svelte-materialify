@@ -37,6 +37,7 @@
       : items.find((v) => v.value == val)
       ? items.find((v) => v.value == val).name
       : 'no items';  const dispatch = createEventDispatcher();
+  const dispatch = createEventDispatcher();
   $: dispatch('change', value);
 </script>
 
