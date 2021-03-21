@@ -29,6 +29,7 @@
   export let format = (val) => Array.isArray(val) ? val.map(v => getSelectString(v)).join(', ') : getSelectString(val);
 
   const getSelectString = (v) => {
+    if(typeof v !== Object) return v;
     const item = items.find(item => item.value === v);
     return item ? item.name : emptyString;
   }
@@ -56,7 +57,7 @@
 
         <slot />
         <div slot="content">
-          {#if chips}
+          {#if chips && value}
             <span class="s-select__chips">
               {#each Array.isArray(value) ? value : [value] as v}
                 <Chip>{v}</Chip>
@@ -73,14 +74,18 @@
     <ListItemGroup bind:value {mandatory} {multiple} {max}>
       {#each items as item}
         <slot name="item" {item}>
-          <ListItem {dense} value={item.value}>
-            <span slot="prepend">
-              {#if multiple}
-                <Checkbox checked={value.includes(item.value)} />
-              {/if}
-            </span>
-            {item.name}
-          </ListItem>
+          {#if item.value}
+            <ListItem {dense} value={item.value}>
+              <span slot="prepend">
+                {#if multiple}
+                  <Checkbox checked={value.includes(item.value)} />
+                {/if}
+              </span>
+              {item.name}
+            </ListItem>
+          {:else}
+            <ListItem value={item}>{item}</ListItem>
+          {/if}
         </slot>
       {/each}
     </ListItemGroup>
