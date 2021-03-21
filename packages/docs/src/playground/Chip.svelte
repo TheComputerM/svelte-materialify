@@ -19,7 +19,7 @@
     icon: {
       type: 'select',
       items,
-      format: (val) => items.find((i) => i.value == val) ? items.find((i) => i.value == val).name : '', // eslint-disable-line eqeqeq
+      format: (val) => (items.find((i) => i.value == val) ? items.find((i) => i.value == val).name : ''), // eslint-disable-line eqeqeq
     },
     size: {
       type: 'select',

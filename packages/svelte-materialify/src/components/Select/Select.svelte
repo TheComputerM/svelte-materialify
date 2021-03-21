@@ -26,13 +26,13 @@
   export let disabled = null;
   export let closeOnClick = !multiple;
   export let emptyString = '';
-  export let format = (val) => Array.isArray(val) ? val.map(v => getSelectString(v)).join(', ') : getSelectString(val);
-
   const getSelectString = (v) => {
-    if(typeof v !== Object) return v;
-    const item = items.find(item => item.value === v);
+    if (typeof v !== 'object') return v;
+    const item = items.find((i) => i.value === v);
     return item ? item.name : emptyString;
-  }
+  };
+  export let format = (val) => (Array.isArray(val) ? val.map((v) => getSelectString(v)).join(', ') : getSelectString(val));
+
   const dispatch = createEventDispatcher();
   $: dispatch('change', value);
 </script>
