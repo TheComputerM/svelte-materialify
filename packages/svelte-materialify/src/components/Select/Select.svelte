@@ -27,9 +27,9 @@
   export let closeOnClick = !multiple;
   export let emptyString = '';
   const getSelectString = (v) => {
-    if (typeof v !== 'object') return v;
+    // We could also use `return items[0].value ? find.. : v` or provide a `basic` prop
     const item = items.find((i) => i.value === v);
-    return item ? item.name : emptyString;
+    return item ? (item.name ? item.name : item) : (v || emptyString);
   };
   export let format = (val) => (Array.isArray(val) ? val.map((v) => getSelectString(v)).join(', ') : getSelectString(val));
 
