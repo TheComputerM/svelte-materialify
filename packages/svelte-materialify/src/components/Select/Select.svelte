@@ -25,7 +25,13 @@
   export let chips = false;
   export let disabled = null;
   export let closeOnClick = !multiple;
-  export let format = (val) => (Array.isArray(val) ? val.join(', ') : val);
+  export let emptyString = '';
+  export let format = (val) => Array.isArray(val) ? val.map(v => getSelectString(v)).join(', ') : getSelectString(val);
+
+  const getSelectString = (v) => {
+    const item = items.find(item => item.value === v);
+    return item ? item.name : emptyString;
+  }
   const dispatch = createEventDispatcher();
   $: dispatch('change', value);
 </script>
