@@ -74,18 +74,14 @@
     <ListItemGroup bind:value {mandatory} {multiple} {max}>
       {#each items as item}
         <slot name="item" {item}>
-          {#if item.value}
-            <ListItem {dense} value={item.value}>
-              <span slot="prepend">
-                {#if multiple}
-                  <Checkbox checked={value.includes(item.value)} />
-                {/if}
-              </span>
-              {item.name}
-            </ListItem>
-          {:else}
-            <ListItem value={item}>{item}</ListItem>
-          {/if}
+          <ListItem {dense} value={item.value ? item.value : item}>
+            <span slot="prepend">
+              {#if multiple}
+                <Checkbox checked={value.includes(item.value ? item.value : item)} />
+              {/if}
+            </span>
+            {item.name ? item.name : item}
+          </ListItem>
         </slot>
       {/each}
     </ListItemGroup>
