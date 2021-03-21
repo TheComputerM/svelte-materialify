@@ -59,8 +59,8 @@
         <div slot="content">
           {#if chips && value}
             <span class="s-select__chips">
-              {#each Array.isArray(value) ? value : [value] as v}
-                <Chip>{v}</Chip>
+              {#each Array.isArray(value) ? value.map((v) => getSelectString(v)) : [getSelectString(value)] as val}
+                <Chip>{val}</Chip>
               {/each}
             </span>
           {/if}
