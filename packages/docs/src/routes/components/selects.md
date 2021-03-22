@@ -24,6 +24,18 @@ Below is a collection of simple to complex examples.
 This is a basic example on how to use `Select`.
 <Components.Example file="Select/basic" />
 
+### Name-Value
+
+If you want the `name` that the user sees to differ from the `value` in code, your items should be defined like this:
+```js
+const items = [
+    { name: 'Foo!', value: 'foo' },
+    { name: 'Bar!', value: 'bar' }
+]
+```
+as an example:
+<Components.Example file="Select/namevalue" />
+
 ### Disabled
 
 You cannot use disabled `Select`.

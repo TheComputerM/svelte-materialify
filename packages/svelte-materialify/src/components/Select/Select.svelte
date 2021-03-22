@@ -25,7 +25,14 @@
   export let chips = false;
   export let disabled = null;
   export let closeOnClick = !multiple;
-  export let format = (val) => (Array.isArray(val) ? val.join(', ') : val);
+  export let emptyString = '';
+  const getSelectString = (v) => {
+    // We could also use `return items[0].value ? find.. : v` or provide a `basic` prop
+    const item = items.find((i) => i.value === v);
+    return item ? (item.name ? item.name : item) : (v || emptyString);
+  };
+  export let format = (val) => (Array.isArray(val) ? val.map((v) => getSelectString(v)).join(', ') : getSelectString(val));
+
   const dispatch = createEventDispatcher();
   $: dispatch('change', value);
 </script>
@@ -50,10 +57,10 @@
 
         <slot />
         <div slot="content">
-          {#if chips}
+          {#if chips && value}
             <span class="s-select__chips">
-              {#each Array.isArray(value) ? value : [value] as v}
-                <Chip>{v}</Chip>
+              {#each Array.isArray(value) ? value.map((v) => getSelectString(v)) : [getSelectString(value)] as val}
+                <Chip>{val}</Chip>
               {/each}
             </span>
           {/if}
@@ -67,13 +74,13 @@
     <ListItemGroup bind:value {mandatory} {multiple} {max}>
       {#each items as item}
         <slot name="item" {item}>
-          <ListItem {dense} value={item.value}>
+          <ListItem {dense} value={item.value ? item.value : item}>
             <span slot="prepend">
               {#if multiple}
-                <Checkbox checked={value.includes(item.value)} />
+                <Checkbox checked={value.includes(item.value ? item.value : item)} />
               {/if}
             </span>
-            {item.name}
+            {item.name ? item.name : item}
           </ListItem>
         </slot>
       {/each}

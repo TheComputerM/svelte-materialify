@@ -7,6 +7,7 @@
     { name: 'Fizz', value: 'fizz' },
     { name: 'Buzz', value: 'buzz' },
   ];
+  const items2 = ['foo', 'bar', 'fizz', 'buzz'];
 </script>
 
 <Row>
@@ -15,7 +16,7 @@
     <Select chips filled {items}>Filled</Select>
   </Col>
   <Col>
-    <Select chips multiple {items}>Multiple</Select>
-    <Select chips outlined {items}>Outlined</Select>
+    <Select chips multiple items={items}>Multiple</Select>
+    <Select chips multiple outlined items={items2}>Multiple Outlined</Select>
   </Col>
 </Row>
