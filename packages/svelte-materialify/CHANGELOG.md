@@ -1,3 +1,23 @@
+## [0.3.7](https://github.com/TheComputerM/svelte-materialify/compare/v0.3.6...v0.3.7) (2021-03-18)
+
+### Bug Fixes
+
+- Alert docs Select ([190d185](https://github.com/TheComputerM/svelte-materialify/commit/190d185b8dc127678a933f400c55134ccc225443))
+- all Playground docs Selects + Icon ([0e2b134](https://github.com/TheComputerM/svelte-materialify/commit/0e2b13484ff8837bdb61b699ba5b16146282bfad))
+- lint ([b7cacf2](https://github.com/TheComputerM/svelte-materialify/commit/b7cacf22d23f246861b8d6be93591bf8603b743d))
+- ran yarn fmt && yarn lint:fix ([acf65f8](https://github.com/TheComputerM/svelte-materialify/commit/acf65f82b8ccfc4ed689f782afa07d7a277f931a))
+- renamed TabsContent -> TabContent & fix types ([440fbf4](https://github.com/TheComputerM/svelte-materialify/commit/440fbf4e2dda2f75e046c9c78b0299ce44961d9d))
+- revert PR [#94](https://github.com/TheComputerM/svelte-materialify/issues/94) ([e869c6a](https://github.com/TheComputerM/svelte-materialify/commit/e869c6a3f5954cb4dc83409419ebf24b7fc4d0fd))
+- updated tab.d.ts activeClass & dissabled ([bf41521](https://github.com/TheComputerM/svelte-materialify/commit/bf41521df922b8acb10166c1918a6ccd9f1000a4))
+- updated types in Tab.ts & .svelte ([d9e7898](https://github.com/TheComputerM/svelte-materialify/commit/d9e78986e24f98e820654f919019e89869fcc029))
+
+### Features
+
+- added Tab(s), TabsContent interace & exports ([9d4a5cb](https://github.com/TheComputerM/svelte-materialify/commit/9d4a5cbe6871e5f7357a5dfc43ffd3b520997359))
+- **Slider:** add precision prop to customize decimal places of slider value ([ad4c41b](https://github.com/TheComputerM/svelte-materialify/commit/ad4c41b2c550fb0dd31e24bb174bb4cfc3fd8274))
+- **Tab:** forward click event ([c03ca2f](https://github.com/TheComputerM/svelte-materialify/commit/c03ca2f845b95e67a4f4976ee62c8941c6fa8843))
+- **typing:** subheader ([50a95aa](https://github.com/TheComputerM/svelte-materialify/commit/50a95aa7fa1702378d5e57673d14e6b301b07dc2))
+
 ## [0.3.6](https://github.com/TheComputerM/svelte-materialify/compare/v0.3.5...v0.3.6) (2021-03-05)
 
 ### Bug Fixes

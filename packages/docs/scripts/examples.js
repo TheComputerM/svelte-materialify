@@ -8,7 +8,7 @@ export default {
       // some files still have CRLF line-endings, that's why the last 3 replaces aren't combined
       // when that's solved, do .replace('</script>\n', '</script>\n\n<MaterialApp>') instead
       const codeWithInject1 = code
-        .replace(' } from \'svelte-materialify/src\'', ', MaterialApp } from \'svelte-materialify/src\'')
+        .replace(' } from \'svelte-materialify/src\'', ', MaterialApp } from \'svelte-materialify\'')
         .replace('</script>', '</script>\n\n<MaterialApp>')
         .replace('<MaterialApp>\n', '<MaterialApp>')
         .replace('<MaterialApp>\r\n', '<MaterialApp>');

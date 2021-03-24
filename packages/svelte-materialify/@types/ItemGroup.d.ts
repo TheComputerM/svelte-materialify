@@ -6,7 +6,7 @@ export interface ItemGroupProps {
   /** class to add to item when active */
   activeClass?: string;
   /** value of the group */
-  value?: any[];
+  value?: any;
   /** allows to select multiple items */
   multiple?: boolean;
   /** makes sure atleast one item is selected */

@@ -1,12 +1,7 @@
 <script>
   import { Row, Col, Select } from 'svelte-materialify/src';
 
-  const items = [
-    { name: 'Foo', value: 'foo' },
-    { name: 'Bar', value: 'bar' },
-    { name: 'Fizz', value: 'fizz' },
-    { name: 'Buzz', value: 'buzz' },
-  ];
+  const items = ['foo', 'bar', 'fizz', 'buzz'];
 </script>
 
 <Row>

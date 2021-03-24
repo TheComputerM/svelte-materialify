@@ -17,13 +17,13 @@
   let values = {
     variants: [],
     collapsed: false,
-    color: [],
+    color: controls.color.items[0],
   };
 </script>
 
 <Playground {variants} {controls} bind:values>
   <AppBar
-    class="{values.color[0]}-color"
+    class="{values.color}-color"
     collapsed={values.collapsed}
     {...formatVariant(values.variants)}>
     <span slot="icon">
