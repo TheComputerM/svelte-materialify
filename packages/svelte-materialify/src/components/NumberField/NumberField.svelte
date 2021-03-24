@@ -1,39 +1,138 @@
 <script>
-  import Input from '../Input';
+  /**
+   * A numeric input field.
+   * 
+   * @component NumberField
+   */
+
+import Input from '../Input';
   import Icon from '../Icon';
   import uid from '../../internal/uid';
   import clearIcon from '../../internal/Icons/close';
 
   let klass = '';
+  /**
+   * Class name(s) to add to the Input element
+   * @type {string}
+   */
   export { klass as class };
+  /**
+   * The value of the NumberField
+   * @type {number}
+   */
   export let value = null;
+  /**
+   * The lowest allowed number.
+   * @type {number}
+   */
+  export let min = null;
+  /**
+   * The highest allowed number.
+   * @type {number}
+   */
+  export let max = null;
+  /**
+   * The number by which to increment the value.
+   * @type {number}
+   */
+  export let step = null;
   export let color = 'primary';
+  /**
+   * Whether the background is filled or not
+   * @type {boolean}
+   */
   export let filled = false;
+  /**
+   * Whether to display only the value, and not the label, if a value is present
+   * @type {boolean}
+   */
   export let solo = false;
+  /**
+   * Whether to outline the input area with a stroke.
+   * @type {boolean}
+   */
   export let outlined = false;
+  /**
+   * Use a flat/2-d display
+   * @type {boolean}
+   */
   export let flat = false;
+  /**
+   * Use a tighter (denser) layout
+   * @type {boolean}
+   */
   export let dense = false;
+  /**
+   * Round the edges
+   * @type {boolean}
+   */
   export let rounded = false;
+  /**
+   * Include an "x" to click and clear the input
+   * @type {boolean}
+   */
   export let clearable = false;
+  /**
+   * Restrict the field from user editing
+   * @type {boolean}
+   */
   export let readonly = false;
   export let disabled = false;
+  /**
+   * Placeholder value until input occurs
+   * @type {string}
+   */
   export let placeholder = null;
+  /**
+   * Hints just below the input
+   * @type {string}
+   */
   export let hint = '';
+  /**
+   * Additional messages to display just below the input
+   * @type {string[]}
+   */
   export let messages = [];
+  /**
+   * Array of callbacks used to validate the input; return a string to show error
+   * rules = [ (value) => errorMessage || false ]
+   * @type {function}
+   */
   export let rules = [];
+  /**
+   * The maximum number of error messages to show at any given time.
+   * @type {number}
+   */
   export let errorCount = 1;
+  /**
+   * When true, wait until blur to check validation.
+   * When false, validate on input
+   * @type {boolean}
+   */
   export let validateOnBlur = false;
+  /**
+   * Whether validation has failed/whether to apply error class
+   * @readonly
+   * @type {error}
+   */
   export let error = false;
+  /**
+   * Whether to apply the success clas
+   * @type {boolean}
+   */
   export let success = false;
   export let id = `s-input-${uid(5)}`;
+  /**
+   * @type {string}
+   */
   export let style = null;
+  /**
+   * @type {HTMLInputElement}
+   */
   export let inputElement = null;
-  export let min = null;
-  export let max = null;
-  export let step = null;
 
   let focused = false;
-  $: labelActive = !!placeholder || (inputElement && inputElement.value !== null) || focused;
+  $: labelActive = !!placeholder || value !== null || focused;
   let errorMessages = [];
 
   export function validate() {
@@ -134,7 +233,7 @@
         {...$$restProps} />
     </div>
 
-    {#if clearable && value !== ''}
+    {#if clearable && value !== null}
       <div on:click={clear} style="cursor:pointer">
         <!-- Slot for the icon when `clearable` is true. -->
         <slot name="clear-icon">
