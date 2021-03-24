@@ -40,21 +40,21 @@
     errorMessages = rules.map((r) => r(value)).filter((r) => typeof r === 'string');
     if (!inputElement.checkValidity()) {
       if (inputElement.badInput) {
-        errorMessages.push(`Please enter a number.`);
-      };
-      if(inputElement.validity.rangeUnderflow) {
+        errorMessages.push('Please enter a number.');
+      }
+      if (inputElement.validity.rangeUnderflow) {
         errorMessages.push(`Must be ${min} or greater.`);
       }
-      if(inputElement.validity.rangeOverflow) {
+      if (inputElement.validity.rangeOverflow) {
         errorMessages.push(`Must be ${max} or less.`);
       }
-      if(inputElement.validity.stepMismatch) {
+      if (inputElement.validity.stepMismatch) {
         errorMessages.push(`Must be an increment of ${step}`);
       }
-      if(inputElement.validity.tooLong) {
+      if (inputElement.validity.tooLong) {
         errorMessages.push('Too long.');
       }
-      if(inputElement.validity.tooShort) {
+      if (inputElement.validity.tooShort) {
         errorMessages.push('Too short.');
       }
     }
@@ -64,8 +64,6 @@
     }
     return error;
   }
-
-
 
   function onFocus() {
     focused = true;
@@ -80,7 +78,7 @@
     value = null;
   }
 
-  function onInput(e) {
+  function onInput() {
     if (!validateOnBlur) validate();
   }
 </script>
