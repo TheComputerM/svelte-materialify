@@ -12,8 +12,6 @@ related:
 
 Number fields components are used for collecting numerical input from users.
 
-The `value` property on a `NumberField` is a number, not a string. (This is unlike HTML `<input type="number" />`, but is like Svelte's normal [numeric binding](https://svelte.dev/tutorial/numeric-inputs).)
-
 <Components.Alert type='info'>
 Any property which is not in the API list will be directly forwarded to the input element.
 </Components.Alert>
@@ -24,7 +22,14 @@ Any property which is not in the API list will be directly forwarded to the inpu
 
 ## Usage
 
+### Value
+
+The `value` property on a `NumberField` is a number, not a string. (This is unlike HTML `<input type="number" />`, but is like Svelte's normal [numeric binding](https://svelte.dev/tutorial/numeric-inputs).)
+
+### Basic Use
+
 <Components.Example file="NumberField/variants" />
+
 
 ## Examples
 
