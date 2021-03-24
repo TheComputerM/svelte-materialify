@@ -63,6 +63,7 @@ export default [
         text: 'Forms',
         items: [
           { text: 'Text Field', href: '/components/text-field/' },
+          { text: 'Number Field', href: '/components/number-field/' },
           { text: 'Textarea', href: '/components/textarea/' },
           { text: 'Selects', href: '/components/selects/' },
           { text: 'Sliders', href: '/components/sliders/' },
