@@ -49,7 +49,7 @@
 
   onMount(async () => {
     const { default: noUiSlider } = await import('./nouislider.min');
-    
+
     noUiSlider.cssClasses.tooltip = `tooltip ${thumbClass}`;
     noUiSlider.create(sliderElement, {
       cssPrefix: 's-slider__',
