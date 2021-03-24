@@ -1,7 +1,7 @@
 <script>
   /**
    * A numeric input field.
-   * 
+   *
    * @component NumberField
    */
 
