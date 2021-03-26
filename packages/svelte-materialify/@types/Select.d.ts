@@ -5,8 +5,11 @@ interface SelectProps {
   class?: string;
   /** Whether select is opened. */
   active?: boolean;
-  /** Value of the select. */
-  value?: number[] | string[];
+  /**
+   * Value of the select. 
+   * If multiple is true, this will be an array; otherwise a single value.
+   */
+  value?: number[] | string[] | number | string | null;
   /** List of items to select from. */
   items?: { name: string | number, value: string | number }[];
   /** Whether select is the `filled` material design variant. */
