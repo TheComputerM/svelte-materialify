@@ -96,7 +96,7 @@
   }
 
   afterUpdate(() => {
-    if (value !== localValue) slider.set(value, false);
+    if (slider && value !== localValue) slider.set(value, false);
   });
 </script>
 
