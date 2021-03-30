@@ -1,6 +1,6 @@
 {
   "name": "svelte-materialify",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "description": "A material design framework/component library for Svelte, with full support for light and dark themes and customisability.",
   "license": "MIT",
   "repository": {

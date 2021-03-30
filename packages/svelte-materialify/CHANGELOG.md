@@ -1,3 +1,5 @@
+## [0.3.9](https://github.com/TheComputerM/svelte-materialify/compare/v0.3.8...v0.3.9) (2021-03-30)
+
 ## [0.3.8](https://github.com/TheComputerM/svelte-materialify/compare/v0.3.7...v0.3.8) (2021-03-27)
 
 ### Bug Fixes
