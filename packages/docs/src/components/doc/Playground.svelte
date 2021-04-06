@@ -11,7 +11,6 @@
     SlideGroup,
     SlideItem,
     Ripple,
-    ListItem,
   } from 'svelte-materialify/src';
   import { mdiInvertColors } from '@mdi/js';
 
@@ -107,15 +106,6 @@
                   val.join(', ') :
                   val)}>
               {label}
-              <div slot="item" let:item>
-                {#if controls[label].format}
-                  <ListItem value={item.value}>
-                    {item.name}
-                  </ListItem>
-                {:else}
-                  <ListItem value={item}>{item}</ListItem>
-                {/if}
-              </div>
             </Select>
           {:else if controls[label].type === 'text'}
             <TextField bind:value={values[label]} class="mt-4">{label}</TextField>

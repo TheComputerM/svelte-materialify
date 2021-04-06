@@ -51,11 +51,11 @@ For help and support questions, please join our [community discord](https://disc
 
 ## Contributing
 
-Thank you for taking the time to contribute, you should start by reading the [Code of Conduct]() and the [Contribution Guide](https://svelte-materialify.vercel.app/getting-started/contributing/).
+Thank you for taking the time to contribute, you should start by reading the [Code of Conduct](https://github.com/TheComputerM/svelte-materialify/blob/master/CODE_OF_CONDUCT.md) and the [Contribution Guide](https://svelte-materialify.vercel.app/getting-started/contributing/).
 
 ## Changelog
 
-Detailed changes for each release are listed [here]().
+Detailed changes for each release are listed [here](https://github.com/TheComputerM/svelte-materialify/blob/master/packages/svelte-materialify/CHANGELOG.md).
 
 ## Thanks:
 

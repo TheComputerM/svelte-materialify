@@ -1,7 +1,3 @@
-<script context="module">
-  import noUiSlider from './nouislider.min';
-</script>
-
 <script>
   import Input from '../Input';
   import { onMount, afterUpdate, createEventDispatcher } from 'svelte';
@@ -17,6 +13,7 @@
   export let connect = Array.isArray(value) ? true : 'lower';
   export let color = 'primary';
   export let step = null;
+  export let precision = 0;
   export let margin = null;
   export let limit = null;
   export let padding = null;
@@ -50,12 +47,14 @@
     return thumb;
   }
 
-  onMount(() => {
+  onMount(async () => {
+    const { default: noUiSlider } = await import('./nouislider.min');
+
     noUiSlider.cssClasses.tooltip = `tooltip ${thumbClass}`;
     noUiSlider.create(sliderElement, {
       cssPrefix: 's-slider__',
       format: {
-        to: (v) => Math.round(v),
+        to: (v) => v.toFixed(precision),
         from: (v) => Number(v),
       },
       start: value,
@@ -97,7 +96,7 @@
   }
 
   afterUpdate(() => {
-    if (value !== localValue) slider.set(value, false);
+    if (slider && value !== localValue) slider.set(value, false);
   });
 </script>
 

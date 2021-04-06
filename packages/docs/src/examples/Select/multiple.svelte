@@ -7,6 +7,7 @@
     { name: 'Fizz', value: 'fizz' },
     { name: 'Buzz', value: 'buzz' },
   ];
+  const items2 = ['foo', 'bar', 'fizz', 'buzz'];
 </script>
 
 <Row>
@@ -15,7 +16,7 @@
     <Select multiple filled {items}>Filled</Select>
   </Col>
   <Col>
-    <Select multiple solo {items} placeholder="Solo" />
-    <Select multiple outlined {items}>Outlined</Select>
+    <Select multiple solo items={items2} placeholder="Solo" />
+    <Select multiple outlined items={items2}>Outlined</Select>
   </Col>
 </Row>

@@ -16,8 +16,8 @@ const { preprocess } = require('./svelte.config');
 export default {
   input: 'src/index.js',
   output: [
-    { file: pkg.module, sourcemap: true, format: 'es' },
-    { file: pkg.main, sourcemap: true, format: 'umd', name },
+    { file: pkg.module, sourcemap: true, format: 'es', inlineDynamicImports: true },
+    { file: pkg.main, sourcemap: true, format: 'umd', name, inlineDynamicImports: true },
   ],
   plugins: [
     svelte({ preprocess, emitCss: false }),

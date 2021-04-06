@@ -1,3 +1,44 @@
+## [0.3.9](https://github.com/TheComputerM/svelte-materialify/compare/v0.3.8...v0.3.9) (2021-03-30)
+
+## [0.3.8](https://github.com/TheComputerM/svelte-materialify/compare/v0.3.7...v0.3.8) (2021-03-27)
+
+### Bug Fixes
+
+- sliderUi library imported incorrectly for SPA and SSR [#171](https://github.com/TheComputerM/svelte-materialify/issues/171) ([#194](https://github.com/TheComputerM/svelte-materialify/issues/194)) ([503db1d](https://github.com/TheComputerM/svelte-materialify/commit/503db1d7131bafb5faf94b86b25eed9dd4115b5d))
+- **@types/select:** When value is mandatory & multiple false, value can be null ([1e87034](https://github.com/TheComputerM/svelte-materialify/commit/1e8703424046f153badbedb6377e2ddebd264da6))
+- **Select:** basic usage checkbox ([4f5a06e](https://github.com/TheComputerM/svelte-materialify/commit/4f5a06e87cb67c50c9cf8e01ce6edf8261c617f3))
+- **Select:** chips basic and multiple ([f9daf57](https://github.com/TheComputerM/svelte-materialify/commit/f9daf57da7f688dc5d0fd7a79db32f132577f1c7))
+- **Select:** regression, add suggestion ([51d1841](https://github.com/TheComputerM/svelte-materialify/commit/51d1841d67f0a405fd34476b846954ca89951134))
+- **types:** ItemGroup allows non-array value prop ([74bc4e5](https://github.com/TheComputerM/svelte-materialify/commit/74bc4e5c1688f36445419eed2510301a712119cf))
+- **types/select.d.ts:** Value can be single value or array ([8cf5175](https://github.com/TheComputerM/svelte-materialify/commit/8cf5175cb2af31519acc22f14067b84c4692b80c))
+- lint ([62d5087](https://github.com/TheComputerM/svelte-materialify/commit/62d5087f8b9b68e97b91fb60bb54fe5292fdb21b))
+
+### Features
+
+- **Select:** basic usage ([7490744](https://github.com/TheComputerM/svelte-materialify/commit/74907447be4adbb37c8e4824c4984e073da2890a))
+- **Select:** emptyString and by default show name ([63a9ba2](https://github.com/TheComputerM/svelte-materialify/commit/63a9ba2ede5d3eb2c4e6d86385135366b3118bce))
+- **types:** Enable types when importing from /src ([1a6bc98](https://github.com/TheComputerM/svelte-materialify/commit/1a6bc98a4c4992d2d66ca60fefa29273ba96472f))
+
+## [0.3.7](https://github.com/TheComputerM/svelte-materialify/compare/v0.3.6...v0.3.7) (2021-03-18)
+
+### Bug Fixes
+
+- Alert docs Select ([190d185](https://github.com/TheComputerM/svelte-materialify/commit/190d185b8dc127678a933f400c55134ccc225443))
+- all Playground docs Selects + Icon ([0e2b134](https://github.com/TheComputerM/svelte-materialify/commit/0e2b13484ff8837bdb61b699ba5b16146282bfad))
+- lint ([b7cacf2](https://github.com/TheComputerM/svelte-materialify/commit/b7cacf22d23f246861b8d6be93591bf8603b743d))
+- ran yarn fmt && yarn lint:fix ([acf65f8](https://github.com/TheComputerM/svelte-materialify/commit/acf65f82b8ccfc4ed689f782afa07d7a277f931a))
+- renamed TabsContent -> TabContent & fix types ([440fbf4](https://github.com/TheComputerM/svelte-materialify/commit/440fbf4e2dda2f75e046c9c78b0299ce44961d9d))
+- revert PR [#94](https://github.com/TheComputerM/svelte-materialify/issues/94) ([e869c6a](https://github.com/TheComputerM/svelte-materialify/commit/e869c6a3f5954cb4dc83409419ebf24b7fc4d0fd))
+- updated tab.d.ts activeClass & dissabled ([bf41521](https://github.com/TheComputerM/svelte-materialify/commit/bf41521df922b8acb10166c1918a6ccd9f1000a4))
+- updated types in Tab.ts & .svelte ([d9e7898](https://github.com/TheComputerM/svelte-materialify/commit/d9e78986e24f98e820654f919019e89869fcc029))
+
+### Features
+
+- added Tab(s), TabsContent interace & exports ([9d4a5cb](https://github.com/TheComputerM/svelte-materialify/commit/9d4a5cbe6871e5f7357a5dfc43ffd3b520997359))
+- **Slider:** add precision prop to customize decimal places of slider value ([ad4c41b](https://github.com/TheComputerM/svelte-materialify/commit/ad4c41b2c550fb0dd31e24bb174bb4cfc3fd8274))
+- **Tab:** forward click event ([c03ca2f](https://github.com/TheComputerM/svelte-materialify/commit/c03ca2f845b95e67a4f4976ee62c8941c6fa8843))
+- **typing:** subheader ([50a95aa](https://github.com/TheComputerM/svelte-materialify/commit/50a95aa7fa1702378d5e57673d14e6b301b07dc2))
+
 ## [0.3.6](https://github.com/TheComputerM/svelte-materialify/compare/v0.3.5...v0.3.6) (2021-03-05)
 
 ### Bug Fixes
