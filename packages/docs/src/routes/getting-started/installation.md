@@ -28,36 +28,12 @@ If you want a fast and basic setup, without custom SCSS/SASS, then only installi
 $ npm i svelte-materialify
 ```
 
-In your svelte files, import the _compiled_ module `from 'svelte-materialify'`:
-
-```html
-<script>
-  // Import Everything
-  import * as S from 'svelte-materialify';
-  // or...
-  // Import a single component
-  import { Button } from 'svelte-materialify';
-</script>
-```
-
 ## Install with Custom Styles
 
 If you want finer control over Svelte Materialify, install all its peer dependencies:
 
 ```shell
 $ npm i -D svelte-materialify svelte-preprocess sass postcss
-```
-
-In your svelte files, import the _uncompiled_ module `from 'svelte-materialify/src'`:
-
-```html
-<script>
-  // Import Everything
-  import * as S from 'svelte-materialify/src';
-  // or...
-  // Import a single component
-  import { Button } from 'svelte-materialify/src';
-</script>
 ```
 
 Now create a **\_material-theme.scss** file. Let's put it in a folder called **theme**.
