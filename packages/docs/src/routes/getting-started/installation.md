@@ -10,65 +10,70 @@ related:
 
 # Installation
 
-Get Started with Svelte Materialify, the best material UI component library for Svelte
+Get Started with Svelte Materialify, the best material UI component library for Svelte.
 
-If you want to try out svelte materialify and tinker with it, visit the [repl playground](https://svelte.dev/repl/2c55788d8ffd4458bfe9bcb5f58956db).
+If you want to try out svelte materialify and tinker with it, visit the [REPL playground](https://svelte.dev/repl/2c55788d8ffd4458bfe9bcb5f58956db).
 
-We can also **optionally** add [focus-visible](https://github.com/WICG/focus-visible), if you want keyboard focused styles.
+You can also **optionally** add [focus-visible](https://github.com/WICG/focus-visible), if you want keyboard focused styles.
 
 ```html
 <script src="https://unpkg.com/focus-visible@latest/dist/focus-visible.min.js"></script>
 ```
 
-## Minimal Install
+## Install with Default Styles
 
-If want a fast and basic setup then only installing `svelte-materialify` should be fine.
+If you want a fast and basic setup, without custom SCSS/SASS, then only installing `svelte-materialify` should be fine:
 
 ```shell
 $ npm i svelte-materialify
 ```
 
-And then in your svelte files, import the compiled module for svelte materialify
+In your svelte files, import the _compiled_ module `from 'svelte-materialify'`:
 
 ```html
 <script>
-  // In a svelte file
   // Import Everything
   import * as S from 'svelte-materialify';
-  // OR
-  import { Button } from 'svelte-materialify';
+  // or...
   // Import a single component
+  import { Button } from 'svelte-materialify';
 </script>
 ```
 
-## Advanced Install
+## Install with Custom Styles
 
-If you want finer control over Svelte Materialify and installation you want to install all its peer dependencies.
+If you want finer control over Svelte Materialify, install all its peer dependencies:
 
 ```shell
 $ npm i -D svelte-materialify svelte-preprocess sass postcss
 ```
 
+In your svelte files, import the _uncompiled_ module `from 'svelte-materialify/src'`:
+
 ```html
 <script>
-  // In a svelte file
-  // Import Everything from svelte-materialify/src
+  // Import Everything
   import * as S from 'svelte-materialify/src';
-  // OR
-  import { Button } from 'svelte-materialify/src';
+  // or...
   // Import a single component
+  import { Button } from 'svelte-materialify/src';
 </script>
 ```
 
-<Components.Alert type='info'>
+Now create a **\_material-theme.scss** file. Let's put it in a folder called **theme**.
+Include the folder path in the `sveltePreprocess` function in your **rollup.config.js**:
 
-Now _you_ can also use SCSS and SASS styles in your own components. Learn more about [svelte-preprocess](https://github.com/sveltejs/svelte-preprocess/blob/master/docs/usage.md).
+```js
+svelte({
+  preprocess: sveltePreprocess({
+    scss: {
+      includePaths: ['theme'],
+    },
+  }),
+  ...
+```
 
-</Components.Alert>
-
-Then create a **\_material-theme.scss** file and place it in any folder, lets put it in a folder called **theme**. Then include the path in the preprocess function in your **rollup.config.js** (likewise follow the same in webpack but for svelte-loader).
-
-Now add a **svelte.config.js** to add to the root of the project to provide better intellisense.
+For better intellisense, you can instead create a **svelte.config.js** and add it to the root of the project:
 
 ```js
 const sveltePreprocess = require('svelte-preprocess');
@@ -81,7 +86,7 @@ module.exports = {
   }),
 };
 ```
-
+Now you can import this file from your main config file, like shown below:
 ### Rollup
 
 ```js
@@ -126,7 +131,7 @@ Learn how to integrate svelte materialify with existing frameworks.
 
 #### Sapper
 
-Add preprocessor for both client and server bundles.
+Add the preprocessor for both client and server bundles:
 
 ```js
 const { preprocess } = require('./svelte.config');
@@ -150,4 +155,20 @@ export default {
 };
 ```
 
+#### Sveltekit
+
+See: https://github.com/TheComputerM/sveltekit-materialify
 ## Templates
+
+Basic setup done for you:
+
+### Sveltekit
+
+```
+npx degit TheComputerM/sveltekit-materialify my-sveltematerialify-project
+
+cd my-svelte-project
+
+npm install
+npm run dev
+```
