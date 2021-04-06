@@ -55,7 +55,7 @@ Thank you for taking the time to contribute, you should start by reading the [Co
 
 ## Changelog
 
-Detailed changes for each release are listed [here]().
+Detailed changes for each release are listed [here](https://github.com/TheComputerM/svelte-materialify/blob/master/packages/svelte-materialify/CHANGELOG.md).
 
 ## Thanks:
 
