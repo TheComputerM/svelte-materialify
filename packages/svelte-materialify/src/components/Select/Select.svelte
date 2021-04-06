@@ -25,18 +25,7 @@
   export let chips = false;
   export let disabled = null;
   export let closeOnClick = !multiple;
-  export let format = (val) =>
-    Array.isArray(val)
-      ? val
-          .map((vl) =>
-            items.find((v) => v.value == vl)
-              ? items.find((v) => v.value == vl).name
-              : 'no items',
-          )
-          .join(', ')
-      : items.find((v) => v.value == val)
-      ? items.find((v) => v.value == val).name
-      : 'no items';
+  export let format = (val) => (Array.isArray(val) ? val.join(', ') : val);
   const dispatch = createEventDispatcher();
   $: dispatch('change', value);
 </script>
@@ -53,7 +42,7 @@
         {solo}
         {dense}
         {disabled}
-        value={items ? format(value) : 'no items'}
+        value={format(value)}
         {placeholder}
         {hint}
         readonly>
