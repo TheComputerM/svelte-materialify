@@ -49,7 +49,7 @@
         {solo}
         {dense}
         {disabled}
-        value={items ? format(value) : format(value)}
+        value={items && format(value)}
         {placeholder}
         {hint}
         readonly>
