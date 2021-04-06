@@ -37,6 +37,7 @@ $ npm i -D svelte-materialify svelte-preprocess sass postcss
 ```
 
 Now create a **\_material-theme.scss** file. Let's put it in a folder called **theme**.
+
 Include the folder path in the `sveltePreprocess` function in your **rollup.config.js**:
 
 ```js

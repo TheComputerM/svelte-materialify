@@ -43,7 +43,7 @@ In your svelte files, import the _uncompiled_ module `from 'svelte-materialify/s
 ```
 ## Layout
 
-All components should be children of `MaterialApp`, which has all the **global styles** and enables theming:
+All components should be children of `MaterialApp`, which provides all the **global styles** and enables theming:
 
 ```html
 <script>
@@ -71,7 +71,8 @@ If you don't want any global styles (other than theming and colors), you can use
 
 ## Theming
 
-You want to customise some SCSS variables? Worry not, just put them in the **\_material-theme.scss** you had created:
+You want to customise some SCSS variables?
+Worry not, just put them in the **\_material-theme.scss** you had created:
 
 ```scss
 $primary-color: #004d26;
@@ -93,6 +94,6 @@ To access these variables in your own components, just import the variable file 
 
 <Components.Alert type='info'>
 
-If you want to use SCSS and SASS styles in your own components, [use svelte-preprocess](https://github.com/sveltejs/svelte-preprocess/blob/master/docs/usage.md).
+If you want to use SCSS and SASS styles in your own components, [use svelte-preprocess](https://github.com/sveltejs/svelte-preprocess/blob/main/docs/usage.md).
 
 </Components.Alert>
