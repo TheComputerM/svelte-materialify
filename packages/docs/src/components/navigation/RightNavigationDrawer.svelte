@@ -1,5 +1,5 @@
 <script>
-  import Gumshoe from '../../../static/gumshoe/gumshoe.js';
+  import Gumshoe from '../../../static/gumshoe/gumshoe';
   import { onMount, tick } from 'svelte';
   import { markdown } from '@/util/stores';
 
