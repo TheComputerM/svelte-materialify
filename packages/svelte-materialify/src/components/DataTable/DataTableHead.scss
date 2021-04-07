@@ -2,12 +2,4 @@
 
 .s-tbl-head {
   font-weight: map-get($font-weights, 'medium');
-
-  .s-tbl-row {
-    border-top-width: 0;
-  }
-
-  .s-tbl-cell {
-    height: 56px;
-  }
 }

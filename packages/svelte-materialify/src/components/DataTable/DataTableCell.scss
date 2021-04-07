@@ -1,9 +1,16 @@
 .s-tbl-cell {
   padding-left: 16px;
   padding-right: 16px;
-  height: 52px;
 
   &.numeric {
     text-align: right;
   }
+}
+
+th.s-tbl-cell {
+  height: 56px;
+}
+
+td.s-tbl-cell {
+  height: 52px;
 }
