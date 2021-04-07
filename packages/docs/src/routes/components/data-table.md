@@ -28,7 +28,7 @@ Below is a collection of simple to complex examples.
 This is a basic example.
 <Components.Example file="DataTable/basic" />
 
-### Basic
+### With fixed header
 
 Optionally, the header of the table can be fixed in place while scrolling.
 <Components.Example file="DataTable/fixed-header" />
