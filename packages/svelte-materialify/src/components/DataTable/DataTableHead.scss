@@ -1,5 +1,5 @@
 @import './variables';
 
 .s-tbl-head {
-  font-weight: map-get($font-weights, 'medium');
+  font-weight: $tbl-head-font-weight;
 }
