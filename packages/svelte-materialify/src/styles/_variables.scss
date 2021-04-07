@@ -298,6 +298,9 @@ $material-light-theme: map-deep-merge(
       'hover': material-color('grey', 'lighten-3'),
       'group': material-color('grey', 'lighten-3'),
     ),
+    'datatables': (
+      'row-hover': rgba(material-color('shades', 'black'), 0.04),
+    ),
     'dividers': rgba(material-color('shades', 'black'), 0.12),
     'chips': #e0e0e0,
     'cards': material-color('shades', 'white'),
@@ -365,6 +368,9 @@ $material-dark-theme: map-deep-merge(
       'active': #505050,
       'hover': material-color('grey', 'darken-2'),
       'group': material-color('grey', 'darken-2'),
+    ),
+    'datatables': (
+      'row-hover': rgba(material-color('shades', 'white'), 0.04),
     ),
     'dividers': rgba(material-color('shades', 'white'), 0.12),
     'chips': #555555,
