@@ -1,0 +1,7 @@
+@import './variables';
+
+.s-tbl-body {
+  .s-tbl-row:hover {
+    background-color: $tbl-background-hover;
+  }
+}

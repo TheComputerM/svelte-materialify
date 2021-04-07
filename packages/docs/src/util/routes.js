@@ -1,5 +1,16 @@
 import { all as API } from 'svelte-materialify-api';
-import { mdiSpeedometerMedium, mdiSpeedometer, mdiPaletteOutline, mdiPalette, mdiViewDashboardOutline, mdiViewDashboard, mdiFunction, mdiFunctionVariant, mdiFlaskEmptyOutline, mdiFlaskOutline } from '@mdi/js';
+import {
+  mdiSpeedometerMedium,
+  mdiSpeedometer,
+  mdiPaletteOutline,
+  mdiPalette,
+  mdiViewDashboardOutline,
+  mdiViewDashboard,
+  mdiFunction,
+  mdiFunctionVariant,
+  mdiFlaskEmptyOutline,
+  mdiFlaskOutline,
+} from '@mdi/js';
 
 export default [
   {
@@ -53,6 +64,7 @@ export default [
       { text: 'Tabs', href: '/components/tabs/' },
       { text: 'Cards', href: '/components/cards/' },
       { text: 'Chips', href: '/components/chips/' },
+      { text: 'DataTable', href: '/components/data-table/' },
       { text: 'Dialog', href: '/components/dialog/' },
       { text: 'Dividers', href: '/components/dividers/' },
       { text: 'Grid', href: '/components/grid/' },

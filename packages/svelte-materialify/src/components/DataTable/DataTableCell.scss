@@ -1,0 +1,9 @@
+.s-tbl-cell {
+  padding-left: 16px;
+  padding-right: 16px;
+  height: 52px;
+
+  &.numeric {
+    text-align: right;
+  }
+}
