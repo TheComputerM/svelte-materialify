@@ -1,15 +1,15 @@
 ---
-title: Data Tables
-description: The list component is a continuous group of text, images and icons that may contain primary or supplemental actions.
+title: DataTable
+description: The DataTable component is used to display tabular information across rows and columns.
 keywords: data tables, svelte materialify data table component, svelte data table component
 related:
   - components/list
-  - components/subheader
+  - components/list-item-groups
 ---
 
 # DataTable
 
-The `List` component is used to display information. It can contain an avatar, content, actions, subheaders and much more. Lists present content in a way that makes it easy to identify a specific item in a collection. They provide a consistent styling for organizing groups of text and images.
+The `DataTable` component is used to display tabular information across rows and columns.
 
 ## API
 
@@ -28,32 +28,27 @@ Below is a collection of simple to complex examples.
 This is a basic example.
 <Components.Example file="DataTable/basic" />
 
-### Disabled
+### Basic
 
-You cannot interact with disabled `List`.
-<Components.Example file="List/disabled" />
+Optionally, the header of the table can be fixed in place while scrolling.
+<Components.Example file="DataTable/fixed-header" />
 
-### Dense
+### With row selection
 
-Smol
-<Components.Example file="List/dense" />
+Row selection allows users to select one or multiple rows via row checkboxes. Users can select or deselect all rows with the header row checkbox, which is also live updated based on the selection.
+<Components.Example file="DataTable/row-selection" />
 
-### Avatar and Icons
+### With pagination
 
-We can add avatars and icons to out lists.
-<Components.Example file="List/avatar" />
+Pagination can additionally be rendered in the table footer.
+<Components.Example file="DataTable/pagination" />
 
-### Nested
+### With progress indicator
 
-Using the `ListGroup` component you can create infinite levels of depth and set custom offsets.
-<Components.Example file="List/nested" />
+Progress indicator bellow the table header can be used to signify an ongoing process to the user.
+<Components.Example file="DataTable/progress-indicator" />
 
-### Subheading and Dividers
+### With column sorting
 
-Lists can contain multiple subheaders and dividers.
-<Components.Example file="List/subheading" />
-
-### Navigation
-
-Lists can receive an alternative `nav` styling that reduces the width `ListItem` takes up as well as adding a border radius.
-<Components.Example file="List/navigation" />
+Column sorting allows the user to reorder the table rows in ascending or descending order by a column.
+<Components.Example file="DataTable/column-sorting" />
