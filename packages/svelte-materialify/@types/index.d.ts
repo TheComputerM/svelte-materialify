@@ -22,6 +22,7 @@ export { default as Dialog } from './Dialog';
 export { default as Divider } from './Divider';
 export { default as ExpansionPanel } from './ExpansionPanel';
 export { default as ExpansionPanels } from './ExpansionPanels';
+export { default as Footer } from './Footer';
 export { default as Icon } from './Icon';
 export { default as Input } from './Input';
 export { default as ItemGroup } from './ItemGroup';
