@@ -1,3 +1,11 @@
+## [0.3.10](https://github.com/TheComputerM/svelte-materialify/compare/v0.3.9...v0.3.10) (2021-04-13)
+
+### Bug Fixes
+
+- **types:** added Footer type ([#213](https://github.com/TheComputerM/svelte-materialify/issues/213)) ([e558afb](https://github.com/TheComputerM/svelte-materialify/commit/e558afbad8715f57a5e8746ee28f146c694fcc4e))
+- **Types:** Add MaterialAppMin type ([2dbad6d](https://github.com/TheComputerM/svelte-materialify/commit/2dbad6de4c4ddf4e5c556a04af4321c9357765c9))
+- force update the items when they are changed ([#206](https://github.com/TheComputerM/svelte-materialify/issues/206)) ([b3d7d64](https://github.com/TheComputerM/svelte-materialify/commit/b3d7d642fd49b59fb04feec4c82eb7a60c721507))
+
 ## [0.3.9](https://github.com/TheComputerM/svelte-materialify/compare/v0.3.8...v0.3.9) (2021-03-30)
 
 ## [0.3.8](https://github.com/TheComputerM/svelte-materialify/compare/v0.3.7...v0.3.8) (2021-03-27)
