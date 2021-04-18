@@ -1,5 +1,5 @@
-import { SvelteComponent } from 'svelte-materialify/@types/shared';
 import { TransitionConfig } from 'svelte/transition';
+import { SvelteComponent } from './shared';
 
 interface SnackbarProps {
   /** absolute sets the snackbar with position absolute otherwise it is fixed */

@@ -1,4 +1,4 @@
-import { SvelteComponent } from 'svelte-materialify/@types/shared';
+import { SvelteComponent } from './shared';
 
 interface DividerProps {
   /** inset moves divider 72px to the right */

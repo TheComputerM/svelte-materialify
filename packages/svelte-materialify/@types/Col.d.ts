@@ -1,4 +1,4 @@
-import { SvelteComponent } from 'svelte-materialify/@types/shared';
+import { SvelteComponent } from './shared';
 
 interface ColProps {
   /** cols adds class cols-<number> */
