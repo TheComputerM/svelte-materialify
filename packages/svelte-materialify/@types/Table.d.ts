@@ -5,9 +5,9 @@ interface TableProps {
   dense?: boolean;
   /** Make the header be sticky and remain visible through scrolling */
   fixedHeader?: boolean;
-  /** classes added to the row */
+  /** classes added to the table */
   class?: string;
-  /** styles added to the row */
+  /** styles added to the table */
   style?: string;
 }
 
