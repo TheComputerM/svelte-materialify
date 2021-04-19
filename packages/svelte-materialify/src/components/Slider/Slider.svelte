@@ -83,7 +83,7 @@
   });
 
   $: if (slider) {
-    if(value !== internalValue) slider.set(value, false);
+    if (value !== internalValue) slider.set(value, false);
     slider.updateOptions({
       start: value,
       range: { min, max },
@@ -92,10 +92,9 @@
       margin,
       limit,
       padding,
-      step
+      step,
     }, false);
   }
-
 </script>
 
 <style lang="scss" src="./Slider.scss" global>
