@@ -27,10 +27,10 @@
       "readonly": false,
       "type": {
         "kind": "type",
-        "text": "object",
-        "type": "object"
+        "text": "string",
+        "type": "string"
       },
-      "defaultValue": null
+      "defaultValue": ""
     }
   ],
   "computed": [],

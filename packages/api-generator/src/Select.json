@@ -254,6 +254,21 @@
       "visibility": "public",
       "description": null,
       "keywords": [],
+      "name": "emptyString",
+      "kind": "let",
+      "static": false,
+      "readonly": false,
+      "type": {
+        "kind": "type",
+        "text": "string",
+        "type": "string"
+      },
+      "defaultValue": ""
+    },
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
       "name": "format",
       "kind": "let",
       "static": false,
@@ -270,7 +285,14 @@
   "components": [],
   "description": null,
   "keywords": [],
-  "events": [],
+  "events": [
+    {
+      "visibility": "public",
+      "description": null,
+      "keywords": [],
+      "name": "change"
+    }
+  ],
   "slots": [
     {
       "name": "prepend-outer",
