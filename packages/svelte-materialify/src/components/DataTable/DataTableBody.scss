@@ -1,0 +1,13 @@
+@import './variables';
+
+.s-tbl-body {
+  .s-tbl-row {
+    border-top-color: $tbl-border-color;
+    border-top-style: solid;
+    border-top-width: $tbl-border-width;
+
+    &:hover {
+      background-color: $tbl-background-hover;
+    }
+  }
+}

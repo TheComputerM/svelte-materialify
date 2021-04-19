@@ -1,0 +1,7 @@
+@import '../../styles/variables';
+
+$tbl-border-color: var(--theme-dividers);
+$tbl-border-radius: $border-radius-root !default;
+$tbl-border-width: 1px;
+$tbl-background-hover: var(--theme-datatables-row-hover);
+$tbl-head-font-weight: map-get($font-weights, 'medium');
