@@ -1,10 +1,10 @@
 <script>
   import Input from '../Input';
-  import { onMount, afterUpdate, createEventDispatcher } from 'svelte';
+  import { onMount, createEventDispatcher } from 'svelte';
 
   let sliderElement;
   let slider;
-  let localValue;
+  let internalValue;
   const dispatch = createEventDispatcher();
 
   export let min = 0;
@@ -70,7 +70,7 @@
     slider = sliderElement.noUiSlider;
     slider.on('update', (val, handle) => {
       value = format(val);
-      localValue = value;
+      internalValue = value;
       dispatch('update', { value: val, handle });
     });
     slider.on('change', (val, handle) => {
@@ -82,22 +82,19 @@
     };
   });
 
-  $: {
-    if (slider != null) {
-      slider.updateOptions({
-        range: { min, max },
-        orientation: vertical ? 'vertical' : 'horizontal',
-        connect,
-        margin,
-        limit,
-        padding,
-      });
-    }
+  $: if (slider) {
+    if (value !== internalValue) slider.set(value, false);
+    slider.updateOptions({
+      start: value,
+      range: { min, max },
+      orientation: vertical ? 'vertical' : 'horizontal',
+      connect,
+      margin,
+      limit,
+      padding,
+      step,
+    }, false);
   }
-
-  afterUpdate(() => {
-    if (slider && value !== localValue) slider.set(value, false);
-  });
 </script>
 
 <style lang="scss" src="./Slider.scss" global>

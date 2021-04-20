@@ -8,18 +8,18 @@
 </script>
 
 <Subheader>Default Slider</Subheader>
-<Slider {min} {max} bind:value={slider} hint="Hint Text">
-  <span slot="append">
+<Slider {min} {max} bind:value={slider}>
+  <span slot="append-outer">
     <TextField bind:value={slider} />
   </span>
 </Slider>
 
 <Subheader>Range</Subheader>
 <Slider {min} {max} bind:value={range}>
-  <span slot="prepend">
+  <span slot="prepend-outer">
     <TextField bind:value={range[0]} />
   </span>
-  <span slot="append">
-    <TextField bind:value={range[1]} />
+  <span slot="append-outer">
+    <TextField class="ml-3" bind:value={range[1]} />
   </span>
 </Slider>
