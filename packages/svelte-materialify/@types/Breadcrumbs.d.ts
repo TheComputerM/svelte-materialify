@@ -19,6 +19,10 @@ interface BreadcrumbsProps {
   style?: string;
 }
 
-declare class Breadcrumbs extends SvelteComponent<BreadcrumbsProps> {}
+declare class Breadcrumbs extends SvelteComponent<BreadcrumbsProps> {
+  $$slot_def: {
+    item?: BreadcrumbItem,
+  };
+}
 
 export default Breadcrumbs;
