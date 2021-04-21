@@ -18,6 +18,10 @@ interface ExpansionPanelProps {
 
 }
 
-declare class ExpansionPanel extends SvelteComponent<ExpansionPanelProps> { }
+declare class ExpansionPanel extends SvelteComponent<ExpansionPanelProps> {
+  $$slot_def: {
+    active?: boolean,
+  };
+}
 
 export default ExpansionPanel;

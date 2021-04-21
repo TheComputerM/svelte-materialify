@@ -1,17 +1,19 @@
 import { SvelteComponent } from './shared';
 
+interface SelectItem { name: string | number, value: string | number }
+
 interface SelectProps {
   /** Classes to add to select wrapper. */
   class?: string;
   /** Whether select is opened. */
   active?: boolean;
   /**
-   * Value of the select. 
+   * Value of the select.
    * If multiple is true, this will be an array; otherwise a single value.
    */
   value?: number[] | string[] | number | string | null;
   /** List of items to select from. */
-  items?: { name: string | number, value: string | number }[];
+  items?: SelectItem[];
   /** Whether select is the `filled` material design variant. */
   filled?: boolean;
   /** Whether select is the `outlined` material design variant. */
@@ -43,6 +45,10 @@ interface SelectProps {
   format?: (value: string | number | string[] | number[]) => string | number;
 }
 
-declare class Select extends SvelteComponent<SelectProps> { }
+declare class Select extends SvelteComponent<SelectProps> {
+  $$slot_def: {
+    item?: SelectItem,
+  };
+}
 
 export default Select;
