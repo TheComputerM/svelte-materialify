@@ -5,7 +5,25 @@
   import Icon from '../Icon';
   import down from '../../internal/Icons/down';
 
-  const { values, Disabled, selectPanel, index } = getContext(EXPANSION_PANELS);
+  export let active = false;
+  export let single = false
+
+  if(!single) {
+
+    const { values, Disabled, selectPanel, index } = getContext(EXPANSION_PANELS);
+
+    const value = index();
+
+    // Inheriting the disabled value from parent.
+    $: disabled = $Disabled == null ? disabled : $Disabled;
+
+    // Checking if panel is active everytime the value has changed.
+    $: active = $values.includes(value);
+
+    function toggle() {
+      selectPanel(value);
+    }
+  }
 
   // Classes to add to the panel.
   let klass = '';
@@ -23,18 +41,6 @@
   // Styles to add to the panel.
   export let style = null;
 
-  const value = index();
-  let active = false;
-
-  function toggle() {
-    selectPanel(value);
-  }
-
-  // Inheriting the disabled value from parent.
-  $: disabled = $Disabled == null ? disabled : $Disabled;
-
-  // Checking if panel is active everytime the value has changed.
-  $: active = $values.includes(value);
 </script>
 
 <style lang="scss" src="./ExpansionPanel.scss" global>
