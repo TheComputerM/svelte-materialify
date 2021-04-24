@@ -4,6 +4,9 @@
   .d-#{$display} {
     display: unquote($display);
   }
+}
+
+@each $display in ('none', 'inline', 'inline-block', 'block', 'flex', 'inline-flex') {
   @include create_breakpoints() using ($screen_size) {
     .d-#{$screen_size}-#{$display} {
       display: unquote($display);
