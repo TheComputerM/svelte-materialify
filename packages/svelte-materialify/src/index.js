@@ -18,16 +18,9 @@ export { default as Switch } from './components/Switch';
 export { default as Radio } from './components/Radio';
 export { default as Alert } from './components/Alert';
 export { default as Chip } from './components/Chip';
-export {
-  default as DataTable,
-  DataTableHead,
-  DataTableBody,
-  DataTableRow,
-  DataTableCell,
-} from './components/DataTable';
 export { default as Dialog } from './components/Dialog';
 export { default as Divider } from './components/Divider';
-export { default as ExpansionPanels, ExpansionPanel } from './components/ExpansionPanels';
+export { default as ExpansionPanels, ExpansionPanel, ExpansionSinglePanel } from './components/ExpansionPanels';
 export { default as Avatar } from './components/Avatar';
 export { default as Badge } from './components/Badge';
 export { default as AppBar } from './components/AppBar';
