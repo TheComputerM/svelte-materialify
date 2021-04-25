@@ -12,10 +12,10 @@
     Row,
     Col,
     Footer,
-    Alert
+    Alert,
   } from 'svelte-materialify/src';
   import Meta from '@/components/Meta.svelte';
-  import { mdiSpeedometer, mdiGithub, mdiPlus, mdiCheckBold, mdiTwitter } from '@mdi/js';
+  import { mdiSpeedometer, mdiGithub, mdiPlus, mdiTwitter } from '@mdi/js';
 </script>
 
 <style lang="scss">
@@ -100,17 +100,20 @@
     <h2 class="font-weight-bold">DISCLAMER</h2>
     <br />
     <p>
-      Svelte Materialify is soon to be deprecated is favour of <a href="https://github.com/svelterialjs/svelterial">svelterialjs</a>. 
-      My exams are still going on as they were postponed due to the increasing number of CoVID cases in 
-      my country.
+      Svelte Materialify is soon to be deprecated is favour of <a
+        href="https://github.com/svelterialjs/svelterial">svelterialjs</a
+      >. My exams are still going on as they were postponed due to the increasing number
+      of CoVID cases in my country.
     </p>
   </Alert>
-  
+
   <p>
-    I would like to apologize to <a href="https://github.com/hperrin/svelte-material-ui">Svelte Material UI</a> for
-    posting wrong and outdated information in the comparision table. SMUI 4 is an extremely good alternative to svelte materialify
-    while the rewrite <a href="https://github.com/svelterialjs/svelterial">Svelterial</a> is still in development.
-  </p>  
+    I would like to apologize to <a href="https://github.com/hperrin/svelte-material-ui"
+      >Svelte Material UI</a>
+    for posting wrong and outdated information in the comparision table. SMUI 4 is an
+    extremely good alternative to svelte materialify while the rewrite
+    <a href="https://github.com/svelterialjs/svelterial">Svelterial</a> is still in development.
+  </p>
 </Container>
 
 <Footer class="theme--dark">

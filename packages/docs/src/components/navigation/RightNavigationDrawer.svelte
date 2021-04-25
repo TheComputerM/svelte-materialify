@@ -1,18 +1,11 @@
 <script>
-  import Gumshoe from 'gumshoejs';
   import { onMount, tick } from 'svelte';
   import { markdown } from '@/util/stores';
+  import { hashURL } from '../../util/stores';
 
   let items = [];
   const depths = { H2: 'pl-3', H3: 'pl-6', H4: 'pl-8' };
-
   onMount(() => {
-    const spy = new Gumshoe('#toc a', {
-      events: false,
-      offset: 128,
-      navClass: 'active',
-    });
-
     async function refresh() {
       const basename = `${window.location.origin + window.location.pathname}#`;
       items = [];
@@ -27,7 +20,6 @@
         });
       items = items;
       await tick();
-      spy.setup();
     }
 
     const unsubscribe = markdown.subscribe((loaded) => {
@@ -35,7 +27,6 @@
     });
 
     return () => {
-      spy.destroy();
       unsubscribe();
     };
   });
@@ -64,7 +55,7 @@
 <h5 class="mb-3 mt-6">Contents</h5>
 <ul id="toc" class="pl-4">
   {#each items as item}
-    <li class="{item.class} pt-1 pb-1 text-body-2">
+    <li class="{item.class} pt-1 pb-1 text-body-2" class:active={item.href === $hashURL}>
       <a href={item.href}>{item.text}</a>
     </li>
   {/each}
