@@ -14,27 +14,63 @@
   import { Divider, Icon } from 'svelte-materialify/src';
   import { onMount, onDestroy, tick } from 'svelte';
   import { mdiOpenInNew } from '@mdi/js';
+  import { hashURL } from '../../util/stores';
+
+  export let title;
+  export let description;
+  export let keywords;
+  export let related = null;
+  let container;
 
   onMount(() => {
-    document.querySelectorAll('.markdown-container .heading a').forEach((a) => {
-      if (!a.hash || !document.querySelectorAll(a.hash).length) return;
+    const visible = [];
+    container.querySelectorAll('.heading a').forEach((a) => {
+      if (!a.hash) return;
       a.href = window.location.origin + window.location.pathname + a.hash;
-      a.setAttribute('aria-hidden', true);
-      a.setAttribute('tabindex', -1);
     });
+
+    const headingElements = [].slice.call(container.querySelectorAll('.heading:not(h1)'));
+    const headings = headingElements.map((h) => h.id);
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          const id = e.target.id;
+          if (e.isIntersecting) {
+            // eslint-disable-next-line no-unused-expressions
+            headings.indexOf(id) < headings.indexOf(visible[0]) ?
+              visible.unshift(id) :
+              visible.push(id);
+          } else {
+            const visiblePosition = visible.indexOf(id);
+            if (visiblePosition > -1) visible.splice(visiblePosition, 1);
+          }
+        });
+        const hash = visible[0];
+        if (hash) {
+          const oldURL = `${window.location.protocol}//${window.location.host}${window.location.pathname}`;
+          const newURL = `${oldURL}#${hash}`;
+          window.history.replaceState({ oldUrl: oldURL }, null, newURL);
+          // eslint-disable-next-line no-unused-vars
+          $hashURL = newURL;
+        }
+      },
+      { threshold: [1] },
+    );
+
+    headingElements.forEach((el) => {
+      io.observe(el);
+    });
+
     // Cheap trick to set true on initial load
     markdown.update((x) => !x);
+    return () => io.disconnect();
   });
 
   onDestroy(async () => {
     await tick();
     markdown.set(true);
   });
-
-  export let title;
-  export let description;
-  export let keywords;
-  export let related = null;
 </script>
 
 <style global>
@@ -70,7 +106,9 @@
 <Meta title="{title} | Svelte Materialify" {description} {keywords} />
 
 <section class="markdown-container pa-4 pa-sm-6 pa-md-8">
-  <slot />
+  <div bind:this={container}>
+    <slot />
+  </div>
   {#if related}
     <RelatedPages {related} />
   {/if}

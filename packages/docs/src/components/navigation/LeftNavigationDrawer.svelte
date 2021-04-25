@@ -14,10 +14,14 @@
   export let depth = 0;
   const offset = 1.5 ** depth * 54;
 
+  function equals(browserPath, navItemPath) {
+    return browserPath === navItemPath || `${browserPath}/` === navItemPath;
+  }
+
   function expand(parent) {
     const found = parent.some((child) => {
       if (child.items) return expand(child.items);
-      return $page.path === child.href;
+      return equals($page.path, child.href);
     });
     if (found) activeDepth = depth;
     return found;
@@ -44,7 +48,7 @@
       <svelte:self item={children} depth={depth + 1} />
     {:else}
       <a href={children.href} sapper:prefetch>
-        <ListItem active={children.href === $page.path}>{children.text}</ListItem>
+        <ListItem active={equals($page.path, children.href)}>{children.text}</ListItem>
       </a>
     {/if}
   {/each}
