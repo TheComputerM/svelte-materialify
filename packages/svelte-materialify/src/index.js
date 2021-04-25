@@ -27,7 +27,7 @@ export {
 } from './components/DataTable';
 export { default as Dialog } from './components/Dialog';
 export { default as Divider } from './components/Divider';
-export { default as ExpansionPanels, ExpansionPanel } from './components/ExpansionPanels';
+export { default as ExpansionPanels, ExpansionPanel, ExpansionSinglePanel } from './components/ExpansionPanels';
 export { default as Avatar } from './components/Avatar';
 export { default as Badge } from './components/Badge';
 export { default as AppBar } from './components/AppBar';
