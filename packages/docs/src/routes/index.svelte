@@ -11,8 +11,8 @@
     Icon,
     Row,
     Col,
-    Table,
     Footer,
+    Alert
   } from 'svelte-materialify/src';
   import Meta from '@/components/Meta.svelte';
   import { mdiSpeedometer, mdiGithub, mdiPlus, mdiCheckBold, mdiTwitter } from '@mdi/js';
@@ -94,118 +94,23 @@
   </Container>
 </div>
 <br />
-<Container class="text-center mt-6 pa-4">
-  <h2 class="text-h4 mb-2" id="why-svelte-materialify">Why Svelte Materialify</h2>
-  <p class="title">
-    Building applications with Svelte has never been easier. Supercharge your development
-    process with all of the tools you need to succeed.
-  </p>
-  <div class="elevation-5 pb-1">
-    <h3 class="text-h5 pt-3 pb-3">Svelte Framework Comparison 2020</h3>
-    <Table class="text-left">
-      <thead>
-        <tr>
-          <th>Features</th>
-          <th>Svelte Materialify</th>
-          <th>Svelte Material UI</th>
-          <th>Smelte</th>
-          <th>Svelte MUI</th>
-          <th>Sveltestrap</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Customisable Components</td>
-          <td>50+</td>
-          <td>25+</td>
-          <td>20+</td>
-          <td>15+</td>
-          <td>50+</td>
-        </tr>
-        <tr>
-          <td>Full Accessibility Support</td>
-          <td>
-            <Icon path={mdiCheckBold} class="success-text" />
-          </td>
-          <td />
-          <td />
-          <td />
-          <td />
-        </tr>
-        <tr>
-          <td>Server Side Rendering support</td>
-          <td>
-            <Icon path={mdiCheckBold} class="success-text" />
-          </td>
-          <td>
-            <Icon path={mdiCheckBold} class="success-text" />
-          </td>
-          <td>
-            <Icon path={mdiCheckBold} class="success-text" />
-          </td>
-          <td>
-            <Icon path={mdiCheckBold} class="success-text" />
-          </td>
-          <td>
-            <Icon path={mdiCheckBold} class="success-text" />
-          </td>
-        </tr>
-        <tr>
-          <td>Long Term Support</td>
-          <td>
-            <Icon path={mdiCheckBold} class="success-text" />
-          </td>
-          <td />
-          <td />
-          <td />
-          <td />
-        </tr>
-        <tr>
-          <td>Custom Themes</td>
-          <td>
-            <Icon path={mdiCheckBold} class="success-text" />
-          </td>
-          <td />
-          <td>
-            <Icon path={mdiCheckBold} class="success-text" />
-          </td>
-          <td>
-            <Icon path={mdiCheckBold} class="success-text" />
-          </td>
-          <td />
-        </tr>
-        <tr>
-          <td>Updates*</td>
-          <td>Weekly</td>
-          <td>Bi-Monthly</td>
-          <td>Monthly</td>
-          <td>Bi-Monthly</td>
-          <td>Bi-Monthly</td>
-        </tr>
-        <tr>
-          <td>RTL Support</td>
-          <td>Planned</td>
-          <td />
-          <td />
-          <td />
-          <td />
-        </tr>
-        <tr>
-          <td>Business and Enterprise support</td>
-          <td>Planned</td>
-          <td />
-          <td />
-          <td />
-          <td />
-        </tr>
-      </tbody>
-    </Table>
-    <p
-      class="text-center font-italic text-subtitle-2 grey-text mt-2"
-      aria-disabled="true">
-      * Based on average commit frequency as of September 2020
+
+<Container>
+  <Alert class="error-text" border="left" text>
+    <h2 class="font-weight-bold">DISCLAMER</h2>
+    <br />
+    <p>
+      Svelte Materialify is soon to be deprecated is favour of <a href="https://github.com/svelterialjs/svelterial">svelterialjs</a>. 
+      My exams are still going on as they were postponed due to the increasing number of CoVID cases in 
+      my country.
     </p>
-  </div>
+  </Alert>
+  
+  <p>
+    I would like to apologize to <a href="https://github.com/hperrin/svelte-material-ui">Svelte Material UI</a> for
+    posting wrong and outdated information in the comparision table. SMUI 4 is an extremely good alternative to svelte materialify
+    while the rewrite <a href="https://github.com/svelterialjs/svelterial">Svelterial</a> is still in development.
+  </p>  
 </Container>
 
 <Footer class="theme--dark">

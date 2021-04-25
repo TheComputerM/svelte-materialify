@@ -1,3 +1,8 @@
+# DISCLAMER
+
+Svelte Materialify is soon to be deprecated is favour of [svelterialjs](https://github.com/svelterialjs/svelterial). My exams are still going on as they were postponed due to the increasing number of CoVID cases in my country.
+
+
 <p align="center">
   <a href="https://svelte-materialify.vercel.app/" target="_blank">
     <img alt="Svelte Materialify Logo" width="100" src="logo/logo.svg">
