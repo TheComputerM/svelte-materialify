@@ -1,11 +1,8 @@
 <script>
-  import { getContext } from 'svelte';
-  import { EXPANSION_PANELS } from './ExpansionPanels.svelte';
+
   import { slide } from 'svelte/transition';
   import Icon from '../../../../../../../@lib/svelte-materialify/packages/svelte-materialify/src/components/Icon';
   import down from '../../../../../../../@lib/svelte-materialify/packages/svelte-materialify/src/internal/Icons/down';
-
-  const { values, Disabled, selectPanel, index } = getContext(EXPANSION_PANELS);
 
   // Classes to add to the panel.
   let klass = '';
@@ -23,18 +20,12 @@
   // Styles to add to the panel.
   export let style = null;
 
-  const value = index();
-  let active = false;
+  export let active = false;
 
-  function toggle() {
-    selectPanel(value);
+  const toggle = () => {
+    active = !active
   }
 
-  // Inheriting the disabled value from parent.
-  $: disabled = $Disabled == null ? disabled : $Disabled;
-
-  // Checking if panel is active everytime the value has changed.
-  $: active = $values.includes(value);
 </script>
 
 <style lang="scss" src="./ExpansionPanel.scss" global>
