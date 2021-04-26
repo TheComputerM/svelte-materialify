@@ -19,8 +19,8 @@
 @for $i from 0 through 16 {
   @each $mORp, $marginORpadding in ('m': 'margin', 'p': 'padding') {
     @each $type,
-      $suffix in ('a': '', 'l': '-left', 'r': '-right', 't': '-top', 'b': '-bottom'){
-      
+      $suffix in ('a': '', 'l': '-left', 'r': '-right', 't': '-top', 'b': '-bottom')
+    {
       @include create_breakpoints() using ($screen_size) {
         .#{$mORp}#{$type}-#{$screen_size}-#{$i} {
           #{$marginORpadding}#{$suffix}: $spacer * $i !important;
@@ -35,7 +35,8 @@
 
 @each $mORp, $marginORpadding in ('m': 'margin', 'p': 'padding') {
   @each $type,
-    $suffix in ('a': '', 'l': '-left', 'r': '-right', 't': '-top', 'b': '-bottom'){
+    $suffix in ('a': '', 'l': '-left', 'r': '-right', 't': '-top', 'b': '-bottom')
+  {
     .#{$mORp}#{$type}-auto {
       #{$marginORpadding}#{$suffix}: auto !important;
     }
@@ -44,7 +45,8 @@
 
 @each $mORp, $marginORpadding in ('m': 'margin', 'p': 'padding') {
   @each $type,
-    $suffix in ('a': '', 'l': '-left', 'r': '-right', 't': '-top', 'b': '-bottom'){
+    $suffix in ('a': '', 'l': '-left', 'r': '-right', 't': '-top', 'b': '-bottom')
+  {
     @include create_breakpoints() using ($screen_size) {
       .#{$mORp}#{$type}-#{$screen_size}-auto {
         #{$marginORpadding}#{$suffix}: auto !important;
