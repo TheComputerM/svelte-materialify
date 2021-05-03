@@ -60,7 +60,7 @@
     if (!validateOnBlur) validate();
   }
   
-  $: textarea && if (autogrow) {
+  $: if (textarea && autogrow) {
     textarea.style.height = 'auto';
     textarea.style.height = `${textarea.scrollHeight}px`;
   }
