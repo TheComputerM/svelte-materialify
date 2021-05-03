@@ -58,10 +58,11 @@
 
   function onInput() {
     if (!validateOnBlur) validate();
-    if (autogrow) {
-      textarea.style.height = 'auto';
-      textarea.style.height = `${textarea.scrollHeight}px`;
-    }
+  }
+  
+  $: if (autogrow) {
+    textarea.style.height = 'auto';
+    textarea.style.height = `${textarea.scrollHeight}px`;
   }
 </script>
 
