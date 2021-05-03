@@ -64,7 +64,7 @@
     textarea.style.height = 'auto';
     textarea.style.height = `${textarea.scrollHeight}px`;
   }
-  
+
   $: if (textarea && autogrow) updateTextareaHeight(value);
 </script>
 
