@@ -1,3 +1,27 @@
+## [0.3.11](https://github.com/TheComputerM/svelte-materialify/compare/v0.3.10...v0.3.11) (2021-06-15)
+
+### Bug Fixes
+
+- **index.d.ts:** added Chip export ([f3bc8a0](https://github.com/TheComputerM/svelte-materialify/commit/f3bc8a047f93a83b24777b0bcf640b7e49c65eeb))
+- added Chip as an exported type ([436b873](https://github.com/TheComputerM/svelte-materialify/commit/436b873a43aa37b11352a9dcddb5dc666342d48c))
+- make pa-_ and ma-_ overridable. ([#241](https://github.com/TheComputerM/svelte-materialify/issues/241)) ([22553c2](https://github.com/TheComputerM/svelte-materialify/commit/22553c280a5c13d542c4e5a5bed01ac307c880df)), closes [#230](https://github.com/TheComputerM/svelte-materialify/issues/230) [#230](https://github.com/TheComputerM/svelte-materialify/issues/230)
+- spacing breakpoints ([#239](https://github.com/TheComputerM/svelte-materialify/issues/239)) ([d5895d0](https://github.com/TheComputerM/svelte-materialify/commit/d5895d022adeb747eb723dfaa67e710b3dd6f16c)), closes [#230](https://github.com/TheComputerM/svelte-materialify/issues/230) [#230](https://github.com/TheComputerM/svelte-materialify/issues/230)
+- **datatable:** added class property typings ([1a518ed](https://github.com/TheComputerM/svelte-materialify/commit/1a518edb211e17bf4d0a1d517d4e0364f0440323))
+- **datatable:** added missing DataTable files ([a2341db](https://github.com/TheComputerM/svelte-materialify/commit/a2341dbf4a6dc523c4f169e32c74c09a90d79ccc))
+- **datatable:** colors of DataTable are now theme-dependent ([c8fb4ee](https://github.com/TheComputerM/svelte-materialify/commit/c8fb4eec48323060e01958ba5be75df61e9d712e))
+- **datatable:** correct docs for DataTable ([b8d76df](https://github.com/TheComputerM/svelte-materialify/commit/b8d76df007bf9ccb9c82b96251aacaf228f89ce7))
+- **datatable:** fixed header not being left-justified ([08f3442](https://github.com/TheComputerM/svelte-materialify/commit/08f344217f1262c2b0201a32aa91f5b54e6fedaa))
+- **datatable:** fixed wrong docs heading ([a8d85b3](https://github.com/TheComputerM/svelte-materialify/commit/a8d85b3ae06e8fe17c3e9c479ab0dcfc500b6320))
+- **datatable:** simplified DataTable style rules ([fe5ec1a](https://github.com/TheComputerM/svelte-materialify/commit/fe5ec1a9d86ef4eb1aac8ce6ca64d68d4f8382d9))
+- **DataTable:** the DataTable component now uses th properly ([839670d](https://github.com/TheComputerM/svelte-materialify/commit/839670de55831c5763cc3d8f763920c1ef353ea1))
+- **Slider:** reactivity ([0862cb3](https://github.com/TheComputerM/svelte-materialify/commit/0862cb30d88f24d9e56888f3325afbbc79e84580))
+- tooltip stucked [#140](https://github.com/TheComputerM/svelte-materialify/issues/140) ([f34aa51](https://github.com/TheComputerM/svelte-materialify/commit/f34aa51236053026cf9a5ff6d1ab12474318cc37))
+
+### Features
+
+- **datatable:** better configurable DataTable head font weight ([0806cf2](https://github.com/TheComputerM/svelte-materialify/commit/0806cf267f931eccedd345f00881641b0513caf2))
+- **DataTable:** basic DataTable ([6b501a1](https://github.com/TheComputerM/svelte-materialify/commit/6b501a1ccc3eb79934a427c1cfd056392bad0786))
+
 ## [0.3.10](https://github.com/TheComputerM/svelte-materialify/compare/v0.3.9...v0.3.10) (2021-04-13)
 
 ### Bug Fixes
