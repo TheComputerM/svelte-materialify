@@ -30,38 +30,42 @@
   export let style = null;
   export let textarea = null;
 
-  let labelActive = !!placeholder || value;
+  let focused = false;
+  $: labelActive = !!placeholder || value || focused;
   let errorMessages = [];
 
-  function checkRules() {
+  export function validate() {
     errorMessages = rules.map((r) => r(value)).filter((r) => typeof r === 'string');
     if (errorMessages.length) error = true;
     else {
       error = false;
     }
+    return error;
   }
 
   function onFocus() {
-    labelActive = true;
+    focused = true;
   }
 
   function onBlur() {
-    if (!value && !placeholder) labelActive = false;
-    if (validateOnBlur) checkRules();
+    focused = false;
+    if (validateOnBlur) validate();
   }
 
   function clear() {
     value = '';
-    if (!placeholder) labelActive = false;
   }
 
   function onInput() {
-    if (!validateOnBlur) checkRules();
-    if (autogrow) {
-      textarea.style.height = 'auto';
-      textarea.style.height = `${textarea.scrollHeight}px`;
-    }
+    if (!validateOnBlur) validate();
   }
+
+  function updateTextareaHeight() {
+    textarea.style.height = 'auto';
+    textarea.style.height = `${textarea.scrollHeight}px`;
+  }
+
+  $: if (textarea && autogrow) updateTextareaHeight(value);
 </script>
 
 <Input
