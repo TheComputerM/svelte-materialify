@@ -50,6 +50,7 @@
       role="radio"
       aria-selected={active}
       bind:group
+      on:click
       {id}
       {value}
       {disabled} />
