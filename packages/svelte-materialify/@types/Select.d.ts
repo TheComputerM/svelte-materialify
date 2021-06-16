@@ -36,9 +36,21 @@ interface SelectProps {
   chips?: boolean;
   /** Whether select is disabled. */
   disabled?: boolean;
+  /** Whether the select list has to be filterable. */
+  filterable?: boolean;
+  /** Style to add to filter of the select list. */
+  filterStyle?: string;
+  /** Function to apply for filtering the select list: allowed values are 
+   * 'startsWith', 'endsWith', 'contains' and 'exact'. Default to `null` when 
+   * select is not filterable. */
+  filterMode?: string | null;
+  /** Value of the filter input. */
+  filterValue?: string;
+  /** Class to add to the select list div. */
+  itemsPanelClass?: string;
   /**
    * Whether select closes on selection. Defaults to `true` on single select and `false`
-   * on multiple select.
+   * on multiple select or when select is filterable.
    */
   closeOnClick?: boolean;
   /** Convert the selected value for the underlying text field. */

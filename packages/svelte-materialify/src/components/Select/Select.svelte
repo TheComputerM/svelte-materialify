@@ -7,6 +7,12 @@
   import Checkbox from '../Checkbox';
   import Icon from '../Icon';
   import DOWN_ICON from '../../internal/Icons/down';
+  import MAGNIFY_ICON from '../../internal/Icons/magnify';
+
+  const FILTER_MODE_STARTS_WITH = 'startsWith';
+  const FILTER_MODE_ENDS_WITH = 'endsWith';
+  const FILTER_MODE_CONTAINS = 'contains';
+  const FILTER_MODE_EXACT = 'exact';
 
   let klass = '';
   export { klass as class };
@@ -24,7 +30,12 @@
   export let max = Infinity;
   export let chips = false;
   export let disabled = null;
-  export let closeOnClick = !multiple;
+  export let filterable = null;
+  export let filterStyle = '';
+  export let filterMode = filterable ? FILTER_MODE_STARTS_WITH : null;
+  export let filterValue = null;
+  export let itemsPanelClass = '';
+  export let closeOnClick = !multiple && !filterable;
   export let emptyString = '';
   const getSelectString = (v) => {
     // We could also use `return items[0].value ? find.. : v` or provide a `basic` prop
@@ -35,6 +46,31 @@
 
   const dispatch = createEventDispatcher();
   $: dispatch('change', value);
+
+  const getFilteredItems = (its, fil) => {
+      if (filterMode && fil) {
+          switch (filterMode) {
+              case FILTER_MODE_CONTAINS:
+                  return its.filter(it => it.value ? it.value.toLowerCase().contains(fil.toLowerCase()) 
+                      : it.toLowerCase().contains(fil.toLowerCase()));
+              case FILTER_MODE_EXACT:
+                  return its.filter(it => it.value ? it.value.toLowerCase() === fil.toLowerCase() 
+                      : it.toLowerCase() === fil.toLowerCase());
+              case FILTER_MODE_STARTS_WITH:
+                  return its.filter(it => it.value ? it.value.toLowerCase().startsWith(fil.toLowerCase()) 
+                      : it.toLowerCase().startsWith(fil.toLowerCase()));
+              case FILTER_MODE_ENDS_WITH:
+                  return its.filter(it => it.value ? it.value.toLowerCase().endsWith(fil.toLowerCase()) 
+                      : it.toLowerCase().endsWith(fil.toLowerCase()));
+              default:
+                  return [...its];
+          }
+      } else {
+          return [...its];
+      }
+  };
+
+  $: filteredItems = getFilteredItems(items, filterValue);
 </script>
 
 <style lang="scss" src="./Select.scss" global>
@@ -72,18 +108,40 @@
       </TextField>
     </span>
     <ListItemGroup bind:value {mandatory} {multiple} {max}>
-      {#each items as item}
-        <slot name="item" {item}>
-          <ListItem {dense} value={item.value ? item.value : item}>
-            <span slot="prepend">
+    {#if filterable}
+      <slot name="filter">
+        <TextField 
+          {filled}
+          {outlined}
+          {solo}
+          {dense}
+          {disabled}
+          style={filterStyle}
+          class="s-select__filter"
+          bind:value={filterValue}>
+          <span slot="append">
+            <Icon path={MAGNIFY_ICON} />
+          </span>
+        </TextField>
+      </slot>
+    {/if}
+    <slot name="items">
+      <div class={itemsPanelClass}>
+        {#each (!filterable ? items : filteredItems) as item}
+          <slot name="item" {item}>
+            <ListItem {dense} value={item.value ? item.value : item}
+              active={value && value.includes(item.value ? item.value : item)}>
+              <span slot="prepend">
               {#if multiple}
-                <Checkbox checked={value.includes(item.value ? item.value : item)} />
+                  <Checkbox checked={value && value.includes(item.value ? item.value : item)} />
               {/if}
-            </span>
-            {item.name ? item.name : item}
-          </ListItem>
-        </slot>
-      {/each}
+              </span>
+              {item.name ? item.name : item}
+            </ListItem>
+          </slot>
+        {/each}
+      </div>
+    </slot>
     </ListItemGroup>
   </Menu>
 </div>
