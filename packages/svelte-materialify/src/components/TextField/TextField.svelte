@@ -1,4 +1,5 @@
 <script>
+  import { afterUpdate } from 'svelte';
   import Input from '../Input';
   import Icon from '../Icon';
   import uid from '../../internal/uid';
@@ -33,6 +34,10 @@
   let focused = false;
   $: labelActive = !!placeholder || value || focused;
   let errorMessages = [];
+
+  afterUpdate(() => {
+    if (typeof value !== 'string') value = (value ?? '').toString();
+  });
 
   export function validate() {
     errorMessages = rules.map((r) => r(value)).filter((r) => typeof r === 'string');
