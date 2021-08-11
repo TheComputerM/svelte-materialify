@@ -21,6 +21,9 @@
 
   function toggle() {
     active = !active;
+    const tempOffSet = offset;
+    offset += 0.0001;
+    offset = tempOffSet;
   }
 
   if (eager) {
