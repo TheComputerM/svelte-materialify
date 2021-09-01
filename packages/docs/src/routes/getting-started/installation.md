@@ -144,7 +144,7 @@ Basic setup done for you:
 ```
 npx degit TheComputerM/sveltekit-materialify my-sveltematerialify-project
 
-cd my-svelte-project
+cd my-sveltematerialify-project
 
 npm install
 npm run dev
