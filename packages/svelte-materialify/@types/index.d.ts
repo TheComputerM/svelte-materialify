@@ -57,3 +57,5 @@ export { default as TabContent } from './TabContent';
 export { default as Textarea } from './Textarea';
 export { default as TextField } from './TextField';
 export { default as Tooltip } from './Tooltip';
+export { default as Window } from './Window';
+export { default as WindowItem } from './WindowItem';
