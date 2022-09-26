@@ -1,7 +1,6 @@
 # DISCLAMER
 
-Svelte Materialify is soon to be deprecated is favour of [svelterialjs](https://github.com/svelterialjs/svelterial). My exams are still going on as they were postponed due to the increasing number of CoVID cases in my country.
-
+###  All my exams are now over, and I will be starting college soon. I do not know how much free time I will have, and I don't know if I want to keep working on this project. I won't make any promises, but I don't want to make the same mistake of keeping something on the backburner while many people are interested in it. This was my first big open-source project and I have learned a lot from maintaining it. I was going to update it to Material 3, but I am so tired and have lost my edge. Sorry, everyone but I am archiving this project because I have found some good alternatives such as https://www.beercss.com/ and https://www.svelteui.org/. Goodbye and thanks for enduring my tardiness.
 
 <p align="center">
   <a href="https://svelte-materialify.vercel.app/" target="_blank">
@@ -34,13 +33,6 @@ Svelte Materialify is soon to be deprecated is favour of [svelterialjs](https://
   </a>
 </p>
 
-**Currently In Active Development**
-
-A better Material UI design framework for Svelte with full support for light / dark themes and customisability.
-
-This is still in development. To contribute, please read [CONTRIBUTING.md](https://svelte-materialify.vercel.app/getting-started/contributing/) and open a PR.
-
-There are currently more than **50+** different components are more are planned to arrive soon.
 
 ## Website
 
