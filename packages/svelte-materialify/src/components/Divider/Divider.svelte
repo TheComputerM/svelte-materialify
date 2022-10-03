@@ -11,7 +11,6 @@
 
 <hr
   class="s-divider {klass}"
-  role="separator"
   aria-orientation={vertical ? 'vertical' : 'horizontal'}
   class:inset
   class:vertical
