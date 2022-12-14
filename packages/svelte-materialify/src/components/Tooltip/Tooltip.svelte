@@ -115,8 +115,6 @@
   onMount(() => {
     document.body.appendChild(tooltip);
     updateTooltipPosition();
-
-    return () => document.body.removeChild(tooltip);
   });
 </script>
 
