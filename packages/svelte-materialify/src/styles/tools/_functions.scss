@@ -24,7 +24,7 @@
       $result: map-merge(
         $result,
         (
-          $key: non-destructive-map-merge(map-get($result, $key), $value),
+          $key: map-deep-merge(map-get($result, $key), $value),
         )
       );
     }
